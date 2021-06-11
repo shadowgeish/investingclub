@@ -1,0 +1,99 @@
+{
+    "strategyId" : "0bfe6c1a-45b6-4275-ad21-b839e32ae5dsc",
+    "name" : "My aggresive strategy",
+    "status": "OpenForInvestment",
+    "riskLevel": 1,
+    "holdingsPublicationDayLag":7,
+    "style": "defensive",
+    "managementFees": 0.02,
+    "performanceFees": 0.1,
+    "hurdleRate": 0.1,
+    "minimumInvestmentPeriodInMonth": 1,
+    "withdrawFeeBeforeMinimumPeriod": 0.002,
+    "withdrawFeeAfterMinimumPeriod": 0.0002,
+    "rebalancingFrequency" : 30,
+    "benchmarkCode" : "CAC.PA",
+    "benchmarkName" : "CAC 40",
+    "maxDrawdown": 0.12,
+    "sharpeRatio": 0.12,
+    "holdingsAsOfDate": "2015-05-16T05:50:06",
+    "description": "",
+    "creationDate" : "2015-05-16T05:50:06",
+    "numberOfPortfolios": 20,
+    "numberOfHoldings": 10,
+    "numberOfClients": 50,
+    "maxNumberOfClients": 100,
+    "minimumInvestmentAmount" : 500,
+    "totalAUM": 5000000,
+    "lastModificationDate" : "2021-01-23T08:34:23",
+    "lastModifierUserId" : "0bfe6c1a-45b6-4275-ad21-b839e32ae5dc",
+    "lastModifierUser" : "Leonardo Cuco",
+    "CreatorUserId" : "0bfe6c1a-45b6-4275-ad21-b839e32ae5dc",
+    "CreatorUser" : "Leonardo Cuco",
+    "holdingsAsOfDate" : "2015-05-16T05:50:06",
+    "holdings" : [{
+        "code" : "C4S",
+        "exchangeCode": "AP",
+        "type": "ETF",
+        "shortName": "Amundi Short CAC 40",
+        "value": ,
+        "targetPercentage": 0.55
+    },{
+        "code" : "CAC",
+        "exchangeCode": "AP",
+        "type": "ETF",
+        "shortName": "Lyxor CAC 40",
+        "percentage": 0.50,
+        "targetPercentage": 0.45
+    }],
+    "investors": [{
+        "userId": "18c6893b-0803-46c0-9f61-eee3f148bf60",
+        "userName": "Leonardo Cuco",
+        "investmentValue": "4550"
+    },
+    {
+        "userId": "83c26122-1028-4f9e-b4bc-46ac8ea79d7c",
+        "userName": "Adrien Mortel",
+        "investmentValue": "2050"
+    },
+    {
+        "userId": "83c26122-1028-4f9e-b4bc-46ac8ea59d7c",
+        "userName": "Adrien Lebouc",
+        "investmentValue": "3400"
+    }],
+    "valueHistory": [{
+        "dateTime": "2021-01-21T08:00:00+00:00",
+        "benchMarkValue" : 4340,
+        "value": 1911.6789
+    },
+    {
+        "dateTime": "2021-01-22T08:00:00+00:00",
+        "benchMarkValue" : 4350,
+        "value": 1911.6789
+    },
+    {
+        "dateTime": "2021-01-23T08:00:00+00:00",
+        "benchMarkValue" : 4340,
+        "value": 1911.6789
+    },
+    {
+        "dateTime": "2021-01-24T08:00:00+00:00",
+        "benchMarkValue" : 4350,
+        "value": 1911.6789
+    },
+    {
+        "dateTime": "2021-01-25T08:00:00+00:00",
+        "benchMarkValue" : 4350,
+        "value": 1911.6789
+    },
+    {
+        "dateTime": "2021-01-26T08:00:00+00:00",
+        "benchMarkValue" : 4330,
+        "value": 1911.6789
+    },
+    {
+        "dateTime": "2021-01-27T08:00:00+00:00",
+        "benchMarkValue" : 4390,
+        "value": 2000.56
+    }]
+}

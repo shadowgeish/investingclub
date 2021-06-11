@@ -1,0 +1,79 @@
+[
+  {
+    "eventId" : "0bfe6c1a-56b6-4275-ad21-b839e32ae5dsc",
+    "eventTitle": "VisioConferance on real estate",
+    "creationDatetime": "",
+    "creatorId": "0bhe6c1a-56b6-4275-ad21-b839e32ae5dsc",
+    "creatorName": "Arthur Dubois",
+    "eventNote": "",
+    "eventKeyWords": "Action,Immobilier",
+    "eventType": "VisioConferance", // ClientMeeting, VoiceConference, VisioConferance.
+    "conferenceLink": "0bhe6c1a-59b6-4275-ad21-b839e32ae5dgk",
+    "participants": {
+      "host": [
+        {
+          "participantProfile": "Advisor", //investor, Advisor
+          "participantId": "0bhe6c1a-59b6-4275-ad21-b839e32ae5dsc",
+          "participantName": "Philippe Mercier",
+          "participantAge": 29
+        },
+        {
+          "participantProfile": "Advisor", //investor, advisor
+          "participantId": "0bhe6c1a-56b6-4275-ad21-b839e32ae5dsc",
+          "participantName": "Arthur Dubois",
+          "participantAge": 45
+        }
+      ],
+      "invites": [
+        {
+          "participantProfile": "investor", //investor, advisor
+          "participantId": "0bhe6c1g-59b6-4275-ad21-b839e32ae5dsc",
+          "participantName": "Arthur Ledoux",
+          "participantInvestmentProfile": "Conservator",
+          "participantAge": 29
+        },
+        {
+          "participantProfile": "investor", //investor, advisor
+          "participantId": "0bhe6c1g-59b6-6245-ad21-b839e32ae5dsc",
+          "participantName": "Michelle Arthaux",
+          "participantInvestmentProfile": "Conservator",
+          "participantAge": 38
+        }
+      ]
+    },
+    "startDatetime": "23/02/2021T11:35:65+00:00",
+    "endDatetime": "23/02/2021T12:35:65+00:00"
+  },
+  {
+    "eventId" : "0bfe6c1a-56b6-4275-jd21-b839e32ae5dsc",
+    "eventTitle": "ClientMeeting",
+    "creationDatetime": "",
+    "creatorId": "0bhe6c1a-56b6-4275-ad21-b839e32ae5dsc",
+    "creatorName": "Arthur Dubois",
+    "eventNote": "",
+    "eventKeyWords": "Action,Immobilier",
+    "eventType": "VisioConferance", // ClientMeeting, VoiceConference, VisioConferance.
+    "conferenceLink": "0bhe6c1a-59b6-4275-ad21-b839e32ae5dgk",
+    "participants": {
+      "host": [
+        {
+          "participantProfile": "Advisor", //investor, advisor
+          "participantId": "0bhe6c1a-56b6-4275-ad21-b839e32ae5dsc",
+          "participantName": "Arthur Dubois",
+          "participantAge": 29
+        }
+      ],
+      "invites": [
+        {
+          "participantProfile": "investor", //investor, advisor
+          "participantId": "0bhe6c1g-59b6-4275-ad21-b839e32ae5dsc",
+          "participantName": "Arthur Ledoux",
+          "participantInvestmentProfile": "Conservator",
+          "participantAge": 29
+        }
+      ]
+    },
+    "startDatetime": "23/02/2021T11:35:65+00:00",
+    "endDatetime": "23/02/2021T12:35:65+00:00"
+  }
+]

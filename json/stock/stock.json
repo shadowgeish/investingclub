@@ -1,0 +1,54 @@
+{
+    "country": "France",
+    "exchangeCode": "PA",
+    "code": "CAC",
+    "shortName": "Amundi Short CAC 40",
+    "fullName": "Amundi ETF Short CAC 40 Daily UCITS ETF",
+    "stockPicture": "",
+    "totalDayVolume": 6540,
+    "previousClosePrice": 120.95,
+    "marketHours": "9am-5pm CET",
+    "prices": [
+        {
+            "datetime": "23/02/2021T11:30:65+00:00",
+            "price": 123.65
+        },
+        {
+            "datetime": "23/02/2021T11:35:65+00:00",
+            "price": 122.65
+        },
+        {
+            "datetime": "23/02/2021T11:40:65+00:00",
+            "price": 121.65
+        },
+        {
+            "datetime": "23/02/2021T11:45:65+00:00",
+            "price": 120.65
+        },
+        {
+            "datetime": "23/02/2021T11:50:65+00:00",
+            "price": 122.65
+        },
+        {
+            "datetime": "22/02/2021T11:55:65+00:00",
+            "price": 126.65
+        }
+    ],
+    "description": "Netflix, Inc. is an American over-the-top content platform and production company headquartered in Los Gatos, California. Netflix was founded in 1997 by Reed Hastings and Marc Randolph in Scotts Valley, California",
+    "esgRating": 10,
+    "esgRatingLastUpdate": "2021-03-01T08:40:06",
+    "esg_ratings_range": [
+        {
+            "Negl": 10,
+            "Low": 20,
+            "Med": 30,
+            "High": 40,
+            "Severe": 50
+        }
+    ]
+}
+
+
+
+
+

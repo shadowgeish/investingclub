@@ -1,0 +1,98 @@
+[{
+    "exchangeCode": "PA",
+    "code": "CAC",
+    "period" : "intraday", //last, intraday, week, month, year, 2 years, 5 years
+    "prices": [
+        {
+            "datetime": "23/02/2021T11:30:65+00:00",
+            "price": 123.65
+        },
+        {
+            "datetime": "23/02/2021T11:35:65+00:00",
+            "price": 122.65
+        },
+        {
+            "datetime": "23/02/2021T11:40:65+00:00",
+            "price": 121.65
+        },
+        {
+            "datetime": "23/02/2021T11:45:65+00:00",
+            "price": 120.65
+        },
+        {
+            "datetime": "23/02/2021T11:50:65+00:00",
+            "price": 122.65
+        },
+        {
+            "datetime": "22/02/2021T11:55:65+00:00",
+            "price": 126.65
+        }
+    ]
+},
+{
+    "exchangeCode": "PA",
+    "code": "C4S",
+    "period" : "intraday", //last, intraday, week, month, year, 2 years, 5 years
+    "prices": [
+        {
+            "datetime": "23/02/2021T11:30:65+00:00",
+            "price": 123.65
+        },
+        {
+            "datetime": "23/02/2021T11:35:65+00:00",
+            "price": 122.65
+        },
+        {
+            "datetime": "23/02/2021T11:40:65+00:00",
+            "price": 121.65
+        },
+        {
+            "datetime": "23/02/2021T11:45:65+00:00",
+            "price": 120.65
+        },
+        {
+            "datetime": "23/02/2021T11:50:65+00:00",
+            "price": 122.65
+        },
+        {
+            "datetime": "22/02/2021T11:55:65+00:00",
+            "price": 126.65
+        }
+    ]
+},
+{
+    "exchangeCode": "PA",
+    "code": "AIR",
+    "period" : "intraday", //last, intraday, week, month, year, 2 years, 5 years
+    "prices": [
+        {
+            "datetime": "23/02/2021T11:30:65+00:00",
+            "price": 123.65
+        },
+        {
+            "datetime": "23/02/2021T11:35:65+00:00",
+            "price": 122.65
+        },
+        {
+            "datetime": "23/02/2021T11:40:65+00:00",
+            "price": 121.65
+        },
+        {
+            "datetime": "23/02/2021T11:45:65+00:00",
+            "price": 120.65
+        },
+        {
+            "datetime": "23/02/2021T11:50:65+00:00",
+            "price": 122.65
+        },
+        {
+            "datetime": "22/02/2021T11:55:65+00:00",
+            "price": 126.65
+        }
+    ]
+}]
+
+
+
+
+

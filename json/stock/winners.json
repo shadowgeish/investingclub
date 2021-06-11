@@ -1,0 +1,81 @@
+[{
+    "type":"ETF",
+    "code":"C4S",
+    "picture":"",
+    "assetType": "ETF",
+    "assetClass": "Equity",
+    "shortName": "Amundi Short CAC 40",
+    "fullName": "Amundi ETF Short CAC 40 Daily UCITS ETF",
+    "country": "France",
+    "exchangeCode": "PA",
+    "description": "The investment seeks to track the price and yield performance, before fees and expenses, of the CAC 40 Short strategy index. The index monitors the performance of a strategy which involves reversing its exposure to the CAC 40 index through a combination of a short position on the CAC 40 index net return and exposure to a risk-free monetary instrument. As a result, it offers a reverse exposure, upwards or downwards, to the variations registered by the CAC 40 index. The CAC 40 index is a float-adjusted capitalisation-weighted measure of the performance of 40 securities listed on the Euronext Paris regulated market. The CAC 40 is the benchmark index of the Paris Stock Exchange."
+    "price":{
+      "datetime": "22/02/2021T11:55:65+00:00",
+      "price": 22.65,
+      "previousClosePrice": 25.65
+    }
+  },{
+    "type":"ETF",
+    "code":"CAC",
+    "assetType": "ETF",
+    "assetClass": "Equity",
+    "picture":"",
+    "shortName": "Lyxor CAC 40",
+    "fullName": "Lyxor CAC 40 Daily UCITS ETF",
+    "country": "France",
+    "exchangeCode": "PA",
+    "description": "The Lyxor CAC 40 (DR) UCITS ETF is a UCITS compliant exchange traded fund that aims to track the benchmark index CAC 40 Total Return Index so genau wie möglich abzubilden.The index tracks the performance of the 40 largest French stocks by free float market capitalization and turnover. The index is a gross total return index and assumes that gross dividends (withholding taxes are not deducted) paid by its constituents are reinvested in the index. More information on www.euronext.com.Lyxor ETFs are efficient investment vehicles listed on exchange that offer transparent, liquid and low-cost exposure to the underlying benchmark index.",
+    "price":{
+      "datetime": "22/02/2021T11:55:65+00:00",
+      "price": 126.65,
+      "previousClosePrice": 129.65
+    }
+  },{
+    "type":"Equity",
+    "code":"AIR",
+    "assetType": "Equity",
+    "assetClass": "Equity",
+    "picture":"https://eodhistoricaldata.com/img/logos/PA/AIR.png",
+    "shortName": "AirBus",
+    "fullName": "AirBus",
+    "country": "France",
+    "exchangeCode": "PA",
+    "description": "Airbus SE provides aerospace products, services, and solutions in the Netherlands and internationally. The company operates in three segments: Airbus, Airbus Helicopters, and Airbus Defence and Space segments. The Airbus segment develops, manufactures, markets, and sells commercial jet aircraft of approximately 100 seats; and regional turboprop aircraft and aircraft components, as well as provides aircraft conversion and related services. The Airbus Helicopters segment develops, manufactures, markets, and sells civil and military helicopters; and offers helicopter related services. The Airbus Defence and Space segment designs, develops, delivers, and supports military aircraft, such as combat, mission, transport, and tanker aircraft; and offers unmanned aerial systems and their associated services. It also provides civil and defense space systems for telecommunications, earth observations, navigation, science, and orbital systems; missile systems; and missile and space launcher systems, as well as services around data processing from platforms, secure communication, and cyber security. The company was formerly known as Airbus Group SE and changed its name to Airbus SE in April 2017. Airbus SE was incorporated in 1998 and is based in Leiden, the Netherlands.",
+    "price":{
+      "datetime": "22/02/2021T11:55:65+00:00",
+      "price": 16.65,
+      "previousClosePrice": 16.66
+    }
+  },{
+    "type":"Equity",
+    "code":"ATE",
+    "assetType": "Equity",
+    "assetClass": "Equity",
+    "picture":"https://eodhistoricaldata.com/img/logos/PA/ATE.png",
+    "shortName": "Alten",
+    "fullName": "Alten",
+    "country": "France",
+    "exchangeCode": "PA",
+    "description": "Alten S.A. operates as an engineering and technology consultancy company primarily in France, North America, Germany, Scandinavia, Spain, Portugal, Italy, the United Kingdom, Belgium, the Netherlands, the Asia-Pacific, and internationally. The company carries out design and research projects for the technical and information systems divisions in the industrial, telecommunications, and service sectors. It offers IT and network services, such as digital transformation; product design and development; manufacturing engineering; supply chain and quality; customer service and training; and project and change management services. The company also provides information systems and internal network services comprising consulting and digital transformation; technical services for digital, big data, data science, and artificial intelligence; development, maintenance, and testing of applications; and cloud, and networks and security infrastructure services. It serves customers in aeronautics, space, defense and security, automotive, rail and naval, energy and life sciences, telecoms and media, banking, finance, insurance, services, and public sectors. Alten S.A. was founded in 1988 and is headquartered in Boulogne-Billancourt, France.",
+    "price":{
+      "datetime": "22/02/2021T11:55:65+00:00",
+      "price": 126.65,
+      "previousClosePrice": 127.65
+    }
+  },{
+    "type":"ETF",
+    "code":"E40",
+    "assetType": "ETF",
+    "assetClass": "Equity",
+    "picture":"",
+    "shortName": "Easy CAC 40 UCITS ETF",
+    "fullName": "Easy CAC 40 UCITS ETF",
+    "country": "France",
+    "exchangeCode": "PA",
+    "description": "The investment seeks to replicate, net of expenses, of the CAC 40 index. The index is the reference index of the French stock market. It is comprised of 40 stocks chosen among the 100 largest market capitalizations quoted on Euronext Paris. The index is free float adjusted market capitalization.",
+    "price":{
+      "datetime": "22/02/2021T11:55:65+00:00",
+      "price": 333.65,
+      "previousClosePrice": 335.65
+    }
+  }]

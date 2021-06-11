@@ -1,0 +1,43 @@
+{
+  "strategyId" : "0bfe6c1a-45b6-4275-ad21-b839e32ae5dsc",
+  "benchmarkCode" : "CAC.PA",
+  "benchmarkName" : "CAC 40",
+  "period" : "week", //last, intraday, week, month, year, 2 years, 5 years
+  "valueHistory": [
+        {
+            "dateTime": "2021-01-21T08:00:00+00:00",
+            "benchMarkValue" : 4340,
+            "value": 1911.6789
+        },
+        {
+            "dateTime": "2021-01-22T08:00:00+00:00",
+            "benchMarkValue" : 4350,
+            "value": 1911.6789
+        },
+        {
+            "dateTime": "2021-01-23T08:00:00+00:00",
+            "benchMarkValue" : 4340,
+            "value": 1911.6789
+        },
+        {
+            "dateTime": "2021-01-24T08:00:00+00:00",
+            "benchMarkValue" : 4350,
+            "value": 1911.6789
+        },
+        {
+            "dateTime": "2021-01-25T08:00:00+00:00",
+            "benchMarkValue" : 4350,
+            "value": 1911.6789
+        },
+        {
+            "dateTime": "2021-01-26T08:00:00+00:00",
+            "benchMarkValue" : 4330,
+            "value": 1911.6789
+        },
+        {
+            "dateTime": "2021-01-27T08:00:00+00:00",
+            "benchMarkValue" : 4390,
+            "value": 2000.56
+        }
+    ]
+}

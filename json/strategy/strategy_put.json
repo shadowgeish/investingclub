@@ -1,0 +1,32 @@
+{
+    "name" : "My aggresive strategy",
+    "strategyStyle": "defensive",
+    "holdingsPublicationDayLag":7,
+    "rebalancingFrequency" : 30,
+    "status": "OpenForInvestment",
+    "strategyBenchmarkCode" : "CAC.PA",
+    "strategyManagementFees": 0.02,
+    "strategyPerformanceFees": 0.1,
+    "hurdleRate": 0.1,
+    "minimumInvestmentPeriodInMonth": 1,
+    "withdrawFeeBeforeMinimumPeriod": 0.002,
+    "withdrawFeeAfterMinimumPeriod": 0.0002,
+    "description": "",
+    "numberOfPortfolios": 20,
+    "numberOfHoldings": 10,
+    "maxNumberOfClients": 100,
+    "minimumInvestmentAmount" : 500,
+    "CreatorUserId" : "0bfe6c1a-45b6-4275-ad21-b839e32ae5dc",
+    "holdings" : [{
+        "code" : "C4S",
+        "exchangeCode": "AP",
+        "percentage": 0.50,
+        "target": 0.55
+    },{
+        "code" : "CAC",
+        "exchangeCode": "AP",
+        "percentage": 0.50,
+        "target": 0.45
+    }]
+}
+

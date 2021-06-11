@@ -1,0 +1,14 @@
+{
+  "strategyId" : "0bfe6c1a-45b6-4275-ad21-b839e32ae5dsc",
+  "period" : "week", //last, intraday, week, month, year, 2 years, 5 years
+  "investmentValue": "4550",
+  "investments": [{
+    "date": "2021-01-23T08:34:23+00:00",
+    "type": "invest",
+    "amount" : 4000
+  },{
+    "date": "2021-02-23T08:34:23+00:00",
+    "type": "invest",
+    "amount" : 500
+  }]
+}

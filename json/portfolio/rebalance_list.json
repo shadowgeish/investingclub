@@ -1,0 +1,38 @@
+[
+    {
+        "id": "e9c8f6a7-fe7f-4fcf-b1b6-6b89a6fe8d2c",
+        "name": "Weekly Defensive portfolio",
+        "riskLevel": 1,
+        "description": "",
+        "creationDate": "2021-01-23T08:34:23+00:00",
+        "currency": "EUR",
+        "value" : 240.57,
+        "lastYearGlobalEvolution": 2.5,
+        "lastMonthGlobalEvolution": 2.0,
+        "lastWeekGlobalEvolution": 1.5
+    },
+    {
+        "id": "e9c8f6a7-fe7f-4fcf-b1b6-6b89a6fe8d2c",
+        "name": "Modarate portfolio",
+        "riskLevel": 1,
+        "description": "",
+        "creationDate": "2021-01-23T08:34:23+00:00",
+        "currency": "EUR",
+        "value" : 640.34,
+        "lastYearGlobalEvolution": 3.5,
+        "lastMonthGlobalEvolution": 2.0,
+        "lastWeekGlobalEvolution": 3.5
+    },
+    {
+        "id": "1f8f040f-cb6b-4779-9b1c-cb365310f666",
+        "name": "Beguinner portfolio",
+        "riskLevel": 1,
+        "description": "",
+        "creationDate": "2021-01-23T08:34:23+00:00",
+        "currency": "EUR",
+        "value" : 640.34,
+        "lastYearGlobalEvolution": 4.5,
+        "lastMonthGlobalEvolution": 2.0,
+        "lastWeekGlobalEvolution": 3.5
+    }
+]

@@ -1,0 +1,76 @@
+[{
+    "code":"TSLA",
+    "picture":"https://eodhistoricaldata.com/img/logos/US/TSLA.png",
+    "assetType": "Equity",
+    "assetClass": "Equity",
+    "shortName": "Tesla, Inc",
+    "fullName": "Tesla, Inc",
+    "country": "USA",
+    "exchangeCode": "US",
+    "description": "Tesla, Inc. designs, develops, manufactures, leases, and sells electric vehicles, and energy generation and storage systems in the United States, China, and internationally. The company operates in two segments, Automotive, and Energy Generation and Storage. The Automotive segment offers electric vehicles, as well as sells automotive regulatory credits. It provides sedans and sport utility vehicles through direct and used vehicle sales, a network of Tesla Superchargers, and in-app upgrades; and purchase financing and leasing services. This segment is also involved in the provision of non-warranty after-sales vehicle services, sale of used vehicles, retail merchandise, and vehicle insurance, as well as sale of products through its subsidiaries to third party customers; services for electric vehicles through its company-owned service locations, and Tesla mobile service technicians; and vehicle limited warranties and extended service plans. The Energy Generation and Storage segment engages in the design, manufacture, installation, sale, and leasing of solar energy generation and energy storage products, and related services to residential, commercial, and industrial customers and utilities through its website, stores, and galleries, as well as through a network of channel partners. This segment also offers service and repairs to its energy product customers, including under warranty; and various financing options to its solar customers. The company was formerly known as Tesla Motors, Inc. and changed its name to Tesla, Inc. in February 2017. Tesla, Inc. was founded in 2003 and is headquartered in Palo Alto, California.",
+    "price":{
+      "datetime": "22/02/2021T11:55:65+00:00",
+      "price": 22.65,
+      "previousClosePrice": 21.65
+    }
+  },{
+    "code":"GOOG",
+    "assetType": "Equity",
+    "assetClass": "Equity",
+    "picture":"https://eodhistoricaldata.com//img/logos/US/goog.png",
+    "shortName": "Alphabet Inc",
+    "fullName": "Alphabet Inc",
+    "country": "USA",
+    "exchangeCode": "US",
+    "description": "Alphabet Inc. provides online advertising services in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. The company offers performance and brand advertising services. It operates through Google Services, Google Cloud, and Other Bets segments. The Google Services segment provides products and services, such as ads, Android, Chrome, hardware, Google Maps, Google Play, Search, and YouTube, as well as technical infrastructure; and digital content. The Google Cloud segment offers infrastructure and data analytics platforms, collaboration tools, and other services for enterprise customers. The Other Bets segment sells internet and TV services, as well as licensing and research and development services. The company was founded in 1998 and is headquartered in Mountain View, California.",
+    "price":{
+      "datetime": "22/02/2021T11:55:65+00:00",
+      "price": 126.65,
+      "previousClosePrice": 122.65
+    }
+  },{
+    "code":"MSFT",
+    "assetType": "Equity",
+    "assetClass": "Equity",
+    "picture":"https://eodhistoricaldata.com/img/logos/US/MSFT.png",
+    "shortName": "Microsoft Corporation",
+    "fullName": "Microsoft Corporation",
+    "country": "USA",
+    "exchangeCode": "US",
+    "description": "Microsoft Corporation develops, licenses, and supports software, services, devices, and solutions worldwide. Its Productivity and Business Processes segment offers Office, Exchange, SharePoint, Microsoft Teams, Office 365 Security and Compliance, and Skype for Business, as well as related Client Access Licenses (CAL); Skype, Outlook.com, OneDrive, and LinkedIn; and Dynamics 365, a set of cloud-based and on-premises business solutions for small and medium businesses, large organizations, and divisions of enterprises. Its Intelligent Cloud segment licenses SQL and Windows Servers, Visual Studio, System Center, and related CALs; GitHub that provides a collaboration platform and code hosting service for developers; and Azure, a cloud platform. It also offers support services and Microsoft consulting services to assist customers in developing, deploying, and managing Microsoft server and desktop solutions; and training and certification to developers and IT professionals on various Microsoft products. Its More Personal Computing segment provides Windows original equipment manufacturer (OEM) licensing and other non-volume licensing of the Windows operating system; Windows Commercial, such as volume licensing of the Windows operating system, Windows cloud services, and other Windows commercial offerings; patent licensing; Windows Internet of Things; and MSN advertising. It also offers Surface, PC accessories, PCs, tablets, gaming and entertainment consoles, and other devices; Gaming, including Xbox hardware, and Xbox content and services; video games and third-party video game royalties; and Search, including Bing and Microsoft advertising. It sells its products through OEMs, distributors, and resellers; and directly through digital marketplaces, online stores, and retail stores. It has a strategic collaboration with DXC Technology and Dynatrace, Inc. The company was founded in 1975 and is headquartered in Redmond, Washington.",
+    "price":{
+      "datetime": "22/02/2021T11:55:65+00:00",
+      "price": 16.65,
+      "previousClosePrice": 15.66
+    }
+  },{
+    "code":"BX4",
+    "assetType": "Equity",
+    "assetClass": "Equity",
+    "picture":"",
+    "shortName": "Lyxor CAC 40 Daily (-2x)",
+    "fullName": "Lyxor CAC 40 Daily (-2x)",
+    "country": "France",
+    "exchangeCode": "PA",
+    "description": "Lyxor CAC 40 Daily (-2x)",
+    "price":{
+      "datetime": "22/02/2021T11:55:65+00:00",
+      "price": 126.65,
+      "previousClosePrice": 123.65
+    }
+  },{
+    "code":"GS",
+    "assetType": "Equity",
+    "assetClass": "Equity",
+    "picture":"https://eodhistoricaldata.com/img/logos/US/gs.png",
+    "shortName": "Easy CAC 40 UCITS ETF",
+    "fullName": "Easy CAC 40 UCITS ETF",
+    "country": "USA",
+    "exchangeCode": "US",
+    "description": "The Goldman Sachs Group, Inc., a financial institution, provides range of financial services for corporations, financial institutions, governments, and individuals worldwide. It operates through four segments: Investment Banking, Global Markets, Asset Management, and Consumer & Wealth Management. The company's Investment Banking segment provides financial advisory services, including strategic advisory assignments related to mergers and acquisitions, divestitures, corporate defense activities, restructurings, and spin-offs; and middle-market lending, relationship lending, and acquisition financing, as well as transaction banking services. This segment also offers underwriting services, such as equity underwriting for common and preferred stock and convertible and exchangeable securities; and debt underwriting for various types of debt instruments, including investment-grade and high-yield debt, bank and bridge loans, and emerging- and growth-market debt, as well as originates structured securities. Its Global Markets segment is involved in client execution activities for cash and derivative instruments; credit and interest rate products; and provision of equity intermediation and equity financing, clearing, settlement, and custody services, as well as mortgages, currencies, commodities, and equities related products. The company's Asset Management segment manages assets across various asset classes, including equity, fixed income, hedge funds, credit funds, private equity, real estate, currencies, and commodities; and provides customized investment advisory solutions, as well as invests in corporate, real estate, and infrastructure entities. Its Consumer & Wealth Management segment offers wealth advisory and banking services, including financial planning, investment management, deposit taking, and lending; private banking; and unsecured loans, as well as accepts saving and time deposits. The company was founded in 1869 and is headquartered in New York, New York.",
+    "price":{
+      "datetime": "22/02/2021T11:55:65+00:00",
+      "price": 333.65,
+      "previousClosePrice": 333.60
+    }
+  }]

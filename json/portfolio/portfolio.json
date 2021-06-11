@@ -1,0 +1,74 @@
+{
+    "id": "8a8288d3-40f4-40ec-aa55-beed1d2e34d3",
+    "riskLevel": 1,
+    "currency": "EUR",
+    "description": "",
+    "holdingsAsOfDate" : "2015-05-16T05:50:06+00:00",
+    "holdings": [
+        {
+            "strategyId": "d4aa68a4-9386-4b20-a329-e7312111ccdd",
+            "strategyName": "Defensive strategy",
+            "value": "1500.56",
+            "needsRebalancing": false,
+            "investments": [{
+              "date": "2021-01-23T08:34:23+00:00",
+              "type": "invest",
+              "amount" : 1000
+            },{
+              "date": "2021-02-23T08:34:23+00:00",
+              "type": "invest",
+              "amount" : 500
+            }]
+        },
+        {
+            "strategyId": "d4aa68a4-9386-4b20-a329-e7312111ccdd",
+            "strategyName": "Very defensive strategy",
+            "value": "4550.00",
+            "needsRebalancing": false,
+            "investments": [{
+              "date": "2021-01-23T08:34:23+00:00",
+              "type": "invest",
+              "amount" : 4000
+            },{
+              "date": "2021-02-23T08:34:23+00:00",
+              "type": "invest",
+              "amount" : 500
+            }]
+        }
+    ],
+
+    "valueHistory": [
+        {
+            "dateTime": "2021-01-21T08:00:00+00:00",
+            "value": 1911.6789
+        },
+        {
+            "dateTime": "2021-01-22T08:00:00+00:00",
+            "value": 1911.6789
+        },
+        {
+            "dateTime": "2021-01-23T08:00:00+00:00",
+            "value": 1911.6789
+        },
+        {
+            "dateTime": "2021-01-24T08:00:00+00:00",
+            "value": 1911.6789
+        },
+        {
+            "dateTime": "2021-01-25T08:00:00+00:00",
+            "value": 1911.6789
+        },
+        {
+            "dateTime": "2021-01-26T08:00:00+00:00",
+            "value": 1911.6789
+        },
+        {
+            "dateTime": "2021-01-27T08:00:00+00:00",
+            "value": 2000.56
+        }
+    ],
+    "lastModificationDate": "2021-01-23T08:34:23+00:00",
+    "creationDate": "2021-01-23T08:34:23+00:00",
+    "lastModifierUserId": "0bfe6c1a-45b6-4275-ad21-b839e32ae5dc",
+    "lastModifierUser": "Leonardo Cuco"
+}

@@ -1,0 +1,76 @@
+[
+{
+    "id": "1dea7b7f-fbe6-4d89-900f-21d15a56f696",
+    "ownerId": "2856c0c2-e80f-4425-8b9b-36bc994def7a",
+    "name": "My offencive monthly strategy 2",
+    "description": "My offencive monthly strategy for every beguiner",
+    "previousValue": 508765,
+    "currency": "EUR",
+    "riskLevel": 0,
+    "holdingsPublicationDayLag": 0,
+    "style": "Offencive",
+    "managementFees": 0.00200,
+    "performanceFees": 0.00200,
+    "hurdleRate": 0.00300,
+    "minimumInvestmentPeriodInMonth": 30,
+    "withdrawFeeBeforeMinimumPeriod": 0.00500,
+    "withdrawFeeAfterMinimumPeriod": 0.00600,
+    "rebalancingFrequency": 30,
+    "lastRebalancingDate": "2021-03-27T18:10:59.7797331+00:00",
+    "needsRebalancing": false,
+    "benchmarkCode": "CAC.40",
+    "benchmarkName": "CAC.40",
+    "minimumInvestmentAmount": 30.00000,
+    "netFlow": 50203.3345,
+    "netFlowPercentage": 0.002,
+    "maxDrawdown": -1,
+    "sharpeRatio": 0,
+    "numberOfPortfolios": 0,
+    "numberOfHoldings": 0,
+    "numberOfClients": 0,
+    "maxNumberOfClients": 0,
+    "totalAUM": -1,
+    "status": "open",
+    "strategyType": "Private",
+    "numberClient": 40,
+    "lastModificationDate": "2021-03-27T18:10:59.7797339+00:00",
+    "lastModifier": {
+      "id": "2856c0c2-e80f-4425-8b9b-36bc994def7a",
+      "name": "TO_ADD_TO_DB"
+    },
+    "creationDate": "2021-03-27T18:10:59.7797341+00:00",
+    "creator": {
+      "id": "2856c0c2-e80f-4425-8b9b-36bc994def7a",
+      "name": "TO_ADD_TO_DB"
+    },
+    "holdingsAsOfDate": "2021-03-27T18:10:59.7797342+00:00",
+    "strategyHoldings": [
+      {
+        "id": "98ddc79c-46ed-4574-ad15-00bb81eb6cc7",
+        "code": "APL",
+        "numberShare": 23,
+        "exchangeCode": "PA",
+        "type": "equity",
+        "assetClass": "equity",
+        "shortName": "Apple",
+        "percentage": 0.50000,
+        "target": 0.45000,
+        "maximumDrift": 0.05000,
+        "imageUrl": "https://eodhistoricaldata.com/img/logos/US/MSFT.png"
+      },
+      {
+        "id": "3c7a76a1-5ad7-4571-9004-9050570684c0",
+        "code": "MSFT",
+        "numberShare": 2,
+        "exchangeCode": "PA",
+        "type": "equity",
+        "shortName": "MSFT",
+        "percentage": 0.50000,
+        "target": 0.55000,
+        "maximumDrift": 0.02000,
+        "imageUrl": "https://eodhistoricaldata.com/img/logos/US/MSFT.png"
+      }
+    ]
+  }
+
+]

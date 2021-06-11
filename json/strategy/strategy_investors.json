@@ -1,0 +1,19 @@
+{
+  "strategyId" : "0bfe6c1a-45b6-4275-ad21-b839e32ae5dsc",
+  "investors": [{
+      "userId": "18c6893b-0803-46c0-9f61-eee3f148bf60",
+      "userName": "Leonardo Cuco",
+      "investmentValue": "4550",
+
+  },
+  {
+      "userId": "83c26122-1028-4f9e-b4bc-46ac8ea79d7c",
+      "userName": "Adrien Mortel",
+      "investmentValue": "2050"
+  },
+  {
+      "userId": "83c26122-1028-4f9e-b4bc-46ac8ea59d7c",
+      "userName": "Adrien Lebouc",
+      "investmentValue": "3400"
+  }]
+}

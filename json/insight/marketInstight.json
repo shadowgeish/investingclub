@@ -1,0 +1,54 @@
+{
+    "marketInsights":[{
+        "code": "CAC.40",
+        "label": "CAC 40",
+        "currency": "EUR",
+        "prices": [{
+            "datetime": "23/02/2021T11:30:65+00:00",
+            "price": 6040.5500
+        },
+        {
+            "datetime": "23/02/2021T11:35:65+00:00",
+            "price": 6046.5500
+        }]
+    },
+    {
+        "code": "France10YearsYield",
+        "label": "France 10 year Yield",
+        "currency": "None",
+        "prices": [{
+            "datetime": "23/02/2021T11:30:65+00:00",
+            "price": -0.065
+        },
+        {
+            "datetime": "23/02/2021T11:35:65+00:00",
+            "price": -0.066
+        }]
+    },
+    {
+        "code": "EuroDollar",
+        "label": "Euro/Dollard",
+        "currency": "USD",
+        "prices": [{
+            "datetime": "23/02/2021T11:30:65+00:00",
+            "price": 1.1930
+        },
+        {
+            "datetime": "23/02/2021T11:35:65+00:00",
+            "price": 1.1930
+        }]
+    },
+    {
+        "code": "GoldSpot",
+        "label": "GoldSpot",
+        "currency": "EUR",
+        "prices": [{
+            "datetime": "23/02/2021T11:30:65+00:00",
+            "price": 1726.41
+        },
+        {
+            "datetime": "23/02/2021T11:35:65+00:00",
+            "price": 1726.41
+        }]
+    }]
+}

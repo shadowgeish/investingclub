@@ -1,0 +1,106 @@
+
+{
+
+    "clients": {
+        "total": 50,
+        "variation": {
+            "week": -2,
+            "month": 10,
+            "year": 54
+        }
+    },
+
+    "prospects": {
+        "total": 500,
+        "variation": {
+            "week": -2,
+            "month": 10,
+            "year": 54
+        }
+    },
+
+    "strategies": {
+        "total": 5,
+        "variation": {
+            "week": -2,
+            "month": 10,
+            "year": 4302330
+        }
+    },
+
+    "aum": {
+        "total": 50000000,
+        "variation": {
+            "day": 0,
+            "week": -430233,
+            "month": 430233,
+            "year": 4302330
+        }
+    },
+
+    "projects": {
+        "total": 25,
+        "variation": {
+            "week": -2,
+            "month": 10,
+            "year": 54
+        }
+    },
+
+    "meetingsInsights": {
+        "total": 25,
+        "variation": {
+            "week": -2,
+            "month": 10,
+            "year": 54
+        }
+    },
+
+    "marketInsights": {
+        "topTradedStock": {
+            "day": ['CAC.PA', 'AIR.PA'],
+            "week": ['CAC.PA', 'AIR.PA'],
+            "month": ['CAC.PA', 'AIR.PA'],
+            "year": ['CAC.PA', 'AIR.PA']
+        },
+        "topResearchTag": {
+            "day": ['#gamestop', '#assurancevie'],
+            "week": ['#gamestop', '#assurancevie'],
+            "month": ['#immobilier', '#assurancevie'],
+            "year": ['#fisal', '#assurancevie']
+        }
+    },
+
+    "liveStreamViewers": {
+        "total": 25,
+        "variation": {
+            "day": -2,
+            "week": -2,
+            "month": 10,
+            "year": 54
+        }
+    },
+
+    "briefNotesViews": {
+        "total": 25,
+        "variation": {
+            "day": -2,
+            "week": -2,
+            "month": 10,
+            "year": 54
+        }
+    },
+
+    "revenue": {
+        "total": 25943,
+        "variation": {
+            "week": -2432,
+            "month": -243,
+            "year": 20432
+        }
+    }
+}
+
+
+
+

@@ -51,6 +51,7 @@ async def live_stock_prices():
     lstock = ddf['full_code'].tolist()  # ddf.to_dict(orient='records')
     collection_name = "stocks"
     db_name = "asset_analytics"
+    lstock = lstock[0:20]
     sublists = [lstock[x:x + 20] for x in range(0, len(lstock), 20)]
     stringlist = []
     global real_time_price
@@ -61,8 +62,6 @@ async def live_stock_prices():
     from aiohttp import ClientSession
     session = ClientSession()
     while True:
-        await sio.emit('last_traded_price', {'userKey': 'streaming_api_key'})
-        await sio.sleep(1)
 
         if dtt_s < dtt < dtt_e:
 
@@ -71,7 +70,7 @@ async def live_stock_prices():
             import pandas as pd
             import requests
             import json
-            
+            list_to_order = []
             for sublist in stringlist:
                 print('Getting data for sub string {}'.format(sublist))
                 sreq = "https://eodhistoricaldata.com/api/real-time/CAC.PA?api_token=60241295a5b4c3.00921778&fmt=json&s={}"
@@ -82,7 +81,7 @@ async def live_stock_prices():
 
 
                 #list_closing_prices = req.json()
-                print('Reveived data {}'.format(sublist))
+                print('Reveived data {}, {}'.format(sublist, list_closing_prices))
                 # Real time prices
 
                 if real_time_price is None:
@@ -93,8 +92,9 @@ async def live_stock_prices():
                     key = price['code']  # + '_' + request_day
                     # push the price data to the socket so they could quicky see it
                     # print('sending data for {}'.format(price))
-                    print('Data check  {} : is {}'.format(is_serializable(price) ,price))
+                    # print('Data check  {} : is {}'.format(is_serializable(price) ,price))
                     await sio.emit('last_traded_price', price)
+                    list_to_order.append(price)
 
                     # push to the data price base for that code
                     # DATA BASE
@@ -113,9 +113,17 @@ async def live_stock_prices():
 
                     # push the json array of the day to the socket
                     list_data = {'code': key, 'prices': real_time_price[key]}
-                    print('Data chech  {} : is {}'.format(is_serializable(list_data), list_data))
-                    await sio.emit('intraday_traded_prices', list_data)
+                    # print('Data chech  {} : is {}'.format(is_serializable(list_data), list_data))
+                    await sio.emit('intraday_prices', list_data)
 
+
+            dic_to_order = pd.DataFrame(list_to_order)
+            dic_to_order = dic_to_order[['code','volume','timestamp']]
+            dic_to_order = dic_to_order.sort_values(by=['volume'], ascending=False ).reset_index()
+            dic_to_order['order'] = dic_to_order.index
+            dic_to_order = dic_to_order[['code', 'volume', 'timestamp', 'order']]
+            await sio.emit('intraday_trending_stocks', dic_to_order.to_json(orient='records'))
+            print('col ={}, Dicts = {}'.format(dic_to_order.columns, dic_to_order))
 
             await sio.sleep(10)
         

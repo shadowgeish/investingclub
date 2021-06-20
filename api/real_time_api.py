@@ -40,17 +40,27 @@ async def live_stock_prices():
     from datetime import datetime
     import pandas as pd
     from time import sleep
+    from pymongo import MongoClient
+    from asset_prices.prices import get_prices
+    from asset_prices.referencial import get_universe
+
+    collection_name = "real_time_prices"
+    db_name = "asset_analytics"
+    access_db = "mongodb+srv://sngoube:Yqy8kMYRWX76oiiP@cluster0.jaxrk.mongodb.net/asset_analytics?retryWrites=true&w=majority"
+    server = MongoClient(access_db)
+
     dtt = datetime.now()
     dtt_s = datetime(year=dtt.year, month=dtt.month, day=dtt.day, hour=00, minute = 0)
     dtt_e = datetime(year=dtt.year, month=dtt.month, day=dtt.day, hour=23, minute=00)
 
     print('Date check {} < {} < {} '.format(dtt_s, dtt, dtt_e))
-    ddf = pd.read_csv("../asset_prices/stock_universe.csv", sep=',', keep_default_na=False)
+    #ddf = pd.read_csv("../asset_prices/stock_universe.csv", sep=',', keep_default_na=False)
 
-    ddf['full_code'] = ddf['Code'] + '.' + ddf['Exchange']
+    ddf = get_universe()
+
+    ddf['full_code'] = ddf['Code'] + '.' + ddf['ExchangeCode']
     lstock = ddf['full_code'].tolist()  # ddf.to_dict(orient='records')
-    collection_name = "stocks"
-    db_name = "asset_analytics"
+
     lstock = lstock[0:20]
     sublists = [lstock[x:x + 20] for x in range(0, len(lstock), 20)]
     stringlist = []
@@ -74,14 +84,14 @@ async def live_stock_prices():
             for sublist in stringlist:
                 print('Getting data for sub string {}'.format(sublist))
                 sreq = "https://eodhistoricaldata.com/api/real-time/CAC.PA?api_token=60241295a5b4c3.00921778&fmt=json&s={}"
-                list_closing_prices =[]
+                list_closing_prices = []
 
                 async with session.get(sreq.format(sublist)) as response:
                     list_closing_prices = await response.json()
 
 
                 #list_closing_prices = req.json()
-                print('Reveived data {}, {}'.format(sublist, list_closing_prices))
+                # print('Reveived data {}, {}'.format(sublist, list_closing_prices))
                 # Real time prices
 
                 if real_time_price is None:
@@ -96,19 +106,37 @@ async def live_stock_prices():
                     await sio.emit('last_traded_price', price)
                     list_to_order.append(price)
 
+
                     # push to the data price base for that code
                     # DATA BASE
                     if key not in real_time_price.keys():
                         real_time_price[key] = list()
                         # read from db if there is historic for the day to real_time_price
                         # READ DATA BASE
+                        start_date = datetime.strptime(datetime.now().strftime("%d%m%Y%0700"), '%d%m%Y%H%M')
+                        end_date = datetime.strptime(datetime.now().strftime("%d%m%Y%2300"), '%d%m%Y%H%M')
+                        lk=[key]
+                        rt_price_df = get_prices(asset_codes=lk, start_date=start_date, end_date=end_date,
+                                                 type='real_time', ret='df')
+                        real_time_price[key] = rt_price_df.to_dict(orient='records')
+                        print('Already loaded data {}'.format(rt_price_df))
+
                     current_list = real_time_price[key]
                     exists = 0
                     for item in current_list:
                         if item['timestamp'] == price['timestamp']:
                             exists = 1
                             break
-                    if exists == 0:
+                    if exists == 0 and price['timestamp'] != 'NA':
+                        # Add each item of the list if doesn't exist
+                        price['converted_date'] = price['timestamp']
+
+                        print('Price {}'.format(price))
+
+                        price['date'] = datetime.fromtimestamp(price['timestamp']).strftime("%d-%m-%Y %H:%M:%S.%f")
+
+                        server[db_name][collection_name].update_one({"code": key}, {"$addToSet": {
+                            "prices": price}}, upsert=True)
                         real_time_price[key].append(price)
 
                     # push the json array of the day to the socket
@@ -119,7 +147,10 @@ async def live_stock_prices():
 
             dic_to_order = pd.DataFrame(list_to_order)
             dic_to_order = dic_to_order[['code','volume','timestamp']]
-            dic_to_order = dic_to_order.sort_values(by=['volume'], ascending=False ).reset_index()
+            dic_to_order = dic_to_order[dic_to_order['timestamp'] != 'NA']
+            print('dic_to_order {}'.format(dic_to_order))
+
+            dic_to_order = dic_to_order.sort_values(by=['volume'], ascending=False).reset_index()
             dic_to_order['order'] = dic_to_order.index
             dic_to_order = dic_to_order[['code', 'volume', 'timestamp', 'order']]
             await sio.emit('intraday_trending_stocks', dic_to_order.to_json(orient='records'))

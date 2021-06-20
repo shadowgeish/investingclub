@@ -5,7 +5,8 @@ Prices module
 
 """
 from datetime import date
-from asset_prices.historical_prices import get_historical_data
+from asset_prices.prices import get_prices
+from pypfopt import base_optimizer
 
 
 # return historical data for one or a list of codes example code : "BX4.PA"
@@ -31,7 +32,7 @@ def get_asset_returns(
 
     ac = [asset_codes] if not isinstance(asset_codes, list) else asset_codes
 
-    df = get_historical_data(asset_codes=ac, start_date=start_date, end_date=end_date, ret='df')
+    df = get_prices(asset_codes=ac, start_date=start_date, end_date=end_date, ret='df')
 
     retdf = pd.DataFrame()
     for asset_code in ac:
@@ -168,7 +169,7 @@ def monte_carlo_portfolio_simul(
     asset_codes = list(asset_codes_weight.keys())
 
     from dateutil import rrule
-    df_h_p = get_historical_data(asset_codes=asset_codes, ret='df',
+    df_h_p = get_prices(asset_codes=asset_codes, ret='df',
                                  start_date=datetime.datetime.combine(start_date, datetime.time.min),
                                  end_date=datetime.datetime.combine(end_date, datetime.time.min),
                                  )
@@ -289,7 +290,7 @@ def back_test_portfolio(
     asset_codes = list(asset_codes_weight.keys())
 
     from dateutil import rrule
-    df_h_p = get_historical_data(asset_codes=asset_codes, ret='df',
+    df_h_p = get_prices(asset_codes=asset_codes, ret='df',
                                  start_date=datetime.datetime.combine(start_date, datetime.time.min),
                                  end_date=datetime.datetime.combine(end_date, datetime.time.min),
                                  )
@@ -357,7 +358,7 @@ def efficient_frontier(
         if end_date is None else end_date
 
     from dateutil import rrule
-    df_h_p = get_historical_data(asset_codes=asset_codes, ret='df',
+    df_h_p = get_prices(asset_codes=asset_codes, ret='df',
                                  start_date=datetime.datetime.combine(start_date, datetime.time.min),
                                  end_date=datetime.datetime.combine(end_date, datetime.time.min),
                                  )
@@ -433,15 +434,16 @@ def portfolio_optimization(
         if end_date is None else end_date
 
     from dateutil import rrule
-    df_h_p = get_historical_data(asset_codes=asset_codes, ret='df',
+    df_h_p = get_prices(asset_codes=asset_codes, ret='df',
                                  start_date=datetime.datetime.combine(start_date, datetime.time.min),
                                  end_date=datetime.datetime.combine(end_date, datetime.time.min),
                                  )
+
     date_l = rrule.rrule(rrule.DAILY, dtstart=start_date, until=end_date)
     df_full = pd.DataFrame(index=date_l)
 
     for ac in asset_codes:
-        data = df_h_p[df_h_p['code']==ac].copy().sort_values(by=['converted_date'])
+        data = df_h_p[df_h_p['code'] == ac].copy().sort_values(by=['converted_date'])
         temp_df = pd.DataFrame(data=data['adjusted_close'].tolist(),
                                index=data['date'],
                                columns=['{}_adjusted_close'.format(ac)]
@@ -454,7 +456,9 @@ def portfolio_optimization(
     df_full.columns = [c.replace('_adjusted_close', '') for c in df_full.columns]
     from pypfopt import risk_models
     from pypfopt import expected_returns
-    cov_m = risk_models.CovarianceShrinkage(df_full).ledoit_wolf()
+    df_full = df_full.dropna()
+    cov_m = risk_models.risk_matrix(df_full)
+    #cov_m = risk_models.CovarianceShrinkage(df_full).ledoit_wolf()
     from pypfopt import EfficientFrontier
     mu = expected_returns.capm_return(df_full)
 
@@ -472,6 +476,11 @@ def portfolio_optimization(
         ret_bl = bl.bl_returns()
         opt = EfficientFrontier(ret_bl, S_bl)
         opt.add_objective(objective_functions.L2_reg)
+    if optimisation_type == 'max_diversification':
+        from non_convex_opto import MaxDiversification
+        print(' max_diversification cov = {}'.format(cov_m))
+        print(' df_full  = {}'.format(df_full))
+        opt = MaxDiversification(mu, cov_m)
     else:
         opt = EfficientFrontier(mu, cov_m)
 
@@ -495,7 +504,8 @@ def portfolio_optimization(
     elif optimisation_goal == 'max_rt_for_vol':
         opt.efficient_risk(target_volatility)
     else:
-        opt.optimize()
+        _make_output_weights =  opt.optimize()
+        print('_make_output_weights = {}'.format(_make_output_weights))
 
     output = {}
     weights = opt.clean_weights()
@@ -518,6 +528,9 @@ def portfolio_optimization(
         df_full['volatility'] = output['volatility']
         df_full['sharpe_ratio'] = output['sharpe_ratio']
         return df_full
+
+
+
 
 
 if __name__ == '__main__':
@@ -590,7 +603,7 @@ if __name__ == '__main__':
 
 
 
-'''
+
       # dict contribution amount : frequency ('monthly', 'yearly'),
     invested_amount = 10000
     rebalancing_frequency = 'monthly'
@@ -608,7 +621,7 @@ if __name__ == '__main__':
         ret='json'
     )
 
-    '''
+    
     df = back_test_portfolio(
          initial_asset_codes_weight={"BX4.PA": 0.3, "CAC.PA": 0.4, "500.PA": 0.2, "AIR.PA": 0.1},
          target_asset_codes_weight={"BX4.PA": 0.3, "CAC.PA": 0.4, "500.PA": 0.2, "AIR.PA": 0.1},
@@ -629,4 +642,14 @@ if __name__ == '__main__':
             ret='json'  # json, df
     )
 '''
+
+    jj = portfolio_optimization(
+        asset_codes=["IWDA.LSE", "TDT.AS", "BX4.PA", "LVC.PA", "IAEX.AS", "VUSA.LSE"],
+        optimisation_type='max_diversification',
+        optimisation_goal='max_diversification',
+        start_date=start_date,
+        end_date=end_date,
+        ret='json')
+    print('max_diversification = {}'.format(jj))
+
     #df.to_csv('/Users/sergengoube/PycharmProjects/investingclub/extract_{}.csv'.format(datetime.datetime.now()))

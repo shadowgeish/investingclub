@@ -45,22 +45,29 @@ def load_historical_data(asset_ticker=None,
     start_date = "2000-01-05"
     e_date = datetime.datetime.today() + datetime.timedelta(1)
     end_date = e_date.strftime("%Y-%m-%d")
-    if full_available_history is True : # Load 20 years history
+    if full_available_history is True: # Load 20 years history
         start_date = "2005-01-05"
     else:
         s_date = datetime.datetime.today() + datetime.timedelta(-2)
         start_date = s_date.strftime("%Y-%m-%d")
 
-    collection_name = "asset_historical_prices"
+    collection_name = "historical_prices"
     db_name = "asset_analytics"
     # https://eodhistoricaldata.com/api/eod/BX4.PA?from=2020-01-05&to=2020-02-10&api_token=60241295a5b4c3.00921778&period=d
     #
-    access_db = "mongodb+srv://sngoube:jCJpZ8tG7Ms3iF0l@cluster0.jaxrk.mongodb.net/asset_analytics?retryWrites=true&w=majority"
+    access_db = "mongodb+srv://sngoube:Yqy8kMYRWX76oiiP@cluster0.jaxrk.mongodb.net/asset_analytics?retryWrites=true&w=majority"
     server = MongoClient(access_db)
 
-    list_stocks = [asset_ticker] if asset_ticker is not None else list(server[db_name]["stocks"].find({}))
-    for stock_obj in list_stocks:
-        stock = "{}.{}".format(stock_obj['Code'], stock_obj['Exchange'])
+    #list_stocks = [asset_ticker] if asset_ticker is not None else list(server[db_name]["stocks"].find({}))
+
+    from referencial import get_universe
+    ddf = get_universe()
+    ddf['full_code'] = ddf['Code'] + '.' + ddf['ExchangeCode']
+    list_stocks = ddf['full_code'].tolist()  # ddf.to_dict(orient='records')
+    #ist_stocks = list_stocks[0:5]
+
+    for stock in list_stocks:
+        #stock = "{}.{}".format(stock_obj['Code'], stock_obj['Exchange'])
         #stock ="BX4.PA"
         #https://eodhistoricaldata.com/api/real-time/CAC.PA?api_token={}&fmt=json&s==BX4.PA,500.PA,BX4.PA,C4S.PA,AIR.PA,ATE.PA,E40.PA,CACC.PA,ADP.PA,AEXK.PA,AASU.PA,ALCG.PA,ACA.PA,ALOSM.PA
         # https://eodhistoricaldata.com/api/real-time/CAC.PA?api_token=60241295a5b4c3.00921778&fmt=json&s=BX4.PA,500.PA,BX4.PA,C4S.PA,AIR.PA,ATE.PA,E40.PA,CACC.PA,ADP.PA,AEXK.PA,AASU.PA,ALCG.PA,ACA.PA,ALOSM.PA
@@ -81,8 +88,9 @@ def load_historical_data(asset_ticker=None,
 
         ddf = pd.DataFrame().from_records(list_closing_prices)
         ddf['code'] = stock
+
         ddf['converted_date'] = ddf['date'].apply(
-            lambda x: datetime.datetime.strptime(x, "%Y-%m-%d"))
+            lambda x: datetime.datetime.strptime(x, "%Y-%m-%d").timestamp())
 
         # ddf['converted_date'] = pd.to_datetime(ddf['date'], format="%Y-%m-%d") # datetime.datetime.strptime("2017-10-13T00:00:00.000Z", "%Y-%m-%dT%H:%M:%S.000Z")
 
@@ -112,12 +120,13 @@ def load_historical_data(asset_ticker=None,
 
 
 
-# return historical data for one or a list of codes example code : "BX4.PA"
+# return historical/real time data for one or a list of codes example code : "BX4.PA"
 # usage get_historical_data(asset_codes="BX4.PA")  returns 1 week history for code BX4.PA
 # usage get_historical_data(asset_codes=["BX4.PA", "CAC.PA"])  returns 1 week history for code BX4.PA and CAC.PA
-def get_historical_data(asset_codes=[],
+def get_prices(asset_codes=[],
                         start_date=None,
                         end_date=None,
+                        type='historical',
                         ret='json' # json, df
                         ):
     import pandas as pd
@@ -127,22 +136,21 @@ def get_historical_data(asset_codes=[],
     import datetime
 
     eod_key = "60241295a5b4c3.00921778"
-    start_date = (datetime.datetime.today() + datetime.timedelta(-7))\
-        if start_date is None else start_date
-    end_date = (datetime.datetime.today() + datetime.timedelta(+1)) \
-        if end_date is None else end_date
+    sd = datetime.datetime.strptime(datetime.datetime.now().strftime("%d%m%Y%2300"), '%d%m%Y%H%M') + datetime.timedelta(-7)
+    ed = datetime.datetime.strptime(datetime.datetime.now().strftime("%d%m%Y%2300"), '%d%m%Y%H%M') + datetime.timedelta(+1)
+    start_date = sd if start_date is None else start_date
+    end_date = ed if end_date is None else end_date
 
-    collection_name = "asset_historical_prices"
+    collection_name = "real_time_prices" if type == 'real_time' else 'historical_prices'
     db_name = "asset_analytics"
 
     access_db = "mongodb+srv://sngoube:Yqy8kMYRWX76oiiP@cluster0.jaxrk.mongodb.net/asset_analytics?retryWrites=true&w=majority"
     server = MongoClient(access_db)
 
     list_stocks = asset_codes if isinstance(asset_codes, list) else [asset_codes]
-    sdate = start_date.timestamp() * 1000
-    edate = end_date.timestamp() * 1000
-
-    res = server[db_name][collection_name].aggregate([
+    sdate = start_date.timestamp()
+    edate = end_date.timestamp()
+    query = [
         {"$match": {"code": {"$in": list_stocks } }},
         {"$project": {"prices":
             {
@@ -158,7 +166,8 @@ def get_historical_data(asset_codes=[],
                 }
             }
         }
-        }])
+        }]
+    res = server[db_name][collection_name].aggregate(query)
     #1612738806575.399
     #1613088000000
     lres = list(res)
@@ -169,7 +178,7 @@ def get_historical_data(asset_codes=[],
 
     #   print(format(df.to_json(orient='records')))
 
-    print("Done historical!")
+    print("Done get_prices: {}, query : {}".format(type, query))
     server.close()
 
     if ret == 'json':
@@ -198,6 +207,6 @@ def get_historical_data(asset_codes=[],
 
 
 if __name__ == '__main__':
-    load_historical_data(full_available_history=False)
-    get_historical_data(asset_codes=["BX4.PA", "CAC.PA"], ret = 'df')
+    # load_historical_data(full_available_history=True)
+    print(get_prices(asset_codes=["IWDA.LSE", "TDT.AS", "BX4.PA", "LVC.PA"], ret = 'df'))
 

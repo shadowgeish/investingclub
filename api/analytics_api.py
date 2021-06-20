@@ -2,11 +2,25 @@ from flask import Flask
 from flask_restful import Resource, Api
 from flask_restful.reqparse import RequestParser
 from flask_socketio import SocketIO, emit
-from api.monte_carlo import MonteCarloSimulation
-from api.SharePrices import LiveSharePrices
-
+from api.simulation import MonteCarloSimulation, AAbacktesting
+from api.stocks import StockUniverse, StockData
+from flask_swagger_ui import get_swaggerui_blueprint
 
 app = Flask(__name__)
+
+### swagger specific ###
+SWAGGER_URL = '/swagger'
+API_URL = '/static/swagger.json'
+SWAGGERUI_BLUEPRINT = get_swaggerui_blueprint(
+    SWAGGER_URL,
+    API_URL,
+    config={
+        'app_name': "InvestingClub Analytics API"
+    }
+)
+app.register_blueprint(SWAGGERUI_BLUEPRINT, url_prefix=SWAGGER_URL)
+### end swagger specific ##
+
 api = Api(app, prefix="/api/v1")
 
 # Set this variable to "threading", "eventlet" or "gevent" to test the
@@ -70,10 +84,17 @@ class Subscriber(Resource):
 
 api.add_resource(SubscriberCollection, '/subscribers')
 api.add_resource(Subscriber, '/subscribers/<int:id>')
-api.add_resource(MonteCarloSimulation, '/simulation')
-api.add_resource(LiveSharePrices, '/live_share_prices', resource_class_kwargs={'socket_io': socket_io})
+api.add_resource(MonteCarloSimulation, '/montecarlo')
+api.add_resource(AAbacktesting, '/aabacktesting')
+api.add_resource(MonteCarloSimulation, '/optimisation')
+api.add_resource(MonteCarloSimulation, '/realestate') # real estate prices
+api.add_resource(MonteCarloSimulation, '/lifeinsurance') # life insurance
+api.add_resource(StockUniverse, '/stock_universe') # country, type, name
+api.add_resource(StockData, '/stock_data/<string:code>')
+# name, exchange, description, asset class, esg ratings, financial data
+# ETF => composition, issuer logo, AUM,
 
 
 if __name__ == '__main__':
     # app.run(debug=True, port=5001)
-    socket_io.run(app, debug=True, port=5001)
+    socket_io.run(app, debug=True, port=5000)

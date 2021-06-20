@@ -1,0 +1,1229 @@
+,ISIN,Code,Name,Country,Exchange,Currency,Type,ISIN.1,ExchangeCode,logo
+0,US00846U1016,A,"Agilent Technologies, Inc",USA,NYSE,USD,Common Stock,US00846U1016,US,/img/logos/US/a.png
+1,US02376R1023,AAL,American Airlines Group Inc,USA,NASDAQ,USD,Common Stock,US02376R1023,US,/img/logos/US/aal.png
+2,US00751Y1064,AAP,"Advance Auto Parts, Inc",USA,NYSE,USD,Common Stock,US00751Y1064,US,/img/logos/US/aap.png
+3,US0378331005,AAPL,Apple Inc,USA,NASDAQ,USD,Common Stock,US0378331005,US,/img/logos/US/aapl.png
+4,US00287Y1091,ABBV,AbbVie Inc,USA,NYSE,USD,Common Stock,US00287Y1091,US,/img/logos/US/abbv.png
+5,US03073E1055,ABC,AmerisourceBergen Corporation,USA,NYSE,USD,Common Stock,US03073E1055,US,/img/logos/US/abc.png
+6,CH0012221716,ABLZF,ABB Ltd,USA,PINK,USD,Common Stock,CH0012221716,US,/img/logos/US/ABLZF.png
+7,US0028241000,ABT,Abbott Laboratories,USA,NYSE,USD,Common Stock,US0028241000,US,/img/logos/US/Abt.png
+8,US00724F1012,ADBE,Adobe Inc,USA,NASDAQ,USD,Common Stock,US00724F1012,US,/img/logos/US/ADBE.png
+9,DE000A1EWWW0,ADDDF,adidas AG,USA,OTCQX,USD,Common Stock,DE000A1EWWW0,US,/img/logos/US/ADDDF.png
+10,US0326541051,ADI,"Analog Devices, Inc",USA,NASDAQ,USD,Common Stock,US0326541051,US,/img/logos/US/adi.png
+11,US0394831020,ADM,Archer-Daniels-Midland Company,USA,NYSE,USD,Common Stock,US0394831020,US,/img/logos/US/adm.png
+12,US0530151036,ADP,"Automatic Data Processing, Inc",USA,NASDAQ,USD,Common Stock,US0530151036,US,/img/logos/US/adp.png
+13,US0185811082,ADS,Alliance Data Systems Corporation,USA,NYSE,USD,Common Stock,US0185811082,US,/img/logos/US/ads.png
+14,US0527691069,ADSK,"Autodesk, Inc",USA,NASDAQ,USD,Common Stock,US0527691069,US,/img/logos/US/adsk.png
+15,US0236081024,AEE,Ameren Corporation,USA,NYSE,USD,Common Stock,US0236081024,US,/img/logos/US/aee.png
+16,CA0084741085,AEM,Agnico Eagle Mines Limited,USA,NYSE,USD,Common Stock,CA0084741085,US,/img/logos/US/AEM.png
+17,US00130H1059,AES,The AES Corporation,USA,NYSE,USD,Common Stock,US00130H1059,US,/img/logos/US/AES.png
+18,US0010551028,AFL,Aflac Incorporated,USA,NYSE,USD,Common Stock,US0010551028,US,/img/logos/US/AFL.png
+19,NL0011794037,AHODF,Koninklijke Ahold Delhaize N.V,USA,OTCQX,USD,Common Stock,NL0011794037,US,/img/logos/US/AHODF.png
+20,US0268747849,AIG,"American International Group, Inc",USA,NYSE,USD,Common Stock,US0268747849,US,/img/logos/US/aig.png
+21,US04621X1081,AIZ,"Assurant, Inc",USA,NYSE,USD,Common Stock,US04621X1081,US,/img/logos/US/AIZ.png
+22,US00971T1016,AKAM,"Akamai Technologies, Inc",USA,NASDAQ,USD,Common Stock,US00971T1016,US,/img/logos/US/akam.png
+23,US0162551016,ALGN,"Align Technology, Inc",USA,NASDAQ,USD,Common Stock,US0162551016,US,/img/logos/US/ALGN.png
+24,US0200021014,ALL,The Allstate Corporation,USA,NYSE,USD,Common Stock,US0200021014,US,/img/logos/US/all.png
+25,US0382221051,AMAT,"Applied Materials, Inc",USA,NASDAQ,USD,Common Stock,US0382221051,US,/img/logos/US/amat.png
+26,US00165C1045,AMC,"AMC Entertainment Holdings, Inc",USA,NYSE,USD,Common Stock,US00165C1045,US,/img/logos/US/AMC.png
+27,US0079031078,AMD,"Advanced Micro Devices, Inc",USA,NASDAQ,USD,Common Stock,US0079031078,US,/img/logos/US/AMD.png
+28,US0311001004,AME,"AMETEK, Inc",USA,NYSE,USD,Common Stock,US0311001004,US,/img/logos/US/AME.png
+29,US0082521081,AMG,"Affiliated Managers Group, Inc",USA,NYSE,USD,Common Stock,US0082521081,US,/img/logos/US/amg.png
+30,US0311621009,AMGN,Amgen Inc,USA,NASDAQ,USD,Common Stock,US0311621009,US,/img/logos/US/Amgn.png
+31,US03076C1062,AMP,"Ameriprise Financial, Inc",USA,NYSE,USD,Common Stock,US03076C1062,US,/img/logos/US/amp.png
+32,LU1598757687,AMSYF,ArcelorMittal,USA,PINK,USD,Common Stock,LU1598757687,US,/img/logos/US/AMSYF.png
+33,US03027X1000,AMT,American Tower Corporation (REIT),USA,NYSE,USD,Common Stock,US03027X1000,US,/img/logos/US/amt.png
+34,US0231351067,AMZN,"Amazon.com, Inc",USA,NASDAQ,USD,Common Stock,US0231351067,US,/img/logos/US/amzn.png
+35,US05329W1027,AN,"AutoNation, Inc",USA,NYSE,USD,Common Stock,US05329W1027,US,/img/logos/US/AN.png
+36,US0028962076,ANF,Abercrombie & Fitch Co,USA,NYSE,USD,Common Stock,US0028962076,US,/img/logos/US/anf.png
+37,US0367521038,ANTM,"Anthem, Inc",USA,NYSE,USD,Common Stock,US0367521038,US,/img/logos/US/ANTM.png
+38,FR0010220475,AOMFF,Alstom SA,USA,PINK,USD,Common Stock,FR0010220475,US,/img/logos/US/AOMFF.png
+39,US0374111054,APA,APA Corporation,USA,NASDAQ,USD,Common Stock,US0374111054,US,/img/logos/US/Apa.png
+40,US0091581068,APD,"Air Products and Chemicals, Inc",USA,NYSE,USD,Common Stock,US0091581068,US,/img/logos/US/apd.png
+41,US0320951017,APH,Amphenol Corporation,USA,NYSE,USD,Common Stock,US0320951017,US,/img/logos/US/aph.png
+42,CA03765K1049,APHA,"Tilray, Inc",USA,NASDAQ,USD,Common Stock,CA03765K1049,US,/img/logos/US/APHA.png
+43,CA0158571053,AQN,Algonquin Power & Utilities Corp,USA,NYSE,USD,Common Stock,CA0158571053,US,/img/logos/US/AQN.png
+44,US0152711091,ARE,"Alexandria Real Estate Equities, Inc",USA,NYSE,USD,Common Stock,US0152711091,US,/img/logos/US/ARE.png
+45,SE0011166610,ATLKF,Atlas Copco AB,USA,PINK,USD,Common Stock,SE0011166610,US,/img/logos/US/ATLKF.png
+46,SE0011166628,ATTLF,Atlas Copco AB,USA,PINK,USD,Common Stock,SE0011166628,US,
+47,US00507V1098,ATVI,"Activision Blizzard, Inc",USA,NASDAQ,USD,Common Stock,US00507V1098,US,/img/logos/US/atvi.png
+48,US0534841012,AVB,"AvalonBay Communities, Inc",USA,NYSE,USD,Common Stock,US0534841012,US,/img/logos/US/avb.png
+49,US11135F1012,AVGO,Broadcom Inc,USA,NASDAQ,USD,Common Stock,US11135F1012,US,/img/logos/US/avgo.png
+50,US0536111091,AVY,Avery Dennison Corporation,USA,NYSE,USD,Common Stock,US0536111091,US,/img/logos/US/AVY.png
+51,FR0000120628,AXAHF,AXA SA,USA,OTCQX,USD,Common Stock,FR0000120628,US,/img/logos/US/AXAHF.png
+52,US0258161092,AXP,American Express Company,USA,NYSE,USD,Common Stock,US0258161092,US,/img/logos/US/axp.png
+53,GB0009895292,AZNCF,AstraZeneca PLC,USA,PINK,USD,Common Stock,GB0009895292,US,/img/logos/US/azncf.png
+54,US0533321024,AZO,"AutoZone, Inc",USA,NYSE,USD,Common Stock,US0533321024,US,/img/logos/US/AZO.png
+55,US0970231058,BA,The Boeing Company,USA,NYSE,USD,Common Stock,US0970231058,US,/img/logos/US/ba.png
+56,US01609W1027,BABA,Alibaba Group Holding Limited,USA,NYSE,USD,Common Stock,US01609W1027,US,/img/logos/US/baba.png
+57,ES0177542018,BABWF,"International Consolidated Airlines Group, S.A",USA,PINK,USD,Common Stock,ES0177542018,US,/img/logos/US/BABWF.png
+58,US0605051046,BAC,Bank of America Corporation,USA,NYSE,USD,Common Stock,US0605051046,US,/img/logos/US/bac.png
+59,GB0002634946,BAESF,BAE Systems plc,USA,PINK,USD,Common Stock,GB0002634946,US,/img/logos/US/BAESF.png
+60,CA1125851040,BAM,Brookfield Asset Management Inc,USA,NYSE,USD,Common Stock,CA1125851040,US,/img/logos/US/bam.png
+61,US0718131099,BAX,Baxter International Inc,USA,NYSE,USD,Common Stock,US0718131099,US,/img/logos/US/bax.png
+62,US0865161014,BBY,"Best Buy Co., Inc",USA,NYSE,USD,Common Stock,US0865161014,US,/img/logos/US/BBY.png
+63,CA05534B7604,BCE,BCE Inc,USA,NYSE,USD,Common Stock,CA05534B7604,US,/img/logos/US/bce.png
+64,GB0031348658,BCLYF,Barclays PLC,USA,PINK,USD,Common Stock,GB0031348658,US,/img/logos/US/BCLYF.png
+65,US0758871091,BDX,"Becton, Dickinson and Company",USA,NYSE,USD,Common Stock,US0758871091,US,/img/logos/US/BDX.png
+66,US3546131018,BEN,"Franklin Resources, Inc",USA,NYSE,USD,Common Stock,US3546131018,US,/img/logos/US/ben.png
+67,US1156372096,BF-B,Brown-Forman Corporation,USA,NYSE,USD,Common Stock,US1156372096,US,/img/logos/US/BF-b.png
+68,DE000BASF111,BFFAF,BASF SE,USA,OTCQX,USD,Common Stock,DE000BASF111,US,/img/logos/US/BFFAF.png
+69,CA0717341071,BHC,Bausch Health Companies Inc,USA,NYSE,USD,Common Stock,CA0717341071,US,/img/logos/US/BHC.png
+70,US09062X1037,BIIB,Biogen Inc,USA,NASDAQ,USD,Common Stock,US09062X1037,US,/img/logos/US/BIIB.png
+71,BMG162521014,BIP,Brookfield Infrastructure Partners L.P,USA,NYSE,USD,Common Stock,BMG162521014,US,/img/logos/US/BIP.png
+72,US0640581007,BK,The Bank of New York Mellon Corporation,USA,NYSE,USD,Common Stock,US0640581007,US,/img/logos/US/bk.png
+73,US09857L1089,BKNG,Booking Holdings Inc,USA,NASDAQ,USD,Common Stock,US09857L1089,US,/img/logos/US/BKNG.png
+74,US09247X1019,BLK,"BlackRock, Inc",USA,NYSE,USD,Common Stock,US09247X1019,US,/img/logos/US/blk.png
+75,US0584981064,BLL,Ball Corporation,USA,NYSE,USD,Common Stock,US0584981064,US,/img/logos/US/bll.png
+76,CA0636711016,BMO,Bank of Montreal,USA,NYSE,USD,Common Stock,CA0636711016,US,/img/logos/US/bmo.png
+77,US09061G1013,BMRN,BioMarin Pharmaceutical Inc,USA,NASDAQ,USD,Common Stock,US09061G1013,US,/img/logos/US/BMRN.png
+78,US1101221083,BMY,Bristol-Myers Squibb Company,USA,NYSE,USD,Common Stock,US1101221083,US,/img/logos/US/bmy.png
+79,FR0000131104,BNPQF,BNP Paribas SA,USA,OTCQX,USD,Common Stock,FR0000131104,US,/img/logos/US/BNPQF.png
+80,CA0641491075,BNS,The Bank of Nova Scotia,USA,NYSE,USD,Common Stock,CA0641491075,US,/img/logos/US/bns.png
+81,BMG162491077,BPY,Brookfield Property Partners L.P,USA,NASDAQ,USD,Common Stock,BMG162491077,US,/img/logos/US/BPY.png
+82,US0846707026,BRK-B,Berkshire Hathaway Inc,USA,NYSE,USD,Common Stock,US0846707026,US,/img/logos/US/BRK-b.png
+83,US1011371077,BSX,Boston Scientific Corporation,USA,NYSE,USD,Common Stock,US1011371077,US,/img/logos/US/BSX.png
+84,US0997241064,BWA,BorgWarner Inc,USA,NYSE,USD,Common Stock,US0997241064,US,/img/logos/US/bwa.png
+85,US1011211018,BXP,"Boston Properties, Inc",USA,NYSE,USD,Common Stock,US1011211018,US,/img/logos/US/bxp.png
+86,US08862E1091,BYND,"Beyond Meat, Inc",USA,NASDAQ,USD,Common Stock,US08862E1091,US,/img/logos/US/BYND.png
+87,US1729674242,C,Citigroup Inc,USA,NYSE,USD,Common Stock,US1729674242,US,/img/logos/US/c.png
+88,US2058871029,CAG,"Conagra Brands, Inc",USA,NYSE,USD,Common Stock,US2058871029,US,/img/logos/US/cag.png
+89,US14149Y1082,CAH,"Cardinal Health, Inc",USA,NYSE,USD,Common Stock,US14149Y1082,US,/img/logos/US/CAH.png
+90,FR0000125338,CAPMF,Capgemini SE,USA,PINK,USD,Common Stock,FR0000125338,US,/img/logos/US/CAPMF.png
+91,US1491231015,CAT,Caterpillar Inc,USA,NYSE,USD,Common Stock,US1491231015,US,/img/logos/US/Cat.png
+92,US12504L1098,CBRE,"CBRE Group, Inc",USA,NYSE,USD,Common Stock,US12504L1098,US,/img/logos/US/CBRE.png
+93,US22822V1017,CCI,Crown Castle International Corp. (REIT),USA,NYSE,USD,Common Stock,US22822V1017,US,/img/logos/US/cci.png
+94,CA13321L1085,CCJ,Cameco Corporation,USA,NYSE,USD,Common Stock,CA13321L1085,US,/img/logos/US/CCJ.png
+95,PA1436583006,CCL,Carnival Corporation & plc,USA,NYSE,USD,Common Stock,PA1436583006,US,/img/logos/US/ccl.png
+96,US1273871087,CDNS,"Cadence Design Systems, Inc",USA,NASDAQ,USD,Common Stock,US1273871087,US,/img/logos/US/cdns.png
+97,CA1349211054,CDPYF,Canadian Apartment Properties Real Estate Investment Trust,USA,PINK,USD,Common Stock,CA1349211054,US,/img/logos/US/CDPYF.png
+98,US1567821046,CERN,Cerner Corporation,USA,NASDAQ,USD,Common Stock,US1567821046,US,/img/logos/US/cern.png
+99,US1252691001,CF,"CF Industries Holdings, Inc",USA,NYSE,USD,Common Stock,US1252691001,US,/img/logos/US/cf.png
+100,CA1380351009,CGC,Canopy Growth Corporation,USA,NASDAQ,USD,Common Stock,CA1380351009,US,/img/logos/US/CGC.png
+101,US12541W2098,CHRW,"C.H. Robinson Worldwide, Inc",USA,NASDAQ,USD,Common Stock,US12541W2098,US,/img/logos/US/CHRW.png
+102,US1720621010,CINF,Cincinnati Financial Corporation,USA,NASDAQ,USD,Common Stock,US1720621010,US,/img/logos/US/cinf.png
+103,US1941621039,CL,Colgate-Palmolive Company,USA,NYSE,USD,Common Stock,US1941621039,US,/img/logos/US/cl.png
+104,US1890541097,CLX,The Clorox Company,USA,NYSE,USD,Common Stock,US1890541097,US,/img/logos/US/CLX.png
+105,CA1360691010,CM,Canadian Imperial Bank of Commerce,USA,NYSE,USD,Common Stock,CA1360691010,US,/img/logos/US/cm.png
+106,US2003401070,CMA,Comerica Incorporated,USA,NYSE,USD,Common Stock,US2003401070,US,/img/logos/US/CMA.png
+107,US20030N1019,CMCSA,Comcast Corporation,USA,NASDAQ,USD,Common Stock,US20030N1019,US,/img/logos/US/CMCSA.png
+108,US12572Q1058,CME,CME Group Inc,USA,NASDAQ,USD,Common Stock,US12572Q1058,US,/img/logos/US/cme.png
+109,US1696561059,CMG,"Chipotle Mexican Grill, Inc",USA,NYSE,USD,Common Stock,US1696561059,US,/img/logos/US/CMG.png
+110,US2310211063,CMI,Cummins Inc,USA,NYSE,USD,Common Stock,US2310211063,US,/img/logos/US/CMI.png
+111,US1258961002,CMS,CMS Energy Corporation,USA,NYSE,USD,Common Stock,US1258961002,US,/img/logos/US/CMS.png
+112,US15135B1017,CNC,Centene Corporation,USA,NYSE,USD,Common Stock,US15135B1017,US,/img/logos/US/CNC.png
+113,NL0010545661,CNHI,CNH Industrial N.V,USA,NYSE,USD,Common Stock,NL0010545661,US,/img/logos/US/CNHI.png
+114,CA1363751027,CNI,Canadian National Railway Company,USA,NYSE,USD,Common Stock,CA1363751027,US,/img/logos/US/cni.png
+115,CA1363851017,CNQ,Canadian Natural Resources Limited,USA,NYSE,USD,Common Stock,CA1363851017,US,/img/logos/US/cnq.png
+116,US14040H1059,COF,Capital One Financial Corporation,USA,NYSE,USD,Common Stock,US14040H1059,US,/img/logos/US/cof.png
+117,US1270971039,COG,Cabot Oil & Gas Corporation,USA,NYSE,USD,Common Stock,US1270971039,US,/img/logos/US/cog.png
+118,US20825C1045,COP,ConocoPhillips,USA,NYSE,USD,Common Stock,US20825C1045,US,/img/logos/US/COP.png
+119,US22160K1051,COST,Costco Wholesale Corporation,USA,NASDAQ,USD,Common Stock,US22160K1051,US,/img/logos/US/cost.png
+120,CA13645T1003,CP,Canadian Pacific Railway Limited,USA,NYSE,USD,Common Stock,CA13645T1003,US,/img/logos/US/CP.png
+121,US1344291091,CPB,Campbell Soup Company,USA,NYSE,USD,Common Stock,US1344291091,US,/img/logos/US/cpb.png
+122,US14888U1016,CPRX,"Catalyst Pharmaceuticals, Inc",USA,NASDAQ,USD,Common Stock,US14888U1016,US,/img/logos/US/CPRX.png
+123,US21833P1030,CRBP,"Corbus Pharmaceuticals Holdings, Inc",USA,NASDAQ,USD,Common Stock,US21833P1030,US,/img/logos/US/CRBP.png
+124,US79466L3024,CRM,"salesforce.com, inc",USA,NYSE,USD,Common Stock,US79466L3024,US,/img/logos/US/CRM.png
+125,CA22717L1013,CRON,Cronos Group Inc,USA,NASDAQ,USD,Common Stock,CA22717L1013,US,/img/logos/US/CRON.png
+126,US17275R1023,CSCO,"Cisco Systems, Inc",USA,NASDAQ,USD,Common Stock,US17275R1023,US,/img/logos/US/CSCO.png
+127,CH0012138530,CSGKF,Credit Suisse Group AG,USA,PINK,USD,Common Stock,CH0012138530,US,/img/logos/US/CSGKF.png
+128,US1264081035,CSX,CSX Corporation,USA,NASDAQ,USD,Common Stock,US1264081035,US,/img/logos/US/CSX.png
+129,US1729081059,CTAS,Cintas Corporation,USA,NASDAQ,USD,Common Stock,US1729081059,US,/img/logos/US/CTAS.png
+130,US1924461023,CTSH,Cognizant Technology Solutions Corporation,USA,NASDAQ,USD,Common Stock,US1924461023,US,/img/logos/US/CTSH.png
+131,US1773761002,CTXS,"Citrix Systems, Inc",USA,NASDAQ,USD,Common Stock,US1773761002,US,/img/logos/US/CTXS.png
+132,CA15135U1093,CVE,Cenovus Energy Inc,USA,NYSE,USD,Common Stock,CA15135U1093,US,/img/logos/US/cve.png
+133,US1266501006,CVS,CVS Health Corporation,USA,NYSE,USD,Common Stock,US1266501006,US,/img/logos/US/cvs.png
+134,US1667641005,CVX,Chevron Corporation,USA,NYSE,USD,Common Stock,US1667641005,US,/img/logos/US/cvx.png
+135,US25746U1097,D,"Dominion Energy, Inc",USA,NYSE,USD,Common Stock,US25746U1097,US,/img/logos/US/d.png
+136,US2473617023,DAL,"Delta Air Lines, Inc",USA,NYSE,USD,Common Stock,US2473617023,US,/img/logos/US/dal.png
+137,FR0000130650,DASTF,Dassault Systèmes SE,USA,PINK,USD,Common Stock,FR0000130650,US,/img/logos/US/DASTF.png
+138,DE0005140008,DB,Deutsche Bank Aktiengesellschaft,USA,NYSE,USD,Common Stock,DE0005140008,US,/img/logos/US/db.png
+139,US26210C1045,DBX,"Dropbox, Inc",USA,NASDAQ,USD,Common Stock,US26210C1045,US,/img/logos/US/DBX.png
+140,US26614N1028,DD,"DuPont de Nemours, Inc",USA,NYSE,USD,Common Stock,US26614N1028,US,/img/logos/US/dd.png
+141,DE0007100000,DDAIF,Daimler AG,USA,PINK,USD,Common Stock,DE0007100000,US,/img/logos/US/DDAIF.png
+142,US2441991054,DE,Deere & Company,USA,NYSE,USD,Common Stock,US2441991054,US,/img/logos/US/DE.png
+143,US2547091080,DFS,Discover Financial Services,USA,NYSE,USD,Common Stock,US2547091080,US,/img/logos/US/dfs.png
+144,US2566771059,DG,Dollar General Corporation,USA,NYSE,USD,Common Stock,US2566771059,US,/img/logos/US/DG.png
+145,US74834L1008,DGX,Quest Diagnostics Incorporated,USA,NYSE,USD,Common Stock,US74834L1008,US,/img/logos/US/DGX.png
+146,US23331A1097,DHI,"D.R. Horton, Inc",USA,NYSE,USD,Common Stock,US23331A1097,US,/img/logos/US/DHI.png
+147,US2358511028,DHR,Danaher Corporation,USA,NYSE,USD,Common Stock,US2358511028,US,/img/logos/US/dhr.png
+148,US2546871060,DIS,The Walt Disney Company,USA,NYSE,USD,Common Stock,US2546871060,US,/img/logos/US/dis.png
+149,US25470F3029,DISCK,"Discovery, Inc",USA,NASDAQ,USD,Common Stock,US25470F3029,US,/img/logos/US/DISCK.png
+150,US26142R1041,DKNG,DraftKings Inc,USA,NASDAQ,USD,Common Stock,US26142R1041,US,/img/logos/US/DKNG.png
+151,US2567461080,DLTR,"Dollar Tree, Inc",USA,NASDAQ,USD,Common Stock,US2567461080,US,/img/logos/US/DLTR.png
+152,US2600031080,DOV,Dover Corporation,USA,NYSE,USD,Common Stock,US2600031080,US,/img/logos/US/Dov.png
+153,US2605571031,DOW,Dow Inc,USA,NYSE,USD,Common Stock,US2605571031,US,/img/logos/US/dow.png
+154,US2371941053,DRI,"Darden Restaurants, Inc",USA,NYSE,USD,Common Stock,US2371941053,US,/img/logos/US/DRI.png
+155,US2333311072,DTE,DTE Energy Company,USA,NYSE,USD,Common Stock,US2333311072,US,/img/logos/US/dte.png
+156,DE0005557508,DTEGF,Deutsche Telekom AG,USA,OTCQX,USD,Common Stock,DE0005557508,US,/img/logos/US/dtegf.png
+157,US26441C2044,DUK,Duke Energy Corporation,USA,NYSE,USD,Common Stock,US26441C2044,US,/img/logos/US/DUK.png
+158,US25179M1036,DVN,Devon Energy Corporation,USA,NYSE,USD,Common Stock,US25179M1036,US,/img/logos/US/dvn.png
+159,US2855121099,EA,Electronic Arts Inc,USA,NASDAQ,USD,Common Stock,US2855121099,US,/img/logos/US/ea.png
+160,NL0000235190,EADSF,Airbus SE,USA,PINK,USD,Common Stock,NL0000235190,US,/img/logos/US/EADSF.png
+161,US2786421030,EBAY,eBay Inc,USA,NASDAQ,USD,Common Stock,US2786421030,US,/img/logos/US/ebay.png
+162,US2091151041,ED,"Consolidated Edison, Inc",USA,NYSE,USD,Common Stock,US2091151041,US,/img/logos/US/ed.png
+163,ES0127797019,EDRVF,"EDP Renováveis, S.A",USA,PINK,USD,Common Stock,ES0127797019,US,
+164,US2944291051,EFX,Equifax Inc,USA,NYSE,USD,Common Stock,US2944291051,US,/img/logos/US/efx.png
+165,IT0003132476,EIPAF,Eni S.p.A,USA,PINK,USD,Common Stock,IT0003132476,US,/img/logos/US/EIPAF.png
+166,US2810201077,EIX,Edison International,USA,NYSE,USD,Common Stock,US2810201077,US,/img/logos/US/eix.png
+167,US5184391044,EL,The Estée Lauder Companies Inc,USA,NYSE,USD,Common Stock,US5184391044,US,/img/logos/US/EL.png
+168,US2774321002,EMN,Eastman Chemical Company,USA,NYSE,USD,Common Stock,US2774321002,US,/img/logos/US/emn.png
+169,US2910111044,EMR,Emerson Electric Co,USA,NYSE,USD,Common Stock,US2910111044,US,/img/logos/US/EMR.png
+170,CA29250N1050,ENB,Enbridge Inc,USA,NYSE,USD,Common Stock,CA29250N1050,US,/img/logos/US/ENB.png
+171,US26875P1012,EOG,"EOG Resources, Inc",USA,NYSE,USD,Common Stock,US26875P1012,US,/img/logos/US/eog.png
+172,US29444U7000,EQIX,"Equinix, Inc. (REIT)",USA,NASDAQ,USD,Common Stock,US29444U7000,US,/img/logos/US/eqix.png
+173,US29476L1070,EQR,Equity Residential,USA,NYSE,USD,Common Stock,US29476L1070,US,/img/logos/US/eqr.png
+174,US26884L1098,EQT,EQT Corporation,USA,NYSE,USD,Common Stock,US26884L1098,US,/img/logos/US/EQT.png
+175,SE0000108656,ERIXF,Telefonaktiebolaget LM Ericsson (publ),USA,PINK,USD,Common Stock,SE0000108656,US,/img/logos/US/ERIXF.png
+176,US2971781057,ESS,"Essex Property Trust, Inc",USA,NYSE,USD,Common Stock,US2971781057,US,/img/logos/US/ess.png
+177,US29273V1008,ET,Energy Transfer LP,USA,NYSE,USD,Common Stock,US29273V1008,US,/img/logos/US/ET.png
+178,US29364G1031,ETR,Entergy Corporation,USA,NYSE,USD,Common Stock,US29364G1031,US,/img/logos/US/ETR.png
+179,FR0010221234,EUTLF,Eutelsat Communications S.A,USA,PINK,USD,Common Stock,FR0010221234,US,/img/logos/US/EUTLF.png
+180,US28176E1082,EW,Edwards Lifesciences Corporation,USA,NYSE,USD,Common Stock,US28176E1082,US,/img/logos/US/EW.png
+181,US30161N1019,EXC,Exelon Corporation,USA,NASDAQ,USD,Common Stock,US30161N1019,US,/img/logos/US/exc.png
+182,US3021301094,EXPD,"Expeditors International of Washington, Inc",USA,NASDAQ,USD,Common Stock,US3021301094,US,/img/logos/US/EXPD.png
+183,US30212P3038,EXPE,"Expedia Group, Inc",USA,NASDAQ,USD,Common Stock,US30212P3038,US,/img/logos/US/EXPE.png
+184,GB00B19NLV48,EXPGF,Experian plc,USA,OTCQX,USD,Common Stock,GB00B19NLV48,US,/img/logos/US/EXPGf.png
+185,US3453708600,F,Ford Motor Company,USA,NYSE,USD,Common Stock,US3453708600,US,/img/logos/US/f.png
+186,US3119001044,FAST,Fastenal Company,USA,NASDAQ,USD,Common Stock,US3119001044,US,/img/logos/US/FAST.png
+187,US30303M1027,FB,"Facebook, Inc",USA,NASDAQ,USD,Common Stock,US30303M1027,US,/img/logos/US/fb.png
+188,US35952H6018,FCEL,"FuelCell Energy, Inc",USA,NASDAQ,USD,Common Stock,US35952H6018,US,/img/logos/US/FCEL.png
+189,US35671D8570,FCX,Freeport-McMoRan Inc,USA,NYSE,USD,Common Stock,US35671D8570,US,/img/logos/US/fcx.png
+190,US3379321074,FE,FirstEnergy Corp,USA,NYSE,USD,Common Stock,US3379321074,US,/img/logos/US/fe.png
+191,US3156161024,FFIV,"F5 Networks, Inc",USA,NASDAQ,USD,Common Stock,US3156161024,US,/img/logos/US/FFIV.png
+192,US3377381088,FISV,"Fiserv, Inc",USA,NASDAQ,USD,Common Stock,US3377381088,US,/img/logos/US/FISV.png
+193,US3167731005,FITB,Fifth Third Bancorp,USA,NASDAQ,USD,Common Stock,US3167731005,US,/img/logos/US/fitb.png
+194,US3448491049,FL,"Foot Locker, Inc",USA,NYSE,USD,Common Stock,US3448491049,US,/img/logos/US/fl.png
+195,US3024451011,FLIR,"Teledyne FLIR, LLC",USA,NASDAQ,USD,Common Stock,US3024451011,US,/img/logos/US/flir.png
+196,US3434121022,FLR,Fluor Corporation,USA,NYSE,USD,Common Stock,US3434121022,US,/img/logos/US/FLR.png
+197,US34354P1057,FLS,Flowserve Corporation,USA,NYSE,USD,Common Stock,US34354P1057,US,/img/logos/US/FLS.png
+198,US3024913036,FMC,FMC Corporation,USA,NYSE,USD,Common Stock,US3024913036,US,/img/logos/US/fmc.png
+199,CA3518581051,FNV,Franco-Nevada Corporation,USA,NYSE,USD,Common Stock,CA3518581051,US,/img/logos/US/fnv.png
+200,US35137L2043,FOX,Fox Corporation,USA,NASDAQ,USD,Common Stock,US35137L2043,US,/img/logos/US/fox.png
+201,US35137L1052,FOXA,Fox Corporation,USA,NASDAQ,USD,Common Stock,US35137L1052,US,/img/logos/US/foxa.png
+202,CA3359341052,FQVLF,First Quantum Minerals Ltd,USA,PINK,USD,Common Stock,CA3359341052,US,/img/logos/US/FQVLF.png
+203,US33616C1009,FRC,First Republic Bank,USA,NYSE,USD,Common Stock,US33616C1009,US,/img/logos/US/frc.png
+204,ES0118900010,FRRVF,"Ferrovial, S.A",USA,PINK,USD,Common Stock,ES0118900010,US,/img/logos/US/FRRVF.png
+205,US3137472060,FRT,Federal Realty Investment Trust,USA,NYSE,USD,Common Stock,US3137472060,US,/img/logos/US/frt.png
+206,GB00BDSFG982,FTI,TechnipFMC plc,USA,NYSE,USD,Common Stock,GB00BDSFG982,US,/img/logos/US/fti.png
+207,CA3495531079,FTS,Fortis Inc,USA,NYSE,USD,Common Stock,CA3495531079,US,/img/logos/US/FTS.png
+208,US3695501086,GD,General Dynamics Corporation,USA,NYSE,USD,Common Stock,US3695501086,US,/img/logos/US/gd.png
+209,US3696041033,GE,General Electric Company,USA,NYSE,USD,Common Stock,US3696041033,US,/img/logos/US/ge.png
+210,CA12532H1047,GIB,CGI Inc,USA,NYSE,USD,Common Stock,CA12532H1047,US,/img/logos/US/gib.png
+211,CA3759161035,GIL,Gildan Activewear Inc,USA,NYSE,USD,Common Stock,CA3759161035,US,/img/logos/US/gil.png
+212,US3755581036,GILD,"Gilead Sciences, Inc",USA,NASDAQ,USD,Common Stock,US3755581036,US,/img/logos/US/GILD.png
+213,US3703341046,GIS,"General Mills, Inc",USA,NYSE,USD,Common Stock,US3703341046,US,/img/logos/US/GIS.png
+214,GB0009252882,GLAXF,GlaxoSmithKline plc,USA,PINK,USD,Common Stock,GB0009252882,US,/img/logos/US/GLAXF.png
+215,JE00B4T3BW64,GLCNF,Glencore plc,USA,PINK,USD,Common Stock,JE00B4T3BW64,US,/img/logos/US/GLCNF.png
+216,US2193501051,GLW,Corning Incorporated,USA,NYSE,USD,Common Stock,US2193501051,US,/img/logos/US/GLW.png
+217,US37045V1008,GM,General Motors Company,USA,NYSE,USD,Common Stock,US37045V1008,US,/img/logos/US/GM.png
+218,US02079K1079,GOOG,Alphabet Inc,USA,NASDAQ,USD,Common Stock,US02079K1079,US,/img/logos/US/goog.png
+219,US02079K3059,GOOGL,Alphabet Inc,USA,NASDAQ,USD,Common Stock,US02079K3059,US,/img/logos/US/googl.png
+220,US3724601055,GPC,Genuine Parts Company,USA,NYSE,USD,Common Stock,US3724601055,US,/img/logos/US/GPC.png
+221,US38268T1034,GPRO,"GoPro, Inc",USA,NASDAQ,USD,Common Stock,US38268T1034,US,/img/logos/US/GPRO.png
+222,US3647601083,GPS,"The Gap, Inc",USA,NYSE,USD,Common Stock,US3647601083,US,/img/logos/US/GPS.png
+223,US38141G1040,GS,"The Goldman Sachs Group, Inc",USA,NYSE,USD,Common Stock,US38141G1040,US,/img/logos/US/gs.png
+224,US3825501014,GT,The Goodyear Tire & Rubber Company,USA,NASDAQ,USD,Common Stock,US3825501014,US,/img/logos/US/gt.png
+225,US25460G5009,GUSH,Direxion Daily S&P Oil & Gas Exp. & Prod. Bull 2X Shares,USA,NYSE ARCA,USD,ETF,US25460G5009,US,
+226,US3848021040,GWW,"W.W. Grainger, Inc",USA,NYSE,USD,Common Stock,US3848021040,US,/img/logos/US/GWW.png
+227,US4062161017,HAL,Halliburton Company,USA,NYSE,USD,Common Stock,US4062161017,US,/img/logos/US/hal.png
+228,US4180561072,HAS,"Hasbro, Inc",USA,NASDAQ,USD,Common Stock,US4180561072,US,/img/logos/US/HAS.png
+229,US4461501045,HBAN,Huntington Bancshares Incorporated,USA,NASDAQ,USD,Common Stock,US4461501045,US,/img/logos/US/hban.png
+230,GB0005405286,HBCYF,HSBC Holdings plc,USA,PINK,USD,Common Stock,GB0005405286,US,/img/logos/US/hbcyf.png
+231,US4103451021,HBI,Hanesbrands Inc,USA,NYSE,USD,Common Stock,US4103451021,US,/img/logos/US/HBI.png
+232,US40412C1018,HCA,"HCA Healthcare, Inc",USA,NYSE,USD,Common Stock,US40412C1018,US,/img/logos/US/hca.png
+233,US4370761029,HD,"The Home Depot, Inc",USA,NYSE,USD,Common Stock,US4370761029,US,/img/logos/US/hd.png
+234,US42809H1077,HES,Hess Corporation,USA,NYSE,USD,Common Stock,US42809H1077,US,/img/logos/US/HES.png
+235,FR0000052292,HESAF,Hermès International Société en commandite par actions,USA,PINK,USD,Common Stock,FR0000052292,US,/img/logos/US/HESAF.png
+236,US4165151048,HIG,"The Hartford Financial Services Group, Inc",USA,NYSE,USD,Common Stock,US4165151048,US,/img/logos/US/HIG.png
+237,DE0006047004,HLBZF,HeidelbergCement AG,USA,PINK,USD,Common Stock,DE0006047004,US,/img/logos/US/HLBZF.png
+238,US4385161066,HON,Honeywell International Inc,USA,NASDAQ,USD,Common Stock,US4385161066,US,/img/logos/US/hon.png
+239,US4234521015,HP,"Helmerich & Payne, Inc",USA,NYSE,USD,Common Stock,US4234521015,US,/img/logos/US/hp.png
+240,US40434L1052,HPQ,HP Inc,USA,NYSE,USD,Common Stock,US40434L1052,US,/img/logos/US/HPQ.png
+241,US0936711052,HRB,"H&R Block, Inc",USA,NYSE,USD,Common Stock,US0936711052,US,/img/logos/US/HRB.png
+242,US4404521001,HRL,Hormel Foods Corporation,USA,NYSE,USD,Common Stock,US4404521001,US,/img/logos/US/HRL.png
+243,US8064071025,HSIC,"Henry Schein, Inc",USA,NASDAQ,USD,Common Stock,US8064071025,US,/img/logos/US/HSIC.png
+244,US44107P1049,HST,"Host Hotels & Resorts, Inc",USA,NASDAQ,USD,Common Stock,US44107P1049,US,/img/logos/US/hst.png
+245,US4278661081,HSY,The Hershey Company,USA,NYSE,USD,Common Stock,US4278661081,US,/img/logos/US/HSY.PNG
+246,US4448591028,HUM,Humana Inc,USA,NYSE,USD,Common Stock,US4448591028,US,/img/logos/US/HUM.png
+247,US4592001014,IBM,International Business Machines Corporation,USA,NYSE,USD,Common Stock,US4592001014,US,/img/logos/US/IBM.png
+248,US45866F1049,ICE,"Intercontinental Exchange, Inc",USA,NYSE,USD,Common Stock,US45866F1049,US,/img/logos/US/ICE.png
+249,US45167R1041,IEX,IDEX Corporation,USA,NYSE,USD,Common Stock,US45167R1041,US,/img/logos/US/IEX.png
+250,US4523271090,ILMN,"Illumina, Inc",USA,NASDAQ,USD,Common Stock,US4523271090,US,/img/logos/US/ILMN.png
+251,GB0004544929,IMBBF,Imperial Brands PLC,USA,OTCQX,USD,Common Stock,GB0004544929,US,/img/logos/US/IMBBF.png
+252,CA4530384086,IMO,Imperial Oil Limited,USA,NYSE MKT,USD,Common Stock,CA4530384086,US,/img/logos/US/imo.png
+253,US45337C1027,INCY,Incyte Corporation,USA,NASDAQ,USD,Common Stock,US45337C1027,US,/img/logos/US/INCY.png
+254,US45773H2013,INO,"Inovio Pharmaceuticals, Inc",USA,NASDAQ,USD,Common Stock,US45773H2013,US,/img/logos/US/INO.png
+255,US4581401001,INTC,Intel Corporation,USA,NASDAQ,USD,Common Stock,US4581401001,US,/img/logos/US/INTC.png
+256,US4612021034,INTU,Intuit Inc,USA,NASDAQ,USD,Common Stock,US4612021034,US,/img/logos/US/INTU.png
+257,US4601461035,IP,International Paper Company,USA,NYSE,USD,Common Stock,US4601461035,US,/img/logos/US/ip.png
+258,US4606901001,IPG,"The Interpublic Group of Companies, Inc",USA,NYSE,USD,Common Stock,US4606901001,US,/img/logos/US/IPG.png
+259,FR0010331421,IPHYF,Innate Pharma S.A,USA,PINK,USD,Common Stock,FR0010331421,US,/img/logos/US/IPHYF.png
+260,CA45833V1094,IPPLF,Inter Pipeline Ltd,USA,PINK,USD,Common Stock,CA45833V1094,US,/img/logos/US/IPPLF.png
+261,US46284V1017,IRM,Iron Mountain Incorporated,USA,NYSE,USD,Common Stock,US46284V1017,US,/img/logos/US/IRM.png
+262,FR0010291245,ISDCF,Verimatrix Société anonyme,USA,PINK,USD,Common Stock,FR0010291245,US,/img/logos/US/ISDCF.png
+263,US46120E6023,ISRG,"Intuitive Surgical, Inc",USA,NASDAQ,USD,Common Stock,US46120E6023,US,/img/logos/US/ISRG.png
+264,US4523081093,ITW,Illinois Tool Works Inc,USA,NYSE,USD,Common Stock,US4523081093,US,/img/logos/US/ITW.png
+265,SE0000107419,IVSBF,Investor AB (publ),USA,PINK,USD,Common Stock,SE0000107419,US,/img/logos/US/IVSBF.png
+266,US4456581077,JBHT,"J.B. Hunt Transport Services, Inc",USA,NASDAQ,USD,Common Stock,US4456581077,US,/img/logos/US/JBHT.png
+267,US4771431016,JBLU,JetBlue Airways Corporation,USA,NASDAQ,USD,Common Stock,US4771431016,US,/img/logos/US/jblu.png
+268,US4781601046,JNJ,Johnson & Johnson,USA,NYSE,USD,Common Stock,US4781601046,US,/img/logos/US/JNJ.png
+269,US48203R1041,JNPR,"Juniper Networks, Inc",USA,NYSE,USD,Common Stock,US48203R1041,US,/img/logos/US/JNPR.png
+270,US46625H1005,JPM,JPMorgan Chase & Co,USA,NYSE,USD,Common Stock,US46625H1005,US,/img/logos/US/JPM.png
+271,US4878361082,K,Kellogg Company,USA,NYSE,USD,Common Stock,US4878361082,US,/img/logos/US/k.png
+272,US4932671088,KEY,KeyCorp,USA,NYSE,USD,Common Stock,US4932671088,US,/img/logos/US/key.png
+273,CA4969024047,KGC,Kinross Gold Corporation,USA,NYSE,USD,Common Stock,CA4969024047,US,/img/logos/US/KGC.png
+274,US5007541064,KHC,The Kraft Heinz Company,USA,NASDAQ,USD,Common Stock,US5007541064,US,/img/logos/US/khc.png
+275,US49446R1095,KIM,Kimco Realty Corporation,USA,NYSE,USD,Common Stock,US49446R1095,US,/img/logos/US/kim.png
+276,CA49741E1007,KL,Kirkland Lake Gold Ltd,USA,NYSE,USD,Common Stock,CA49741E1007,US,/img/logos/US/KL.png
+277,US4824801009,KLAC,KLA Corporation,USA,NASDAQ,USD,Common Stock,US4824801009,US,/img/logos/US/KLAC.png
+278,US4943681035,KMB,Kimberly-Clark Corporation,USA,NYSE,USD,Common Stock,US4943681035,US,/img/logos/US/KMB.png
+279,US49456B1017,KMI,"Kinder Morgan, Inc",USA,NYSE,USD,Common Stock,US49456B1017,US,/img/logos/US/KMI.png
+280,US1431301027,KMX,"CarMax, Inc",USA,NYSE,USD,Common Stock,US1431301027,US,/img/logos/US/KMX.png
+281,US1912161007,KO,The Coca-Cola Company,USA,NYSE,USD,Common Stock,US1912161007,US,/img/logos/US/ko.png
+282,US5006881065,KOS,Kosmos Energy Ltd,USA,NYSE,USD,Common Stock,US5006881065,US,/img/logos/US/KOS.png
+283,US5010441013,KR,The Kroger Co,USA,NYSE,USD,Common Stock,US5010441013,US,/img/logos/US/KR.png
+284,US5002551043,KSS,Kohl's Corporation,USA,NYSE,USD,Common Stock,US5002551043,US,/img/logos/US/KSS.png
+285,US4851703029,KSU,Kansas City Southern,USA,NYSE,USD,Common Stock,US4851703029,US,/img/logos/US/KSU.png
+286,US5404241086,L,Loews Corporation,USA,NYSE,USD,Common Stock,US5404241086,US,/img/logos/US/L.png
+287,US5017971046,LB,"L Brands, Inc",USA,NYSE,USD,Common Stock,US5017971046,US,/img/logos/US/LB.png
+288,GB00B8W67B19,LBTYK,Liberty Global plc,USA,NASDAQ,USD,Common Stock,GB00B8W67B19,US,/img/logos/US/LBTYK.png
+289,US5246601075,LEG,"Leggett & Platt, Incorporated",USA,NYSE,USD,Common Stock,US5246601075,US,/img/logos/US/leg.png
+290,US5260571048,LEN,Lennar Corporation,USA,NYSE,USD,Common Stock,US5260571048,US,/img/logos/US/LEN.png
+291,FR0010307819,LGRVF,Legrand SA,USA,PINK,USD,Common Stock,FR0010307819,US,/img/logos/US/LGRVF.png
+292,US50540R4092,LH,Laboratory Corporation of America Holdings,USA,NYSE,USD,Common Stock,US50540R4092,US,/img/logos/US/LH.png
+293,IE00BZ12WP82,LIN,Linde plc,USA,NYSE,USD,Common Stock,IE00BZ12WP82,US,/img/logos/US/LIN.png
+294,US5324571083,LLY,Eli Lilly and Company,USA,NYSE,USD,Common Stock,US5324571083,US,/img/logos/US/LLY.png
+295,US5398301094,LMT,Lockheed Martin Corporation,USA,NYSE,USD,Common Stock,US5398301094,US,/img/logos/US/lmt.png
+296,US5341871094,LNC,Lincoln National Corporation,USA,NYSE,USD,Common Stock,US5341871094,US,/img/logos/US/LNC.png
+297,US5486611073,LOW,"Lowe's Companies, Inc",USA,NYSE,USD,Common Stock,US5486611073,US,/img/logos/US/LOW.png
+298,US5128071082,LRCX,Lam Research Corporation,USA,NASDAQ,USD,Common Stock,US5128071082,US,/img/logos/US/lrcx.png
+299,US5500211090,LULU,Lululemon Athletica Inc,USA,NASDAQ,USD,Common Stock,US5500211090,US,/img/logos/US/lulu.png
+300,US8447411088,LUV,Southwest Airlines Co,USA,NYSE,USD,Common Stock,US8447411088,US,/img/logos/US/luv.png
+301,US55087P1049,LYFT,"Lyft, Inc",USA,NASDAQ,USD,Common Stock,US55087P1049,US,/img/logos/US/LYFT.png
+302,US55616P1049,M,"Macy's, Inc",USA,NYSE,USD,Common Stock,US55616P1049,US,/img/logos/US/m.png
+303,US57636Q1040,MA,Mastercard Incorporated,USA,NYSE,USD,Common Stock,US57636Q1040,US,/img/logos/US/ma.png
+304,US5719032022,MAR,"Marriott International, Inc",USA,NASDAQ,USD,Common Stock,US5719032022,US,/img/logos/US/MAR.png
+305,US5745991068,MAS,Masco Corporation,USA,NYSE,USD,Common Stock,US5745991068,US,/img/logos/US/mas.png
+306,US5770811025,MAT,"Mattel, Inc",USA,NASDAQ,USD,Common Stock,US5770811025,US,/img/logos/US/MAT.png
+307,US5801351017,MCD,McDonald's Corporation,USA,NYSE,USD,Common Stock,US5801351017,US,/img/logos/US/MCD.png
+308,US5950171042,MCHP,Microchip Technology Incorporated,USA,NASDAQ,USD,Common Stock,US5950171042,US,/img/logos/US/MCHP.png
+309,US58155Q1031,MCK,McKesson Corporation,USA,NYSE,USD,Common Stock,US58155Q1031,US,/img/logos/US/mck.png
+310,US6153691059,MCO,Moody's Corporation,USA,NYSE,USD,Common Stock,US6153691059,US,/img/logos/US/MCO.png
+311,US6092071058,MDLZ,"Mondelez International, Inc",USA,NASDAQ,USD,Common Stock,US6092071058,US,/img/logos/US/mdlz.png
+312,US59156R1086,MET,"MetLife, Inc",USA,NYSE,USD,Common Stock,US59156R1086,US,/img/logos/US/MET.png
+313,US55272X1028,MFA,"MFA Financial, Inc",USA,NYSE,USD,Common Stock,US55272X1028,US,/img/logos/US/MFo.png
+314,CA56501R1064,MFC,Manulife Financial Corporation,USA,NYSE,USD,Common Stock,CA56501R1064,US,/img/logos/US/MFC.png
+315,CA5592224011,MGA,Magna International Inc,USA,NYSE,USD,Common Stock,CA5592224011,US,/img/logos/US/MGA.png
+316,US5529531015,MGM,MGM Resorts International,USA,NYSE,USD,Common Stock,US5529531015,US,/img/logos/US/mgm.png
+317,US6081901042,MHK,"Mohawk Industries, Inc",USA,NYSE,USD,Common Stock,US6081901042,US,/img/logos/US/mhk.png
+318,US5797802064,MKC,"McCormick & Company, Incorporated",USA,NYSE,USD,Common Stock,US5797802064,US,/img/logos/US/mkc.png
+319,US5732841060,MLM,"Martin Marietta Materials, Inc",USA,NYSE,USD,Common Stock,US5732841060,US,/img/logos/US/MLM.png
+320,US5717481023,MMC,"Marsh & McLennan Companies, Inc",USA,NYSE,USD,Common Stock,US5717481023,US,/img/logos/US/mmc.png
+321,US61174X1090,MNST,Monster Beverage Corporation,USA,NASDAQ,USD,Common Stock,US61174X1090,US,/img/logos/US/mnst.png
+322,US02209S1033,MO,"Altria Group, Inc",USA,NYSE,USD,Common Stock,US02209S1033,US,/img/logos/US/mo.png
+323,US61945C1036,MOS,The Mosaic Company,USA,NYSE,USD,Common Stock,US61945C1036,US,/img/logos/US/MOS.png
+324,US56585A1025,MPC,Marathon Petroleum Corporation,USA,NYSE,USD,Common Stock,US56585A1025,US,/img/logos/US/MPC.png
+325,DE0006599905,MRK,"Merck & Co., Inc",USA,NYSE,USD,Common Stock,DE0006599905,US,/img/logos/US/mrk.png
+326,US60770K1079,MRNA,"Moderna, Inc",USA,NASDAQ,USD,Common Stock,US60770K1079,US,/img/logos/US/MRNA.png
+327,US5658491064,MRO,Marathon Oil Corporation,USA,NYSE,USD,Common Stock,US5658491064,US,/img/logos/US/mro.png
+328,GB0006043169,MRWSF,Wm Morrison Supermarkets PLC,USA,PINK,USD,Common Stock,GB0006043169,US,
+329,US6174464486,MS,Morgan Stanley,USA,NYSE,USD,Common Stock,US6174464486,US,/img/logos/US/ms.png
+330,US5949181045,MSFT,Microsoft Corporation,USA,NASDAQ,USD,Common Stock,US5949181045,US,/img/logos/US/MSFT.png
+331,US6200763075,MSI,"Motorola Solutions, Inc",USA,NYSE,USD,Common Stock,US6200763075,US,/img/logos/US/MSI.png
+332,US55261F1049,MTB,M&T Bank Corporation,USA,NYSE,USD,Common Stock,US55261F1049,US,/img/logos/US/mtb.png
+333,US5951121038,MU,"Micron Technology, Inc",USA,NASDAQ,USD,Common Stock,US5951121038,US,/img/logos/US/mu.png
+334,US6267171022,MUR,Murphy Oil Corporation,USA,NYSE,USD,Common Stock,US6267171022,US,/img/logos/US/mur.png
+335,US57772K1016,MXIM,"Maxim Integrated Products, Inc",USA,NASDAQ,USD,Common Stock,US57772K1016,US,/img/logos/US/MXIM.png
+336,BMG667211046,NCLH,Norwegian Cruise Line Holdings Ltd,USA,NYSE,USD,Common Stock,BMG667211046,US,/img/logos/US/NCLH.png
+337,US6311031081,NDAQ,"Nasdaq, Inc",USA,NASDAQ,USD,Common Stock,US6311031081,US,/img/logos/US/ndaq.png
+338,US65339F1012,NEE,"NextEra Energy, Inc",USA,NYSE,USD,Common Stock,US65339F1012,US,/img/logos/US/nee.png
+339,US6516391066,NEM,Newmont Corporation,USA,NYSE,USD,Common Stock,US6516391066,US,/img/logos/US/Nem.png
+340,US64110L1061,NFLX,"Netflix, Inc",USA,NASDAQ,USD,Common Stock,US64110L1061,US,/img/logos/US/nflx.png
+341,US65473P1057,NI,NiSource Inc,USA,NYSE,USD,Common Stock,US65473P1057,US,/img/logos/US/ni.png
+342,US62914V1061,NIO,NIO Inc,USA,NYSE,USD,Common Stock,US62914V1061,US,/img/logos/US/NIO.png
+343,US6541061031,NKE,"NIKE, Inc",USA,NYSE,USD,Common Stock,US6541061031,US,/img/logos/US/nke.png
+344,US6541101050,NKLA,Nikola Corporation,USA,NASDAQ,USD,Common Stock,US6541101050,US,/img/logos/US/NKLA.png
+345,US6293775085,NRG,"NRG Energy, Inc",USA,NYSE,USD,Common Stock,US6293775085,US,/img/logos/US/NRG.png
+346,US64828T2015,NRZ,New Residential Investment Corp,USA,NYSE,USD,Common Stock,US64828T2015,US,/img/logos/US/NRZ.png
+347,US6558441084,NSC,Norfolk Southern Corporation,USA,NYSE,USD,Common Stock,US6558441084,US,/img/logos/US/NSC.png
+348,CH0038863350,NSRGF,Nestlé S.A,USA,PINK,USD,Common Stock,CH0038863350,US,/img/logos/US/NSRGF.png
+349,US64110D1046,NTAP,"NetApp, Inc",USA,NASDAQ,USD,Common Stock,US64110D1046,US,/img/logos/US/NTAP.png
+350,CA6330671034,NTIOF,National Bank of Canada,USA,PINK,USD,Common Stock,CA6330671034,US,/img/logos/US/NTIOF.png
+351,CA67077M1086,NTR,Nutrien Ltd,USA,NYSE,USD,Common Stock,CA67077M1086,US,/img/logos/US/NTR.png
+352,US6658591044,NTRS,Northern Trust Corporation,USA,NASDAQ,USD,Common Stock,US6658591044,US,/img/logos/US/ntrs.png
+353,US6703461052,NUE,Nucor Corporation,USA,NYSE,USD,Common Stock,US6703461052,US,/img/logos/US/NUE.png
+354,US67066G1040,NVDA,NVIDIA Corporation,USA,NASDAQ,USD,Common Stock,US67066G1040,US,/img/logos/US/NVDA.png
+355,CH0012005267,NVSEF,Novartis AG,USA,PINK,USD,Common Stock,CH0012005267,US,/img/logos/US/NVSEF.png
+356,US6512291062,NWL,Newell Brands Inc,USA,NASDAQ,USD,Common Stock,US6512291062,US,/img/logos/US/NWL.png
+357,US65249B1098,NWSA,News Corporation,USA,NASDAQ,USD,Common Stock,US65249B1098,US,/img/logos/US/NWS.png
+358,US6496045013,NYMT,"New York Mortgage Trust, Inc",USA,NASDAQ,USD,Common Stock,US6496045013,US,/img/logos/US/NYMT.PNG
+359,US7561091049,O,Realty Income Corporation,USA,NYSE,USD,Common Stock,US7561091049,US,/img/logos/US/o.png
+360,US6826801036,OKE,"ONEOK, Inc",USA,NYSE,USD,Common Stock,US6826801036,US,/img/logos/US/OKE.png
+361,US6819191064,OMC,Omnicom Group Inc,USA,NYSE,USD,Common Stock,US6819191064,US,/img/logos/US/OMC.png
+362,US68389X1054,ORCL,Oracle Corporation,USA,NYSE,USD,Common Stock,US68389X1054,US,/img/logos/US/orcl.png
+363,US67103H1077,ORLY,"O'Reilly Automotive, Inc",USA,NASDAQ,USD,Common Stock,US67103H1077,US,/img/logos/US/ORLY.png
+364,CA6837151068,OTEX,Open Text Corporation,USA,NASDAQ,USD,Common Stock,CA6837151068,US,/img/logos/US/otex.png
+365,US6745991058,OXY,Occidental Petroleum Corporation,USA,NYSE,USD,Common Stock,US6745991058,US,/img/logos/US/OXY.png
+366,US7043261079,PAYX,"Paychex, Inc",USA,NASDAQ,USD,Common Stock,US7043261079,US,/img/logos/US/PAYX.png
+367,CA7063271034,PBA,Pembina Pipeline Corporation,USA,NYSE,USD,Common Stock,CA7063271034,US,/img/logos/US/pba.png
+368,US7127041058,PBCT,"People's United Financial, Inc",USA,NASDAQ,USD,Common Stock,US7127041058,US,/img/logos/US/pbct.png
+369,US6937181088,PCAR,PACCAR Inc,USA,NASDAQ,USD,Common Stock,US6937181088,US,/img/logos/US/PCAR.png
+370,US7445731067,PEG,Public Service Enterprise Group Incorporated,USA,NYSE,USD,Common Stock,US7445731067,US,/img/logos/US/peg.png
+371,US7075691094,PENN,"Penn National Gaming, Inc",USA,NASDAQ,USD,Common Stock,US7075691094,US,/img/logos/US/penn.png
+372,US7134481081,PEP,"PepsiCo, Inc",USA,NASDAQ,USD,Common Stock,US7134481081,US,/img/logos/US/pep.png
+373,US7170811035,PFE,Pfizer Inc,USA,NYSE,USD,Common Stock,US7170811035,US,/img/logos/US/pfe.png
+374,US7427181091,PG,The Procter & Gamble Company,USA,NYSE,USD,Common Stock,US7427181091,US,/img/logos/US/PG.png
+375,US7433151039,PGR,The Progressive Corporation,USA,NYSE,USD,Common Stock,US7433151039,US,/img/logos/US/pgr.png
+376,US7010941042,PH,Parker-Hannifin Corporation,USA,NYSE,USD,Common Stock,US7010941042,US,/img/logos/US/PH.png
+377,US7458671010,PHM,"PulteGroup, Inc",USA,NYSE,USD,Common Stock,US7458671010,US,/img/logos/US/phm.png
+378,US72352L1061,PINS,"Pinterest, Inc",USA,NYSE,USD,Common Stock,US72352L1061,US,/img/logos/US/PINS.png
+379,US7140461093,PKI,"PerkinElmer, Inc",USA,NYSE,USD,Common Stock,US7140461093,US,/img/logos/US/PKI.png
+380,US2383371091,PLAY,"Dave & Buster's Entertainment, Inc",USA,NASDAQ,USD,Common Stock,US2383371091,US,/img/logos/US/PLAY.png
+381,US74340W1036,PLD,"Prologis, Inc",USA,NYSE,USD,Common Stock,US74340W1036,US,/img/logos/US/pld.png
+382,US72919P2020,PLUG,Plug Power Inc,USA,NASDAQ,USD,Common Stock,US72919P2020,US,/img/logos/US/plug.png
+383,US7181721090,PM,Philip Morris International Inc,USA,NYSE,USD,Common Stock,US7181721090,US,/img/logos/US/PM.png
+384,US6934751057,PNC,"The PNC Financial Services Group, Inc",USA,NYSE,USD,Common Stock,US6934751057,US,/img/logos/US/pnc.png
+385,US7234841010,PNW,Pinnacle West Capital Corporation,USA,NYSE,USD,Common Stock,US7234841010,US,/img/logos/US/PNW.png
+386,JE00B6T5S470,POYYF,Polymetal International plc,USA,PINK,USD,Common Stock,JE00B6T5S470,US,
+387,US6935061076,PPG,"PPG Industries, Inc",USA,NYSE,USD,Common Stock,US6935061076,US,/img/logos/US/PPG.png
+388,US7443201022,PRU,"Prudential Financial, Inc",USA,NYSE,USD,Common Stock,US7443201022,US,/img/logos/US/PRU.png
+389,US74460D1090,PSA,Public Storage,USA,NYSE,USD,Common Stock,US74460D1090,US,/img/logos/US/PSA.png
+390,US7185461040,PSX,Phillips 66,USA,NYSE,USD,Common Stock,US7185461040,US,/img/logos/US/PSX.png
+391,US70614W1009,PTON,"Peloton Interactive, Inc",USA,NASDAQ,USD,Common Stock,US70614W1009,US,/img/logos/US/PTON.png
+392,US6936561009,PVH,PVH Corp,USA,NYSE,USD,Common Stock,US6936561009,US,/img/logos/US/pvh.PNG
+393,US74762E1029,PWR,"Quanta Services, Inc",USA,NYSE,USD,Common Stock,US74762E1029,US,/img/logos/US/PWR.png
+394,US7237871071,PXD,Pioneer Natural Resources Company,USA,NYSE,USD,Common Stock,US7237871071,US,/img/logos/US/pxd.png
+395,US70450Y1038,PYPL,"PayPal Holdings, Inc",USA,NASDAQ,USD,Common Stock,US70450Y1038,US,/img/logos/US/pypl.png
+396,US7475251036,QCOM,QUALCOMM Incorporated,USA,NASDAQ,USD,Common Stock,US7475251036,US,/img/logos/US/QCOM.png
+397,NL0012169213,QGEN,QIAGEN N.V,USA,NYSE,USD,Common Stock,NL0012169213,US,/img/logos/US/QGEN.png
+398,US74736K1016,QRVO,"Qorvo, Inc",USA,NASDAQ,USD,Common Stock,US74736K1016,US,/img/logos/US/QRVO.png
+399,CA76131D1033,QSR,Restaurant Brands International Inc,USA,NYSE,USD,Common Stock,CA76131D1033,US,/img/logos/US/QSR.png
+400,US7835491082,R,"Ryder System, Inc",USA,NYSE,USD,Common Stock,US7835491082,US,/img/logos/US/R.png
+401,NL0011585146,RACE,Ferrari N.V,USA,NYSE,USD,Common Stock,NL0011585146,US,/img/logos/US/RACE.png
+402,GB00B24CGK77,RBGPF,Reckitt Benckiser Group plc,USA,PINK,USD,Common Stock,GB00B24CGK77,US,/img/logos/US/rbgpf.png
+403,GB00B7T77214,RBSPF,NatWest Group plc,USA,PINK,USD,Common Stock,GB00B7T77214,US,/img/logos/US/RBSPF.png
+404,CA7751092007,RCI,Rogers Communications Inc,USA,NYSE,USD,Common Stock,CA7751092007,US,/img/logos/US/RCI.png
+405,LR0008862868,RCL,Royal Caribbean Group,USA,NYSE,USD,Common Stock,LR0008862868,US,/img/logos/US/rcl.png
+406,ES0173093024,RDEIF,"Red Eléctrica Corporación, S.A",USA,OTCGREY,USD,Common Stock,ES0173093024,US,/img/logos/US/RDEIF.png
+407,BMG3223R1088,RE,"Everest Re Group, Ltd",USA,NYSE,USD,Common Stock,BMG3223R1088,US,/img/logos/US/re.png
+408,US7588491032,REG,Regency Centers Corporation,USA,NASDAQ,USD,Common Stock,US7588491032,US,/img/logos/US/REG.png
+409,US7591EP1005,RF,Regions Financial Corporation,USA,NYSE,USD,Common Stock,US7591EP1005,US,/img/logos/US/rf.png
+410,CH0012032048,RHHVF,Roche Holding AG,USA,OTCQX,USD,Common Stock,CH0012032048,US,/img/logos/US/RHHVF.png
+411,US7703231032,RHI,Robert Half International Inc,USA,NYSE,USD,Common Stock,US7703231032,US,/img/logos/US/RHI.png
+412,US7512121010,RL,Ralph Lauren Corporation,USA,NYSE,USD,Common Stock,US7512121010,US,/img/logos/US/rl.png
+413,US7739031091,ROK,"Rockwell Automation, Inc",USA,NYSE,USD,Common Stock,US7739031091,US,/img/logos/US/ROK.png
+414,US77543R1023,ROKU,"Roku, Inc",USA,NASDAQ,USD,Common Stock,US77543R1023,US,/img/logos/US/ROKU.png
+415,US7766961061,ROP,"Roper Technologies, Inc",USA,NYSE,USD,Common Stock,US7766961061,US,/img/logos/US/ROP.png
+416,US7782961038,ROST,"Ross Stores, Inc",USA,NASDAQ,USD,Common Stock,US7782961038,US,/img/logos/US/Rost.png
+417,US75281A1097,RRC,Range Resources Corporation,USA,NYSE,USD,Common Stock,US75281A1097,US,/img/logos/US/rrc.png
+418,US7607591002,RSG,"Republic Services, Inc",USA,NYSE,USD,Common Stock,US7607591002,US,/img/logos/US/RSG.png
+419,CA7800871021,RY,Royal Bank of Canada,USA,NYSE,USD,Common Stock,CA7800871021,US,/img/logos/US/RY.png
+420,GB00B03MLX29,RYDAF,Royal Dutch Shell plc,USA,PINK,USD,Common Stock,GB00B03MLX29,US,/img/logos/US/RYDAF.png
+421,FR0000073272,SAFRF,Safran SA,USA,PINK,USD,Common Stock,FR0000073272,US,/img/logos/US/SAFRF.png
+422,DE0007164600,SAPGF,SAP SE,USA,PINK,USD,Common Stock,DE0007164600,US,/img/logos/US/SAPGF.png
+423,NL0000360618,SBFFF,SBM Offshore N.V,USA,PINK,USD,Common Stock,NL0000360618,US,/img/logos/US/SBFFF.png
+424,FR0000121972,SBGSF,Schneider Electric S.E,USA,PINK,USD,Common Stock,FR0000121972,US,/img/logos/US/SBGSF.png
+425,US8552441094,SBUX,Starbucks Corporation,USA,NASDAQ,USD,Common Stock,US8552441094,US,/img/logos/US/SBUX.png
+426,GB0004082847,SCBFF,Standard Chartered PLC,USA,PINK,USD,Common Stock,GB0004082847,US,/img/logos/US/SCBFF.png
+427,US8085131055,SCHW,The Charles Schwab Corporation,USA,NYSE,USD,Common Stock,US8085131055,US,/img/logos/US/schw.png
+428,FR0000121220,SDXOF,Sodexo S.A,USA,PINK,USD,Common Stock,FR0000121220,US,/img/logos/US/SDXOF.png
+429,MHY737601945,SHIP,Seanergy Maritime Holdings Corp,USA,NASDAQ,USD,Common Stock,MHY737601945,US,/img/logos/US/SHIP.png
+430,CA82509L1076,SHOP,Shopify Inc,USA,NYSE,USD,Common Stock,CA82509L1076,US,/img/logos/US/SHOP.png
+431,US8243481061,SHW,The Sherwin-Williams Company,USA,NYSE,USD,Common Stock,US8243481061,US,/img/logos/US/SHW.png
+432,US82968B1035,SIRI,Sirius XM Holdings Inc,USA,NASDAQ,USD,Common Stock,US82968B1035,US,/img/logos/US/SIRI.png
+433,US8326964058,SJM,The J. M. Smucker Company,USA,NYSE,USD,Common Stock,US8326964058,US,/img/logos/US/SJM.png
+434,CA82028K2002,SJR,Shaw Communications Inc,USA,NYSE,USD,Common Stock,CA82028K2002,US,/img/logos/US/SJR.png
+435,AN8068571086,SLB,Schlumberger Limited,USA,NYSE,USD,Common Stock,AN8068571086,US,/img/logos/US/SLB.png
+436,CA8667961053,SLF,Sun Life Financial Inc,USA,NYSE,USD,Common Stock,CA8667961053,US,/img/logos/US/SLF.png
+437,US78440X1019,SLG,SL Green Realty Corp,USA,NYSE,USD,Common Stock,US78440X1019,US,/img/logos/US/Slg.png
+438,DE0007236101,SMAWF,Siemens Aktiengesellschaft,USA,PINK,USD,Common Stock,DE0007236101,US,/img/logos/US/smawf.png
+439,US8330341012,SNA,Snap-on Incorporated,USA,NYSE,USD,Common Stock,US8330341012,US,/img/logos/US/SNA.png
+440,US83304A1060,SNAP,Snap Inc,USA,NYSE,USD,Common Stock,US83304A1060,US,/img/logos/US/snap.png
+441,JP3435000009,SNEJF,Sony Group Corporation,USA,PINK,USD,Common Stock,JP3435000009,US,/img/logos/US/SNEJF.png
+442,US8425871071,SO,The Southern Company,USA,NYSE,USD,Common Stock,US8425871071,US,/img/logos/US/SO.png
+443,US83570H1086,SONO,"Sonos, Inc",USA,NASDAQ,USD,Common Stock,US83570H1086,US,/img/logos/US/SONO.png
+444,US92766K1060,SPCE,"Virgin Galactic Holdings, Inc",USA,NYSE,USD,Common Stock,US92766K1060,US,/img/logos/US/SPCE.png
+445,US8288061091,SPG,"Simon Property Group, Inc",USA,NYSE,USD,Common Stock,US8288061091,US,/img/logos/US/spg.png
+446,US8522341036,SQ,"Square, Inc",USA,NYSE,USD,Common Stock,US8522341036,US,/img/logos/US/SQ.png
+447,US8589121081,SRCL,"Stericycle, Inc",USA,NASDAQ,USD,Common Stock,US8589121081,US,/img/logos/US/SRCL.png
+448,US8168511090,SRE,Sempra Energy,USA,NYSE,USD,Common Stock,US8168511090,US,/img/logos/US/sre.png
+449,US83587F2020,SRNE,"Sorrento Therapeutics, Inc",USA,NASDAQ,USD,Common Stock,US83587F2020,US,/img/logos/US/SRNE.png
+450,US8574771031,STT,State Street Corporation,USA,NYSE,USD,Common Stock,US8574771031,US,/img/logos/US/STT.png
+451,IE00B58JVZ52,STX,Seagate Technology Holdings plc,USA,NASDAQ,USD,Common Stock,IE00B58JVZ52,US,/img/logos/US/STX.png
+452,US21036P1084,STZ,"Constellation Brands, Inc",USA,NYSE,USD,Common Stock,US21036P1084,US,/img/logos/MX/STZ.png
+453,CA8672241079,SU,Suncor Energy Inc,USA,NYSE,USD,Common Stock,CA8672241079,US,/img/logos/US/SU.png
+454,SE0000148884,SVKEF,Skandinaviska Enskilda Banken AB (publ),USA,PINK,USD,Common Stock,SE0000148884,US,/img/logos/US/SVKEF.png
+455,SE0007100599,SVNLF,Svenska Handelsbanken AB (publ),USA,PINK,USD,Common Stock,SE0007100599,US,/img/logos/US/SVNLF.png
+456,GB00B1FH8J72,SVTRF,Severn Trent Plc,USA,PINK,USD,Common Stock,GB00B1FH8J72,US,/img/logos/US/SVTRF.png
+457,US8545021011,SWK,"Stanley Black & Decker, Inc",USA,NYSE,USD,Common Stock,US8545021011,US,/img/logos/US/swk.png
+458,US83088M1027,SWKS,"Skyworks Solutions, Inc",USA,NASDAQ,USD,Common Stock,US83088M1027,US,/img/logos/US/swks.png
+459,US8454671095,SWN,Southwestern Energy Company,USA,NYSE,USD,Common Stock,US8454671095,US,/img/logos/US/swn.png
+460,US87165B1035,SYF,Synchrony Financial,USA,NYSE,USD,Common Stock,US87165B1035,US,/img/logos/US/SYF.png
+461,US8636671013,SYK,Stryker Corporation,USA,NYSE,USD,Common Stock,US8636671013,US,/img/logos/US/syk.png
+462,US8718291078,SYY,Sysco Corporation,USA,NYSE,USD,Common Stock,US8718291078,US,/img/logos/US/SYY.png
+463,FR0010613471,SZEVF,Suez SA,USA,PINK,USD,Common Stock,FR0010613471,US,/img/logos/US/SZEVF.png
+464,US00206R1023,T,AT&T Inc,USA,NYSE,USD,Common Stock,US00206R1023,US,/img/logos/US/t.png
+465,US60871R2094,TAP,Molson Coors Beverage Company,USA,NYSE,USD,Common Stock,US60871R2094,US,/img/logos/US/TAP.png
+466,CA8911605092,TD,The Toronto-Dominion Bank,USA,NYSE,USD,Common Stock,CA8911605092,US,/img/logos/US/TD.png
+467,US88076W1036,TDC,Teradata Corporation,USA,NYSE,USD,Common Stock,US88076W1036,US,/img/logos/US/tdc.png
+468,CA8787422044,TECK,Teck Resources Limited,USA,NYSE,USD,Common Stock,CA8787422044,US,/img/logos/US/TECK.png
+469,US87901J1051,TGNA,TEGNA Inc,USA,NYSE,USD,Common Stock,US87901J1051,US,/img/logos/US/TGNA.png
+470,US87612E1064,TGT,Target Corporation,USA,NYSE,USD,Common Stock,US87612E1064,US,/img/logos/US/TGT.png
+471,US8725401090,TJX,"The TJX Companies, Inc",USA,NYSE,USD,Common Stock,US8725401090,US,/img/logos/US/tjx.png
+472,US88688T1007,TLRY,"Tilray, Inc",USA,NASDAQ,USD,Common Stock,US88688T1007,US,/img/logos/US/TLRY.png
+473,US8835561023,TMO,Thermo Fisher Scientific Inc,USA,NYSE,USD,Common Stock,US8835561023,US,/img/logos/US/tmo.png
+474,US8725901040,TMUS,"T-Mobile US, Inc",USA,NASDAQ,USD,Common Stock,US8725901040,US,/img/logos/US/TMUS.png
+475,CA8849037095,TRI,Thomson Reuters Corporation,USA,NYSE,USD,Common Stock,CA8849037095,US,/img/logos/US/TRI.png
+476,US8969452015,TRIP,"TripAdvisor, Inc",USA,NASDAQ,USD,Common Stock,US8969452015,US,/img/logos/US/TRIP.png
+477,US74144T1088,TROW,"T. Rowe Price Group, Inc",USA,NASDAQ,USD,Common Stock,US74144T1088,US,/img/logos/US/TROW.png
+478,CA87807B1076,TRP,TC Energy Corporation,USA,NYSE,USD,Common Stock,CA87807B1076,US,/img/logos/US/TRP.png
+479,US89417E1091,TRV,"The Travelers Companies, Inc",USA,NYSE,USD,Common Stock,US89417E1091,US,/img/logos/US/trv.PNG
+480,GB0008847096,TSCDF,Tesco PLC,USA,OTCQX,USD,Common Stock,GB0008847096,US,/img/logos/US/TSCDF.png
+481,US8923561067,TSCO,Tractor Supply Company,USA,NASDAQ,USD,Common Stock,US8923561067,US,/img/logos/US/TSCO.png
+482,US88160R1014,TSLA,"Tesla, Inc",USA,NASDAQ,USD,Common Stock,US88160R1014,US,/img/logos/US/TSLA.png
+483,US9024941034,TSN,"Tyson Foods, Inc",USA,NYSE,USD,Common Stock,US9024941034,US,/img/logos/US/TSN.png
+484,FR0000120271,TTFNF,TotalEnergies SE,USA,PINK,USD,Common Stock,FR0000120271,US,/img/logos/US/TTFNF.png
+485,US8740541094,TTWO,"Take-Two Interactive Software, Inc",USA,NASDAQ,USD,Common Stock,US8740541094,US,/img/logos/US/TTWO.png
+486,CA87971M1032,TU,TELUS Corporation,USA,NYSE,USD,Common Stock,CA87971M1032,US,/img/logos/US/TU.png
+487,US90184L1026,TWTR,"Twitter, Inc",USA,NYSE,USD,Common Stock,US90184L1026,US,/img/logos/US/TWTR.png
+488,US88338N1072,TXMD,"TherapeuticsMD, Inc",USA,NASDAQ,USD,Common Stock,US88338N1072,US,
+489,US8825081040,TXN,Texas Instruments Incorporated,USA,NASDAQ,USD,Common Stock,US8825081040,US,/img/logos/US/TXN.png
+490,US8832031012,TXT,Textron Inc,USA,NYSE,USD,Common Stock,US8832031012,US,/img/logos/US/txt.png
+491,US9043111072,UAA,"Under Armour, Inc",USA,NYSE,USD,Common Stock,US9043111072,US,/img/logos/US/UA.png
+492,US9100471096,UAL,"United Airlines Holdings, Inc",USA,NASDAQ,USD,Common Stock,US9100471096,US,/img/logos/US/ual.png
+493,US90353T1007,UBER,"Uber Technologies, Inc",USA,NYSE,USD,Common Stock,US90353T1007,US,/img/logos/US/UBER.png
+494,CH0244767585,UBS,UBS Group AG,USA,NYSE,USD,Common Stock,CH0244767585,US,/img/logos/US/UBS.png
+495,FR0000054470,UBSFF,Ubisoft Entertainment SA,USA,PINK,USD,Common Stock,FR0000054470,US,/img/logos/US/UBSFF.png
+496,US74347Y8883,UCO,ProShares Ultra Bloomberg Crude Oil,USA,NYSE ARCA,USD,ETF,US74347Y8883,US,
+497,US90384S3031,ULTA,"Ulta Beauty, Inc",USA,NASDAQ,USD,Common Stock,US90384S3031,US,/img/logos/US/ULTA.png
+498,US91324P1021,UNH,UnitedHealth Group Incorporated,USA,NYSE,USD,Common Stock,US91324P1021,US,/img/logos/US/unh.png
+499,US91529Y1064,UNM,Unum Group,USA,NYSE,USD,Common Stock,US91529Y1064,US,/img/logos/US/unm.png
+500,US9078181081,UNP,Union Pacific Corporation,USA,NYSE,USD,Common Stock,US9078181081,US,/img/logos/US/UNP.png
+501,US9113121068,UPS,"United Parcel Service, Inc",USA,NYSE,USD,Common Stock,US9113121068,US,/img/logos/US/UPS.png
+502,US9170471026,URBN,"Urban Outfitters, Inc",USA,NASDAQ,USD,Common Stock,US9170471026,US,/img/logos/US/urbn.png
+503,US9029733048,USB,U.S. Bancorp,USA,NYSE,USD,Common Stock,US9029733048,US,/img/logos/US/usb.png
+504,US91232N2071,USO,"United States Oil Fund, LP",USA,NYSE ARCA,USD,ETF,US91232N2071,US,
+505,US92826C8394,V,Visa Inc,USA,NYSE,USD,Common Stock,US92826C8394,US,/img/logos/US/v.png
+506,US9182041080,VFC,V.F. Corporation,USA,NYSE,USD,Common Stock,US9182041080,US,/img/logos/US/vfc.png
+507,FR0000127771,VIVEF,Vivendi SE,USA,PINK,USD,Common Stock,FR0000127771,US,/img/logos/US/VIVEF.png
+508,US92686J1060,VKTX,"Viking Therapeutics, Inc",USA,NASDAQ,USD,Common Stock,US92686J1060,US,/img/logos/US/VKTX.png
+509,US91913Y1001,VLO,Valero Energy Corporation,USA,NYSE,USD,Common Stock,US91913Y1001,US,/img/logos/US/vlo.png
+510,US9291601097,VMC,Vulcan Materials Company,USA,NYSE,USD,Common Stock,US9291601097,US,/img/logos/US/VMC.png
+511,US9290421091,VNO,Vornado Realty Trust,USA,NYSE,USD,Common Stock,US9290421091,US,/img/logos/US/vno.png
+512,GB00BH4HKS39,VODPF,Vodafone Group Plc,USA,PINK,USD,Common Stock,GB00BH4HKS39,US,/img/logos/US/VODPF.png
+513,SE0000115446,VOLVF,AB Volvo (publ),USA,PINK,USD,Common Stock,SE0000115446,US,/img/logos/US/VOLVF.png
+514,NL0009432491,VOPKF,Royal Vopak N.V,USA,PINK,USD,Common Stock,NL0009432491,US,/img/logos/US/VOPKF.png
+515,US92345Y1064,VRSK,"Verisk Analytics, Inc",USA,NASDAQ,USD,Common Stock,US92345Y1064,US,/img/logos/US/VRSK.png
+516,US92343E1029,VRSN,"VeriSign, Inc",USA,NASDAQ,USD,Common Stock,US92343E1029,US,/img/logos/US/VRSN.png
+517,US92532F1003,VRTX,Vertex Pharmaceuticals Incorporated,USA,NASDAQ,USD,Common Stock,US92532F1003,US,/img/logos/US/VRTX.png
+518,US92276F1003,VTR,"Ventas, Inc",USA,NYSE,USD,Common Stock,US92276F1003,US,/img/logos/US/vtr.png
+519,US92243A2006,VXRT,"Vaxart, Inc",USA,NASDAQ,USD,Common Stock,US92243A2006,US,/img/logos/US/VXRT.png
+520,US92343V1044,VZ,Verizon Communications Inc,USA,NASDAQ,USD,Common Stock,US92343V1044,US,/img/logos/US/vz.png
+521,US9418481035,WAT,Waters Corporation,USA,NYSE,USD,Common Stock,US9418481035,US,/img/logos/US/WAT.png
+522,US9314271084,WBA,"Walgreens Boots Alliance, Inc",USA,NASDAQ,USD,Common Stock,US9314271084,US,/img/logos/US/wba.png
+523,CA94106B1013,WCN,"Waste Connections, Inc",USA,NYSE,USD,Common Stock,CA94106B1013,US,/img/logos/US/WCN.png
+524,US98138H1014,WDAY,"Workday, Inc",USA,NASDAQ,USD,Common Stock,US98138H1014,US,/img/logos/US/wday.png
+525,US92939U1060,WEC,"WEC Energy Group, Inc",USA,NYSE,USD,Common Stock,US92939U1060,US,/img/logos/US/wec.png
+526,US95040Q1040,WELL,Welltower Inc,USA,NYSE,USD,Common Stock,US95040Q1040,US,/img/logos/US/WELL.png
+527,US9497461015,WFC,Wells Fargo & Company,USA,NYSE,USD,Common Stock,US9497461015,US,/img/logos/US/WFC.png
+528,US9633201069,WHR,Whirlpool Corporation,USA,NYSE,USD,Common Stock,US9633201069,US,/img/logos/US/WHR.png
+529,US98138J2069,WKHS,Workhorse Group Inc,USA,NASDAQ,USD,Common Stock,US98138J2069,US,/img/logos/US/WKHS.png
+530,US94106L1098,WM,"Waste Management, Inc",USA,NYSE,USD,Common Stock,US94106L1098,US,/img/logos/US/Wm.png
+531,US9694571004,WMB,"The Williams Companies, Inc",USA,NYSE,USD,Common Stock,US9694571004,US,/img/logos/US/WMB.png
+532,US9311421039,WMT,Walmart Inc,USA,NYSE,USD,Common Stock,US9311421039,US,/img/logos/US/wmt.png
+533,US83088V1026,WORK,"Slack Technologies, Inc",USA,NYSE,USD,Common Stock,US83088V1026,US,/img/logos/US/WORK.png
+534,CA9628791027,WPM,Wheaton Precious Metals Corp,USA,NYSE,USD,Common Stock,CA9628791027,US,/img/logos/US/WPM.png
+535,US96145D1054,WRK,WestRock Company,USA,NYSE,USD,Common Stock,US96145D1054,US,/img/logos/US/WRK.png
+536,US9553061055,WST,"West Pharmaceutical Services, Inc",USA,NYSE,USD,Common Stock,US9553061055,US,/img/logos/US/wst.png
+537,US9598021098,WU,The Western Union Company,USA,NYSE,USD,Common Stock,US9598021098,US,/img/logos/US/wu.png
+538,US9621661043,WY,Weyerhaeuser Company,USA,NYSE,USD,Common Stock,US9621661043,US,/img/logos/US/WY.png
+539,US9831341071,WYNN,"Wynn Resorts, Limited",USA,NASDAQ,USD,Common Stock,US9831341071,US,/img/logos/US/Wynn.png
+540,US98389B1008,XEL,Xcel Energy Inc,USA,NASDAQ,USD,Common Stock,US98389B1008,US,/img/logos/US/xel.png
+541,US9839191015,XLNX,"Xilinx, Inc",USA,NASDAQ,USD,Common Stock,US9839191015,US,/img/logos/US/XLNX.png
+542,US30231G1022,XOM,Exxon Mobil Corporation,USA,NYSE,USD,Common Stock,US30231G1022,US,/img/logos/US/XOM.png
+543,US98421M1062,XRX,Xerox Holdings Corporation,USA,NYSE,USD,Common Stock,US98421M1062,US,/img/logos/US/XRX.png
+544,US98419M1009,XYL,Xylem Inc,USA,NYSE,USD,Common Stock,US98419M1009,US,/img/logos/US/XYL.png
+545,US9884981013,YUM,"Yum! Brands, Inc",USA,NYSE,USD,Common Stock,US9884981013,US,/img/logos/US/YUM.png
+546,US98956P1021,ZBH,"Zimmer Biomet Holdings, Inc",USA,NYSE,USD,Common Stock,US98956P1021,US,/img/logos/US/ZBH.png
+547,CH0011075394,ZFSVF,Zurich Insurance Group AG,USA,OTCQX,USD,Common Stock,CH0011075394,US,/img/logos/US/ZFSVF.png
+548,US9897011071,ZION,"Zions Bancorporation, National Association",USA,NASDAQ,USD,Common Stock,US9897011071,US,/img/logos/US/zion.png
+549,US98980L1017,ZM,"Zoom Video Communications, Inc",USA,NASDAQ,USD,Common Stock,US98980L1017,US,/img/logos/US/ZM.png
+550,US98986T1088,ZNGA,Zynga Inc,USA,NASDAQ,USD,Common Stock,US98986T1088,US,/img/logos/US/znga.png
+551,US98978V1035,ZTS,Zoetis Inc,USA,NYSE,USD,Common Stock,US98978V1035,US,/img/logos/US/zts.png
+552,FR0000051732,0DNH,Atos SE,UK,LSE,GBP,Common Stock,FR0000051732,LSE,
+553,DE0005200000,0DQ7,Beiersdorf Aktiengesellschaft,UK,LSE,GBP,Common Stock,DE0005200000,LSE,
+554,FR0000121964,0F4I,Klépierre SA,UK,LSE,GBP,Common Stock,FR0000121964,LSE,
+555,DE000A0D9PT0,0FC9,MTU Aero Engines AG,UK,LSE,GBP,Common Stock,DE000A0D9PT0,LSE,
+556,ES0113860A34,0H00,"Banco de Sabadell, S.A",UK,LSE,GBP,Common Stock,ES0113860A34,LSE,
+557,FR0000121014,0HAU,"LVMH Moët Hennessy - Louis Vuitton, Société Européenne",UK,LSE,GBX,Common Stock,FR0000121014,LSE,
+558,LU0156801721,0HXB,Tenaris S.A,UK,LSE,GBP,Common Stock,LU0156801721,LSE,
+559,FR0000044448,0IGF,Nexans S.A,UK,LSE,GBP,Common Stock,FR0000044448,LSE,
+560,FR0010411983,0IT3,SCOR SE,UK,LSE,GBP,Common Stock,FR0010411983,LSE,
+561,FR0000064578,0J6V,Covivio,UK,LSE,GBP,Common Stock,FR0000064578,LSE,
+562,FR0010208488,0LD0,Engie S.A.,UK,LSE,GBP,Common Stock,FR0010208488,LSE,
+563,NL0000852580,0LO8,Royal Boskalis Westminster N.V,UK,LSE,GBP,Common Stock,NL0000852580,LSE,
+564,DE0005439004,0LQ1,Continental Aktiengesellschaft,UK,LSE,GBP,Common Stock,DE0005439004,LSE,
+565,FR0000121147,0MGR,Faurecia S.E,UK,LSE,GBP,Common Stock,FR0000121147,LSE,
+566,FR0000121709,0MGS,SEB SA,UK,LSE,GBP,Common Stock,FR0000121709,LSE,
+567,FR0000130395,0MGU,Rémy Cointreau SA,UK,LSE,GBP,Common Stock,FR0000130395,LSE,
+568,IT0003261697,0MHJ,Azimut Holding S.p.A.,UK,LSE,GBP,Common Stock,IT0003261697,LSE,
+569,NL0013332471,0MKS,TomTom N.V,UK,LSE,GBP,Common Stock,NL0013332471,LSE,
+570,DE000A0Z2ZZ5,0MV2,freenet AG,UK,LSE,GBP,Common Stock,DE000A0Z2ZZ5,LSE,
+571,NL0000289213,0NMR,Wereldhave N.V,UK,LSE,GBP,Common Stock,NL0000289213,LSE,
+572,NL0000395903,0NMU,Wolters Kluwer N.V,UK,LSE,GBP,Common Stock,NL0000395903,LSE,
+573,FR0000120560,0NQ5,Quadient S.A,UK,LSE,GBP,Common Stock,FR0000120560,LSE,
+574,FR0000125486,0NQM,VINCI SA,UK,LSE,GBP,Common Stock,FR0000125486,LSE,
+575,IT0003153415,0NQP,Snam S.p.A,UK,LSE,GBP,Common Stock,IT0003153415,LSE,
+576,FR0013506730,0NR2,Vallourec S.A,UK,LSE,GBP,Common Stock,FR0013506730,LSE,
+577,IT0004176001,0NUX,Prysmian S.p.A,UK,LSE,GBP,Common Stock,IT0004176001,LSE,
+578,FR0000124141,0NY8,Veolia Environnement S.A,UK,LSE,GBP,Common Stock,FR0000124141,LSE,
+579,NL0000009165,0O26,Heineken N.V,UK,LSE,GBP,Common Stock,NL0000009165,LSE,
+580,DE0007472060,0O8X,Wirecard AG,UK,LSE,GBP,Common Stock,DE0007472060,LSE,
+581,PTEDP0AM0009,0OF7,"EDP - Energias de Portugal, S.A",UK,LSE,GBP,Common Stock,PTEDP0AM0009,LSE,
+582,FR0000121667,0OMK,EssilorLuxottica Société anonyme,UK,LSE,GBP,Common Stock,FR0000121667,LSE,
+583,DE0005785604,0OO9,Fresenius SE & Co. KGaA,UK,LSE,GBP,Common Stock,DE0005785604,LSE,
+584,NL0009739416,0P47,PostNL N.V.,UK,LSE,GBP,Common Stock,NL0009739416,LSE,
+585,DE000BAY0017,0P6S,Bayer Aktiengesellschaft,UK,LSE,EUR,Common Stock,DE000BAY0017,LSE,
+586,NL0010273215,0QB8,ASML Holding N.V,UK,LSE,GBP,Common Stock,NL0010273215,LSE,
+587,NL0012969182,0YP5,Adyen N.V,UK,LSE,EUR,Common Stock,NL0012969182,LSE,/img/logos/LSE/0YP5.png
+588,LU1681049018,500U,Amundi Index Solutions - Amundi S&P 500 UCITS ETF C USD,UK,LSE,USD,ETF,LU1681049018,LSE,
+589,GB00B1XZS820,AAL,Anglo American plc,UK,LSE,GBX,Common Stock,GB00B1XZS820,LSE,/img/logos/LSE/AAL.png
+590,GB0006731235,ABF,Associated British Foods plc,UK,LSE,GBX,Common Stock,GB0006731235,LSE,/img/logos/LSE/ABF.png
+591,GB00B02J6398,ADM,Admiral Group plc,UK,LSE,GBX,Common Stock,GB00B02J6398,LSE,/img/logos/LSE/ADM.png
+592,GB0000536739,AHT,Ashtead Group plc,UK,LSE,GBX,Common Stock,GB0000536739,LSE,/img/logos/LSE/AHT.png
+593,GB0000456144,ANTO,Antofagasta plc,UK,LSE,GBX,Common Stock,GB0000456144,LSE,/img/logos/LSE/ANTO.png
+594,IE00B3CNHG25,AUCO,L&G Gold Mining UCITS ETF,UK,LSE,USD,ETF,IE00B3CNHG25,LSE,
+595,GB00BVYVFW23,AUTO,Auto Trader Group plc,UK,LSE,GBX,Common Stock,GB00BVYVFW23,LSE,/img/logos/LSE/AUTO.png
+596,GB0002162385,AV,Aviva plc,UK,LSE,GBX,Common Stock,GB0002162385,LSE,/img/logos/LSE/AV.png
+597,GB00BDD85M81,AVST,Avast Plc,UK,LSE,GBX,Common Stock,GB00BDD85M81,LSE,/img/logos/LSE/AVST.png
+598,GB00BBG9VN75,AVV,AVEVA Group plc,UK,LSE,GBX,Common Stock,GB00BBG9VN75,LSE,/img/logos/LSE/AVV.png
+599,GB0002875804,BATS,British American Tobacco p.l.c,UK,LSE,GBX,Common Stock,GB0002875804,LSE,/img/logos/LSE/Bats.png
+600,GB0000811801,BDEV,Barratt Developments plc,UK,LSE,GBX,Common Stock,GB0000811801,LSE,/img/logos/LSE/BDEV.png
+601,GB00BH0P3Z91,BHP,BHP Group,UK,LSE,GBX,Common Stock,GB00BH0P3Z91,LSE,/img/logos/LSE/BHP.png
+602,GB00B02L3W35,BKG,The Berkeley Group Holdings plc,UK,LSE,GBX,Common Stock,GB00B02L3W35,LSE,/img/logos/LSE/BKG.png
+603,GB0001367019,BLND,British Land Company Plc,UK,LSE,GBX,Common Stock,GB0001367019,LSE,/img/logos/LSE/BLND.png
+604,ES0113900J37,BNC,"Banco Santander, S.A",UK,LSE,GBX,Common Stock,ES0113900J37,LSE,/img/logos/LSE/BNC.png
+605,GB00B0744B38,BNZL,Bunzl plc,UK,LSE,GBX,Common Stock,GB00B0744B38,LSE,/img/logos/LSE/BNZL.png
+606,GB0007980591,BP,BP p.l.c,UK,LSE,GBX,Common Stock,GB0007980591,LSE,/img/logos/LSE/BP.png
+607,GB0031743007,BRBY,Burberry Group plc,UK,LSE,GBX,Common Stock,GB0031743007,LSE,/img/logos/LSE/BRBY.png
+608,GB0030913577,BT-A,BT Group plc,UK,LSE,GBX,Common Stock,GB0030913577,LSE,/img/logos/LSE/BT-A.png
+609,FR0007052782,CACX,Lyxor CAC 40 (DR) UCITS ETF Dist,UK,LSE,GBX,ETF,FR0007052782,LSE,
+610,IE00B3VWN393,CBU7,iShares $ Treasury Bond 3-7yr UCITS ETF USD (Acc),UK,LSE,USD,ETF,IE00B3VWN393,LSE,
+611,CH0198251305,CCH,Coca-Cola HBC AG,UK,LSE,GBX,Common Stock,CH0198251305,LSE,/img/logos/LSE/CCH.png
+612,IE00B53QG562,CEU1,iShares VII PLC -iShares Core MSCI EMU UCITS ETF EUR (Acc),UK,LSE,GBX,ETF,IE00B53QG562,LSE,
+613,IE00B53SZB19,CNDX,iShares NASDAQ 100 UCITS ETF USD (Acc),UK,LSE,USD,ETF,IE00B53SZB19,LSE,
+614,GB00BD6K4575,CPG,Compass Group PLC,UK,LSE,GBX,Common Stock,GB00BD6K4575,LSE,/img/logos/LSE/CPG.png
+615,IE00B52MJY50,CPJ1,iShares VII Public Limited Company - iShares Core MSCI Pacific ex Japan UCITS ETF,UK,LSE,GBX,ETF,IE00B52MJY50,LSE,
+616,GB00BJFFLV09,CRDA,Croda International Plc,UK,LSE,GBX,Common Stock,GB00BJFFLV09,LSE,/img/logos/LSE/CRDA.png
+617,IE0001827041,CRH,CRH plc,UK,LSE,GBX,Common Stock,IE0001827041,LSE,/img/logos/LSE/CRH.png
+618,GB00B15KXV33,CRUD,WisdomTree WTI Crude Oil,UK,LSE,USD,ETF,GB00B15KXV33,LSE,
+619,IE00B53L3W79,CS51,iShares Core EURO STOXX 50 ETF EUR Acc,UK,LSE,GBX,ETF,IE00B53L3W79,LSE,
+620,IE00B5BMR087,CSP1,iShares VII Public Limited Company - iShares Core S&P 500 UCITS ETF,UK,LSE,GBX,ETF,IE00B5BMR087,LSE,
+621,LU0252633754,DAXX,MULTI-UNITS LUXEMBOURG - Lyxor DAX (DR) UCITS ETF - Acc,UK,LSE,GBX,ETF,LU0252633754,LSE,
+622,IE0002424939,DCC,DCC plc,UK,LSE,GBX,Common Stock,IE0002424939,LSE,/img/logos/LSE/DCC.png
+623,GB0002374006,DGE,Diageo plc,UK,LSE,GBX,Common Stock,GB0002374006,LSE,/img/logos/LSE/DGE.png
+624,FR0007056841,DJEL,Lyxor UCITS ETF Dow Jones Industrial Average,UK,LSE,GBX,ETF,FR0007056841,LSE,
+625,IE00B02KXL92,DJMC,iShares EURO STOXX Mid UCITS ETF EUR (Dist),UK,LSE,GBX,ETF,IE00B02KXL92,LSE,
+626,IE00B02KXM00,DJSC,iShares EURO STOXX Small UCITS ETF EUR (Dist),UK,LSE,GBX,ETF,IE00B02KXM00,LSE,
+627,PTMEN0AE0005,EGL,Ecofin Global Utilities & Infrastructure Trust Plc,UK,LSE,GBX,Common Stock,PTMEN0AE0005,LSE,/img/logos/LSE/EGL.png
+628,IE00BKM4GZ66,EIMI,iShares Core MSCI EM IMI UCITS ETF USD (Acc),UK,LSE,USD,ETF,IE00BKM4GZ66,LSE,
+629,IE00B466KX20,EMAD,SPDR MSCI EM Asia UCITS ETF,UK,LSE,USD,ETF,IE00B466KX20,LSE,
+630,IM00B5VQMV65,ENT,Entain Plc,UK,LSE,GBX,Common Stock,IM00B5VQMV65,LSE,/img/logos/LSE/ENT.png
+631,IE0032077012,EQQQ,PowerShares Global Funds Ireland Public Limited Company - PowerShares EQQQ Nasdaq-100 UCITS ETF,UK,LSE,GBX,ETF,IE0032077012,LSE,
+632,IE00BCRY6557,ERN1,iShares &#226;&#130;&#172; Ultrashort Bond UCITS ETF EUR (Dist),UK,LSE,GBP,ETF,IE00BCRY6557,LSE,
+633,IE00B3T9LM79,EUCO,SPDR Bloomberg Barclays Euro Corporate Bond UCITS ETF,UK,LSE,EUR,ETF,IE00B3T9LM79,LSE,
+634,IE00B5M1WJ87,EUDI,SPDR S&P Euro Dividend Aristocrats ETF,UK,LSE,EUR,ETF,IE00B5M1WJ87,LSE,
+635,IE0008471009,EUE,iShares Core EURO STOXX 50 UCITS ETF EUR (Dist),UK,LSE,GBX,ETF,IE0008471009,LSE,
+636,IE0008470928,EUN,iShares STOXX Europe 50 UCITS ETF EUR (Dist),UK,LSE,GBX,ETF,IE0008470928,LSE,
+637,GB00B71N6K86,EVR,EVRAZ plc,UK,LSE,GBX,Common Stock,GB00B71N6K86,LSE,/img/logos/LSE/EVR.png
+638,JE00BJVNSS43,FERG,Ferguson plc,UK,LSE,GBX,Common Stock,JE00BJVNSS43,LSE,/img/logos/LSE/FERG.png
+639,IE00BWT6H894,FLTR,Flutter Entertainment plc,UK,LSE,GBX,Common Stock,IE00BWT6H894,LSE,/img/logos/LSE/FLTR.png
+640,IE00BKWQ0G16,FNCL,SPDR MSCI Europe Financials UCITS ETF,UK,LSE,EUR,ETF,IE00BKWQ0G16,LSE,
+641,GB00B2QPKJ12,FRES,Fresnillo plc,UK,LSE,GBX,Common Stock,GB00B2QPKJ12,LSE,/img/logos/LSE/FRES.png
+642,IE00B02KXK85,FXC,iShares Public Limited Company - iShares China Large Cap UCITS ETF,UK,LSE,GBX,ETF,IE00B02KXK85,LSE,
+643,GB00B00FHZ82,GBS,Gold Bullion Securities ETC,UK,LSE,USD,ETF,GB00B00FHZ82,LSE,
+644,GB00B0LCW083,HIK,Hikma Pharmaceuticals PLC,UK,LSE,GBX,Common Stock,GB00B0LCW083,LSE,/img/logos/LSE/HIK.png
+645,GB00B1VZ0M25,HL,Hargreaves Lansdown plc,UK,LSE,GBX,Common Stock,GB00B1VZ0M25,LSE,/img/logos/LSE/HL.png
+646,GB0004052071,HLMA,Halma plc,UK,LSE,GBX,Common Stock,GB0004052071,LSE,/img/logos/LSE/HLMA.png
+647,IE00B44T3H88,HMCD,HSBC MSCI China UCITS ETF,UK,LSE,USD,ETF,IE00B44T3H88,LSE,
+648,IE00B4X9L533,HMWD,HSBC MSCI World UCITS ETF,UK,LSE,USD,ETF,IE00B4X9L533,LSE,
+649,GB00BYYTFB60,HSV,HomeServe plc,UK,LSE,GBX,Common Stock,GB00BYYTFB60,LSE,/img/logos/LSE/HSV.png
+650,IE00B0M62Y33,IAEX,iShares AEX UCITS ETF EUR (Dist),UK,LSE,GBX,ETF,IE00B0M62Y33,LSE,
+651,IE00B14X4T88,IAPD,iShares Public Limited Company - iShares Asia Pacific Dividend UCITS ETF,UK,LSE,GBX,ETF,IE00B14X4T88,LSE,
+652,IE00B0M62X26,IBCI,iShares &#226;&#130;&#172; Inflation Linked Govt Bond UCITS ETF EUR (Acc),UK,LSE,GBP,ETF,IE00B0M62X26,LSE,
+653,IE0032523478,IBCX,iShares &#226;&#130;&#172; Corp Bond Large Cap UCITS ETF EUR (Dist),UK,LSE,EUR,ETF,IE0032523478,LSE,
+654,IE00B3FH7618,IBGE,iShares &#226;&#130;&#172; Govt Bond 0-1yr UCITS ETF EUR (Dist),UK,LSE,GBP,ETF,IE00B3FH7618,LSE,
+655,IE00B1FZS806,IBGM,iShares &#226;&#130;&#172; Govt Bond 7-10yr UCITS ETF EUR (Dist),UK,LSE,GBP,ETF,IE00B1FZS806,LSE,
+656,IE00B14X4Q57,IBGS,iShares &#226;&#130;&#172; Govt Bond 1-3yr UCITS ETF EUR (Dist),UK,LSE,GBP,ETF,IE00B14X4Q57,LSE,
+657,IE00B1FZS681,IBGX,iShares &#226;&#130;&#172; Govt Bond 3-5yr UCITS ETF EUR (Dist),UK,LSE,GBP,ETF,IE00B1FZS681,LSE,
+658,IE00B1FZS798,IBTM,iShares $ Treasury Bond 7-10yr UCITS ETF USD (Dist),UK,LSE,GBP,ETF,IE00B1FZS798,LSE,
+659,IE00B14X4S71,IBTS,iShares Public Limited Company - iShares $ Treasury Bond 1-3yr UCITS ETF,UK,LSE,GBP,ETF,IE00B14X4S71,LSE,
+660,IE00B0M63516,IBZL,iShares Public Limited Company - iShares MSCI Brazil UCITS ETF (Dist),UK,LSE,GBX,ETF,IE00B0M63516,LSE,
+661,GB00BYT1DJ19,ICP,Intermediate Capital Group plc,UK,LSE,GBX,Common Stock,GB00BYT1DJ19,LSE,/img/logos/LSE/ICP.png
+662,IE00B0M63177,IDEM,iShares MSCI EM UCITS ETF USD (Dist),UK,LSE,USD,ETF,IE00B0M63177,LSE,
+663,IE00B0M63730,IDFF,iShares MSCI AC Far East ex-Japan UCITS ETF USD (Dist),UK,LSE,USD,ETF,IE00B0M63730,LSE,
+664,IE00B1FZS467,IDIN,iShares Global Infrastructure UCITS ETF USD (Dist),UK,LSE,USD,ETF,IE00B1FZS467,LSE,
+665,IE00B14X4M10,IDNA,iShares MSCI North America UCITS ETF USD (Dist),UK,LSE,USD,ETF,IE00B14X4M10,LSE,
+666,IE00B1TXHL60,IDPE,iShares Listed Private Equity UCITS ETF USD (Dist),UK,LSE,USD,ETF,IE00B1TXHL60,LSE,
+667,IE00B1FZS574,IDTK,iShares MSCI Turkey UCITS ETF USD (Dist),UK,LSE,USD,ETF,IE00B1FZS574,LSE,
+668,IE00B1FZSC47,IDTP,iShares $ TIPS UCITS ETF USD (Acc),UK,LSE,USD,ETF,IE00B1FZSC47,LSE,
+669,IE0031442068,IDUS,iShares Core S&P 500 UCITS ETF USD Dist,UK,LSE,USD,ETF,IE0031442068,LSE,
+670,IE00B0M62S72,IDVY,iShares Euro Dividend UCITS ETF EUR (Dist),UK,LSE,GBX,ETF,IE00B0M62S72,LSE,
+671,IE00B1FZS350,IDWP,iShares Developed Markets Property Yield UCITS ETF USD (Dist),UK,LSE,USD,ETF,IE00B1FZS350,LSE,
+672,IE00B0M62Q58,IDWR,iShares MSCI World UCITS ETF USD (Dist),UK,LSE,USD,ETF,IE00B0M62Q58,LSE,
+673,IE00B3F81R35,IEAC,iShares Core &#226;&#130;&#172; Corp Bond UCITS ETF EUR (Dist),UK,LSE,EUR,ETF,IE00B3F81R35,LSE,
+674,IE00B4L5YC18,IEMA,iShares MSCI EM UCITS ETF USD (Acc),UK,LSE,USD,ETF,IE00B4L5YC18,LSE,
+675,IE00B52VJ196,IESG,iShares MSCI Europe SRI UCITS ETF EUR (Acc),UK,LSE,GBX,ETF,IE00B52VJ196,LSE,
+676,IE00B14X4N27,IEUX,iShares MSCI Europe ex-UK UCITS ETF EUR (Dist),UK,LSE,GBX,ETF,IE00B14X4N27,LSE,
+677,IE00B7LGZ558,IFRB,iShares France Govt Bond UCITS ETF EUR (Dist),UK,LSE,EUR,ETF,IE00B7LGZ558,LSE,
+678,IE00BCRY5Y77,IGSD,iShares $ Short Duration Corp Bond UCITS ETF USD (Dist),UK,LSE,GBP,ETF,IE00BCRY5Y77,LSE,
+679,IE00B57X3V84,IGSG,iShares Dow Jones Global Sustainability Screened UCITS ETF USD (Acc),UK,LSE,GBX,ETF,IE00B57X3V84,LSE,
+680,GB00BHJYC057,IHG,InterContinental Hotels Group PLC,UK,LSE,GBX,Common Stock,GB00BHJYC057,LSE,/img/logos/LSE/IHG.png
+681,GB00B1YW4409,III,3i Group Plc,UK,LSE,GBX,Common Stock,GB00B1YW4409,LSE,/img/logos/LSE/III.png
+682,IE00B02KXH56,IJPN,iShares MSCI Japan UCITS ETF USD (Dist),UK,LSE,GBX,ETF,IE00B02KXH56,LSE,
+683,IE00B1YZSC51,IMEU,iShares II Public Limited Company - iShares MSCI Europe UCITS ETF EUR (Dist),UK,LSE,GBX,ETF,IE00B1YZSC51,LSE,
+684,IE00B3YLTY66,IMID,SPDR MSCI ACWI IMI UCITS ETF,UK,LSE,USD,ETF,IE00B3YLTY66,LSE,
+685,GB00BMJ6DW54,INF,Informa plc,UK,LSE,GBX,Common Stock,GB00BMJ6DW54,LSE,/img/logos/LSE/INF.png
+686,IE00B0M63284,IPRP,iShares European Property Yield UCITS ETF EUR (Dist),UK,LSE,GBX,ETF,IE00B0M63284,LSE,
+687,IE00B6X2VY59,IRCP,iShares &#226;&#130;&#172; Corp Bond Interest Rate Hedged UCITS ETF EUR (Dist),UK,LSE,EUR,ETF,IE00B6X2VY59,LSE,
+688,IE0005042456,ISF,iShares Core FTSE 100 UCITS ETF GBP (Dist),UK,LSE,GBX,ETF,IE0005042456,LSE,
+689,IE00BYPLS672,ISPY,Legal & General UCITS ETF Plc - L&G Cyber Security UCITS ETF,UK,LSE,GBX,ETF,IE00BYPLS672,LSE,
+690,GB0031638363,ITRK,Intertek Group plc,UK,LSE,GBX,Common Stock,GB0031638363,LSE,/img/logos/LSE/ITRK.png
+691,GB0033986497,ITV,ITV plc,UK,LSE,GBX,Common Stock,GB0033986497,LSE,/img/logos/LSE/ITV.png
+692,IE00B3ZW0K18,IUSE,iShares S&P 500 EUR Hedged UCITS ETF (Acc),UK,LSE,EUR,ETF,IE00B3ZW0K18,LSE,
+693,IE00B4L5Y983,IWDA,iShares Core MSCI World UCITS ETF USD (Acc),UK,LSE,USD,ETF,IE00B4L5Y983,LSE,
+694,IE00B441G979,IWDE,iShares MSCI World EUR Hedged UCITS ETF (Acc),UK,LSE,EUR,ETF,IE00B441G979,LSE,
+695,GB00BYX91H57,JD,JD Sports Fashion plc,UK,LSE,GBX,Common Stock,GB00BYX91H57,LSE,/img/logos/LSE/JD.png
+696,NL0012015705,JET,Just Eat Takeaway.com N.V,UK,LSE,GBX,Common Stock,NL0012015705,LSE,/img/logos/LSE/JET.png
+697,GB00BZ4BQC70,JMAT,Johnson Matthey Plc,UK,LSE,GBX,Common Stock,GB00BZ4BQC70,LSE,/img/logos/LSE/JMAT.png
+698,GB0033195214,KGF,Kingfisher plc,UK,LSE,GBX,Common Stock,GB0033195214,LSE,/img/logos/LSE/KGF.png
+699,IE00BFXR7892,KWEB,KraneShares CSI China Internet ETF USD,UK,LSE,USD,ETF,IE00BFXR7892,LSE,
+700,GB00BYW0PQ60,LAND,Land Securities Group plc,UK,LSE,GBX,Common Stock,GB00BYW0PQ60,LSE,/img/logos/LSE/LAND.png
+701,GB0005603997,LGEN,Legal & General Group Plc,UK,LSE,GBX,Common Stock,GB0005603997,LSE,/img/logos/LSE/LGEN.png
+702,GB0008706128,LLOY,Lloyds Banking Group plc,UK,LSE,GBX,Common Stock,GB0008706128,LSE,/img/logos/LSE/LLOY.png
+703,IE0032895942,LQDE,iShares $ Corp Bond UCITS ETF USD (Dist),UK,LSE,USD,ETF,IE0032895942,LSE,
+704,LU0908500753,MEUD,Lyxor Core STOXX Europe 600 (DR) - UCITS ETF Acc,UK,LSE,GBX,ETF,LU0908500753,LSE,
+705,GB00B1CRLC47,MNDI,Mondi plc,UK,LSE,GBX,Common Stock,GB00B1CRLC47,LSE,/img/logos/LSE/MNDI.png
+706,GB00BKFB1C65,MNG,M&G plc,UK,LSE,GBX,Common Stock,GB00BKFB1C65,LSE,
+707,GB00BZ1G4322,MRO,Melrose Industries PLC,UK,LSE,GBX,Common Stock,GB00BZ1G4322,LSE,/img/logos/LSE/MRO.png
+708,LU1829221024,NASD,Lyxor Nasdaq-100 Ucits ETF Acc,UK,LSE,USD,ETF,LU1829221024,LSE,
+709,FR0010397232,NCYT,Novacyt S.A,UK,LSE,GBX,Common Stock,FR0010397232,LSE,/img/logos/LSE/NCYT.png
+710,GB00BDR05C01,NG,National Grid plc,UK,LSE,GBX,Common Stock,GB00BDR05C01,LSE,/img/logos/LSE/NG.png
+711,GB0032089863,NXT,NEXT plc,UK,LSE,GBX,Common Stock,GB0032089863,LSE,/img/logos/LSE/NXT.png
+712,GB00B3MBS747,OCDO,Ocado Group plc,UK,LSE,GBX,Common Stock,GB00B3MBS747,LSE,
+713,JE00B1VS3333,PHAG,WisdomTree Physical Silver,UK,LSE,USD,ETF,JE00B1VS3333,LSE,
+714,JE00B1VS3770,PHAU,WisdomTree Physical Gold,UK,LSE,USD,ETF,JE00B1VS3770,LSE,
+715,GB00BGXQNP29,PHNX,Phoenix Group Holdings plc,UK,LSE,GBX,Common Stock,GB00BGXQNP29,LSE,/img/logos/LSE/PHNX.png
+716,JE00B1VS3002,PHPD,WisdomTree Physical Palladium,UK,LSE,USD,ETF,JE00B1VS3002,LSE,
+717,GB00B18V8630,PNN,Pennon Group Plc,UK,LSE,GBX,Common Stock,GB00B18V8630,LSE,/img/logos/LSE/PNN.png
+718,GB0007099541,PRU,Prudential plc,UK,LSE,GBX,Common Stock,GB0007099541,LSE,/img/logos/LSE/PRU.png
+719,GB0006825383,PSN,Persimmon Plc,UK,LSE,GBX,Common Stock,GB0006825383,LSE,/img/logos/LSE/PSN.png
+720,GB0006776081,PSON,Pearson plc,UK,LSE,GBX,Common Stock,GB0006776081,LSE,/img/logos/LSE/PSOn.png
+721,GB00B03MM408,RDSB,Royal Dutch Shell plc,UK,LSE,GBX,Common Stock,GB00B03MM408,LSE,/img/logos/LSE/RDSB.png
+722,GB00B2B0DG97,REL,RELX PLC,UK,LSE,GBX,Common Stock,GB00B2B0DG97,LSE,/img/logos/LSE/REL.png
+723,GB0007188757,RIO,Rio Tinto Group,UK,LSE,GBX,Common Stock,GB0007188757,LSE,/img/logos/LSE/RIO.png
+724,GB00BGDT3G23,RMV,Rightmove plc,UK,LSE,GBX,Common Stock,GB00BGDT3G23,LSE,/img/logos/LSE/RMV.png
+725,GB00B63H8491,RR,Rolls-Royce Holdings plc,UK,LSE,GBX,Common Stock,GB00B63H8491,LSE,/img/logos/LSE/RR.png
+726,GB00BKKMKR23,RSA,RSA Insurance Group Limited,UK,LSE,GBX,Common Stock,GB00BKKMKR23,LSE,/img/logos/LSE/RSA.png
+727,GB00B082RF11,RTO,Rentokil Initial plc,UK,LSE,GBX,Common Stock,GB00B082RF11,LSE,/img/logos/LSE/RTO.png
+728,GB00B019KW72,SBRY,J Sainsbury plc,UK,LSE,GBX,Common Stock,GB00B019KW72,LSE,/img/logos/LSE/SBRY.png
+729,GB0002405495,SDR,Schroders plc,UK,LSE,GBX,Common Stock,GB0002405495,LSE,/img/logos/LSE/SDR.png
+730,IE00B3DKXQ41,SEAG,iShares &#226;&#130;&#172; Aggregate Bond UCITS ETF EUR (Dist),UK,LSE,GBP,ETF,IE00B3DKXQ41,LSE,
+731,IE00B4WXJJ64,SEGA,iShares Core &#226;&#130;&#172; Govt Bond UCITS ETF EUR (Dist),UK,LSE,GBP,ETF,IE00B4WXJJ64,LSE,
+732,IE00BC7GZW19,SEUC,SPDR Bloomberg Barclays 0-3 Year Euro Corporate Bond UCITS ETF,UK,LSE,EUR,ETF,IE00BC7GZW19,LSE,
+733,JE00B588CD74,SGBS,WisdomTree Physical Swiss Gold,UK,LSE,USD,ETF,JE00B588CD74,LSE,
+734,GB00B8C3BL03,SGE,The Sage Group plc,UK,LSE,GBX,Common Stock,GB00B8C3BL03,LSE,/img/logos/LSE/SGE.png
+735,IE00B579F325,SGLD,Invesco Physical Gold ETC,UK,LSE,USD,ETF,IE00B579F325,LSE,
+736,GB00B5ZN1N88,SGRO,SEGRO Plc,UK,LSE,GBX,Common Stock,GB00B5ZN1N88,LSE,/img/logos/LSE/SGRO.png
+737,IE00B4L5YX21,SJPA,iShares III Public Limited Company - iShares Core MSCI Japan IMI UCITS ETF,UK,LSE,GBX,ETF,IE00B4L5YX21,LSE,
+738,IE00B1RR8406,SKG,Smurfit Kappa Group Plc,UK,LSE,GBX,Common Stock,IE00B1RR8406,LSE,/img/logos/LSE/SKG.png
+739,GB00BF8Q6K64,SLA,Standard Life Aberdeen plc,UK,LSE,GBX,Common Stock,GB00BF8Q6K64,LSE,/img/logos/LSE/SLA.png
+740,GB0008220112,SMDS,DS Smith Plc,UK,LSE,GBX,Common Stock,GB0008220112,LSE,/img/logos/LSE/SMDS.png
+741,IE00B4K48X80,SMEA,iShares III Public Limited Company - iShares MSCI Europe UCITS ETF EUR (Acc),UK,LSE,GBX,ETF,IE00B4K48X80,LSE,
+742,GB00B1WY2338,SMIN,Smiths Group plc,UK,LSE,GBX,Common Stock,GB00B1WY2338,LSE,/img/logos/LSE/SMIN.png
+743,GB00BLDYK618,SMT,Scottish Mortgage Investment Trust plc,UK,LSE,GBX,Common Stock,GB00BLDYK618,LSE,
+744,GB0009223206,SN,Smith & Nephew plc,UK,LSE,GBX,Common Stock,GB0009223206,LSE,/img/logos/LSE/SN.png
+745,GB00BWFGQN14,SPX,Spirax-Sarco Engineering plc,UK,LSE,GBX,Common Stock,GB00BWFGQN14,LSE,/img/logos/LSE/SPX.png
+746,GB0007908733,SSE,SSE plc,UK,LSE,GBX,Common Stock,GB0007908733,LSE,/img/logos/LSE/SSE.png
+747,GB0007669376,STJ,St. James's Place plc,UK,LSE,GBX,Common Stock,GB0007669376,LSE,/img/logos/LSE/STJ.png
+748,IE00BFY0GT14,SWRD,SPDR MSCI World UCITS ETF,UK,LSE,USD,ETF,IE00BFY0GT14,LSE,
+749,IE00BWBXM948,SXLK,SPDR S&P U.S. Technology Select Sector UCITS ETF,UK,LSE,USD,ETF,IE00BWBXM948,LSE,
+750,GB0008782301,TW,Taylor Wimpey plc,UK,LSE,GBX,Common Stock,GB0008782301,LSE,/img/logos/LSE/TW.png
+751,LU0629460675,UB39,UBS(Lux)Fund Solutions &#226;&#128;&#147; MSCI EMU Socially Responsible UCITS ETF(EUR)A-dis,UK,LSE,GBX,ETF,LU0629460675,LSE,
+752,LU0629460832,UB45,UBS(Lux)Fund Solutions &#226;&#128;&#147; MSCI Pacific Socially Responsible UCITS ETF(USD)A-dis,UK,LSE,GBX,ETF,LU0629460832,LSE,
+753,LU0629459743,UC44,UBS(Lux)Fund Solutions &#226;&#128;&#147; MSCI World Socially Responsible UCITS ETF(USD)A-dis,UK,LSE,GBX,ETF,LU0629459743,LSE,
+754,LU0629460089,UC46,UBS(Lux)Fund Solutions &#226;&#128;&#147; MSCI USA Socially Responsible UCITS ETF(USD)A-dis,UK,LSE,GBX,ETF,LU0629460089,LSE,
+755,LU1048313891,UC79,UBS(Lux)Fund Solutions &#226;&#128;&#147; MSCI Emerging Markets Socially Responsible UCITS ETF(USD)A-dis,UK,LSE,GBX,ETF,LU1048313891,LSE,
+756,LU1215461085,UC97,UBS(Lux)Fund Solutions &#226;&#128;&#147; Bloomberg Barclays MSCI US Liquid Corp Sust UCITS ETF(USD)A-dis,UK,LSE,USD,ETF,LU1215461085,LSE,
+757,GB00B10RZP78,ULVR,Unilever PLC,UK,LSE,GBX,Common Stock,GB00B10RZP78,LSE,/img/logos/LSE/Ulvr.png
+758,GB00B39J2M42,UU,United Utilities Group PLC,UK,LSE,GBX,Common Stock,GB00B39J2M42,LSE,/img/logos/LSE/UU.png
+759,IE00B9F5YL18,VAPX,Vanguard Funds Public Limited Company - Vanguard FTSE Developed Asia Pacific ex Japan UCITS ETF,UK,LSE,GBP,ETF,IE00B9F5YL18,LSE,
+760,IE00B3VVMM84,VDEM,Vanguard Funds Public Limited Company - Vanguard FTSE Emerging Markets UCITS ETF,UK,LSE,USD,ETF,IE00B3VVMM84,LSE,
+761,IE00BZ163L38,VDET,Vanguard USD Emerging Markets Government Bond UCITS ETF,UK,LSE,USD,ETF,IE00BZ163L38,LSE,
+762,IE00BKX55T58,VDEV,Vanguard FTSE Developed World UCITS ETF USD Distributing,UK,LSE,USD,ETF,IE00BKX55T58,LSE,
+763,IE00B95PGT31,VDJP,Vanguard Funds Public Limited Company - Vanguard FTSE Japan UCITS ETF,UK,LSE,USD,ETF,IE00B95PGT31,LSE,
+764,IE00BZ163M45,VDTY,Vanguard Funds Public Limited Company - Vanguard USD Treasury Bond UCITS ETF,UK,LSE,USD,ETF,IE00BZ163M45,LSE,
+765,IE00BKX55S42,VERX,Vanguard FTSE Developed Europe ex UK UCITS ETF Distributing,UK,LSE,GBP,ETF,IE00BKX55S42,LSE,
+766,IE00B945VV12,VEUD,Vanguard FTSE Developed Europe UCITS ETF,UK,LSE,USD,ETF,IE00B945VV12,LSE,
+767,IE00B8GKDB10,VHYD,Vanguard FTSE All-World High Dividend Yield UCITS ETF USD Distributing,UK,LSE,USD,ETF,IE00B8GKDB10,LSE,
+768,IE00B3XXRP09,VUSA,Vanguard S&P 500 UCITS ETF,UK,LSE,GBP,ETF,IE00B3XXRP09,LSE,
+769,IE00B3RBWM25,VWRD,Vanguard FTSE All-World UCITS ETF,UK,LSE,USD,ETF,IE00B3RBWM25,LSE,
+770,FR0010527275,WATL,Lyxor World Water (DR) UCITS ETF Dist,UK,LSE,GBX,ETF,FR0010527275,LSE,
+771,IE00BYTRR640,WCOD,SPDR MSCI World Consumer Discretionary UCITS ETF USD Acc,UK,LSE,USD,ETF,IE00BYTRR640,LSE,
+772,IE00BYTRR756,WCOS,SPDR MSCI World Consumer Staples UCITS ETF,UK,LSE,USD,ETF,IE00BYTRR756,LSE,
+773,IE00BYTRRB94,WHEA,SPDR MSCI World Health Care UCITS ETF,UK,LSE,USD,ETF,IE00BYTRRB94,LSE,
+774,IE00BYTRRC02,WNDU,SSgA SPDR ETFs Europe II Public Limited Company - SPDR MSCI World Industrials UCITS ETF,UK,LSE,USD,ETF,IE00BYTRRC02,LSE,
+775,JE00B8KF9B49,WPP,WPP plc,UK,LSE,GBX,Common Stock,JE00B8KF9B49,LSE,/img/logos/LSE/WPP.png
+776,GB00B1KJJ408,WTB,Whitbread plc,UK,LSE,GBX,Common Stock,GB00B1KJJ408,LSE,/img/logos/LSE/WTB.png
+777,IE00BYTRRD19,WTEC,SPDR MSCI World Technology UCITS ETF USD Acc,UK,LSE,USD,ETF,IE00BYTRRD19,LSE,
+778,IE00BYTRRG40,WTEL,SSgA SPDR ETFs Europe II plc - SPDR MSCI World Communication Services UCITS ETF,UK,LSE,USD,ETF,IE00BYTRRG40,LSE,
+779,FR0010754200,18M1,Amundi ETF Govies 0-6 Months EuroMTS Investment Grade UCITS ETF DR,Germany,XETRA,EUR,ETF,FR0010754200,XETRA,
+780,FR0010717090,18M2,Amundi ETF MSCI EMU High Dividend UCITS ETF,Germany,XETRA,EUR,ETF,FR0010717090,XETRA,
+781,FR0010755611,18MF,Amundi ETF Leveraged MSCI USA Daily UCITS ETF,Germany,XETRA,EUR,ETF,FR0010755611,XETRA,
+782,FR0010757781,18MS,Amundi ETF Short Euro Stoxx 50 Daily UCITS ETF,Germany,XETRA,EUR,ETF,FR0010757781,XETRA,
+783,FR0010754127,18MU,Amundi ETF Euro Inflation UCITS ETF DR,Germany,XETRA,EUR,ETF,FR0010754127,XETRA,
+784,FR0010754135,18MX,Amundi ETF Govt Bond EuroMTS Broad Investment Grade 1-3 UCITS ETF DR,Germany,XETRA,EUR,ETF,FR0010754135,XETRA,
+785,DE0006062144,1COV,Covestro AG,Germany,XETRA,EUR,Common Stock,DE0006062144,XETRA,/img/logos/XETRA/1COV.png
+786,LU1681038243,6AQQ,Amundi Index Solutions - Amundi Nasdaq-100 ETF-C EUR,Germany,XETRA,EUR,ETF,LU1681038243,XETRA,
+787,LU1681042864,ACU2,Amundi Index Solutions - Amundi MSCI USA UCITS ETF-C EUR,Germany,XETRA,EUR,ETF,LU1681042864,XETRA,
+788,DE0005313704,AFX,Carl Zeiss Meditec AG,Germany,XETRA,EUR,Common Stock,DE0005313704,XETRA,/img/logos/XETRA/AFX.png
+789,FR0000120073,AIL,L'Air Liquide S.A,Germany,XETRA,EUR,Common Stock,FR0000120073,XETRA,/img/logos/XETRA/AIL.png
+790,DE000A0WMPJ6,AIXA,AIXTRON SE,Germany,XETRA,EUR,Common Stock,DE000A0WMPJ6,XETRA,/img/logos/XETRA/AIXA.png
+791,DE0008404005,ALV,Allianz SE,Germany,XETRA,EUR,Common Stock,DE0008404005,XETRA,/img/logos/XETRA/ALV.png
+792,LU1681044480,AMEA,Amundi Index Solutions - Amundi MSCI Em Asia UCITS ETF-C EUR,Germany,XETRA,EUR,ETF,LU1681044480,XETRA,
+793,LU1681045370,AMEM,Amundi Index Solutions - Amundi MSCI Emerging Markets UCITS ETF-C EUR,Germany,XETRA,EUR,ETF,LU1681045370,XETRA,
+794,LU1681043599,AMEW,Amundi Index Solutions - Amundi MSCI World UCITS ETF C EUR,Germany,XETRA,EUR,ETF,LU1681043599,XETRA,
+795,LU1681048804,AUM5,Amundi Index Solutions - Amundi S&P 500 UCITS ETF C EUR,Germany,XETRA,EUR,ETF,LU1681048804,XETRA,
+796,ES0113211835,BBVA,"Banco Bilbao Vizcaya Argentaria, S.A",Germany,XETRA,EUR,Common Stock,ES0113211835,XETRA,/img/logos/XETRA/BBVA.png
+797,DE0005158703,BC8,Bechtle AG,Germany,XETRA,EUR,Common Stock,DE0005158703,XETRA,/img/logos/XETRA/BC8.png
+798,DE0005190003,BMW,Bayerische Motoren Werke Aktiengesellschaft,Germany,XETRA,EUR,Common Stock,DE0005190003,XETRA,/img/logos/XETRA/BMW.png
+799,LU1681046261,CB3G,Amundi Index Solutions - Amundi Govt Bond Euromts Broad Investment Grade UCITS ETF-C,Germany,XETRA,EUR,ETF,LU1681046261,XETRA,
+800,DE0005419105,COK,Cancom SE,Germany,XETRA,EUR,Common Stock,DE0005419105,XETRA,/img/logos/XETRA/COK.png
+801,DE000A288904,COP,CompuGroup Medical SE & Co. KGaA,Germany,XETRA,EUR,Common Stock,DE000A288904,XETRA,/img/logos/XETRA/COP.png
+802,DE0005810055,DB1,Deutsche Börse AG,Germany,XETRA,EUR,Common Stock,DE0005810055,XETRA,/img/logos/XETRA/DB1.png
+803,LU1681046691,DE5A,Amundi Index Solutions - Amundi Govt Bond Highest Rated Euromts Investment Grade Ucits ETF EUR C,Germany,XETRA,EUR,ETF,LU1681046691,XETRA,
+804,DE0005552004,DPW,Deutsche Post AG,Germany,XETRA,EUR,Common Stock,DE0005552004,XETRA,/img/logos/XETRA/DPW.png
+805,DE0005545503,DRI,1&1 Drillisch AG,Germany,XETRA,EUR,Common Stock,DE0005545503,XETRA,
+806,DE0005550636,DRW3,Drägerwerk AG & Co. KGaA,Germany,XETRA,EUR,Common Stock,DE0005550636,XETRA,/img/logos/XETRA/DRW3.png
+807,DE000A0HN5C6,DWNI,Deutsche Wohnen SE,Germany,XETRA,EUR,Common Stock,DE000A0HN5C6,XETRA,/img/logos/XETRA/DWNi.png
+808,DE000ENAG999,EOAN,E.ON SE,Germany,XETRA,EUR,Common Stock,DE000ENAG999,XETRA,/img/logos/XETRA/Eoan.png
+809,FR0011550185,ESEE,BNP Paribas Easy S&P 500 UCITS ETF EUR C,Germany,XETRA,EUR,ETF,FR0011550185,XETRA,
+810,FR0013041530,ESEH,BNP Paribas Easy S&P 500 UCITS ETF EUR H,Germany,XETRA,EUR,ETF,FR0013041530,XETRA,
+811,FR0012739431,ETDD,BNP Paribas Easy Euro Stoxx 50 UCITS ETF EUR C,Germany,XETRA,EUR,ETF,FR0012739431,XETRA,
+812,FR0011550672,ETSA,BNP Paribas Easy Stoxx Europe 600 UCITS ETF EUR C/D,Germany,XETRA,EUR,ETF,FR0011550672,XETRA,
+813,DE0005659700,EUZ,Eckert & Ziegler Strahlen- und Medizintechnik AG,Germany,XETRA,EUR,Common Stock,DE0005659700,XETRA,/img/logos/XETRA/EUZ.png
+814,DE0005664809,EVT,Evotec SE,Germany,XETRA,EUR,Common Stock,DE0005664809,XETRA,/img/logos/XETRA/EVT.png
+815,DE0005785802,FME,Fresenius Medical Care AG & Co. KGaA,Germany,XETRA,EUR,Common Stock,DE0005785802,XETRA,/img/logos/XETRA/FME.png
+816,LU1681040900,FRNU,Amundi Index Solutions - Amundi ETF Floating Rate USD Corporate,Germany,XETRA,EUR,ETF,LU1681040900,XETRA,
+817,FR0000133308,FTE,Orange S.A,Germany,XETRA,EUR,Common Stock,FR0000133308,XETRA,/img/logos/XETRA/FTE.png
+818,FR0010791194,GC2U,Amundi ETF Short MSCI USA Daily UCITS ETF,Germany,XETRA,EUR,ETF,FR0010791194,XETRA,
+819,LU1681046931,GC40,Amundi Index Solutions - Amundi CAC 40 UCITS ETF-C,Germany,XETRA,EUR,ETF,LU1681046931,XETRA,
+820,DE0006048432,HEN3,Henkel AG & Co. KGaA,Germany,XETRA,EUR,Common Stock,DE0006048432,XETRA,/img/logos/XETRA/HEN3.png
+821,IE00BYPC1H27,ICGB,iShares China CNY Bond UCITS ETF USD (Dist),Germany,XETRA,EUR,ETF,IE00BYPC1H27,XETRA,
+822,DE0006231004,IFX,Infineon Technologies AG,Germany,XETRA,EUR,Common Stock,DE0006231004,XETRA,/img/logos/XETRA/IFX.png
+823,NL0011821202,INN1,ING Groep N.V,Germany,XETRA,EUR,Common Stock,NL0011821202,XETRA,/img/logos/XETRA/INN1.png
+824,IE00B3B8Q275,IUS6,iShares &#226;&#130;&#172; Covered Bond UCITS ETF EUR (Dist),Germany,XETRA,EUR,ETF,IE00B3B8Q275,XETRA,
+825,ES0148396007,IXD1,Industria de Diseno Textil SA,Germany,XETRA,EUR,Common Stock,ES0148396007,XETRA,
+826,LU1481202692,JBEM,BNP Paribas Easy Bloomberg-Barclays Euro Aggregate Treasury UCITS ETF Capitalisation,Germany,XETRA,EUR,ETF,LU1481202692,XETRA,
+827,DE000A2NB601,JEN,Jenoptik AG,Germany,XETRA,EUR,Common Stock,DE000A2NB601,XETRA,/img/logos/XETRA/JEN.png
+828,LU1834983477,LBNK,Lyxor Index Fund - Lyxor Stoxx Europe 600 Banks UCITS ETF Acc,Germany,XETRA,EUR,ETF,LU1834983477,XETRA,
+829,LU0908501058,LGQG,Lyxor EURO STOXX 300 (DR) - UCITS ETF C-EUR,Germany,XETRA,EUR,ETF,LU0908501058,XETRA,
+830,LU1834986900,LHTC,Lyxor Index Fund - Lyxor Stoxx Europe 600 Healthcare UCITS ETF Acc,Germany,XETRA,EUR,ETF,LU1834986900,XETRA,
+831,LU1834988278,LOGS,Lyxor Index Fund - Lyxor Stoxx Europe 600 Oil &amp; Gas UCITS ETF Acc,Germany,XETRA,EUR,ETF,LU1834988278,XETRA,
+832,FR0010424135,LSK7,Lyxor Euro Stoxx 50 Daily (-1x) Inverse UCITS ETF Acc,Germany,XETRA,EUR,ETF,FR0010424135,XETRA,
+833,FR0010424143,LSK8,Lyxor Euro Stoxx 50 Daily (-2x) Inverse UCITS ETF Acc,Germany,XETRA,EUR,ETF,FR0010424143,XETRA,
+834,LU1834988518,LTUG,Lyxor Index Fund - Lyxor Stoxx Europe 600 Technology UCITS ETF Acc,Germany,XETRA,EUR,ETF,LU1834988518,XETRA,
+835,LU1829219390,LYBK,Lyxor EURO STOXX Banks UCITS ETF P Acc,Germany,XETRA,EUR,ETF,LU1829219390,XETRA,
+836,FR0010524777,LYM9,Multi Units France - Lyxor New Energy (DR) UCITS ETF,Germany,XETRA,EUR,ETF,FR0010524777,XETRA,
+837,FR0010468983,LYMZ,Lyxor Euro Stoxx 50 Daily (2x) Leveraged UCITS ETF Acc,Germany,XETRA,EUR,ETF,FR0010468983,XETRA,
+838,LU0533033238,LYPE,Lyxor MSCI World Health Care TR UCITS ETF - C-EUR,Germany,XETRA,EUR,ETF,LU0533033238,XETRA,
+839,LU0533033667,LYPG,Multi Units Luxembourg - Lyxor MSCI World Information Technology TR UCITS ETF,Germany,XETRA,EUR,ETF,LU0533033667,XETRA,
+840,LU0496786574,LYPS,Lyxor S&P 500 UCITS ETF - D-EUR,Germany,XETRA,EUR,ETF,LU0496786574,XETRA,
+841,FR0010869495,LYQL,Lyxor Daily ShortDAX x2 UCITS ETF Acc,Germany,XETRA,EUR,ETF,FR0010869495,XETRA,
+842,FR0007054358,LYSX,Lyxor Euro Stoxx 50 (DR) UCITS ETF Acc,Germany,XETRA,EUR,ETF,FR0007054358,XETRA,
+843,LU1287023185,LYXD,MULTI-UNITS LUXEMBOURG - Lyxor Euro Government Bond 7-10Y (DR) UCITS ETF - Acc,Germany,XETRA,EUR,ETF,LU1287023185,XETRA,
+844,LU0252634307,LYY8,MULTI-UNITS LUXEMBOURG - Lyxor Daily LevDAX UCITS ETF - Acc,Germany,XETRA,EUR,ETF,LU0252634307,XETRA,
+845,FR0010315770,LYYA,Lyxor MSCI World UCITS ETF,Germany,XETRA,EUR,ETF,FR0010315770,XETRA,
+846,DE0006632003,MOR,MorphoSys AG,Germany,XETRA,EUR,Common Stock,DE0006632003,XETRA,/img/logos/XETRA/MOR.png
+847,DE0008430026,MUV2,Münchener Rückversicherungs-Gesellschaft Aktiengesellschaft in München,Germany,XETRA,EUR,Common Stock,DE0008430026,XETRA,/img/logos/XETRA/MUV2.png
+848,DE000A0D6554,NDX1,Nordex SE,Germany,XETRA,EUR,Common Stock,DE000A0D6554,XETRA,/img/logos/XETRA/NDX1.png
+849,DE0006452907,NEM,Nemetschek SE,Germany,XETRA,EUR,Common Stock,DE0006452907,XETRA,/img/logos/XETRA/NEM.png
+850,DE000NWRK013,NWO,New Work SE,Germany,XETRA,EUR,Common Stock,DE000NWRK013,XETRA,/img/logos/XETRA/NWO.png
+851,DE000A1J5RX9,O2D,Telefónica Deutschland Holding AG,Germany,XETRA,EUR,Common Stock,DE000A1J5RX9,XETRA,/img/logos/XETRA/O2D.png
+852,DE0006916604,PFV,Pfeiffer Vacuum Technology AG,Germany,XETRA,EUR,Common Stock,DE0006916604,XETRA,/img/logos/XETRA/PFV.png
+853,ES0173516115,REP,"Repsol, S.A",Germany,XETRA,EUR,Common Stock,ES0173516115,XETRA,/img/logos/XETRA/REP.png
+854,DE0007037129,RWE,RWE AG,Germany,XETRA,EUR,Common Stock,DE0007037129,XETRA,/img/logos/XETRA/RWe.png
+855,AT0000A0E9W5,SANT,S&T AG,Germany,XETRA,EUR,Common Stock,AT0000A0E9W5,XETRA,/img/logos/XETRA/SANT.png
+856,LU1812092168,SELD,Lyxor Index Fund - Lyxor STOXX Europe Select Dividend 30 UCITS ETF Dist,Germany,XETRA,EUR,ETF,LU1812092168,XETRA,
+857,DE000SHL1006,SHL,Siemens Healthineers AG,Germany,XETRA,EUR,Common Stock,DE000SHL1006,XETRA,/img/logos/XETRA/SHL.png
+858,DE000A2GS401,SOW,Software Aktiengesellschaft,Germany,XETRA,EUR,Common Stock,DE000A2GS401,XETRA,/img/logos/XETRA/SOW.png
+859,DE0007165631,SRT3,Sartorius Aktiengesellschaft,Germany,XETRA,EUR,Common Stock,DE0007165631,XETRA,/img/logos/XETRA/SRT3.png
+860,NL0009690221,T6ET,VanEck Vectors ETFs N.V. - VanEck Vectors Global Equal Weight UCITS ETF,Germany,XETRA,EUR,ETF,NL0009690221,XETRA,
+861,NL0009690247,TCBT,VanEck Vectors iBoxx EUR Corporates UCITS ETF,Germany,XETRA,EUR,ETF,NL0009690247,XETRA,
+862,NL0009690254,TGBT,VanEck Vectors iBoxx EUR Sovereign Diversified 1-10 UCITS ETF,Germany,XETRA,EUR,ETF,NL0009690254,XETRA,
+863,DE000A2YN900,TMV,TeamViewer AG,Germany,XETRA,EUR,Common Stock,DE000A2YN900,XETRA,/img/logos/XETRA/TMV.png
+864,NL0009690239,TRET,VanEck Vectors Global Real Estate UCITS ETF,Germany,XETRA,EUR,ETF,NL0009690239,XETRA,
+865,NL0010408704,TSWE,VanEck Vectors Sustainable World Equal Weight UCITS ETF,Germany,XETRA,EUR,ETF,NL0010408704,XETRA,
+866,DE0005089031,UTDI,United Internet AG,Germany,XETRA,EUR,Common Stock,DE0005089031,XETRA,/img/logos/XETRA/UTDI.png
+867,NL0010731816,V3ET,VanEck Vectors™ European Equal Weight UCITS ETF,Germany,XETRA,EUR,ETF,NL0010731816,XETRA,
+868,LU1681047236,V50A,Amundi Index Solutions - Amundi EURO STOXX 50 UCITS ETF-C EUR,Germany,XETRA,EUR,ETF,LU1681047236,XETRA,
+869,DE000A0TGJ55,VAR1,Varta AG,Germany,XETRA,EUR,Common Stock,DE000A0TGJ55,XETRA,/img/logos/XETRA/VAR1.png
+870,NL0011683594,VDIV,VanEck Vectors™ Morningstar Developed Markets Dividend Leaders UCITS ETF,Germany,XETRA,EUR,ETF,NL0011683594,XETRA,
+871,NL0010273801,VIGB,VanEck Vectors ETFs N.V. - VanEck Vectors iBoxx EUR Sovereign Capped AAA-AA 1-5 UCITS ETF,Germany,XETRA,EUR,ETF,NL0010273801,XETRA,
+872,NL0011376074,VMUS,VanEck Vectors ETFs N.V. - VanEck Vectors Morningstar North America Equal Weight UCITS ETF,Germany,XETRA,EUR,ETF,NL0011376074,XETRA,
+873,DE000A1ML7J1,VNA,Vonovia SE,Germany,XETRA,EUR,Common Stock,DE000A1ML7J1,XETRA,/img/logos/XETRA/VNA.png
+874,LU0832435464,VOOL,Lyxor S&P 500 VIX Futures Enhanced Roll UCITS ETF - C-EUR,Germany,XETRA,EUR,ETF,LU0832435464,XETRA,
+875,DE000WAF3001,WAF,Siltronic AG,Germany,XETRA,EUR,Common Stock,DE000WAF3001,XETRA,/img/logos/XETRA/WAF.png
+876,FR0004056851,VLA,Valneva SE,Austria,VI,EUR,Common Stock,FR0004056851,VI,/img/logos/VI/VLA.png
+877,IT0001233417,A2A,A2A S.p.A,Italy,MI,EUR,Common Stock,IT0001233417,MI,/img/logos/MI/A2A.png
+878,IT0004056880,AMP,Amplifon S.p.A,Italy,MI,EUR,Common Stock,IT0004056880,MI,/img/logos/MI/AMP.png
+879,IT0003506190,ATL,Atlantia SpA,Italy,MI,EUR,Common Stock,IT0003506190,MI,/img/logos/MI/ATL.png
+880,IT0005218380,BAMI,Banco BPM S.p.A,Italy,MI,EUR,Common Stock,IT0005218380,MI,/img/logos/MI/BAMI.png
+881,IT0001031084,BGN,Banca Generali S.p.A,Italy,MI,EUR,Common Stock,IT0001031084,MI,/img/logos/MI/BGN.png
+882,IT0000066123,BPE,BPER Banca SpA,Italy,MI,EUR,Common Stock,IT0000066123,MI,/img/logos/MI/BPE.png
+883,IT0005252728,BRE,Brembo S.p.A,Italy,MI,EUR,Common Stock,IT0005252728,MI,/img/logos/MI/BRE.png
+884,LU1598691050,BTP13,Lyxor Index Fund - Lyxor EuroMTS 1-3Y Italy BTP Government Bond (DR) UCITS ETF Dist,Italy,MI,EUR,ETF,LU1598691050,MI,
+885,IT0001347308,BZU,Buzzi Unicem S.p.A,Italy,MI,EUR,Common Stock,IT0001347308,MI,/img/logos/MI/BZU.png
+886,FR0000120172,CRR,Carrefour SA,Italy,MI,EUR,Common Stock,FR0000120172,MI,/img/logos/MI/CRR.png
+887,IT0003492391,DIA,DiaSorin S.p.A,Italy,MI,EUR,Common Stock,IT0003492391,MI,/img/logos/MI/DIA.png
+888,FR0000120644,DNN,Danone S.A,Italy,MI,EUR,Common Stock,FR0000120644,MI,/img/logos/MI/DNN.png
+889,LU1861138961,EMSRI,Amundi Index Solutions - Amundi Index MSCI Emerging Markets SRI UCITS ETF DR C,Italy,MI,EUR,ETF,LU1861138961,MI,
+890,IT0003128367,ENEL,Enel SpA,Italy,MI,EUR,Common Stock,IT0003128367,MI,/img/logos/MI/ENEL.png
+891,LU1940199711,ESGE,Lyxor MSCI Europe ESG Leaders (DR) UCITS ETF - Acc,Italy,MI,EUR,ETF,LU1940199711,MI,
+892,NL0012059018,EXO,Exor N.V,Italy,MI,EUR,Common Stock,NL0012059018,MI,/img/logos/MI/EXO.PNG
+893,IT0000072170,FBK,FinecoBank Banca Fineco S.p.A,Italy,MI,EUR,Common Stock,IT0000072170,MI,/img/logos/MI/FBK.png
+894,IT0000062072,G,Assicurazioni Generali S.p.A,Italy,MI,EUR,Common Stock,IT0000062072,MI,/img/logos/MI/G.png
+895,FR0000130809,GLE,Société Générale Société anonyme,Italy,MI,EUR,Common Stock,FR0000130809,MI,/img/logos/MI/GLE.png
+896,IT0005211237,IG,Italgas S.p.A,Italy,MI,EUR,Common Stock,IT0005211237,MI,/img/logos/MI/IG.png
+897,IT0000072618,ISP,Intesa Sanpaolo S.p.A,Italy,MI,EUR,Common Stock,IT0000072618,MI,/img/logos/MI/ISP.png
+898,IT0000336518,JUVE,Juventus Football Club S.p.A,Italy,MI,EUR,Common Stock,IT0000336518,MI,/img/logos/MI/JUVE.png
+899,IT0003856405,LDO,Leonardo S.p.a,Italy,MI,EUR,Common Stock,IT0003856405,MI,
+900,IT0000062957,MB,Mediobanca Banca di Credito Finanziario S.p.A,Italy,MI,EUR,Common Stock,IT0000062957,MI,/img/logos/MI/MB.png
+901,IT0004965148,MONC,Moncler S.p.A,Italy,MI,EUR,Common Stock,IT0004965148,MI,/img/logos/MI/MONC.png
+902,FI0009000681,NOKIA,Nokia Corporation,Italy,MI,EUR,Common Stock,FI0009000681,MI,/img/logos/MI/NOKIA.png
+903,FR0000120321,OR,L'Oréal S.A,Italy,MI,EUR,Common Stock,FR0000120321,MI,/img/logos/MI/OR.png
+904,IT0005278236,PIRC,Pirelli & C. S.p.A,Italy,MI,EUR,Common Stock,IT0005278236,MI,/img/logos/MI/PIRC.png
+905,IT0003796171,PST,Poste Italiane SpA,Italy,MI,EUR,Common Stock,IT0003796171,MI,/img/logos/MI/PST.png
+906,IT0003828271,REC,Recordati Industria Chimica e Farmaceutica S.p.A,Italy,MI,EUR,Common Stock,IT0003828271,MI,/img/logos/MI/REC.png
+907,FR0000120578,SANF,Sanofi,Italy,MI,EUR,Common Stock,FR0000120578,MI,/img/logos/MI/SANF.png
+908,IT0004712375,SFER,Salvatore Ferragamo S.p.A,Italy,MI,EUR,Common Stock,IT0004712375,MI,/img/logos/MI/SFER.png
+909,IT0005252140,SPM,Saipem SpA,Italy,MI,EUR,Common Stock,IT0005252140,MI,/img/logos/MI/SPM.png
+910,LU0959211243,SPXH,Lyxor S&P 500 UCITS ETF - Daily Hedged D-EUR,Italy,MI,EUR,ETF,LU0959211243,MI,
+911,NL0000226223,STM,STMicroelectronics N.V,Italy,MI,EUR,Common Stock,NL0000226223,MI,/img/logos/MI/STM.png
+912,ES0178430E18,TEF,"Telefónica, S.A",Italy,MI,EUR,Common Stock,ES0178430E18,MI,/img/logos/MI/TEF.png
+913,IT0003497168,TIT,Telecom Italia S.p.A,Italy,MI,EUR,Common Stock,IT0003497168,MI,/img/logos/MI/TIT.png
+914,IT0003242622,TRN,Terna - Rete Elettrica Nazionale Società per Azioni,Italy,MI,EUR,Common Stock,IT0003242622,MI,/img/logos/MI/TRN.png
+915,IT0005239360,UCG,UniCredit S.p.A,Italy,MI,EUR,Common Stock,IT0005239360,MI,/img/logos/MI/UCG.png
+916,IT0004810054,UNI,Unipol Gruppo S.p.A,Italy,MI,EUR,Common Stock,IT0004810054,MI,
+917,IT0004827447,US,UnipolSai Assicurazioni S.p.A,Italy,MI,EUR,Common Stock,IT0004827447,MI,/img/logos/MI/US.png
+918,FR0013341781,2CRSI,2CRSI S.A,France,PA,EUR,Common Stock,FR0013341781,PA,/img/logos/PA/2CRSI.png
+919,FR0010557264,AB,AB Science S.A,France,PA,EUR,Common Stock,FR0010557264,PA,/img/logos/PA/AB.png
+920,FR0004040608,ABCA,ABC arbitrage SA,France,PA,EUR,Common Stock,FR0004040608,PA,/img/logos/PA/ABCA.png
+921,FR0000060402,ABIO,Albioma,France,PA,EUR,Common Stock,FR0000060402,PA,/img/logos/PA/ABIO.png
+922,FR0012616852,ABNX,ABIONYX Pharma SA,France,PA,EUR,Common Stock,FR0012616852,PA,/img/logos/PA/ABNX.png
+923,FR0012333284,ABVX,ABIVAX Société Anonyme,France,PA,EUR,Common Stock,FR0012333284,PA,/img/logos/PA/ABVX.png
+924,FR0000120404,AC,Accor SA,France,PA,EUR,Common Stock,FR0000120404,PA,
+925,FR0000045072,ACA,Crédit Agricole S.A,France,PA,EUR,Common Stock,FR0000045072,PA,/img/logos/PA/ACA.png
+926,FR0011184241,ADOC,Adocia SA,France,PA,EUR,Common Stock,FR0011184241,PA,
+927,FR0010340141,ADP,Aeroports de Paris SA,France,PA,EUR,Common Stock,FR0010340141,PA,/img/logos/PA/ADP.png
+928,FR0000031122,AF,Air France-KLM SA,France,PA,EUR,Common Stock,FR0000031122,PA,/img/logos/PA/AF.png
+929,FR0004180537,AKA,AKKA Technologies SE,France,PA,EUR,Common Stock,FR0004180537,PA,/img/logos/PA/AKA.png
+930,FR0010313833,AKE,Arkema S.A,France,PA,EUR,Common Stock,FR0010313833,PA,/img/logos/PA/AKE.png
+931,FR0010493510,ALALO,Acheter-Louer.Fr SA,France,PA,EUR,Common Stock,FR0010493510,PA,/img/logos/PA/ALALO.png
+932,FR0011005933,ALBIO,Biosynex SA,France,PA,EUR,Common Stock,FR0011005933,PA,
+933,FR0012816825,ALBPS,Biophytis SA,France,PA,EUR,Common Stock,FR0012816825,PA,/img/logos/PA/ALBPS.png
+934,FR0004172450,ALBUD,MINT Société anonyme,France,PA,EUR,Common Stock,FR0004172450,PA,/img/logos/PA/ALBUD.png
+935,FR0010907956,ALCAR,Carmat SA,France,PA,EUR,Common Stock,FR0010907956,PA,
+936,FR0011716265,ALCJ,Crossject Société Anonyme,France,PA,EUR,Common Stock,FR0011716265,PA,/img/logos/PA/ALCJ.png
+937,FR0010425595,ALCLS,Cellectis S.A,France,PA,EUR,Common Stock,FR0010425595,PA,/img/logos/PA/ALCLS.png
+938,FR0011648716,ALCRB,Carbios SAS,France,PA,EUR,Common Stock,FR0011648716,PA,/img/logos/PA/ALCRB.png
+939,FR0013505583,ALCYB,Cybergun S.A,France,PA,EUR,Common Stock,FR0013505583,PA,/img/logos/PA/ALCYB.png
+940,FR0013258662,ALD,ALD S.A,France,PA,EUR,Common Stock,FR0013258662,PA,/img/logos/PA/ALD.png
+941,FR0013066750,ALDBT,DBT SA,France,PA,EUR,Common Stock,FR0013066750,PA,/img/logos/PA/ALDBT.png
+942,FR0010879056,ALDEI,Deinove SA,France,PA,EUR,Common Stock,FR0010879056,PA,/img/logos/PA/ALDEI.png
+943,FR0011522168,ALDR,Delta Drone SA,France,PA,EUR,Common Stock,FR0011522168,PA,/img/logos/PA/ALDR.png
+944,FR0013088606,ALDRV,Drone Volt SA,France,PA,EUR,Common Stock,FR0013088606,PA,/img/logos/PA/ALDRV.png
+945,FR0000075343,ALEMG,Euromedis Groupe,France,PA,EUR,Common Stock,FR0000075343,PA,/img/logos/PA/ALEMG.png
+946,FR0013240934,ALERS,Eurobio Scientific Société anonyme,France,PA,EUR,Common Stock,FR0013240934,PA,/img/logos/PA/ALERS.png
+947,FR0000035818,ALESK,Esker SA,France,PA,EUR,Common Stock,FR0000035818,PA,/img/logos/PA/ALESK.png
+948,FR0012419307,ALFOC,Focus Home Interactive Société anonyme,France,PA,EUR,Common Stock,FR0012419307,PA,
+949,FR0010485268,ALFPC,Fountaine Pajot SA,France,PA,EUR,Common Stock,FR0010485268,PA,/img/logos/PA/ALFPC.png
+950,FR0004053510,ALGEN,genOway Société anonyme,France,PA,EUR,Common Stock,FR0004053510,PA,/img/logos/PA/ALGEN.png
+951,FR0004153930,ALHYG,Hybrigenics Société Anonyme,France,PA,EUR,Common Stock,FR0004153930,PA,/img/logos/PA/ALHYG.png
+952,FR0011179886,ALINS,Intrasense SA,France,PA,EUR,Common Stock,FR0011179886,PA,/img/logos/PA/ALINS.png
+953,FR0010908723,ALINT,IntegraGen SA,France,PA,EUR,Common Stock,FR0010908723,PA,/img/logos/PA/ALINT.png
+954,FR0013156007,ALKLK,Kerlink SA,France,PA,EUR,Common Stock,FR0013156007,PA,/img/logos/PA/ALKLK.png
+955,FR0000075442,ALLDL,Groupe LDLC société anonyme,France,PA,EUR,Common Stock,FR0000075442,PA,/img/logos/PA/ALLDL.png
+956,FR0010353888,ALMDG,MGI Digital Technology Société Anonyme,France,PA,EUR,Common Stock,FR0010353888,PA,/img/logos/PA/ALMDG.png
+957,FR0011049824,ALMDT,Median Technologies SA,France,PA,EUR,Common Stock,FR0011049824,PA,/img/logos/PA/ALMDT.png
+958,FR0011051598,ALMIB,Amoéba S.A,France,PA,EUR,Common Stock,FR0011051598,PA,
+959,FR0004032746,ALNEV,Neovacs S.A,France,PA,EUR,Common Stock,FR0004032746,PA,/img/logos/PA/ALNEV.png
+960,NL0012044762,ALNOX,NOXXON Pharma N.V,France,PA,EUR,Common Stock,NL0012044762,PA,/img/logos/PA/ALNOX.png
+961,FR0011766229,ALONC,Oncodesign Société Anonyme,France,PA,EUR,Common Stock,FR0011766229,PA,/img/logos/PA/ALONC.png
+962,FR0011191287,ALPHA,Pharnext SA,France,PA,EUR,Common Stock,FR0011191287,PA,/img/logos/PA/ALPHA.png
+963,BE0974302342,ALPHS,Pharmasimple SA,France,PA,EUR,Common Stock,BE0974302342,PA,/img/logos/PA/ALPHS.png
+964,FR0011950641,ALPIX,Pixium Vision SA,France,PA,EUR,Common Stock,FR0011950641,PA,/img/logos/PA/ALPIX.png
+965,FR0011648971,ALQGC,Quantum Genomics Société Anonyme,France,PA,EUR,Common Stock,FR0011648971,PA,/img/logos/PA/ALQGC.png
+966,FR0013467123,ALSAF,Safe Orthopaedics SA,France,PA,EUR,Common Stock,FR0013467123,PA,/img/logos/PA/ALSAF.png
+967,FR0011464452,ALSGD,SpineGuard SA,France,PA,EUR,Common Stock,FR0011464452,PA,/img/logos/PA/ALSGD.png
+968,FR0011398874,ALSPW,Spineway Société Anonyme,France,PA,EUR,Common Stock,FR0011398874,PA,/img/logos/PA/ALSPW.png
+969,FR0000033219,ALTA,Altarea SCA,France,PA,EUR,Common Stock,FR0000033219,PA,/img/logos/PA/ALTA.png
+970,FR0004197747,ALTER,Theradiag SA,France,PA,EUR,Common Stock,FR0004197747,PA,/img/logos/PA/ALTER.png
+971,FR0013286259,ALTHX,Theranexus Société Anonyme,France,PA,EUR,Common Stock,FR0013286259,PA,/img/logos/PA/ALTHX.png
+972,FR0013345493,ALTUV,BIO-UV Group S.A,France,PA,EUR,Common Stock,FR0013345493,PA,/img/logos/PA/ALTUV.png
+973,FR0011898584,ALUVI,UV Germi SA,France,PA,EUR,Common Stock,FR0011898584,PA,/img/logos/PA/ALUVI.png
+974,FR0013254851,ALVAL,Valbiotis SA,France,PA,EUR,Common Stock,FR0013254851,PA,/img/logos/PA/ALVAL.png
+975,FR0011532225,ALVGO,Vogo S.A,France,PA,EUR,Common Stock,FR0011532225,PA,/img/logos/PA/ALVGO.png
+976,FR0013481835,ALVMG,Visiomed Group SA,France,PA,EUR,Common Stock,FR0013481835,PA,
+977,FR0000121725,AM,Dassault Aviation SA,France,PA,EUR,Common Stock,FR0000121725,PA,/img/logos/PA/AM.png
+978,FR0004125920,AMUN,Amundi SA,France,PA,EUR,Common Stock,FR0004125920,PA,/img/logos/PA/AMUN.png
+979,FR0010478248,ATA,Atari SA,France,PA,EUR,Common Stock,FR0010478248,PA,/img/logos/PA/ATA.png
+980,FR0000071946,ATE,Alten S.A,France,PA,EUR,Common Stock,FR0000071946,PA,/img/logos/PA/ATE.png
+981,FR0011882364,AWAT,Lyxor PEA Eau (World Water) UCITS ETF Capi,France,PA,EUR,ETF,FR0011882364,PA,
+982,FR0013258399,BALYO,Balyo SA,France,PA,EUR,Common Stock,FR0013258399,PA,/img/logos/PA/BALYO.png
+983,FR0000120966,BB,Société BIC SA,France,PA,EUR,Common Stock,FR0000120966,PA,/img/logos/PA/BB.png
+984,FR0000035164,BEN,Bénéteau S.A,France,PA,EUR,Common Stock,FR0000035164,PA,/img/logos/PA/BEN.png
+985,FR0000074072,BIG,BigBen Interactive,France,PA,EUR,Common Stock,FR0000074072,PA,/img/logos/PA/BIG.png
+986,FR0013280286,BIM,bioMérieux S.A,France,PA,EUR,Common Stock,FR0013280286,PA,/img/logos/PA/BIM.png
+987,FR0000035370,BLC,Bastide Le Confort Médical SA,France,PA,EUR,Common Stock,FR0000035370,PA,
+988,FR0000039299,BOL,Bolloré SE,France,PA,EUR,Common Stock,FR0000039299,PA,/img/logos/PA/BOL.png
+989,FR0000063935,BON,Bonduelle SCA,France,PA,EUR,Common Stock,FR0000063935,PA,/img/logos/PA/BON.png
+990,FR0006174348,BVI,Bureau Veritas SA,France,PA,EUR,Common Stock,FR0006174348,PA,/img/logos/PA/BVI.png
+991,FR0010411884,BX4,Lyxor CAC 40 Daily (-2x) Inverse UCITS ETF Acc,France,PA,EUR,ETF,FR0010411884,PA,
+992,FR0010717124,C4S,Amundi ETF Short CAC 40 Daily UCITS ETF,France,PA,EUR,ETF,FR0010717124,PA,
+993,FR0013380607,CACC,Lyxor CAC 40 (DR) UCITS ETF Acc,France,PA,EUR,ETF,FR0013380607,PA,
+994,FR0010828137,CARM,Carmila S.A,France,PA,EUR,Common Stock,FR0010828137,PA,
+995,FR0010193052,CATG,SA Catana Group,France,PA,EUR,Common Stock,FR0010193052,PA,
+996,FR0000130403,CDI,Christian Dior SE,France,PA,EUR,Common Stock,FR0000130403,PA,
+997,FR0013181864,CGG,CGG,France,PA,EUR,Common Stock,FR0013181864,PA,/img/logos/PA/CGG.png
+998,FR0000120222,CNP,CNP Assurances SA,France,PA,EUR,Common Stock,FR0000120222,PA,/img/logos/PA/CNP.png
+999,FR0010667147,COFA,COFACE SA,France,PA,EUR,Common Stock,FR0010667147,PA,/img/logos/PA/COFA.png
+1000,FR0013018124,COX,Nicox S.A,France,PA,EUR,Common Stock,FR0013018124,PA,/img/logos/PA/COX.png
+1001,FR0000130692,CRI,Chargeurs SA,France,PA,EUR,Common Stock,FR0000130692,PA,/img/logos/PA/CRI.png
+1002,FR0000053381,DBG,Derichebourg SA,France,PA,EUR,Common Stock,FR0000053381,PA,/img/logos/PA/DBG.png
+1003,FR0010417345,DBV,DBV Technologies S.A,France,PA,EUR,Common Stock,FR0010417345,PA,/img/logos/PA/DBV.png
+1004,FR0000077919,DEC,JCDecaux SA,France,PA,EUR,Common Stock,FR0000077919,PA,/img/logos/PA/DEC.png
+1005,FR0012202497,DGM,Diagnostic Medical Systems S.A,France,PA,EUR,Common Stock,FR0012202497,PA,
+1006,FR0013154002,DIM,Sartorius Stedim Biotech S.A,France,PA,EUR,Common Stock,FR0013154002,PA,/img/logos/PA/DIM.png
+1007,FR0000073793,DVT,Devoteam SA,France,PA,EUR,Common Stock,FR0000073793,PA,/img/logos/PA/DVT.png
+1008,FR0010150458,E40,BNP Paribas Easy CAC 40 UCITS ETF,France,PA,EUR,ETF,FR0010150458,PA,
+1009,LU1437018168,ECRP,Amundi Index Solutions - Amundi Index Euro Corporate SRI UCITS ETF DR,France,PA,EUR,ETF,LU1437018168,PA,
+1010,FR0010908533,EDEN,Edenred SA,France,PA,EUR,Common Stock,FR0010908533,PA,/img/logos/PA/EDEN.png
+1011,FR0010242511,EDF,Electricité de France S.A,France,PA,EUR,Common Stock,FR0010242511,PA,/img/logos/PA/EDF.png
+1012,FR0011466069,EKI,EKINOPS S.A,France,PA,EUR,Common Stock,FR0011466069,PA,/img/logos/PA/EKI.png
+1013,FR0011950732,ELIOR,Elior Group SA,France,PA,EUR,Common Stock,FR0011950732,PA,/img/logos/PA/ELIOR.png
+1014,FR0012435121,ELIS,Elis SA,France,PA,EUR,Common Stock,FR0012435121,PA,
+1015,FR0000120503,EN,Bouygues SA,France,PA,EUR,Common Stock,FR0000120503,PA,/img/logos/PA/EN.png
+1016,NL0006294274,ENX,Euronext N.V,France,PA,EUR,Common Stock,NL0006294274,PA,/img/logos/PA/ENX.png
+1017,FR0011191766,EOSI,EOS imaging SA,France,PA,EUR,Common Stock,FR0011191766,PA,/img/logos/PA/EOSI.png
+1018,FR0000131757,ERA,ERAMET S.A,France,PA,EUR,Common Stock,FR0000131757,PA,/img/logos/PA/ERA.png
+1019,FR0011471135,ERYP,ERYTECH Pharma S.A,France,PA,EUR,Common Stock,FR0011471135,PA,/img/logos/PA/ERYP.png
+1020,FR0012789949,EUCAR,Europcar Mobility Group S.A,France,PA,EUR,Common Stock,FR0012789949,PA,/img/logos/PA/EUCAR.png
+1021,FR0011869353,EWLD,Lyxor PEA Monde (MSCI World) UCITS ETF Capi,France,PA,EUR,ETF,FR0011869353,PA,
+1022,FR0011271600,FALG,Fermentalg Société Anonyme,France,PA,EUR,Common Stock,FR0011271600,PA,
+1023,FR0013451333,FDJ,La Française des Jeux Société anonyme,France,PA,EUR,Common Stock,FR0013451333,PA,/img/logos/PA/FDJ.png
+1024,FR0011665280,FGA,Figeac Aero Société Anonyme,France,PA,EUR,Common Stock,FR0011665280,PA,/img/logos/PA/FGA.png
+1025,FR0000130452,FGR,Eiffage SA,France,PA,EUR,Common Stock,FR0000130452,PA,/img/logos/PA/FGR.png
+1026,FR0000050353,FII,Lisi S.A,France,PA,EUR,Common Stock,FR0000050353,PA,/img/logos/PA/FII.png
+1027,FR0011476928,FNAC,Fnac Darty SA,France,PA,EUR,Common Stock,FR0011476928,PA,/img/logos/PA/FNAC.png
+1028,FR0013176526,FR,Valeo SE,France,PA,EUR,Common Stock,FR0013176526,PA,/img/logos/PA/FR.png
+1029,FR0000079634,GECP,GECI International S.A,France,PA,EUR,Common Stock,FR0000079634,PA,/img/logos/PA/GECP.png
+1030,FR0010533075,GET,Getlink SE,France,PA,EUR,Common Stock,FR0010533075,PA,
+1031,FR0010040865,GFC,Gecina SA,France,PA,EUR,Common Stock,FR0010040865,PA,/img/logos/PA/GFC.png
+1032,FR0000066672,GLO,GL Events SA,France,PA,EUR,Common Stock,FR0000066672,PA,/img/logos/PA/GLO.png
+1033,FR0004163111,GNFT,Genfit SA,France,PA,EUR,Common Stock,FR0004163111,PA,/img/logos/PA/GNFT.png
+1034,FR0011726835,GTT,Gaztransport & Technigaz SA,France,PA,EUR,Common Stock,FR0011726835,PA,/img/logos/PA/GTT.png
+1035,FR0011799907,GV,Genomic Vision Société Anonyme,France,PA,EUR,Common Stock,FR0011799907,PA,/img/logos/PA/GV.png
+1036,FR0000121329,HO,Thales S.A,France,PA,EUR,Common Stock,FR0000121329,PA,/img/logos/PA/HO.png
+1037,CH0012214059,HOLN,Holcim Ltd,France,PA,EUR,Common Stock,CH0012214059,PA,/img/logos/PA/LHN.png
+1038,FR0000035081,ICAD,Icade SA,France,PA,EUR,Common Stock,FR0000035081,PA,/img/logos/PA/ICAD.png
+1039,FR0004035913,ILD,iliad S.A,France,PA,EUR,Common Stock,FR0004035913,PA,/img/logos/PA/ILD.png
+1040,FR0010259150,IPN,Ipsen S.A,France,PA,EUR,Common Stock,FR0010259150,PA,/img/logos/PA/IPN.png
+1041,FR0000073298,IPS,Ipsos SA,France,PA,EUR,Common Stock,FR0000073298,PA,/img/logos/PA/IPS.png
+1042,FR0004024222,ITP,Interparfums SA,France,PA,EUR,Common Stock,FR0004024222,PA,/img/logos/PA/ITP.png
+1043,FR0013233012,IVA,Inventiva S.A,France,PA,EUR,Common Stock,FR0013233012,PA,/img/logos/PA/IVA.png
+1044,FR0000121485,KER,Kering SA,France,PA,EUR,Common Stock,FR0000121485,PA,/img/logos/PA/KER.png
+1045,FR0000120685,KN,Natixis S.A,France,PA,EUR,Common Stock,FR0000120685,PA,/img/logos/PA/KN.png
+1046,FR0004007813,KOF,Kaufman & Broad S.A,France,PA,EUR,Common Stock,FR0004007813,PA,/img/logos/PA/KOF.png
+1047,FR0010386334,KORI,Korian,France,PA,EUR,Common Stock,FR0010386334,PA,
+1048,FR0000032278,LAT,Latécoère S.A,France,PA,EUR,Common Stock,FR0000032278,PA,/img/logos/PA/LAT.png
+1049,FR0000038242,LBIRD,Lumibird SA,France,PA,EUR,Common Stock,FR0000038242,PA,
+1050,FR0004170017,LNA,LNA Santé SA,France,PA,EUR,Common Stock,FR0004170017,PA,/img/logos/PA/LNA.png
+1051,FR0010342592,LQQ,Lyxor Nasdaq-100 Daily (2x) Leveraged UCITS ETF Acc,France,PA,EUR,ETF,FR0010342592,PA,
+1052,FR0010592014,LVC,Lyxor CAC 40 Daily (2x) Leveraged UCITS ETF Acc,France,PA,EUR,ETF,FR0010592014,PA,
+1053,FR0013233475,LYS,Lysogene S.A,France,PA,EUR,Common Stock,FR0013233475,PA,/img/logos/PA/LYS.png
+1054,FR0000051070,MAU,Etablissements Maurel & Prom S.A,France,PA,EUR,Common Stock,FR0000051070,PA,/img/logos/PA/MAU.png
+1055,FR0011742329,MCPHY,McPhy Energy S.A,France,PA,EUR,Common Stock,FR0011742329,PA,/img/logos/PA/MCPHY.png
+1056,FR0013153541,MDM,Maisons du Monde S.A,France,PA,EUR,Common Stock,FR0013153541,PA,/img/logos/PA/MDM.png
+1057,FR0004065605,MEDCL,MedinCell S.A,France,PA,EUR,Common Stock,FR0004065605,PA,/img/logos/PA/MEDCL.png
+1058,FR0010241638,MERY,Mercialys,France,PA,EUR,Common Stock,FR0010241638,PA,
+1059,FR0000121204,MF,Wendel,France,PA,EUR,Common Stock,FR0000121204,PA,/img/logos/PA/MF.png
+1060,FR0010609263,MKEA,Mauna Kea Technologies SA,France,PA,EUR,Common Stock,FR0010609263,PA,/img/logos/PA/MKEA.png
+1061,FR0000121261,ML,Compagnie Générale des Établissements Michelin Société en commandite par actions,France,PA,EUR,Common Stock,FR0000121261,PA,/img/logos/PA/Ml.png
+1062,FR0000130213,MMB,Lagardère SCA,France,PA,EUR,Common Stock,FR0000130213,PA,/img/logos/PA/MMB.png
+1063,FR0000053225,MMT,Métropole Télévision S.A,France,PA,EUR,Common Stock,FR0000053225,PA,/img/logos/PA/MMT.png
+1064,FR0000039620,MRN,Mersen SA,France,PA,EUR,Common Stock,FR0000039620,PA,/img/logos/PA/MRN.png
+1065,FR0011341205,NANO,Nanobiotix S.A,France,PA,EUR,Common Stock,FR0011341205,PA,/img/logos/PA/NANO.png
+1066,FR0011675362,NEOEN,Neoen S.A,France,PA,EUR,Common Stock,FR0011675362,PA,/img/logos/PA/NEOEN.png
+1067,FR0000120859,NK,Imerys S.A,France,PA,EUR,Common Stock,FR0000120859,PA,/img/logos/PA/NK.png
+1068,FR0010112524,NXI,Nexity SA,France,PA,EUR,Common Stock,FR0010112524,PA,/img/logos/PA/NXI.png
+1069,FR0000075392,ORAP,Orapi SA,France,PA,EUR,Common Stock,FR0000075392,PA,/img/logos/PA/ORAP.png
+1070,FR0000184798,ORP,Orpea SA,France,PA,EUR,Common Stock,FR0000184798,PA,/img/logos/PA/ORP.png
+1071,FR0012127173,OSE,OSE Immunotherapeutics SA,France,PA,EUR,Common Stock,FR0012127173,PA,/img/logos/PA/OSE.png
+1072,FR0013412012,PAASI,Amundi ETF PEA MSCI Emerging Asia UCITS ETF,France,PA,EUR,ETF,FR0013412012,PA,
+1073,FR0013412020,PAEEM,Amundi ETF PEA MSCI Emerging Markets UCITS ETF,France,PA,EUR,ETF,FR0013412020,PA,
+1074,FR0013412269,PANX,Amundi ETF PEA Nasdaq-100 UCITS ETF,France,PA,EUR,ETF,FR0013412269,PA,
+1075,FR0013412038,PCEU,Amundi ETF PEA MSCI Europe UCITS ETF,France,PA,EUR,ETF,FR0013412038,PA,
+1076,FR0013412285,PE500,Amundi ETF PEA S&P 500 UCITS ETF EUR,France,PA,EUR,ETF,FR0013412285,PA,
+1077,FR0011770775,PEAP,Lyxor PEA PME (DR) UCITS ETF Dist,France,PA,EUR,ETF,FR0011770775,PA,
+1078,FR0000064784,PEUG,Peugeot Invest Société anonyme,France,PA,EUR,Common Stock,FR0000064784,PA,
+1079,FR0012882389,PHA,Pharmagest Interactive SA,France,PA,EUR,Common Stock,FR0012882389,PA,/img/logos/PA/PHA.png
+1080,FR0011440478,PLEM,Lyxor PEA Emergents (MSCI Emerging Markets) UCITS ETF Capi,France,PA,EUR,ETF,FR0011440478,PA,
+1081,FR0000124570,POM,Compagnie Plastic Omnium SA,France,PA,EUR,Common Stock,FR0000124570,PA,/img/logos/PA/POM.png
+1082,FR0012432516,POXEL,Poxel S.A,France,PA,EUR,Common Stock,FR0012432516,PA,/img/logos/PA/POXEL.png
+1083,FR0011869387,PRUS,Lyxor PEA Russie (MSCI Russia IMI Select GDR) UCITS ETF Capi,France,PA,EUR,ETF,FR0011869387,PA,
+1084,FR0011871128,PSP5,Lyxor PEA S&P 500 UCITS ETF Capi,France,PA,EUR,ETF,FR0011871128,PA,
+1085,FR0000130577,PUB,Publicis Groupe S.A,France,PA,EUR,Common Stock,FR0000130577,PA,/img/logos/PA/PUB.png
+1086,FR0011871110,PUST,Lyxor PEA Nasdaq-100 UCITS ETF Capi,France,PA,EUR,ETF,FR0011871110,PA,
+1087,FR0013252186,PVL,Plastiques du Val de Loire,France,PA,EUR,Common Stock,FR0013252186,PA,/img/logos/PA/PVL.png
+1088,FR0000060618,RAL,Rallye SA,France,PA,EUR,Common Stock,FR0000060618,PA,/img/logos/PA/RAL.png
+1089,FR0000039091,RBT,Robertet SA,France,PA,EUR,Common Stock,FR0000039091,PA,/img/logos/PA/RBT.png
+1090,FR0000121121,RF,Eurazeo SE,France,PA,EUR,Common Stock,FR0000121121,PA,
+1091,FR0000120693,RI,Pernod Ricard SA,France,PA,EUR,Common Stock,FR0000120693,PA,/img/logos/PA/RI.png
+1092,FR0000131906,RNO,Renault SA,France,PA,EUR,Common Stock,FR0000131906,PA,/img/logos/PA/RNO.png
+1093,FR0000031684,ROTH,Rothschild & Co SCA,France,PA,EUR,Common Stock,FR0000031684,PA,/img/logos/PA/ROTH.png
+1094,FR0013269123,RUI,Rubis,France,PA,EUR,Common Stock,FR0013269123,PA,/img/logos/PA/RUI.png
+1095,FR0010451203,RXL,Rexel S.A,France,PA,EUR,Common Stock,FR0010451203,PA,/img/logos/PA/RXL.png
+1096,FR0013379484,S30,Solutions 30 SE,France,PA,EUR,Common Stock,FR0013379484,PA,/img/logos/PA/S30.png
+1097,FR0000120107,SAVE,Savencia SA,France,PA,EUR,Common Stock,FR0000120107,PA,
+1098,FR0011950682,SEFER,SergeFerrari Group SA,France,PA,EUR,Common Stock,FR0011950682,PA,/img/logos/PA/SEFER.png
+1099,LU0088087324,SESG,SES S.A,France,PA,EUR,Common Stock,LU0088087324,PA,/img/logos/PA/SESG.png
+1100,FR0000125007,SGO,Compagnie de Saint-Gobain S.A,France,PA,EUR,Common Stock,FR0000125007,PA,/img/logos/PA/SGO.png
+1101,FR0010591362,SHC,Lyxor CAC 40 Daily (-1x) Inverse UCITS ETF Acc,France,PA,EUR,ETF,FR0010591362,PA,
+1102,FR0013183985,SIGHT,GenSight Biologics S.A,France,PA,EUR,Common Stock,FR0013183985,PA,/img/logos/PA/SIGHT.png
+1103,FR0013214145,SMCP,SMCP S.A,France,PA,EUR,Common Stock,FR0013214145,PA,
+1104,FR0013227113,SOI,Soitec S.A,France,PA,EUR,Common Stock,FR0013227113,PA,/img/logos/PA/SOI.png
+1105,FR0000050809,SOP,Sopra Steria Group SA,France,PA,EUR,Common Stock,FR0000050809,PA,/img/logos/PA/SOP.png
+1106,FR0012757854,SPIE,SPIE SA,France,PA,EUR,Common Stock,FR0012757854,PA,/img/logos/PA/SPIE.png
+1107,FR0013006558,SRP,SRP Groupe S.A,France,PA,EUR,Common Stock,FR0013006558,PA,/img/logos/PA/SRP.png
+1108,FR0004180578,SWP,Sword Group S.E,France,PA,EUR,Common Stock,FR0004180578,PA,/img/logos/PA/SWP.png
+1109,FR0013505062,TCH,Technicolor SA,France,PA,EUR,Common Stock,FR0013505062,PA,/img/logos/PA/TCH.png
+1110,FR0000051807,TEP,Teleperformance SE,France,PA,EUR,Common Stock,FR0000051807,PA,/img/logos/PA/TEP.png
+1111,FR0000054900,TFI,Télévision Française 1 Société anonyme,France,PA,EUR,Common Stock,FR0000054900,PA,/img/logos/PA/TFI.png
+1112,FR0004188670,TKTT,Tarkett S.A,France,PA,EUR,Common Stock,FR0004188670,PA,/img/logos/PA/TKTT.png
+1113,FR0005175080,TNG,Transgene SA,France,PA,EUR,Common Stock,FR0005175080,PA,/img/logos/PA/TNG.png
+1114,FR0005691656,TRI,Trigano S.A,France,PA,EUR,Common Stock,FR0005691656,PA,/img/logos/PA/TRI.png
+1115,LU1681040819,US1,Amundi Index Solutions - Amundi US Treasury 1-3 Ucits ETF USD C,France,PA,USD,ETF,LU1681040819,PA,
+1116,FR0000073041,VAC,Pierre et Vacances SA,France,PA,EUR,Common Stock,FR0000073041,PA,/img/logos/PA/VAC.png
+1117,FR0000031775,VCT,Vicat SA,France,PA,EUR,Common Stock,FR0000031775,PA,/img/logos/PA/VCT.png
+1118,FR0000031577,VIRP,Virbac SA,France,PA,EUR,Common Stock,FR0000031577,PA,/img/logos/PA/VIRP.png
+1119,FR0011995588,VLTSA,Voltalia SA,France,PA,EUR,Common Stock,FR0011995588,PA,
+1120,FR0011981968,WLN,Worldline SA,France,PA,EUR,Common Stock,FR0011981968,PA,/img/logos/PA/WLN.png
+1121,BE0974310428,XFAB,X-FAB Silicon Foundries SE,France,PA,EUR,Common Stock,BE0974310428,PA,/img/logos/PA/XFAB.png
+1122,FR0004034072,XIL,Xilam Animation,France,PA,EUR,Common Stock,FR0004034072,PA,/img/logos/PA/XIL.png
+1123,BE0003874915,FAGR,Fagron NV,Belgium,BR,EUR,Common Stock,BE0003874915,BR,/img/logos/BR/FAGR.png
+1124,BE0974349814,WDP,Warehouses De Pauw NV,Belgium,BR,EUR,Common Stock,BE0974349814,BR,/img/logos/BR/WDP.png
+1125,CH0012138605,ADEN,Adecco Group AG,Switzerland,SW,CHF,Common Stock,CH0012138605,SW,/img/logos/SW/ADEN.png
+1126,CH0432492467,ALC,Alcon Inc,Switzerland,SW,CHF,Common Stock,CH0432492467,SW,/img/logos/SW/ALC.png
+1127,CH0210483332,CFR,Compagnie Financière Richemont SA,Switzerland,SW,CHF,Common Stock,CH0210483332,SW,/img/logos/SW/CFR.png
+1128,CH0030170408,GEBN,Geberit AG,Switzerland,SW,CHF,Common Stock,CH0030170408,SW,/img/logos/SW/GEBN.png
+1129,CH0010645932,GIVN,Givaudan SA,Switzerland,SW,CHF,Common Stock,CH0010645932,SW,/img/logos/SW/GIVN.png
+1130,CH0013841017,LONN,Lonza Group Ltd,Switzerland,SW,CHF,Common Stock,CH0013841017,SW,/img/logos/SW/LONN.png
+1131,CH0008742519,SCMN,Swisscom AG,Switzerland,SW,CHF,Common Stock,CH0008742519,SW,/img/logos/SW/SCMN.png
+1132,CH0002497458,SGSN,SGS SA,Switzerland,SW,CHF,Common Stock,CH0002497458,SW,/img/logos/SW/SGSN.png
+1133,CH0418792922,SIKA,Sika AG,Switzerland,SW,CHF,Common Stock,CH0418792922,SW,/img/logos/SW/SIKA.png
+1134,CH0014852781,SLHN,Swiss Life Holding AG,Switzerland,SW,CHF,Common Stock,CH0014852781,SW,/img/logos/SW/SLHN.png
+1135,CH0126881561,SREN,Swiss Re AG,Switzerland,SW,CHF,Common Stock,CH0126881561,SW,/img/logos/SW/SREN.png
+1136,CH0012255151,UHR,The Swatch Group AG,Switzerland,SW,CHF,Common Stock,CH0012255151,SW,/img/logos/SW/UHR.png
+1137,ES0167050915,ACS,"ACS, Actividades de Construcción y Servicios, S.A",Spain,MC,EUR,Common Stock,ES0167050915,MC,
+1138,ES0132105018,ACX,"Acerinox, S.A",Spain,MC,EUR,Common Stock,ES0132105018,MC,/img/logos/MC/ACX.png
+1139,ES0105046009,AENA,"Aena S.M.E., S.A",Spain,MC,EUR,Common Stock,ES0105046009,MC,/img/logos/MC/AENA.png
+1140,ES0157097017,ALM,"Almirall, S.A",Spain,MC,EUR,Common Stock,ES0157097017,MC,/img/logos/MC/ALM.png
+1141,ES0109067019,AMS,"Amadeus IT Group, S.A",Spain,MC,EUR,Common Stock,ES0109067019,MC,/img/logos/MC/AMS.png
+1142,ES0125220311,ANA,"Acciona, S.A",Spain,MC,EUR,Common Stock,ES0125220311,MC,
+1143,LU0569974404,APAM,Aperam S.A,Spain,MC,EUR,Common Stock,LU0569974404,MC,/img/logos/MC/APAM.png
+1144,ES0113679I37,BKT,"Bankinter, S.A",Spain,MC,EUR,Common Stock,ES0113679I37,MC,/img/logos/MC/BKT.png
+1145,ES0140609019,CABK,"CaixaBank, S.A",Spain,MC,EUR,Common Stock,ES0140609019,MC,/img/logos/MC/CABK.png
+1146,ES0105630315,CIE,"CIE Automotive, S.A",Spain,MC,EUR,Common Stock,ES0105630315,MC,/img/logos/MC/CIE.png
+1147,ES0105066007,CLNX,"Cellnex Telecom, S.A",Spain,MC,EUR,Common Stock,ES0105066007,MC,/img/logos/MC/CLNX.png
+1148,ES0139140174,COL,"Inmobiliaria Colonial, SOCIMI, S.A",Spain,MC,EUR,Common Stock,ES0139140174,MC,/img/logos/MC/COL.png
+1149,ES0130670112,ELE,"Endesa, S.A",Spain,MC,EUR,Common Stock,ES0130670112,MC,/img/logos/MC/ELE.png
+1150,ES0130625512,ENC,"ENCE Energía y Celulosa, S.A",Spain,MC,EUR,Common Stock,ES0130625512,MC,/img/logos/MC/ENC.png
+1151,ES0130960018,ENG,"Enagás, S.A",Spain,MC,EUR,Common Stock,ES0130960018,MC,/img/logos/MC/ENG.png
+1152,ES0171996087,GRF,"Grifols, S.A",Spain,MC,EUR,Common Stock,ES0171996087,MC,/img/logos/MC/GRF.png
+1153,ES0144580Y14,IBE,"Iberdrola, S.A",Spain,MC,EUR,Common Stock,ES0144580Y14,MC,/img/logos/MC/IBE.png
+1154,ES0118594417,IDR,"Indra Sistemas, S.A",Spain,MC,EUR,Common Stock,ES0118594417,MC,/img/logos/MC/IDR.png
+1155,ES0124244E34,MAP,"Mapfre, S.A",Spain,MC,EUR,Common Stock,ES0124244E34,MC,/img/logos/MC/MAP.png
+1156,ES0176252718,MEL,"Meliá Hotels International, S.A",Spain,MC,EUR,Common Stock,ES0176252718,MC,
+1157,ES0105025003,MRL,"MERLIN Properties SOCIMI, S.A",Spain,MC,EUR,Common Stock,ES0105025003,MC,
+1158,ES0116870314,NTGY,"Naturgy Energy Group, S.A",Spain,MC,EUR,Common Stock,ES0116870314,MC,/img/logos/MC/NTGY.png
+1159,ES0143416115,SGRE,"Siemens Gamesa Renewable Energy, S.A",Spain,MC,EUR,Common Stock,ES0143416115,MC,/img/logos/MC/SGRE.png
+1160,ES0184262212,VIS,"Viscofan, S.A",Spain,MC,EUR,Common Stock,ES0184262212,MC,/img/logos/MC/VIS.png
+1161,NL0000852564,AALB,Aalberts N.V,Netherlands,AS,EUR,Common Stock,NL0000852564,AS,
+1162,NL0011540547,ABN,ABN AMRO Bank N.V,Netherlands,AS,EUR,Common Stock,NL0011540547,AS,/img/logos/AS/ABN.png
+1163,NL0000303709,AGN,Aegon N.V,Netherlands,AS,EUR,Common Stock,NL0000303709,AS,/img/logos/AS/AGN.png
+1164,NL0013267909,AKZA,Akzo Nobel N.V,Netherlands,AS,EUR,Common Stock,NL0013267909,AS,/img/logos/AS/AKZA.png
+1165,NL0006237562,ARCAD,Arcadis NV,Netherlands,AS,EUR,Common Stock,NL0006237562,AS,/img/logos/AS/ARCAD.png
+1166,NL0000334118,ASM,ASM International NV,Netherlands,AS,EUR,Common Stock,NL0000334118,AS,/img/logos/AS/ASM.png
+1167,NL0012866412,BESI,BE Semiconductor Industries N.V,Netherlands,AS,EUR,Common Stock,NL0012866412,AS,/img/logos/AS/BESI.png
+1168,NL0011872650,BFIT,Basic-Fit N.V,Netherlands,AS,EUR,Common Stock,NL0011872650,AS,/img/logos/AS/BFIT.png
+1169,NL0010583399,CRBN,Corbion N.V,Netherlands,AS,EUR,Common Stock,NL0010583399,AS,/img/logos/AS/CRBN.png
+1170,NL0000009827,DSM,Koninklijke DSM N.V,Netherlands,AS,EUR,Common Stock,NL0000009827,AS,/img/logos/AS/DSM.png
+1171,NL0009272764,DTM,VanEck Vectors Multi-Asset Conservative Allocation UCITS ETF,Netherlands,AS,EUR,ETF,NL0009272764,AS,
+1172,NL0000288876,ECMPA,Eurocommercial Properties N.V,Netherlands,AS,EUR,Common Stock,NL0000288876,AS,
+1173,NL0011279492,FLOW,Flow Traders N.V,Netherlands,AS,EUR,Common Stock,NL0011279492,AS,/img/logos/AS/FLOW.png
+1174,BE0003818359,GLPG,Galapagos NV,Netherlands,AS,EUR,Common Stock,BE0003818359,AS,/img/logos/AS/GLPG.png
+1175,NL0010937066,GVNV,GrandVision N.V,Netherlands,AS,EUR,Common Stock,NL0010937066,AS,/img/logos/AS/GVNV.png
+1176,NL0010801007,IMCD,IMCD N.V,Netherlands,AS,EUR,Common Stock,NL0010801007,AS,
+1177,NL0000009082,KPN,Koninklijke KPN N.V,Netherlands,AS,EUR,Common Stock,NL0000009082,AS,/img/logos/AS/KPN.png
+1178,NL0011821392,LIGHT,Signify N.V,Netherlands,AS,EUR,Common Stock,NL0011821392,AS,/img/logos/AS/LIGHT.png
+1179,NL0010773842,NN,NN Group N.V,Netherlands,AS,EUR,Common Stock,NL0010773842,AS,/img/logos/AS/NN.png
+1180,NL0009272772,NTM,VanEck Vectors Multi-Asset Balanced Allocation UCITS ETF,Netherlands,AS,EUR,ETF,NL0009272772,AS,
+1181,NL0010558797,OCI,OCI N.V,Netherlands,AS,EUR,Common Stock,NL0010558797,AS,/img/logos/AS/OCI.png
+1182,NL0013654783,PRX,Prosus N.V,Netherlands,AS,EUR,Common Stock,NL0013654783,AS,/img/logos/AS/PRX.png
+1183,NL0000379121,RAND,Randstad N.V,Netherlands,AS,EUR,Common Stock,NL0000379121,AS,/img/logos/AS/RAND.png
+1184,NL0000817179,SLIGR,Sligro Food Group N.V,Netherlands,AS,EUR,Common Stock,NL0000817179,AS,/img/logos/AS/SLIGR.png
+1185,NL0009272749,TDT,VanEck Vectors AEX UCITS ETF,Netherlands,AS,EUR,ETF,NL0009272749,AS,
+1186,NL0009272756,TMX,VanEck Vectors AMX UCITS ETF,Netherlands,AS,EUR,ETF,NL0009272756,AS,
+1187,NL0009272780,TOF,VanEck Vectors Multi-Asset Growth Allocation UCITS ETF,Netherlands,AS,EUR,ETF,NL0009272780,AS,
+1188,NL0000852523,TWEKA,TKH Group N.V,Netherlands,AS,EUR,Common Stock,NL0000852523,AS,/img/logos/AS/TWEKA.png
+1189,PTALT0AE0002,ALTR,"Altri, SGPS, S.A",Portugal,LS,EUR,Common Stock,PTALT0AE0002,LS,/img/logos/LS/ALTR.png
+1190,PTBCP0AM0015,BCP,"Banco Comercial Português, S.A",Portugal,LS,EUR,Common Stock,PTBCP0AM0015,LS,/img/logos/LS/BCP.png
+1191,PTCFN0AE0003,CFN,"Cofina, SGPS, S.A",Portugal,LS,EUR,Common Stock,PTCFN0AE0003,LS,
+1192,PTCOR0AE0006,COR,"Corticeira Amorim, S.G.P.S., S.A",Portugal,LS,EUR,Common Stock,PTCOR0AE0006,LS,/img/logos/LS/COR.png
+1193,PTCTT0AM0001,CTT,"CTT - Correios De Portugal, S.A",Portugal,LS,EUR,Common Stock,PTCTT0AM0001,LS,/img/logos/LS/CTT.png
+1194,PTGAL0AM0009,GALP,"Galp Energia, SGPS, S.A",Portugal,LS,EUR,Common Stock,PTGAL0AM0009,LS,/img/logos/LS/GALP.png
+1195,PTIBS0AM0008,IBS,"Ibersol, S.G.P.S., S.A",Portugal,LS,EUR,Common Stock,PTIBS0AM0008,LS,
+1196,PTIPR0AM0000,IPR,"Impresa - Sociedade Gestora de Participações Sociais, S.A",Portugal,LS,EUR,Common Stock,PTIPR0AM0000,LS,/img/logos/LS/IPR.png
+1197,PTJMT0AE0001,JMT,"Jerónimo Martins, SGPS, S.A",Portugal,LS,EUR,Common Stock,PTJMT0AE0001,LS,/img/logos/LS/JMT.png
+1198,PTMFR0AM0003,MAR,"Martifer SGPS, S.A",Portugal,LS,EUR,Common Stock,PTMFR0AM0003,LS,
+1199,PTNBA0AM0006,NBA,"Novabase S.G.P.S., S.A",Portugal,LS,EUR,Common Stock,PTNBA0AM0006,LS,/img/logos/LS/NBA.png
+1200,PTZON0AM0006,NOS,"NOS, S.G.P.S., S.A",Portugal,LS,EUR,Common Stock,PTZON0AM0006,LS,/img/logos/LS/NOS.png
+1201,PTPTI0AM0006,NVG,"The Navigator Company, S.A",Portugal,LS,EUR,Common Stock,PTPTI0AM0006,LS,/img/logos/LS/NVG.png
+1202,PTPTC0AM0009,PHR,"Pharol, SGPS S.A",Portugal,LS,EUR,Common Stock,PTPTC0AM0009,LS,
+1203,PTFRV0AE0004,RAM,"Ramada Investimentos e Industria, S.A",Portugal,LS,EUR,Common Stock,PTFRV0AE0004,LS,
+1204,PTREL0AM0008,RENE,"REN - Redes Energéticas Nacionais, SGPS, S.A",Portugal,LS,EUR,Common Stock,PTREL0AM0008,LS,
+1205,PTSEM0AM0004,SEM,"Semapa - Sociedade de Investimento e Gestão, SGPS, S.A",Portugal,LS,EUR,Common Stock,PTSEM0AM0004,LS,/img/logos/LS/SEM.png
+1206,PTSLB0AM0010,SLBEN,"Sport Lisboa e Benfica - Futebol, SAD",Portugal,LS,EUR,Common Stock,PTSLB0AM0010,LS,/img/logos/LS/SLBEN.png
+1207,PTSNC0AM0006,SNC,"Sonaecom, S.G.P.S., S.A",Portugal,LS,EUR,Common Stock,PTSNC0AM0006,LS,
+1208,PTSON0AM0001,SON,"Sonae, SGPS, S.A",Portugal,LS,EUR,Common Stock,PTSON0AM0001,LS,
+1209,PTS3P0AM0025,SONI,"Sonae Indústria, S.G.P.S., S.A",Portugal,LS,EUR,Common Stock,PTS3P0AM0025,LS,/img/logos/LS/SONI.png
+1210,PTTD10AM0000,TDSA,"Teixeira Duarte, S.A",Portugal,LS,EUR,Common Stock,PTTD10AM0000,LS,/img/logos/LS/TDSA.png
+1211,SE0000695876,ALFA,Alfa Laval AB (publ),Sweden,ST,SEK,Common Stock,SE0000695876,ST,/img/logos/ST/ALFA.png
+1212,SE0007100581,ASSA-B,ASSA ABLOY AB (publ),Sweden,ST,SEK,Common Stock,SE0007100581,ST,/img/logos/ST/ASSA-B.png
+1213,SE0000103814,ELUX-B,AB Electrolux (publ),Sweden,ST,SEK,Common Stock,SE0000103814,ST,/img/logos/ST/ELUX-B.png
+1214,SE0009922164,ESSITY-B,Essity AB (publ),Sweden,ST,SEK,Common Stock,SE0009922164,ST,/img/logos/ST/ESSITY-B.png
+1215,SE0000202624,GETI-B,Getinge AB,Sweden,ST,SEK,Common Stock,SE0000202624,ST,/img/logos/ST/GETI-B.png
+1216,SE0000106270,HM-B,H & M Hennes & Mauritz AB (publ),Sweden,ST,SEK,Common Stock,SE0000106270,ST,
+1217,FI4000297767,NDA-SE,Nordea Bank Abp,Sweden,ST,SEK,Common Stock,FI4000297767,ST,/img/logos/ST/NDA-SEK.png
+1218,SE0000667891,SAND,Sandvik AB (publ),Sweden,ST,SEK,Common Stock,SE0000667891,ST,/img/logos/ST/SAND.png
+1219,SE0000112724,SCA-B,Svenska Cellulosa Aktiebolaget SCA (publ),Sweden,ST,SEK,Common Stock,SE0000112724,ST,/img/logos/ST/SCA-B.png
+1220,SE0000163594,SECU-B,Securitas AB,Sweden,ST,SEK,Common Stock,SE0000163594,ST,/img/logos/ST/SECU-B.png
+1221,SE0000113250,SKA-B,Skanska AB (publ),Sweden,ST,SEK,Common Stock,SE0000113250,ST,/img/logos/ST/SKA-B.png
+1222,SE0000108227,SKF-B,AB SKF (publ),Sweden,ST,SEK,Common Stock,SE0000108227,ST,/img/logos/ST/SKF-B.png
+1223,SE0000171100,SSAB-A,SSAB AB (publ),Sweden,ST,SEK,Common Stock,SE0000171100,ST,/img/logos/ST/SSAB-A.png
+1224,SE0000242455,SWED-A,Swedbank AB (publ),Sweden,ST,SEK,Common Stock,SE0000242455,ST,/img/logos/ST/SWED-A.png
+1225,SE0005190238,TEL2-B,Tele2 AB (publ),Sweden,ST,SEK,Common Stock,SE0005190238,ST,/img/logos/ST/TEL2-B.png
+1226,SE0000667925,TELIA,Telia Company AB (publ),Sweden,ST,SEK,Common Stock,SE0000667925,ST,/img/logos/ST/TELIA.png
+1227,FR0010095596,ONXEO,Onxeo SA,Denmark,CO,DKK,Common Stock,FR0010095596,CO,/img/logos/CO/ONXEO.png

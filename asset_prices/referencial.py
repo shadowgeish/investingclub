@@ -203,7 +203,7 @@ def load_equity_etf_list():
     for ss in lstock:
         sdict['{}.{}'.format(ss['Code'], ss['ExchangeCode'])] = ss
 
-    lstock = lstock[0:10]
+    # lstock = lstock[0:10]
 
     stock_data_list = []
     ct = 1
@@ -272,10 +272,48 @@ def add_translation(stock_data, field ='Category', llg = ['de', 'it', 'fr', 'es'
 
 
 def translate(text='Hello world', llg = ['de', 'it', 'fr', 'es', 'nl', 'en']):
+    import requests, uuid, json
+
+    # Add your subscription key and endpoint
+    subscription_key = "f61d9d12813c4ed6ba2baa2dde83abff"
+    endpoint = "https://api.cognitive.microsofttranslator.com"
+
+    # Add your location, also known as region. The default is global.
+    # This is required if using a Cognitive Services resource.
+    location = "francecentral"
+
+    path = '/translate'
+    constructed_url = endpoint + path
+
+    params = {
+        'api-version': '2.0',
+        'from': 'en',
+        'to': ['de', 'it']
+    }
+    constructed_url = endpoint + path
+
+    headers = {
+        'Ocp-Apim-Subscription-Key': subscription_key,
+        'Ocp-Apim-Subscription-Region': location,
+        'Content-type': 'application/json',
+        'X-ClientTraceId': str(uuid.uuid4())
+    }
+
+    # You can pass more than one object in body.
+    body = [{
+        'text': 'Hello World!'
+    }]
+
+    request = requests.post(constructed_url, params=params, headers=headers, json=body)
+    response = request.json()
+
+    print(json.dumps(response, sort_keys=True, ensure_ascii=False, indent=4, separators=(',', ': ')))
+
+def translate2(text='Hello world', llg = ['de', 'it', 'fr', 'es', 'nl', 'en']):
 
     import requests, uuid, json
     # Add your subscription key and endpoint
-    subscription_key = "509f5c34afea4f1aa45d2b814a304ff5"
+    subscription_key = "f61d9d12813c4ed6ba2baa2dde83abff"
     endpoint = "https://api.cognitive.microsofttranslator.com/"
 
     # Add your location, also known as region. The default is global.
@@ -292,7 +330,7 @@ def translate(text='Hello world', llg = ['de', 'it', 'fr', 'es', 'nl', 'en']):
     constructed_url = endpoint + path
 
     headers = {
-        'Ocp-Apim-Subscription-Key': subscription_key,
+        'Ocp-Apim-Subscription-Key': 'f61d9d12813c4ed6ba2baa2dde83abff',
         'Ocp-Apim-Subscription-Region': location,
         'Content-type': 'application/json',
         'X-ClientTraceId': str(uuid.uuid4())
@@ -304,6 +342,7 @@ def translate(text='Hello world', llg = ['de', 'it', 'fr', 'es', 'nl', 'en']):
     }]
 
     request = requests.post(constructed_url, params=params, headers=headers, json=body)
+    print("except :response{}".format(request.text))
     response = request.json()
     ddt = dict()
     try:
@@ -324,7 +363,8 @@ def translate(text='Hello world', llg = ['de', 'it', 'fr', 'es', 'nl', 'en']):
 
 if __name__ == '__main__':
     #load_stock_universe()
-    load_equity_etf_list()
+    #load_equity_etf_list()
     #load_exchange_list()
+    translate(text='Hello world', llg=['de', 'it', 'fr', 'es', 'nl', 'en'])
 
 

@@ -2,7 +2,7 @@ from flask import Flask
 from flask_restful import Resource, Api
 from flask_restful.reqparse import RequestParser
 from flask_socketio import SocketIO, emit
-from api.simulation import MonteCarloSimulation, AAbacktesting
+from api.simulation import MonteCarloSimulation, AAbacktesting, MeanVarOptimization, MaxDiversification
 from api.stocks import StockUniverse, StockData
 from flask_swagger_ui import get_swaggerui_blueprint
 
@@ -86,10 +86,11 @@ api.add_resource(SubscriberCollection, '/subscribers')
 api.add_resource(Subscriber, '/subscribers/<int:id>')
 api.add_resource(MonteCarloSimulation, '/montecarlo')
 api.add_resource(AAbacktesting, '/aabacktesting')
-api.add_resource(MonteCarloSimulation, '/optimisation')
-api.add_resource(MonteCarloSimulation, '/realestate') # real estate prices
-api.add_resource(MonteCarloSimulation, '/lifeinsurance') # life insurance
-api.add_resource(StockUniverse, '/stock_universe') # country, type, name
+api.add_resource(MaxDiversification, '/maximum_diversificaton')
+api.add_resource(MeanVarOptimization, '/target_return')
+#api.add_resource(MaxDiversification, '/realestate') # real estate prices
+#api.add_resource(MonteCarloSimulation, '/lifeinsurance') # life insurance
+api.add_resource(StockUniverse, '/stock_universe') # country, type, name - OK
 api.add_resource(StockData, '/stock_data/<string:code>')
 # name, exchange, description, asset class, esg ratings, financial data
 # ETF => composition, issuer logo, AUM,

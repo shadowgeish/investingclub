@@ -82,7 +82,16 @@ class StockData(Resource):
         server = MongoClient(access_db)
 
         query = {"FullCode": code}
-        res = server[db_name][collection_name].find_one(query)
+        res = server[db_name][collection_name].find_one(query, {'_id': 0 ,
+                                                                 'ETF_Data.Market_Capitalisation': 0,
+                                                                 'ETF_Data.Market_Capitalisation': 0,
+                                                                 'ETF_Data.Asset_Allocation': 0,
+                                                                 'ETF_Data.Sector_Weights': 0,
+                                                                 'ETF_Data.Fixed_Income': 0,
+                                                                 'ETF_Data.Valuations_Growth': 0,
+                                                                 'Technicals': 0,
+                                                                 'ETF_Data.World_Regions': 0
+                                                                 })
 
         res = {} if res is None else json.loads(json_util.dumps(res))
 

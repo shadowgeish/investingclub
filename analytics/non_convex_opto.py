@@ -22,6 +22,7 @@ class MaxDiversification(base_optimizer.BaseConvexOptimizer):
         self.expected_returns = MaxDiversification._validate_expected_returns(
             expected_returns
         )
+        print("expected_returns {}".format(self.expected_returns))
 
         # Labels
         if isinstance(expected_returns, pd.Series):

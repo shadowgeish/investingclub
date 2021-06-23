@@ -183,6 +183,8 @@ def monte_carlo_portfolio_simul(
     last_event = dict()
     freq = get_freq(rebalancing_frequency, contribution, withdraw, 'monthly')
 
+    df_h_p = df_h_p.dropna()
+
     for ac in asset_codes:
         data = df_h_p[df_h_p['code']==ac].copy().sort_values(by=['converted_date'])
         temp_df = pd.DataFrame(data=data['adjusted_close'].tolist(),
@@ -242,21 +244,47 @@ def monte_carlo_portfolio_simul(
         rets['return_{}'.format(i)] = df_full['portfolio_return']
     '''
 
-    percentile_5th = rets.cumsum().apply(lambda x: np.percentile(x, 5), axis=1)
-    percentile_95th = rets.cumsum().apply(lambda x: np.percentile(x, 95), axis=1)
-    average_port = rets.cumsum().apply(lambda x: np.mean(x), axis=1)
+    output = {}
+    ret_5th = rets.cumsum().apply(lambda x: np.percentile(x, 5), axis=1)
+    percentile_5th = pd.DataFrame({'percentile_5th': ret_5th, 'date': ret_5th.index.strftime('%m/%d/%Y')})
+    output['percentile_5th'] = percentile_5th.to_dict(orient='records')
+    ret_10th = rets.cumsum().apply(lambda x: np.percentile(x, 10), axis=1)
+    percentile_10th = pd.DataFrame({'percentile_10th': ret_10th, 'date': ret_10th.index.strftime('%m/%d/%Y')})
+    output['percentile_10th'] = percentile_10th.to_dict(orient='records')
+    ret_25th = rets.cumsum().apply(lambda x: np.percentile(x, 25), axis=1)
+    percentile_25th = pd.DataFrame({'percentile_25th': ret_25th, 'date': ret_25th.index.strftime('%m/%d/%Y')})
+    output['percentile_25th'] = percentile_25th.to_dict(orient='records')
+    ret_50th = rets.cumsum().apply(lambda x: np.percentile(x, 50), axis=1)
+    percentile_50th = pd.DataFrame({'percentile_50th': ret_50th, 'date': ret_25th.index.strftime('%m/%d/%Y')})
+    output['percentile_50th'] = percentile_50th.to_dict(orient='records')
+    ret_75th = rets.cumsum().apply(lambda x: np.percentile(x, 75), axis=1)
+    percentile_75th = pd.DataFrame({'percentile_75th': ret_75th, 'date': ret_75th.index.strftime('%m/%d/%Y')})
+    output['percentile_75th'] = percentile_75th.to_dict(orient='records')
+    ret_95th = rets.cumsum().apply(lambda x: np.percentile(x, 95), axis=1)
+    percentile_95th = pd.DataFrame({'percentile_95th': ret_95th, 'date': ret_95th.index.strftime('%m/%d/%Y')})
+    output['percentile_95th'] = percentile_95th.to_dict(orient='records')
+    average_ret = rets.cumsum().apply(lambda x: np.mean(x), axis=1)
+    average_port = pd.DataFrame({'average_port': average_ret, 'date': average_ret.index.strftime('%m/%d/%Y')})
+    output['average_port'] = average_port.to_dict(orient='records')
 
     print("monte carlo from {} to {} done".format(start_date, end_date))
     #print(format(df_full))
     print(format(rets))
     print("--- %s seconds ---" % (time.time() - start_time))
 
-    if ret == 'json':
-        print("--- %s seconds --- json" % (time.time() - start_time))
-        return rets.to_json(orient='records')
+    print("percentile_5th {}".format(percentile_5th))
+    from datetime import datetime
 
+
+
+    rets['date'] = rets.index
+    rets['date'] = rets['date'].dt.strftime('%m/%d/%Y')
+    #output['returns'] = rets
+
+    if ret == 'json':
+        import json
+        return json.loads(json.dumps(output))
     else:
-        print("--- %s seconds --- DF" % (time.time() - start_time))
         return rets
 
 
@@ -457,8 +485,8 @@ def portfolio_optimization(
     from pypfopt import risk_models
     from pypfopt import expected_returns
     df_full = df_full.dropna()
-    cov_m = risk_models.risk_matrix(df_full)
     #cov_m = risk_models.CovarianceShrinkage(df_full).ledoit_wolf()
+    cov_m = risk_models.risk_matrix(df_full)
     from pypfopt import EfficientFrontier
     mu = expected_returns.capm_return(df_full)
 
@@ -480,6 +508,8 @@ def portfolio_optimization(
         from non_convex_opto import MaxDiversification
         print(' max_diversification cov = {}'.format(cov_m))
         print(' df_full  = {}'.format(df_full))
+        cov_m = risk_models.risk_matrix(df_full)
+        mu = expected_returns.ema_historical_return(df_full)
         opt = MaxDiversification(mu, cov_m)
     else:
         opt = EfficientFrontier(mu, cov_m)
@@ -642,9 +672,9 @@ if __name__ == '__main__':
             ret='json'  # json, df
     )
 '''
-
+    # , "LVC.PA"
     jj = portfolio_optimization(
-        asset_codes=["IWDA.LSE", "TDT.AS", "BX4.PA", "LVC.PA", "IAEX.AS", "VUSA.LSE"],
+        asset_codes=["IWDA.LSE", "TDT.AS", "BX4.PA", "IAEX.AS", "VUSA.LSE", "STZ.PA", "LQQ.PA"],
         optimisation_type='max_diversification',
         optimisation_goal='max_diversification',
         start_date=start_date,

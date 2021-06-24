@@ -134,10 +134,14 @@ def get_prices(asset_codes=[],
     from pymongo import MongoClient
     import json
     import datetime
+    import pytz
+
+    tz = pytz.timezone('Europe/Paris')
+    paris_now = datetime.now(tz)
 
     eod_key = "60241295a5b4c3.00921778"
-    sd = datetime.datetime.strptime(datetime.datetime.now().strftime("%d%m%Y%2300"), '%d%m%Y%H%M') + datetime.timedelta(-7)
-    ed = datetime.datetime.strptime(datetime.datetime.now().strftime("%d%m%Y%2300"), '%d%m%Y%H%M') + datetime.timedelta(+1)
+    sd = datetime.datetime.strptime(paris_now.strftime("%d%m%Y2300"), '%d%m%Y%H%M') + datetime.timedelta(-7)
+    ed = datetime.datetime.strptime(paris_now.strftime("%d%m%Y2300"), '%d%m%Y%H%M') + datetime.timedelta(+1)
     start_date = sd if start_date is None else start_date
     end_date = ed if end_date is None else end_date
 

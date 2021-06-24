@@ -137,7 +137,7 @@ def get_prices(asset_codes=[],
     import pytz
 
     tz = pytz.timezone('Europe/Paris')
-    paris_now = datetime.now(tz)
+    paris_now = datetime.datetime.now(tz)
 
     eod_key = "60241295a5b4c3.00921778"
     sd = datetime.datetime.strptime(paris_now.strftime("%d%m%Y2300"), '%d%m%Y%H%M') + datetime.timedelta(-7)

@@ -43,15 +43,19 @@ async def live_stock_prices():
     from pymongo import MongoClient
     from asset_prices.prices import get_prices
     from asset_prices.referencial import get_universe
+    import pytz
+
+    tz = pytz.timezone('Europe/Paris')
+    paris_now = datetime.now(tz)
 
     collection_name = "real_time_prices"
     db_name = "asset_analytics"
     access_db = "mongodb+srv://sngoube:Yqy8kMYRWX76oiiP@cluster0.jaxrk.mongodb.net/asset_analytics?retryWrites=true&w=majority"
     server = MongoClient(access_db)
 
-    dtt = datetime.now()
-    dtt_s = datetime(year=dtt.year, month=dtt.month, day=dtt.day, hour=00, minute = 0)
-    dtt_e = datetime(year=dtt.year, month=dtt.month, day=dtt.day, hour=23, minute=00)
+    dtt = paris_now
+    dtt_s = datetime(year=dtt.year, month=dtt.month, day=dtt.day, hour=00, minute = 0, tzinfo=tz)
+    dtt_e = datetime(year=dtt.year, month=dtt.month, day=dtt.day, hour=23, minute=00, tzinfo=tz)
 
     print('Date check {} < {} < {} '.format(dtt_s, dtt, dtt_e))
     #ddf = pd.read_csv("../asset_prices/stock_universe.csv", sep=',', keep_default_na=False)
@@ -113,9 +117,10 @@ async def live_stock_prices():
                         real_time_price[key] = list()
                         # read from db if there is historic for the day to real_time_price
                         # READ DATA BASE
-                        start_date = datetime.strptime(datetime.now().strftime("%d%m%Y%0700"), '%d%m%Y%H%M')
-                        end_date = datetime.strptime(datetime.now().strftime("%d%m%Y%2300"), '%d%m%Y%H%M')
-                        lk=[key]
+                        start_date = datetime.strptime(paris_now.strftime("%d%m%Y0700"), '%d%m%Y%H%M')
+                        end_date = datetime.strptime(paris_now.strftime("%d%m%Y2300"), '%d%m%Y%H%M')
+                        lk = [key]
+                        print('start_date = {}, end_date = {}'.format(start_date, end_date))
                         rt_price_df = get_prices(asset_codes=lk, start_date=start_date, end_date=end_date,
                                                  type='real_time', ret='df')
                         real_time_price[key] = rt_price_df.to_dict(orient='records')

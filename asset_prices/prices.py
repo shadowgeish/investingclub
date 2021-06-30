@@ -27,9 +27,9 @@ from datetime import date
 # requests
 # u8darts
 
+from tools.logger import logger_get_price
 
-def load_historical_data(asset_ticker=None,
-                        full_available_history=False,
+def load_historical_data(asset_ticker=None, full_available_history=False,
                         ret='json' # json, df
                          ):
     import pandas as pd
@@ -103,7 +103,7 @@ def load_historical_data(asset_ticker=None,
         if full_available_history is True:
             server[db_name][collection_name].delete_one({"code": stock})
             server[db_name][collection_name].insert_one(stock_data)
-            print("full load for {} completed!".format(stock))
+            logger_get_price.info("full load for {} completed!".format(stock))
         else:
             # dd = server[db_name][collection_name].update_many({"code": stock}, {"$addToSet": {
             #    "prices": {"volume": 10000000, "date": "2021-02-14", 'open': 1, 'close': 2, 'low': 5, 'high': 4,
@@ -113,9 +113,9 @@ def load_historical_data(asset_ticker=None,
             server[db_name][collection_name].update_many({"code": stock}, {"$addToSet": {
                 "prices": {"$each": list_closing_prices}}})
 
-            print("update load for {} completed!".format(stock))
+            logger_get_price.info("update load for {} completed!".format(stock))
 
-    print("Done!")
+    logger_get_price.info("Done!")
     server.close()
 
 
@@ -180,9 +180,9 @@ def get_prices(asset_codes=[],
         item_list = item_list + doc['prices']
     df = pd.DataFrame(item_list)
 
-    #   print(format(df.to_json(orient='records')))
+    #   logger_get_price.info(format(df.to_json(orient='records')))
 
-    print("Done get_prices: {}, query : {}".format(type, query))
+    logger_get_price.info("Done get_prices: {}, query : {}".format(type, query))
     server.close()
 
     if ret == 'json':
@@ -212,5 +212,5 @@ def get_prices(asset_codes=[],
 
 if __name__ == '__main__':
     # load_historical_data(full_available_history=True)
-    print(get_prices(asset_codes=["IWDA.LSE", "TDT.AS", "BX4.PA", "LVC.PA"], ret = 'df'))
+    logger_get_price.info(get_prices(asset_codes=["IWDA.LSE", "TDT.AS", "BX4.PA", "LVC.PA"], ret = 'df'))
 

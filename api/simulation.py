@@ -160,6 +160,9 @@ def optimization(args):
     # rebalancing_frequency = 'monthly', target_return = 0.03, invested_amount = 10000,
     # nb_simul = 1000
 
+    start_date = (datetime.date.today() + datetime.timedelta(-3500))
+    end_date = (datetime.date.today() + datetime.timedelta(1))
+
     start_date =  (datetime.date.today() + datetime.timedelta(-3500)) if start_date is None else start_date
     end_date = (datetime.date.today() + datetime.timedelta(1)) if start_date is None else start_date
 

@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np
 import warnings
 import cvxpy as cp
+from tools.logger import logger_get_opto
 
 class MaxDiversification(base_optimizer.BaseConvexOptimizer):
 
@@ -22,7 +23,7 @@ class MaxDiversification(base_optimizer.BaseConvexOptimizer):
         self.expected_returns = MaxDiversification._validate_expected_returns(
             expected_returns
         )
-        print("expected_returns {}".format(self.expected_returns))
+        logger_get_opto.info("expected_returns {}".format(self.expected_returns))
 
         # Labels
         if isinstance(expected_returns, pd.Series):
@@ -149,7 +150,7 @@ class MaxDiversification(base_optimizer.BaseConvexOptimizer):
 
     @staticmethod
     def diversification_ratio(w, cov_matrix):
-        print('w={}'.format(w))
+        logger_get_opto.info('w={}'.format(w))
 
         """
         Calculate the total portfolio variance (i.e square volatility).
@@ -184,7 +185,7 @@ class MaxDiversification(base_optimizer.BaseConvexOptimizer):
         else:
             obj_value = diversification_ratio
 
-        print('obj_value=-{}'.format(obj_value))
+        logger_get_opto.info('obj_value=-{}'.format(obj_value))
         return -obj_value
 
     def portfolio_performance(self, verbose=False, risk_free_rate=0.02):

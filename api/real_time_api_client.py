@@ -1,30 +1,30 @@
 import asyncio
 import socketio
-
+from tools.logger import logger_rtapic
 sio = socketio.AsyncClient()
 
 
 @sio.event
 async def connect():
-    print('connected to server')
+    logger_rtapic.info('connected to server')
 
 
 @sio.event
 async def disconnect():
-    print('disconnected from server')
+    logger_rtapic.info('disconnected from server')
 
 
 @sio.event
 def last_traded_price(data):
-    print('last_traded_price {} '.format(data))
+    logger_rtapic.info('last_traded_price {} '.format(data))
 
 @sio.event
 def intraday_prices(data):
-    print('intraday_prices {} '.format(data))
+    logger_rtapic.info('intraday_prices {} '.format(data))
 
 @sio.event
 def intraday_trending_stocks(data):
-    print('intraday_trending_stocks {} '.format(data))
+    logger_rtapic.info('intraday_trending_stocks {} '.format(data))
 
 
 async def start_server():

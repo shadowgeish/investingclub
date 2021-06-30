@@ -3,6 +3,7 @@ import asyncio
 
 from sanic import Sanic
 from sanic.response import html
+from tools.logger import logger_rtapi
 
 import socketio
 
@@ -30,7 +31,7 @@ def is_serializable(obj):
     try:
         json.dumps(obj)
     except TypeError:
-        print("Unable to serialize the object")
+        logger_rtapi.error("Unable to serialize the object")
         return False
 
     return True
@@ -57,7 +58,7 @@ async def live_stock_prices():
     dtt_s = datetime(year=dtt.year, month=dtt.month, day=dtt.day, hour=00, minute = 0, tzinfo=tz)
     dtt_e = datetime(year=dtt.year, month=dtt.month, day=dtt.day, hour=23, minute=00, tzinfo=tz)
 
-    print('Date check {} < {} < {} '.format(dtt_s, dtt, dtt_e))
+    logger_rtapi.info('Date check {} < {} < {} '.format(dtt_s, dtt, dtt_e))
     #ddf = pd.read_csv("../asset_prices/stock_universe.csv", sep=',', keep_default_na=False)
 
     ddf = get_universe()
@@ -79,14 +80,14 @@ async def live_stock_prices():
 
         if dtt_s < dtt < dtt_e:
 
-            print('Date check {} < {} < {} '.format(dtt_s, dtt, dtt_e))
+            logger_rtapi.info('Date check {} < {} < {} '.format(dtt_s, dtt, dtt_e))
              
             import pandas as pd
             import requests
             import json
             list_to_order = []
             for sublist in stringlist:
-                print('Getting data for sub string {}'.format(sublist))
+                logger_rtapi.info('Getting data for sub string {}'.format(sublist))
                 sreq = "https://eodhistoricaldata.com/api/real-time/CAC.PA?api_token=60241295a5b4c3.00921778&fmt=json&s={}"
                 list_closing_prices = []
 
@@ -120,11 +121,11 @@ async def live_stock_prices():
                         start_date = datetime.strptime(paris_now.strftime("%d%m%Y0700"), '%d%m%Y%H%M')
                         end_date = datetime.strptime(paris_now.strftime("%d%m%Y2300"), '%d%m%Y%H%M')
                         lk = [key]
-                        print('start_date = {}, end_date = {}'.format(start_date, end_date))
+                        logger_rtapi.info('start_date = {}, end_date = {}'.format(start_date, end_date))
                         rt_price_df = get_prices(asset_codes=lk, start_date=start_date, end_date=end_date,
                                                  type='real_time', ret='df')
                         real_time_price[key] = rt_price_df.to_dict(orient='records')
-                        print('Already loaded data {}'.format(rt_price_df))
+                        logger_rtapi.info('Already loaded data {}'.format(rt_price_df))
 
                     current_list = real_time_price[key]
                     exists = 0
@@ -136,7 +137,7 @@ async def live_stock_prices():
                         # Add each item of the list if doesn't exist
                         price['converted_date'] = price['timestamp']
 
-                        print('Price {}'.format(price))
+                        logger_rtapi.info('Price {}'.format(price))
 
                         price['date'] = datetime.fromtimestamp(price['timestamp']).strftime("%d-%m-%Y %H:%M:%S.%f")
 
@@ -153,13 +154,13 @@ async def live_stock_prices():
             dic_to_order = pd.DataFrame(list_to_order)
             dic_to_order = dic_to_order[['code','volume','timestamp']]
             dic_to_order = dic_to_order[dic_to_order['timestamp'] != 'NA']
-            print('dic_to_order {}'.format(dic_to_order))
+            logger_rtapi.info('dic_to_order {}'.format(dic_to_order))
 
             dic_to_order = dic_to_order.sort_values(by=['volume'], ascending=False).reset_index()
             dic_to_order['order'] = dic_to_order.index
             dic_to_order = dic_to_order[['code', 'volume', 'timestamp', 'order']]
             await sio.emit('intraday_trending_stocks', dic_to_order.to_json(orient='records'))
-            print('col ={}, Dicts = {}'.format(dic_to_order.columns, dic_to_order))
+            logger_rtapi.info('col ={}, Dicts = {}'.format(dic_to_order.columns, dic_to_order))
 
             await sio.sleep(10)
         
@@ -217,7 +218,7 @@ async def connect(sid, environ):
 
 @sio.event
 def disconnect(sid):
-    print('Client disconnected')
+    logger_rtapi.info('Client disconnected')
 
 
 #app.router.add_static('/static', 'static')

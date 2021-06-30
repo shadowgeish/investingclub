@@ -1,0 +1,4 @@
+nohup /home/ubuntu/anaconda3/bin/python3.8 ./investingclub/api/real_time_api.py </dev/null >/dev/null 2>&1 &
+
+
+nohup /home/ubuntu/anaconda3/bin/python3.8 ./investingclub/api/analytics_api.py </dev/null >/dev/null 2>&1 &

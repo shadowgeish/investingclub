@@ -80,6 +80,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/asset_prices/referencial.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/extract.csv">
           <value>
             <Attribute>

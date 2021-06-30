@@ -1,0 +1,2 @@
+start_date = 2021-06-24 07:00:00, end_date = 2021-06-24 23:00:00
+Done get_prices: real_time, query : [{'$match': {'code': {'$in': ['IAEX.AS']}}}, {'$project': {'prices': {'$filter': {'input': '$prices', 'as': 'price', 'cond': {'$and': [{'$gte': ['$$price.converted_date', 1624510800.0]}, {'$lte': ['$$price.converted_date', 1624568400.0]}]}}}}}]

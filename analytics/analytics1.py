@@ -5,7 +5,7 @@ Prices module
 
 """
 from datetime import date
-from asset_prices.historical_prices import get_historical_data
+from asset_prices.prices import get_prices
 
 
 # return historical data for one or a list of codes example code : "BX4.PA"
@@ -30,7 +30,7 @@ def get_asset_returns(asset_codes=[],
 
     ac = [asset_codes] if not isinstance(asset_codes, list) else asset_codes
 
-    df = get_historical_data(asset_codes=ac, start_date=start_date, end_date=end_date, ret='df')
+    df = get_prices(asset_codes=ac, start_date=start_date, end_date=end_date, ret='df')
 
     retdf = pd.DataFrame()
     for asset_code in ac:

@@ -1,0 +1,7 @@
+Getting data for sub string BX4.PA,LVC.PA,IAEX.AS,IWDA.LSE,TDT.AS,VUSA.LSE,VWRL.LSE,LQQ.PA,STZ.PA
+Stopping worker [49854]
+Server Stopped
+Task was destroyed but it is pending!
+task: <Task pending name='Task-3' coro=<live_stock_prices() running at /Users/sergengoube/PycharmProjects/investingclub/api/real_time_api.py:94> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fcfa1726580>()]>>
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7fcf809be910>

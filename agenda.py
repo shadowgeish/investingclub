@@ -156,6 +156,12 @@ if __name__ == '__main__':
         }
     ]
 
+    # advisors_unavailability : advisor_id, start_date_time, end_date_time, unavailability_type (holiday, other)
+
+    # meeting_type : advisor_id, name, duration, description
+
+    # week_settings : advisor_id, week_day, is_day_off, start_hour, end_hour, serialized_breaks [start_time, end_time]
+
     delay_to_book_meeting = 60
 
     meeting_type_duration_table = {"first Appointment": 45, "Follow up meeting": 60, "test meeting": 15}

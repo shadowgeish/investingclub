@@ -6,6 +6,7 @@ Prices module
 """
 from datetime import date
 from asset_prices.prices import get_prices
+from tools.logger import logger_get_analytics
 from pypfopt import base_optimizer
 
 
@@ -41,8 +42,8 @@ def get_asset_returns(
         ndf['pct_change'] = ndf['adjusted_close'].pct_change()
         retdf = retdf.append(ndf).dropna()
 
-    print("Analytics Done")
-    print(format(retdf))
+    logger_get_analytics.info("Analytics Done")
+    logger_get_analytics.info(format(retdf))
 
     if ret == 'json':
         return retdf.to_json(orient='records')
@@ -81,13 +82,13 @@ def update_row(row, dict_nb_share, contribution, withdraw, rebal, target_weight)
         row['{}_weight'.format(ac)] = (dict_nb_share[ac] * row['{}_adjusted_close'.format(ac)])/row['portfolio_value']
         row['portfolio_return'] += (row['{}_weight'.format(ac)] * row['{}_return'.format(ac)])
         # adding contribution
-        # print('diff {}, freq:{}'.format((contribution['last'] - row.name).days, map_days[contribution['freq']]))
+        # logger_get_analytics.info('diff {}, freq:{}'.format((contribution['last'] - row.name).days, map_days[contribution['freq']]))
         if 'freq' in contribution.keys() and map_days[contribution['freq']] <= (row.name - contribution['last']).days:
             _nb = (row['{}_weight'.format(ac)] * contribution['amount'] ) / row['{}_adjusted_close'.format(ac)]
             dict_nb_share[ac] += np.round(_nb, 2)
             row['{}_nb_shares'.format(ac)] = dict_nb_share[ac]
             contribution['last'] = row.name if asset_codes[-1] == ac else contribution['last']
-            #print('added {} contribution to portfolio  on {}. nb share added : {} for {}'.format(contribution['amount'],
+            #logger_get_analytics.info('added {} contribution to portfolio  on {}. nb share added : {} for {}'.format(contribution['amount'],
             #                                                                                     row.name, _nb, ac))
 
         #  withdraw
@@ -97,7 +98,7 @@ def update_row(row, dict_nb_share, contribution, withdraw, rebal, target_weight)
             # dict_nb_share[ac] = max(dict_nb_share[ac], 0)
             row['{}_nb_shares'.format(ac)] = dict_nb_share[ac]
             withdraw['last'] = row.name if asset_codes[-1] == ac else withdraw['last']
-            #print('withdraw {} to portfolio  on {}. nb share added : {} for {}'.format(contribution['amount'], row.name,
+            #logger_get_analytics.info('withdraw {} to portfolio  on {}. nb share added : {} for {}'.format(contribution['amount'], row.name,
             #      _nb, ac ))
 
     # rebal
@@ -110,7 +111,7 @@ def update_row(row, dict_nb_share, contribution, withdraw, rebal, target_weight)
                     dict_nb_share[ac] += np.round(_nb, 2)
                     row['{}_nb_shares'.format(ac)] = dict_nb_share[ac]
                     rebal['last'] = row.name if asset_codes[-1] == ac else rebal['last']
-                    #print('rebalancing to portfolio  on {}. nb share added {} : {} for {}, diff = {} ({}-{}), amount={}, price = {}'.format(
+                    #logger_get_analytics.info('rebalancing to portfolio  on {}. nb share added {} : {} for {}, diff = {} ({}-{}), amount={}, price = {}'.format(
                     #    row.name, row['{}_nb_shares'.format(ac)],_nb, ac, _w_diff, row['{}_weight'.format(ac)],
                     #    target_weight[ac],_amount, row['{}_adjusted_close'.format(ac)]))
 
@@ -174,7 +175,7 @@ def monte_carlo_portfolio_simul(
                                  end_date=datetime.datetime.combine(end_date, datetime.time.min),
                                  )
 
-    print("Getting data --- %s seconds ---" % (time.time() - start_time))
+    logger_get_analytics.info("Getting data --- %s seconds ---" % (time.time() - start_time))
 
     # ['{}_unbalanced_weight'.format(ac) for ac in asset_codes]
     df_full = None
@@ -205,7 +206,7 @@ def monte_carlo_portfolio_simul(
         df_full = pd.merge(df_full, temp_df, left_index=True, right_index=True) #df_full.join(temp_df, how="outer")
         df_full = df_full[df_full['{}_return'.format(ac)].notna()]
 
-    print("--- end init %s seconds ---" % (time.time() - start_time))
+    logger_get_analytics.info("--- end init %s seconds ---" % (time.time() - start_time))
     df_full['portfolio_value'] = 0
     df_full['portfolio_return'] = 0
     rets = pd.DataFrame(index=df_full.index)
@@ -213,7 +214,7 @@ def monte_carlo_portfolio_simul(
     rebal = dict()
     simul = nb_simul
     rebal['freq'] = rebalancing_frequency
-    print("--- start simul for {}---".format(simul))
+    logger_get_analytics.info("--- start simul for {}---".format(simul))
 
     var_tuple = (temp_df.index[0], contribution, withdraw, rebal, df_full, asset_codes, forecasts, starting_price,
                  dict_nb_share, target_asset_codes_weight, df_full)
@@ -222,7 +223,7 @@ def monte_carlo_portfolio_simul(
     if multi_process:
         import multiprocessing as mp
         with mp.Pool(processes=mp.cpu_count()) as p:
-            print("--- start simul for {}--- and  using {} cpu".format(simul, mp.cpu_count()))
+            logger_get_analytics.info("--- start simul for {}--- and  using {} cpu".format(simul, mp.cpu_count()))
             list_var_tuple =[var_tuple for i in range(simul)]
             results = p.map(simul_func, list_var_tuple)
         i = 0
@@ -230,7 +231,7 @@ def monte_carlo_portfolio_simul(
             rets['return_{}'.format(i)] = r
             i += 1
     else:
-        print("--- start simul for {}--- and  using 1 cpu".format(simul))
+        logger_get_analytics.info("--- start simul for {}--- and  using 1 cpu".format(simul))
         for i in range(simul):
             rets['return_{}'.format(i)] = simul_func(var_tuple)
 
@@ -267,12 +268,12 @@ def monte_carlo_portfolio_simul(
     average_port = pd.DataFrame({'average_port': average_ret, 'date': average_ret.index.strftime('%m/%d/%Y')})
     output['average_port'] = average_port.to_dict(orient='records')
 
-    print("monte carlo from {} to {} done".format(start_date, end_date))
-    #print(format(df_full))
-    print(format(rets))
-    print("--- %s seconds ---" % (time.time() - start_time))
+    logger_get_analytics.info("monte carlo from {} to {} done".format(start_date, end_date))
+    #logger_get_analytics.info(format(df_full))
+    logger_get_analytics.info(format(rets))
+    logger_get_analytics.info("--- %s seconds ---" % (time.time() - start_time))
 
-    print("percentile_5th {}".format(percentile_5th))
+    logger_get_analytics.info("percentile_5th {}".format(percentile_5th))
     from datetime import datetime
 
 
@@ -323,7 +324,7 @@ def back_test_portfolio(
                                  end_date=datetime.datetime.combine(end_date, datetime.time.min),
                                  )
 
-    print("Getting data --- %s seconds ---" % (time.time() - start_time))
+    logger_get_analytics.info("Getting data --- %s seconds ---" % (time.time() - start_time))
 
     freq = get_freq(rebalancing_frequency, contribution, withdraw, 'monthly')
     # ['{}_unbalanced_weight'.format(ac) for ac in asset_codes]
@@ -348,7 +349,7 @@ def back_test_portfolio(
         df_full = pd.merge(df_full, temp_df, left_index=True, right_index=True) #df_full.join(temp_df, how="outer")
         df_full = df_full[df_full['{}_return'.format(ac)].notna()]
 
-    print("--- end init %s seconds ---" % (time.time() - start_time))
+    logger_get_analytics.info("--- end init %s seconds ---" % (time.time() - start_time))
     df_full['portfolio_value'] = 0
     df_full['portfolio_return'] = 0
     rebal = dict()
@@ -359,9 +360,9 @@ def back_test_portfolio(
 
     df_full = df_full.apply(update_row, args=(dict_nb_share, contribution, withdraw, rebal, target_asset_codes_weight), axis=1)
 
-    print("monte carlo from {} to {} done".format(start_date, end_date))
-    print(format(df_full))
-    print("--- %s seconds ---" % (time.time() - start_time))
+    logger_get_analytics.info("monte carlo from {} to {} done".format(start_date, end_date))
+    logger_get_analytics.info(format(df_full))
+    logger_get_analytics.info("--- %s seconds ---" % (time.time() - start_time))
 
     if ret == 'json':
         return df_full.to_json(orient='records')
@@ -417,15 +418,15 @@ def efficient_frontier(
         output['expected_return'], output['volatility'], output['sharpe_ratio'] = opt.portfolio_performance()
         ports.append(output)
 
-    print("opto from {} to {} done".format(start_date, end_date))
-    print(format(ports))
-    print("--- %s seconds ---" % (time.time() - start_time))
+    logger_get_analytics.info("opto from {} to {} done".format(start_date, end_date))
+    logger_get_analytics.info(format(ports))
+    logger_get_analytics.info("--- %s seconds ---" % (time.time() - start_time))
 
     if ret == 'json':
         import json
         return json.dumps(ports)
     else:
-        print(format(ports))
+        logger_get_analytics.info(format(ports))
         df_full = pd.DataFrame(ports, columns=['Code', 'weights'])
         return df_full
 
@@ -506,8 +507,8 @@ def portfolio_optimization(
         opt.add_objective(objective_functions.L2_reg)
     if optimisation_type == 'max_diversification':
         from non_convex_opto import MaxDiversification
-        print(' max_diversification cov = {}'.format(cov_m))
-        print(' df_full  = {}'.format(df_full))
+        logger_get_analytics.info(' max_diversification cov = {}'.format(cov_m))
+        logger_get_analytics.info(' df_full  = {}'.format(df_full))
         cov_m = risk_models.risk_matrix(df_full)
         mu = expected_returns.ema_historical_return(df_full)
         opt = MaxDiversification(mu, cov_m)
@@ -535,7 +536,7 @@ def portfolio_optimization(
         opt.efficient_risk(target_volatility)
     else:
         _make_output_weights =  opt.optimize()
-        print('_make_output_weights = {}'.format(_make_output_weights))
+        logger_get_analytics.info('_make_output_weights = {}'.format(_make_output_weights))
 
     output = {}
     weights = opt.clean_weights()
@@ -544,15 +545,15 @@ def portfolio_optimization(
 
     #df_full = pd.DataFrame(weights.items(), columns=['Code', 'weights'])
 
-    print("opto from {} to {} done".format(start_date, end_date))
-    print(format(output))
-    print("--- %s seconds ---" % (time.time() - start_time))
+    logger_get_analytics.info("opto from {} to {} done".format(start_date, end_date))
+    logger_get_analytics.info(format(output))
+    logger_get_analytics.info("--- %s seconds ---" % (time.time() - start_time))
 
     if ret == 'json':
         import json
         return json.dumps(output)
     else:
-        print(format(df_full))
+        logger_get_analytics.info(format(df_full))
         df_full = pd.DataFrame(weights.items(), columns=['Code', 'weights'])
         df_full['expected_return'] = output['expected_return']
         df_full['volatility'] = output['volatility']
@@ -580,7 +581,7 @@ if __name__ == '__main__':
                                 start_date=start_date,
                                 end_date=end_date,
                                 ret='json')
-    print('max_sr = {}'.format(jj))
+    logger_get_analytics.info('max_sr = {}'.format(jj))
 
     jj = portfolio_optimization(
         asset_codes=["BX4.PA", "CAC.PA", "500.PA", "AIR.PA"],
@@ -588,7 +589,7 @@ if __name__ == '__main__':
         start_date=start_date,
         end_date=end_date,
         ret='json')
-    print('min_vol = {}'.format(jj))
+    logger_get_analytics.info('min_vol = {}'.format(jj))
 
     jj = portfolio_optimization(
         asset_codes=["BX4.PA", "CAC.PA", "500.PA", "AIR.PA"],
@@ -597,7 +598,7 @@ if __name__ == '__main__':
         start_date=start_date,
         end_date=end_date,
         ret='json')
-    print('min_vol_for_return = {}'.format(jj))
+    logger_get_analytics.info('min_vol_for_return = {}'.format(jj))
 
     jj = portfolio_optimization(
         asset_codes=["BX4.PA", "CAC.PA", "500.PA", "AIR.PA"],
@@ -606,7 +607,7 @@ if __name__ == '__main__':
         start_date=start_date,
         end_date=end_date,
         ret='json')
-    print('max_rt_for_vol = {}'.format(jj))
+    logger_get_analytics.info('max_rt_for_vol = {}'.format(jj))
 
     jj = portfolio_optimization(
         asset_codes=["BX4.PA", "CAC.PA", "500.PA", "AIR.PA"],
@@ -615,7 +616,7 @@ if __name__ == '__main__':
         start_date=start_date,
         end_date=end_date,
         ret='json')
-    print('risk_parity = {}'.format(jj))
+    logger_get_analytics.info('risk_parity = {}'.format(jj))
 
     jj = portfolio_optimization(
         asset_codes=["BX4.PA", "CAC.PA", "500.PA", "AIR.PA"],
@@ -625,7 +626,7 @@ if __name__ == '__main__':
         start_date=start_date,
         end_date=end_date,
         ret='json')
-    print('black_litterman = {}'.format(jj))
+    logger_get_analytics.info('black_litterman = {}'.format(jj))
     
     start_date = (datetime.date.today() + datetime.timedelta(-1700))
     end_date = (datetime.date.today() + datetime.timedelta(1))
@@ -680,6 +681,6 @@ if __name__ == '__main__':
         start_date=start_date,
         end_date=end_date,
         ret='json')
-    print('max_diversification = {}'.format(jj))
+    logger_get_analytics.info('max_diversification = {}'.format(jj))
 
     #df.to_csv('/Users/sergengoube/PycharmProjects/investingclub/extract_{}.csv'.format(datetime.datetime.now()))

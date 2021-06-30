@@ -26,7 +26,7 @@ from datetime import date
 # alpha_vantage
 # requests
 # u8darts
-
+from tools.logger import logger_get_ref
 
 def load_exchange_list():
     import pandas as pd
@@ -50,7 +50,7 @@ def load_exchange_list():
     if collection_name in server[db_name].list_collection_names():
         server[db_name][collection_name].drop()
     server[db_name][collection_name].insert_many(list_exchange)
-    print("Disconnected!")
+    logger_get_ref.info("Disconnected!")
     server.close()
 
 def remove_special_car(d):
@@ -130,7 +130,7 @@ def is_valid_json(obj):
         stock_data = obj.json()
         tt = stock_data['General']
     except:
-        print("Unable to serialize the object {}".format(obj))
+        logger_get_ref.info("Unable to serialize the object {}".format(obj))
         return False
 
     return True
@@ -153,23 +153,23 @@ def get_universe(name="", country="", type=""):
 
     res = server[db_name][collection_name].find(query)
 
-    print("Query {}".format(query))
+    logger_get_ref.info("Query {}".format(query))
 
     lres = list(res)
 
     item_list = []
     result = []
     if len(lres) > 0:
-        print(' result {}'.format(lres))
+        logger_get_ref.info(' result {}'.format(lres))
         df = pd.DataFrame(lres)
-        print(' df {}'.format(df))
+        logger_get_ref.info(' df {}'.format(df))
         df = df[['ISIN', 'Code', 'Name', 'Country', 'Exchange', 'Currency', 'Type', 'ExchangeCode', 'logo']]
-        # print(format(df.to_json(orient='records')))
+        # logger_get_ref.info(format(df.to_json(orient='records')))
         server.close()
-        print(' result {}'.format(df))
+        logger_get_ref.info(' result {}'.format(df))
         # result = df.to_json(orient='records')
         #result = df.to_dict(orient='records')
-        #print('json result {}'.format(result))
+        #logger_get_ref.info('json result {}'.format(result))
     return df
 
 
@@ -207,14 +207,16 @@ def load_equity_etf_list():
 
     stock_data_list = []
     ct = 1
-    total = len(lstock)
+
     nlstock = []
-    #for sgroup in stringlist:
+    import random
+    # lstock = random.sample(lstock, 200) # load only 200
+    total = len(lstock)
     for stock in lstock:
         cod = '{}.{}'.format(stock['Code'], stock['ExchangeCode'])
-        print('Total loaded {}/{} - Getting data for sub string {}'.format(ct, total, cod))
+        logger_get_ref.info('Total loaded {}/{} - Getting data for sub string {}'.format(ct, total, cod))
         sreq = "https://eodhistoricaldata.com/api/fundamentals/{}?api_token=60241295a5b4c3.00921778&fmt=json".format(cod)
-        print('sreq:{}'.format(sreq))
+        logger_get_ref.info('sreq:{}'.format(sreq))
         req = requests.get(sreq)
         if is_valid_json(req):
             stock_data = req.json()
@@ -228,9 +230,19 @@ def load_equity_etf_list():
 
             stock_data = remove_special_car(stock_data)
             stock_data_list.append(stock_data)
-            stock['logo'] = ''
+            stock['logo'] = 'https://eodhistoricaldata.com/img/logos/LSE/IAG.png' # default logo
+            stock['Market_Open'] = '9am -5pm CET'
+            stock['Asset_class'] = 'Equity, France Equity, Eu Equity'
+            stock['ESG_Rating'] = 800
+            stock['ESG_Rating_level'] = 'BBB'
+            stock['ESG_Rating_trend'] = 'Improvement'
+            stock['ESG_Rating_trend_figure'] = '9.31'
+            stock['ESG_E'] = 300
+            stock['ESG_S'] = 300
+            stock['ESG_G'] = 300
+
             if 'LogoURL' in stock_data['General'].keys():
-                stock['logo'] = stock_data['General']['LogoURL']
+                stock['logo'] = '{}/{}'.format('https://eodhistoricaldata.com',stock_data['General']['LogoURL'])
 
             stock_data = add_translation(stock_data, field='Description',
                                          llg=['de', 'it', 'fr', 'es', 'nl', 'en'])
@@ -240,7 +252,7 @@ def load_equity_etf_list():
             nlstock.append(stock)
             server[db_name][collection_name].find(filtering)
             server[db_name][collection_name].update_one(filtering, {'$set': stock_data}, upsert=True)
-            print("load data for {} completed, with query {}!".format(cod, filtering))
+            logger_get_ref.info("load data for {} completed, with query {}!".format(cod, filtering))
         ct = ct + 1
 
     #from datetime import datetime
@@ -257,8 +269,8 @@ def load_equity_etf_list():
         server[db_name][collection_name].drop()
     server[db_name][collection_name].insert_many(nlstock)
 
-    print("Done!")
-    print("Disconnected!")
+    logger_get_ref.info("Done!")
+    logger_get_ref.info("Disconnected!")
     server.close()
 
 
@@ -267,15 +279,16 @@ def add_translation(stock_data, field ='Category', llg = ['de', 'it', 'fr', 'es'
         text = stock_data['General'][field]
         ddescp = translate(text, llg)
         for lg in llg:
-            stock_data['General']['{}_{}'.format(field, lg)] = ddescp[lg]
+            if lg in ddescp.keys():
+                stock_data['General']['{}_{}'.format(field, lg)] = ddescp[lg]
     return stock_data
 
 
-def translate(text='Hello world', llg = ['de', 'it', 'fr', 'es', 'nl', 'en']):
+def translate2(text='Hello world', llg = ['de', 'it', 'fr', 'es', 'nl', 'en']):
     import requests, uuid, json
 
     # Add your subscription key and endpoint
-    subscription_key = "f61d9d12813c4ed6ba2baa2dde83abff"
+    subscription_key = "6e54709988e74470b07386b69bc42534"
     endpoint = "https://api.cognitive.microsofttranslator.com"
 
     # Add your location, also known as region. The default is global.
@@ -286,7 +299,7 @@ def translate(text='Hello world', llg = ['de', 'it', 'fr', 'es', 'nl', 'en']):
     constructed_url = endpoint + path
 
     params = {
-        'api-version': '2.0',
+        'api-version': '3.0',
         'from': 'en',
         'to': ['de', 'it']
     }
@@ -306,14 +319,13 @@ def translate(text='Hello world', llg = ['de', 'it', 'fr', 'es', 'nl', 'en']):
 
     request = requests.post(constructed_url, params=params, headers=headers, json=body)
     response = request.json()
+    logger_get_ref.info(json.dumps(response, sort_keys=True, ensure_ascii=False, indent=4, separators=(',', ': ')))
 
-    print(json.dumps(response, sort_keys=True, ensure_ascii=False, indent=4, separators=(',', ': ')))
-
-def translate2(text='Hello world', llg = ['de', 'it', 'fr', 'es', 'nl', 'en']):
+def translate(text='Hello world', llg = ['de', 'it', 'fr', 'es', 'nl', 'en']):
 
     import requests, uuid, json
     # Add your subscription key and endpoint
-    subscription_key = "f61d9d12813c4ed6ba2baa2dde83abff"
+    subscription_key = "6e54709988e74470b07386b69bc42534"
     endpoint = "https://api.cognitive.microsofttranslator.com/"
 
     # Add your location, also known as region. The default is global.
@@ -322,49 +334,53 @@ def translate2(text='Hello world', llg = ['de', 'it', 'fr', 'es', 'nl', 'en']):
 
     path = '/translate'
 
-    params = {
-        'api-version': '3.0',
-        'from': 'en',
-        'to': llg
-    }
-    constructed_url = endpoint + path
-
-    headers = {
-        'Ocp-Apim-Subscription-Key': 'f61d9d12813c4ed6ba2baa2dde83abff',
-        'Ocp-Apim-Subscription-Region': location,
-        'Content-type': 'application/json',
-        'X-ClientTraceId': str(uuid.uuid4())
-    }
-
-    # You can pass more than one object in body.
-    body = [{
-        'text': '{}'.format(text)
-    }]
-
-    request = requests.post(constructed_url, params=params, headers=headers, json=body)
-    print("except :response{}".format(request.text))
-    response = request.json()
+    chunks = [llg[x:x + 2] for x in range(0, len(llg), 2)]
     ddt = dict()
-    try:
-        lelt = response[0]['translations']
-        for tt in lelt:
-            ddt[tt['to']] = tt['text']
-    except:
-        ddt = dict()
-        print("except :response{}".format(response))
-    finally:
-        print('{} , {}'.format(type(response), response))
-        print("finally :ddt {}".format(ddt))
-        return ddt
+    for sllg in chunks:
 
-    print('{} , {}'.format(type(response), response))
-    print('{} , {}'.format(type(ddt), ddt))
+        params = {
+            'api-version': '3.0',
+            'from': 'en',
+            'to': sllg
+        }
+        constructed_url = endpoint + path
+
+        headers = {
+            'Ocp-Apim-Subscription-Key': 'f61d9d12813c4ed6ba2baa2dde83abff',
+            'Ocp-Apim-Subscription-Region': location,
+            'Content-type': 'application/json',
+            'X-ClientTraceId': str(uuid.uuid4())
+        }
+
+        # You can pass more than one object in body.
+        body = [{
+            'text': '{}'.format(text)
+        }]
+
+        request = requests.post(constructed_url, params=params, headers=headers, json=body)
+        logger_get_ref.info("except :response{}".format(request.text))
+        response = request.json()
+
+        try:
+            lelt = response[0]['translations']
+            for tt in lelt:
+                ddt[tt['to']] = tt['text']
+        except:
+            #ddt = dict()
+            logger_get_ref.info("except :response{}".format(response))
+        finally:
+            logger_get_ref.info('{} , {}'.format(type(response), response))
+            logger_get_ref.info("finally :ddt {}".format(ddt))
+            #return ddt
+
+        logger_get_ref.info('{} , {}'.format(type(response), response))
+        logger_get_ref.info('{} , {}'.format(type(ddt), ddt))
     return ddt
 
 if __name__ == '__main__':
-    #load_stock_universe()
-    #load_equity_etf_list()
+    # load_stock_universe()
+    load_equity_etf_list()
     #load_exchange_list()
-    translate(text='Hello world', llg=['de', 'it', 'fr', 'es', 'nl', 'en'])
+    #translate(text='Hello world', llg=['de', 'it', 'fr', 'es', 'nl', 'en'])
 
 

@@ -29,7 +29,7 @@ def intraday_trending_stocks(data):
 
 async def start_server():
     #await sio.connect('http://localhost:5000', wait_timeout=10000000 * 999999999, wait=True)
-    await sio.connect('http://18.118.197.35:5000')
+    await sio.connect('http://52.14.177.160:5000')
 
     await sio.wait()
 

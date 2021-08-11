@@ -210,7 +210,7 @@ def load_equity_etf_list():
 
     nlstock = []
     import random
-    # lstock = random.sample(lstock, 200) # load only 200
+    # lstock = random.sample(lstock, 50) # load only 200
     total = len(lstock)
     for stock in lstock:
         cod = '{}.{}'.format(stock['Code'], stock['ExchangeCode'])

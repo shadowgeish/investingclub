@@ -11,7 +11,10 @@ logging.basicConfig(level=logging.DEBUG,
                     )
 # define a Handler which writes INFO messages or higher to the sys.stderr
 console = logging.StreamHandler()
-filehandler = RotatingFileHandler(filename=os.path.join("logs", "ic_log.log"), maxBytes=2000000, backupCount=20)
+ppthf = os.path.join(".", "logs", "ic_log.log")
+if not os.path.exists(os.path.join(".", "logs")):
+    os.makedirs(os.path.join(".", "logs"))
+filehandler = RotatingFileHandler(filename=os.path.join(".", "logs", "ic_log.log"), maxBytes=2000000, backupCount=20)
 console.setLevel(logging.INFO)
 # set a format which is simpler for console use
 formatter = logging.Formatter('%(name)-12s: %(levelname)-8s %(message)s')

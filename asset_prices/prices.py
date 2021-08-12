@@ -139,11 +139,15 @@ def get_prices(asset_codes=[],
     tz = pytz.timezone('Europe/Paris')
     paris_now = datetime.datetime.now(tz)
 
+    logger_get_price.info("dates sent from {} to {}".format(start_date, end_date))
+
     eod_key = "60241295a5b4c3.00921778"
     sd = datetime.datetime.strptime(paris_now.strftime("%d%m%Y2300"), '%d%m%Y%H%M') + datetime.timedelta(-7)
     ed = datetime.datetime.strptime(paris_now.strftime("%d%m%Y2300"), '%d%m%Y%H%M') + datetime.timedelta(+1)
     start_date = sd if start_date is None else start_date
     end_date = ed if end_date is None else end_date
+
+    logger_get_price.info("dates Computed from {} to {}".format(start_date, end_date))
 
     collection_name = "real_time_prices" if type == 'real_time' else 'historical_prices'
     db_name = "asset_analytics"
@@ -182,7 +186,8 @@ def get_prices(asset_codes=[],
 
     #   logger_get_price.info(format(df.to_json(orient='records')))
 
-    logger_get_price.info("Done get_prices: {}, query : {}".format(type, query))
+    logger_get_price.info("Done get_prices: {}, query : {}: dates from {} to {}".format(type, query, start_date,
+                                                                                        end_date))
     server.close()
 
     if ret == 'json':

@@ -100,25 +100,46 @@ class StockData(Resource):
         return res, 200
 
 
-class StockPrices(Resource):
+
+stock_prices_request_parser = RequestParser(bundle_errors=False)
+
+stock_prices_request_parser.add_argument("start_date", type=str, required=False,
+                                        help="start date", default="")
+
+stock_prices_request_parser.add_argument("end_date", type=str, required=False,
+                                        help="end date", default="")
+
+
+class   StockPrices(Resource):
     # df['CustomRating'] = df.apply(lambda x: custom_rating(x['Genre'], x['Rating']), axis=1)
     def get(self, code):
 
         from asset_prices.prices import get_prices
         import datetime
         import time
-        start_time = time.time()
 
-        args = stock_universe_request_parser.parse_args()
+        args = stock_prices_request_parser.parse_args()
 
-        start_date = args['start_date']
-        end_date = args['end_date']
+        try:
+            start_date = datetime.datetime.strptime(args['start_date'], '%Y%m%d')
+        except:
+            import sys
+            print("Oops!", sys.exc_info()[0], "occurred.")
+            start_date = None
+
+        try:
+            end_date = datetime.datetime.strptime(args['end_date'], '%Y%m%d')
+        except:
+            import sys
+            print("Oops!", sys.exc_info()[0], "occurred.")
+            end_date = None
 
         start_date = (datetime.date.today() + datetime.timedelta(-7)) \
             if start_date is None else start_date
         end_date = (datetime.date.today() + datetime.timedelta(+1)) \
             if end_date is None else end_date
 
+        print(' Dates from {} to {} '.format(start_date, end_date))
         from dateutil import rrule
         df_h_p = get_prices(asset_codes=[code], ret='df',
                             start_date=datetime.datetime.combine(start_date, datetime.time.min),

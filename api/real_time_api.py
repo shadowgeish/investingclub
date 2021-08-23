@@ -43,7 +43,7 @@ async def live_stock_prices():
     from time import sleep
     from pymongo import MongoClient
     from asset_prices.prices import get_prices
-    from asset_prices.referencial import get_universe
+    from asset_prices.referencial import get_universe, get_indx_cc_fx_universe
     import pytz
 
     tz = pytz.timezone('Europe/Paris')
@@ -62,6 +62,8 @@ async def live_stock_prices():
     #ddf = pd.read_csv("../asset_prices/stock_universe.csv", sep=',', keep_default_na=False)
 
     ddf = get_universe()
+    ddf2 = get_indx_cc_fx_universe()
+    ddf = ddf.append(ddf2)
 
     ddf['full_code'] = ddf['Code'] + '.' + ddf['ExchangeCode']
     lstock = ddf['full_code'].tolist()  # ddf.to_dict(orient='records')

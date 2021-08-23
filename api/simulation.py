@@ -96,6 +96,12 @@ aa_backtest_request_parser.add_argument("Contribution", type=dict, required=Fals
 aa_backtest_request_parser.add_argument("Withdraw", type=dict, required=False,
                                         help="withdraw")
 
+aa_backtest_request_parser.add_argument("target_return", type=float, required=False,
+                                        help="target_return")
+
+aa_backtest_request_parser.add_argument("target_risk", type=float, required=False,
+                                        help="target_risk")
+
 
 class AAbacktesting(Resource):
 
@@ -105,9 +111,9 @@ class AAbacktesting(Resource):
 
         start_date = (datetime.date.today() + datetime.timedelta(-3500))
         end_date = (datetime.date.today() + datetime.timedelta(1))
-        invested_amount = args['InvestedAmount']
-        rebalancing_frequency = args['RebalancyFrequency']
-        nb_simul = args['NbSimulation']
+        invested_amount = args.get('InvestedAmount', 10000) #['InvestedAmount']
+        rebalancing_frequency = args.get('RebalancyFrequency', 'monthly') #args['RebalancyFrequency']
+        #nb_simul =  args.get('NbSimulation', '100')
 
         result = back_test_portfolio(
             initial_asset_codes_weight={"BX4.PA": 0.3, "CAC.PA": 0.4, "500.PA": 0.2, "AIR.PA": 0.1},

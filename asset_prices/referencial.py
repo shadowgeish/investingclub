@@ -136,6 +136,49 @@ def is_valid_json(obj):
     return True
 
 
+def get_indx_cc_fx_universe(name="", type=""):
+    import pandas as pd
+    from pymongo import MongoClient
+
+    collection_name = "indx_forex_cc"
+    db_name = "asset_analytics"
+    access_db = "mongodb+srv://sngoube:Yqy8kMYRWX76oiiP@cluster0.jaxrk.mongodb.net/asset_analytics?retryWrites=true&w=majority"
+    server = MongoClient(access_db)
+
+    query = {"Name": {"$regex": '/*{}/*'.format(name), "$options": 'i'},
+             "Type": {"$regex": '/*{}/*'.format(type), "$options": 'i'}
+             }
+
+    res = server[db_name][collection_name].find(query)
+
+    logger_get_ref.info("Query {}".format(query))
+
+    lres = list(res)
+
+    item_list = []
+    result = []
+    if len(lres) > 0:
+        logger_get_ref.info(' result {}'.format(lres))
+        df = pd.DataFrame(lres)
+        logger_get_ref.info(' df {}'.format(df))
+        df = df[['FullCode', 'Type', 'Name']]
+        df['Code'] = df['FullCode'].apply(lambda x: x.split('.')[0])
+        df['Country'] = ''
+        df['Currency'] = ''
+        df['ExchangeCode'] = df['FullCode'].apply(lambda x: x.split('.')[1])
+        df['logo'] = ''
+        df['ISIN'] = ''
+        df['Exchange'] = ''
+        df = df[['ISIN', 'Code', 'Name', 'Country', 'Exchange', 'Currency', 'Type', 'ExchangeCode', 'logo']]
+        # logger_get_ref.info(format(df.to_json(orient='records')))
+        server.close()
+        logger_get_ref.info(' result {}'.format(df))
+        # result = df.to_json(orient='records')
+        #result = df.to_dict(orient='records')
+        #logger_get_ref.info('json result {}'.format(result))
+    return df
+
+
 def get_universe(name="", country="", type=""):
     import pandas as pd
     from pymongo import MongoClient
@@ -160,16 +203,16 @@ def get_universe(name="", country="", type=""):
     item_list = []
     result = []
     if len(lres) > 0:
+        import os
         logger_get_ref.info(' result {}'.format(lres))
         df = pd.DataFrame(lres)
         logger_get_ref.info(' df {}'.format(df))
         df = df[['ISIN', 'Code', 'Name', 'Country', 'Exchange', 'Currency', 'Type', 'ExchangeCode', 'logo']]
+        df['logo'] = df.apply(lambda row: row['logo'] if row['Type'] not in ['ETP', 'ETF', 'ETC', 'ETN'] else 'https://devarteechadvisor.blob.core.windows.net/public-files/ETF.png', axis = 1 )
         # logger_get_ref.info(format(df.to_json(orient='records')))
         server.close()
         logger_get_ref.info(' result {}'.format(df))
-        # result = df.to_json(orient='records')
-        #result = df.to_dict(orient='records')
-        #logger_get_ref.info('json result {}'.format(result))
+
     return df
 
 

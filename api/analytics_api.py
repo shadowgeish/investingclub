@@ -87,7 +87,7 @@ api.add_resource(Subscriber, '/subscribers/<int:id>')
 api.add_resource(MonteCarloSimulation, '/montecarlo')
 api.add_resource(AAbacktesting, '/aabacktesting')
 api.add_resource(MaxDiversification, '/maximum_diversificaton')
-api.add_resource(MeanVarOptimization, '/target_return')
+api.add_resource(MeanVarOptimization, '/mean_var_opt')
 #api.add_resource(MaxDiversification, '/realestate') # real estate prices
 #api.add_resource(MonteCarloSimulation, '/lifeinsurance') # life insurance
 api.add_resource(StockUniverse, '/stock_universe') # country, type, name - OK

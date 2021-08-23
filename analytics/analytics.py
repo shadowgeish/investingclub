@@ -326,7 +326,12 @@ def back_test_portfolio(
 
     logger_get_analytics.info("Getting data --- %s seconds ---" % (time.time() - start_time))
 
+
+
     freq = get_freq(rebalancing_frequency, contribution, withdraw, 'monthly')
+
+    print('df ={}, {}, {}'.format(df_h_p,set( df_h_p['code'].tolist()), freq))
+
     # ['{}_unbalanced_weight'.format(ac) for ac in asset_codes]
     df_full = None
     dict_nb_share = dict()

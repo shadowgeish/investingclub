@@ -3,6 +3,7 @@ from flask_restful import Resource, Api
 from flask_restful.reqparse import RequestParser
 from datetime import datetime
 from analytics.analytics import monte_carlo_portfolio_simul
+from asset_prices.referencial import get_universe
 
 stock_universe_request_parser = RequestParser(bundle_errors=False)
 
@@ -32,6 +33,15 @@ class StockUniverse(Resource):
         country = args['country']
         type = args['type']
 
+        df = get_universe(name=name, country=country, type=type)
+
+        # result = df.to_json(orient='records')
+        result = df.to_dict(orient='records')
+        print('json result {}'.format(result))
+
+        return result, 200
+
+        ''' 
         collection_name = "stock_universe"
         db_name = "asset_analytics"
         access_db = "mongodb+srv://sngoube:Yqy8kMYRWX76oiiP@cluster0.jaxrk.mongodb.net/asset_analytics?retryWrites=true&w=majority"
@@ -62,6 +72,7 @@ class StockUniverse(Resource):
             print('json result {}'.format(result))
 
         return result, 200
+        '''
 
 
 class StockData(Resource):
@@ -84,20 +95,20 @@ class StockData(Resource):
         query = {"FullCode": code}
         res = server[db_name][collection_name].find_one(query, {'_id': 0 ,
                                                                  'ETF_Data.Market_Capitalisation': 0,
-                                                                 'ETF_Data.Market_Capitalisation': 0,
                                                                  'ETF_Data.Asset_Allocation': 0,
-                                                                 'ETF_Data.Sector_Weights': 0,
-                                                                 'ETF_Data.Fixed_Income': 0,
-                                                                 'ETF_Data.Valuations_Growth': 0,
-                                                                 'Technicals': 0,
-                                                                 'ETF_Data.World_Regions': 0
+                                                                 'ETF_Data.Valuations_Growth': 0
                                                                  })
 
-        res = {} if res is None else json.loads(json_util.dumps(res))
+        res2 = server[db_name]["stock_esg_data"].find_one(query, {'_id': 0})
 
-        print("Query {} and result {}".format(query, res))
+        json_res = {} if res is None else json.loads(json_util.dumps(res))
+        json_res2 = {} if res2 is None else json.loads(json_util.dumps(res2))
 
-        return res, 200
+        merged_dict = dict(json_res, **json_res2)
+
+        print("Query {} and result {}".format(query, merged_dict))
+
+        return merged_dict, 200
 
 
 

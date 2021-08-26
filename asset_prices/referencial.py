@@ -179,22 +179,40 @@ def get_indx_cc_fx_universe(name="", type=""):
     return df
 
 
-def get_universe(name="", country="", type=""):
+def get_universe(name="", country="", type="", sector=""):
     import pandas as pd
     from pymongo import MongoClient
 
 
-    collection_name = "stock_universe"
+    #collection_name = "stock_universe"
+    collection_name = "stock_data"
     db_name = "asset_analytics"
     access_db = "mongodb+srv://sngoube:Yqy8kMYRWX76oiiP@cluster0.jaxrk.mongodb.net/asset_analytics?retryWrites=true&w=majority"
     server = MongoClient(access_db)
 
-    query = {"Name": {"$regex": '/*{}/*'.format(name), "$options": 'i'},
-             "Country": {"$regex": '/*{}/*'.format(country), "$options": 'i'},
-             "Type": {"$regex": '/*{}/*'.format(type), "$options": 'i'}
+    query = {"General.Name": {"$regex": '/*{}/*'.format(name), "$options": 'i'},
+             "General.CountryName": {"$regex": '/*{}/*'.format(country), "$options": 'i'},
+             "General.Sector": {"$regex": '/*{}/*'.format(sector), "$options": 'i'},
+             "General.Type": {"$regex": '/*{}/*'.format(type), "$options": 'i'}
              }
 
-    res = server[db_name][collection_name].find(query)
+    '''
+     query = {"General.Name": {"$regex": '/*{}/*'.format(name), "$options": 'i'},
+             "Country": {"$regex": '/*{}/*'.format(country), "$options": 'i'},
+             "Type.Type": {"$regex": '/*{}/*'.format(type), "$options": 'i'}
+             }
+    '''
+
+    res = server[db_name][collection_name].find(query, {'ISIN': 1,
+                                                        'Code': 1,
+                                                        'General.Name': 1,
+                                                        'Country': 1,
+                                                        'General.Exchange': 1,
+                                                        'General.CurrencyCode': 1,
+                                                        'General.Type': 1,
+                                                        'Exchange': 1,
+                                                        'General.LogoURL': 1
+                                                        })
 
     logger_get_ref.info("Query {}".format(query))
 
@@ -203,12 +221,26 @@ def get_universe(name="", country="", type=""):
     item_list = []
     result = []
     if len(lres) > 0:
+
+        for itx in lres:
+            item_list.append({'ISIN': itx['ISIN'],
+                              'Code': itx['Code'],
+                              'Name': itx['General']['Name'],
+                              'Country':  itx['Country'],
+                              'Currency': itx['General']['CurrencyCode'],
+                              'Type': itx['General']['Type'],
+                              'ExchangeCode': itx['General']['Exchange'],
+                              'Exchange': itx['General']['Exchange'],
+                              'logo':  '{}{}'.format('https://eodhistoricaldata.com', itx['General']['LogoURL'] if itx['General']['Type'] not in ['ETP', 'ETF', 'ETC', 'ETN'] else 'https://devarteechadvisor.blob.core.windows.net/public-files/ETF.png' )
+                               }
+                             )
+
         import os
-        logger_get_ref.info(' result {}'.format(lres))
-        df = pd.DataFrame(lres)
+        logger_get_ref.info(' result {}'.format(item_list))
+        df = pd.DataFrame(item_list)
         logger_get_ref.info(' df {}'.format(df))
         df = df[['ISIN', 'Code', 'Name', 'Country', 'Exchange', 'Currency', 'Type', 'ExchangeCode', 'logo']]
-        df['logo'] = df.apply(lambda row: row['logo'] if row['Type'] not in ['ETP', 'ETF', 'ETC', 'ETN'] else 'https://devarteechadvisor.blob.core.windows.net/public-files/ETF.png', axis = 1 )
+        # df['logo'] = df.apply(lambda row: row['logo'] if row['Type'] not in ['ETP', 'ETF', 'ETC', 'ETN'] else 'https://devarteechadvisor.blob.core.windows.net/public-files/ETF.png', axis = 1 )
         # logger_get_ref.info(format(df.to_json(orient='records')))
         server.close()
         logger_get_ref.info(' result {}'.format(df))
@@ -273,19 +305,14 @@ def load_equity_etf_list():
 
             stock_data = remove_special_car(stock_data)
             stock_data_list.append(stock_data)
-            stock['logo'] = 'https://eodhistoricaldata.com/img/logos/LSE/IAG.png' # default logo
+            stock['logo'] = '' # default logo
             stock['Market_Open'] = '9am -5pm CET'
             stock['Asset_class'] = 'Equity, France Equity, Eu Equity'
-            stock['ESG_Rating'] = 800
-            stock['ESG_Rating_level'] = 'BBB'
-            stock['ESG_Rating_trend'] = 'Improvement'
-            stock['ESG_Rating_trend_figure'] = '9.31'
-            stock['ESG_E'] = 300
-            stock['ESG_S'] = 300
-            stock['ESG_G'] = 300
 
             if 'LogoURL' in stock_data['General'].keys():
-                stock['logo'] = '{}/{}'.format('https://eodhistoricaldata.com',stock_data['General']['LogoURL'])
+                stock['logo'] = '{}{}'.format('https://eodhistoricaldata.com',stock_data['General']['LogoURL'])
+                stock['logo'] = stock['logo'] if stock['Type'] not in ['ETP', 'ETF', 'ETC','ETN']\
+                                    else 'https://devarteechadvisor.blob.core.windows.net/public-files/ETF.png'
 
             stock_data = add_translation(stock_data, field='Description',
                                          llg=['de', 'it', 'fr', 'es', 'nl', 'en'])

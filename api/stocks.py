@@ -32,8 +32,9 @@ class StockUniverse(Resource):
         name = args['name']
         country = args['country']
         type = args['type']
+        sector = args['sector']
 
-        df = get_universe(name=name, country=country, type=type)
+        df = get_universe(name=name, country=country, type=type, sector=sector)
 
         # result = df.to_json(orient='records')
         result = df.to_dict(orient='records')

@@ -16,6 +16,9 @@ stock_universe_request_parser.add_argument("country", type=str, required=False,
 stock_universe_request_parser.add_argument("type", type=int, required=False,
                                         help="type", default="")
 
+stock_universe_request_parser.add_argument("sector", type=int, required=False,
+                                        help="sector", default="")
+
 
 class StockUniverse(Resource):
     # df['CustomRating'] = df.apply(lambda x: custom_rating(x['Genre'], x['Rating']), axis=1)

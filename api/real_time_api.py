@@ -50,6 +50,7 @@ async def live_stock_prices():
 
     tz = pytz.timezone('Europe/Paris')
     paris_now = datetime.now(tz)
+    last_check_now = datetime.now(tz)
 
     collection_name = "real_time_prices"
     db_name = "asset_analytics"
@@ -88,8 +89,9 @@ async def live_stock_prices():
         list_to_order = []
         for sublist in stringlist:
             list_closing_prices = []
-            logger_rtapi.info('Date check {} < {} < {} '.format(dtt_s, dtt, dtt_e))
-            if dtt_s < dtt < dtt_e:
+            sec = (last_check_now - datetime.now(tz)).seconds
+            logger_rtapi.info('Date check {} < {} < {} and {} sec '.format(dtt_s, dtt, dtt_e, sec))
+            if dtt_s < dtt < dtt_e and sec >= 300:
                 logger_rtapi.info('Getting data for sub string {}'.format(sublist))
                 sreq = "https://eodhistoricaldata.com/api/real-time/CAC.PA?api_token=60241295a5b4c3.00921778&fmt=json&s={}"
 
@@ -101,6 +103,7 @@ async def live_stock_prices():
                 try:
                     list_closing_prices = json.loads(data)
                 except ValueError as e:
+                    list_closing_prices = []
                     logger_rtapi.warning('Error loading data {} '.format(data))
 
 
@@ -108,10 +111,10 @@ async def live_stock_prices():
             # print('Reveived data {}, {}'.format(sublist, list_closing_prices))
             # Real time prices
 
-            if real_time_price is None:
+            if real_time_price is None or dtt_s > dtt > dtt_e :
                 real_time_price = dict()
 
-            if len(list_to_order) > 0:
+            if len(list_closing_prices) > 0:
                 for price in list_closing_prices:
                     code = price['code']
                     key = price['code']  # + '_' + request_day
@@ -167,25 +170,24 @@ async def live_stock_prices():
                         list_data = {'code': code, 'prices': dicrtd}
                         sio.emit('intraday_prices', list_data)
 
-            if len(list_to_order) > 0:
-                dic_to_order = pd.DataFrame(list_to_order)
-                dic_to_order = dic_to_order[['code','volume','timestamp']]
-                dic_to_order = dic_to_order[dic_to_order['timestamp'] != 'NA']
-                logger_rtapi.info('dic_to_order {}'.format(dic_to_order))
+        if len(list_to_order) > 0:
+            dic_to_order = pd.DataFrame(list_to_order)
+            dic_to_order = dic_to_order[['code','volume','timestamp']]
+            dic_to_order = dic_to_order[dic_to_order['timestamp'] != 'NA']
+            logger_rtapi.info('dic_to_order {}'.format(dic_to_order))
 
-                dic_to_order = dic_to_order.sort_values(by=['volume'], ascending=False).reset_index()
-                dic_to_order['order'] = dic_to_order.index
-                dic_to_order = dic_to_order[['code', 'volume', 'timestamp', 'order']]
-                await sio.emit('intraday_trending_stocks', dic_to_order.to_json(orient='records'))
-                logger_rtapi.info('col ={}, Dicts = {}'.format(dic_to_order.columns, dic_to_order))
+            dic_to_order = dic_to_order.sort_values(by=['volume'], ascending=False).reset_index()
+            dic_to_order['order'] = dic_to_order.index
+            dic_to_order = dic_to_order[['code', 'volume', 'timestamp', 'order']]
+            await sio.emit('intraday_trending_stocks', dic_to_order.to_json(orient='records'))
+            logger_rtapi.info('col ={}, Dicts = {}'.format(dic_to_order.columns, dic_to_order))
 
             logger_rtapi.info('Start Sleep 300s... ')
-            await sio.sleep(300)
-            logger_rtapi.info('End Sleep 300s... ')
+            last_check_now = datetime.now(tz)
+            #await sio.sleep(300)
+            #logger_rtapi.info('End Sleep 300s... ')
 
-        else:
-            logger_rtapi.info('Date check {} < {} < {} is false '.format(dtt_s, dtt, dtt_e))
-            real_time_price = dict()
+
 
 
 sio.event

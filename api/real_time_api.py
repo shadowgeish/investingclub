@@ -45,6 +45,8 @@ async def live_stock_prices():
     from asset_prices.prices import get_prices
     from asset_prices.referencial import get_universe, get_indx_cc_fx_universe
     import pytz
+    import requests
+    import json
 
     tz = pytz.timezone('Europe/Paris')
     paris_now = datetime.now(tz)
@@ -57,6 +59,8 @@ async def live_stock_prices():
     dtt = paris_now
     dtt_s = datetime(year=dtt.year, month=dtt.month, day=dtt.day, hour=00, minute = 0, tzinfo=tz)
     dtt_e = datetime(year=dtt.year, month=dtt.month, day=dtt.day, hour=23, minute=00, tzinfo=tz)
+    start_date = datetime.strptime(paris_now.strftime("%d%m%Y0700"), '%d%m%Y%H%M')
+    end_date = datetime.strptime(paris_now.strftime("%d%m%Y2300"), '%d%m%Y%H%M')
 
     logger_rtapi.info('Date check {} < {} < {} '.format(dtt_s, dtt, dtt_e))
     #ddf = pd.read_csv("../asset_prices/stock_universe.csv", sep=',', keep_default_na=False)
@@ -68,7 +72,7 @@ async def live_stock_prices():
     ddf['full_code'] = ddf['Code'] + '.' + ddf['ExchangeCode']
     lstock = ddf['full_code'].tolist()  # ddf.to_dict(orient='records')
 
-    lstock = lstock[0:20]
+    #lstock = lstock[0:20]
     sublists = [lstock[x:x + 20] for x in range(0, len(lstock), 20)]
     stringlist = []
     global real_time_price
@@ -77,33 +81,37 @@ async def live_stock_prices():
 
     # sio.emit('login', {'userKey': 'streaming_api_key'})
     from aiohttp import ClientSession
+    logger_rtapi.info('Date check {} < {} < {} '.format(dtt_s, dtt, dtt_e))
     session = ClientSession()
     while True:
 
-        if dtt_s < dtt < dtt_e:
-
+        list_to_order = []
+        for sublist in stringlist:
+            list_closing_prices = []
             logger_rtapi.info('Date check {} < {} < {} '.format(dtt_s, dtt, dtt_e))
-             
-            import pandas as pd
-            import requests
-            import json
-            list_to_order = []
-            for sublist in stringlist:
+            if dtt_s < dtt < dtt_e:
                 logger_rtapi.info('Getting data for sub string {}'.format(sublist))
                 sreq = "https://eodhistoricaldata.com/api/real-time/CAC.PA?api_token=60241295a5b4c3.00921778&fmt=json&s={}"
-                list_closing_prices = []
 
                 async with session.get(sreq.format(sublist)) as response:
-                    list_closing_prices = await response.json()
+
+                    data = await response.read()
+                    #list_closing_prices = await response.json(content_type=None)
+
+                try:
+                    list_closing_prices = json.loads(data)
+                except ValueError as e:
+                    logger_rtapi.warning('Error loading data {} '.format(data))
 
 
-                #list_closing_prices = req.json()
-                # print('Reveived data {}, {}'.format(sublist, list_closing_prices))
-                # Real time prices
+            #list_closing_prices = req.json()
+            # print('Reveived data {}, {}'.format(sublist, list_closing_prices))
+            # Real time prices
 
-                if real_time_price is None:
-                    real_time_price = dict()
+            if real_time_price is None:
+                real_time_price = dict()
 
+            if len(list_to_order) > 0:
                 for price in list_closing_prices:
                     code = price['code']
                     key = price['code']  # + '_' + request_day
@@ -120,8 +128,6 @@ async def live_stock_prices():
                         real_time_price[key] = list()
                         # read from db if there is historic for the day to real_time_price
                         # READ DATA BASE
-                        start_date = datetime.strptime(paris_now.strftime("%d%m%Y0700"), '%d%m%Y%H%M')
-                        end_date = datetime.strptime(paris_now.strftime("%d%m%Y2300"), '%d%m%Y%H%M')
                         lk = [key]
                         logger_rtapi.info('start_date = {}, end_date = {}'.format(start_date, end_date))
                         rt_price_df = get_prices(asset_codes=lk, start_date=start_date, end_date=end_date,
@@ -151,22 +157,34 @@ async def live_stock_prices():
                     list_data = {'code': key, 'prices': real_time_price[key]}
                     # print('Data chech  {} : is {}'.format(is_serializable(list_data), list_data))
                     await sio.emit('intraday_prices', list_data)
+            else:
+                logger_rtapi.info('start_date = {}, end_date = {}, list = {}'.format(start_date, end_date, sublist))
+                for code in sublist:
+                    rt_price_df = get_prices(asset_codes=[code], start_date=start_date, end_date=end_date, type='real_time', ret='df')
+                    dicrtd = rt_price_df.to_dict(orient='records')
+                    logger_rtapi.info('Already loaded data {}'.format(dicrtd))
+                    if len(dicrtd) > 0:
+                        list_data = {'code': code, 'prices': dicrtd}
+                        sio.emit('intraday_prices', list_data)
 
+            if len(list_to_order) > 0:
+                dic_to_order = pd.DataFrame(list_to_order)
+                dic_to_order = dic_to_order[['code','volume','timestamp']]
+                dic_to_order = dic_to_order[dic_to_order['timestamp'] != 'NA']
+                logger_rtapi.info('dic_to_order {}'.format(dic_to_order))
 
-            dic_to_order = pd.DataFrame(list_to_order)
-            dic_to_order = dic_to_order[['code','volume','timestamp']]
-            dic_to_order = dic_to_order[dic_to_order['timestamp'] != 'NA']
-            logger_rtapi.info('dic_to_order {}'.format(dic_to_order))
+                dic_to_order = dic_to_order.sort_values(by=['volume'], ascending=False).reset_index()
+                dic_to_order['order'] = dic_to_order.index
+                dic_to_order = dic_to_order[['code', 'volume', 'timestamp', 'order']]
+                await sio.emit('intraday_trending_stocks', dic_to_order.to_json(orient='records'))
+                logger_rtapi.info('col ={}, Dicts = {}'.format(dic_to_order.columns, dic_to_order))
 
-            dic_to_order = dic_to_order.sort_values(by=['volume'], ascending=False).reset_index()
-            dic_to_order['order'] = dic_to_order.index
-            dic_to_order = dic_to_order[['code', 'volume', 'timestamp', 'order']]
-            await sio.emit('intraday_trending_stocks', dic_to_order.to_json(orient='records'))
-            logger_rtapi.info('col ={}, Dicts = {}'.format(dic_to_order.columns, dic_to_order))
+            logger_rtapi.info('Start Sleep 300s... ')
+            await sio.sleep(300)
+            logger_rtapi.info('End Sleep 300s... ')
 
-            await sio.sleep(10)
-        
         else:
+            logger_rtapi.info('Date check {} < {} < {} is false '.format(dtt_s, dtt, dtt_e))
             real_time_price = dict()
 
 

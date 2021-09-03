@@ -125,7 +125,119 @@ stock_prices_request_parser.add_argument("end_date", type=str, required=False,
                                         help="end date", default="")
 
 
-class   StockPrices(Resource):
+
+intraday_stock_prices_request_parser = RequestParser(bundle_errors=False)
+
+intraday_stock_prices_request_parser.add_argument("timestamp", type=int, required=False,
+                                        help="timestamp", default=0)
+
+intraday_stock_prices_request_parser.add_argument("gmtoffset", type=int, required=False,
+                                        help="gmtoffset", default=0)
+
+intraday_stock_prices_request_parser.add_argument("open", type=float, required=False,
+                                        help="open", default=0)
+
+intraday_stock_prices_request_parser.add_argument("high", type=float, required=False,
+                                        help="high", default=0)
+
+intraday_stock_prices_request_parser.add_argument("low", type=float, required=False,
+                                        help="low", default=0)
+
+intraday_stock_prices_request_parser.add_argument("close", type=float, required=False,
+                                        help="close", default=0)
+
+intraday_stock_prices_request_parser.add_argument("volume", type=int, required=False,
+                                        help="volume", default=0)
+
+intraday_stock_prices_request_parser.add_argument("previousClose", type=float, required=False,
+                                        help="previousClose", default=0)
+
+intraday_stock_prices_request_parser.add_argument("change", type=float, required=False,
+                                        help="change", default=0)
+
+intraday_stock_prices_request_parser.add_argument("change_p", type=float, required=False,
+                                        help="change_p", default=0)
+
+intraday_stock_prices_request_parser.add_argument("converted_date", type=int, required=False,
+                                        help="converted_date", default=0)
+
+intraday_stock_prices_request_parser.add_argument("date", type=float, required=False,
+                                        help="date", default="")
+
+
+class IntradayStockPrices(Resource):
+    # df['CustomRating'] = df.apply(lambda x: custom_rating(x['Genre'], x['Rating']), axis=1)
+    def get(self, code):
+
+        from asset_prices.prices import get_prices
+        from datetime import datetime
+        import pytz
+
+        tz = pytz.timezone('Europe/Paris')
+        paris_now = datetime.now(tz)
+        last_check_now = datetime.now(tz)
+        dtt = paris_now
+        start_date = datetime.strptime(paris_now.strftime("%d%m%Y0700"), '%d%m%Y%H%M')
+        end_date = datetime.strptime(paris_now.strftime("%d%m%Y2300"), '%d%m%Y%H%M')
+
+        rt_price_df = get_prices(asset_codes=[code], start_date=start_date, end_date=end_date,
+                                type='real_time', ret='df')
+
+        result = rt_price_df.to_dict(orient='records')
+        print('Real time data {}'.format(rt_price_df))
+
+        print('json result {}'.format(result))
+
+        return result, 200
+
+class PushIntradayStockPrices(Resource):
+    # df['CustomRating'] = df.apply(lambda x: custom_rating(x['Genre'], x['Rating']), axis=1)
+    def get(self, code):
+
+        from asset_prices.prices import get_prices, update_prices
+        from datetime import datetime
+        import pytz
+
+        tz = pytz.timezone('Europe/Paris')
+        paris_now = datetime.now(tz)
+        last_check_now = datetime.now(tz)
+        dtt = paris_now
+        start_date = datetime.strptime(paris_now.strftime("%d%m%Y0700"), '%d%m%Y%H%M')
+        end_date = datetime.strptime(paris_now.strftime("%d%m%Y2300"), '%d%m%Y%H%M')
+
+        args = intraday_stock_prices_request_parser.parse_args()
+
+        price ={
+            "code": code,
+            "timestamp": args["timestamp"],
+            "gmtoffset": args["gmtoffset"],
+            "open": args["open"],
+            "high": args["high"],
+            "low": args["low"],
+            "close": args["close"],
+            "volume": args["volume"],
+            "previousClose": args["previousClose"],
+            "change": args["change"],
+            "change_p": args["change_p"],
+            "converted_date": args["converted_date"],
+            "date": args["date"]
+        }
+        print('Price {}'.format(price))
+
+        update_prices(asset_code=code, price=price, type='real_time')
+
+        rt_price_df = get_prices(asset_codes=[code], start_date=start_date, end_date=end_date,
+                                type='real_time', ret='df')
+
+        result = rt_price_df.to_dict(orient='records')
+        print('Real time data {}'.format(rt_price_df))
+
+        print('json result {}'.format(result))
+
+        return result, 200
+
+
+class StockPrices(Resource):
     # df['CustomRating'] = df.apply(lambda x: custom_rating(x['Genre'], x['Rating']), axis=1)
     def get(self, code):
 

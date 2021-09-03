@@ -48,15 +48,16 @@ async def live_stock_prices():
     import requests
     import json
 
-    tz = pytz.timezone('Europe/Paris')
-    paris_now = datetime.now(tz)
-    last_check_now = datetime.now(tz)
+
 
     collection_name = "real_time_prices"
     db_name = "asset_analytics"
     access_db = "mongodb+srv://sngoube:Yqy8kMYRWX76oiiP@cluster0.jaxrk.mongodb.net/asset_analytics?retryWrites=true&w=majority"
     server = MongoClient(access_db)
 
+    tz = pytz.timezone('Europe/Paris')
+    paris_now = datetime.now(tz)
+    last_check_now = datetime.now(tz)
     dtt = paris_now
     dtt_s = datetime(year=dtt.year, month=dtt.month, day=dtt.day, hour=00, minute = 0, tzinfo=tz)
     dtt_e = datetime(year=dtt.year, month=dtt.month, day=dtt.day, hour=23, minute=00, tzinfo=tz)
@@ -84,22 +85,22 @@ async def live_stock_prices():
     from aiohttp import ClientSession
     logger_rtapi.info('Date check {} < {} < {} '.format(dtt_s, dtt, dtt_e))
     session = ClientSession()
-    while True:
 
+
+    while True:
         list_to_order = []
         for sublist in stringlist:
             list_closing_prices = []
             sec = (last_check_now - datetime.now(tz)).seconds
             logger_rtapi.info('Date check {} < {} < {} and {} sec '.format(dtt_s, dtt, dtt_e, sec))
             if dtt_s < dtt < dtt_e and sec >= 300:
+                last_check_now = datetime.now(tz)
                 logger_rtapi.info('Getting data for sub string {}'.format(sublist))
                 sreq = "https://eodhistoricaldata.com/api/real-time/CAC.PA?api_token=60241295a5b4c3.00921778&fmt=json&s={}"
 
                 async with session.get(sreq.format(sublist)) as response:
-
                     data = await response.read()
                     #list_closing_prices = await response.json(content_type=None)
-
                 try:
                     list_closing_prices = json.loads(data)
                 except ValueError as e:
@@ -111,10 +112,11 @@ async def live_stock_prices():
             # print('Reveived data {}, {}'.format(sublist, list_closing_prices))
             # Real time prices
 
-            if real_time_price is None or dtt_s > dtt > dtt_e :
+            if real_time_price is None or dtt_s > dtt > dtt_e:
                 real_time_price = dict()
 
             if len(list_closing_prices) > 0:
+
                 for price in list_closing_prices:
                     code = price['code']
                     key = price['code']  # + '_' + request_day
@@ -124,51 +126,44 @@ async def live_stock_prices():
                     await sio.emit('last_traded_price', price)
                     list_to_order.append(price)
 
-
-                    # push to the data price base for that code
-                    # DATA BASE
-                    if key not in real_time_price.keys():
-                        real_time_price[key] = list()
-                        # read from db if there is historic for the day to real_time_price
-                        # READ DATA BASE
-                        lk = [key]
-                        logger_rtapi.info('start_date = {}, end_date = {}'.format(start_date, end_date))
-                        rt_price_df = get_prices(asset_codes=lk, start_date=start_date, end_date=end_date,
-                                                 type='real_time', ret='df')
-                        real_time_price[key] = rt_price_df.to_dict(orient='records')
-                        logger_rtapi.info('Already loaded data {}'.format(rt_price_df))
-
-                    current_list = real_time_price[key]
-                    exists = 0
-                    for item in current_list:
-                        if item['timestamp'] == price['timestamp']:
-                            exists = 1
-                            break
-                    if exists == 0 and price['timestamp'] != 'NA':
-                        # Add each item of the list if doesn't exist
+                    if price['timestamp'] != 'NA':
                         price['converted_date'] = price['timestamp']
-
-                        logger_rtapi.info('Price {}'.format(price))
-
                         price['date'] = datetime.fromtimestamp(price['timestamp']).strftime("%d-%m-%Y %H:%M:%S.%f")
 
-                        server[db_name][collection_name].update_one({"code": key}, {"$addToSet": {
-                            "prices": price}}, upsert=True)
-                        real_time_price[key].append(price)
+                        sreq = "http://localhost:5001/api/v1/load_intraday_stock_prices/{}?timestamp={}&gmtoffset={}&open={}&high={}&low={}&close={}&volume={}&previousClose={}&change={}&change_p={}&converted_date={}&date={}"
 
-                    # push the json array of the day to the socket
-                    list_data = {'code': key, 'prices': real_time_price[key]}
-                    # print('Data chech  {} : is {}'.format(is_serializable(list_data), list_data))
-                    await sio.emit('intraday_prices', list_data)
+                        async with session.get(sreq.format(code,price['timestamp'], price['gmtoffset'], price['open'],
+                                                           price['high'], price['low'], price['close'],
+                                                           price['volume'], price['previousClose'],price['change'],
+                                                           price['change_p'],price['converted_date'] ,price['date'])) \
+                                as response:
+                            data = await response.read()
+                            # stock_prices = await response.json(content_type=None)
+                        try:
+                            stock_prices = json.loads(data)
+                            real_time_price[key] = stock_prices
+                            list_data = {'code': key, 'prices': stock_prices}
+                            await sio.emit('intraday_prices', list_data)
+                        except ValueError as e:
+                            stock_prices = []
+                            logger_rtapi.warning('Error loading data {} '.format(data))
+
             else:
                 logger_rtapi.info('start_date = {}, end_date = {}, list = {}'.format(start_date, end_date, sublist))
-                for code in sublist:
-                    rt_price_df = get_prices(asset_codes=[code], start_date=start_date, end_date=end_date, type='real_time', ret='df')
-                    dicrtd = rt_price_df.to_dict(orient='records')
-                    logger_rtapi.info('Already loaded data {}'.format(dicrtd))
-                    if len(dicrtd) > 0:
-                        list_data = {'code': code, 'prices': dicrtd}
-                        sio.emit('intraday_prices', list_data)
+                slist = sublist.split(',')
+                for code in slist:
+                    sreq = "http://localhost:5001/api/v1/intraday_stock_prices/{}"
+                    logger_rtapi.info('Get data {} '.format(sreq.format(code)))
+                    async with session.get(sreq.format(code)) as response:
+                        data = await response.read()
+                    try:
+                        stock_prices = json.loads(data)
+                        real_time_price[code] = stock_prices
+                        list_data = {'code': code, 'prices': stock_prices}
+                        await sio.emit('intraday_prices', list_data)
+                    except ValueError as e:
+                        logger_rtapi.warning('Error loading data {} '.format(data))
+
 
         if len(list_to_order) > 0:
             dic_to_order = pd.DataFrame(list_to_order)
@@ -181,12 +176,6 @@ async def live_stock_prices():
             dic_to_order = dic_to_order[['code', 'volume', 'timestamp', 'order']]
             await sio.emit('intraday_trending_stocks', dic_to_order.to_json(orient='records'))
             logger_rtapi.info('col ={}, Dicts = {}'.format(dic_to_order.columns, dic_to_order))
-
-            logger_rtapi.info('Start Sleep 300s... ')
-            last_check_now = datetime.now(tz)
-            #await sio.sleep(300)
-            #logger_rtapi.info('End Sleep 300s... ')
-
 
 
 

@@ -203,6 +203,19 @@ def load_historical_data(asset_ticker=None, full_available_history=False,
     server.close()
 
 
+def update_prices(asset_code=None, price=None, type='real_time'):
+    import pandas as pd
+    import requests
+    from pymongo import MongoClient
+    import json
+    import datetime
+    import pytz
+
+    collection_name = "real_time_prices" if type == 'real_time' else 'historical_prices'
+    db_name = "asset_analytics"
+
+    server[db_name][collection_name].update_one({"code": key}, {"$addToSet": {
+        "prices": price}}, upsert=True)
 
 # return historical/real time data for one or a list of codes example code : "BX4.PA"
 # usage get_historical_data(asset_codes="BX4.PA")  returns 1 week history for code BX4.PA

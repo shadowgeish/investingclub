@@ -130,7 +130,7 @@ async def live_stock_prices():
                         price['converted_date'] = price['timestamp']
                         price['date'] = datetime.fromtimestamp(price['timestamp']).strftime("%d-%m-%Y %H:%M:%S.%f")
 
-                        sreq = "http://localhost:5001/api/v1/load_intraday_stock_prices/{}?timestamp={}&gmtoffset={}&open={}&high={}&low={}&close={}&volume={}&previousClose={}&change={}&change_p={}&converted_date={}&date={}"
+                        sreq = "http://52.14.177.160:5001/api/v1/load_intraday_stock_prices/{}?timestamp={}&gmtoffset={}&open={}&high={}&low={}&close={}&volume={}&previousClose={}&change={}&change_p={}&converted_date={}&date={}"
 
                         async with session.get(sreq.format(code,price['timestamp'], price['gmtoffset'], price['open'],
                                                            price['high'], price['low'], price['close'],
@@ -152,7 +152,7 @@ async def live_stock_prices():
                 logger_rtapi.info('start_date = {}, end_date = {}, list = {}'.format(start_date, end_date, sublist))
                 slist = sublist.split(',')
                 for code in slist:
-                    sreq = "http://localhost:5001/api/v1/intraday_stock_prices/{}"
+                    sreq = "http://52.14.177.160:5001/api/v1/intraday_stock_prices/{}"
                     logger_rtapi.info('Get data {} '.format(sreq.format(code)))
                     async with session.get(sreq.format(code)) as response:
                         data = await response.read()

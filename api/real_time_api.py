@@ -49,8 +49,8 @@ async def live_stock_prices():
     import json
 
 
-    #server_run = '52.14.177.160' # localhost
-    server_run = 'localhost'  # localhost
+    server_run = '52.14.177.160' # localhost
+    #server_run = 'localhost'  # localhost
     collection_name = "real_time_prices"
     db_name = "asset_analytics"
     access_db = "mongodb+srv://sngoube:Yqy8kMYRWX76oiiP@cluster0.jaxrk.mongodb.net/asset_analytics?retryWrites=true&w=majority"

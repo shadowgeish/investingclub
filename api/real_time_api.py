@@ -132,12 +132,13 @@ async def live_stock_prices():
                         price['date'] = datetime.fromtimestamp(price['timestamp']).strftime("%d-%m-%Y %H:%M:%S.%f")
 
                         sreq = "http://{}:5001/api/v1/load_intraday_stock_prices/{}?timestamp={}&gmtoffset={}&open={}&high={}&low={}&close={}&volume={}&previousClose={}&change={}&change_p={}&converted_date={}&date={}"
-
-                        async with session.get(sreq.format(server_run, code, price['timestamp'], price['gmtoffset'], price['open'],
+                        str_req = sreq.format(server_run, code, price['timestamp'], price['gmtoffset'], price['open'],
                                                            price['high'], price['low'], price['close'],
                                                            price['volume'], price['previousClose'],price['change'],
-                                                           price['change_p'],price['converted_date'] ,price['date'])) \
-                                as response:
+                                                           price['change_p'],price['converted_date'] ,price['date'])
+
+                        logger_rtapi.info('Loading for coce {}, {}'.format(code, str_req))
+                        async with session.get(str_req) as response:
                             data = await response.read()
                             # stock_prices = await response.json(content_type=None)
                         try:
@@ -145,6 +146,7 @@ async def live_stock_prices():
                             real_time_price[key] = stock_prices
                             list_data = {'code': key, 'prices': stock_prices}
                             await sio.emit('intraday_prices', list_data)
+                            logger_rtapi.info('Seding intraday_prices {}, {}'.format(code, list_data))
                         except ValueError as e:
                             stock_prices = []
                             logger_rtapi.warning('Error loading data {} '.format(data))

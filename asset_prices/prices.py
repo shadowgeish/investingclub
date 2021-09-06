@@ -214,7 +214,10 @@ def update_prices(asset_code=None, price=None, type='real_time'):
     collection_name = "real_time_prices" if type == 'real_time' else 'historical_prices'
     db_name = "asset_analytics"
 
-    server[db_name][collection_name].update_one({"code": key}, {"$addToSet": {
+    access_db = "mongodb+srv://sngoube:Yqy8kMYRWX76oiiP@cluster0.jaxrk.mongodb.net/asset_analytics?retryWrites=true&w=majority"
+    server = MongoClient(access_db)
+
+    server[db_name][collection_name].update_one({"code": asset_code}, {"$addToSet": {
         "prices": price}}, upsert=True)
 
 # return historical/real time data for one or a list of codes example code : "BX4.PA"
@@ -224,6 +227,7 @@ def get_prices(asset_codes=[],
                         start_date=None,
                         end_date=None,
                         type='historical',
+                        ret_code=0, # json, df
                         ret='json' # json, df
                         ):
     import pandas as pd
@@ -255,23 +259,43 @@ def get_prices(asset_codes=[],
     list_stocks = asset_codes if isinstance(asset_codes, list) else [asset_codes]
     sdate = start_date.timestamp()
     edate = end_date.timestamp()
-    query = [
-        {"$match": {"code": {"$in": list_stocks } }},
-        {"$project": {"prices":
-            {
-                "$filter": {
-                    "input": "$prices",
-                    "as": "price",
-                    "cond": {
-                        "$and": [
-                            {"$gte": ["$$price.converted_date", sdate]},
-                            {"$lte": ["$$price.converted_date", edate]}
-                        ]
+    if ret_code == 1:
+        query = [
+            {"$match": {"code": {"$in": list_stocks}}},
+            {"$project": {"prices":
+                {
+                    "$filter": {
+                        "input": "$prices",
+                        "as": "price",
+                        "cond": {
+                            "$and": [
+                                {"$gte": ["$$price.converted_date", sdate]},
+                                {"$lte": ["$$price.converted_date", edate]}
+                            ]
+                        }
+                    }
+                },
+                "code": ret_code
+            }
+            }]
+    else:
+        query = [
+            {"$match": {"code": {"$in": list_stocks}}},
+            {"$project": {"prices":
+                {
+                    "$filter": {
+                        "input": "$prices",
+                        "as": "price",
+                        "cond": {
+                            "$and": [
+                                {"$gte": ["$$price.converted_date", sdate]},
+                                {"$lte": ["$$price.converted_date", edate]}
+                            ]
+                        }
                     }
                 }
             }
-        }
-        }]
+            }]
     res = server[db_name][collection_name].aggregate(query)
     #1612738806575.399
     #1613088000000

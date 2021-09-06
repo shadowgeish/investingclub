@@ -131,6 +131,13 @@ intraday_stock_prices_request_parser = RequestParser(bundle_errors=False)
 intraday_stock_prices_request_parser.add_argument("timestamp", type=int, required=False,
                                         help="timestamp", default=0)
 
+
+
+
+
+
+
+
 intraday_stock_prices_request_parser.add_argument("gmtoffset", type=int, required=False,
                                         help="gmtoffset", default=0)
 
@@ -161,13 +168,13 @@ intraday_stock_prices_request_parser.add_argument("change_p", type=float, requir
 intraday_stock_prices_request_parser.add_argument("converted_date", type=int, required=False,
                                         help="converted_date", default=0)
 
-intraday_stock_prices_request_parser.add_argument("date", type=float, required=False,
+intraday_stock_prices_request_parser.add_argument("date", type=str, required=False,
                                         help="date", default="")
 
 
 class IntradayStockPrices(Resource):
     # df['CustomRating'] = df.apply(lambda x: custom_rating(x['Genre'], x['Rating']), axis=1)
-    def get(self, code):
+    def get(self, codes):
 
         from asset_prices.prices import get_prices
         from datetime import datetime
@@ -179,9 +186,9 @@ class IntradayStockPrices(Resource):
         dtt = paris_now
         start_date = datetime.strptime(paris_now.strftime("%d%m%Y0700"), '%d%m%Y%H%M')
         end_date = datetime.strptime(paris_now.strftime("%d%m%Y2300"), '%d%m%Y%H%M')
-
-        rt_price_df = get_prices(asset_codes=[code], start_date=start_date, end_date=end_date,
-                                type='real_time', ret='df')
+        codes_list = codes.split(',')
+        rt_price_df = get_prices(asset_codes=codes_list, start_date=start_date, end_date=end_date,
+                                type='real_time',ret_code=1, ret='df')
 
         result = rt_price_df.to_dict(orient='records')
         print('Real time data {}'.format(rt_price_df))
@@ -189,6 +196,7 @@ class IntradayStockPrices(Resource):
         print('json result {}'.format(result))
 
         return result, 200
+
 
 class PushIntradayStockPrices(Resource):
     # df['CustomRating'] = df.apply(lambda x: custom_rating(x['Genre'], x['Rating']), axis=1)
@@ -198,6 +206,7 @@ class PushIntradayStockPrices(Resource):
         from datetime import datetime
         import pytz
 
+
         tz = pytz.timezone('Europe/Paris')
         paris_now = datetime.now(tz)
         last_check_now = datetime.now(tz)
@@ -205,7 +214,17 @@ class PushIntradayStockPrices(Resource):
         start_date = datetime.strptime(paris_now.strftime("%d%m%Y0700"), '%d%m%Y%H%M')
         end_date = datetime.strptime(paris_now.strftime("%d%m%Y2300"), '%d%m%Y%H%M')
 
-        args = intraday_stock_prices_request_parser.parse_args()
+        #CAC.PA?timestamp = 1630932780 & gmtoffset = 0 & open = 65.94 & high = 66.33 & low = 65.94 & close = 66.33 & volume = 11065 & previousClose = 65.75 & change = 0.58 & change_p = 0.8821 & converted_date = 1630932780 & date = 06 - 0
+        #9 - 2021 % 2014: 53:00.000000
+
+        try:
+            args = intraday_stock_prices_request_parser.parse_args()
+        except:
+            import sys
+            return {'error': '{}'.format(sys.exc_info()[0])}, 200
+            print("Oops!", sys.exc_info()[0], "occurred.")
+
+
 
         price ={
             "code": code,
@@ -233,6 +252,7 @@ class PushIntradayStockPrices(Resource):
         print('Real time data {}'.format(rt_price_df))
 
         print('json result {}'.format(result))
+
 
         return result, 200
 

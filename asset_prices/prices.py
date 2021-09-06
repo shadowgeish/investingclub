@@ -54,19 +54,19 @@ def load_stock_historical_data(stock=None, start_date =None,end_date = None, eod
 
     collection_name = "historical_prices"
     db_name = "asset_analytics"
+    collection_name_stock = "stock_data"
     # https://eodhistoricaldata.com/api/eod/BX4.PA?from=2020-01-05&to=2020-02-10&api_token=60241295a5b4c3.00921778&period=d
     #
     access_db = "mongodb+srv://sngoube:Yqy8kMYRWX76oiiP@cluster0.jaxrk.mongodb.net/asset_analytics?retryWrites=true&w=majority"
     server = MongoClient(access_db)
 
-    collection_handler = server[db_name][collection_name]
+    collection_handler = server[db_name][collection_name_stock]
     try:
         list_closing_prices = req.json()
     except:
         logger_get_price.warn('Error: stock = {}, start_date = {} end_date= {} eod_key = {} , req = {}  '.format(stock, start_date, end_date,
                                                                                            eod_key, req))
         return
-
 
     if isinstance(list_closing_prices, dict):
         list_closing_prices = [] if 'errors' in list_closing_prices else [list_closing_prices]
@@ -85,28 +85,36 @@ def load_stock_historical_data(stock=None, start_date =None,end_date = None, eod
 
     list_closing_prices = json.loads(ddf.to_json(orient='records'))
 
-    stock_data = {"code": stock,
+    stock_data = {"FullCode": stock,
                   "prices": list_closing_prices
                   }
 
-    if full_available_history is True:
-        collection_handler.delete_one({"code": stock})
-        collection_handler.insert_one(stock_data)
-        logger_get_price.info("full load for {} completed!".format(stock))
-    else:
-        # dd = server[db_name][collection_name].update_many({"code": stock}, {"$addToSet": {
-        #    "prices": {"volume": 10000000, "date": "2021-02-14", 'open': 1, 'close': 2, 'low': 5, 'high': 4,
-        #               'adjusted_close': 6}}})
-
-        # Add each item of the list if doesn't exist
-        collection_handler.update_many({"code": stock}, {"$addToSet": {
+    collection_handler.update_many({"FullCode": stock}, {"$addToSet": {
             "prices": {"$each": list_closing_prices}}})
 
-        logger_get_price.info("update load for {} completed!".format(stock))
+    collection_handler.update({"FullCode": stock}, {"$set": {
+        "last_price": list_closing_prices[-1]['adjusted_close']} })
+
+    collection_handler.update({"FullCode": stock}, {"$set": {
+        "last_price_date": list_closing_prices[-1]['date']}})
+
+    collection_handler.update({"FullCode": stock}, {"$set": {
+        "last_price_volume": list_closing_prices[-1]['volume']}})
+
+    #if full_available_history is True:
+    #    collection_handler.delete_one({"code": stock})
+    #    collection_handler.insert_one(stock_data)
+    #    logger_get_price.info("full load for {} completed!".format(stock))
+    #else:
+        # Add each item of the list if doesn't exist
+    #    collection_handler.update_many({"code": stock}, {"$addToSet": {
+    #        "prices": {"$each": list_closing_prices}}})
+    #    logger_get_price.info("update load for {} completed!".format(stock))
 
 
 def load_historical_data(asset_ticker=None, full_available_history=False,
-                        ret='json' # json, df
+                        ret='json', # json, df
+                         enrich_stock_data = 0
                          ):
     #  db mp jCJpZ8tG7Ms3iF0l
     eod_key = "60241295a5b4c3.00921778"

@@ -41,7 +41,7 @@ class StockUniverse(Resource):
 
         # result = df.to_json(orient='records')
         result = df.to_dict(orient='records')
-        print('json result {}'.format(result))
+        #print('json result {}'.format(result))
 
         return result, 200
 

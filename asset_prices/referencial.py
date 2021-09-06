@@ -181,7 +181,7 @@ def get_indx_cc_fx_universe(name="", type=""):
 
 def get_universe(name="", country="", type="", sector=""):
     import pandas as pd
-    from pymongo import MongoClient
+    from pymongo import MongoClient, ASCENDING, DESCENDING
 
 
     #collection_name = "stock_universe"
@@ -189,12 +189,15 @@ def get_universe(name="", country="", type="", sector=""):
     db_name = "asset_analytics"
     access_db = "mongodb+srv://sngoube:Yqy8kMYRWX76oiiP@cluster0.jaxrk.mongodb.net/asset_analytics?retryWrites=true&w=majority"
     server = MongoClient(access_db)
-
-    query = {"General.Name": {"$regex": '/*{}/*'.format(name), "$options": 'i'},
-             "General.CountryName": {"$regex": '/*{}/*'.format(country), "$options": 'i'},
-             "General.Sector": {"$regex": '/*{}/*'.format(sector), "$options": 'i'},
-             "General.Type": {"$regex": '/*{}/*'.format(type), "$options": 'i'}
-             }
+    query = {}
+    if len(name) > 0:
+        query["General.Name"] = {"$regex": '/*{}/*'.format(name), "$options": 'i'}
+    if len(country) > 0:
+        query["General.CountryName"] = {"$regex": '/*{}/*'.format(country), "$options": 'i'}
+    if len(sector) > 0:
+        query["General.Sector"] = {"$regex": '/*{}/*'.format(sector), "$options": 'i'}
+    if len(type) > 0:
+        query["General.Type"] = {"$regex": '/*{}/*'.format(type), "$options": 'i'}
 
     '''
      query = {"General.Name": {"$regex": '/*{}/*'.format(name), "$options": 'i'},
@@ -211,18 +214,22 @@ def get_universe(name="", country="", type="", sector=""):
                                                         'General.CurrencyCode': 1,
                                                         'General.Type': 1,
                                                         'Exchange': 1,
+                                                        'last_price_volume': 1,
                                                         'General.LogoURL': 1
-                                                        })
+                                                        }).sort([('last_price_volume', DESCENDING)])
 
-    logger_get_ref.info("Query {}".format(query))
+    logger_get_ref.info("Query get_universe {}".format(query))
 
     lres = list(res)
+
+
 
     item_list = []
     result = []
     if len(lres) > 0:
 
         for itx in lres:
+            logger_get_ref.info("Query itx = {}".format(itx))
             item_list.append({'ISIN': itx['ISIN'],
                               'Code': itx['Code'],
                               'Name': itx['General']['Name'],
@@ -231,19 +238,20 @@ def get_universe(name="", country="", type="", sector=""):
                               'Type': itx['General']['Type'],
                               'ExchangeCode': itx['General']['Exchange'],
                               'Exchange': itx['General']['Exchange'],
+                              'LastPriceVolume': itx['last_price_volume'] if 'last_price_volume' in itx.keys() else 0,
                               'logo':  '{}{}'.format('https://eodhistoricaldata.com', itx['General']['LogoURL'] if itx['General']['Type'] not in ['ETP', 'ETF', 'ETC', 'ETN'] else 'https://devarteechadvisor.blob.core.windows.net/public-files/ETF.png' )
                                }
                              )
 
         import os
-        logger_get_ref.info(' result {}'.format(item_list))
+        # logger_get_ref.info(' result {}'.format(item_list))
         df = pd.DataFrame(item_list)
-        logger_get_ref.info(' df {}'.format(df))
-        df = df[['ISIN', 'Code', 'Name', 'Country', 'Exchange', 'Currency', 'Type', 'ExchangeCode', 'logo']]
+        # logger_get_ref.info(' df {}'.format(df))
+        df = df[['ISIN', 'Code', 'Name', 'Country', 'Exchange', 'Currency', 'Type', 'ExchangeCode', 'logo', 'LastPriceVolume']]
         # df['logo'] = df.apply(lambda row: row['logo'] if row['Type'] not in ['ETP', 'ETF', 'ETC', 'ETN'] else 'https://devarteechadvisor.blob.core.windows.net/public-files/ETF.png', axis = 1 )
         # logger_get_ref.info(format(df.to_json(orient='records')))
         server.close()
-        logger_get_ref.info(' result {}'.format(df))
+        #logger_get_ref.info(' result {}'.format(df))
 
     return df
 
@@ -325,15 +333,6 @@ def load_equity_etf_list():
             logger_get_ref.info("load data for {} completed, with query {}!".format(cod, filtering))
         ct = ct + 1
 
-    #from datetime import datetime
-    #ds = datetime.now().strftime("%d%m%Y%H%M%S%f")
-    #ddf.to_csv("./stock_universe_{}.csv".format(ds))
-    #ddf2 = pd.DataFrame(nlstock)
-
-    #ddf2 = ddf2[['ISIN', 'Code', 'Name', 'Country', 'Exchange', 'Currency', 'Type', 'ExchangeCode',
-    #           'ETF Underlying Index Ticker', 'Dvd Freq','logo']]
-    #ddf2.to_csv("./stock_universe.csv".format(ds))
-
     collection_name = "stock_universe"
     if collection_name in server[db_name].list_collection_names():
         server[db_name][collection_name].drop()
@@ -347,7 +346,7 @@ def load_equity_etf_list():
 def add_translation(stock_data, field ='Category', llg = ['de', 'it', 'fr', 'es', 'nl', 'en']):
     if field in stock_data['General'].keys():
         text = stock_data['General'][field]
-        ddescp = translate(text, llg)
+        ddescp =  {'de':text, 'it':text, 'fr':text, 'es':text, 'nl':text, 'en':text} # translate(text, llg)
         for lg in llg:
             if lg in ddescp.keys():
                 stock_data['General']['{}_{}'.format(field, lg)] = ddescp[lg]

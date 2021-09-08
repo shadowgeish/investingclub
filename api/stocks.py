@@ -79,6 +79,45 @@ class StockUniverse(Resource):
         '''
 
 
+class StockUniverseIntradayData(Resource):
+    # df['CustomRating'] = df.apply(lambda x: custom_rating(x['Genre'], x['Rating']), axis=1)
+    def get(self):
+
+        args = stock_universe_request_parser.parse_args()
+        name = args['name']
+        country = args['country']
+        type = args['type']
+        sector = args['sector']
+
+        df = get_universe(name=name, country=country, type=type, sector=sector)
+
+        df['full_code'] = df['Code'] + '.' + df['ExchangeCode']
+        lstock = df['full_code'].tolist()
+
+        from asset_prices.prices import get_prices
+        from datetime import datetime
+        import pytz
+
+        tz = pytz.timezone('Europe/Paris')
+        paris_now = datetime.now(tz)
+        start_date = datetime.strptime(paris_now.strftime("%d%m%Y0700"), '%d%m%Y%H%M')
+        end_date = datetime.strptime(paris_now.strftime("%d%m%Y2300"), '%d%m%Y%H%M')
+
+        rt_price_df = get_prices(asset_codes=lstock, start_date=start_date, end_date=end_date,
+                                 type='real_time', ret_code=1, ret='df')
+        result = rt_price_df.to_dict(orient='records')
+
+        dict_prices = dict()
+        for price in result:
+            if price['code'] not in dict_prices.keys():
+                dict_prices[price['code']] = list()
+            dict_prices[price['code']].append(price)
+
+        print('json result {}'.format(dict_prices))
+
+        return dict_prices, 200
+
+
 class StockData(Resource):
     # df['CustomRating'] = df.apply(lambda x: custom_rating(x['Genre'], x['Rating']), axis=1)
     def get(self, code):
@@ -115,28 +154,10 @@ class StockData(Resource):
         return merged_dict, 200
 
 
-
-stock_prices_request_parser = RequestParser(bundle_errors=False)
-
-stock_prices_request_parser.add_argument("start_date", type=str, required=False,
-                                        help="start date", default="")
-
-stock_prices_request_parser.add_argument("end_date", type=str, required=False,
-                                        help="end date", default="")
-
-
-
 intraday_stock_prices_request_parser = RequestParser(bundle_errors=False)
 
 intraday_stock_prices_request_parser.add_argument("timestamp", type=int, required=False,
                                         help="timestamp", default=0)
-
-
-
-
-
-
-
 
 intraday_stock_prices_request_parser.add_argument("gmtoffset", type=int, required=False,
                                         help="gmtoffset", default=0)
@@ -224,8 +245,6 @@ class PushIntradayStockPrices(Resource):
             return {'error': '{}'.format(sys.exc_info()[0])}, 200
             print("Oops!", sys.exc_info()[0], "occurred.")
 
-
-
         price ={
             "code": code,
             "timestamp": args["timestamp"],
@@ -255,6 +274,15 @@ class PushIntradayStockPrices(Resource):
 
 
         return result, 200
+
+
+stock_prices_request_parser = RequestParser(bundle_errors=False)
+
+stock_prices_request_parser.add_argument("start_date", type=str, required=False,
+                                        help="start date", default="")
+
+stock_prices_request_parser.add_argument("end_date", type=str, required=False,
+                                        help="end date", default="")
 
 
 class StockPrices(Resource):
@@ -299,4 +327,3 @@ class StockPrices(Resource):
         print('json result {}'.format(result))
 
         return result, 200
-

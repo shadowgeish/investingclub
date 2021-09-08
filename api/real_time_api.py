@@ -39,6 +39,7 @@ def is_serializable(obj):
 
 async def live_stock_prices():
     from datetime import datetime
+    import datetime as dttime
     import pandas as pd
     from time import sleep
     from pymongo import MongoClient
@@ -48,7 +49,6 @@ async def live_stock_prices():
     import requests
     import json
 
-
     server_run = '52.14.177.160' # localhost
     #server_run = 'localhost'  # localhost
     collection_name = "real_time_prices"
@@ -57,15 +57,7 @@ async def live_stock_prices():
     server = MongoClient(access_db)
 
     tz = pytz.timezone('Europe/Paris')
-    paris_now = datetime.now(tz)
-    last_check_now = datetime.now(tz)
-    dtt = paris_now
-    dtt_s = datetime(year=dtt.year, month=dtt.month, day=dtt.day, hour=00, minute = 0, tzinfo=tz)
-    dtt_e = datetime(year=dtt.year, month=dtt.month, day=dtt.day, hour=23, minute=00, tzinfo=tz)
-    start_date = datetime.strptime(paris_now.strftime("%d%m%Y0830"), '%d%m%Y%H%M')
-    end_date = datetime.strptime(paris_now.strftime("%d%m%Y1800"), '%d%m%Y%H%M')
 
-    logger_rtapi.info('Date check {} < {} < {} '.format(dtt_s, dtt, dtt_e))
     #ddf = pd.read_csv("../asset_prices/stock_universe.csv", sep=',', keep_default_na=False)
 
     ddf = get_universe()
@@ -84,17 +76,26 @@ async def live_stock_prices():
 
     # sio.emit('login', {'userKey': 'streaming_api_key'})
     from aiohttp import ClientSession
-    logger_rtapi.info('Date check {} < {} < {} '.format(dtt_s, dtt, dtt_e))
     session = ClientSession()
-
+    last_check_now = datetime.now(tz)
+    first_run = True
 
     while True:
+
+        paris_now = datetime.now(tz)
+        dtt = paris_now
+        dtt_s = datetime(year=dtt.year, month=dtt.month, day=dtt.day, hour=8, minute=30, tzinfo=tz)
+        dtt_e = datetime(year=dtt.year, month=dtt.month, day=dtt.day, hour=18, minute=30, tzinfo=tz)
+        #start_date = datetime.strptime(paris_now.strftime("%d%m%Y0830"), '%d%m%Y%H%M')
+        #end_date = datetime.strptime(paris_now.strftime("%d%m%Y1800"), '%d%m%Y%H%M')
+        logger_rtapi.info('Date check {} < {} < {} '.format(dtt_s, dtt, dtt_e))
         list_to_order = []
         for sublist in stringlist:
             list_closing_prices = []
             sec = (last_check_now - datetime.now(tz)).seconds
             logger_rtapi.info('Date check {} < {} < {} and {} sec '.format(dtt_s, dtt, dtt_e, sec))
-            if dtt_s < dtt < dtt_e and sec >= 600:
+            if (dtt_s < dtt < dtt_e and sec >= 600) or first_run is True:
+                first_run = False
                 last_check_now = datetime.now(tz)
                 logger_rtapi.info('Getting data for sub string {}'.format(sublist))
                 sreq = "https://eodhistoricaldata.com/api/real-time/CAC.PA?api_token=60241295a5b4c3.00921778&fmt=json&s={}"
@@ -107,7 +108,6 @@ async def live_stock_prices():
                 except ValueError as e:
                     list_closing_prices = []
                     logger_rtapi.warning('Error loading data {} '.format(data))
-
 
             #list_closing_prices = req.json()
             # print('Reveived data {}, {}'.format(sublist, list_closing_prices))
@@ -152,7 +152,7 @@ async def live_stock_prices():
                             logger_rtapi.warning('Error loading data {} '.format(data))
 
             else:
-                logger_rtapi.info('start_date = {}, end_date = {}, list = {}'.format(start_date, end_date, sublist))
+                #logger_rtapi.info('start_date = {}, end_date = {}, list = {}'.format(start_date, end_date, sublist))
                 sreq = "http://{}:5001/api/v1/intraday_stock_prices/{}".format(server_run, sublist)
                 logger_rtapi.info('Getting Real time save data {} '.format(sreq))
 

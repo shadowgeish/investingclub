@@ -3,7 +3,7 @@ from flask_restful import Resource, Api
 from flask_restful.reqparse import RequestParser
 from flask_socketio import SocketIO, emit
 from api.simulation import MonteCarloSimulation, AAbacktesting, MeanVarOptimization, MaxDiversification
-from api.stocks import StockUniverse, StockData, StockPrices, IntradayStockPrices, PushIntradayStockPrices
+from api.stocks import StockUniverse, StockData, StockPrices, IntradayStockPrices, PushIntradayStockPrices, StockUniverseIntradayData
 from flask_swagger_ui import get_swaggerui_blueprint
 
 app = Flask(__name__)
@@ -91,6 +91,7 @@ api.add_resource(MeanVarOptimization, '/mean_var_opt')
 #api.add_resource(MaxDiversification, '/realestate') # real estate prices
 #api.add_resource(MonteCarloSimulation, '/lifeinsurance') # life insurance
 api.add_resource(StockUniverse, '/stock_universe') # country, type, name - OK
+api.add_resource(StockUniverseIntradayData, '/stock_universe_intraday_data') # country, type, name - OK
 api.add_resource(StockData, '/stock_data/<string:code>')
 api.add_resource(StockPrices, '/stock_prices/<string:code>')
 api.add_resource(PushIntradayStockPrices, '/load_intraday_stock_prices/<string:code>')

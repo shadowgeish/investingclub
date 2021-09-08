@@ -84,17 +84,18 @@ async def live_stock_prices():
 
         paris_now = datetime.now(tz)
         dtt = paris_now
-        dtt_s = datetime(year=dtt.year, month=dtt.month, day=dtt.day, hour=8, minute=30, tzinfo=tz)
-        dtt_e = datetime(year=dtt.year, month=dtt.month, day=dtt.day, hour=18, minute=30, tzinfo=tz)
-        #start_date = datetime.strptime(paris_now.strftime("%d%m%Y0830"), '%d%m%Y%H%M')
-        #end_date = datetime.strptime(paris_now.strftime("%d%m%Y1800"), '%d%m%Y%H%M')
+        start_date = datetime.strptime(paris_now.strftime("%d%m%Y0830%z"), '%d%m%Y%H%M%z')
+        end_date = datetime.strptime(paris_now.strftime("%d%m%Y1830%z"), '%d%m%Y%H%M%z')
+        dtt_s = start_date # datetime(year=dtt.year, month=dtt.month, day=dtt.day, hour=8, minute=30, tzinfo=tz)
+        dtt_e = end_date #datetime(year=dtt.year, month=dtt.month, day=dtt.day, hour=18, minute=30, tzinfo=tz)
+
         logger_rtapi.info('Date check {} < {} < {} '.format(dtt_s, dtt, dtt_e))
         list_to_order = []
         for sublist in stringlist:
             list_closing_prices = []
             sec = (last_check_now - datetime.now(tz)).seconds
             logger_rtapi.info('Date check {} < {} < {} and {} sec '.format(dtt_s, dtt, dtt_e, sec))
-            if (dtt_s < dtt < dtt_e and sec >= 600) or first_run is True:
+            if (dtt_s < dtt < dtt_e) and (first_run is True or sec >= 600):
                 first_run = False
                 last_check_now = datetime.now(tz)
                 logger_rtapi.info('Getting data for sub string {}'.format(sublist))
@@ -143,7 +144,6 @@ async def live_stock_prices():
                             # stock_prices = await response.json(content_type=None)
                         try:
                             stock_prices = json.loads(data)
-                            real_time_price[key] = stock_prices
                             list_data = {'code': key, 'prices': stock_prices}
                             await sio.emit('intraday_prices', list_data)
                             logger_rtapi.info('Seding intraday_prices {}, {}'.format(code, list_data))
@@ -153,17 +153,17 @@ async def live_stock_prices():
 
             else:
                 #logger_rtapi.info('start_date = {}, end_date = {}, list = {}'.format(start_date, end_date, sublist))
-                sreq = "http://{}:5001/api/v1/intraday_stock_prices/{}".format(server_run, sublist)
+                sreq = "http://{}:5001/api/v1/stock_universe_intraday_data/{}".format(server_run, sublist)
                 logger_rtapi.info('Getting Real time save data {} '.format(sreq))
 
                 async with session.get(sreq) as response:
                     data = await response.read()
                 try:
                     stock_prices = json.loads(data)
-                    for price in stock_prices:
-                        real_time_price[price['code']] = price['prices']
-                        list_data = {'code': price['code'], 'prices': price['prices']}
-                    await sio.emit('intraday_prices', list_data)
+                    logger_rtapi.info('Received stock data to send {} '.format(stock_prices))
+                    for code in stock_prices.keys():
+                        list_data = {'code': code, 'prices': stock_prices[code]}
+                        await sio.emit('intraday_prices', list_data)
                 except ValueError as e:
                     logger_rtapi.warning('Error loading data {} '.format(data))
 

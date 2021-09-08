@@ -81,7 +81,7 @@ class StockUniverse(Resource):
 
 class StockUniverseIntradayData(Resource):
     # df['CustomRating'] = df.apply(lambda x: custom_rating(x['Genre'], x['Rating']), axis=1)
-    def get(self):
+    def get(self, codes):
 
         args = stock_universe_request_parser.parse_args()
         name = args['name']
@@ -89,10 +89,12 @@ class StockUniverseIntradayData(Resource):
         type = args['type']
         sector = args['sector']
 
-        df = get_universe(name=name, country=country, type=type, sector=sector)
-
-        df['full_code'] = df['Code'] + '.' + df['ExchangeCode']
-        lstock = df['full_code'].tolist()
+        if codes == 'All':
+            df = get_universe(name=name, country=country, type=type, sector=sector)
+            df['full_code'] = df['Code'] + '.' + df['ExchangeCode']
+            lstock = df['full_code'].tolist()
+        else:
+            lstock = codes.split(',')
 
         from asset_prices.prices import get_prices
         from datetime import datetime

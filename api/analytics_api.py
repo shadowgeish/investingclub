@@ -91,7 +91,7 @@ api.add_resource(MeanVarOptimization, '/mean_var_opt')
 #api.add_resource(MaxDiversification, '/realestate') # real estate prices
 #api.add_resource(MonteCarloSimulation, '/lifeinsurance') # life insurance
 api.add_resource(StockUniverse, '/stock_universe') # country, type, name - OK
-api.add_resource(StockUniverseIntradayData, '/stock_universe_intraday_data') # country, type, name - OK
+api.add_resource(StockUniverseIntradayData, '/stock_universe_intraday_data/<string:codes>') # country, type, name - OK
 api.add_resource(StockData, '/stock_data/<string:code>')
 api.add_resource(StockPrices, '/stock_prices/<string:code>')
 api.add_resource(PushIntradayStockPrices, '/load_intraday_stock_prices/<string:code>')

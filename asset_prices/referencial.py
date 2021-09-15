@@ -179,7 +179,7 @@ def get_indx_cc_fx_universe(name="", type=""):
     return df
 
 
-def get_universe(name="", country="", type="", sector=""):
+def get_universe(name="", country="", type="", sector="",  skip=1, limit=5000):
     import pandas as pd
     from pymongo import MongoClient, ASCENDING, DESCENDING
 
@@ -205,7 +205,32 @@ def get_universe(name="", country="", type="", sector=""):
              "Type.Type": {"$regex": '/*{}/*'.format(type), "$options": 'i'}
              }
     '''
+    display = {'ISIN': 1,
+                'Code': 1,
+                'General.Name': 1,
+                'Country': 1,
+                'General.Exchange': 1,
+                'General.CurrencyCode': 1,
+                'General.Type': 1,
+                'Exchange': 1,
+                'last_price_volume': 1,
+                'General.LogoURL': 1}
+    query = [
+        {"$match": query},
+        {"$sort": {'last_price_volume': DESCENDING}},
+        {'$facet': {
+            "metadata": [{"$count": "total"}],
+            "data": [{"$skip": skip},
+                     {"$limit": limit},
+                     {"$project": display}]
+            }
+        }
+    ]
 
+    logger_get_ref.info("Query get_universe {} ".format(query))
+
+    res = server[db_name][collection_name].aggregate(query)
+    ''' 
     res = server[db_name][collection_name].find(query, {'ISIN': 1,
                                                         'Code': 1,
                                                         'General.Name': 1,
@@ -217,17 +242,19 @@ def get_universe(name="", country="", type="", sector=""):
                                                         'last_price_volume': 1,
                                                         'General.LogoURL': 1
                                                         }).sort([('last_price_volume', DESCENDING)])
+    '''
+    logger_get_ref.info("Query get_universe {} ".format(query))
 
-    logger_get_ref.info("Query get_universe {}".format(query))
+    output = list(res)[0]
 
-    lres = list(res)
+    logger_get_ref.info("Query result {} ".format(output))
 
-
-
+    total = output['metadata'][0]['total'] - 1
+    lres = output['data']
     item_list = []
     result = []
+    df = pd.DataFrame()
     if len(lres) > 0:
-
         for itx in lres:
             logger_get_ref.info("Query itx = {}".format(itx))
             item_list.append({'ISIN': itx['ISIN'],
@@ -250,9 +277,13 @@ def get_universe(name="", country="", type="", sector=""):
         df = df[['ISIN', 'Code', 'Name', 'Country', 'Exchange', 'Currency', 'Type', 'ExchangeCode', 'logo', 'LastPriceVolume']]
         # df['logo'] = df.apply(lambda row: row['logo'] if row['Type'] not in ['ETP', 'ETF', 'ETC', 'ETN'] else 'https://devarteechadvisor.blob.core.windows.net/public-files/ETF.png', axis = 1 )
         # logger_get_ref.info(format(df.to_json(orient='records')))
-        server.close()
+
+        df['total'] = total
+
+    server.close()
         #logger_get_ref.info(' result {}'.format(df))
 
+    logger_get_ref.info("df  result {} ".format(df))
     return df
 
 
@@ -448,7 +479,8 @@ def translate(text='Hello world', llg = ['de', 'it', 'fr', 'es', 'nl', 'en']):
 
 if __name__ == '__main__':
     # load_stock_universe()
-    load_equity_etf_list()
+    get_universe(name="", country="France", type="", sector="", skip=2, limit=10)
+    #load_equity_etf_list()
     #load_exchange_list()
     #translate(text='Hello world', llg=['de', 'it', 'fr', 'es', 'nl', 'en'])
 

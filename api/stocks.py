@@ -19,6 +19,15 @@ stock_universe_request_parser.add_argument("type", type=int, required=False,
 stock_universe_request_parser.add_argument("sector", type=int, required=False,
                                         help="sector", default="")
 
+stock_universe_request_parser.add_argument("cache", type=str, required=False,
+                                        help="cache", default="false")
+
+stock_universe_request_parser.add_argument("skip", type=int, required=False,
+                                        help="skip", default=1)
+
+stock_universe_request_parser.add_argument("limit", type=int, required=False,
+                                        help="limit", default=10)
+
 
 class StockUniverse(Resource):
     # df['CustomRating'] = df.apply(lambda x: custom_rating(x['Genre'], x['Rating']), axis=1)
@@ -36,8 +45,10 @@ class StockUniverse(Resource):
         country = args['country']
         type = args['type']
         sector = args['sector']
+        skip = args['skip']
+        limit = args['limit']
 
-        df = get_universe(name=name, country=country, type=type, sector=sector)
+        df = get_universe(name=name, country=country, type=type, sector=sector, skip=skip, limit=limit)
 
         # result = df.to_json(orient='records')
         result = df.to_dict(orient='records')
@@ -82,25 +93,52 @@ class StockUniverse(Resource):
 class StockUniverseIntradayData(Resource):
     # df['CustomRating'] = df.apply(lambda x: custom_rating(x['Genre'], x['Rating']), axis=1)
     def get(self, codes):
-
+        import pandas as pd
+        from datetime import datetime
+        import pytz
         args = stock_universe_request_parser.parse_args()
         name = args['name']
         country = args['country']
         type = args['type']
         sector = args['sector']
+        cache = args['cache']
+        skip = args['skip']
+        limit = args['limit']
+
+        tz = pytz.timezone('Europe/Paris')
 
         if codes == 'All':
-            df = get_universe(name=name, country=country, type=type, sector=sector)
+            df = get_universe(name=name, country=country, type=type, sector=sector, skip=skip, limit=limit)
             df['full_code'] = df['Code'] + '.' + df['ExchangeCode']
             lstock = df['full_code'].tolist()
         else:
             lstock = codes.split(',')
 
-        from asset_prices.prices import get_prices
-        from datetime import datetime
-        import pytz
+        if cache == "true":
+            print('READ FROM THE CACHE!!')
+            s_now = datetime.now(tz)
+            map_dt = {}
+            # pd.DataFrame(stock_prices[code]).to_hdf('real_time_prices.h5', key=clean_key, mode='w')
+            # result = rt_price_df.to_dict(orient='records')
+            # pd.read_hdf('data.h5', 'df')
+            hdf = pd.HDFStore('real_time_prices.h5', 'r')
+            #print('Available Codes {}'.format(hdf.keys()))
+            for key in hdf.keys():
+                clean_key = key[3:].replace('_____', '.')
+                if clean_key in lstock:
+                    map_dt[clean_key] = pd.read_hdf('real_time_prices.h5', key).to_dict(orient='records')
+            hdf.close()
+            print('READ FROM THE CACHE in {}!!'.format((s_now - datetime.now(tz)).total_seconds()))
+            return map_dt, 200
 
-        tz = pytz.timezone('Europe/Paris')
+        print('READ FROM THE DATABASE!!')
+        s_now = datetime.now(tz)
+
+
+
+        from asset_prices.prices import get_prices
+
+
         paris_now = datetime.now(tz)
         start_date = datetime.strptime(paris_now.strftime("%d%m%Y0700"), '%d%m%Y%H%M')
         end_date = datetime.strptime(paris_now.strftime("%d%m%Y2300"), '%d%m%Y%H%M')
@@ -115,7 +153,7 @@ class StockUniverseIntradayData(Resource):
                 dict_prices[price['code']] = list()
             dict_prices[price['code']].append(price)
 
-        print('json result {}'.format(dict_prices))
+        print('READ FROM THE DATABASE in {}!!'.format((s_now - datetime.now(tz)).total_seconds()))
 
         return dict_prices, 200
 
@@ -232,8 +270,6 @@ class PushIntradayStockPrices(Resource):
 
         tz = pytz.timezone('Europe/Paris')
         paris_now = datetime.now(tz)
-        last_check_now = datetime.now(tz)
-        dtt = paris_now
         start_date = datetime.strptime(paris_now.strftime("%d%m%Y0700"), '%d%m%Y%H%M')
         end_date = datetime.strptime(paris_now.strftime("%d%m%Y2300"), '%d%m%Y%H%M')
 
@@ -269,7 +305,14 @@ class PushIntradayStockPrices(Resource):
         rt_price_df = get_prices(asset_codes=[code], start_date=start_date, end_date=end_date,
                                 type='real_time', ret='df')
 
+        import os
+        #if not os.path.isfile('./swmr_real_time_prices.csv'):
+        #    f["run_date"] = paris_now
+        #    f["real_time_prices"] = rt_price_df
+
         result = rt_price_df.to_dict(orient='records')
+
+
         print('Real time data {}'.format(rt_price_df))
 
         print('json result {}'.format(result))
@@ -311,7 +354,7 @@ class StockPrices(Resource):
             print("Oops!", sys.exc_info()[0], "occurred.")
             end_date = None
 
-        start_date = (datetime.date.today() + datetime.timedelta(-7)) \
+        start_date = (datetime.date.today() + datetime.timedelta(-200)) \
             if start_date is None else start_date
         end_date = (datetime.date.today() + datetime.timedelta(+1)) \
             if end_date is None else end_date

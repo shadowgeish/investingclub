@@ -23,6 +23,7 @@ async def index(request):
 @app.listener('after_server_start')
 def after_server_start(sanic, loop):
     sio.start_background_task(live_stock_prices)
+    sio.start_background_task(update_real_time_stock_prices_cache)
     return True
 
 
@@ -35,6 +36,52 @@ def is_serializable(obj):
         return False
 
     return True
+
+
+async def update_real_time_stock_prices_cache():
+    from datetime import datetime
+    from aiohttp import ClientSession
+    import pytz
+    import json
+    import time
+    import pandas as pd
+    session = ClientSession()
+    tz = pytz.timezone('Europe/Paris')
+    paris_now = datetime.now(tz)
+
+    start_date = datetime.strptime(paris_now.strftime("%d%m%Y0830%z"), '%d%m%Y%H%M%z')
+    end_date = datetime.strptime(paris_now.strftime("%d%m%Y1830%z"), '%d%m%Y%H%M%z')
+    dtt_s = start_date  # datetime(year=dtt.year, month=dtt.month, day=dtt.day, hour=8, minute=30, tzinfo=tz)
+    dtt_e = end_date  # datetime(year=dtt.year, month=dtt.month, day=dtt.day, hour=18, minute=30, tzinfo=tz)
+    first_run = True
+    last_check_now = datetime.now(tz)
+    while True:
+        sec = (last_check_now - datetime.now(tz)).seconds
+        if first_run is True or sec >= 10:
+            first_run = False
+            last_check_now = datetime.now(tz)
+            server_run = '52.14.177.160' # localhost
+            #server_run = 'localhost'  # localhost
+            sreq = "http://{}:5001/api/v1/stock_universe_intraday_data/All?limit=5000&cache=false".format(server_run)
+            logger_rtapi.info('Getting Real time save data {} '.format(sreq))
+
+            async with session.get(sreq) as response:
+                data = await response.read()
+            try:
+                stock_prices = json.loads(data)
+                hdf = pd.HDFStore('real_time_prices.h5')
+
+                #logger_rtapi.info('Received stock data to send {} '.format(stock_prices))
+                for code in stock_prices:
+                    clean_key = 'K_{}'.format(code.replace('.', '_____'))
+                    #pd.DataFrame(stock_prices[code]).to_hdf('real_time_prices.h5', key=clean_key, mode='w')
+                    hdf[clean_key] = pd.DataFrame(stock_prices[code])
+                    #hdf.put(clean_key, pd.DataFrame(stock_prices[code]))
+                hdf.close()
+                logger_rtapi.info('Data set updated at {}'.format(datetime.now(tz)))
+
+            except ValueError as e:
+                logger_rtapi.warning('Error loading data {} '.format(data))
 
 
 async def live_stock_prices():
@@ -95,7 +142,7 @@ async def live_stock_prices():
             list_closing_prices = []
             sec = (last_check_now - datetime.now(tz)).seconds
             logger_rtapi.info('Date check {} < {} < {} and {} sec '.format(dtt_s, dtt, dtt_e, sec))
-            if (dtt_s < dtt < dtt_e) and (first_run is True or sec >= 600):
+            if (dtt_s < dtt < dtt_e) and (first_run is True or sec >= 300):
                 first_run = False
                 last_check_now = datetime.now(tz)
                 logger_rtapi.info('Getting data for sub string {}'.format(sublist))

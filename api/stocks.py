@@ -148,7 +148,7 @@ class StockUniverseIntradayData(Resource):
         rt_price_df = get_prices(asset_codes=lstock, start_date=start_date, end_date=end_date,
                                  type='real_time', ret_code=1, ret='df')
 
-        rt_price_df = rt_price_df.sort_values(by=['volume'], ascendant = False )
+        rt_price_df = rt_price_df.sort_values(by=['volume'], ascending = False )
 
         result = rt_price_df.to_dict(orient='records')
 

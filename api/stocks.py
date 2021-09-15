@@ -1,3 +1,5 @@
+from collections import OrderedDict
+
 from flask import Flask
 from flask_restful import Resource, Api
 from flask_restful.reqparse import RequestParser
@@ -145,9 +147,12 @@ class StockUniverseIntradayData(Resource):
 
         rt_price_df = get_prices(asset_codes=lstock, start_date=start_date, end_date=end_date,
                                  type='real_time', ret_code=1, ret='df')
+
+        rt_price_df = rt_price_df.sort_values(by=['volume'], ascendant = False )
+
         result = rt_price_df.to_dict(orient='records')
 
-        dict_prices = dict()
+        dict_prices = OrderedDict()
         for price in result:
             if price['code'] not in dict_prices.keys():
                 dict_prices[price['code']] = list()

@@ -23,7 +23,7 @@ async def index(request):
 @app.listener('after_server_start')
 def after_server_start(sanic, loop):
     sio.start_background_task(live_stock_prices)
-    sio.start_background_task(update_real_time_stock_prices_cache)
+    #sio.start_background_task(update_real_time_stock_prices_cache)
     return True
 
 
@@ -68,7 +68,9 @@ async def update_real_time_stock_prices_cache():
             async with session.get(sreq) as response:
                 data = await response.read()
             try:
+                import os.path
                 stock_prices = json.loads(data)
+
                 hdf = pd.HDFStore('real_time_prices.h5')
 
                 #logger_rtapi.info('Received stock data to send {} '.format(stock_prices))

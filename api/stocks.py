@@ -116,6 +116,7 @@ class StockUniverseIntradayData(Resource):
         else:
             lstock = codes.split(',')
 
+        ''' 
         if cache == "true":
             print('READ FROM THE CACHE!!')
             s_now = datetime.now(tz)
@@ -132,6 +133,8 @@ class StockUniverseIntradayData(Resource):
             hdf.close()
             print('READ FROM THE CACHE in {}!!'.format((s_now - datetime.now(tz)).total_seconds()))
             return map_dt, 200
+        
+        '''
 
         print('READ FROM THE DATABASE!!')
         s_now = datetime.now(tz)
@@ -148,7 +151,8 @@ class StockUniverseIntradayData(Resource):
         rt_price_df = get_prices(asset_codes=lstock, start_date=start_date, end_date=end_date,
                                  type='real_time', ret_code=1, ret='df')
 
-        rt_price_df = rt_price_df.sort_values(by=['volume'], ascending = False )
+        if 'volume' in rt_price_df.columns:
+            rt_price_df = rt_price_df.sort_values(by=['volume'], ascending = False )
 
         result = rt_price_df.to_dict(orient='records')
 

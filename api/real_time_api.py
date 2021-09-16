@@ -60,7 +60,7 @@ async def update_real_time_stock_prices_cache():
         if first_run is True or sec >= 10:
             first_run = False
             last_check_now = datetime.now(tz)
-            server_run = '52.14.177.160' # localhost
+            server_run = '18.191.227.200' # localhost
             #server_run = 'localhost'  # localhost
             sreq = "http://{}:5001/api/v1/stock_universe_intraday_data/All?limit=5000&cache=false".format(server_run)
             logger_rtapi.info('Getting Real time save data {} '.format(sreq))
@@ -98,7 +98,7 @@ async def live_stock_prices():
     import requests
     import json
 
-    server_run = '52.14.177.160' # localhost
+    server_run = '18.191.227.200' # localhost
     #server_run = 'localhost'  # localhost
     collection_name = "real_time_prices"
     db_name = "asset_analytics"

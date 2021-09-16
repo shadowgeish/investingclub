@@ -133,8 +133,8 @@ async def live_stock_prices():
 
         paris_now = datetime.now(tz)
         dtt = paris_now
-        start_date = datetime.strptime(paris_now.strftime("%d%m%Y0830%z"), '%d%m%Y%H%M%z')
-        end_date = datetime.strptime(paris_now.strftime("%d%m%Y1830%z"), '%d%m%Y%H%M%z')
+        start_date = datetime.strptime(paris_now.strftime("%d%m%Y0730%z"), '%d%m%Y%H%M%z')
+        end_date = datetime.strptime(paris_now.strftime("%d%m%Y1930%z"), '%d%m%Y%H%M%z')
         dtt_s = start_date # datetime(year=dtt.year, month=dtt.month, day=dtt.day, hour=8, minute=30, tzinfo=tz)
         dtt_e = end_date #datetime(year=dtt.year, month=dtt.month, day=dtt.day, hour=18, minute=30, tzinfo=tz)
 

@@ -224,11 +224,12 @@ def update_bulk_prices(prices=None, type='real_time'):
 
     access_db = "mongodb+srv://sngoube:Yqy8kMYRWX76oiiP@cluster0.jaxrk.mongodb.net/asset_analytics?retryWrites=true&w=majority"
     server = MongoClient(access_db)
+    tz = pytz.timezone('Europe/Paris')
     for price in prices:
         if price['timestamp'] != 'NA':
             asset_code = price['code']
             price['converted_date'] = price['timestamp']
-            price['date'] = datetime.fromtimestamp(price['timestamp']).strftime("%d-%m-%Y %H:%M")
+            price['date'] = datetime.fromtimestamp(price['timestamp'], tz = tz).strftime("%d-%m-%Y %H:%M")
             server[db_name][collection_name].update_one({"code": asset_code}, {"$addToSet": {
                 "prices": price}}, upsert=True)
 

@@ -228,6 +228,10 @@ def update_prices(asset_code=None, price=None, type='real_time'):
     server[db_name][collection_name].update_one({"code": asset_code}, {"$addToSet": {
         "prices": price}}, upsert=True)
 
+    logger_get_price.info("price loaded {}".format(price))
+
+    server.close()
+
 # return historical/real time data for one or a list of codes example code : "BX4.PA"
 # usage get_historical_data(asset_codes="BX4.PA")  returns 1 week history for code BX4.PA
 # usage get_historical_data(asset_codes=["BX4.PA", "CAC.PA"])  returns 1 week history for code BX4.PA and CAC.PA

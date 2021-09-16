@@ -134,7 +134,7 @@ async def live_stock_prices():
         paris_now = datetime.now(tz)
         dtt = paris_now
         start_date = datetime.strptime(paris_now.strftime("%d%m%Y0730%z"), '%d%m%Y%H%M%z')
-        end_date = datetime.strptime(paris_now.strftime("%d%m%Y1930%z"), '%d%m%Y%H%M%z')
+        end_date = datetime.strptime(paris_now.strftime("%d%m%Y2030%z"), '%d%m%Y%H%M%z')
         dtt_s = start_date # datetime(year=dtt.year, month=dtt.month, day=dtt.day, hour=8, minute=30, tzinfo=tz)
         dtt_e = end_date #datetime(year=dtt.year, month=dtt.month, day=dtt.day, hour=18, minute=30, tzinfo=tz)
 
@@ -187,7 +187,7 @@ async def live_stock_prices():
                                                            price['volume'], price['previousClose'],price['change'],
                                                            price['change_p'],price['converted_date'] ,price['date'])
 
-                        logger_rtapi.info('Loading for coce {}, {}'.format(code, str_req))
+                        logger_rtapi.info('Loading for code {}, {}'.format(code, str_req))
                         async with session.get(str_req) as response:
                             data = await response.read()
                             # stock_prices = await response.json(content_type=None)

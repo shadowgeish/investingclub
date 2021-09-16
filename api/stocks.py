@@ -268,6 +268,34 @@ class IntradayStockPrices(Resource):
         return result, 200
 
 
+class PushBulkIntradayStockPrices(Resource):
+    # df['CustomRating'] = df.apply(lambda x: custom_rating(x['Genre'], x['Rating']), axis=1)
+    def post(self):
+
+        from asset_prices.prices import get_prices, update_bulk_prices
+        from datetime import datetime
+        import pytz
+        from flask import Flask, request, jsonify
+
+        tz = pytz.timezone('Europe/Paris')
+        paris_now = datetime.now(tz)
+        start_date = datetime.strptime(paris_now.strftime("%d%m%Y0700"), '%d%m%Y%H%M')
+        end_date = datetime.strptime(paris_now.strftime("%d%m%Y2300"), '%d%m%Y%H%M')
+
+        # Get POST data as json & read it as a DataFrame
+        prices = request.get_json()
+
+        print('Price {}'.format(prices))
+
+        update_bulk_prices(prices=prices, type='real_time')
+
+        result = {'Load':'OK'}
+
+        print('json result {}'.format(result))
+
+        return result, 200
+
+
 class PushIntradayStockPrices(Resource):
     # df['CustomRating'] = df.apply(lambda x: custom_rating(x['Genre'], x['Rating']), axis=1)
     def get(self, code):

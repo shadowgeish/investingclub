@@ -211,6 +211,31 @@ def load_historical_data(asset_ticker=None, full_available_history=False,
     server.close()
 
 
+def update_bulk_prices(prices=None, type='real_time'):
+    import pandas as pd
+    import requests
+    from pymongo import MongoClient
+    import json
+    from datetime import datetime
+    import pytz
+
+    collection_name = "real_time_prices" if type == 'real_time' else 'historical_prices'
+    db_name = "asset_analytics"
+
+    access_db = "mongodb+srv://sngoube:Yqy8kMYRWX76oiiP@cluster0.jaxrk.mongodb.net/asset_analytics?retryWrites=true&w=majority"
+    server = MongoClient(access_db)
+    for price in prices:
+        if price['timestamp'] != 'NA':
+            asset_code = price['code']
+            price['converted_date'] = price['timestamp']
+            price['date'] = datetime.fromtimestamp(price['timestamp']).strftime("%d-%m-%Y %H:%M")
+            server[db_name][collection_name].update_one({"code": asset_code}, {"$addToSet": {
+                "prices": price}}, upsert=True)
+
+    logger_get_price.info("prices loaded {}".format(prices))
+
+    server.close()
+
 def update_prices(asset_code=None, price=None, type='real_time'):
     import pandas as pd
     import requests

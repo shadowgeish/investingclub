@@ -168,54 +168,42 @@ async def live_stock_prices():
 
             if len(list_closing_prices) > 0:
 
-                for price in list_closing_prices:
-                    code = price['code']
-                    key = price['code']  # + '_' + request_day
-                    # push the price data to the socket so they could quicky see it
-                    # print('sending data for {}'.format(price))
-                    # print('Data check  {} : is {}'.format(is_serializable(price) ,price))
-                    await sio.emit('last_traded_price', price)
-                    list_to_order.append(price)
+                # Loading data
+                sreq = "http://{}:5001/api/v1/load_bulk_intraday_stock_prices"
+                str_req = sreq.format(server_run)
 
-                    if price['timestamp'] != 'NA':
-                        price['converted_date'] = price['timestamp']
-                        price['date'] = datetime.fromtimestamp(price['timestamp']).strftime("%d-%m-%Y %H:%M:%S.%f")
-
-                        sreq = "http://{}:5001/api/v1/load_intraday_stock_prices/{}?timestamp={}&gmtoffset={}&open={}&high={}&low={}&close={}&volume={}&previousClose={}&change={}&change_p={}&converted_date={}&date={}"
-                        str_req = sreq.format(server_run, code, price['timestamp'], price['gmtoffset'], price['open'],
-                                                           price['high'], price['low'], price['close'],
-                                                           price['volume'], price['previousClose'],price['change'],
-                                                           price['change_p'],price['converted_date'] ,price['date'])
-
-                        logger_rtapi.info('Loading for code {}, {}'.format(code, str_req))
-                        async with session.get(str_req) as response:
-                            data = await response.read()
-                            # stock_prices = await response.json(content_type=None)
-                        try:
-                            stock_prices = json.loads(data)
-                            list_data = {'code': key, 'prices': stock_prices}
-                            await sio.emit('intraday_prices', list_data)
-                            logger_rtapi.info('Seding intraday_prices {}, {}'.format(code, list_data))
-                        except ValueError as e:
-                            stock_prices = []
-                            logger_rtapi.warning('Error loading data {} '.format(data))
-
-            else:
-                #logger_rtapi.info('start_date = {}, end_date = {}, list = {}'.format(start_date, end_date, sublist))
-                sreq = "http://{}:5001/api/v1/stock_universe_intraday_data/{}".format(server_run, sublist)
-                logger_rtapi.info('Getting Real time save data {} '.format(sreq))
-
-                async with session.get(sreq) as response:
+                logger_rtapi.info('Loading {}'.format(str_req))
+                async with session.post(str_req, json=list_closing_prices) as response:
                     data = await response.read()
+                    # stock_prices = await response.json(content_type=None)
                 try:
                     stock_prices = json.loads(data)
-                    logger_rtapi.info('Received stock data to send {} '.format(stock_prices))
-                    for code in stock_prices.keys():
-                        list_data = {'code': code, 'prices': stock_prices[code]}
-                        await sio.emit('intraday_prices', list_data)
+                    logger_rtapi.info('Seding intraday_prices {}'.format(stock_prices))
                 except ValueError as e:
+                    stock_prices = []
                     logger_rtapi.warning('Error loading data {} '.format(data))
 
+                for price in list_closing_prices:
+                    if price['timestamp'] != 'NA':
+                        await sio.emit('last_traded_price', price)
+                        list_to_order.append(price)
+
+            #logger_rtapi.info('start_date = {}, end_date = {}, list = {}'.format(start_date, end_date, sublist))
+            sreq = "http://{}:5001/api/v1/stock_universe_intraday_data/{}".format(server_run, sublist)
+            logger_rtapi.info('Getting Real time save data {} '.format(sreq))
+
+            async with session.get(sreq) as response:
+                data = await response.read()
+            try:
+                stock_prices = json.loads(data)
+                logger_rtapi.info('Received stock data to send {} '.format(stock_prices))
+                for code in stock_prices.keys():
+                    list_data = {'code': code, 'prices': stock_prices[code]}
+                    await sio.emit('intraday_prices', list_data)
+            except ValueError as e:
+                logger_rtapi.warning('Error loading data {} '.format(data))
+
+        ''' 
         if len(list_to_order) > 0:
             dic_to_order = pd.DataFrame(list_to_order)
             dic_to_order = dic_to_order[['code','volume','timestamp']]
@@ -226,7 +214,8 @@ async def live_stock_prices():
             dic_to_order['order'] = dic_to_order.index
             dic_to_order = dic_to_order[['code', 'volume', 'timestamp', 'order']]
             await sio.emit('intraday_trending_stocks', dic_to_order.to_json(orient='records'))
-            logger_rtapi.info('col ={}, Dicts = {}'.format(dic_to_order.columns, dic_to_order))
+            logger_rtapi.info('col ={}, Dicts = {}'.format(dic_to_order.columns, dic_to_order))            
+        '''
 
 
 

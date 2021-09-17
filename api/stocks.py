@@ -92,6 +92,59 @@ class StockUniverse(Resource):
         '''
 
 
+class StockRealTimePrices(Resource):
+    # df['CustomRating'] = df.apply(lambda x: custom_rating(x['Genre'], x['Rating']), axis=1)
+    def get(self, codes):
+        import pandas as pd
+        from datetime import datetime
+        import pytz
+        args = stock_universe_request_parser.parse_args()
+        name = args['name']
+        country = args['country']
+        type = args['type']
+        sector = args['sector']
+        skip = args['skip']
+        limit = args['limit']
+
+        tz = pytz.timezone('Europe/Paris')
+
+        if codes == 'All':
+            df = get_universe(name=name, country=country, type=type, sector=sector, skip=skip, limit=limit)
+            df['full_code'] = df['Code'] + '.' + df['ExchangeCode']
+            lstock = df['full_code'].tolist()
+        else:
+            lstock = codes.split(',')
+
+        dict_stock = OrderedDict()
+        universe = df.to_dict(orient='records')
+        for stock in universe:
+            dict_stock[stock['Code'] + '.' + stock['ExchangeCode']] = stock
+
+        print('READ FROM THE DATABASE!!')
+        s_now = datetime.now(tz)
+
+        from asset_prices.prices import get_prices
+        paris_now = datetime.now(tz)
+        start_date = datetime.strptime(paris_now.strftime("%d%m%Y0700"), '%d%m%Y%H%M')
+        end_date = datetime.strptime(paris_now.strftime("%d%m%Y2300"), '%d%m%Y%H%M')
+
+        rt_price_df = get_prices(asset_codes=lstock, start_date=start_date, end_date=end_date,
+                                 type='real_time', ret_code=1, ret='df')
+
+        if 'volume' in rt_price_df.columns:
+            rt_price_df = rt_price_df.sort_values(by=['volume'], ascending=False)
+
+        result = rt_price_df.to_dict(orient='records')
+
+        for price in result:
+            if 'real_time_prices' not in dict_stock[price['code']].keys():
+                dict_stock[price['code']]['real_time_prices'] = list()
+            dict_stock[price['code']]['real_time_prices'].append(price)
+
+        print('READ FROM THE DATABASE in {}!!'.format((s_now - datetime.now(tz)).total_seconds()))
+
+        return dict_stock, 200
+
 class StockUniverseIntradayData(Resource):
     # df['CustomRating'] = df.apply(lambda x: custom_rating(x['Genre'], x['Rating']), axis=1)
     def get(self, codes):
@@ -139,11 +192,7 @@ class StockUniverseIntradayData(Resource):
         print('READ FROM THE DATABASE!!')
         s_now = datetime.now(tz)
 
-
-
         from asset_prices.prices import get_prices
-
-
         paris_now = datetime.now(tz)
         start_date = datetime.strptime(paris_now.strftime("%d%m%Y0700"), '%d%m%Y%H%M')
         end_date = datetime.strptime(paris_now.strftime("%d%m%Y2300"), '%d%m%Y%H%M')

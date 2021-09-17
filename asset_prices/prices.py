@@ -234,7 +234,6 @@ def update_bulk_prices(prices=None, type='real_time'):
                 "prices": price}}, upsert=True)
 
     logger_get_price.info("prices loaded {}".format(prices))
-
     server.close()
 
 def update_prices(asset_code=None, price=None, type='real_time'):

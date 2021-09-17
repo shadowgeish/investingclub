@@ -133,8 +133,8 @@ async def live_stock_prices():
 
         paris_now = datetime.now(tz)
         dtt = paris_now
-        start_date = datetime.strptime(paris_now.strftime("%d%m%Y0730%z"), '%d%m%Y%H%M%z')
-        end_date = datetime.strptime(paris_now.strftime("%d%m%Y2030%z"), '%d%m%Y%H%M%z')
+        start_date = datetime.strptime(paris_now.strftime("%d%m%Y0855%z"), '%d%m%Y%H%M%z')
+        end_date = datetime.strptime(paris_now.strftime("%d%m%Y1930%z"), '%d%m%Y%H%M%z')
         dtt_s = start_date # datetime(year=dtt.year, month=dtt.month, day=dtt.day, hour=8, minute=30, tzinfo=tz)
         dtt_e = end_date #datetime(year=dtt.year, month=dtt.month, day=dtt.day, hour=18, minute=30, tzinfo=tz)
 
@@ -144,7 +144,7 @@ async def live_stock_prices():
             list_closing_prices = []
             sec = (last_check_now - datetime.now(tz)).seconds
             logger_rtapi.info('Date check {} < {} < {} and {} sec '.format(dtt_s, dtt, dtt_e, sec))
-            if (dtt_s < dtt < dtt_e) and (first_run is True or sec >= 300):
+            if (dtt_s < dtt < dtt_e) and (first_run is True or sec >= 500):
                 first_run = False
                 last_check_now = datetime.now(tz)
                 logger_rtapi.info('Getting data for sub string {}'.format(sublist))

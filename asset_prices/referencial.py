@@ -179,7 +179,7 @@ def get_indx_cc_fx_universe(name="", type=""):
     return df
 
 
-def get_universe(name="", country="", type="", sector="",  skip=1, limit=5000):
+def get_universe(name="", country="", type="", sector="",  skip=0, limit=5000, codes=""):
     import pandas as pd
     from pymongo import MongoClient, ASCENDING, DESCENDING
 
@@ -198,6 +198,10 @@ def get_universe(name="", country="", type="", sector="",  skip=1, limit=5000):
         query["General.Sector"] = {"$regex": '/*{}/*'.format(sector), "$options": 'i'}
     if len(type) > 0:
         query["General.Type"] = {"$regex": '/*{}/*'.format(type), "$options": 'i'}
+
+    if len(codes) > 0 and codes != 'All':
+        full_code_list = codes.split(',')
+        query["FullCode"] = {"$in": full_code_list}
 
     '''
      query = {"General.Name": {"$regex": '/*{}/*'.format(name), "$options": 'i'},
@@ -278,7 +282,7 @@ def get_universe(name="", country="", type="", sector="",  skip=1, limit=5000):
         # df['logo'] = df.apply(lambda row: row['logo'] if row['Type'] not in ['ETP', 'ETF', 'ETC', 'ETN'] else 'https://devarteechadvisor.blob.core.windows.net/public-files/ETF.png', axis = 1 )
         # logger_get_ref.info(format(df.to_json(orient='records')))
 
-        df['total'] = total
+        df['total_stocks'] = total
 
     server.close()
         #logger_get_ref.info(' result {}'.format(df))

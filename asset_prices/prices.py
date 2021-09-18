@@ -46,11 +46,16 @@ def load_stock_historical_data(stock=None, start_date =None,end_date = None, eod
     logger_get_price.info('stock = {}, start_date{} end_date= {} eod_key = {} '.format(stock, start_date, end_date,
                                                                                        eod_key))
     # https://eodhistoricaldata.com/api/eod/{}?from={} & to = {} & api_token = {} & period = d & fmt = json
-    req = requests.get("https://eodhistoricaldata.com/api/eod/{}?from={}&to={}&api_token={}&period=d&fmt=json".format(
+    req_url = "https://eodhistoricaldata.com/api/eod/{}?from={}&to={}&api_token={}&period=d&fmt=json".format(
         stock,
         start_date,
         end_date,
-        eod_key))
+        eod_key)
+    req = requests.get(req_url)
+
+    logger_get_price.info(
+        'Req = {} , stock = {}, start_date = {} end_date= {} eod_key = {}  '.format(req_url, stock, start_date, end_date,
+                                                                                           eod_key ))
 
     collection_name = "historical_prices"
     db_name = "asset_analytics"
@@ -286,8 +291,12 @@ def get_prices(asset_codes=[],
     end_date = ed if end_date is None else end_date
 
     logger_get_price.info("dates Computed from {} to {}".format(start_date, end_date))
-
-    collection_name = "real_time_prices" if type == 'real_time' else 'historical_prices'
+    if type == 'real_time':
+        collection_name = "real_time_prices"
+        code = 'code'
+    else:
+        collection_name = 'stock_data' #'historical_prices'
+        code = 'FullCode'
     db_name = "asset_analytics"
 
     access_db = "mongodb+srv://sngoube:Yqy8kMYRWX76oiiP@cluster0.jaxrk.mongodb.net/asset_analytics?retryWrites=true&w=majority"
@@ -298,7 +307,7 @@ def get_prices(asset_codes=[],
     edate = end_date.timestamp()
     if ret_code == 1:
         query = [
-            {"$match": {"code": {"$in": list_stocks}}},
+            {"$match": {code: {"$in": list_stocks}}},
             {"$project": {"prices":
                 {
                     "$filter": {
@@ -317,7 +326,7 @@ def get_prices(asset_codes=[],
             }]
     else:
         query = [
-            {"$match": {"code": {"$in": list_stocks}}},
+            {"$match": {code: {"$in": list_stocks}}},
             {"$project": {"prices":
                 {
                     "$filter": {

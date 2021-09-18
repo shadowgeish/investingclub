@@ -25,10 +25,11 @@ stock_universe_request_parser.add_argument("cache", type=str, required=False,
                                         help="cache", default="false")
 
 stock_universe_request_parser.add_argument("skip", type=int, required=False,
-                                        help="skip", default=1)
+                                        help="skip", default=0)
 
 stock_universe_request_parser.add_argument("limit", type=int, required=False,
                                         help="limit", default=10)
+
 
 
 class StockUniverse(Resource):
@@ -92,7 +93,7 @@ class StockUniverse(Resource):
         '''
 
 
-class StockRealTimePrices(Resource):
+class StockLastestPrices(Resource):
     # df['CustomRating'] = df.apply(lambda x: custom_rating(x['Genre'], x['Rating']), axis=1)
     def get(self, codes):
         import pandas as pd
@@ -106,19 +107,23 @@ class StockRealTimePrices(Resource):
         skip = args['skip']
         limit = args['limit']
 
+
         tz = pytz.timezone('Europe/Paris')
 
-        if codes == 'All':
-            df = get_universe(name=name, country=country, type=type, sector=sector, skip=skip, limit=limit)
+        #if codes == 'All':
+        df = get_universe(name=name, country=country, type=type, sector=sector, skip=skip, limit=limit, codes=codes)
+        dict_stock = OrderedDict()
+        if len(df) > 0:
             df['full_code'] = df['Code'] + '.' + df['ExchangeCode']
             lstock = df['full_code'].tolist()
+            universe = df.to_dict(orient='records')
+            print('No Data returned!!')
         else:
-            lstock = codes.split(',')
+            return  dict_stock, 200
 
-        dict_stock = OrderedDict()
-        universe = df.to_dict(orient='records')
-        for stock in universe:
-            dict_stock[stock['Code'] + '.' + stock['ExchangeCode']] = stock
+
+
+
 
         print('READ FROM THE DATABASE!!')
         s_now = datetime.now(tz)
@@ -127,9 +132,20 @@ class StockRealTimePrices(Resource):
         paris_now = datetime.now(tz)
         start_date = datetime.strptime(paris_now.strftime("%d%m%Y0700"), '%d%m%Y%H%M')
         end_date = datetime.strptime(paris_now.strftime("%d%m%Y2300"), '%d%m%Y%H%M')
+        type = 'real_time'
+        #  check if day is the week-end
+        if start_date.weekday() > 4 :
+            import datetime as dte
+            start_date = datetime.strptime(paris_now.strftime("%d%m%Y2300"), '%d%m%Y%H%M') + dte.timedelta(-40)
+            end_date = datetime.strptime(paris_now.strftime("%d%m%Y2300"), '%d%m%Y%H%M') + dte.timedelta(+1)
+            type = 'historical'
+
+        for stock in universe:
+            dict_stock[stock['Code'] + '.' + stock['ExchangeCode']] = stock
+            dict_stock[stock['Code'] + '.' + stock['ExchangeCode']]['price_frequency'] = type
 
         rt_price_df = get_prices(asset_codes=lstock, start_date=start_date, end_date=end_date,
-                                 type='real_time', ret_code=1, ret='df')
+                                 type=type, ret_code=1, ret='df')
 
         if 'volume' in rt_price_df.columns:
             rt_price_df = rt_price_df.sort_values(by=['volume'], ascending=False)
@@ -137,9 +153,9 @@ class StockRealTimePrices(Resource):
         result = rt_price_df.to_dict(orient='records')
 
         for price in result:
-            if 'real_time_prices' not in dict_stock[price['code']].keys():
-                dict_stock[price['code']]['real_time_prices'] = list()
-            dict_stock[price['code']]['real_time_prices'].append(price)
+            if 'prices' not in dict_stock[price['code']].keys():
+                dict_stock[price['code']]['prices'] = list()
+            dict_stock[price['code']]['prices'].append(price)
 
         print('READ FROM THE DATABASE in {}!!'.format((s_now - datetime.now(tz)).total_seconds()))
 
@@ -162,12 +178,14 @@ class StockUniverseIntradayData(Resource):
 
         tz = pytz.timezone('Europe/Paris')
 
-        if codes == 'All':
-            df = get_universe(name=name, country=country, type=type, sector=sector, skip=skip, limit=limit)
-            df['full_code'] = df['Code'] + '.' + df['ExchangeCode']
-            lstock = df['full_code'].tolist()
-        else:
-            lstock = codes.split(',')
+        # if codes == 'All':
+        df = get_universe(name=name, country=country, type=type, sector=sector, skip=skip, limit=limit, codes=codes)
+        df['full_code'] = df['Code'] + '.' + df['ExchangeCode']
+        lstock = df['full_code'].tolist()
+        universe = df.to_dict(orient='records')
+        # else:
+        #    lstock = codes.split(',')
+        #    universe = lstock
 
         ''' 
         if cache == "true":

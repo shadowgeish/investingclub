@@ -7,6 +7,7 @@ from datetime import datetime
 from analytics.analytics import monte_carlo_portfolio_simul
 from asset_prices.referencial import get_universe
 
+
 stock_universe_request_parser = RequestParser(bundle_errors=False)
 
 stock_universe_request_parser.add_argument("name", type=str, required=False,
@@ -234,6 +235,12 @@ class StockUniverseIntradayData(Resource):
         return dict_prices, 200
 
 
+
+stock_data_request_parser = RequestParser(bundle_errors=False)
+
+stock_data_request_parser.add_argument("lang", type=str, required=False,
+                                        help="lang", default="en")
+
 class StockData(Resource):
     # df['CustomRating'] = df.apply(lambda x: custom_rating(x['Genre'], x['Rating']), axis=1)
     def get(self, code):
@@ -245,18 +252,44 @@ class StockData(Resource):
         import json
         import datetime
 
+        args = stock_data_request_parser.parse_args()
+        lang = args['lang']
+
+        lg_list = ['es', 'fr', 'nl', 'it', 'en', 'de']
+
+        print('lg_list = {}'.format(lg_list))
+        if lang in lg_list:
+            lg_list.remove(lang)
+
+        print(' New lg_list = {}'.format(lg_list))
+
+        filter = {'_id': 0, 'ETF_Data.Market_Capitalisation': 0,
+                             'General.Officers': 0,
+                             'General.Listings': 0,
+                            'General.Description': 0,
+                             'outstandingShares': 0,
+                             'Valuation': 0,
+                             'Financials': 0,
+                             'Earnings': 0,
+                             'ESGScores': 0,
+                             'InsiderTransactions':0,
+                             'SplitsDividends': 0,
+                             'SharesStats': 0
+                             }
+
+        for lg in lg_list:
+            filter['General.Description_' + lg] = 0
+
+        print(' filter = {}'.format(filter))
+
         # code = 'FR.PA'
         collection_name = "stock_data"
         db_name = "asset_analytics"
         access_db = "mongodb+srv://sngoube:Yqy8kMYRWX76oiiP@cluster0.jaxrk.mongodb.net/asset_analytics?retryWrites=true&w=majority"
         server = MongoClient(access_db)
-
+        # ESGScores, Earnings, Financials, SharesStats, SplitsDividends, Valuation, outstandingShares, General.Officers, General.Listings
         query = {"FullCode": code}
-        res = server[db_name][collection_name].find_one(query, {'_id': 0 ,
-                                                                 'ETF_Data.Market_Capitalisation': 0,
-                                                                 'ETF_Data.Asset_Allocation': 0,
-                                                                 'ETF_Data.Valuations_Growth': 0
-                                                                 })
+        res = server[db_name][collection_name].find_one(query, filter)
 
         res2 = server[db_name]["stock_esg_data"].find_one(query, {'_id': 0})
 
@@ -265,7 +298,7 @@ class StockData(Resource):
 
         merged_dict = dict(json_res, **json_res2)
 
-        print("Query {} and result {}".format(query, merged_dict))
+        #print("Query {} and result {}".format(query, merged_dict))
 
         return merged_dict, 200
 

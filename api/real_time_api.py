@@ -139,7 +139,7 @@ async def live_stock_prices():
         logger_rtapi.info(
             'Date check {} < {} < {} and {} sec, weekday = {} '.format(dtt_s, dtt, dtt_e, sec, dtt.weekday()))
 
-        if (dtt_s < dtt < dtt_e) and dtt.weekday() <= 4 and (first_run is True or sec >= 500):
+        if (dtt_s < dtt < dtt_e) and dtt.weekday() <= 4 and (first_run is True or sec >= 900):
             first_run = False
             ddf = get_universe()
             ddf2 = get_indx_cc_fx_universe()

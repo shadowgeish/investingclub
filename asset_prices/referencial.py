@@ -26,6 +26,7 @@ from datetime import date
 # alpha_vantage
 # requests
 # u8darts
+import numpy as np
 from tools.logger import logger_get_ref
 
 def load_exchange_list():
@@ -279,6 +280,8 @@ def get_universe(name="", country="", type="", sector="",  skip=0, limit=5000, c
         df = pd.DataFrame(item_list)
         # logger_get_ref.info(' df {}'.format(df))
         df = df[['ISIN', 'Code', 'Name', 'Country', 'Exchange', 'Currency', 'Type', 'ExchangeCode', 'logo', 'LastPriceVolume']]
+        df['EsgScore'] = np.random.randint(150, 255, size=len(df))
+        df['IndustryAverageEsgScore'] = np.random.randint(150, 255, size=len(df))
         # df['logo'] = df.apply(lambda row: row['logo'] if row['Type'] not in ['ETP', 'ETF', 'ETC', 'ETN'] else 'https://devarteechadvisor.blob.core.windows.net/public-files/ETF.png', axis = 1 )
         # logger_get_ref.info(format(df.to_json(orient='records')))
 

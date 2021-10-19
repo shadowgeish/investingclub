@@ -7,5 +7,9 @@
     <orderEntry type="jdk" jdkName="Python 3.8 (venv)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="PortfolioOptimisation" />
+    <orderEntry type="module" module-name="flask_app2" />
+    <orderEntry type="module" module-name="flask_app" />
+    <orderEntry type="module" module-name="investingclubaws" />
+    <orderEntry type="module" module-name="flask_app clean" />
   </component>
 </module>

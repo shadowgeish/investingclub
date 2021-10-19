@@ -2,13 +2,14 @@ from flask import Flask
 from flask_restful import Resource, Api
 from flask_restful.reqparse import RequestParser
 from flask_socketio import SocketIO, emit
+from flask_cors import CORS, cross_origin
 from api.simulation import MonteCarloSimulation, AAbacktesting, MeanVarOptimization, MaxDiversification
 from api.stocks import StockUniverse, StockData, StockPrices, IntradayStockPrices, PushIntradayStockPrices, \
-    StockUniverseIntradayData, PushBulkIntradayStockPrices, StockLastestPrices
+    StockUniverseIntradayData, PushBulkIntradayStockPrices, StockLastestPrices, HelloWord
 from flask_swagger_ui import get_swaggerui_blueprint
 
-app = Flask(__name__)
-
+application = app = Flask(__name__)
+CORS(app, support_credentials=True)
 ### swagger specific ###
 SWAGGER_URL = '/swagger'
 API_URL = '/static/swagger.json'
@@ -27,9 +28,9 @@ api = Api(app, prefix="/api/v1")
 # Set this variable to "threading", "eventlet" or "gevent" to test the
 # different async modes, or leave it set to None for the application to choose
 # the best option based on installed packages.
-async_mode = None
+#async_mode = None
 # socket_io = SocketIO(app, async_mode=async_mode)
-socket_io = SocketIO(app, async_mode=async_mode)
+#socket_io = SocketIO(app, async_mode=async_mode)
 
 users = [
     {"email": "masnun@gmail.com", "name": "Masnun", "id": 1}
@@ -92,6 +93,7 @@ api.add_resource(MeanVarOptimization, '/mean_var_opt')
 #api.add_resource(MaxDiversification, '/realestate') # real estate prices
 #api.add_resource(MonteCarloSimulation, '/lifeinsurance') # life insurance
 api.add_resource(StockUniverse, '/stock_universe') # country, type, name - OK
+api.add_resource(HelloWord, '/') # country, type, name - OK
 api.add_resource(StockUniverseIntradayData, '/stock_universe_intraday_data/<string:codes>') # country, type, name - OK
 api.add_resource(StockLastestPrices, '/stock_latest_prices/<string:codes>') # country, type, name - OK
 api.add_resource(StockData, '/stock_data/<string:code>')
@@ -104,5 +106,4 @@ api.add_resource(IntradayStockPrices, '/intraday_stock_prices/<string:code>')
 
 
 if __name__ == '__main__':
-    # app.run(debug=True, port=5001)
-    socket_io.run(app, debug=True , host='0.0.0.0', port=5001)
+    application.run(debug=True, host='0.0.0.0')

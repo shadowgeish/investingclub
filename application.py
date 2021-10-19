@@ -6,8 +6,8 @@ from tools.logger import logger_rtapi
 import socketio
 
 sio = socketio.AsyncServer(async_mode='sanic')
-real_time_app = Sanic(name='investing_club')
-sio.attach(real_time_app)
+application = app = Sanic(name='investing_club')
+sio.attach(app)
 
 real_time_price = dict()
 
@@ -15,7 +15,7 @@ real_time_price = dict()
 async def index(request):
     return '<html></html>'
 
-@real_time_app.listener('after_server_start')
+@app.listener('after_server_start')
 def after_server_start(sanic, loop):
     sio.start_background_task(live_stock_prices)
     return True
@@ -196,5 +196,4 @@ def disconnect(sid):
 
 
 if __name__ == '__main__':
-    #sio.start_background_task(live_stock_prices)
-    real_time_app.run(port=5005, host='0.0.0.0')
+    app.run(port=5005, host='0.0.0.0')

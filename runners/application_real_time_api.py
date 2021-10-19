@@ -196,5 +196,4 @@ def disconnect(sid):
 
 
 if __name__ == '__main__':
-    #sio.start_background_task(live_stock_prices)
     real_time_app.run(port=5005, host='0.0.0.0')

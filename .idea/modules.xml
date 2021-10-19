@@ -3,7 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../PortfolioOptimisation/.idea/PortfolioOptimisation.iml" filepath="$PROJECT_DIR$/../PortfolioOptimisation/.idea/PortfolioOptimisation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../flask_app/.idea/flask_app.iml" filepath="$PROJECT_DIR$/../flask_app/.idea/flask_app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../flask_app clean/.idea/flask_app clean.iml" filepath="$PROJECT_DIR$/../flask_app clean/.idea/flask_app clean.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../flask_app2/.idea/flask_app2.iml" filepath="$PROJECT_DIR$/../flask_app2/.idea/flask_app2.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/investingclub.iml" filepath="$PROJECT_DIR$/.idea/investingclub.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../investingclubaws/.idea/investingclubaws.iml" filepath="$PROJECT_DIR$/../investingclubaws/.idea/investingclubaws.iml" />
     </modules>
   </component>
 </project>

@@ -17,6 +17,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../flask_app/.ebextensions/00_apache_ssl.config">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../flask_app/depx.txt">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/agenda.py">
           <value>
             <Attribute>
@@ -52,6 +66,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/api/analytics_api.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/api/real_time_api.py">
           <value>
             <Attribute>
@@ -63,6 +84,13 @@
           <value>
             <Attribute>
               <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/api/stocks.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>

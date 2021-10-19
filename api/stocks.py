@@ -33,6 +33,11 @@ stock_universe_request_parser.add_argument("limit", type=int, required=False,
 
 
 
+class HelloWord(Resource):
+    # df['CustomRating'] = df.apply(lambda x: custom_rating(x['Genre'], x['Rating']), axis=1)
+    def get(self):
+        return {"about": "Hello world"}, 200
+
 class StockUniverse(Resource):
     # df['CustomRating'] = df.apply(lambda x: custom_rating(x['Genre'], x['Rating']), axis=1)
     def get(self):

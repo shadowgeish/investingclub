@@ -1,0 +1,4 @@
+source
+/var/app/current/api/real_time_api.py </dev/null >/dev/null 2>&1 &
+export PYTHONPATH=$PYTHONPATH:/var/app/current
+git clone https://github.com/shadowgeish/investingclub /var/app/current

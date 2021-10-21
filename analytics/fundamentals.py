@@ -5,7 +5,7 @@ Prices module
 
 """
 from datetime import date
-from asset_prices.historical_prices import get_historical_data
+#from asset_prices.historical_prices import get_historical_data
 
 
 # return  fundamentals_data for one or a list of codes example code : "BX4.PA"

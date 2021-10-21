@@ -225,6 +225,7 @@ def update_bulk_prices(prices=None, type='real_time'):
     import pytz
 
     collection_name = "real_time_prices" if type == 'real_time' else 'historical_prices'
+    stock_data = "stock_data"
     db_name = "asset_analytics"
 
     access_db = "mongodb+srv://sngoube:Yqy8kMYRWX76oiiP@cluster0.jaxrk.mongodb.net/asset_analytics?retryWrites=true&w=majority"
@@ -237,6 +238,18 @@ def update_bulk_prices(prices=None, type='real_time'):
             price['date'] = datetime.fromtimestamp(price['timestamp'], tz = tz).strftime("%d-%m-%Y %H:%M")
             server[db_name][collection_name].update_one({"code": asset_code}, {"$addToSet": {
                 "prices": price}}, upsert=True)
+
+            server[db_name][stock_data].update({"FullCode": price['code']}, {"$set": {
+                "last_price_rt": price['close']}})
+
+            server[db_name][stock_data].update({"FullCode": price['code']}, {"$set": {
+                "last_price_date_rt": price['date']}})
+
+            server[db_name][stock_data].update({"FullCode": price['code']}, {"$set": {
+                "last_price_change_p_rt": price['change_p']}})
+
+            server[db_name][stock_data].update({"FullCode": price['code']}, {"$set": {
+                "last_price_volume_rt": price['volume']}})
 
     logger_get_price.info("prices loaded {}".format(prices))
     server.close()

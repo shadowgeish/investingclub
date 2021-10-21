@@ -4,8 +4,8 @@ from flask_restful.reqparse import RequestParser
 from flask_socketio import SocketIO, emit
 from flask_cors import CORS, cross_origin
 from api.simulation import MonteCarloSimulation, AAbacktesting, MeanVarOptimization, MaxDiversification
-from api.stocks import StockUniverse, StockData, StockPrices, IntradayStockPrices, PushIntradayStockPrices, \
-    StockUniverseIntradayData, PushBulkIntradayStockPrices, StockLastestPrices
+from api.stocks import StockUniverse, StockData, StockPricesOld, IntradayStockPrices, PushIntradayStockPrices, \
+    StockPrices, PushBulkIntradayStockPrices, StockDataAndPrices
 from flask_swagger_ui import get_swaggerui_blueprint
 
 app = Flask(__name__)
@@ -93,10 +93,10 @@ api.add_resource(MeanVarOptimization, '/mean_var_opt')
 #api.add_resource(MaxDiversification, '/realestate') # real estate prices
 #api.add_resource(MonteCarloSimulation, '/lifeinsurance') # life insurance
 api.add_resource(StockUniverse, '/stock_universe') # country, type, name - OK
-api.add_resource(StockUniverseIntradayData, '/stock_universe_intraday_data/<string:codes>') # country, type, name - OK
-api.add_resource(StockLastestPrices, '/stock_latest_prices/<string:codes>') # country, type, name - OK
+api.add_resource(StockPrices, '/stock_universe_intraday_data/<string:codes>') # country, type, name - OK
+api.add_resource(StockDataAndPrices, '/stock_latest_prices/<string:codes>') # country, type, name - OK
 api.add_resource(StockData, '/stock_data/<string:code>')
-api.add_resource(StockPrices, '/stock_prices/<string:code>')
+api.add_resource(StockPricesOld, '/stock_prices/<string:code>')
 api.add_resource(PushIntradayStockPrices, '/load_intraday_stock_prices/<string:code>')
 api.add_resource(PushBulkIntradayStockPrices, '/load_bulk_intraday_stock_prices')
 api.add_resource(IntradayStockPrices, '/intraday_stock_prices/<string:code>')

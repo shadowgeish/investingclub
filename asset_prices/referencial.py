@@ -180,11 +180,13 @@ def get_indx_cc_fx_universe(name="", type=""):
     return df
 
 
-def get_universe(name="", country="", type="", sector="",  skip=0, limit=5000, codes=""):
+def get_universe(name="", country="", type="", sector="",  skip=0, limit=5000,
+                 codes="", order_type ="last_price_volume", order_direction="desc"):
     import pandas as pd
     from pymongo import MongoClient, ASCENDING, DESCENDING
 
-
+    order_dir = DESCENDING if order_direction == "desc" else ASCENDING
+    order_type ="last_price_volume"  if order_type == "" else order_type
     #collection_name = "stock_universe"
     collection_name = "stock_data"
     db_name = "asset_analytics"
@@ -222,7 +224,7 @@ def get_universe(name="", country="", type="", sector="",  skip=0, limit=5000, c
                 'General.LogoURL': 1}
     query = [
         {"$match": query},
-        {"$sort": {'last_price_volume': DESCENDING}},
+        {"$sort": {order_type: order_dir}},
         {'$facet': {
             "metadata": [{"$count": "total"}],
             "data": [{"$skip": skip},
@@ -253,8 +255,9 @@ def get_universe(name="", country="", type="", sector="",  skip=0, limit=5000, c
     output = list(res)[0]
 
     logger_get_ref.info("Query result {} ".format(output))
-
-    total = output['metadata'][0]['total'] - 1
+    total = 0
+    if len(output['metadata']) > 0 and 'total' in output['metadata'][0]:
+        total = output['metadata'][0]['total'] - 1
     lres = output['data']
     item_list = []
     result = []
@@ -280,8 +283,18 @@ def get_universe(name="", country="", type="", sector="",  skip=0, limit=5000, c
         df = pd.DataFrame(item_list)
         # logger_get_ref.info(' df {}'.format(df))
         df = df[['ISIN', 'Code', 'Name', 'Country', 'Exchange', 'Currency', 'Type', 'ExchangeCode', 'logo', 'LastPriceVolume']]
-        df['EsgScore'] = np.random.randint(150, 255, size=len(df))
-        df['IndustryAverageEsgScore'] = np.random.randint(150, 255, size=len(df))
+        #df['EsgScore'] = np.random.randint(150, 255, size=len(df))
+        df['IndustryAverageEsgScore'] = np.random.randint(150, 800, size=len(df))
+        df['Environmental'] = np.random.randint(150, 255, size=len(df))
+        df['Social'] = np.random.randint(150, 255, size=len(df))
+        df['Governance'] = np.random.randint(150, 255, size=len(df))
+
+        df['EnvironmentalNote'] = 'BBB'
+        df['SocialNote'] = 'BBB'
+        df['GovernanceNote'] = 'AAA'
+
+        df['EsgScore'] = df['Environmental'] + df['Social'] + df['Governance']
+        df['EsgScoreNote'] = 'BBB'
         # df['logo'] = df.apply(lambda row: row['logo'] if row['Type'] not in ['ETP', 'ETF', 'ETC', 'ETN'] else 'https://devarteechadvisor.blob.core.windows.net/public-files/ETF.png', axis = 1 )
         # logger_get_ref.info(format(df.to_json(orient='records')))
 

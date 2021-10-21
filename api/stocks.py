@@ -16,10 +16,10 @@ stock_universe_request_parser.add_argument("name", type=str, required=False,
 stock_universe_request_parser.add_argument("country", type=str, required=False,
                                         help="Country", default="")
 
-stock_universe_request_parser.add_argument("type", type=int, required=False,
-                                        help="type", default="")
+stock_universe_request_parser.add_argument("stock_type", type=str, required=False,
+                                        help="stock type", default="")
 
-stock_universe_request_parser.add_argument("sector", type=int, required=False,
+stock_universe_request_parser.add_argument("sector", type=str, required=False,
                                         help="sector", default="")
 
 stock_universe_request_parser.add_argument("cache", type=str, required=False,
@@ -31,7 +31,26 @@ stock_universe_request_parser.add_argument("skip", type=int, required=False,
 stock_universe_request_parser.add_argument("limit", type=int, required=False,
                                         help="limit", default=10)
 
+stock_universe_request_parser.add_argument("candle", type=int, required=False,
+                                        help="candle", default=1)
 
+stock_universe_request_parser.add_argument("lastpriceonly", type=int, required=False,
+                                        help="lastpriceonly", default=0)
+
+stock_universe_request_parser.add_argument("start_date", type=str, required=False,
+                                                 help="start date", default="")
+
+stock_universe_request_parser.add_argument("end_date", type=str, required=False,
+                                         help="end date", default="")
+
+stock_universe_request_parser.add_argument("historical", type=int, required=False,
+                                         help="historical", default=0)
+
+stock_universe_request_parser.add_argument("order_type", type=str, required=False,
+                                         help=" order_type", default="")
+
+stock_universe_request_parser.add_argument("order_direction", type=str, required=False,
+                                         help=" order_direction", default="")
 
 class HelloWord(Resource):
     # df['CustomRating'] = df.apply(lambda x: custom_rating(x['Genre'], x['Rating']), axis=1)
@@ -52,12 +71,15 @@ class StockUniverse(Resource):
 
         name = args['name']
         country = args['country']
-        type = args['type']
+        stock_type = args['stock_type']
         sector = args['sector']
         skip = args['skip']
         limit = args['limit']
+        order_type = args['order_type']
+        order_direction = args['order_direction']
 
-        df = get_universe(name=name, country=country, type=type, sector=sector, skip=skip, limit=limit)
+        df = get_universe(name=name, country=country, type=stock_type, sector=sector, skip=skip, limit=limit,
+                          order_type=order_type, order_direction=order_direction)
 
         # result = df.to_json(orient='records')
         result = df.to_dict(orient='records')
@@ -98,8 +120,18 @@ class StockUniverse(Resource):
         return result, 200
         '''
 
+def get_date_from_str_or_default(datestr, default_date_obj):
+    from datetime import datetime
+    try:
+        date_obj = datetime.datetime.strptime(datestr, '%Y%m%d')
+    except:
+        import sys
+        print("Oops!", sys.exc_info()[0], "occurred.")
+        date_obj = default_date_obj
+    return date_obj
 
-class StockLastestPrices(Resource):
+
+class StockDataAndPrices(Resource):
     # df['CustomRating'] = df.apply(lambda x: custom_rating(x['Genre'], x['Rating']), axis=1)
     def get(self, codes):
         import pandas as pd
@@ -108,16 +140,20 @@ class StockLastestPrices(Resource):
         args = stock_universe_request_parser.parse_args()
         name = args['name']
         country = args['country']
-        type = args['type']
+        stock_type = args['stock_type']
         sector = args['sector']
         skip = args['skip']
         limit = args['limit']
-
+        historical = args['historical']
+        order_type = args['order_type']
+        order_direction = args['order_direction']
 
         tz = pytz.timezone('Europe/Paris')
 
         #if codes == 'All':
-        df = get_universe(name=name, country=country, type=type, sector=sector, skip=skip, limit=limit, codes=codes)
+        df = get_universe(name=name, country=country, type=stock_type,
+                          sector=sector, skip=skip, limit=limit,
+                          codes=codes, order_type =order_type, order_direction=order_direction)
         dict_stock = OrderedDict()
         if len(df) > 0:
             df['full_code'] = df['Code'] + '.' + df['ExchangeCode']
@@ -127,34 +163,26 @@ class StockLastestPrices(Resource):
         else:
             return  dict_stock, 200
 
-
-
-
-
-        print('READ FROM THE DATABASE!!')
         s_now = datetime.now(tz)
 
         from asset_prices.prices import get_prices
         paris_now = datetime.now(tz)
         start_date = datetime.strptime(paris_now.strftime("%d%m%Y0700"), '%d%m%Y%H%M')
         end_date = datetime.strptime(paris_now.strftime("%d%m%Y2300"), '%d%m%Y%H%M')
-        type = 'real_time'
+        fetch_type = 'real_time'
         #  check if day is the week-end
-        if start_date.weekday() > 4 :
+        if start_date.weekday() > 4 or historical==1:
             import datetime as dte
             start_date = datetime.strptime(paris_now.strftime("%d%m%Y2300"), '%d%m%Y%H%M') + dte.timedelta(-40)
             end_date = datetime.strptime(paris_now.strftime("%d%m%Y2300"), '%d%m%Y%H%M') + dte.timedelta(+1)
-            type = 'historical'
+            fetch_type = 'historical'
 
         for stock in universe:
             dict_stock[stock['Code'] + '.' + stock['ExchangeCode']] = stock
-            dict_stock[stock['Code'] + '.' + stock['ExchangeCode']]['price_frequency'] = type
+            dict_stock[stock['Code'] + '.' + stock['ExchangeCode']]['price_frequency'] = fetch_type
 
         rt_price_df = get_prices(asset_codes=lstock, start_date=start_date, end_date=end_date,
-                                 type=type, ret_code=1, ret='df')
-
-        if 'volume' in rt_price_df.columns:
-            rt_price_df = rt_price_df.sort_values(by=['volume'], ascending=False)
+                                 type=fetch_type, ret_code=1, ret='df')
 
         result = rt_price_df.to_dict(orient='records')
 
@@ -163,11 +191,12 @@ class StockLastestPrices(Resource):
                 dict_stock[price['code']]['prices'] = list()
             dict_stock[price['code']]['prices'].append(price)
 
-        print('READ FROM THE DATABASE in {}!!'.format((s_now - datetime.now(tz)).total_seconds()))
+        print('RAN in {}!!'.format((s_now - datetime.now(tz)).total_seconds()))
+
 
         return dict_stock, 200
 
-class StockUniverseIntradayData(Resource):
+class StockUniverseLastPrice(Resource):
     # df['CustomRating'] = df.apply(lambda x: custom_rating(x['Genre'], x['Rating']), axis=1)
     def get(self, codes):
         import pandas as pd
@@ -189,29 +218,6 @@ class StockUniverseIntradayData(Resource):
         df['full_code'] = df['Code'] + '.' + df['ExchangeCode']
         lstock = df['full_code'].tolist()
         universe = df.to_dict(orient='records')
-        # else:
-        #    lstock = codes.split(',')
-        #    universe = lstock
-
-        ''' 
-        if cache == "true":
-            print('READ FROM THE CACHE!!')
-            s_now = datetime.now(tz)
-            map_dt = {}
-            # pd.DataFrame(stock_prices[code]).to_hdf('real_time_prices.h5', key=clean_key, mode='w')
-            # result = rt_price_df.to_dict(orient='records')
-            # pd.read_hdf('data.h5', 'df')
-            hdf = pd.HDFStore('real_time_prices.h5', 'r')
-            #print('Available Codes {}'.format(hdf.keys()))
-            for key in hdf.keys():
-                clean_key = key[3:].replace('_____', '.')
-                if clean_key in lstock:
-                    map_dt[clean_key] = pd.read_hdf('real_time_prices.h5', key).to_dict(orient='records')
-            hdf.close()
-            print('READ FROM THE CACHE in {}!!'.format((s_now - datetime.now(tz)).total_seconds()))
-            return map_dt, 200
-        
-        '''
 
         print('READ FROM THE DATABASE!!')
         s_now = datetime.now(tz)
@@ -225,15 +231,98 @@ class StockUniverseIntradayData(Resource):
                                  type='real_time', ret_code=1, ret='df')
 
         if 'volume' in rt_price_df.columns:
-            rt_price_df = rt_price_df.sort_values(by=['volume'], ascending = False )
+            rt_price_df = rt_price_df.sort_values(by=['volume'], ascending=False)
 
         result = rt_price_df.to_dict(orient='records')
 
         dict_prices = OrderedDict()
         for price in result:
             if price['code'] not in dict_prices.keys():
-                dict_prices[price['code']] = list()
-            dict_prices[price['code']].append(price)
+                dict_prices[price['code']] = price
+            if price['converted_date'] > dict_prices[price['code']]['converted_date']:
+                dict_prices[price['code']] = price
+
+        return dict_prices, 200
+
+
+
+class StockPrices(Resource):
+    # df['CustomRating'] = df.apply(lambda x: custom_rating(x['Genre'], x['Rating']), axis=1)
+    def get(self, codes):
+        import pandas as pd
+        from datetime import datetime
+        import pytz
+        args = stock_universe_request_parser.parse_args()
+        name = args['name']
+        country = args['country']
+        stock_type = args['stock_type']
+        sector = args['sector']
+        cache = args['cache']
+        skip = args['skip']
+        limit = args['limit']
+        candle = args['candle']
+        lastpriceonly = args['lastpriceonly']
+        historical = args['historical']
+        order_type = args['order_type']
+        order_direction = args['order_direction']
+
+        tz = pytz.timezone('Europe/Paris')
+
+        # if codes == 'All':
+        df = get_universe(name=name, country=country, type=stock_type, sector=sector, skip=skip, limit=limit,
+                          codes=codes, order_type=order_type, order_direction=order_direction)
+        df['full_code'] = df['Code'] + '.' + df['ExchangeCode']
+        lstock = df['full_code'].tolist()
+        universe = df.to_dict(orient='records')
+        # else:
+        #    lstock = codes.split(',')
+        #    universe = lstock
+
+        s_now = datetime.now(tz)
+
+        from asset_prices.prices import get_prices
+        if historical == 1:
+
+            start_date = get_date_from_str_or_default(args['start_date'],
+                                                      (datetime.date.today() + datetime.timedelta(-200)))
+            end_date = get_date_from_str_or_default(args['end_date'],
+                                                      (datetime.date.today() + datetime.timedelta(1)))
+        else:
+            paris_now = datetime.now(tz)
+            start_date = datetime.strptime(paris_now.strftime("%d%m%Y0700"), '%d%m%Y%H%M')
+            end_date = datetime.strptime(paris_now.strftime("%d%m%Y2300"), '%d%m%Y%H%M')
+
+        rt_price_df = get_prices(asset_codes=lstock, start_date=start_date, end_date=end_date,
+                                 type='real_time', ret_code=1, ret='df')
+
+        if 'volume' in rt_price_df.columns:
+            rt_price_df = rt_price_df.sort_values(by=['volume'], ascending = False )
+
+        result = rt_price_df.to_dict(orient='records')
+
+        dict_prices = OrderedDict()
+
+        if lastpriceonly == 1:
+            for price in result:
+                if price['code'] not in dict_prices.keys():
+                    dict_prices[price['code']] = price
+                if price['converted_date'] > dict_prices[price['code']]['converted_date']:
+                    dict_prices[price['code']] = price
+
+        elif candle == 0:
+            for price in result:
+                if price['code'] not in dict_prices.keys():
+                    dict_prices[price['code']] = list()
+                dict_prices[price['code']].append({'code': price['code'],
+                                                   'timestamp': price['timestamp'],
+                                                   'volume': price['volume'],
+                                                   'change_p': price['change_p'],
+                                                   'close': price['close']})
+        else:
+            for price in result:
+                if price['code'] not in dict_prices.keys():
+                    dict_prices[price['code']] = list()
+                dict_prices[price['code']].append(price)
 
         print('READ FROM THE DATABASE in {}!!'.format((s_now - datetime.now(tz)).total_seconds()))
 
@@ -266,7 +355,7 @@ class StockData(Resource):
         if lang in lg_list:
             lg_list.remove(lang)
 
-        print(' New lg_list = {}'.format(lg_list))
+        print('New lg_list = {}'.format(lg_list))
 
         filter = {'_id': 0, 'ETF_Data.Market_Capitalisation': 0,
                              'General.Officers': 0,
@@ -277,6 +366,7 @@ class StockData(Resource):
                              'Financials': 0,
                              'Earnings': 0,
                              'ESGScores': 0,
+                             'prices': 0,
                              'InsiderTransactions':0,
                              'SplitsDividends': 0,
                              'SharesStats': 0
@@ -308,70 +398,6 @@ class StockData(Resource):
         return merged_dict, 200
 
 
-intraday_stock_prices_request_parser = RequestParser(bundle_errors=False)
-
-intraday_stock_prices_request_parser.add_argument("timestamp", type=int, required=False,
-                                        help="timestamp", default=0)
-
-intraday_stock_prices_request_parser.add_argument("gmtoffset", type=int, required=False,
-                                        help="gmtoffset", default=0)
-
-intraday_stock_prices_request_parser.add_argument("open", type=float, required=False,
-                                        help="open", default=0)
-
-intraday_stock_prices_request_parser.add_argument("high", type=float, required=False,
-                                        help="high", default=0)
-
-intraday_stock_prices_request_parser.add_argument("low", type=float, required=False,
-                                        help="low", default=0)
-
-intraday_stock_prices_request_parser.add_argument("close", type=float, required=False,
-                                        help="close", default=0)
-
-intraday_stock_prices_request_parser.add_argument("volume", type=int, required=False,
-                                        help="volume", default=0)
-
-intraday_stock_prices_request_parser.add_argument("previousClose", type=float, required=False,
-                                        help="previousClose", default=0)
-
-intraday_stock_prices_request_parser.add_argument("change", type=float, required=False,
-                                        help="change", default=0)
-
-intraday_stock_prices_request_parser.add_argument("change_p", type=float, required=False,
-                                        help="change_p", default=0)
-
-intraday_stock_prices_request_parser.add_argument("converted_date", type=int, required=False,
-                                        help="converted_date", default=0)
-
-intraday_stock_prices_request_parser.add_argument("date", type=str, required=False,
-                                        help="date", default="")
-
-
-class IntradayStockPrices(Resource):
-    # df['CustomRating'] = df.apply(lambda x: custom_rating(x['Genre'], x['Rating']), axis=1)
-    def get(self, codes):
-
-        from asset_prices.prices import get_prices
-        from datetime import datetime
-        import pytz
-
-        tz = pytz.timezone('Europe/Paris')
-        paris_now = datetime.now(tz)
-        last_check_now = datetime.now(tz)
-        dtt = paris_now
-        start_date = datetime.strptime(paris_now.strftime("%d%m%Y0700"), '%d%m%Y%H%M')
-        end_date = datetime.strptime(paris_now.strftime("%d%m%Y2300"), '%d%m%Y%H%M')
-        codes_list = codes.split(',')
-        rt_price_df = get_prices(asset_codes=codes_list, start_date=start_date, end_date=end_date,
-                                type='real_time',ret_code=1, ret='df')
-
-        result = rt_price_df.to_dict(orient='records')
-        print('Real time data {}'.format(rt_price_df))
-
-        print('json result {}'.format(result))
-
-        return result, 200
-
 
 class PushBulkIntradayStockPrices(Resource):
     # df['CustomRating'] = df.apply(lambda x: custom_rating(x['Genre'], x['Rating']), axis=1)
@@ -401,68 +427,6 @@ class PushBulkIntradayStockPrices(Resource):
         return result, 200
 
 
-class PushIntradayStockPrices(Resource):
-    # df['CustomRating'] = df.apply(lambda x: custom_rating(x['Genre'], x['Rating']), axis=1)
-    def get(self, code):
-
-        from asset_prices.prices import get_prices, update_prices
-        from datetime import datetime
-        import pytz
-
-
-        tz = pytz.timezone('Europe/Paris')
-        paris_now = datetime.now(tz)
-        start_date = datetime.strptime(paris_now.strftime("%d%m%Y0700"), '%d%m%Y%H%M')
-        end_date = datetime.strptime(paris_now.strftime("%d%m%Y2300"), '%d%m%Y%H%M')
-
-        #CAC.PA?timestamp = 1630932780 & gmtoffset = 0 & open = 65.94 & high = 66.33 & low = 65.94 & close = 66.33 & volume = 11065 & previousClose = 65.75 & change = 0.58 & change_p = 0.8821 & converted_date = 1630932780 & date = 06 - 0
-        #9 - 2021 % 2014: 53:00.000000
-
-        try:
-            args = intraday_stock_prices_request_parser.parse_args()
-        except:
-            import sys
-            return {'error': '{}'.format(sys.exc_info()[0])}, 200
-            print("Oops!", sys.exc_info()[0], "occurred.")
-
-        price ={
-            "code": code,
-            "timestamp": args["timestamp"],
-            "gmtoffset": args["gmtoffset"],
-            "open": args["open"],
-            "high": args["high"],
-            "low": args["low"],
-            "close": args["close"],
-            "volume": args["volume"],
-            "previousClose": args["previousClose"],
-            "change": args["change"],
-            "change_p": args["change_p"],
-            "converted_date": args["converted_date"],
-            "date": args["date"]
-        }
-        print('Price {}'.format(price))
-
-        update_prices(asset_code=code, price=price, type='real_time')
-
-        rt_price_df = get_prices(asset_codes=[code], start_date=start_date, end_date=end_date,
-                                type='real_time', ret='df')
-
-        import os
-        #if not os.path.isfile('./swmr_real_time_prices.csv'):
-        #    f["run_date"] = paris_now
-        #    f["real_time_prices"] = rt_price_df
-
-        result = rt_price_df.to_dict(orient='records')
-
-
-        print('Real time data {}'.format(rt_price_df))
-
-        print('json result {}'.format(result))
-
-
-        return result, 200
-
-
 stock_prices_request_parser = RequestParser(bundle_errors=False)
 
 stock_prices_request_parser.add_argument("start_date", type=str, required=False,
@@ -472,7 +436,7 @@ stock_prices_request_parser.add_argument("end_date", type=str, required=False,
                                         help="end date", default="")
 
 
-class StockPrices(Resource):
+class StockPricesOld(Resource):
     # df['CustomRating'] = df.apply(lambda x: custom_rating(x['Genre'], x['Rating']), axis=1)
     def get(self, code):
 

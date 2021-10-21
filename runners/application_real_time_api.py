@@ -45,7 +45,7 @@ async def live_stock_prices():
     import json
 
     #server_run = '18.191.227.200' # localhost
-    server_run = 'https://stocks.investingclub.io' # http://localhost:5001
+    server_run = 'http://localhost:5005' #'https://stocks.investingclub.io' # http://localhost:5001
     #server_run = 'localhost'  # localhost
     collection_name = "real_time_prices"
     db_name = "asset_analytics"
@@ -196,4 +196,4 @@ def disconnect(sid):
 
 
 if __name__ == '__main__':
-    real_time_app.run(port=5005, host='0.0.0.0')
+    real_time_app.run(port=5006 , host='0.0.0.0')

@@ -121,12 +121,12 @@ class StockUniverse(Resource):
         '''
 
 def get_date_from_str_or_default(datestr, default_date_obj):
-    from datetime import datetime
+    import datetime
     try:
         date_obj = datetime.datetime.strptime(datestr, '%Y%m%d')
     except:
         import sys
-        print("Oops!", sys.exc_info()[0], "occurred.")
+        print("Oops!", sys.exc_info()[0], "occurred with string date =", datestr)
         date_obj = default_date_obj
     return date_obj
 
@@ -266,6 +266,8 @@ class StockPrices(Resource):
         order_type = args['order_type']
         order_direction = args['order_direction']
 
+
+
         tz = pytz.timezone('Europe/Paris')
 
         # if codes == 'All':
@@ -281,19 +283,23 @@ class StockPrices(Resource):
         s_now = datetime.now(tz)
 
         from asset_prices.prices import get_prices
+        data_type = 'real_time'
         if historical == 1:
-
+            import datetime as dat
             start_date = get_date_from_str_or_default(args['start_date'],
-                                                      (datetime.date.today() + datetime.timedelta(-200)))
+                                                      (dat.date.today() + dat.timedelta(-200)))
             end_date = get_date_from_str_or_default(args['end_date'],
-                                                      (datetime.date.today() + datetime.timedelta(1)))
+                                                      (dat.date.today() + dat.timedelta(1)))
+            start_date = dat.datetime.combine(start_date, dat.time.min)
+            end_date = dat.datetime.combine(end_date, dat.time.min)
+            data_type = 'historical'
         else:
             paris_now = datetime.now(tz)
             start_date = datetime.strptime(paris_now.strftime("%d%m%Y0700"), '%d%m%Y%H%M')
             end_date = datetime.strptime(paris_now.strftime("%d%m%Y2300"), '%d%m%Y%H%M')
 
         rt_price_df = get_prices(asset_codes=lstock, start_date=start_date, end_date=end_date,
-                                 type='real_time', ret_code=1, ret='df')
+                                 type=data_type, ret_code=1, ret='df')
 
         if 'volume' in rt_price_df.columns:
             rt_price_df = rt_price_df.sort_values(by=['volume'], ascending = False )
@@ -305,30 +311,41 @@ class StockPrices(Resource):
         if lastpriceonly == 1:
             for price in result:
                 if price['code'] not in dict_prices.keys():
-                    dict_prices[price['code']] = price
+                    dict_prices[price['code']] = format_price_date(price, candle,data_type=data_type)
                 if price['converted_date'] > dict_prices[price['code']]['converted_date']:
-                    dict_prices[price['code']] = price
-
-        elif candle == 0:
-            for price in result:
-                if price['code'] not in dict_prices.keys():
-                    dict_prices[price['code']] = list()
-                dict_prices[price['code']].append({'code': price['code'],
-                                                   'timestamp': price['timestamp'],
-                                                   'volume': price['volume'],
-                                                   'change_p': price['change_p'],
-                                                   'close': price['close']})
+                    dict_prices[price['code']] = format_price_date(price, candle,data_type=data_type)
         else:
             for price in result:
                 if price['code'] not in dict_prices.keys():
                     dict_prices[price['code']] = list()
-                dict_prices[price['code']].append(price)
+                dict_prices[price['code']].append(format_price_date(price, candle, data_type=data_type))
+
 
         print('READ FROM THE DATABASE in {}!!'.format((s_now - datetime.now(tz)).total_seconds()))
 
         return dict_prices, 200
 
 
+def format_price_date(price, candle, data_type='historical'):
+    if candle == 1:
+        return price
+    else:
+        if data_type == 'historical':
+
+            return {'code': price['code'],
+                    'converted_date': price['converted_date'],
+                    'date': price['date'],
+                    'volume': price['volume'],
+                    'close': price['adjusted_close']
+                    }
+        else:
+            return {'code': price['code'],
+                    'converted_date': price['converted_date'],
+                    'date': price['date'],
+                    'volume': price['volume'],
+                    'change_p': price['change_p'],
+                    'close': price['close']
+                    }
 
 stock_data_request_parser = RequestParser(bundle_errors=False)
 

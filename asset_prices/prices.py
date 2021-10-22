@@ -41,7 +41,7 @@ def load_stock_historical_data_mp(args):
     load_stock_historical_data(stock, start_date,end_date, eod_key, full_available_history)
 
 
-def load_stock_historical_data(stock=None, start_date =None,end_date = None, eod_key = None,
+def load_stock_historical_data(stock=None, start_date =None, end_date = None, eod_key = None,
                                full_available_history=False):
     logger_get_price.info('stock = {}, start_date{} end_date= {} eod_key = {} '.format(stock, start_date, end_date,
                                                                                        eod_key))

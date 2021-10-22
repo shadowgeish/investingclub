@@ -1,199 +1,107 @@
-import asyncio
-from sanic import Sanic
-from sanic.response import html
-from tools.logger import logger_rtapi
+from flask import Flask
+from flask_restful import Resource, Api
+from flask_restful.reqparse import RequestParser
+from flask_socketio import SocketIO, emit
+from flask_cors import CORS, cross_origin
+from api.simulation import MonteCarloSimulation, AAbacktesting, MeanVarOptimization, MaxDiversification
+from api.stocks import StockUniverse, StockData, StockPricesOld, \
+    StockPrices, PushBulkIntradayStockPrices, StockDataAndPrices, HelloWord
+from flask_swagger_ui import get_swaggerui_blueprint
 
-import socketio
+application = app = Flask(__name__)
+CORS(app, support_credentials=True)
+### swagger specific ###
+SWAGGER_URL = '/swagger'
+API_URL = '/static/swagger.json'
+SWAGGERUI_BLUEPRINT = get_swaggerui_blueprint(
+    SWAGGER_URL,
+    API_URL,
+    config={
+        'app_name': "InvestingClub Analytics API"
+    }
+)
+app.register_blueprint(SWAGGERUI_BLUEPRINT, url_prefix=SWAGGER_URL)
+### end swagger specific ##
 
-sio = socketio.AsyncServer(async_mode='sanic')
-application = app = Sanic(name='investing_club')
-sio.attach(app)
+api = Api(app, prefix="/api/v1")
 
-real_time_price = dict()
+# Set this variable to "threading", "eventlet" or "gevent" to test the
+# different async modes, or leave it set to None for the application to choose
+# the best option based on installed packages.
+#async_mode = None
+# socket_io = SocketIO(app, async_mode=async_mode)
+#socket_io = SocketIO(app, async_mode=async_mode)
 
-
-async def index(request):
-    return '<html></html>'
-
-@app.listener('after_server_start')
-def after_server_start(sanic, loop):
-    sio.start_background_task(live_stock_prices)
-    return True
-
-
-def is_serializable(obj):
-    import json
-    try:
-        json.dumps(obj)
-    except TypeError:
-        logger_rtapi.error("Unable to serialize the object")
-        return False
-
-    return True
-
-
-async def live_stock_prices():
-    from datetime import datetime
-    import datetime as dttime
-    import pandas as pd
-    from time import sleep
-    from pymongo import MongoClient
-    from asset_prices.prices import get_prices
-    from asset_prices.referencial import get_universe, get_indx_cc_fx_universe
-    import pytz
-    import requests
-    import json
-
-    #server_run = '18.191.227.200' # localhost
-    server_run = 'https://stocks.investingclub.io' # http://localhost:5001
-    #server_run = 'localhost'  # localhost
-    collection_name = "real_time_prices"
-    db_name = "asset_analytics"
-    access_db = "mongodb+srv://sngoube:Yqy8kMYRWX76oiiP@cluster0.jaxrk.mongodb.net/asset_analytics?retryWrites=true&w=majority"
-    server = MongoClient(access_db)
-
-    tz = pytz.timezone('Europe/Paris')
-
-    #ddf = pd.read_csv("../asset_prices/stock_universe.csv", sep=',', keep_default_na=False)
-
-    ddf = get_universe()
-    ddf2 = get_indx_cc_fx_universe()
-    ddf = ddf.append(ddf2)
-    ddf['full_code'] = ddf['Code'] + '.' + ddf['ExchangeCode']
-    lstock = ddf['full_code'].tolist()  # ddf.to_dict(orient='records')
+users = [
+    {"email": "masnun@gmail.com", "name": "Masnun", "id": 1}
+]
 
 
-    global real_time_price
-
-    # sio.emit('login', {'userKey': 'streaming_api_key'})
-    from aiohttp import ClientSession
-    session = ClientSession()
-    last_check_now = datetime.now(tz)
-    first_run = True
-
-    while True:
-        paris_now = datetime.now(tz)
-        dtt = paris_now
-        start_date = datetime.strptime(paris_now.strftime("%d%m%Y0855%z"), '%d%m%Y%H%M%z')
-        end_date = datetime.strptime(paris_now.strftime("%d%m%Y1930%z"), '%d%m%Y%H%M%z')
-        dtt_s = start_date # datetime(year=dtt.year, month=dtt.month, day=dtt.day, hour=8, minute=30, tzinfo=tz)
-        dtt_e = end_date #datetime(year=dtt.year, month=dtt.month, day=dtt.day, hour=18, minute=30, tzinfo=tz)
-
-        logger_rtapi.info('Date check {} < {} < {} '.format(dtt_s, dtt, dtt_e))
-        list_to_order = []
-
-        sec = (last_check_now - datetime.now(tz)).seconds
-        logger_rtapi.info(
-            'Date check {} < {} < {} and {} sec, weekday = {} '.format(dtt_s, dtt, dtt_e, sec, dtt.weekday()))
-
-        if (dtt_s < dtt < dtt_e) and dtt.weekday() <= 4 and (first_run is True or sec >= 1000):
-            first_run = False
-            ddf = get_universe()
-            ddf2 = get_indx_cc_fx_universe()
-            ddf = ddf.append(ddf2)
-            ddf['full_code'] = ddf['Code'] + '.' + ddf['ExchangeCode']
-            lstock = ddf['full_code'].tolist()  # ddf.to_dict(orient='records')
-            last_check_now = datetime.now(tz)
-            sublists = [lstock[x:x + 20] for x in range(0, len(lstock), 20)]
-            stringlist = []
-            for subset in sublists:
-                stringlist.append(','.join(subset))
-
-            for sublist in stringlist:
-                list_closing_prices = []
-
-                logger_rtapi.info('Getting data for sub string {}'.format(sublist))
-                sreq = "https://eodhistoricaldata.com/api/real-time/CAC.PA?api_token=60241295a5b4c3.00921778&fmt=json&s={}"
-
-                async with session.get(sreq.format(sublist)) as response:
-                    data = await response.read()
-                    #list_closing_prices = await response.json(content_type=None)
-                try:
-                    list_closing_prices = json.loads(data)
-                except ValueError as e:
-                    list_closing_prices = []
-                    logger_rtapi.warning('Error loading data {} '.format(data))
-
-                if real_time_price is None or dtt_s > dtt > dtt_e:
-                    real_time_price = dict()
-
-                if len(list_closing_prices) > 0:
-                    # Loading data
-                    sreq = "{}/api/v1/load_bulk_intraday_stock_prices"
-                    str_req = sreq.format(server_run)
-
-                    logger_rtapi.info('Loading {}'.format(str_req))
-                    async with session.post(str_req, json=list_closing_prices) as response:
-                        data = await response.read()
-                    try:
-                        stock_prices = json.loads(data)
-                        logger_rtapi.info('Seding intraday_prices {}'.format(stock_prices))
-                    except ValueError as e:
-                        logger_rtapi.warning('Error loading data {} '.format(data))
-
-                    for price in list_closing_prices:
-                        if price['timestamp'] != 'NA':
-                            await sio.emit('last_traded_price', price)
-                            list_to_order.append(price)
+def get_user_by_id(user_id):
+    for x in users:
+        if x.get("id") == int(user_id):
+            return x
 
 
-sio.event
-async def my_event(sid, message):
-    await sio.emit('my_response', {'data': message['data']}, room=sid)
+subscriber_request_parser = RequestParser(bundle_errors=True)
+subscriber_request_parser.add_argument("name", type=str, required=True, help="Name has to be valid string")
+subscriber_request_parser.add_argument("email", required=True)
+subscriber_request_parser.add_argument("id", type=int, required=True, help="Please enter valid integer as ID")
 
 
-@sio.event
-async def my_broadcast_event(sid, message):
-    await sio.emit('my_response', {'data': message['data']})
+class SubscriberCollection(Resource):
+    def get(self):
+        return users
+
+    def post(self):
+        args = subscriber_request_parser.parse_args()
+        users.append(args)
+        return {"msg": "Subscriber added", "subscriber_data": args}
 
 
-@sio.event
-async def join(sid, message):
-    sio.enter_room(sid, message['room'])
-    await sio.emit('my_response', {'data': 'Entered room: ' + message['room']},
-                   room=sid)
+class Subscriber(Resource):
+    def get(self, id):
+        user = get_user_by_id(id)
+        if not user:
+            return {"error": "User not found"}
+
+        return user
+
+    def put(self, id):
+        args = subscriber_request_parser.parse_args()
+        user = get_user_by_id(id)
+        if user:
+            users.remove(user)
+            users.append(args)
+
+        return args
+
+    def delete(self, id):
+        user = get_user_by_id(id)
+        if user:
+            users.remove(user)
+
+        return {"message": "Deleted"}
 
 
-@sio.event
-async def leave(sid, message):
-    sio.leave_room(sid, message['room'])
-    await sio.emit('my_response', {'data': 'Left room: ' + message['room']},
-                   room=sid)
-
-
-@sio.event
-async def close_room(sid, message):
-    await sio.emit('my_response',
-                   {'data': 'Room ' + message['room'] + ' is closing.'},
-                   room=message['room'])
-    await sio.close_room(message['room'])
-
-
-@sio.event
-async def my_room_event(sid, message):
-    await sio.emit('my_response', {'data': message['data']},
-                   room=message['room'])
-
-
-@sio.event
-async def disconnect_request(sid):
-    await sio.disconnect(sid)
-
-
-@sio.event
-async def connect(sid, environ):
-    await sio.emit('my_response', {'data': 'Connected', 'count': 0}, room=sid)
-
-
-@sio.event
-def disconnect(sid):
-    logger_rtapi.info('Client disconnected')
-
-
-#app.router.add_static('/static', 'static')
-#app.router.add_get('/', index)
-#app.static('/static', './static')
+api.add_resource(SubscriberCollection, '/subscribers')
+api.add_resource(Subscriber, '/subscribers/<int:id>')
+api.add_resource(MonteCarloSimulation, '/montecarlo')
+api.add_resource(AAbacktesting, '/aabacktesting')
+api.add_resource(MaxDiversification, '/maximum_diversificaton')
+api.add_resource(MeanVarOptimization, '/mean_var_opt')
+#api.add_resource(MaxDiversification, '/realestate') # real estate prices
+#api.add_resource(MonteCarloSimulation, '/lifeinsurance') # life insurance
+api.add_resource(StockUniverse, '/stock_universe') # country, type, name - OK
+api.add_resource(HelloWord, '/') # country, type, name - OK
+api.add_resource(StockPrices, '/stock_prices/<string:codes>') # country, type, name - OK
+api.add_resource(StockDataAndPrices, '/stock_latest_prices/<string:codes>') # country, type, name - OK Add filtering and sorting
+api.add_resource(StockData, '/stock_data/<string:code>') #- Ok Add ESG data ok, Add mobile version (light)
+api.add_resource(StockPricesOld, '/stock_prices_old/<string:code>') # - to delete
+api.add_resource(PushBulkIntradayStockPrices, '/load_bulk_intraday_stock_prices')
+# name, exchange, description, asset class, esg ratings, financial data
+# ETF => composition, issuer logo, AUM,
 
 
 if __name__ == '__main__':
-    app.run(port=5005, host='0.0.0.0')
+    application.run(debug=True, host='0.0.0.0')

@@ -221,7 +221,13 @@ def get_universe(name="", country="", type="", sector="",  skip=0, limit=5000,
                 'General.Type': 1,
                 'Exchange': 1,
                 'last_price_volume': 1,
+                 order_type: 1,
                 'General.LogoURL': 1}
+
+    #server[db_name][collection_name].update_many({"last_price_rt": "0"},
+    #    {"$set":{"last_price_rt": 0, "last_price_volume_rt": 0, "last_price_change_p_rt": 0 }}
+    #);
+
     query = [
         {"$match": query},
         {"$sort": {order_type: order_dir}},

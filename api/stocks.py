@@ -368,14 +368,27 @@ class StockData(Resource):
 
         lg_list = ['es', 'fr', 'nl', 'it', 'en', 'de']
 
-        print('lg_list = {}'.format(lg_list))
+        #print('lg_list = {}'.format(lg_list))
         if lang in lg_list:
             lg_list.remove(lang)
 
-        print('New lg_list = {}'.format(lg_list))
+        #print('New lg_list = {}'.format(lg_list))
 
         filter = {'_id': 0, 'ETF_Data.Market_Capitalisation': 0,
                              'General.Officers': 0,
+                             'ETF_Data.Asset_Allocation': 0,
+                  'ETF_Data.World_Regions': 0,
+                  'ETF_Data.Fixed_Income': 0,
+                  'ETF_Data.Holdings_Count': 0,
+                  'ETF_Data.Top_10_Holdings': 0,
+                  'ETF_Data.Holdings': 0,
+                  'ETF_Data.Valuations_Growth': 0,
+                  'ETF_Data.MorningStar': 0,
+                  'ETF_Data.Max_Annual_Mgmt_Charge': 0,
+                  'ETF_Data.Ongoing_Charge': 0,
+                  'ETF_Data.AnnualHoldingsTurnover': 0,
+                  'General.Address': 0,
+                  'General.AddressData': 0,
                              'General.Listings': 0,
                             'General.Description': 0,
                              'outstandingShares': 0,
@@ -391,6 +404,9 @@ class StockData(Resource):
 
         for lg in lg_list:
             filter['General.Description_' + lg] = 0
+
+        for lg in lg_list:
+            filter['General.Category_' + lg] = 0
 
         print(' filter = {}'.format(filter))
 
@@ -409,7 +425,133 @@ class StockData(Resource):
         json_res2 = {} if res2 is None else json.loads(json_util.dumps(res2))
 
         merged_dict = dict(json_res, **json_res2)
+        if 'Highlights' in merged_dict.keys():
+            for key in merged_dict['Highlights'].keys():
+                if 'MostRecentQuarter' != key:
+                    val = merged_dict['Highlights'][key]
+                    #print("Key {}= {}, type is {} ".format(key, val, type(val)))
+                    val = 9999999 if val is None else val
+                    merged_dict['Highlights'][key] = val
 
+        if 'ETF_Data' in merged_dict.keys():
+            for key in merged_dict['Technicals'].keys():
+                    val = merged_dict['Technicals'][key]
+                    #print("Key {}= {}, type is {} ".format(key, val, type(val)))
+                    val = 9999999 if val is None else val
+                    merged_dict['Technicals'][key] = val
+
+        if 'Technicals' in merged_dict.keys():
+            for key in merged_dict['Technicals'].keys():
+                val = merged_dict['Technicals'][key]
+                #print("Key {}= {}, type is {} ".format(key, val, type(val)))
+                val = 9999999 if val is None else val
+                merged_dict['Technicals'][key] = val
+
+            if '52WeekHigh' in merged_dict['Technicals'].keys():
+                merged_dict['Technicals']['WeekHigh52'] = merged_dict['Technicals']['52WeekHigh']
+                del merged_dict['Technicals']['52WeekHigh']
+            if '52WeekLow' in merged_dict['Technicals'].keys():
+                merged_dict['Technicals']['WeekLow52'] = merged_dict['Technicals']['52WeekLow']
+                del merged_dict['Technicals']['52WeekLow']
+            if '50DayMA' in merged_dict['Technicals'].keys():
+                merged_dict['Technicals']['DayMA50'] = merged_dict['Technicals']['50DayMA']
+                del merged_dict['Technicals']['50DayMA']
+            if '200DayMA' in merged_dict['Technicals'].keys():
+                merged_dict['Technicals']['DayMA200'] = merged_dict['Technicals']['200DayMA']
+                del merged_dict['Technicals']['200DayMA']
+        sector_weights = dict()
+        # format Sector_Weights
+        if 'ETF_Data' in merged_dict.keys() and 'Sector_Weights' in merged_dict['ETF_Data'].keys():
+            sector_weights = dict()
+            for key in merged_dict['ETF_Data']['Sector_Weights'].keys():
+                sector_weights[ key.replace(' ', '')] = merged_dict['ETF_Data']['Sector_Weights'][key]['Equity_%'] if 'Equity_%' in merged_dict['ETF_Data']['Sector_Weights'][key].keys() else "0"
+
+            merged_dict['ETF_Data']['Sector_Weights'] = sector_weights
+
+
+
+        merged_dict['General']['Description'] = merged_dict['General']['Description_' + lang]
+        del merged_dict['General']['Description_' + lang]
+
+        if 'Category_' + lang in merged_dict['General'].keys():
+            merged_dict['General']['Category'] = merged_dict['General']['Category_' + lang]
+            del merged_dict['General']['Category_' + lang]
+
+        # Rename variables ETF Data
+        if 'ETF_Data' in merged_dict.keys() and 'Performance' in merged_dict['ETF_Data'].keys():
+            if '1y_Volatility' in merged_dict['ETF_Data']['Performance'].keys():
+                merged_dict['ETF_Data']['Performance']['Volatility_1y'] = merged_dict['ETF_Data']['Performance']['1y_Volatility']
+                del merged_dict['ETF_Data']['Performance']['1y_Volatility']
+            if '3y_Volatility' in merged_dict['ETF_Data']['Performance'].keys():
+                merged_dict['ETF_Data']['Performance']['Volatility_3y'] = merged_dict['ETF_Data']['Performance']['3y_Volatility']
+                del merged_dict['ETF_Data']['Performance']['3y_Volatility']
+            if '3y_ExpReturn' in merged_dict['ETF_Data']['Performance'].keys():
+                merged_dict['ETF_Data']['Performance']['ExpReturn_3y'] = merged_dict['ETF_Data']['Performance']['3y_ExpReturn']
+                del merged_dict['ETF_Data']['Performance']['3y_ExpReturn']
+            if '3y_SharpRatio' in merged_dict['ETF_Data']['Performance'].keys():
+                merged_dict['ETF_Data']['Performance']['SharpRatio_3y'] = merged_dict['ETF_Data']['Performance']['3y_SharpRatio']
+                del merged_dict['ETF_Data']['Performance']['3y_SharpRatio']
+
+        # Rename variables ETF Data
+        if 'ETF_Data' in merged_dict.keys() and 'Performance' in merged_dict['ETF_Data'].keys():
+            if '1y_Volatility' in merged_dict['ETF_Data']['Performance'].keys():
+                merged_dict['ETF_Data']['Performance']['Volatility_1y'] = \
+                merged_dict['ETF_Data']['Performance']['1y_Volatility']
+                del merged_dict['ETF_Data']['Performance']['1y_Volatility']
+            if '3y_Volatility' in merged_dict['ETF_Data']['Performance'].keys():
+                merged_dict['ETF_Data']['Performance']['Volatility_3y'] = \
+                merged_dict['ETF_Data']['Performance']['3y_Volatility']
+                del merged_dict['ETF_Data']['Performance']['3y_Volatility']
+            if '3y_ExpReturn' in merged_dict['ETF_Data']['Performance'].keys():
+                merged_dict['ETF_Data']['Performance']['ExpReturn_3y'] = merged_dict['ETF_Data']['Performance'][
+                    '3y_ExpReturn']
+                del merged_dict['ETF_Data']['Performance']['3y_ExpReturn']
+            if '3y_SharpRatio' in merged_dict['ETF_Data']['Performance'].keys():
+                merged_dict['ETF_Data']['Performance']['SharpRatio_3y'] = \
+                merged_dict['ETF_Data']['Performance']['3y_SharpRatio']
+                del merged_dict['ETF_Data']['Performance']['3y_SharpRatio']
+
+
+
+        # ESG
+        merged_dict['environment_grade'] = merged_dict[
+            'environment_grade'] if 'environment_grade' in merged_dict.keys() else "-"
+        merged_dict['environment_level'] = merged_dict[
+            'environment_level'] if 'environment_level' in merged_dict.keys() else "-"
+        merged_dict['social_grade'] = merged_dict[
+            'social_grade'] if 'social_grade' in merged_dict.keys() else "-"
+        merged_dict['social_level'] = merged_dict[
+            'social_level'] if 'social_level' in merged_dict.keys() else "-"
+        merged_dict['governance_grade'] = merged_dict[
+            'governance_grade'] if 'governance_grade' in merged_dict.keys() else "-"
+        merged_dict['governance_level'] = merged_dict[
+            'governance_level'] if 'governance_level' in merged_dict.keys() else "-"
+        merged_dict['total_grade'] = merged_dict[
+            'total_grade'] if 'total_grade' in merged_dict.keys() else "-"
+        merged_dict['total_level'] = merged_dict[
+            'total_level'] if 'total_level' in merged_dict.keys() else "-"
+        merged_dict['environment_score'] = merged_dict[
+            'environment_score'] if 'environment_score' in merged_dict.keys() else 0
+        merged_dict['social_score'] = merged_dict[
+            'social_score'] if 'social_score' in merged_dict.keys() else 0
+        merged_dict['governance_score'] = merged_dict[
+            'governance_score'] if 'governance_score' in merged_dict.keys() else 0
+        merged_dict['total'] = merged_dict[
+            'total'] if 'total' in merged_dict.keys() else 0
+        merged_dict['industry_average_total'] = merged_dict[
+            'industry_average_total'] if 'industry_average_total' in merged_dict.keys() else 0
+        merged_dict['industry_average_total_level'] = merged_dict[
+            'industry_average_total_level'] if 'industry_average_total_level' in merged_dict.keys() else 0
+        merged_dict['industry_average_total_grade'] = merged_dict[
+            'industry_average_total_grade'] if 'industry_average_total_grade' in merged_dict.keys() else 0
+
+        if 'ETF_Data' in merged_dict.keys():
+            merged_dict['ETFData'] = merged_dict['ETF_Data']
+            del merged_dict['ETF_Data']
+
+        if 'ETFData' in merged_dict.keys() and 'Sector_Weights' in merged_dict['ETFData'].keys():
+            merged_dict['ETFData']['SectorWeights'] = merged_dict['ETFData']['Sector_Weights']
+            del merged_dict['ETFData']['Sector_Weights']
         #print("Query {} and result {}".format(query, merged_dict))
 
         return merged_dict, 200

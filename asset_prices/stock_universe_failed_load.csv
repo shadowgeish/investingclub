@@ -1,0 +1,247 @@
+,ISIN,Code,Name,Country,Exchange,Currency,Type,ExchangeCode,ETF Underlying Index Ticker,Dvd Freq,AssetType
+0,IE00BKP5L409,IMBE,iShares US Mortgage Backed Securities UCITS ETF EUR Hedged (Acc),France,FP,EUR,ETF,PA,Bloomberg Barclays US MBS,,Fixed Income
+1,IE00BYPC1H27,CNYB,iShares China CNY Bond UCITS ETF - (USD) Dist,France,FP,USD,ETF,PA,BBG Barclays CH Treasury + PBI,Distribution,Fixed Income
+2,IE00BJK55C48,EHYA,iShares EUR High Yield Corp Bond ESG UCITS ETF EUR (Acc),France,FP,EUR,ETF,PA,Bbg MSCI Euro Corp HY BB+ SRI,,Fixed Income
+3,LU2008761053,SRIC5,BNP PARIBAS EASY EUR CORP BOND SRI FOSSIL FREE 3-5Y UCITS ETF DISTRIBUTION,France,FP,EUR,ETF,PA,BBG MSCI € CorpSRI ExFossil3-5,,Fixed Income
+4,IE00BKPSFD61,CYBA,iShares China CNY Bond UCITS ETF USD (Acc),France,FP,USD,ETF,PA,BbgBar China Tr+Pol Bk TR Ind$,Capitalisation,Fixed Income
+5,IE00BKRWN659,DDBB,iShares $ Development Bank Bonds UCITS ETF USD (Acc),France,FP,USD,ETF,PA,Wrld Broad IG Multi Dv Bank Bd,Capitalisation,Fixed Income
+6,IE00BK7Y2P34,SGLU,iShares Global Gvt Bond UCITS ETF USD Hedged (Acc),France,FP,USD,ETF,PA,Citigroup G7 Index,Capitalisation,Fixed Income
+7,NL0009690247,TCBT,VanEck Vectors iBoxx EUR Corporates UCITS ETF,France,FP,EUR,ETF,PA,Markit iBoxx EUR Liq Corp,,Fixed Income
+8,IE00BKF09C98,DHYD,iShares $ High Yield Corp Bond ESG UCITS ETF USD (Dist),France,FP,USD,ETF,PA,BBMSCI U CrpHY Sust BB+ SRI Bd,Bi-Annually,Fixed Income
+9,IE00BKT6FT27,IGLE,iShares Global Govt Bond UCITS ETF EUR Hedged (Dist),France,FP,EUR,ETF,PA,FTSE G7 Government Bond,,Fixed Income
+10,NL0010273801,TAT,VanEck Vectors iBoxx EUR Sovereign Capped AAA-AA 1-5 UCITS ETF,France,FP,EUR,ETF,PA,iBoxx Gov AAA-AA 1-5 Index,,Fixed Income
+11,IE00BKT6VQ12,CYBE,iShares China CNY Bond UCITS ETF EUR Hedged (Acc),France,FP,EUR,ETF,PA,Bbg China Treas + Policy Bank,,Fixed Income
+12,IE00BZ163H91,VETY,VANGUARD EUR EUROZONE GOVERNMENT BOND UCITS ETF,France,FP,EUR,ETF,PA,Euro Aggregate: Treasury,,Fixed Income
+13,DE000A3GSUD3,VSOL,VanEck Vectors Solana ETN,France,FP,EUR,ETN,PA,MVIS CryptoCompare Solana Ind,,Fixed Income
+14,IE00BKKKWJ26,SUOA,iShares $ Corp Bond ESG UCITS ETF USD (Acc),France,FP,USD,ETF,PA,BB MSCI US Crp Sustainable SRI,Capitalisation,Fixed Income
+15,LU1778293313,GAHU,AMDI IDX BARCL AGG 500M UCITS ETF DR USD HEDG,France,FP,USD,ETF,PA,Bloomberg Brclys Glob Agg 500M,,Fixed Income
+16,IE00BF553838,EMSA,iShares J.P. Morgan ESG EM Bond UCITS ETF USD (Acc),France,FP,EUR,ETF,PA,JP Morgan ESG EMBI Glob Divers,,Fixed Income
+17,NL0009690254,TGBT,VanEck Vectors iBoxx EUR Sovereign Diversified 1-10 UCITS ETF,France,FP,EUR,ETF,PA,Markit iBoxx EUR LiqSovDiv1-10,,Fixed Income
+18,IE0032523478,IBCX,iShares EUR Corp Bond Large Cap UCITS ETF EUR (Dist),France,FP,EUR,ETF,PA,Markit iBoxx EUR Liquid LrgCap,,Fixed Income
+19,IE00B3F81R35,IEAC,iShares Core EUR Corp Bond UCITS ETF EUR (Dist),France,FP,EUR,ETF,PA,Barclays Euro Corporate Bond,,Fixed Income
+20,IE00B6X2VY59,IRCP,iShares EUR Corp Bond Interest Rate Hedged UCITS ETF EUR (Dist),France,FP,EUR,ETF,PA,Bbg Eur Corp Interest rate Hd,,Fixed Income
+21,LU1547515137,EMBH,BNP Paribas Easy JPM ESG EMBI Global Diversified Composite UCITS ETF H EUR Cap,France,FP,EUR,ETF,PA,JPM ESG EMBI Global Div (TR),Capitalisation,Fixed Income
+22,IE00B0M62X26,IBCI,iShares Euro Inflation Linked Gov Bond UCITS ETF,France,FP,EUR,ETF,PA,Barclays Euro Gov Inflation,,Fixed Income
+23,IE00BKLC5874,EHYD,iShares EUR High Yield Corp Bond ESG UCITS ETF EUR (Dist),France,FP,EUR,ETF,PA,Bbg MSCI Euro Corp HY BB+ SRI,,Fixed Income
+24,IE00BKS2X317,FSOV,First Trust Low Duration Global Government Bond UCITS ETF,France,FP,EUR,ETF,PA,.,,Fixed Income
+25,IE00B4WXJJ64,IEGA,iShares Core EUR Govt Bond UCITS ETF EUR (Dist),France,FP,EUR,ETF,PA,Barclays Euro Treasury Bond,,Fixed Income
+26,IE00BCRY6003,SDHY,iShares $ Short Duration High Yield Corporate Bond UCITS ETF,France,FP,EUR,ETF,PA,iBoxx USD Liquid HY 0-5 Cap,Capitalisation,Fixed Income
+27,IE00BL0BMG90,CGGD,iShares Global Govt Bond Climate UCITS ETF USD (Dist),France,FP,USD,ETF,PA,FTSE AdvClmte RskAdj Wd Gov Bd,Bi-Annually,Fixed Income
+28,LU2244387457,GEMU,BNP Paribas Easy JPM ESG EMU Government Bond IG 3-5Y UCITS ETF Cap,France,FP,EUR,ETF,PA,JPM ESG EMU Govern 3-5Y (TR),Capitalisation,Fixed Income
+29,IE00BK95B138,GOVT,iShares Treasury Bond UCITS ETF USD (Dist),France,FP,USD,ETF,PA,ICE US Treasury Core Bond Ind,Bi-Annually,Fixed Income
+30,LU2182388236,EGRI,AMUNDI INDEX EURO AGG SRI UCITS ETF DR - EUR (C),France,FP,EUR,ETF,PA,BBG Barc MSCI EUR Agg Sus SRI,Capitalisation,Fixed Income
+31,IE00B3DKXQ41,IEAG,iShares EUR Aggregate Bond UCITS ETF EUR (Dist),France,FP,EUR,ETF,PA,Barclays Euro Aggregate Bond,,Fixed Income
+32,LU2037748774,ECRP3,AMUNDI INDEX EURO CORPORATE SRI 0-3Y-UCITS ETF DR,France,FP,EUR,ETF,PA,BBG BARCLAYS MSCI EUR Corp ESG,Capitalisation,Fixed Income
+33,IE00BJK55B31,DHYE,iShares $ High Yield Corp Bond ESG UCITS ETF EUR (Acc),France,FP,EUR,ETF,PA,Bbg MSCI US Corp HY BB+ SRI,,Fixed Income
+34,LU2356220926,ERTH,Lyxor Euro Government Green Bond (DR) UCITS ETF,France,FP,EUR,ETF,PA,Solactive Euro Gov Green Bond,Capitalisation,Fixed Income
+35,LU1806495575,UCRP,AMUNDI INDEX US CORP SRI UCITS ETF DR - USD (C),France,FP,USD,ETF,PA,BBG BARCLAYS MSCI US Corp SRI,,Fixed Income
+36,LU1484799769,CBSE,UBS (Lux) Fund Solutions - Bloomberg MSCI Euro Are,France,FP,EUR,ETF,PA,BBG MSCI EUR Area Liq Corp Sus,,Fixed Income
+37,LU0721552973,UEFI,UBS (Lux) Fund Solutions - Bloomberg US 1-3 Year T,France,FP,EUR,ETF,PA,BBG US 7-10 Year Treasury Bond,,Fixed Income
+38,LU1547515053,EMBI,BNP Paribas Easy JPM ESG EMBI Global Diversified Composite UCITS ETF Cap,France,FP,USD,ETF,PA,JPM ESG EMBI Global Div (TR),Capitalisation,Fixed Income
+39,IE00B1FZS806,IBGM,iShares EUR Govt Bond 7-10yr UCITS ETF EUR (Dist),France,FP,EUR,ETF,PA,Barclays Euro Gov Bond 10Y,,Fixed Income
+40,IE00BZ163M45,VUTY,VANGUARD USD TREASURY BOND UCITS ETF,France,FP,EUR,ETF,PA,Global Agg US Treasury Fl Adj,,Fixed Income
+41,NL0009272780,TOF,VanEck Vectors Multi-Asset Growth Allocation UCITS ETF,France,FP,EUR,ETF,PA,Multi-Asset Growth Allocation,,Fixed Income
+42,IE00BZ163G84,VECP,VANGUARD EUR CORPORATE BOND UCITS ETF,France,FP,EUR,ETF,PA,Euro Aggregate: Corporates,,Fixed Income
+43,LU1708330235,GOVH,AMUNDI INDEX J.P. MORGAN GBI GLOBAL GOVIES UCITS ETF DR - EUR HEDGED,France,FP,EUR,ETF,PA,J.P. Morgan GBI Global EUR Hed,,Fixed Income
+44,IE00BCRY6557,ERNE,iShares EUR Ultrashort Bond UCITS ETF,France,FP,EUR,ETF,PA,iBoxx EUR Liquid IG Ultrashort,,Fixed Income
+45,NL0009272772,NTM,VanEck Vectors Multi-Asset Balanced Allocation UCITS ETF,France,FP,EUR,ETF,PA,Multi-Asset Balanced Allocatio,,Fixed Income
+46,IE00B14X4Q57,IBGS,iShares Euro Government Bond 1 3yr UCITS ETF,France,FP,EUR,ETF,PA,Barclays Euro Gov Bond 1-3Y,Bi-Annually,Fixed Income
+47,IE00B14X4S71,IBTS,iShares USD Treasury Bond 1 3yr UCITS ETF,France,FP,EUR,ETF,PA,ICE US Treasury 1-3Y Bond,,Fixed Income
+48,IE00B4WXJG34,IEGY,iShares EUR Govt Bond 5-7yr UCITS ETF EUR (Dist),France,FP,EUR,ETF,PA,Barclays Euro Gov Bond 5-7Y,,Fixed Income
+49,IE00B3B8Q275,ICOV,iShares EUR Covered Bond UCITS ETF EUR (Dist),France,FP,EUR,ETF,PA,Markit iBoxx Euro Covered,,Fixed Income
+50,IE00B7LGZ558,IFRB,iShares France Govt Bnd UCITS ETF EUR (Dist),France,FP,EUR,ETF,PA,Barclays France Treasury Bond,,Fixed Income
+51,IE00BCRY5Y77,SDIG,iShares $ Short Duration Corporate Bond UCITS ETF,France,FP,EUR,ETF,PA,iBoxx USD Liquid IG 0-5Y,,Fixed Income
+52,LU1215461325,UE27,UBS (Lux) Fund Solutions - Bloomberg MSCI US Liqui,France,FP,EUR,ETF,PA,BBGMSCI US Liq CorpSus hed EUR,,Fixed Income
+53,FR0011607084,DSUS,Lyxor Daily Double Short 10Y US Treasury UCITS ETF - Acc,France,FP,EUR,ETF,PA,SGI x-2 10y US Treasury,,Fixed Income
+54,IE00B1FZSC47,TPSA,iShares S TIPS UCITS ETF USD (Acc),France,FP,EUR,ETF,PA,Barclays US Gov Inflation Link,,Fixed Income
+55,IE00B3FH7618,IEGE,iShares EUR Govt Bond 0-1yr UCITS ETF EUR (Dist),France,FP,EUR,ETF,PA,Bbg Euro Short Treasury 0-1Y,,Fixed Income
+56,IE00B3VWN393,CBU7,iShares USD Treas Bond 3-7yr UCITS ETF USD (Acc),France,FP,EUR,ETF,PA,ICE US Treasury 3-7Y Bond,,Fixed Income
+57,IE00BZ163L38,VEMT,VANGUARD USD EMERGING MARKETS GOVERNMENT BOND UCITS ETF,France,FP,EUR,ETF,PA,EM USD Sovereign + Quasi-Sov,,Fixed Income
+58,IE00B3VTML14,CBE7,iShares EUR Govt Bond 3-7yr UCITS ETF EUR (Acc),France,FP,EUR,ETF,PA,Bbg Euro Gov Bond 3-7Y,,Fixed Income
+59,IE00B4WXJH41,IEGZ,iShares EUR Govt Bond 10-15yr UCITS ETF EUR (Dist),France,FP,EUR,ETF,PA,Barclays Euro Gov Bond 10-15Y,,Fixed Income
+60,IE00BZ163K21,VUCP,VANGUARD USD CORPORATE BOND UCITS ETF,France,FP,EUR,ETF,PA,Global Aggregate Corporate-USD,,Fixed Income
+61,IE00B1FZS681,IBGX,iShares EUR Govt Bond 3-5yr UCITS ETF EUR (Dist),France,FP,EUR,ETF,PA,Barclays Euro Gov Bond 5Y,,Fixed Income
+62,IE00BCLWRB83,LQDH,iShares $ Corporate Bond Interest Rate Hedged UCITS ETF,France,FP,EUR,ETF,PA,iBoxx USD Liquid IG IR Hedged,,Fixed Income
+63,IE00BMVB5P51,V60A,Vanguard LifeStrategy 60% Equity UCITS ETF,France,FP,EUR,ETF,PA,,Capitalisation,Fixed Income
+64,DE000A3GSUC5,VDOT,VanEck Vectors Polkadot ETN,France,FP,EUR,ETN,PA,MVIS CryptoCompare Polkadot,,Fixed Income
+65,NL0009272764,DTM,VanEck Vectors Multi-Asset Conservative Allocation UCITS ETF,France,FP,EUR,ETF,PA,Multi-Asset Conservative Alloc,,Fixed Income
+66,IE00B1FZS798,BTMA,iShares USD Treasury Bond 7-10yr UCITS ETF USD (Dist),France,FP,EUR,ETF,PA,ICE US Treasury 7-10Y Bond,,Fixed Income
+67,IE00BCRY6227,ERND,iShares $ Ultrashort Bond UCITS ETF,France,FP,EUR,ETF,PA,iBoxx USD Liquid IG Ultrashort,,Fixed Income
+68,IE00BMVB5R75,V80A,Vanguard LifeStrategy 80% Equity UCITS ETF,France,FP,EUR,ETF,PA,,Capitalisation,Fixed Income
+69,LU2037750168,BINFU,AMUNDI INDEX BREAKEVEN INFLATION USD 10Y UCITS ETF DR,France,FP,USD,ETF,PA,iBoxx USD10Y Breakeven Infla,Capitalisation,Fixed Income
+70,IE00BMVB5K07,V20A,Vanguard LifeStrategy 20% Equity UCITS ETF,France,FP,EUR,ETF,PA,,Capitalisation,Fixed Income
+71,CH1114873776,ASOL,21Shares Solana ETP,France,FP,EUR,ETN,PA,Solana,Capitalisation,Crypto
+72,XS2193972671,3STS,GraniteShares 3x Short Tesla Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily -3x TSLA,Capitalisation,Equity
+73,XS2193972168,3SNV,GraniteShares 3x Short NVIDIA Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily -3x NVDIA,Capitalisation,Equity
+74,DE000A27Z304,BTCE,BTCetc - ETC Group Physical Bitcoin EUR,France,FP,EUR,ETN,PA,XBT CFIX Curncy,Capitalisation,Crypto
+75,XS2193971350,3LFB,GraniteShares 3x Long Facebook Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily +3x FB,Capitalisation,Equity
+76,CH0593331561,ADOT,21Shares Polkadot ETP,France,FP,EUR,ETN,PA,Polkadot DOT,Capitalisation,Crypto
+77,XS2377112110,3LAM,GraniteShares 3x Long AMD Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily +3x AMD,Capitalisation,Equity
+78,XS2193973216,3SNI,GraniteShares 3x Short NIO Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily -3x NIO,Capitalisation,Equity
+79,DE000A3GMKD7,ZETH,ETHetc - ETC Group Physical Ethereum EUR,France,FP,EUR,ETN,PA,XET CFIX Curncy,Capitalisation,Crypto
+80,CH0514065058,SBTC,21Shares Short Bitcoin ETP - SBTC,France,FP,EUR,ETN,PA,21Shares CC Short Bitcoin,Capitalisation,Crypto
+81,XS2376975020,3LLV,GraniteShares 3x Long LVMH Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily +3x LVMH,Capitalisation,Equity
+82,XS2193973133,3LNI,GraniteShares 3x Long NIO Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily +3x NIO,Capitalisation,Equity
+83,XS2377111906,3LPA,GraniteShares 3x Long Palantir Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily +3x Palantir,Capitalisation,Equity
+84,XS2376974304,3LDA,GraniteShares 3x Long Danone Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily +3x Danone,Capitalisation,Equity
+85,XS2377112201,3SAM,GraniteShares 3x Short AMD Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily -3x AMD,Capitalisation,Equity
+86,XS2377112540,3SMO,GraniteShares 3x Short Moderna Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily -3x Moderna,Capitalisation,Equity
+87,XS2376933375,3LAR,GraniteShares 3x Long Airbus Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily +3x Airbus,Capitalisation,Equity
+88,XS2376976770,3LSE,GraniteShares 3x Long Schneider Electric Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily +3x Schneider,Capitalisation,Equity
+89,XS2376975533,3LSA,GraniteShares 3x Long Safran Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily +3x Safran,Capitalisation,Equity
+90,XS2376979790,3LTO,GraniteShares 3x Long TotalEnergies Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily +3x Total,Capitalisation,Equity
+91,CH0496454155,BNBA,21Shares Binance Coin ETP,France,FP,EUR,ETN,PA,Binance Coin (BNB),Capitalisation,Crypto
+92,XS2305050713,FTNG,GraniteShares FATANG ETP,France,FP,EUR,ETF,PA,Solactive FATANG Equal Weight,Capitalisation,Equity
+93,CH1109575535,AXLM,21Shares Stellar ETP,France,FP,EUR,ETN,PA,Stellar,Capitalisation,Crypto
+94,CH0454664043,AXRP,21Shares Ripple XRP,France,FP,EUR,ETN,PA,XRP,Capitalisation,Crypto
+95,XS2376978982,3LST,GraniteShares 3x Long STMicroelectronics Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily +3x ST Micro,Capitalisation,Equity
+96,XS2376991142,3SVW,GraniteShares 3x Short Volkswagen Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily -3x VW,Capitalisation,Equity
+97,XS2377112466,3LMO,GraniteShares 3x Long Moderna Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily +3x Moderna,Capitalisation,Equity
+98,XS2193970030,3SAP,GraniteShares 3x Short Apple Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily -3x AAPL,Capitalisation,Equity
+99,GB00BLD4ZL17,BITC,CoinShares Physical Bitcoin,France,FP,EUR,ETN,PA,Bitcoin,Capitalisation,Crypto
+100,GB00BLD4ZM24,CETH,CoinShares Physical Ethereum,France,FP,EUR,ETN,PA,Ethereum,Capitalisation,Crypto
+101,XS2193971517,3SFB,GraniteShares 3x Short Facebook Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily -3x FB,Capitalisation,Equity
+102,XS2376990417,3LVW,GraniteShares 3x Long Volkswagen Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily +3x VW,Capitalisation,Equity
+103,XS2193970386,3SMS,GraniteShares 3x Short Microsoft Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily -3x MSFT,Capitalisation,Equity
+104,XS2305051877,3FTG,GraniteShares 3x Long FATANG Daily ETP,France,FP,EUR,ETF,PA,Solactive Daily +3x FATANG,Capitalisation,Equity
+105,XS2193969883,3LAP,GraniteShares 3x Long Apple Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily +3x AAPL,Capitalisation,Equity
+106,CH0491507486,AXTZ,21Shares Tezos ETP,France,FP,EUR,ETN,PA,Tezos (XTZ),Capitalisation,Crypto
+107,XS2377112037,3SPA,GraniteShares 3x Short Palantir Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily -3x Palantir,Capitalisation,Equity
+108,XS2193969537,3LZN,GraniteShares 3x Long Amazon Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily +3x AMZN,Capitalisation,Equity
+109,XS2193968307,3LAL,GraniteShares 3x Long Alphabet Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily +3x GOOGL,Capitalisation,Equity
+110,XS2193971947,3LNV,GraniteShares 3x Long NVIDIA Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily +3x NVDIA,Capitalisation,Equity
+111,XS2193970204,3LMS,GraniteShares 3x Long Microsoft Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily +3x MSFT,Capitalisation,Equity
+112,XS2305051281,3GFM,GraniteShares 3x Long GAFAM Daily ETP,France,FP,EUR,ETF,PA,Solactive Daily +3x GAFAM,Capitalisation,Equity
+113,XS2376974726,3LOR,GraniteShares 3x Long L'Oreal Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily +3x L'Oreal,Capitalisation,Equity
+114,XS2376944224,3LAX,GraniteShares 3x Long AXA Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily +3x AXA,Capitalisation,Equity
+115,XS2376979873,3STO,GraniteShares 3x Short TotalEnergies Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily -3x Total,Capitalisation,Equity
+116,CH0475552201,ABCH,21Shares Bitcoin Cash ETP,France,FP,EUR,ETN,PA,Bitcoin Cash,Capitalisation,Crypto
+117,XS2376979287,3SST,GraniteShares 3x Short STMicroelectronics Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily -3x ST Micro,Capitalisation,Equity
+118,XS2376975616,3SSA,GraniteShares 3x Short Safran Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily -3x Safran,Capitalisation,Equity
+119,XS2376975962,3LSN,GraniteShares 3x Long Sanofi Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily +3x Sanofi,Capitalisation,Equity
+120,XS2305050556,FANG,GraniteShares FAANG ETP,France,FP,EUR,ETN,PA,Solactive FAANG Equal Weight,Capitalisation,Equity
+121,XS2376952243,3SBN,GraniteShares 3x Short BNP Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily -3x BNP-P,Capitalisation,Equity
+122,XS2376951948,3LBN,GraniteShares 3x Long BNP Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily +3x BNP-P,Capitalisation,Equity
+123,XS2376975376,3SLV,GraniteShares 3x Short LVMH Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily -3x LVMH,Capitalisation,Equity
+124,XS2376974999,3SOR,GraniteShares 3x Short L'Oreal Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily -3x L'Oreal,Capitalisation,Equity
+125,XS2376937442,3SAR,GraniteShares 3x Short Airbus Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily -3x Airbus,Capitalisation,Equity
+126,XS2376951781,3SAX,GraniteShares 3x Short AXA Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily -3x AXA,Capitalisation,Equity
+127,XS2376976853,3SSE,GraniteShares 3x Short Schneider Electric Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily -3x Schneider,Capitalisation,Equity
+128,XS2376974486,3SDA,GraniteShares 3x Short Danone Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily -3x Danone,Capitalisation,Equity
+129,XS2305051109,SFNG,GraniteShares 1x Short FAANG Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily -1x FAANG,Capitalisation,Equity
+130,XS2305052172,SFTG,GraniteShares 1x Short FATANG Daily ETP,France,FP,EUR,ETF,PA,Solactive Daily -1x FATANG,Capitalisation,Equity
+131,XS2305051950,3SFT,GraniteShares 3x Short FATANG Daily ETP,France,FP,EUR,ETF,PA,Solactive Daily -3x FATANG,Capitalisation,Equity
+132,XS2305051521,SGFM,GraniteShares 1x Short GAFAM Daily ETP,France,FP,EUR,ETF,PA,Solactive Daily -1x GAFAM,Capitalisation,Equity
+133,XS2305051448,3SGF,GraniteShares 3x Short GAFAM Daily ETP,France,FP,EUR,ETF,PA,Solactive Daily -3x GAFAM,Capitalisation,Equity
+134,XS2305051018,3SFG,GraniteShares 3x Short FAANG Daily ETP,France,FP,EUR,ETF,PA,Solactive Daily -3x FAANG,Capitalisation,Equity
+135,XS2305050804,3FNG,GraniteShares 3x Long FAANG Daily ETP,France,FP,EUR,ETF,PA,Solactive Daily +3x FAANG,Capitalisation,Equity
+136,XS2305050630,GFAM,GraniteShares GAFAM ETP,France,FP,EUR,ETF,PA,Solactive GAFAM Equal Weight,Capitalisation,Equity
+137,XS2193973059,3SUB,GraniteShares 3x Short UBER Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily -3x UBER,Capitalisation,Equity
+138,XS2193972838,3LUB,GraniteShares 3x Long UBER Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily +3x UBER,Capitalisation,Equity
+139,XS2193972598,3LTS,GraniteShares 3x Long Tesla Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily +3x TSLA,Capitalisation,Equity
+140,XS2193970899,3SNF,GraniteShares 3x Short Netflix Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily -3x NFLX,Capitalisation,Equity
+141,XS2193970543,3LNF,GraniteShares 3x Long Netflix Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily +3x NFLX,Capitalisation,Equity
+142,XS2193969701,3SZN,GraniteShares 3x Short Amazon Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily -3x AMZN,Capitalisation,Equity
+143,XS2193968729,3SAL,GraniteShares 3x Short Alphabet Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily -3x GOOGL,Capitalisation,Equity
+144,DE000A3GTBU5,BTCH,BCHetc - ETC Group Physical Bitcoin Cash EUR,France,FP,EUR,ETN,PA,XBN CFIX Curncy,Capitalisation,Crypto
+145,DE000A3GN5J9,ELTC,LTCetc - ETC Group Physical Litecoin EUR,France,FP,EUR,ETN,PA,XLC CFIX Curncy,Capitalisation,Crypto
+146,XS2376976341,3SSN,GraniteShares 3x Short Sanofi Daily ETP,France,FP,EUR,ETN,PA,Solactive Daily -3x Sanofi,Capitalisation,Equity
+147,IE00B3XXRP09,VUSA,Vanguard S&P 500 UCITS ETF,France,FP,EUR,ETF,PA,S&P 500 Index,,Equity
+148,IE00B3RBWM25,VWRL,Vanguard FTSE All-World UCITS ETF,France,FP,EUR,ETF,PA,FTSE All-World Index,,Equity
+149,IE00B4L5Y983,IWDA,iShares Core MSCI World UCITS ETF USD (Acc),France,FP,EUR,ETF,PA,MSCI World,,Equity
+150,IE00B53SZB19,CNDX,iShares NASDAQ 100 UCITS ETF USD (Acc),France,FP,EUR,ETF,PA,NASDAQ-100,,Equity
+151,IE00B945VV12,VEUR,VANGUARD FTSE Developed Europe UCITS ETF,France,FP,EUR,ETF,PA,FTSE Developed Europe Index,,Equity
+152,IE00B52VJ196,IESE,iShares MSCI Europe SRI UCITS ETF EUR (Acc),France,FP,EUR,ETF,PA,MSCI Europe SRI Select Rdc FF,,Equity
+153,IE00B02KXL92,DJMC,iShares EURO STOXX Mid UCITS ETF,France,FP,EUR,ETF,PA,EURO STOXX Mid,,Equity
+154,IE00BZ173T46,SRIL,iShares MSCI USA SRI UCITS ETF USD (Dist),France,FP,USD,ETF,PA,M1USSI Index,Bi-Annually,Equity
+155,IE00B14X4N27,IEUX,iShares MSCI Europe ex UK UCITS ETF,France,FP,EUR,ETF,PA,MSCI Europe Ex UK,Quarterly,Equity
+156,IE00B5BMR087,CSPX,iShares Core S&P 500 UCITS ETF USD (Acc),France,FP,EUR,ETF,PA,S&P 500,,Equity
+157,IE00B0M62Y33,IAEX,iShares AEX,France,FP,EUR,ETF,PA,AEX,,Equity
+158,IE00B0M63177,IEMM,iShares MSCI Emerging Markets UCITS ETF (Dist),France,FP,EUR,ETF,PA,MSCI Emerging Markets,,Equity
+159,IE00BFY0GT14,SWRD,SPDR MSCI WORLD UCITS ETF,France,FP,EUR,ETF,PA,MSCI World Index,Capitalisation,Equity
+160,IE0031442068,IUSA,iShares Core S&P 500 UCITS ETF USD (Dist),France,FP,EUR,ETF,PA,S&P 500,,Equity
+161,IE0008471009,EUEA,iShares Core EURO STOXX 50 UCITS ETF EUR (Dist),France,FP,EUR,ETF,PA,EURO STOXX 50,,Equity
+162,IE00BKM4GZ66,EMIM,iShares Core MSCI Emerging Markets IMI UCITS ETF,France,FP,EUR,ETF,PA,MSCI Emerging Markets IMI Idx,,Equity
+163,LU0629460089,UIMP,UBS (Lux) Fund Solutions - MSCI USA Socially Respo,France,FP,EUR,ETF,PA,MSCI USA SRI Low Carbon 5% IC.,,Equity
+164,IE00B8GKDB10,VHYL,VANGUARD FTSE All-World High Dividend Yield UCITS ETF,France,FP,EUR,ETF,PA,FTSE All-World Hi Dv Yield Idx,,Equity
+165,IE00B1TXHL60,IPRV,iShares Listed Private Equity UCITS ETF USD (Dist),France,FP,EUR,ETF,PA,S&P Listed Private Equity,Bi-Annually,Equity
+166,NL0010408704,TSWE,VanEck Vectors Sustainable World Equal Weight UCITS ETF,France,FP,EUR,ETF,PA,VanEck Sustainable World Index,,Equity
+167,IE00BYTRRD19,WTCH,SPDR MSCI WORLD TECHNOLOGY UCITS ETF,France,FP,EUR,ETF,PA,MSCI World Info Tech 35/20,,Equity
+168,LU0629460832,UIMT,UBS (Lux) Fund Solutions - MSCI Pacific Socially R,France,FP,EUR,ETF,PA,MSCI Pacific SRI Low Carbon IC,,Equity
+169,IE00B02KXK85,FXC,iShares China Large Cap UCITS ETF,France,FP,EUR,ETF,PA,FTSE China 50,,Equity
+170,LU1792117340,EESG,Lyxor MSCI EMU ESG LeadersExtra (DR) UCITS ETF - Acc,France,FP,EUR,ETF,PA,EMU ESG and Trend Leaders,,Equity
+171,IE00B3YCGJ38,SPXS,Invesco S&P 500 UCITS ETF,France,FP,EUR,ETF,PA,S&P 500 Index,,Equity
+172,IE00B0M62Q58,IWRD,iShares MSCI World UCITS ETF (Dist),France,FP,EUR,ETF,PA,MSCI World,,Equity
+173,IE00B441G979,IWDE,iShares MSCI World EUR Hedged UCITS ETF (Acc),France,FP,EUR,ETF,PA,MSCI World Hedged EUR,Capitalisation,Equity
+174,SE0009723000,OBXXD,XACT OBX Bear (UCITS ETF),France,FP,NOK,ETF,PA,OBX Index,,Equity
+175,NL0009272749,TDT,VanEck Vectors AEX UCITS ETF,France,FP,EUR,ETF,PA,AEX,,Equity
+176,IE00B53L3W79,CSX5,iShares Core EURO STOXX 50 UCITS ETF EUR (Acc),France,FP,EUR,ETF,PA,EURO STOXX 50,,Equity
+177,IE00BFD2H405,SKYE,First Trust Cloud Computing UCITS ETF,France,FP,EUR,ETF,PA,ISE Cloud Computing Index,,Equity
+178,IE00B3VVMM84,VFEM,Vanguard FTSE Emerging Markets UCITS ETF,France,FP,EUR,ETF,PA,FTSE Emerging Markets Index,,Equity
+179,IE00B4K48X80,IMAE,iShares Core MSCI Europe UCITS ETF EUR (Acc),France,FP,EUR,ETF,PA,MSCI Europe,Capitalisation,Equity
+180,IE00BMTX1Y45,I500,iShares S&P 500 Swap UCITS ETF USD (Acc),France,FP,USD,ETF,PA,S&P 500 Index,Capitalisation,Equity
+181,IE00B4L5YX21,IJPA,iShares Core MSCI Japan IMI UCITS ETF USD (Acc),France,FP,EUR,ETF,PA,MSCI Japan IMI,,Equity
+182,IE00BK5H8015,600X,SPDR STOXX EUROPE 600 ESG SCREENED UCITS ETF,France,FP,EUR,ETF,PA,SXXRESGX,Capitalisation,Equity
+183,IE00BH4GPZ28,500X,SPDR S&P 500 ESG Screened UCITS ETF (Acc),France,FP,EUR,ETF,PA,S&P 500 ESG Exclusions II,Capitalisation,Equity
+184,GB00B15KY104,NGASP,WT Natural Gas,France,FP,EUR,ETC,PA,Bloomberg Natural Gas Sub TR,,Equity
+185,IE00BJ5JNZ06,WHCS,iShares MSCI World Health Care Sector UCITS ETF USD (Dist),France,FP,USD,ETF,PA,MSCI World Health Care Index,Bi-Annually,Equity
+186,IE00BKTLJC87,CITY,iShares Smart City Infra UCITS ETF USD (Acc),France,FP,USD,ETF,PA,STOXX Glob Smrt Cty Infr Index,Capitalisation,Equity
+187,FR0013416716,GOLD,AMUNDI PHYSICAL GOLD ETC,France,FP,EUR,ETC,PA,LBMA Gold Price PM USD,Capitalisation,Equity
+188,JE00B1VS2W53,PHPT,Wisdom Tree Physical Platinum,France,FP,EUR,ETC,PA,Physical Platinum Price,,Equity
+189,IE00B0M63730,IFFF,iShares MSCI AC Far East ex Japan UCITS ETF,France,FP,EUR,ETF,PA,MSCI AC Far East ex Japan,,Equity
+190,IE00B57X3V84,IGSG,iShares Dow Jones Global Sustainability Screened UCITS ETF USD (Acc),France,FP,EUR,ETF,PA,DJ Sustainability World,,Equity
+191,LU0629460675,UIMR,UBS (Lux) Fund Solutions - MSCI EMU Socially Respo,France,FP,EUR,ETF,PA,MSCI EMU SRI Low Carbon 5% IC,,Equity
+192,IE00B3ZW0K18,IUES,iShares S&P 500 EUR Hedged UCITS ETF (Acc),France,FP,EUR,ETF,PA,S&P 500,,Equity
+193,LU0629459743,UIMM,UBS (Lux) Fund Solutions - MSCI World Socially Res,France,FP,EUR,ETF,PA,MSCI World Low Carbon 5% IC,,Equity
+194,GB00B15KY765,WEATP,WT Wheat,France,FP,EUR,ETC,PA,Bloomberg Wheat Subindex TR,,Equity
+195,NL0009690239,TRET,VanEck Vectors Global Real Estate UCITS ETF,France,FP,EUR,ETF,PA,VanEck Global Real Estate,,Equity
+196,IE00BKTLJB70,CT2B,iShares Smart City Infra UCITS ETF USD (Dist),France,FP,USD,ETF,PA,STOXX Glob Smrt Cty Infr Index,Bi-Annually,Equity
+197,IE00B95PGT31,VJPN,VANGUARD FTSE Japan UCITS ETF,France,FP,EUR,ETF,PA,FTSE Japan Index,,Equity
+198,IE00BYTRRB94,WHEA,SPDR MSCI WORLD HEALTH CARE UCITS ETF,France,FP,EUR,ETF,PA,MSCI World Health Care 35/20,,Equity
+199,IE00BYTRR970,WFIN,SPDR MSCI WORLD FINANCIALS UCITS ETF,France,FP,EUR,ETF,PA,MSCI World Financials 35/20,,Equity
+200,SE0009723034,OBXXU,XACT OBX Bull (UCITS ETF),France,FP,NOK,ETF,PA,OBX Index,,Equity
+201,IE00BFXR7892,KWEB,KraneShares CSI China Internet UCITS ETF USD,France,FP,USD,ETF,PA,CSI Overseas China Internet,,Equity
+202,LU1437018838,EPRU,AMUNDI INDEX FTSE EPRA NAREIT GLOBAL UCITS ETF DR,France,FP,USD,ETF,PA,FTSE EPRA/NAREIT Developed,,Equity
+203,IE00BKBF6616,CEUU,iShares Core MSCI EMU UCITS ETF USD Hedged (Acc),France,FP,USD,ETF,PA,MSCI EMU NTR Local Index,Capitalisation,Equity
+204,LU2109787395,SADU,AMUNDI MSCI USA ESG LEADERS SELECT UCITS ETF DR (C),France,FP,USD,ETF,PA,MSCI USA ESG LEADERS SELECT 5%,Capitalisation,Equity
+205,FR0014002IH8,BTC,MELANION BTC EQUITIES UNIVERSE UCITS ETF,France,FP,EUR,ETF,PA,MELANION BITCOIN EXPOSURE IDX,Capitalisation,Equity
+206,IE00BJXRT813,WVAL,SPDR MSCI World Value UCITS ETF (Acc),France,FP,EUR,ETF,PA,NU720342,Capitalisation,Equity
+207,IE00BKT6FV49,SJPE,iShares Core MSCI Japan IMI UCITS ETF EUR Hedged (,France,FP,EUR,ETF,PA,MSCI Japan IMI USD Net,Bi-Annually,Equity
+208,LU1646359452,JPXY,Lyxor MSCI Japan ESG Leaders Extra (DR) UCITS ETF,France,FP,JPY,ETF,PA,MSCI Jap ESG Rating Trend Lead,,Equity
+209,LU1048313891,UEF5,UBS (Lux) Fund Solutions - MSCI Emerging Markets S,France,FP,EUR,ETF,PA,MSCI EM SRI Low Carbon 5% IC,,Equity
+210,IE00BJ5JPG56,ICHN,iShares MSCI China UCITS ETF - USD (Acc),France,FP,USD,ETF,PA,MSCI China Index,Capitalisation,Equity
+211,IE00BYPLS672,ISPY,L&G Cyber Security UCITS ETF,France,FP,EUR,ETF,PA,ISE Cyber Sec UCITS Ind NTR,,Equity
+212,IE00B02KXH56,IJPN,iShares MSCI Japan UCITS ETF (Dist),France,FP,EUR,ETF,PA,MSCI Japan,,Equity
+213,SE0009723026,OBXX,XACT OBX (UCITS ETF),France,FP,NOK,ETF,PA,OBX Index,,Equity
+214,IE00B4L5YC18,IEMA,iShares MSCI EM UCITS ETF USD (Acc),France,FP,EUR,ETF,PA,MSCI Emerging Markets,Capitalisation,Equity
+215,IE00B5V87390,CSRU,iShares MSCI Russia ADR/GDR UCITS ETF USD (Acc),France,FP,EUR,ETF,PA,MSCI Russia ADR/GDR 20/35,,Equity
+216,GB00B15KXV33,CRUDP,WT WTI Crude Oil,France,FP,EUR,ETC,PA,Bloomberg WTI Crude Oil Sub TR,,Equity
+217,IE00B42Z5J44,IJPE,iShares MSCI Japan EUR Hedged UCITS ETF (Acc),France,FP,EUR,ETF,PA,MSCI Japan Hedged EUR,,Equity
+218,IE00B1FZS350,IWDP,iShares Developed Markets Property Yield UCITS ETF USD (Dist),France,FP,EUR,ETF,PA,FTSE EPRA/NAREIT Global Div+,,Equity
+219,XS2297549128,3TSL,Leverage Shares 3x Tesla ETP Securities,France,FP,EUR,ETF,PA,iSTOXX Leveraged 3x TSLA Index,Capitalisation,Equity
+220,IE00BGDQ0T50,SEMD,iShares MSCI EM SRI UCITS ETF USD (Dist),France,FP,USD,ETF,PA,M1EMS Index,Bi-Annually,Equity
+221,IE00B52MJY50,CPXJ,iShares Core MSCI Pcfic ex-Jpn UCITS ETF USD (Acc),France,FP,EUR,ETF,PA,MSCI Pacific Ex Japan,,Equity
+222,LU1291109616,GSCE,BNP Paribas Easy S&P GSCI Energy&Metals Capped Component 35/20 UCITS ETF EUR Capitalisation,France,FP,EUR,ETF,PA,BNP Paribas Energy & Metals En,,Equity
+223,IE00B3CNHG25,AUCO,L&G Gold Mining UCITS ETF,France,FP,EUR,ETF,PA,DAXglobal Gold Miners,,Equity
+224,JE00B2NFTL95,LBUL,WT 2x Daily Long Gold,France,FP,EUR,ETC,PA,,,Equity
+225,GB00B15KXQ89,COPAP,WT Copper,France,FP,EUR,ETC,PA,Bloomberg Copper Subindex TR,,Equity
+226,IE00BMX0DF60,UMDV,iShares US Medical Devices UCITS ETF USD (Acc),France,FP,USD,ETF,PA,DJ US Slct Med Eqpmt Cpd 3520,Capitalisation,Equity
+227,IE00BKVL7778,MVEW,iShares Edge MSCI World Minimum Volatility ESG UCITS ETF USD (Acc),France,FP,USD,ETF,PA,MSCI W MV ESG RdCrbnTrgt Indx,Capitalisation,Equity
+228,LU1753045332,SRIEC,BNP Paribas Easy MSCI Europe SRI S-Series 5% Capped,France,FP,EUR,ETF,PA,MSCI Europe SRI S-Series 5%Cap,Capitalisation,Equity
+229,IE00BYTRR863,WNRG,SPDR MSCI WORLD ENERGY UCITS ETF,France,FP,EUR,ETF,PA,MSCI World Energy 35/20,,Equity
+230,IE00B53QG562,CEMU,iShares Core MSCI EMU UCITS ETF,France,FP,EUR,ETF,PA,MSCI EMU,,Equity
+231,IE00BWBXM500,SXLF,SPDR S&P U.S. FINANCIALS SELECT SECTOR UCITS ETF,France,FP,EUR,ETF,PA,IXMNTR,,Equity
+232,IE00B14X4M10,INAA,iShares MSCI North America UCITS ETF,France,FP,EUR,ETF,PA,MSCI North America,Quarterly,Equity
+233,FR0000021842,BEL,LYXOR UCITS ETF BEL 20 TR,France,FP,EUR,ETF,PA,BEL 20,,Equity
+234,IE00B0M63391,IKRA,iShares MSCI Korea UCITS ETF (Dist),France,FP,EUR,ETF,PA,MSCI Korea,Bi-Annually,Equity
+235,NL0011683594,TDIV,VanEck Vectors Morningstar Developed Markets Dividend Leaders UCITS ETF,France,FP,EUR,ETF,PA,Morningstar Div Leaders Index,,Equity
+236,LU1659681586,EKLDC,BNP Paribas Easy MSCI USA SRI S-Series 5% Capped,France,FP,EUR,ETF,PA,MSCI USA SRI S-Series 5%Cap,Capitalisation,Equity
+237,IE00BWBXM948,SXLK,SPDR S&P U.S. TECHNOLOGY SELECT SECTOR UCITS ETF,France,FP,EUR,ETF,PA,IXTNTR,,Equity
+238,IE00BJXRZJ40,CYBR,Rize Cybersecurity and Data Privacy UCITS ETF,France,FP,EUR,ETF,PA,Fox. Cybersecurity,Capitalisation,Equity
+239,LU2090063673,LJPN,Lyxor Core MSCI Japan (DR) UCITS ETF - Dist,France,FP,JPY,ETF,PA,MSCI Japan NTR Index,Bi-Annually,Equity
+240,IE00BMDBMG37,IDSE,iShares MSCI Europe SRI UCITS ETF USD (Acc),France,FP,USD,ETF,PA,MSCI EurSRI Sel Rd Fossil Fuel,Quarterly,Equity
+241,IE00BYTRRG40,WTEL,SPDR MSCI World Communication Services UCITS ETF,France,FP,EUR,ETF,PA,MSCI World Com Services 35/20,,Equity
+242,NL0009272780,TOF,VanEck Vectors Multi-Asset Growth Allocation UCITS ETF,France,FP,EUR,ETF,PA,Multi-Asset Growth Allocation,,Equity
+243,LU2023679090,ELCR,Lyxor MSCI Future Mobility ESG Filtered (DR) UCITS ETF- Acc,France,FP,EUR,ETF,PA,MSCI Future Mobility NTR,,Equity
+244,LU1437017863,U500,AMUNDI S&P 500 ESG UCITS ETF DR - EUR (C),France,FP,USD,ETF,PA,S&P 500 ESG,,Equity
+245,IE00B1FZS574,ITKY,iShares MSCI Turkey UCITS ETF USD (Dist),France,FP,EUR,ETF,PA,MSCI Turkey,,Equity

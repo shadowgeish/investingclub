@@ -266,13 +266,15 @@ class StockPrices(Resource):
         order_type = args['order_type']
         order_direction = args['order_direction']
 
-
-
         tz = pytz.timezone('Europe/Paris')
 
         # if codes == 'All':
         df = get_universe(name=name, country=country, type=stock_type, sector=sector, skip=skip, limit=limit,
                           codes=codes, order_type=order_type, order_direction=order_direction)
+
+        if df is None or len(df) == 0:
+            return {}, 200
+
         df['full_code'] = df['Code'] + '.' + df['ExchangeCode']
         lstock = df['full_code'].tolist()
         universe = df.to_dict(orient='records')
@@ -284,8 +286,16 @@ class StockPrices(Resource):
 
         from asset_prices.prices import get_prices
         data_type = 'real_time'
+
+        dtt = datetime.now(tz)
+        import datetime as dat
+        if dtt.weekday() > 4:
+            historical = 1
+            args['start_date'] = get_date_from_str_or_default(dat.date.today() + dat.timedelta(-(6-dtt.weekday())),
+                                                      (dat.date.today() + dat.timedelta(-200)))
+            args['end_date'] = args['start_date']
+
         if historical == 1:
-            import datetime as dat
             start_date = get_date_from_str_or_default(args['start_date'],
                                                       (dat.date.today() + dat.timedelta(-200)))
             end_date = get_date_from_str_or_default(args['end_date'],
@@ -421,6 +431,9 @@ class StockData(Resource):
 
         res2 = server[db_name]["stock_esg_data"].find_one(query, {'_id': 0})
 
+        if res is None or len(res) == 0:
+            return {}, 200
+
         json_res = {} if res is None else json.loads(json_util.dumps(res))
         json_res2 = {} if res2 is None else json.loads(json_util.dumps(res2))
 
@@ -469,13 +482,14 @@ class StockData(Resource):
             merged_dict['ETF_Data']['Sector_Weights'] = sector_weights
 
 
+        if 'General' in merged_dict.keys():
+            if 'Description_' + lang in merged_dict['General'].keys():
+                merged_dict['General']['Description'] = merged_dict['General']['Description_' + lang]
+                del merged_dict['General']['Description_' + lang]
 
-        merged_dict['General']['Description'] = merged_dict['General']['Description_' + lang]
-        del merged_dict['General']['Description_' + lang]
-
-        if 'Category_' + lang in merged_dict['General'].keys():
-            merged_dict['General']['Category'] = merged_dict['General']['Category_' + lang]
-            del merged_dict['General']['Category_' + lang]
+            if 'Category_' + lang in merged_dict['General'].keys():
+                merged_dict['General']['Category'] = merged_dict['General']['Category_' + lang]
+                del merged_dict['General']['Category_' + lang]
 
         # Rename variables ETF Data
         if 'ETF_Data' in merged_dict.keys() and 'Performance' in merged_dict['ETF_Data'].keys():

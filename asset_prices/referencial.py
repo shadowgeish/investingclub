@@ -202,6 +202,7 @@ def get_universe(name="", country="", type="", sector="",  skip=0, limit=5000,
     if len(type) > 0:
         query["General.Type"] = {"$regex": '/*{}/*'.format(type), "$options": 'i'}
 
+    query["Active"] = 1
     if len(codes) > 0 and codes != 'All':
         full_code_list = codes.split(',')
         query["FullCode"] = {"$in": full_code_list}
@@ -216,6 +217,7 @@ def get_universe(name="", country="", type="", sector="",  skip=0, limit=5000,
                 'Code': 1,
                 'General.Name': 1,
                 'Country': 1,
+                'Type': 1,
                 'General.Exchange': 1,
                 'General.CurrencyCode': 1,
                 'General.Type': 1,
@@ -280,7 +282,7 @@ def get_universe(name="", country="", type="", sector="",  skip=0, limit=5000,
                               'ExchangeCode': itx['General']['Exchange'],
                               'Exchange': itx['General']['Exchange'],
                               'LastPriceVolume': itx['last_price_volume'] if 'last_price_volume' in itx.keys() else 0,
-                              'logo':  '{}{}'.format('https://eodhistoricaldata.com', itx['General']['LogoURL'] if itx['General']['Type'] not in ['ETP', 'ETF', 'ETC', 'ETN'] else 'https://devarteechadvisor.blob.core.windows.net/public-files/ETF.png' )
+                              'logo':  '{}{}'.format('https://eodhistoricaldata.com', itx['General']['LogoURL'] if itx['Type'] not in ['ETP', 'ETF', 'ETC', 'ETN'] else 'https://devarteechadvisor.blob.core.windows.net/public-files/ETF.png' )
                                }
                              )
 
@@ -325,7 +327,7 @@ def load_equity_etf_list():
     # https://eodhistoricaldata.com/api/exchanges-list/?api_token=60241295a5b4c3.00921778&fmt=json
     ddf = pd.read_csv("../asset_prices/stock_universe.csv", sep=',', keep_default_na=False)
     ddf = ddf[['ISIN','Code','Name','Country','Exchange','Currency','Type','ExchangeCode',
-               'ETF Underlying Index Ticker', 'Dvd Freq']]
+               'ETF Underlying Index Ticker', 'Dvd Freq', 'AssetType']]
 
     list_stock = json.loads(ddf.to_json(orient='records'))
     collection_name = "stock_data"
@@ -345,10 +347,19 @@ def load_equity_etf_list():
 
     # lstock = lstock[0:10]
 
+
+    # Need to set all the stock as disable first, then at the end only activate the one as part of the universe
+    # stock_data['Status'] = 'Disable',
+
+    #filtering = {'FullCode': cod}
+    #nlstock.append(stock)
+    #server[db_name][collection_name].find(filtering)
+    server[db_name][collection_name].update_many({}, {'$set': {"Active":0}})
     stock_data_list = []
     ct = 1
 
     nlstock = []
+    failedlstock = []
     import random
     # lstock = random.sample(lstock, 50) # load only 200
     total = len(lstock)
@@ -366,6 +377,7 @@ def load_equity_etf_list():
             stock_data['Country'] = stock['Country'] # sdict[cod]['Country']
             stock_data['ISIN'] = stock['ISIN'] # sdict[cod]['ISIN']
             stock_data['FullCode'] = cod
+            stock_data['AssetType'] = stock['AssetType']
             stock_data['ETF Underlying Index Ticker'] = stock['ETF Underlying Index Ticker']
 
             stock_data = remove_special_car(stock_data)
@@ -380,20 +392,26 @@ def load_equity_etf_list():
                                     else 'https://devarteechadvisor.blob.core.windows.net/public-files/ETF.png'
 
             stock_data = add_translation(stock_data, field='Description',
-                                         llg=['de', 'it', 'fr', 'es', 'nl', 'en'])
+                                         llg=['it', 'fr'])
             stock_data = add_translation(stock_data, field='Category',
-                                         llg=['de', 'it', 'fr', 'es', 'nl', 'en'])
+                                         llg=['it', 'fr'])
             filtering = {'FullCode': cod}
             nlstock.append(stock)
             server[db_name][collection_name].find(filtering)
             server[db_name][collection_name].update_one(filtering, {'$set': stock_data}, upsert=True)
+            server[db_name][collection_name].update_many(filtering, {'$set': {"Active": 1}})
             logger_get_ref.info("load data for {} completed, with query {}!".format(cod, filtering))
+        else:
+            failedlstock.append(stock)
         ct = ct + 1
 
     collection_name = "stock_universe"
     if collection_name in server[db_name].list_collection_names():
         server[db_name][collection_name].drop()
     server[db_name][collection_name].insert_many(nlstock)
+
+    failed_df = pd.DataFrame(failedlstock)
+    failed_df.to_csv("./stock_universe_failed_load.csv")
 
     logger_get_ref.info("Done!")
     logger_get_ref.info("Disconnected!")
@@ -504,9 +522,9 @@ def translate(text='Hello world', llg = ['de', 'it', 'fr', 'es', 'nl', 'en']):
     return ddt
 
 if __name__ == '__main__':
-    # load_stock_universe()
-    get_universe(name="", country="France", type="", sector="", skip=2, limit=10)
-    #load_equity_etf_list()
+    #load_stock_universe()
+    # get_universe(name="", country="France", type="", sector="", skip=2, limit=10)
+    load_equity_etf_list()
     #load_exchange_list()
     #translate(text='Hello world', llg=['de', 'it', 'fr', 'es', 'nl', 'en'])
 

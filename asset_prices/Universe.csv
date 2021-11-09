@@ -1,0 +1,837 @@
+﻿Unnamed: 0,ISIN,Currency,Exchange,ETF Underlying Index Ticker,Dvd Freq,Code,Type,Name,GICS Sector,GICS Ind Name,Name.1,ExchangeCode,Country,AssetType
+1,NL0000235190,EUR,FP,#N/A Field Not Applicable,Annual,AIR,Common Stock,AIRBUS SE,Industrials,Aerospace & Defense,AIRBUS SE,PA,France,Equity
+2,FR0000120271,EUR,FP,#N/A Field Not Applicable,Quarter,TTE,Common Stock,TOTALENERGIES SE,Energy,Oil- Gas & Consumable Fuels,TOTALENERGIES SE,PA,France,Equity
+3,FR0010397232,EUR,FP,#N/A Field Not Applicable,#N/A N/A,ALNOV,Common Stock,NOVACYT,Health Care,Biotechnology,NOVACYT,PA,France,Equity
+4,FR0000130809,EUR,FP,#N/A Field Not Applicable,Annual,GLE,Common Stock,SOCIETE GENERALE SA,Financials,Banks,SOC GENERALE SA,PA,France,Equity
+5,FR0000131104,EUR,FP,#N/A Field Not Applicable,Annual,BNP,Common Stock,BNP PARIBAS,Financials,Banks,BNP PARIBAS,PA,France,Equity
+6,FR0000131906,EUR,FP,#N/A Field Not Applicable,Annual,RNO,Common Stock,RENAULT SA,Consumer Discretionary,Automobiles,RENAULT SA,PA,France,Equity
+7,FR0000031122,EUR,FP,#N/A Field Not Applicable,Irreg,AF,Common Stock,AIR FRANCE-KLM,Industrials,Airlines,AIR FRANCE-KLM,PA,France,Equity
+8,FR0000045072,EUR,FP,#N/A Field Not Applicable,Annual,ACA,Common Stock,CREDIT AGRICOLE SA,Financials,Banks,CREDIT AGRICOLE,PA,France,Equity
+9,FR0000121014,EUR,FP,#N/A Field Not Applicable,Semi-Anl,MC,Common Stock,LVMH MOET HENNESSY LOUIS VUI,Consumer Discretionary,Textiles- Apparel & Luxury Goo,LVMH MOET HENNE,PA,France,Equity
+10,FR0013181864,EUR,FP,#N/A Field Not Applicable,Irreg,CGG,Common Stock,CGG SA,Energy,Energy Equipment & Services,CGG SA,PA,France,Equity
+11,FR0000120685,EUR,FP,#N/A Field Not Applicable,Annual,KN,Common Stock,NATIXIS,Financials,Capital Markets,NATIXIS,PA,France,Equity
+12,FR0000120073,EUR,FP,#N/A Field Not Applicable,Annual,AI,Common Stock,AIR LIQUIDE SA,Materials,Chemicals,AIR LIQUIDE SA,PA,France,Equity
+13,FR0000121501,EUR,FP,#N/A Field Not Applicable,Annual,UG,Common Stock,PEUGEOT SA,Consumer Discretionary,Automobiles,PEUGEOT SA,PA,France,Equity
+14,FR0000120578,EUR,FP,#N/A Field Not Applicable,Annual,SAN,Common Stock,SANOFI,Health Care,Pharmaceuticals,SANOFI,PA,France,Equity
+15,FR0000120628,EUR,FP,#N/A Field Not Applicable,Annual,CS,Common Stock,AXA SA,Financials,Insurance,AXA,PA,France,Equity
+16,FR0004163111,EUR,FP,#N/A Field Not Applicable,None,GNFT,Common Stock,GENFIT,Health Care,Biotechnology,GENFIT,PA,France,Equity
+17,FR0013066750,EUR,FP,#N/A Field Not Applicable,None,ALDBT,Common Stock,DBT,Industrials,Electrical Equipment,DBT,PA,France,Equity
+18,FR0000073272,EUR,FP,#N/A Field Not Applicable,Annual,SAF,Common Stock,SAFRAN SA,Industrials,Aerospace & Defense,SAFRAN SA,PA,France,Equity
+19,FR0011051598,EUR,FP,#N/A Field Not Applicable,None,ALMIB,Common Stock,AMOEBA SAS,Materials,Chemicals,AMOEBA SAS,PA,France,Equity
+20,FR0011005933,EUR,FP,#N/A Field Not Applicable,Irreg,ALBIO,Common Stock,BIOSYNEX,Health Care,Health Care Equipment & Suppli,BIOSYNEX,PA,France,Equity
+21,FR0013240934,EUR,FP,#N/A Field Not Applicable,None,ALERS,Common Stock,EUROBIO-SCIENTIFIC,Health Care,Biotechnology,EUROBIO-SCIENTIF,PA,France,Equity
+22,FR0013451333,EUR,FP,#N/A Field Not Applicable,Irreg,FDJ,Common Stock,LA FRANCAISE DES JEUX SAEM,Consumer Discretionary,Hotels- Restaurants & Leisure,LA FRANCAISE DES,PA,France,Equity
+23,FR0012816825,EUR,FP,#N/A Field Not Applicable,None,ALBPS,Common Stock,BIOPHYTIS,Health Care,Biotechnology,BIOPHYTIS,PA,France,Equity
+24,FR0000125486,EUR,FP,#N/A Field Not Applicable,Semi-Anl,DG,Common Stock,VINCI SA,Industrials,Construction & Engineering,VINCI SA,PA,France,Equity
+25,NL0000226223,EUR,FP,#N/A Field Not Applicable,Quarter,STM,Common Stock,STMICROELECTRONICS NV,Information Technology,Semiconductors & Semiconductor,STMICROELECTRONI,PA,France,Equity
+26,FR0010417345,EUR,FP,#N/A Field Not Applicable,None,DBV,Common Stock,DBV TECHNOLOGIES SA,Health Care,Biotechnology,DBV TECHNOLOGIES,PA,France,Equity
+27,FR0013227113,EUR,FP,#N/A Field Not Applicable,Irreg,SOI,Common Stock,S.O.I.T.E.C.,Information Technology,Semiconductors & Semiconductor,SOITEC,PA,France,Equity
+28,FR0000121485,EUR,FP,#N/A Field Not Applicable,Semi-Anl,KER,Common Stock,KERING,Consumer Discretionary,Textiles- Apparel & Luxury Goo,KERING,PA,France,Equity
+29,FR0000133308,EUR,FP,#N/A Field Not Applicable,Semi-Anl,ORA,Common Stock,ORANGE,Communication Services,Diversified Telecommunication,ORANGE,PA,France,Equity
+30,FR0000130692,EUR,FP,#N/A Field Not Applicable,Semi-Anl,CRI,Common Stock,CHARGEURS SA,Consumer Discretionary,Textiles- Apparel & Luxury Goo,CHARGEURS SA,PA,France,Equity
+31,FR0011179886,EUR,FP,#N/A Field Not Applicable,None,ALINS,Common Stock,INTRASENSE SAS,Health Care,Health Care Technology,INTRASENSE SAS,PA,France,Equity
+32,FR0012789949,EUR,FP,#N/A Field Not Applicable,Irreg,EUCAR,Common Stock,EUROPCAR MOBILITY GROUP,Industrials,Road & Rail,EUROPCAR MOBILIT,PA,France,Equity
+33,FR0000125585,EUR,FP,#N/A Field Not Applicable,Irreg,CO,Common Stock,CASINO GUICHARD PERRACHON,Consumer Staples,Food & Staples Retailing,CASINO GUICHARD,PA,France,Equity
+34,FR0011799907,EUR,FP,#N/A Field Not Applicable,None,GV,Common Stock,GENOMIC VISION,Health Care,Biotechnology,GENOMIC VIS,PA,France,Equity
+35,FR0013183985,EUR,FP,#N/A Field Not Applicable,None,SIGHT,Common Stock,GENSIGHT BIOLOGICS SA,Health Care,Biotechnology,GENSIGHT,PA,France,Equity
+36,FR0010208488,EUR,FP,#N/A Field Not Applicable,Annual,ENGI,Common Stock,ENGIE,Utilities,Multi-Utilities,ENGIE,PA,France,Equity
+37,FR0000120321,EUR,FP,#N/A Field Not Applicable,Annual,OR,Common Stock,L'OREAL,Consumer Staples,Personal Products,L'OREAL,PA,France,Equity
+38,FR0004197747,EUR,FP,#N/A Field Not Applicable,#N/A N/A,ALTER,Common Stock,THERADIAG,Health Care,Health Care Equipment & Suppli,THERADIAG,PA,France,Equity
+39,FR0000120172,EUR,FP,#N/A Field Not Applicable,Annual,CA,Common Stock,CARREFOUR SA,Consumer Staples,Food & Staples Retailing,CARREFOUR SA,PA,France,Equity
+40,FR0013426004,EUR,FP,#N/A Field Not Applicable,None,CLA,Common Stock,CLARANOVA,Information Technology,Software,CLARANOVA,PA,France,Equity
+41,FR0013233475,EUR,FP,#N/A Field Not Applicable,None,LYS,Common Stock,LYSOGENE SA,Health Care,Biotechnology,LYSOGENE SA,PA,France,Equity
+42,FR0000120503,EUR,FP,#N/A Field Not Applicable,Annual,EN,Common Stock,BOUYGUES SA,Industrials,Construction & Engineering,BOUYGUES SA,PA,France,Equity
+43,FR0000125007,EUR,FP,#N/A Field Not Applicable,Annual,SGO,Common Stock,COMPAGNIE DE SAINT GOBAIN,Industrials,Building Products,SAINT GOBAIN,PA,France,Equity
+44,FR0000130650,EUR,FP,#N/A Field Not Applicable,Annual,DSY,Common Stock,DASSAULT SYSTEMES SE,Information Technology,Software,DASSAULT SYSTEME,PA,France,Equity
+45,FR0000051807,EUR,FP,#N/A Field Not Applicable,Annual,TEP,Common Stock,TELEPERFORMANCE,Industrials,Professional Services,TELEPERFORMANCE,PA,France,Equity
+46,FR0000120222,EUR,FP,#N/A Field Not Applicable,Annual,CNP,Common Stock,CNP ASSURANCES,Financials,Insurance,CNP ASSURANCES,PA,France,Equity
+47,FR0000120644,EUR,FP,#N/A Field Not Applicable,Annual,BN,Common Stock,DANONE,Consumer Staples,Food Products,DANONE,PA,France,Equity
+48,FR0010557264,EUR,FP,#N/A Field Not Applicable,None,AB,Common Stock,AB SCIENCE SA,Health Care,Pharmaceuticals,AB SCIENCE SA,PA,France,Equity
+49,FR0000120404,EUR,FP,#N/A Field Not Applicable,Annual,AC,Common Stock,ACCOR SA,Consumer Discretionary,Hotels- Restaurants & Leisure,ACCOR SA,PA,France,Equity
+50,FR0000131757,EUR,FP,#N/A Field Not Applicable,Annual,ERA,Common Stock,ERAMET,Materials,Metals & Mining,ERAMET,PA,France,Equity
+51,FR0012432516,EUR,FP,#N/A Field Not Applicable,None,POXEL,Common Stock,POXEL SA,Health Care,Biotechnology,POXEL SA,PA,France,Equity
+52,FR0013176526,EUR,FP,#N/A Field Not Applicable,Annual,FR,Common Stock,VALEO SA,Consumer Discretionary,Auto Components,VALEO SA,PA,France,Equity
+53,FR0000054470,EUR,FP,#N/A Field Not Applicable,None,UBI,Common Stock,UBISOFT ENTERTAINMENT,Communication Services,Entertainment,UBISOFT ENTERTAI,PA,France,Equity
+54,FR0000052292,EUR,FP,#N/A Field Not Applicable,Semi-Anl,RMS,Common Stock,HERMES INTERNATIONAL,Consumer Discretionary,Textiles- Apparel & Luxury Goo,HERMES INTL,PA,France,Equity
+55,FR0010242511,EUR,FP,#N/A Field Not Applicable,Semi-Anl,EDF,Common Stock,EDF,Utilities,Electric Utilities,EDF,PA,France,Equity
+56,FR0000124141,EUR,FP,#N/A Field Not Applicable,Annual,VIE,Common Stock,VEOLIA ENVIRONNEMENT,Utilities,Multi-Utilities,VEOLIA ENVIRONNE,PA,France,Equity
+57,FR0013280286,EUR,FP,#N/A Field Not Applicable,Annual,BIM,Common Stock,BIOMERIEUX,Health Care,Health Care Equipment & Suppli,BIOMERIEUX,PA,France,Equity
+58,FR0010331421,EUR,FP,#N/A Field Not Applicable,None,IPH,Common Stock,INNATE PHARMA SA,Health Care,Biotechnology,INNATE PHARMA SA,PA,France,Equity
+59,FR0013345493,EUR,FP,#N/A Field Not Applicable,None,ALTUV,Common Stock,BIO-UV GROUP SAS,Industrials,Machinery,BIO-UV GROUP SAS,PA,France,Equity
+60,FR0010340141,EUR,FP,#N/A Field Not Applicable,Semi-Anl,ADP,Common Stock,ADP,Industrials,Transportation Infrastructure,ADP,PA,France,Equity
+61,FR0013481835,EUR,FP,#N/A Field Not Applicable,None,ALVMG,Common Stock,VISIOMED GROUP,Health Care,Health Care Equipment & Suppli,VISIOMED GROUP,PA,France,Equity
+62,FR0000051732,EUR,FP,#N/A Field Not Applicable,Annual,ATO,Common Stock,ATOS SE,Information Technology,IT Services,ATOS SE,PA,France,Equity
+63,FR0000125338,EUR,FP,#N/A Field Not Applicable,Annual,CAP,Common Stock,CAPGEMINI SE,Information Technology,IT Services,CAPGEMINI SE,PA,France,Equity
+64,FR0013154002,EUR,FP,#N/A Field Not Applicable,Annual,DIM,Common Stock,SARTORIUS STEDIM BIOTECH,Health Care,Life Sciences Tools & Services,SARTORIUS STEDIM,PA,France,Equity
+65,FR0000121329,EUR,FP,#N/A Field Not Applicable,Semi-Anl,HO,Common Stock,THALES SA,Industrials,Aerospace & Defense,THALES SA,PA,France,Equity
+66,FR0013506730,EUR,FP,#N/A Field Not Applicable,Irreg,VK,Common Stock,VALLOUREC SA,Energy,Energy Equipment & Services,VALLOUREC,PA,France,Equity
+67,FR0000121667,EUR,FP,#N/A Field Not Applicable,Annual,EL,Common Stock,ESSILORLUXOTTICA,Consumer Discretionary,Textiles- Apparel & Luxury Goo,ESSILORLUXOTTICA,PA,France,Equity
+68,FR0000121972,EUR,FP,#N/A Field Not Applicable,Annual,SU,Common Stock,SCHNEIDER ELECTRIC SE,Industrials,Electrical Equipment,SCHNEIDER ELECTR,PA,France,Equity
+69,FR0013269123,EUR,FP,#N/A Field Not Applicable,Annual,RUI,Common Stock,RUBIS,Utilities,Gas Utilities,RUBIS,PA,France,Equity
+70,FR0000184798,EUR,FP,#N/A Field Not Applicable,Annual,ORP,Common Stock,ORPEA,Health Care,Health Care Providers & Servic,ORPEA,PA,France,Equity
+71,FR0000121261,EUR,FP,#N/A Field Not Applicable,Annual,ML,Common Stock,MICHELIN (CGDE),Consumer Discretionary,Auto Components,MICHELIN,PA,France,Equity
+72,NL0012044762,EUR,FP,#N/A Field Not Applicable,None,ALNOX,Common Stock,NOXXON PHARMA NV,Health Care,Biotechnology,NOXXON PHARMA NV,PA,France,Equity
+73,FR0011648971,EUR,FP,#N/A Field Not Applicable,None,ALQGC,Common Stock,QUANTUM GENOMICS SAS-REGR,Health Care,Biotechnology,QUANTUM GEN-REGR,PA,France,Equity
+74,FR0010667147,EUR,FP,#N/A Field Not Applicable,Annual,COFA,Common Stock,COFACE SA,Financials,Insurance,COFACE SA,PA,France,Equity
+75,FR0000054900,EUR,FP,#N/A Field Not Applicable,Annual,TFI,Common Stock,TELEVISION FRANCAISE (T.F.1),Communication Services,Media,TELEVISION FRANC,PA,France,Equity
+76,FR0010259150,EUR,FP,#N/A Field Not Applicable,Annual,IPN,Common Stock,IPSEN,Health Care,Pharmaceuticals,IPSEN,PA,France,Equity
+77,FR0010112524,EUR,FP,#N/A Field Not Applicable,Annual,NXI,Common Stock,NEXITY,Real Estate,Real Estate Management & Devel,NEXITY,PA,France,Equity
+78,FR0000127771,EUR,FP,#N/A Field Not Applicable,Annual,VIV,Common Stock,VIVENDI,Communication Services,Entertainment,VIVENDI,PA,France,Equity
+79,FR0011981968,EUR,FP,#N/A Field Not Applicable,None,WLN,Common Stock,WORLDLINE SA,Information Technology,IT Services,WORLDLINE,PA,France,Equity
+80,FR0000121147,EUR,FP,#N/A Field Not Applicable,Annual,EO,Common Stock,FAURECIA,Consumer Discretionary,Auto Components,FAURECIA,PA,France,Equity
+81,FR0012616852,EUR,FP,#N/A Field Not Applicable,None,ABNX,Common Stock,ABIONYX PHARMA SA,Health Care,Biotechnology,ABIONYX PHARMA S,PA,France,Equity
+82,FR0000125346,EUR,FP,#N/A Field Not Applicable,Annual,ING,Common Stock,INGENICO GROUP,Information Technology,Electronic Equipment- Instrume,INGENICO GROUP,PA,France,Equity
+83,FR0011476928,EUR,FP,#N/A Field Not Applicable,Irreg,FNAC,Common Stock,FNAC DARTY SA,Consumer Discretionary,Specialty Retail,FNAC DARTY SA,PA,France,Equity
+84,FR0011191287,EUR,FP,#N/A Field Not Applicable,None,ALPHA,Common Stock,PHARNEXT SA,Health Care,Biotechnology,PHARNEXT SA,PA,France,Equity
+85,FR0011726835,EUR,FP,#N/A Field Not Applicable,Semi-Anl,GTT,Common Stock,GAZTRANSPORT ET TECHNIGA SA,Energy,Oil- Gas & Consumable Fuels,GAZTRANSPORT,PA,France,Equity
+86,FR0012333284,EUR,FP,#N/A Field Not Applicable,None,ABVX,Common Stock,ABIVAX SA,Health Care,Biotechnology,ABIVAX SA,PA,France,Equity
+87,FR0000120693,EUR,FP,#N/A Field Not Applicable,Semi-Anl,RI,Common Stock,PERNOD RICARD SA,Consumer Staples,Beverages,PERNOD RICARD SA,PA,France,Equity
+88,FR0010386334,EUR,FP,#N/A Field Not Applicable,Annual,KORI,Common Stock,KORIAN,Health Care,Health Care Providers & Servic,KORIAN,PA,France,Equity
+89,FR0011950732,EUR,FP,#N/A Field Not Applicable,Annual,ELIOR,Common Stock,ELIOR GROUP,Consumer Discretionary,Hotels- Restaurants & Leisure,ELIOR GROUP,PA,France,Equity
+90,FR0000130213,EUR,FP,#N/A Field Not Applicable,Annual,MMB,Common Stock,LAGARDERE SCA,Communication Services,Media,LAGARDERE SCA,PA,France,Equity
+91,FR0013156007,EUR,FP,#N/A Field Not Applicable,None,ALKLK,Common Stock,KERLINK SACA,Information Technology,Communications Equipment,KERLINK SACA,PA,France,Equity
+92,FR0010221234,EUR,FP,#N/A Field Not Applicable,Annual,ETL,Common Stock,EUTELSAT COMMUNICATIONS,Communication Services,Media,EUTELSAT COMMUNI,PA,France,Equity
+93,FR0013153541,EUR,FP,#N/A Field Not Applicable,Annual,MDM,Common Stock,MAISONS DU MONDE SA,Consumer Discretionary,Specialty Retail,MAISONS DU MONDE,PA,France,Equity
+94,FR0004035913,EUR,FP,#N/A Field Not Applicable,Annual,ILD,Common Stock,ILIAD SA,Communication Services,Diversified Telecommunication,ILIAD SA,PA,France,Equity
+95,FR0010220475,EUR,FP,#N/A Field Not Applicable,Annual,ALO,Common Stock,ALSTOM,Industrials,Machinery,ALSTOM,PA,France,Equity
+96,FR0011471135,EUR,FP,#N/A Field Not Applicable,#N/A N/A,ERYP,Common Stock,ERYTECH PHARMA,Health Care,Biotechnology,ERYTECH PHARMA,PA,France,Equity
+97,FR0004153930,EUR,FP,#N/A Field Not Applicable,None,ALHYG,Common Stock,HYBRIGENICS SA,Health Care,Biotechnology,HYBRIGENICS,PA,France,Equity
+98,FR0011898584,EUR,FP,#N/A Field Not Applicable,None,ALUVI,Common Stock,UV GERMI SA,Industrials,Machinery,UV GERMI SA,PA,France,Equity
+99,FR0004180537,EUR,FP,#N/A Field Not Applicable,Annual,AKA,Common Stock,AKKA TECHNOLOGIES,Industrials,Professional Services,AKKA TECHNOLOGIE,PA,France,Equity
+100,FR0011341205,EUR,FP,#N/A Field Not Applicable,None,NANO,Common Stock,NANOBIOTIX,Health Care,Biotechnology,NANOBIOTIX,PA,France,Equity
+101,FR0000120859,EUR,FP,#N/A Field Not Applicable,Annual,NK,Common Stock,IMERYS SA,Materials,Construction Materials,IMERYS SA,PA,France,Equity
+102,FR0010193052,EUR,FP,#N/A Field Not Applicable,None,CATG,Common Stock,CATANA GROUP,Consumer Discretionary,Leisure Products,CATANA GROUP,PA,France,Equity
+103,FR0000075343,EUR,FP,#N/A Field Not Applicable,Irreg,ALEMG,Common Stock,EUROMEDIS GROUPE,Health Care,Health Care Equipment & Suppli,EUROMEDIS GROUPE,PA,France,Equity
+104,FR0000121725,EUR,FP,#N/A Field Not Applicable,Annual,AM,Common Stock,DASSAULT AVIATION SA,Industrials,Aerospace & Defense,DASSAULT AVIATIO,PA,France,Equity
+105,FR0011742329,EUR,FP,#N/A Field Not Applicable,None,MCPHY,Common Stock,MCPHY ENERGY SA,Industrials,Machinery,MCPHY ENERGY SA,PA,France,Equity
+106,FR0004056851,EUR,FP,#N/A Field Not Applicable,None,VLA,Common Stock,VALNEVA SE,Health Care,Biotechnology,VALNEVA SE,PA,France,Equity
+107,FR0000075392,EUR,FP,#N/A Field Not Applicable,Annual,ORAP,Common Stock,ORAPI,Materials,Chemicals,ORAPI,PA,France,Equity
+108,FR0004065605,EUR,FP,#N/A Field Not Applicable,None,MEDCL,Common Stock,MEDINCELL SA,Health Care,Pharmaceuticals,MEDINCELL SA,PA,France,Equity
+109,FR0011716265,EUR,FP,#N/A Field Not Applicable,None,ALCJ,Common Stock,CROSSJECT,Health Care,Health Care Equipment & Suppli,CROSSJECT,PA,France,Equity
+110,FR0000130577,EUR,FP,#N/A Field Not Applicable,Annual,PUB,Common Stock,PUBLICIS GROUPE,Communication Services,Media,PUBLICIS GROUPE,PA,France,Equity
+111,FR0000130452,EUR,FP,#N/A Field Not Applicable,Annual,FGR,Common Stock,EIFFAGE,Industrials,Construction & Engineering,EIFFAGE,PA,France,Equity
+112,FR0010609263,EUR,FP,#N/A Field Not Applicable,None,MKEA,Common Stock,MAUNA KEA TECHNOLOGIES,Health Care,Health Care Equipment & Suppli,MAUNA KEA TECHNO,PA,France,Equity
+113,FR0013379484,EUR,FP,#N/A Field Not Applicable,None,S30,Common Stock,SOLUTIONS 30 SE,Information Technology,IT Services,SOLUTIONS 30 SE,PA,France,Equity
+114,FR0010425595,EUR,FP,#N/A Field Not Applicable,None,ALCLS,Common Stock,CELLECTIS,Health Care,Biotechnology,CELLECTIS,PA,France,Equity
+115,FR0000121220,EUR,FP,#N/A Field Not Applicable,Annual,SW,Common Stock,SODEXO SA,Consumer Discretionary,Hotels- Restaurants & Leisure,SODEXO SA,PA,France,Equity
+116,FR0013410370,EUR,FP,#N/A Field Not Applicable,None,ALAMG,Common Stock,AUPLATA MINING GR,Materials,Metals & Mining,AUPLATA MINING G,PA,France,Equity
+117,FR0010411983,EUR,FP,#N/A Field Not Applicable,Annual,SCR,Common Stock,SCOR SE,Financials,Insurance,SCOR SE,PA,France,Equity
+118,FR0011675362,EUR,FP,#N/A Field Not Applicable,None,NEOEN,Common Stock,NEOEN SA,Utilities,Independent Power and Renewabl,NEOEN SA,PA,France,Equity
+119,FR0011191766,EUR,FP,#N/A Field Not Applicable,None,EOSI,Common Stock,EOS IMAGING SA,Health Care,Health Care Equipment & Suppli,EOS IMAGING SA,PA,France,Equity
+120,FR0000124570,EUR,FP,#N/A Field Not Applicable,Annual,POM,Common Stock,PLASTIC OMNIUM,Consumer Discretionary,Auto Components,PLASTIC OMNIUM,PA,France,Equity
+121,FR0010908723,EUR,FP,#N/A Field Not Applicable,None,ALINT,Common Stock,INTEGRAGEN,Health Care,Biotechnology,INTEGRAGEN,PA,France,Equity
+122,FR0000060618,EUR,FP,#N/A Field Not Applicable,Annual,RAL,Common Stock,RALLYE SA,Consumer Staples,Food & Staples Retailing,RALLYE SA,PA,France,Equity
+123,FR0010908533,EUR,FP,#N/A Field Not Applicable,Annual,EDEN,Common Stock,EDENRED,Information Technology,IT Services,EDENRED,PA,France,Equity
+124,FR0010493510,EUR,FP,#N/A Field Not Applicable,None,ALALO,Common Stock,ACHETER-LOUER.FR,Communication Services,Interactive Media & Services,ACHETER-LOUER.FR,PA,France,Equity
+125,FR0012435121,EUR,FP,#N/A Field Not Applicable,Annual,ELIS,Common Stock,ELIS SA,Industrials,Commercial Services & Supplies,ELIS SA,PA,France,Equity
+126,FR0012127173,EUR,FP,#N/A Field Not Applicable,#N/A N/A,OSE,Common Stock,OSE IMMUNO,Health Care,Biotechnology,OSE IMMUNO,PA,France,Equity
+127,FR0010613471,EUR,FP,#N/A Field Not Applicable,Annual,SEV,Common Stock,SUEZ,Utilities,Multi-Utilities,SUEZ,PA,France,Equity
+128,FR0000121709,EUR,FP,#N/A Field Not Applicable,Annual,SK,Common Stock,SEB SA,Consumer Discretionary,Household Durables,SEB SA,PA,France,Equity
+129,FR0011995588,EUR,FP,#N/A Field Not Applicable,None,VLTSA,Common Stock,VOLTALIA SA- REGR,Utilities,Independent Power and Renewabl,VOLTALIA SA-REGR,PA,France,Equity
+130,FR0000130403,EUR,FP,#N/A Field Not Applicable,Semi-Anl,CDI,Common Stock,CHRISTIAN DIOR SE,Consumer Discretionary,Textiles- Apparel & Luxury Goo,CHRISTIAN DIOR,PA,France,Equity
+131,FR0011184241,EUR,FP,#N/A Field Not Applicable,None,ADOC,Common Stock,ADOCIA SAS,Health Care,Biotechnology,ADOCIA SAS,PA,France,Equity
+132,FR0013214145,EUR,FP,#N/A Field Not Applicable,None,SMCP,Common Stock,SMCP SA,Consumer Discretionary,Specialty Retail,SMCP SA,PA,France,Equity
+133,FR0005691656,EUR,FP,#N/A Field Not Applicable,Annual,TRI,Common Stock,TRIGANO SA,Consumer Discretionary,Automobiles,TRIGANO SA,PA,France,Equity
+134,FR0011522168,EUR,FP,#N/A Field Not Applicable,None,ALDR,Common Stock,DELTA DRONE,Industrials,Aerospace & Defense,DELTA DRONE,PA,France,Equity
+135,FR0011648716,EUR,FP,#N/A Field Not Applicable,None,ALCRB,Common Stock,CARBIOS,Materials,Chemicals,CARBIOS,PA,France,Equity
+136,FR0004053510,EUR,FP,#N/A Field Not Applicable,None,ALGEN,Common Stock,GENOWAY SA,Health Care,Biotechnology,GENOWAY SA,PA,France,Equity
+137,FR0013233012,EUR,FP,#N/A Field Not Applicable,None,IVA,Common Stock,INVENTIVA SA,Health Care,Biotechnology,INVENTIVA SA,PA,France,Equity
+138,FR0000044810,EUR,FP,#N/A Field Not Applicable,#N/A N/A,ALEUP,Common Stock,EUROPLASMA,Industrials,Commercial Services & Supplies,EUROPLASMA,PA,France,Equity
+139,FR0013018124,EUR,FP,#N/A Field Not Applicable,None,COX,Common Stock,NICOX SA,Health Care,Biotechnology,NICOX SA,PA,France,Equity
+140,FR0000060402,EUR,FP,#N/A Field Not Applicable,Annual,ABIO,Common Stock,ALBIOMA SA,Utilities,Independent Power and Renewabl,ALBIOMA SA,PA,France,Equity
+141,FR0011398874,EUR,FP,#N/A Field Not Applicable,#N/A N/A,ALSPW,Common Stock,SPINEWAY,Health Care,Health Care Equipment & Suppli,SPINEWAY,PA,France,Equity
+142,FR0004172450,EUR,FP,#N/A Field Not Applicable,Annual,ALBUD,Common Stock,MINT,Communication Services,Diversified Telecommunication,MINT,PA,France,Equity
+143,FR0010313833,EUR,FP,#N/A Field Not Applicable,Annual,AKE,Common Stock,ARKEMA,Materials,Chemicals,ARKEMA,PA,France,Equity
+144,FR0011049824,EUR,FP,#N/A Field Not Applicable,None,ALMDT,Common Stock,MEDIAN TECHNOLOGIES,Health Care,Health Care Technology,MEDIAN TECHNOLOG,PA,France,Equity
+145,FR0012757854,EUR,FP,#N/A Field Not Applicable,Semi-Anl,SPIE,Common Stock,SPIE SA,Industrials,Commercial Services & Supplies,SPIE SA,PA,France,Equity
+146,FR0004032746,EUR,FP,#N/A Field Not Applicable,None,ALNEV,Common Stock,NEOVACS,Health Care,Biotechnology,NEOVACS,PA,France,Equity
+147,FR0013258399,EUR,FP,#N/A Field Not Applicable,None,BALYO,Common Stock,BALYO SA - PROMESSES,Industrials,Machinery,BALYO SA,PA,France,Equity
+148,FR0000050809,EUR,FP,#N/A Field Not Applicable,Annual,SOP,Common Stock,SOPRA STERIA GROUP,Information Technology,IT Services,SOPRA STERIA GRO,PA,France,Equity
+149,FR0000071946,EUR,FP,#N/A Field Not Applicable,Annual,ATE,Common Stock,ALTEN SA,Information Technology,IT Services,ALTEN,PA,France,Equity
+150,FR0010307819,EUR,FP,#N/A Field Not Applicable,Annual,LR,Common Stock,LEGRAND SA,Industrials,Electrical Equipment,LEGRAND SA,PA,France,Equity
+151,FR0000053225,EUR,FP,#N/A Field Not Applicable,Annual,MMT,Common Stock,M6-METROPOLE TELEVISION,Communication Services,Media,M6-METROPOLE TEL,PA,France,Equity
+152,FR0011766229,EUR,FP,#N/A Field Not Applicable,None,ALONC,Common Stock,ONCODESIGN,Health Care,Biotechnology,ONCODESIGN,PA,France,Equity
+153,FR0010533075,EUR,FP,#N/A Field Not Applicable,Annual,GET,Common Stock,GETLINK SE,Industrials,Transportation Infrastructure,GETLINK SE,PA,France,Equity
+154,FR0012202497,EUR,FP,#N/A Field Not Applicable,Irreg,DGM,Common Stock,DIAGNOSTIC MEDICAL SYSTEMS,Health Care,Health Care Equipment & Suppli,DMS,PA,France,Equity
+155,FR0010451203,EUR,FP,#N/A Field Not Applicable,Annual,RXL,Common Stock,REXEL SA,Industrials,Trading Companies & Distributo,REXEL SA,PA,France,Equity
+156,FR0010291245,EUR,FP,#N/A Field Not Applicable,None,VMX,Common Stock,VERIMATRIX SA,Information Technology,Software,VERIMATRIX SA,PA,France,Equity
+157,FR0000044448,EUR,FP,#N/A Field Not Applicable,Annual,NEX,Common Stock,NEXANS SA,Industrials,Electrical Equipment,NEXANS SA,PA,France,Equity
+158,FR0013505062,EUR,FP,#N/A Field Not Applicable,Irreg,TCH,Common Stock,TECHNICOLOR - REGR,Communication Services,Entertainment,TECHNICOLOR-REGR,PA,France,Equity
+159,FR0004125920,EUR,FP,#N/A Field Not Applicable,Annual,AMUN,Common Stock,AMUNDI SA,Financials,Capital Markets,AMUNDI SA,PA,France,Equity
+160,FR0013341781,EUR,FP,#N/A Field Not Applicable,None,2CRSI,Common Stock,2CRSI SA,Information Technology,Technology Hardware- Storage &,2CRSI SA,PA,France,Equity
+161,FR0000073041,EUR,FP,#N/A Field Not Applicable,Annual,VAC,Common Stock,PIERRE & VACANCES,Consumer Discretionary,Hotels- Restaurants & Leisure,PIERRE&VACANCES,PA,France,Equity
+162,FR0000074072,EUR,FP,#N/A Field Not Applicable,Irreg,BIG,Common Stock,BIGBEN INTERACTIVE,Consumer Discretionary,Household Durables,BIGBEN INTERACTI,PA,France,Equity
+163,BE0974310428,EUR,FP,#N/A Field Not Applicable,None,XFAB,Common Stock,X-FAB SILICON FOUNDRIES SE,Information Technology,Semiconductors & Semiconductor,X-FAB SILICON FO,PA,France,Equity
+164,FR0010095596,EUR,FP,#N/A Field Not Applicable,None,ALONX,Common Stock,ONXEO,Health Care,Biotechnology,ONXEO,PA,France,Equity
+165,FR0000051070,EUR,FP,#N/A Field Not Applicable,Irreg,MAU,Common Stock,MAUREL ET PROM,Energy,Oil- Gas & Consumable Fuels,MAUREL ET PROM,PA,France,Equity
+166,FR0000039620,EUR,FP,#N/A Field Not Applicable,Annual,MRN,Common Stock,MERSEN,Industrials,Electrical Equipment,MERSEN,PA,France,Equity
+167,FR0011466069,EUR,FP,#N/A Field Not Applicable,None,EKI,Common Stock,EKINOPS,Information Technology,Communications Equipment,EKINOPS,PA,France,Equity
+168,FR0010478248,EUR,FP,#N/A Field Not Applicable,None,ATA,Common Stock,ATARI SA,Communication Services,Entertainment,ATARI SA,PA,France,Equity
+169,FR0000121204,EUR,FP,#N/A Field Not Applicable,Annual,MF,Common Stock,WENDEL,Financials,Diversified Financial Services,WENDEL,PA,France,Equity
+170,FR0000031577,EUR,FP,#N/A Field Not Applicable,Irreg,VIRP,Common Stock,VIRBAC SA,Health Care,Pharmaceuticals,VIRBAC SA,PA,France,Equity
+171,FR0004188670,EUR,FP,#N/A Field Not Applicable,Annual,TKTT,Common Stock,TARKETT,Industrials,Building Products,TARKETT,PA,France,Equity
+172,FR0004007813,EUR,FP,#N/A Field Not Applicable,Annual,KOF,Common Stock,KAUFMAN & BROAD SA,Consumer Discretionary,Household Durables,KAUFMAN & BROAD,PA,France,Equity
+173,FR0000039299,EUR,FP,#N/A Field Not Applicable,Semi-Anl,BOL,Common Stock,BOLLORE,Communication Services,Entertainment,BOLLORE,PA,France,Equity
+174,FR0000130395,EUR,FP,#N/A Field Not Applicable,Annual,RCO,Common Stock,REMY COINTREAU,Consumer Staples,Beverages,REMY COINTREAU,PA,France,Equity
+175,FR0013088606,EUR,FP,#N/A Field Not Applicable,None,ALDRV,Common Stock,DRONE VOLT SACA,Information Technology,Electronic Equipment- Instrume,DRONE VOLT SACA,PA,France,Equity
+176,FR0000034639,EUR,FP,#N/A Field Not Applicable,Annual,ALT,Common Stock,ALTRAN TECHNOLOGIES SA,Information Technology,IT Services,ALTRAN TECH,PA,France,Equity
+177,FR0004034072,EUR,FP,#N/A Field Not Applicable,None,XIL,Common Stock,XILAM ANIMATION,Communication Services,Entertainment,XILAM ANIMATION,PA,France,Equity
+178,FR0000121121,EUR,FP,#N/A Field Not Applicable,Annual,RF,Common Stock,EURAZEO SE,Financials,Diversified Financial Services,EURAZEO SE,PA,France,Equity
+179,FR0000032278,EUR,FP,#N/A Field Not Applicable,Annual,LAT,Common Stock,LATECOERE,Industrials,Aerospace & Defense,LATECOERE,PA,France,Equity
+180,FR0004024222,EUR,FP,#N/A Field Not Applicable,Annual,ITP,Common Stock,INTERPARFUMS SA,Consumer Staples,Personal Products,INTERPARFUMS SA,PA,France,Equity
+181,FR0000052623,EUR,FP,#N/A Field Not Applicable,Irreg,DEDAL,Common Stock,DEDALUS FRANCE SACA,Health Care,Health Care Technology,DEDALUS FRANCE S,PA,France,Equity
+182,FR0000064784,EUR,FP,#N/A Field Not Applicable,Annual,PEUG,Common Stock,PEUGEOT INVEST,Financials,Diversified Financial Services,PEUGEOT INVEST,PA,France,Equity
+183,FR0004040608,EUR,FP,#N/A Field Not Applicable,Quarter,ABCA,Common Stock,ABC ARBITRAGE,Financials,Diversified Financial Services,ABC ARBITRAGE,PA,France,Equity
+184,FR0013286259,EUR,FP,#N/A Field Not Applicable,None,ALTHX,Common Stock,THERANEXUS SADIR,Health Care,Pharmaceuticals,THERANEXUS SADIR,PA,France,Equity
+185,FR0000039091,EUR,FP,#N/A Field Not Applicable,Annual,RBT,Common Stock,ROBERTET SA,Materials,Chemicals,ROBERTET SA,PA,France,Equity
+186,FR0000073298,EUR,FP,#N/A Field Not Applicable,Annual,IPS,Common Stock,IPSOS,Communication Services,Media,IPSOS,PA,France,Equity
+187,NL0006294274,EUR,FP,#N/A Field Not Applicable,Annual,ENX,Common Stock,EURONEXT NV,Financials,Capital Markets,EURONEXT NV,PA,France,Equity
+188,FR0004180578,EUR,FP,#N/A Field Not Applicable,Annual,SWP,Common Stock,SWORD GROUP,Information Technology,IT Services,SWORD GROUP,PA,France,Equity
+189,FR0011532225,EUR,FP,#N/A Field Not Applicable,None,ALVGO,Common Stock,VOGO SACA,Information Technology,Software,VOGO SACA,PA,France,Equity
+190,FR0011665280,EUR,FP,#N/A Field Not Applicable,#N/A N/A,FGA,Common Stock,FIGEAC-AERO,Industrials,Aerospace & Defense,FIGEAC-AERO,PA,France,Equity
+191,FR0010907956,EUR,FP,#N/A Field Not Applicable,None,ALCAR,Common Stock,CARMAT,Health Care,Health Care Equipment & Suppli,CARMAT,PA,France,Equity
+192,FR0011950682,EUR,FP,#N/A Field Not Applicable,Annual,SEFER,Common Stock,SERGE FERRARI GROUP,Materials,Chemicals,SERGE FERRARI GR,PA,France,Equity
+193,FR0000031775,EUR,FP,#N/A Field Not Applicable,Annual,VCT,Common Stock,VICAT,Materials,Construction Materials,VICAT,PA,France,Equity
+194,FR0000079634,EUR,FP,#N/A Field Not Applicable,Irreg,ALGEC,Common Stock,GECI INTERNATIONAL,Industrials,Professional Services,GECI INTERNATION,PA,France,Equity
+195,FR0013505583,EUR,FP,#N/A Field Not Applicable,Annual,ALCYB,Common Stock,CYBERGUN SA,Consumer Discretionary,Leisure Products,CYBERGUN SA,PA,France,Equity
+196,FR0013258662,EUR,FP,#N/A Field Not Applicable,Annual,ALD,Common Stock,ALD SA,Industrials,Road & Rail,ALD SA,PA,France,Equity
+197,FR0013252186,EUR,FP,#N/A Field Not Applicable,Annual,PVL,Common Stock,PLASTIVALOIRE,Materials,Chemicals,PLASTIVALOIRE,PA,France,Equity
+198,FR0000035164,EUR,FP,#N/A Field Not Applicable,Annual,BEN,Common Stock,BENETEAU,Consumer Discretionary,Leisure Products,BENETEAU,PA,France,Equity
+199,FR0000035370,EUR,FP,#N/A Field Not Applicable,Annual,BLC,Common Stock,BASTIDE LE CONFORT MEDICAL,Health Care,Health Care Providers & Servic,BASTIDE,PA,France,Equity
+200,FR0000053381,EUR,FP,#N/A Field Not Applicable,Annual,DBG,Common Stock,DERICHEBOURG,Industrials,Commercial Services & Supplies,DERICHEBOURG,PA,France,Equity
+201,FR0011950641,EUR,FP,#N/A Field Not Applicable,None,ALPIX,Common Stock,PIXIUM VISION SA,Health Care,Health Care Equipment & Suppli,PIXIUM VISIO,PA,France,Equity
+202,FR0010879056,EUR,FP,#N/A Field Not Applicable,None,ALDEI,Common Stock,DEINOVE,Materials,Chemicals,DEINOVE,PA,France,Equity
+203,FR0000035818,EUR,FP,#N/A Field Not Applicable,Annual,ALESK,Common Stock,ESKER SA,Information Technology,Software,ESKER SA,PA,France,Equity
+204,FR0011271600,EUR,FP,#N/A Field Not Applicable,None,FALG,Common Stock,FERMENTALG,Materials,Chemicals,FERMENTALG,PA,France,Equity
+205,FR0005175080,EUR,FP,#N/A Field Not Applicable,None,TNG,Common Stock,TRANSGENE SA,Health Care,Biotechnology,TRANSGENE SA,PA,France,Equity
+206,BE0974302342,EUR,FP,#N/A Field Not Applicable,None,ALPHS,Common Stock,PHARMASIMPLE,Consumer Discretionary,Internet & Direct Marketing Re,PHARMASIMPLE,PA,France,Equity
+207,FR0004170017,EUR,FP,#N/A Field Not Applicable,Annual,LNA,Common Stock,LNA SANTE,Health Care,Health Care Providers & Servic,LNA SANTE,PA,France,Equity
+208,FR0010377127,EUR,FP,#N/A Field Not Applicable,None,ALDIE,Common Stock,DIETSWELL,Energy,Energy Equipment & Services,DIETSWELL,PA,France,Equity
+209,FR0012419307,EUR,FP,#N/A Field Not Applicable,Annual,ALFOC,Common Stock,FOCUS HOME INTERACTIVE,Communication Services,Entertainment,FOCUS HOME INTER,PA,France,Equity
+210,FR0000120966,EUR,FP,#N/A Field Not Applicable,Annual,BB,Common Stock,SOCIETE BIC SA,Industrials,Commercial Services & Supplies,BIC,PA,France,Equity
+211,FR0000120560,EUR,FP,#N/A Field Not Applicable,Annual,QDT,Common Stock,QUADIENT SA,Information Technology,Technology Hardware- Storage &,QUADIENT SA,PA,France,Equity
+212,FR0004172450,EUR,FP,#N/A Field Not Applicable,Annual,ALBUD,Common Stock,MINT,Communication Services,Diversified Telecommunication,MINT,PA,France,Equity
+213,FR0013482791,EUR,FP,#N/A Field Not Applicable,None,NACON,Common Stock,NACON SA,Consumer Discretionary,Household Durables,NACON SA,PA,France,Equity
+214,FR0006174348,EUR,FP,#N/A Field Not Applicable,Annual,BVI,Common Stock,BUREAU VERITAS SA,Industrials,Professional Services,BUREAU VERITAS S,PA,France,Equity
+215,FR0011584549,EUR,FP,#N/A Field Not Applicable,None,ALMND,Common Stock,MND,Consumer Discretionary,Leisure Products,MND,PA,France,Equity
+216,FR0000031684,EUR,FP,#N/A Field Not Applicable,Annual,ROTH,Common Stock,ROTHSCHILD & CO,Financials,Capital Markets,ROTHSCHILD & CO,PA,France,Equity
+217,FR0000075442,EUR,FP,#N/A Field Not Applicable,Irreg,ALLDL,Common Stock,GROUPE LDLC,Consumer Discretionary,Internet & Direct Marketing Re,GROUPE LDLC,PA,France,Equity
+218,FR0000073793,EUR,FP,#N/A Field Not Applicable,Annual,DVT,Common Stock,DEVOTEAM SA,Information Technology,IT Services,DEVOTEAM SA,PA,France,Equity
+219,FR0012882389,EUR,FP,#N/A Field Not Applicable,Annual,PHA,Common Stock,PHARMAGEST INTERACTIVE,Health Care,Health Care Technology,PHARMAGEST INTER,PA,France,Equity
+220,FR0013006558,EUR,FP,#N/A Field Not Applicable,None,SRP,Common Stock,SHOWROOMPRIVE,Consumer Discretionary,Internet & Direct Marketing Re,SHOWROOMPRIVE,PA,France,Equity
+221,FR0000050353,EUR,FP,#N/A Field Not Applicable,Annual,FII,Common Stock,LISI,Industrials,Aerospace & Defense,LISI,PA,France,Equity
+222,FR0013254851,EUR,FP,#N/A Field Not Applicable,None,ALVAL,Common Stock,VALBIOTIS SAS,Health Care,Biotechnology,VALBIOTIS SAS,PA,France,Equity
+223,FR0010485268,EUR,FP,#N/A Field Not Applicable,Annual,ALFPC,Common Stock,FOUNTAINE PAJOT SA,Consumer Discretionary,Leisure Products,FOUNTAINE PAJOT,PA,France,Equity
+224,FR0000038242,EUR,FP,#N/A Field Not Applicable,Irreg,LBIRD,Common Stock,LUMIBIRD,Information Technology,Electronic Equipment- Instrume,LUMIBIRD,PA,France,Equity
+225,FR0000066672,EUR,FP,#N/A Field Not Applicable,Annual,GLO,Common Stock,GL EVENTS,Industrials,Commercial Services & Supplies,GL EVENTS,PA,France,Equity
+226,FR0000077919,EUR,FP,#N/A Field Not Applicable,Annual,DEC,Common Stock,JCDECAUX SA,Communication Services,Media,JCDECAUX SA,PA,France,Equity
+227,FR0011464452,EUR,FP,#N/A Field Not Applicable,#N/A N/A,ALSGD,Common Stock,SPINEGUARD SA,Health Care,Health Care Equipment & Suppli,SPINEGUARD,PA,France,Equity
+228,FR0000182479,EUR,FP,#N/A Field Not Applicable,None,ALJXR,Common Stock,ARCHOS,Information Technology,Technology Hardware- Storage &,ARCHOS,PA,France,Equity
+229,FR0010353888,EUR,FP,#N/A Field Not Applicable,None,ALMDG,Common Stock,MGI DIGITAL GRAPHIC TECHNOLO,Information Technology,Technology Hardware- Storage &,MGI DIGITAL GRAP,PA,France,Equity
+230,FR0013447729,EUR,FP,#N/A Field Not Applicable,Irreg,VRLA,Common Stock,VERALLIA,Materials,Containers & Packaging,VERALLIA,PA,France,Equity
+231,FR0013467123,EUR,FP,#N/A Field Not Applicable,None,ALSAF,Common Stock,SAFE ORTHOPAEDICS SA,Health Care,Health Care Equipment & Suppli,SAFE ORTHOPAEDIC,PA,France,Equity
+232,FR0000063935,EUR,FP,#N/A Field Not Applicable,Annual,BON,Common Stock,BONDUELLE SCA,Consumer Staples,Food Products,BONDUELLE SCA,PA,France,Equity
+233,NL0000852564,EUR,NA,#N/A Field Not Applicable,Annual,AALB,Common Stock,AALBERTS NV,Industrials,Machinery,AALBERTS NV,AS,The Netherlands,Equity
+234,NL0012969182,EUR,NA,#N/A Field Not Applicable,None,ADYEN,Common Stock,ADYEN NV,Information Technology,IT Services,ADYEN NV,AS,The Netherlands,Equity
+235,NL0000303709,EUR,NA,#N/A Field Not Applicable,Semi-Anl,AGN,Common Stock,AEGON NV,Financials,Insurance,AEGON NV,AS,The Netherlands,Equity
+236,NL0011794037,EUR,NA,#N/A Field Not Applicable,Semi-Anl,AD,Common Stock,KONINKLIJKE AHOLD DELHAIZE N,Consumer Staples,Food & Staples Retailing,KONINKLIJKE AHOL,AS,The Netherlands,Equity
+237,NL0013267909,EUR,NA,#N/A Field Not Applicable,Semi-Anl,AKZA,Common Stock,AKZO NOBEL N.V.,Materials,Chemicals,AKZO NOBEL,AS,The Netherlands,Equity
+238,NL0011333760,EUR,NA,#N/A Field Not Applicable,None,ATCB,Common Stock,ALTICE EUROPE NV - B,Communication Services,Diversified Telecommunication,ALTICE EUROPE -B,AS,The Netherlands,Equity
+239,LU0569974404,EUR,NA,#N/A Field Not Applicable,Quarter,APAM,Common Stock,APERAM,Materials,Metals & Mining,APERAM,AS,The Netherlands,Equity
+240,NL0006237562,EUR,NA,#N/A Field Not Applicable,Annual,ARCAD,Common Stock,ARCADIS NV,Industrials,Construction & Engineering,ARCADIS NV,AS,The Netherlands,Equity
+241,LU1598757687,EUR,NA,#N/A Field Not Applicable,Annual,MT,Common Stock,ARCELORMITTAL,Materials,Metals & Mining,ARCELORMITTAL,AS,The Netherlands,Equity
+242,NL0000334118,EUR,NA,#N/A Field Not Applicable,Irreg,ASM,Common Stock,ASM INTERNATIONAL NV,Information Technology,Semiconductors & Semiconductor,ASM INTL NV,AS,The Netherlands,Equity
+243,NL0010273215,EUR,NA,#N/A Field Not Applicable,Semi-Anl,ASML,Common Stock,ASML HOLDING NV,Information Technology,Semiconductors & Semiconductor,ASML HOLDING NV,AS,The Netherlands,Equity
+244,NL0011872650,EUR,NA,#N/A Field Not Applicable,None,BFIT,Common Stock,BASIC-FIT NV,Consumer Discretionary,Hotels- Restaurants & Leisure,BASIC-FIT NV,AS,The Netherlands,Equity
+245,NL0012866412,EUR,NA,#N/A Field Not Applicable,Annual,BESI,Common Stock,BE SEMICONDUCTOR INDUSTRIES,Information Technology,Semiconductors & Semiconductor,BE SEMICONDUCTOR,AS,The Netherlands,Equity
+246,NL0000852580,EUR,NA,#N/A Field Not Applicable,Annual,BOKA,Common Stock,BOSKALIS WESTMINSTER,Industrials,Construction & Engineering,BOSKALIS WESTMIN,AS,The Netherlands,Equity
+247,NL0010583399,EUR,NA,#N/A Field Not Applicable,Annual,CRBN,Common Stock,CORBION NV,Materials,Chemicals,CORBION NV,AS,The Netherlands,Equity
+248,NL0000009827,EUR,NA,#N/A Field Not Applicable,Semi-Anl,DSM,Common Stock,KONINKLIJKE DSM NV,Materials,Chemicals,DSM (KONIN),AS,The Netherlands,Equity
+249,BE0003874915,EUR,BB,#N/A Field Not Applicable,Annual,FAGR,Common Stock,FAGRON,Health Care,Health Care Providers & Servic,FAGRON,BR,Belgium,Equity
+250,NL0011585146,EUR,IM,#N/A Field Not Applicable,Annual,RACE,Common Stock,FERRARI NV,Consumer Discretionary,Automobiles,FERRARI NV,MI,Italy,Equity
+251,NL0011279492,EUR,NA,#N/A Field Not Applicable,Semi-Anl,FLOW,Common Stock,FLOW TRADERS,Financials,Capital Markets,FLOW TRADERS,AS,The Netherlands,Equity
+252,BE0003818359,EUR,NA,#N/A Field Not Applicable,None,GLPG,Common Stock,GALAPAGOS NV,Health Care,Biotechnology,GALAPAGOS NV,AS,The Netherlands,Equity
+253,NL0000400653,EUR,NA,#N/A Field Not Applicable,Annual,GTO,Common Stock,GEMALTO,Information Technology,Software,GEMALTO,AS,The Netherlands,Equity
+254,NL0010937066,EUR,NA,#N/A Field Not Applicable,Annual,GVNV,Common Stock,GRANDVISION NV,Consumer Discretionary,Specialty Retail,GRANDVISION,AS,The Netherlands,Equity
+255,NL0000009165,EUR,NA,#N/A Field Not Applicable,Semi-Anl,HEIA,Common Stock,HEINEKEN NV,Consumer Staples,Beverages,HEINEKEN NV,AS,The Netherlands,Equity
+256,NL0010801007,EUR,NA,#N/A Field Not Applicable,Annual,IMCD,Common Stock,IMCD NV,Industrials,Trading Companies & Distributo,IMCD NV,AS,The Netherlands,Equity
+257,NL0011821202,EUR,NA,#N/A Field Not Applicable,Semi-Anl,INGA,Common Stock,ING GROEP NV,Financials,Banks,ING GROEP NV,AS,The Netherlands,Equity
+258,NL0000009082,EUR,NA,#N/A Field Not Applicable,Semi-Anl,KPN,Common Stock,KONINKLIJKE KPN NV,Communication Services,Diversified Telecommunication,KPN (KONIN) NV,AS,The Netherlands,Equity
+259,NL0010773842,EUR,NA,#N/A Field Not Applicable,Semi-Anl,NN,Common Stock,NN GROUP NV,Financials,Insurance,NN GROUP,AS,The Netherlands,Equity
+260,NL0010558797,EUR,NA,#N/A Field Not Applicable,None,OCI,Common Stock,OCI NV,Materials,Chemicals,OCI NV,AS,The Netherlands,Equity
+261,NL0000009322,EUR,NA,#N/A Field Not Applicable,None,INPHI,Common Stock,PHILIPS ELECTRONICS NV,Health Care,Health Care Equipment & Suppli,PHILIPS ELECTRON,AS,The Netherlands,Equity
+262,NL0009739416,EUR,NA,#N/A Field Not Applicable,Semi-Anl,PNL,Common Stock,POSTNL NV,Industrials,Air Freight & Logistics,POSTNL NV,AS,The Netherlands,Equity
+263,NL0013654783,EUR,NA,#N/A Field Not Applicable,None,PRX,Common Stock,PROSUS NV,Consumer Discretionary,Internet & Direct Marketing Re,PROSUS NV,AS,The Netherlands,Equity
+264,NL0000379121,EUR,NA,#N/A Field Not Applicable,Annual,RAND,Common Stock,RANDSTAD NV,Industrials,Professional Services,RANDSTAD NV,AS,The Netherlands,Equity
+265,NL0000360618,EUR,NA,#N/A Field Not Applicable,Annual,SBMO,Common Stock,SBM OFFSHORE NV,Energy,Energy Equipment & Services,SBM OFFSHORE NV,AS,The Netherlands,Equity
+266,GB00B03MLX29,EUR,NA,#N/A Field Not Applicable,Quarter,RDSA,Common Stock,ROYAL DUTCH SHELL PLC-A SHS,Energy,Oil- Gas & Consumable Fuels,ROYAL DUTCH SH-A,AS,The Netherlands,Equity
+267,NL0011821392,EUR,NA,#N/A Field Not Applicable,Annual,LIGHT,Common Stock,SIGNIFY NV,Industrials,Electrical Equipment,SIGNIFY NV,AS,The Netherlands,Equity
+268,NL0000817179,EUR,NA,#N/A Field Not Applicable,Semi-Anl,SLIGR,Common Stock,SLIGRO FOOD GROUP NV,Consumer Staples,Food & Staples Retailing,SLIGRO FOOD GROU,AS,The Netherlands,Equity
+269,NL0012015705,EUR,NA,#N/A Field Not Applicable,None,TKWY,Common Stock,JUST EAT TAKEAWAY,Consumer Discretionary,Internet & Direct Marketing Re,JUST EAT TAKEAWA,AS,The Netherlands,Equity
+270,NL0013332471,EUR,NA,#N/A Field Not Applicable,None,TOM2,Common Stock,TOMTOM NV,Consumer Discretionary,Household Durables,TOMTOM NV,AS,The Netherlands,Equity
+271,NL0009432491,EUR,NA,#N/A Field Not Applicable,Annual,VPK,Common Stock,VOPAK,Energy,Oil- Gas & Consumable Fuels,VOPAK,AS,The Netherlands,Equity
+272,NL0000395903,EUR,NA,#N/A Field Not Applicable,Semi-Anl,WKL,Common Stock,WOLTERS KLUWER,Industrials,Professional Services,WOLTERS KLUWER,AS,The Netherlands,Equity
+273,NL0009432491,EUR,NA,#N/A Field Not Applicable,Annual,VPK,Common Stock,VOPAK,Energy,Oil- Gas & Consumable Fuels,VOPAK,AS,The Netherlands,Equity
+274,NL0000395903,EUR,NA,#N/A Field Not Applicable,Semi-Anl,WKL,Common Stock,WOLTERS KLUWER,Industrials,Professional Services,WOLTERS KLUWER,AS,The Netherlands,Equity
+275,IT0001233417,EUR,IM,#N/A Field Not Applicable,Annual,A2A,Common Stock,A2A SPA,Utilities,Multi-Utilities,A2A SPA,MI,Italy,Equity
+276,IT0004056880,EUR,IM,#N/A Field Not Applicable,Annual,AMP,Common Stock,AMPLIFON SPA,Health Care,Health Care Providers & Servic,AMPLIFON SPA,MI,Italy,Equity
+277,IT0003506190,EUR,IM,#N/A Field Not Applicable,Irreg,ATL,Common Stock,ATLANTIA SPA,Industrials,Transportation Infrastructure,ATLANTIA SPA,MI,Italy,Equity
+278,IT0003261697,EUR,IM,#N/A Field Not Applicable,Annual,AZM,Common Stock,AZIMUT HOLDING SPA,Financials,Capital Markets,AZIMUT HOLDING,MI,Italy,Equity
+279,IT0001031084,EUR,IM,#N/A Field Not Applicable,Semi-Anl,BGN,Common Stock,BANCA GENERALI SPA,Financials,Capital Markets,BANCA GENERALI S,MI,Italy,Equity
+280,IT0005218380,EUR,IM,#N/A Field Not Applicable,Irreg,BAMI,Common Stock,BANCO BPM SPA,Financials,Banks,BANCO BPM SPA,MI,Italy,Equity
+281,IT0000066123,EUR,IM,#N/A Field Not Applicable,Annual,BPE,Common Stock,BPER BANCA,Financials,Banks,BPER BANCA,MI,Italy,Equity
+282,IT0005252728,EUR,IM,#N/A Field Not Applicable,Annual,BRE,Common Stock,BREMBO SPA,Consumer Discretionary,Auto Components,BREMBO SPA,MI,Italy,Equity
+283,IT0001347308,EUR,IM,#N/A Field Not Applicable,Annual,BZU,Common Stock,BUZZI UNICEM SPA,Materials,Construction Materials,BUZZI UNICEM SPA,MI,Italy,Equity
+284,NL0010545661,EUR,IM,#N/A Field Not Applicable,Annual,CNHI,Common Stock,CNH INDUSTRIAL NV,Industrials,Machinery,CNH INDUSTRIAL N,MI,Italy,Equity
+285,IT0003492391,EUR,IM,#N/A Field Not Applicable,Annual,DIA,Common Stock,DIASORIN SPA,Health Care,Health Care Equipment & Suppli,DIASORIN SPA,MI,Italy,Equity
+286,IT0003128367,EUR,IM,#N/A Field Not Applicable,Semi-Anl,ENEL,Common Stock,ENEL SPA,Utilities,Electric Utilities,ENEL SPA,MI,Italy,Equity
+287,IT0003132476,EUR,IM,#N/A Field Not Applicable,Semi-Anl,ENI,Common Stock,ENI SPA,Energy,Oil- Gas & Consumable Fuels,ENI SPA,MI,Italy,Equity
+288,NL0012059018,EUR,IM,#N/A Field Not Applicable,Annual,EXO,Common Stock,EXOR NV,Financials,Diversified Financial Services,EXOR NV,MI,Italy,Equity
+289,NL0011585146,EUR,IM,#N/A Field Not Applicable,Annual,RACE,Common Stock,FERRARI NV,Consumer Discretionary,Automobiles,FERRARI NV,MI,Italy,Equity
+290,IT0000072170,EUR,IM,#N/A Field Not Applicable,Annual,FBK,Common Stock,FINECOBANK SPA,Financials,Banks,FINECOBANK SPA,MI,Italy,Equity
+291,IT0000062072,EUR,IM,#N/A Field Not Applicable,Annual,G,Common Stock,ASSICURAZIONI GENERALI,Financials,Insurance,GENERALI ASSIC,MI,Italy,Equity
+292,IT0000072618,EUR,IM,#N/A Field Not Applicable,Annual,ISP,Common Stock,INTESA SANPAOLO,Financials,Banks,INTESA SANPAOLO,MI,Italy,Equity
+293,IT0005211237,EUR,IM,#N/A Field Not Applicable,Annual,IG,Common Stock,ITALGAS SPA,Utilities,Gas Utilities,ITALGAS SPA,MI,Italy,Equity
+294,IT0000336518,EUR,IM,#N/A Field Not Applicable,Irreg,JUVE,Common Stock,JUVENTUS FOOTBALL CLUB SPA,Communication Services,Entertainment,JUVENTUS FOOTBAL,MI,Italy,Equity
+295,IT0003856405,EUR,IM,#N/A Field Not Applicable,Annual,LDO,Common Stock,LEONARDO SPA,Industrials,Aerospace & Defense,LEONARDO SPA,MI,Italy,Equity
+296,IT0000062957,EUR,IM,#N/A Field Not Applicable,Annual,MB,Common Stock,MEDIOBANCA SPA,Financials,Banks,MEDIOBANCA,MI,Italy,Equity
+297,IT0004965148,EUR,IM,#N/A Field Not Applicable,Annual,MONC,Common Stock,MONCLER SPA,Consumer Discretionary,Textiles- Apparel & Luxury Goo,MONCLER SPA,MI,Italy,Equity
+298,IT0005278236,EUR,IM,#N/A Field Not Applicable,Annual,PIRC,Common Stock,PIRELLI & C SPA,Consumer Discretionary,Auto Components,PIRELLI E C SPA,MI,Italy,Equity
+299,IT0003796171,EUR,IM,#N/A Field Not Applicable,Semi-Anl,PST,Common Stock,POSTE ITALIANE SPA,Financials,Insurance,POSTE ITALIANE,MI,Italy,Equity
+300,IT0004176001,EUR,IM,#N/A Field Not Applicable,Annual,PRY,Common Stock,PRYSMIAN SPA,Industrials,Electrical Equipment,PRYSMIAN SPA,MI,Italy,Equity
+301,IT0003828271,EUR,IM,#N/A Field Not Applicable,Semi-Anl,REC,Common Stock,RECORDATI INDUSTRIA CHIMICA,Health Care,Pharmaceuticals,RECORDATI SPA,MI,Italy,Equity
+302,IT0005252140,EUR,IM,#N/A Field Not Applicable,Irreg,SPM,Common Stock,SAIPEM SPA,Energy,Energy Equipment & Services,SAIPEM SPA,MI,Italy,Equity
+303,IT0004712375,EUR,IM,#N/A Field Not Applicable,Annual,SFER,Common Stock,SALVATORE FERRAGAMO SPA,Consumer Discretionary,Textiles- Apparel & Luxury Goo,FERRAGAMO SPA,MI,Italy,Equity
+304,IT0003153415,EUR,IM,#N/A Field Not Applicable,Semi-Anl,SRG,Common Stock,SNAM SPA,Utilities,Gas Utilities,SNAM SPA,MI,Italy,Equity
+305,NL0000226223,EUR,FP,#N/A Field Not Applicable,Quarter,STM,Common Stock,STMICROELECTRONICS NV,Information Technology,Semiconductors & Semiconductor,STMICROELECTRONI,PA,France,Equity
+306,IT0003497168,EUR,IM,#N/A Field Not Applicable,Irreg,TIT,Common Stock,TELECOM ITALIA SPA,Communication Services,Diversified Telecommunication,TELECOM ITALIA S,MI,Italy,Equity
+307,LU0156801721,EUR,IM,#N/A Field Not Applicable,Semi-Anl,TEN,Common Stock,TENARIS SA,Energy,Energy Equipment & Services,TENARIS SA,MI,Italy,Equity
+308,IT0003242622,EUR,IM,#N/A Field Not Applicable,Semi-Anl,TRN,Common Stock,TERNA SPA,Utilities,Electric Utilities,TERNA SPA,MI,Italy,Equity
+309,IT0003487029,EUR,IM,#N/A Field Not Applicable,Annual,UBI,Common Stock,UBI BANCA SPA,Financials,Banks,UBI BANCA SPA,MI,Italy,Equity
+310,IT0005239360,EUR,IM,#N/A Field Not Applicable,Annual,UCG,Common Stock,UNICREDIT SPA,Financials,Banks,UNICREDIT SPA,MI,Italy,Equity
+311,IT0004810054,EUR,IM,#N/A Field Not Applicable,Annual,UNI,Common Stock,UNIPOL GRUPPO SPA,Financials,Insurance,UNIPOL GRUPPO SP,MI,Italy,Equity
+312,IT0004827447,EUR,IM,#N/A Field Not Applicable,Annual,US,Common Stock,UNIPOLSAI ASSICURAZIONI SPA,Financials,Insurance,UNIPOLSAI SPA,MI,Italy,Equity
+313,LU1598757687,EUR,NA,#N/A Field Not Applicable,Annual,MT,Common Stock,ARCELORMITTAL,Materials,Metals & Mining,ARCELORMITTAL,AS,The Netherlands,Equity
+314,PTBCP0AM0015,EUR,PL,#N/A Field Not Applicable,Irreg,BCP,Common Stock,BANCO COMERCIAL PORTUGUES-R,Financials,Banks,BANCO COM PORT-R,LS,Portugal,Equity
+315,PTGAL0AM0009,EUR,PL,#N/A Field Not Applicable,Irreg,GALP,Common Stock,GALP ENERGIA SGPS SA,Energy,Oil- Gas & Consumable Fuels,GALP ENERGIA,LS,Portugal,Equity
+316,PTEDP0AM0009,EUR,PL,#N/A Field Not Applicable,Annual,EDP,Common Stock,EDP-ENERGIAS DE PORTUGAL SA,Utilities,Electric Utilities,EDP,LS,Portugal,Equity
+317,PTALT0AE0002,EUR,PL,#N/A Field Not Applicable,Annual,ALTR,Common Stock,ALTRI SGPS SA,Materials,Paper & Forest Products,ALTRI SGPS SA,LS,Portugal,Equity
+318,PTJMT0AE0001,EUR,PL,#N/A Field Not Applicable,Annual,JMT,Common Stock,JERONIMO MARTINS,Consumer Staples,Food & Staples Retailing,JERONIMO MARTINS,LS,Portugal,Equity
+319,PTZON0AM0006,EUR,PL,#N/A Field Not Applicable,Annual,NOS,Common Stock,NOS SGPS,Communication Services,Diversified Telecommunication,NOS SGPS,LS,Portugal,Equity
+320,PTPTI0AM0006,EUR,PL,#N/A Field Not Applicable,Annual,NVG,Common Stock,NAVIGATOR CO SA/THE,Materials,Paper & Forest Products,NAVIGATOR CO SA/,LS,Portugal,Equity
+321,PTREL0AM0008,EUR,PL,#N/A Field Not Applicable,Annual,RENE,Common Stock,REDES ENERGETICAS NACIONAIS,Utilities,Multi-Utilities,REN-REDE ENERGET,LS,Portugal,Equity
+322,PTMEN0AE0005,EUR,PL,#N/A Field Not Applicable,Annual,EGL,Common Stock,MOTA ENGIL SGPS SA,Industrials,Construction & Engineering,MOTA ENGIL SGPS,LS,Portugal,Equity
+323,PTSON0AM0001,EUR,PL,#N/A Field Not Applicable,Annual,SON,Common Stock,SONAE,Consumer Staples,Food & Staples Retailing,SONAE,LS,Portugal,Equity
+324,PTCTT0AM0001,EUR,PL,#N/A Field Not Applicable,Annual,CTT,Common Stock,CTT-CORREIOS DE PORTUGAL,Industrials,Air Freight & Logistics,CTT-CORREIOS DE,LS,Portugal,Equity
+325,ES0127797019,EUR,PL,#N/A Field Not Applicable,Annual,EDPR,Common Stock,EDP RENOVAVEIS SA,Utilities,Independent Power and Renewabl,EDP RENOVAVEIS S,LS,Portugal,Equity
+326,PTSEM0AM0004,EUR,PL,#N/A Field Not Applicable,Annual,SEM,Common Stock,SEMAPA-SOCIEDADE DE INVESTIM,Materials,Paper & Forest Products,SEMAPA,LS,Portugal,Equity
+327,PTPTC0AM0009,EUR,PL,#N/A Field Not Applicable,Annual,PHR,Common Stock,PHAROL SGPS SA,Communication Services,Diversified Telecommunication,PHAROL SGPS SA,LS,Portugal,Equity
+328,PTSNP0AE0008,EUR,PL,#N/A Field Not Applicable,Annual,SONC,Common Stock,SONAE CAPITAL SGPS SA,Industrials,Industrial Conglomerates,SONAE CAPITAL SG,LS,Portugal,Equity
+329,PTCOR0AE0006,EUR,PL,#N/A Field Not Applicable,Annual,COR,Common Stock,CORTICEIRA AMORIM SA,Materials,Containers & Packaging,CORTICEIRA AMORI,LS,Portugal,Equity
+330,PTIBS0AM0008,EUR,PL,#N/A Field Not Applicable,Annual,IBS,Common Stock,IBERSOL SGPS SA,Consumer Discretionary,Hotels- Restaurants & Leisure,IBERSOL SGPS SA,LS,Portugal,Equity
+331,PTTD10AM0000,EUR,PL,#N/A Field Not Applicable,Annual,TDSA,Common Stock,TEIXEIRA DUARTE SA,Industrials,Construction & Engineering,TEIXEIRA DUARTE,LS,Portugal,Equity
+332,PTNBA0AM0006,EUR,PL,#N/A Field Not Applicable,Irreg,NBA,Common Stock,NOVABASE SGPS SA,Information Technology,IT Services,NOVABASE SGPS SA,LS,Portugal,Equity
+333,PTIPR0AM0000,EUR,PL,#N/A Field Not Applicable,None,IPR,Common Stock,IMPRESA SGPS SA,Communication Services,Media,IMPRESA SGPS SA,LS,Portugal,Equity
+334,PTCFN0AE0003,EUR,PL,#N/A Field Not Applicable,Annual,CFN,Common Stock,COFINA SGPS SA,Communication Services,Media,COFINA SGPS SA,LS,Portugal,Equity
+335,PTFRV0AE0004,EUR,PL,#N/A Field Not Applicable,Annual,RAM,Common Stock,RAMADA INVESTIMENTOS E INDUS,Materials,Metals & Mining,RAMADA INVESTIME,LS,Portugal,Equity
+336,PTS3P0AM0025,EUR,PL,#N/A Field Not Applicable,Annual,SONI,Common Stock,SONAE INDUSTRIA SGPS SA,Materials,Paper & Forest Products,SONAE INDUSTRIA,LS,Portugal,Equity
+337,PTSLB0AM0010,EUR,PL,#N/A Field Not Applicable,None,SLBEN,Common Stock,SPORT LISBOA E BENFICA-FUT S,Communication Services,Entertainment,BENFICA,LS,Portugal,Equity
+338,PTMFR0AM0003,EUR,PL,#N/A Field Not Applicable,Irreg,MAR,Common Stock,MARTIFER SGPS SA,Industrials,Construction & Engineering,MARTIFER SGPS SA,LS,Portugal,Equity
+339,PTSNC0AM0006,EUR,PL,#N/A Field Not Applicable,Annual,SNC,Common Stock,SONAECOM SGPS SA,Communication Services,Wireless Telecommunication Ser,SONAECOM SGPS SA,LS,Portugal,Equity
+340,NL0012015705,EUR,NA,#N/A Field Not Applicable,None,TKWY,Common Stock,JUST EAT TAKEAWAY,Consumer Discretionary,Internet & Direct Marketing Re,JUST EAT TAKEAWA,AS,The Netherlands,Equity
+341,GB00B03MLX29,EUR,NA,#N/A Field Not Applicable,Quarter,RDSA,Common Stock,ROYAL DUTCH SHELL PLC-A SHS,Energy,Oil- Gas & Consumable Fuels,ROYAL DUTCH SH-A,AS,The Netherlands,Equity
+342,FR0000120107,EUR,FP,#N/A Field Not Applicable,Annual,SAVE,Common Stock,SAVENCIA SA,Consumer Staples,Food Products,SAVENCIA SA,PA,France,Equity
+343,IE00BKP5L409,EUR,FP,Bloomberg Barclays US MBS;;IMBE,ETF,iShares US Mortgage Backed Securities UCITS ETF EUR Hedged (Acc);;;iShares US Mortgage Backed Securities UCITS ETF EUR Hedged (Acc),PA,France,Fixed Income ETF
+344,IE00BYPC1H27,USD,FP,BBG Barclays CH Treasury + PBI,Distribution,CNYB,ETF,iShares China CNY Bond UCITS ETF - (USD) Dist;;;iShares China CNY Bond UCITS ETF - (USD) Dist,PA,France,Fixed Income
+345,IE00BJK55C48,EUR,FP,Bbg MSCI Euro Corp HY BB+ SRI;;EHYA,ETF,iShares EUR High Yield Corp Bond ESG UCITS ETF EUR (Acc);;;iShares EUR High Yield Corp Bond ESG UCITS ETF EUR (Acc),PA,France,Fixed Income
+346,LU2008761053,EUR,FP,BBG MSCI € CorpSRI ExFossil3-5;;SRIC5,ETF,BNP PARIBAS EASY EUR CORP BOND SRI FOSSIL FREE 3-5Y UCITS ETF DISTRIBUTION;;;BNP PARIBAS EASY EUR CORP BOND SRI FOSSIL FREE 3-5Y UCITS ETF DISTRIBUTION,PA,France,Fixed Income
+347,IE00BKPSFD61,USD,FP,BbgBar China Tr+Pol Bk TR Ind$,Capitalisation,CYBA,ETF,iShares China CNY Bond UCITS ETF USD (Acc);;;iShares China CNY Bond UCITS ETF USD (Acc),PA,France,Fixed Income
+348,IE00BKRWN659,USD,FP,Wrld Broad IG Multi Dv Bank Bd,Capitalisation,DDBB,ETF,iShares $ Development Bank Bonds UCITS ETF USD (Acc);;;iShares $ Development Bank Bonds UCITS ETF USD (Acc),PA,France,Fixed Income
+349,IE00BK7Y2P34,USD,FP,Citigroup G7 Index,Capitalisation,SGLU,ETF,iShares Global Gvt Bond UCITS ETF USD Hedged (Acc);;;iShares Global Gvt Bond UCITS ETF USD Hedged (Acc),PA,France,Fixed Income
+350,NL0009690247,EUR,FP,Markit iBoxx EUR Liq Corp;;TCBT,ETF,VanEck Vectors iBoxx EUR Corporates UCITS ETF;;;VanEck Vectors iBoxx EUR Corporates UCITS ETF,PA,France,Fixed Income
+351,IE00BKF09C98,USD,FP,BBMSCI U CrpHY Sust BB+ SRI Bd,Bi-Annually,DHYD,ETF,iShares $ High Yield Corp Bond ESG UCITS ETF USD (Dist);;;iShares $ High Yield Corp Bond ESG UCITS ETF USD (Dist),PA,France,Fixed Income
+352,IE00BKT6FT27,EUR,FP,FTSE G7 Government Bond;;IGLE,ETF,iShares Global Govt Bond UCITS ETF EUR Hedged (Dist);;;iShares Global Govt Bond UCITS ETF EUR Hedged (Dist),PA,France,Fixed Income
+353,NL0010273801,EUR,FP,iBoxx Gov AAA-AA 1-5 Index;;TAT,ETF,VanEck Vectors iBoxx EUR Sovereign Capped AAA-AA 1-5 UCITS ETF;;;VanEck Vectors iBoxx EUR Sovereign Capped AAA-AA 1-5 UCITS ETF,PA,France,Fixed Income
+354,IE00BKT6VQ12,EUR,FP,Bbg China Treas + Policy Bank;;CYBE,ETF,iShares China CNY Bond UCITS ETF EUR Hedged (Acc);;;iShares China CNY Bond UCITS ETF EUR Hedged (Acc),PA,France,Fixed Income
+355,FR0010869578,EUR,FP,Solactive Bund Daily (-2x) Inv;;DSB,ETF,Lyxor Bund Daily (-2x) Inverse UCITS ETF - Acc;;;Lyxor Bund Daily (-2x) Inverse UCITS ETF - Acc,PA,France,Fixed Income
+356,IE00BZ163H91,EUR,FP,Euro Aggregate: Treasury;;VETY,ETF,VANGUARD EUR EUROZONE GOVERNMENT BOND UCITS ETF;;;VANGUARD EUR EUROZONE GOVERNMENT BOND UCITS ETF,PA,France,Fixed Income
+357,LU1681041031,EUR,FP,iBoxx MSCI ESG USD FRN IG EURH;;AFLE,ETF,AMUNDI FLOATING RATE USD CORPORATE ESG UCITS ETF DR - USD (C);;;AMUNDI FLOATING RATE USD CORPORATE ESG UCITS ETF DR - USD (C),PA,France,Fixed Income
+358,DE000A3GSUD3,EUR,FP,MVIS CryptoCompare Solana Ind;;VSOL,ETN,VanEck Vectors Solana ETN;;;VanEck Vectors Solana ETN,PA,France,Fixed Income
+359,LU1390062245,EUR,FP,Markit iBoxx EUR Breakeven Inf;;INFL,ETF,Lyxor EUR 2-10Y Inflation Expectations UCITS ETF - Acc;;;Lyxor EUR 2-10Y Inflation Expectations UCITS ETF - Acc,PA,France,Fixed Income
+360,IE00BKKKWJ26,USD,FP,BB MSCI US Crp Sustainable SRI,Capitalisation,SUOA,ETF,iShares $ Corp Bond ESG UCITS ETF USD (Acc);;;iShares $ Corp Bond ESG UCITS ETF USD (Acc),PA,France,Fixed Income
+361,LU1437018168,EUR,FP,BBG BARCLAYS MSCI EUR Corp SRI;;ECRP,ETF,AMUNDI INDEX EURO CORPORATE SRIUCITS ETF DR (C);;;AMUNDI INDEX EURO CORPORATE SRIUCITS ETF DR (C),PA,France,Fixed Income
+362,LU1859444769,EUR,FP,BBG MSCI € CorpSRI SusExFossil;;SRIC,ETF,BNP PARIBAS EASY EURO CORP BOND SRI FOSSIL FREE;;;BNP PARIBAS EASY EURO CORP BOND SRI FOSSIL FREE,PA,France,Fixed Income
+363,DE000A3GSUD3,EUR,FP,MVIS CryptoCompare Solana Ind;;;ETN,VanEck Vectors Solana ETN;;;VanEck Vectors Solana ETN,PA,France,Fixed Income
+364,LU1778293313,USD,FP,Bloomberg Brclys Glob Agg 500M;;GAHU,ETF,AMDI IDX BARCL AGG 500M UCITS ETF DR USD HEDG;;;AMDI IDX BARCL AGG 500M UCITS ETF DR USD HEDG,PA,France,Fixed Income
+365,IE00BF553838,EUR,FP,JP Morgan ESG EMBI Glob Divers;;EMSA,ETF,iShares J.P. Morgan ESG EM Bond UCITS ETF USD (Acc);;;iShares J.P. Morgan ESG EM Bond UCITS ETF USD (Acc),PA,France,Fixed Income
+366,NL0009690254,EUR,FP,Markit iBoxx EUR LiqSovDiv1-10;;TGBT,ETF,VanEck Vectors iBoxx EUR Sovereign Diversified 1-10 UCITS ETF;;;VanEck Vectors iBoxx EUR Sovereign Diversified 1-10 UCITS ETF,PA,France,Fixed Income
+367,IE0032523478,EUR,FP,Markit iBoxx EUR Liquid LrgCap;;IBCX,ETF,iShares EUR Corp Bond Large Cap UCITS ETF EUR (Dist);;;iShares EUR Corp Bond Large Cap UCITS ETF EUR (Dist),PA,France,Fixed Income
+368,DE000A28M8D0,EUR,FP,MVIS Bitcoin Index;;;ETN,VanEck Vectors Bitcoin ETN;;;VanEck Vectors Bitcoin ETN,PA,France,Fixed Income
+369,LU1481202692,EUR,FP,Barclays Euro Agg Treasury;;JBEM,ETF,BNP Paribas Easy Bloomberg Barclays Euro Aggregate Treasury;;;BNP Paribas Easy Bloomberg Barclays Euro Aggregate Treasury,PA,France,Fixed Income
+370,IE00B3F81R35,EUR,FP,Barclays Euro Corporate Bond;;IEAC,ETF,iShares Core EUR Corp Bond UCITS ETF EUR (Dist);;;iShares Core EUR Corp Bond UCITS ETF EUR (Dist),PA,France,Fixed Income
+371,IE00B6X2VY59,EUR,FP,Bbg Eur Corp Interest rate Hd;;IRCP,ETF,iShares EUR Corp Bond Interest Rate Hedged UCITS ETF EUR (Dist);;;iShares EUR Corp Bond Interest Rate Hedged UCITS ETF EUR (Dist),PA,France,Fixed Income
+372,LU1547515137,EUR,FP,JPM ESG EMBI Global Div (TR),Capitalisation,EMBH,ETF,BNP Paribas Easy JPM ESG EMBI Global Diversified Composite UCITS ETF H EUR Cap;;;BNP Paribas Easy JPM ESG EMBI Global Diversified Composite UCITS ETF H EUR Cap,PA,France,Fixed Income
+373,IE00B0M62X26,EUR,FP,Barclays Euro Gov Inflation;;IBCI,ETF,iShares Euro Inflation Linked Gov Bond UCITS ETF;;;iShares Euro Inflation Linked Gov Bond UCITS ETF,PA,France,Fixed Income
+374,LU1681040819,USD,FP,Markit iBoxx $ Treasuries 1-3Y;;US1,ETF,AMUNDI US TREASURY 1-3 UCITSETF DR  USD (C);;;AMUNDI US TREASURY 1-3 UCITSETF DR  USD (C),PA,France,Fixed Income
+375,LU1681040652,USD,FP,Markit iBoxx $Treasuries 7-10Y;;US7,ETF,AMUNDI US TREASURY 7-10 UCITSETF DR  USD (C);;;AMUNDI US TREASURY 7-10 UCITSETF DR  USD (C),PA,France,Fixed Income
+376,LU1563454310,EUR,FP,Solactive Green Bond EUR USD I;;CLIM,ETF,Lyxor Green Bond (DR) UCITS ETF - Acc;;;Lyxor Green Bond (DR) UCITS ETF - Acc,PA,France,Fixed Income
+377,IE00BKLC5874,EUR,FP,Bbg MSCI Euro Corp HY BB+ SRI;;EHYD,ETF,iShares EUR High Yield Corp Bond ESG UCITS ETF EUR (Dist);;;iShares EUR High Yield Corp Bond ESG UCITS ETF EUR (Dist),PA,France,Fixed Income
+378,LU1407890620,USD,FP,Bbg Barcl US Long Treasury Ind;;US10,ETF,Lyxor Core US Treasury 10+Y (DR) UCITS ETF;;;Lyxor Core US Treasury 10+Y (DR) UCITS ETF,PA,France,Fixed Income
+379,IE00BKS2X317,EUR,FP,.;;FSOV,ETF,First Trust Low Duration Global Government Bond UCITS ETF;;;First Trust Low Duration Global Government Bond UCITS ETF,PA,France,Fixed Income
+380,IE00B4WXJJ64,EUR,FP,Barclays Euro Treasury Bond;;IEGA,ETF,iShares Core EUR Govt Bond UCITS ETF EUR (Dist);;;iShares Core EUR Govt Bond UCITS ETF EUR (Dist),PA,France,Fixed Income
+381,LU1525418643,EUR,FP,Barclays Euro Corp BBB 1-5;;EBBB,ETF,AMUNDI INDEX BARCLAYS EURO CORP BBB 1-5 UCITS ETF DR;;;AMUNDI INDEX BARCLAYS EURO CORP BBB 1-5 UCITS ETF DR,PA,France,Fixed Income
+382,DE000A3GPSP7,EUR,FP,MVIS Ethereum Index;;;ETN,VanEck Vectors Ethereum ETN;;;VanEck Vectors Ethereum ETN,PA,France,Fixed Income
+383,IE00BCRY6003,EUR,FP,iBoxx USD Liquid HY 0-5 Cap,Capitalisation,SDHY,ETF,iShares $ Short Duration High Yield Corporate Bond UCITS ETF,x1,x1,iShares $ Short Duration High Yield Corporate Bond UCITS ETF,PA,France,Fixed Income
+384,IE00BL0BMG90,USD,FP,FTSE AdvClmte RskAdj Wd Gov Bd,Bi-Annually,CGGD,ETF,iShares Global Govt Bond Climate UCITS ETF USD (Dist),x1,x1,iShares Global Govt Bond Climate UCITS ETF USD (Dist),PA,France,Fixed Income
+385,FR0010510800,EUR,FP,EuroMTS Eonia Investable;;CSH,ETF,LYXOR EURO OVERNIGHT RETURN UCITS ETF;;;LYXOR EURO OVERNIGHT RETURN UCITS ETF,PA,France,Fixed Income
+386,LU2244387457,EUR,FP,JPM ESG EMU Govern 3-5Y (TR),Capitalisation,GEMU,ETF,BNP Paribas Easy JPM ESG EMU Government Bond IG 3-5Y UCITS ETF Cap;;;BNP Paribas Easy JPM ESG EMU Government Bond IG 3-5Y UCITS ETF Cap,PA,France,Fixed Income
+387,IE00BK95B138,USD,FP,ICE US Treasury Core Bond Ind,Bi-Annually,GOVT,ETF,iShares Treasury Bond UCITS ETF USD (Dist);;;iShares Treasury Bond UCITS ETF USD (Dist),PA,France,Fixed Income
+388,LU2182388236,EUR,FP,BBG Barc MSCI EUR Agg Sus SRI,Capitalisation,EGRI,ETF,AMUNDI INDEX EURO AGG SRI UCITS ETF DR - EUR (C);;;AMUNDI INDEX EURO AGG SRI UCITS ETF DR - EUR (C),PA,France,Fixed Income
+389,LU1681040900,USD,FP,iBoxx MSCI ESG USD FRN IG Corp;;AFLT,ETF,AMUNDI FLOATING RATE USD CORPORATE ESG UCITS ETF DR - USD (C);;;AMUNDI FLOATING RATE USD CORPORATE ESG UCITS ETF DR - USD (C),PA,France,Fixed Income
+390,LU1525418726,USD,FP,Global Corp ESG Sustainability;;UBBB,ETF,Amundi Global Corp SRI 1-5Y UCITS ETF DR (C);;;Amundi Global Corp SRI 1-5Y UCITS ETF DR (C),PA,France,Fixed Income
+391,LU1437018598,EUR,FP,JPM EMU GBI Investment Grade;;EGOV,ETF,AMUNDI INDEX J.P. MORGAN EMU GOVIES IG UCITS ETF DR;;;AMUNDI INDEX J.P. MORGAN EMU GOVIES IG UCITS ETF DR,PA,France,Fixed Income
+392,IE00B41RYL63,EUR,FP,BarCap Euro Aggregate;;EAGG,ETF,SPDR Barclays Euro Aggregate Bond UCITS ETF;;;SPDR Barclays Euro Aggregate Bond UCITS ETF,PA,France,Fixed Income
+393,IE00B3DKXQ41,EUR,FP,Barclays Euro Aggregate Bond;;IEAG,ETF,iShares EUR Aggregate Bond UCITS ETF EUR (Dist);;;iShares EUR Aggregate Bond UCITS ETF EUR (Dist),PA,France,Fixed Income
+394,IE00B3T9LM79,EUR,FP,BarCap Euro Corporate;;EUCO,ETF,SPDR Barclays Euro Corporate Bond UCITS ETF;;;SPDR Barclays Euro Corporate Bond UCITS ETF,PA,France,Fixed Income
+395,LU1650491282,EUR,FP,Bbg Bar € Gov Inf-Link Bd Ind;;MTI,ETF,Lyxor Core Euro Government Inflation-Linked Bond (DR) UCITS ETF - Acc;;;Lyxor Core Euro Government Inflation-Linked Bond (DR) UCITS ETF - Acc,PA,France,Fixed Income
+396,LU1681046691,EUR,FP,EuroMTS Highest-Rat Gov AllMa;;AM3A,ETF,AMUNDI GOVT BOND HIGHESTRATED EUROMTS INVESTMENTGRADE UCITS ETF DR  EUR (C);;;AMUNDI GOVT BOND HIGHESTRATED EUROMTS INVESTMENTGRADE UCITS ETF DR  EUR (C),PA,France,Fixed Income
+397,LU1190417599,EUR,FP,Eonia;;CSH2,ETF,Lyxor UCITS ETF Smart Cash C-EUR;;;Lyxor UCITS ETF Smart Cash C-EUR,PA,France,Fixed Income
+398,LU1681040736,USD,FP,Markit iBoxx $ Treasuries 3-7Y;;US3,ETF,AMUNDI US TREASURY 3-7 UCITSETF DR  USD (C);;;AMUNDI US TREASURY 3-7 UCITSETF DR  USD (C),PA,France,Fixed Income
+399,FR0010754135,EUR,FP,EuroMTS Investment 1-3;;C13,ETF,AMUNDI ETF GOVT BOND EUROMTS BROAD INVESTMENT GRADE 1-3 UCITS ETF DR;;;AMUNDI ETF GOVT BOND EUROMTS BROAD INVESTMENT GRADE 1-3 UCITS ETF DR,PA,France,Fixed Income
+400,LU2037748774,EUR,FP,BBG BARCLAYS MSCI EUR Corp ESG,Capitalisation,ECRP3,ETF,AMUNDI INDEX EURO CORPORATE SRI 0-3Y-UCITS ETF DR;;;AMUNDI INDEX EURO CORPORATE SRI 0-3Y-UCITS ETF DR,PA,France,Fixed Income
+401,IE00B1FZS913,EUR,FP,Barclays Euro Gov Bond 30Y;;IBGL,ETF,iShares EUR Govt Bond 15-30yr UCITS ETF EUR (Dist);;;iShares EUR Govt Bond 15-30yr UCITS ETF EUR (Dist),PA,France,Fixed Income
+402,FR0011023621,EUR,FP,Solactive BTP Daily (-2x) Inve;;BTPS,ETF,Lyxor Daily Double Short BTP UCITS ETF - Acc;;;Lyxor Daily Double Short BTP UCITS ETF - Acc,PA,France,Fixed Income
+403,DE000A28M8D0,EUR,FP,MVIS Bitcoin Index;;VBTC,ETN,VanEck Vectors Bitcoin ETN;;;VanEck Vectors Bitcoin ETN,PA,France,Fixed Income
+404,IE00BJK55B31,EUR,FP,Bbg MSCI US Corp HY BB+ SRI;;DHYE,ETF,iShares $ High Yield Corp Bond ESG UCITS ETF EUR (Acc);;;iShares $ High Yield Corp Bond ESG UCITS ETF EUR (Acc),PA,France,Fixed Income
+405,LU2356220926,EUR,FP,Solactive Euro Gov Green Bond,Capitalisation,ERTH,ETF,Lyxor Euro Government Green Bond (DR) UCITS ETF;;;Lyxor Euro Government Green Bond (DR) UCITS ETF,PA,France,Fixed Income
+406,LU1806495575,USD,FP,BBG BARCLAYS MSCI US Corp SRI;;UCRP,ETF,AMUNDI INDEX US CORP SRI UCITS ETF DR - USD (C);;;AMUNDI INDEX US CORP SRI UCITS ETF DR - USD (C),PA,France,Fixed Income
+407,LU1681040496,EUR,FP,iBoxx MSCI ESG EUR HY Corp TCA;;AHYE,ETF,AMUNDI EURO HIGH YIELD BOND ESG UCITS ETF DR -EUR (C);;;AMUNDI EURO HIGH YIELD BOND ESG UCITS ETF DR -EUR (C),PA,France,Fixed Income
+408,IE00BC7GZW19,EUR,FP,Bar 0-3Yr Euro Corp Bd Index;;SEUC,ETF,SPDR Bloomberg Barclays 0-3 Year Euro Corporate Bond UCITS ETF;;;SPDR Bloomberg Barclays 0-3 Year Euro Corporate Bond UCITS ETF,PA,France,Fixed Income
+409,LU1484799769,EUR,FP,BBG MSCI EUR Area Liq Corp Sus;;CBSE,ETF,UBS (Lux) Fund Solutions - Bloomberg MSCI Euro Are;;;UBS (Lux) Fund Solutions - Bloomberg MSCI Euro Are,PA,France,Fixed Income
+410,LU1390062831,EUR,FP,Markit iBoxx USD Breakeven 10Y;;INFU,ETF,Lyxor US$ 10Y Inflation Expectations UCITS ETF - Acc;;;Lyxor US$ 10Y Inflation Expectations UCITS ETF - Acc,PA,France,Fixed Income
+411,FR0013346681,EUR,FP,FTSE MTS EU Gov Bond IG,Capitalisation,OBLI,ETF,LYXOR PEA OBLIGATIONS D ETAT EURO UCITS ETF;;;LYXOR PEA OBLIGATIONS D ETAT EURO UCITS ETF,PA,France,Fixed Income
+412,LU1681046774,EUR,FP,FTSE MTS Lowest-Rated Eurozone;;X1G,ETF,AMUNDI GOVT BOND LOWESTRATED EUROMTS INVESTMENTGRADE UCITS ETF DR  EUR (C);;;AMUNDI GOVT BOND LOWESTRATED EUROMTS INVESTMENTGRADE UCITS ETF DR  EUR (C),PA,France,Fixed Income
+413,LU0721552973,EUR,FP,BBG US 7-10 Year Treasury Bond;;UEFI,ETF,UBS (Lux) Fund Solutions - Bloomberg US 1-3 Year T;;;UBS (Lux) Fund Solutions - Bloomberg US 1-3 Year T,PA,France,Fixed Income
+414,LU1547515053,USD,FP,JPM ESG EMBI Global Div (TR),Capitalisation,EMBI,ETF,BNP Paribas Easy JPM ESG EMBI Global Diversified Composite UCITS ETF Cap;;;BNP Paribas Easy JPM ESG EMBI Global Diversified Composite UCITS ETF Cap,PA,France,Fixed Income
+415,IE00B1FZS806,EUR,FP,Barclays Euro Gov Bond 10Y;;IBGM,ETF,iShares EUR Govt Bond 7-10yr UCITS ETF EUR (Dist);;;iShares EUR Govt Bond 7-10yr UCITS ETF EUR (Dist),PA,France,Fixed Income
+416,IE00BZ163M45,EUR,FP,Global Agg US Treasury Fl Adj;;VUTY,ETF,VANGUARD USD TREASURY BOND UCITS ETF;;;VANGUARD USD TREASURY BOND UCITS ETF,PA,France,Fixed Income
+417,NL0009272780,EUR,FP,Multi-Asset Growth Allocation;;TOF,ETF,VanEck Vectors Multi-Asset Growth Allocation UCITS ETF;;;VanEck Vectors Multi-Asset Growth Allocation UCITS ETF,PA,France,Fixed Income
+418,IE00BZ163G84,EUR,FP,Euro Aggregate: Corporates;;VECP,ETF,VANGUARD EUR CORPORATE BOND UCITS ETF;;;VANGUARD EUR CORPORATE BOND UCITS ETF,PA,France,Fixed Income
+419,DE000A3GPSP7,EUR,FP,MVIS Ethereum Index;;VETH,ETN,VanEck Vectors Ethereum ETN;;;VanEck Vectors Ethereum ETN,PA,France,Fixed Income
+420,LU1681041387,EUR,FP,iBoxx MSCI ESG EUR Corp BBB;;CBBB,ETF,AMUNDI BBB EURO CORPORATE INVESTMENT GRADE ESG UCITS ETF DR - EUR (C);;;AMUNDI BBB EURO CORPORATE INVESTMENT GRADE ESG UCITS ETF DR - EUR (C),PA,France,Fixed Income
+421,LU1708330235,EUR,FP,J.P. Morgan GBI Global EUR Hed;;GOVH,ETF,AMUNDI INDEX J.P. MORGAN GBI GLOBAL GOVIES UCITS ETF DR - EUR HEDGED;;;AMUNDI INDEX J.P. MORGAN GBI GLOBAL GOVIES UCITS ETF DR - EUR HEDGED,PA,France,Fixed Income
+422,LU1681039647,EUR,FP,BBG MSCI € Corp ESG Sust SRI;;CC4,ETF,AMUNDI INDEX EURO CORPORATE SRI UCITS ETF 2 DR  EUR (C);;;AMUNDI INDEX EURO CORPORATE SRI UCITS ETF 2 DR  EUR (C),PA,France,Fixed Income
+423,IE00BCRY6557,EUR,FP,iBoxx EUR Liquid IG Ultrashort;;ERNE,ETF,iShares EUR Ultrashort Bond UCITS ETF;;;iShares EUR Ultrashort Bond UCITS ETF,PA,France,Fixed Income
+424,NL0009272772,EUR,FP,Multi-Asset Balanced Allocatio;;NTM,ETF,VanEck Vectors Multi-Asset Balanced Allocation UCITS ETF;;;VanEck Vectors Multi-Asset Balanced Allocation UCITS ETF,PA,France,Fixed Income
+425,LU1287023185,EUR,FP,Bbg Bar € Tr 50bn 7-10Y Bd Ind;;MTD,ETF,Lyxor Euro Government Bond 7-10Y (DR) UCITS ETF;;;Lyxor Euro Government Bond 7-10Y (DR) UCITS ETF,PA,France,Fixed Income
+426,LU1650490474,EUR,FP,Bbg Barclays € Tre 50bn Bd Ind;;MTX,ETF,Lyxor Euro Government Bond (DR) UCITS ETF - Acc;;;Lyxor Euro Government Bond (DR) UCITS ETF - Acc,PA,France,Fixed Income
+427,IE00B14X4Q57,EUR,FP,Barclays Euro Gov Bond 1-3Y,Bi-Annually,IBGS,ETF,iShares Euro Government Bond 1 3yr UCITS ETF,x1,x1,iShares Euro Government Bond 1 3yr UCITS ETF,PA,France,Fixed Income
+428,LU1407892592,EUR,FP,FTSE Acturaries UK Gilts All;;GILS,ETF,Lyxor Core UK Government Bond (DR) UCITS ETF - Dist;;;Lyxor Core UK Government Bond (DR) UCITS ETF - Dist,PA,France,Fixed Income
+429,LU1287023342,EUR,FP,MTS Mid Price Highest Rated;;MAA,ETF,Lyxor EuroMTS Highest Rated Macro-Weighted Govt Bond (DR) UCITS ETF - Acc;;;Lyxor EuroMTS Highest Rated Macro-Weighted Govt Bond (DR) UCITS ETF - Acc,PA,France,Fixed Income
+430,IE0032895942,EUR,FP,iBoxx USD Liquid IG;;LQDA,ETF,iShares S Corporate Bond UCITS ETF;;;iShares S Corporate Bond UCITS ETF,PA,France,Fixed Income
+431,IE00B14X4S71,EUR,FP,ICE US Treasury 1-3Y Bond;;IBTS,ETF,iShares USD Treasury Bond 1 3yr UCITS ETF;;;iShares USD Treasury Bond 1 3yr UCITS ETF,PA,France,Fixed Income
+432,IE00B4WXJG34,EUR,FP,Barclays Euro Gov Bond 5-7Y;;IEGY,ETF,iShares EUR Govt Bond 5-7yr UCITS ETF EUR (Dist);;;iShares EUR Govt Bond 5-7yr UCITS ETF EUR (Dist),PA,France,Fixed Income
+433,LU1650487413,EUR,FP,Bbg Barc € Tre 50b 1-3Y Bd Ind;;MTA,ETF,Lyxor Euro Government Bond 1-3Y (DR) UCITS ETF;;;Lyxor Euro Government Bond 1-3Y (DR) UCITS ETF,PA,France,Fixed Income
+434,LU1812090543,EUR,FP,Bbg Barc MSCI Euro Corp High Y;;YIEL,ETF,Lyxor Euro High Yield UCITS ETF;;;Lyxor Euro High Yield UCITS ETF,PA,France,Fixed Income
+435,IE00B3B8Q275,EUR,FP,Markit iBoxx Euro Covered;;ICOV,ETF,iShares EUR Covered Bond UCITS ETF EUR (Dist);;;iShares EUR Covered Bond UCITS ETF EUR (Dist),PA,France,Fixed Income
+436,IE00B4613386,EUR,FP,Barclays Capital EM Local Curr;;EMLD,ETF,SPDR Barclays Emerging Markets Local Bond UCITS ETF;;;SPDR Barclays Emerging Markets Local Bond UCITS ETF,PA,France,Fixed Income
+437,IE00B7LGZ558,EUR,FP,Barclays France Treasury Bond;;IFRB,ETF,iShares France Govt Bnd UCITS ETF EUR (Dist);;;iShares France Govt Bnd UCITS ETF EUR (Dist),PA,France,Fixed Income
+438,IE00BCRY5Y77,EUR,FP,iBoxx USD Liquid IG 0-5Y;;SDIG,ETF,iShares $ Short Duration Corporate Bond UCITS ETF;;;iShares $ Short Duration Corporate Bond UCITS ETF,PA,France,Fixed Income
+439,LU1829219127,EUR,FP,Markit iBoxx EUR Liquid Corpo;;CRP,ETF,Lyxor ESG Euro Corporate Bond (DR) UCITS ETF - Acc;;;Lyxor ESG Euro Corporate Bond (DR) UCITS ETF - Acc,PA,France,Fixed Income
+440,LU1215461325,EUR,FP,BBGMSCI US Liq CorpSus hed EUR;;UE27,ETF,UBS (Lux) Fund Solutions - Bloomberg MSCI US Liqui;;;UBS (Lux) Fund Solutions - Bloomberg MSCI US Liqui,PA,France,Fixed Income
+441,FR0011607084,EUR,FP,SGI x-2 10y US Treasury;;DSUS,ETF,Lyxor Daily Double Short 10Y US Treasury UCITS ETF - Acc;;;Lyxor Daily Double Short 10Y US Treasury UCITS ETF - Acc,PA,France,Fixed Income
+442,FR0010754184,EUR,FP,EuroMTS Investment 7-10;;C73,ETF,AMUNDI ETF GOVT BOND EUROMTS BROAD INVESTMENT GRADE 7-10 UCITS ETF DR;;;AMUNDI ETF GOVT BOND EUROMTS BROAD INVESTMENT GRADE 7-10 UCITS ETF DR,PA,France,Fixed Income
+443,IE00B1FZSC47,EUR,FP,Barclays US Gov Inflation Link;;TPSA,ETF,iShares S TIPS UCITS ETF USD (Acc);;;iShares S TIPS UCITS ETF USD (Acc),PA,France,Fixed Income
+444,LU1829218319,EUR,FP,Barclays Euro Corp FRN 0-7Y,Capitalisation,FLOT,ETF,LYXOR BARCLAYS FLOATING RATE EURO 0-7Y UCITS ETF - ACC;;;LYXOR BARCLAYS FLOATING RATE EURO 0-7Y UCITS ETF - ACC,PA,France,Fixed Income
+445,IE00B3FH7618,EUR,FP,Bbg Euro Short Treasury 0-1Y;;IEGE,ETF,iShares EUR Govt Bond 0-1yr UCITS ETF EUR (Dist);;;iShares EUR Govt Bond 0-1yr UCITS ETF EUR (Dist),PA,France,Fixed Income
+446,LU1681040066,EUR,FP,iBoxx MSCI ESG EUR Financials;;AFIN,ETF,AMUNDI EURO CORPORATE FINANCIALS ESG UCITS ETF DR - EUR (C);;;AMUNDI EURO CORPORATE FINANCIALS ESG UCITS ETF DR - EUR (C),PA,France,Fixed Income
+447,LU1650489385,EUR,FP,Bbg Bar € Tr 50b 10-15Y Bd Ind;;MTE,ETF,Lyxor Euro Government Bond 10-15Y (DR) UCITS ETF;;;Lyxor Euro Government Bond 10-15Y (DR) UCITS ETF,PA,France,Fixed Income
+448,LU1525419294,USD,FP,Barclays US Gov Inflation-Link;;UIFL,ETF,AMUNDI INDEX BARCLAYS US GOV INFLATION-LINKED BOND UCITS ETF DR;;;AMUNDI INDEX BARCLAYS US GOV INFLATION-LINKED BOND UCITS ETF DR,PA,France,Fixed Income
+449,LU1435356149,EUR,FP,Bbg Bar MSCI US Corp High Y;;USHY,ETF,Lyxor USD High Yield UCITS ETF;;;Lyxor USD High Yield UCITS ETF,PA,France,Fixed Income
+450,IE00B3VWN393,EUR,FP,ICE US Treasury 3-7Y Bond;;CBU7,ETF,iShares USD Treas Bond 3-7yr UCITS ETF USD (Acc);;;iShares USD Treas Bond 3-7yr UCITS ETF USD (Acc),PA,France,Fixed Income
+451,IE00BZ163L38,EUR,FP,EM USD Sovereign + Quasi-Sov;;VEMT,ETF,VANGUARD USD EMERGING MARKETS GOVERNMENT BOND UCITS ETF;;;VANGUARD USD EMERGING MARKETS GOVERNMENT BOND UCITS ETF,PA,France,Fixed Income
+452,IE00B3VTML14,EUR,FP,Bbg Euro Gov Bond 3-7Y;;CBE7,ETF,iShares EUR Govt Bond 3-7yr UCITS ETF EUR (Acc);;;iShares EUR Govt Bond 3-7yr UCITS ETF EUR (Acc),PA,France,Fixed Income
+453,IE00B4WXJH41,EUR,FP,Barclays Euro Gov Bond 10-15Y;;IEGZ,ETF,iShares EUR Govt Bond 10-15yr UCITS ETF EUR (Dist);;;iShares EUR Govt Bond 10-15yr UCITS ETF EUR (Dist),PA,France,Fixed Income
+454,IE00BZ163K21,EUR,FP,Global Aggregate Corporate-USD;;VUCP,ETF,VANGUARD USD CORPORATE BOND UCITS ETF;;;VANGUARD USD CORPORATE BOND UCITS ETF,PA,France,Fixed Income
+455,IE00B1FZS681,EUR,FP,Barclays Euro Gov Bond 5Y;;IBGX,ETF,iShares EUR Govt Bond 3-5yr UCITS ETF EUR (Dist);;;iShares EUR Govt Bond 3-5yr UCITS ETF EUR (Dist),PA,France,Fixed Income
+456,LU1829218822,EUR,FP,Markit iBoxx EUR Liquid Non-Fi;;CNB,ETF,Lyxor ESG Euro Corporate Bond Ex Financials (DR) UCITS ETF - Acc;;;Lyxor ESG Euro Corporate Bond Ex Financials (DR) UCITS ETF - Acc,PA,France,Fixed Income
+457,FR0010754127,EUR,FP,Markit iBoxx Euro Inflation;;CI3,ETF,AMUNDI ETF EURO INFLATION UCITS ETF DR;;;AMUNDI ETF EURO INFLATION UCITS ETF DR,PA,France,Fixed Income
+458,LU1686832194,EUR,FP,FTSE MTS Euroz Gov Bond IG 25Y,Capitalisation,MTH,ETF,LYXOR ULTRA LONG DURATION EURO GOVT FTSE MTS 25+Y (DR) UCITS ETF - ACC,x1,x1,LYXOR ULTRA LONG DURATION EURO GOVT FTSE MTS 25+Y (DR) UCITS ETF - ACC,PA,France,Fixed Income
+459,LU0530119774,EUR,FP,Sol. Bund Daily (-1x) Inv Ind;;BUNS,ETF,Lyxor Bund Future Daily (-1x) Inverse UCITS ETF;;;Lyxor Bund Future Daily (-1x) Inverse UCITS ETF,PA,France,Fixed Income
+460,IE00BCLWRB83,EUR,FP,iBoxx USD Liquid IG IR Hedged;;LQDH,ETF,iShares $ Corporate Bond Interest Rate Hedged UCITS ETF;;;iShares $ Corporate Bond Interest Rate Hedged UCITS ETF,PA,France,Fixed Income
+461,IE00BMVB5P51,EUR,FP;;Capitalisation,V60A,ETF,Vanguard LifeStrategy 60% Equity UCITS ETF;;;Vanguard LifeStrategy 60% Equity UCITS ETF,PA,France,Fixed Income
+462,LU1215415214,EUR,FP,Markit iBoxx EUR HY BB Corpo;;HYBB,ETF,Lyxor iBoxx EUR Liquid High Yield BB UCITS ETF - Acc;;;Lyxor iBoxx EUR Liquid High Yield BB UCITS ETF - Acc,PA,France,Fixed Income
+463,LU1686830065,EUR,FP,MTS Mid Price Covered Bond Agg,Bi-Annually,ECB,ETF,LYXOR EUROMTS COVERED BOND AGGREGATE UCITS ETF;;;LYXOR EUROMTS COVERED BOND AGGREGATE UCITS ETF,PA,France,Fixed Income
+464,LU1681041205,USD,FP,iBoxx USD Liq EM Sov Mid Price;;AGEB,ETF,AMUNDI GLOBAL EMERGING BONDMARKIT IBOXX UCITS ETF DR  USD (C);;;AMUNDI GLOBAL EMERGING BONDMARKIT IBOXX UCITS ETF DR  USD (C),PA,France,Fixed Income
+465,LU1287023268,EUR,FP,MTS Mid Price InvG Ex-CNO 15y+;;MTF,ETF,Lyxor EuroMTS 15+Y Investment Grade (DR) UCITS ETF - Acc;;;Lyxor EuroMTS 15+Y Investment Grade (DR) UCITS ETF - Acc,PA,France,Fixed Income
+466,DE000A3GSUC5,EUR,FP,MVIS CryptoCompare Polkadot;;VDOT,ETN,VanEck Vectors Polkadot ETN;;;VanEck Vectors Polkadot ETN,PA,France,Fixed Income
+467,LU1287023003,EUR,FP,Bbg Bar € Tr 50bn 5-7Y Bd Ind;;MTC,ETF,Lyxor Euro Government Bond 5-7Y (DR) UCITS ETF;;;Lyxor Euro Government Bond 5-7Y (DR) UCITS ETF,PA,France,Fixed Income
+468,NL0009272764,EUR,FP,Multi-Asset Conservative Alloc;;DTM,ETF,VanEck Vectors Multi-Asset Conservative Allocation UCITS ETF;;;VanEck Vectors Multi-Asset Conservative Allocation UCITS ETF,PA,France,Fixed Income
+469,LU1407893301,EUR,FP,FTSE Act UK Index-Linked GILTS;;GILI,ETF,Lyxor Core UK Government Inflation-Linked Bond (DR) UCITS ETF - Dist;;;Lyxor Core UK Government Inflation-Linked Bond (DR) UCITS ETF - Dist,PA,France,Fixed Income
+470,IE00B1FZS798,EUR,FP,ICE US Treasury 7-10Y Bond;;BTMA,ETF,iShares USD Treasury Bond 7-10yr UCITS ETF USD (Dist);;;iShares USD Treasury Bond 7-10yr UCITS ETF USD (Dist),PA,France,Fixed Income
+471,IE00BCRY6227,EUR,FP,iBoxx USD Liquid IG Ultrashort;;ERND,ETF,iShares $ Ultrashort Bond UCITS ETF;;;iShares $ Ultrashort Bond UCITS ETF,PA,France,Fixed Income
+472,LU0721553864,EUR,FP,BBG Euro Area Liquid Corp;;UEFR,ETF,UBS (Lux) Fund Solutions - Bloomberg Euro Area Liq;;;UBS (Lux) Fund Solutions - Bloomberg Euro Area Liq,PA,France,Fixed Income
+473,LU1407887162,EUR,FP,Bbg Barcl US Treasury 1-3Y Ind;;US13,ETF,Lyxor Core US Treasury 1-3Y (DR) UCITS ETF;;;Lyxor Core US Treasury 1-3Y (DR) UCITS ETF,PA,France,Fixed Income
+474,LU1681041114,EUR,FP,iBoxx MSCI ESG EUR FRN IG Corp;;AFRN,ETF,AMUNDI FLOATING RATE EURO CORPORATE ESG UCITS ETF DR - EUR (C);;;AMUNDI FLOATING RATE EURO CORPORATE ESG UCITS ETF DR - EUR (C),PA,France,Fixed Income
+475,LU1681046261,EUR,FP,FTSE MTS Investment All Mat;;CB3,ETF,AMUNDI GOVT BOND EUROMTSBROAD INVESTMENT GRADE UCITSETF DR  EUR (C);;;AMUNDI GOVT BOND EUROMTSBROAD INVESTMENT GRADE UCITSETF DR  EUR (C),PA,France,Fixed Income
+476,IE00BMVB5R75,EUR,FP;;Capitalisation,V80A,ETF,Vanguard LifeStrategy 80% Equity UCITS ETF;;;Vanguard LifeStrategy 80% Equity UCITS ETF,PA,France,Fixed Income
+477,LU1437024729,EUR,FP,Barclays GlobalAggregate(500M);;GAGG,ETF,AMUNDI INDEX BARCLAYS GLOBAL AGG 500M UCITS ETF DR;;;AMUNDI INDEX BARCLAYS GLOBAL AGG 500M UCITS ETF DR,PA,France,Fixed Income
+478,LU2037750168,USD,FP,iBoxx USD10Y Breakeven Infla,Capitalisation,BINFU,ETF,AMUNDI INDEX BREAKEVEN INFLATION USD 10Y UCITS ETF DR;;;AMUNDI INDEX BREAKEVEN INFLATION USD 10Y UCITS ETF DR,PA,France,Fixed Income
+479,LU1650488494,EUR,FP,Bbg Barc € Tre 50b 3-5Y Bd Ind;;MTB,ETF,Lyxor Euro Government Bond 3-5Y (DR) UCITS ETF;;;Lyxor Euro Government Bond 3-5Y (DR) UCITS ETF,PA,France,Fixed Income
+480,FR0010754168,EUR,FP,EuroMTS Investment 3-5;;C33,ETF,AMUNDI ETF GOVT BOND EUROMTS BROAD INVESTMENT GRADE 3-5 UCITS ETF DR;;;AMUNDI ETF GOVT BOND EUROMTS BROAD INVESTMENT GRADE 3-5 UCITS ETF DR,PA,France,Fixed Income
+481,LU1437016204,EUR,FP,J.P. Morgan GBI Global;;GGOV,ETF,AMUNDI INDEX J.P. MORGAN GBI GLOBAL GOVIES UCITS ETF DR;;;AMUNDI INDEX J.P. MORGAN GBI GLOBAL GOVIES UCITS ETF DR,PA,France,Fixed Income
+482,FR0010754143,EUR,FP,EuroMTS Investment 10-15;;C10,ETF,AMUNDI ETF GOVT BOND EUROMTSBROAD INVESTMENT GRADE 10-15UCITS ETF DR (C);;;AMUNDI ETF GOVT BOND EUROMTSBROAD INVESTMENT GRADE 10-15UCITS ETF DR (C),PA,France,Fixed Income
+483,IE00BMVB5K07,EUR,FP;;Capitalisation,V20A,ETF,Vanguard LifeStrategy 20% Equity UCITS ETF;;;Vanguard LifeStrategy 20% Equity UCITS ETF,PA,France,Fixed Income
+484,IE00B6YX5F63,EUR,FP,Bar 1-3Yr Euro Treas Bd Index;;GOVS,ETF,SPDR Barclays 1-3 Year Euro Government Bond UCITS ETF;;;SPDR Barclays 1-3 Year Euro Government Bond UCITS ETF,PA,France,Fixed Income
+485,CH0454664027,EUR,FP,21Shares CC Ethereum,Capitalisation,AETH,ETN,21Shares Ethereum ETP - AETH;;;21Shares Ethereum ETP - AETH,PA,France,Crypto
+486,CH1114873776,EUR,FP,Solana,Capitalisation,ASOL,ETN,21Shares Solana ETP;;;21Shares Solana ETP,PA,France,Crypto
+487,XS2193972671,EUR,FP,Solactive Daily -3x TSLA,Capitalisation,3STS,ETN,GraniteShares 3x Short Tesla Daily ETP;;;GraniteShares 3x Short Tesla Daily ETP,PA,France,Equity
+488,CH0454664001,EUR,FP,21Shares CC Bitcoin,Capitalisation,ABTC,ETN,21Shares Bitcoin ETP - ABTC;;;21Shares Bitcoin ETP - ABTC,PA,France,Crypto
+489,XS2193972168,EUR,FP,Solactive Daily -3x NVDIA,Capitalisation,3SNV,ETN,GraniteShares 3x Short NVIDIA Daily ETP;;;GraniteShares 3x Short NVIDIA Daily ETP,PA,France,Equity
+490,DE000A27Z304,EUR,FP,XBT CFIX Curncy,Capitalisation,BTCE,ETN,BTCetc - ETC Group Physical Bitcoin EUR;;;BTCetc - ETC Group Physical Bitcoin EUR,PA,France,Crypto
+491,DE000A27Z304,USD,FP,XBT CFIX Curncy,Capitalisation;;ETN,BTCetc - ETC Group Physical Bitcoin USD;;;BTCetc - ETC Group Physical Bitcoin USD,PA,France,Crypto
+492,XS2193971350,EUR,FP,Solactive Daily +3x FB,Capitalisation,3LFB,ETN,GraniteShares 3x Long Facebook Daily ETP;;;GraniteShares 3x Long Facebook Daily ETP,PA,France,Equity
+493,CH0593331561,USD,FP,Polkadot DOT,Capitalisation;;ETN,21Shares Polkadot ETP;;;21Shares Polkadot ETP,PA,France,Crypto
+494,CH0593331561,EUR,FP,Polkadot DOT,Capitalisation,ADOT,ETN,21Shares Polkadot ETP;;;21Shares Polkadot ETP,PA,France,Crypto
+495,XS2377112110,EUR,FP,Solactive Daily +3x AMD,Capitalisation,3LAM,ETN,GraniteShares 3x Long AMD Daily ETP;;;GraniteShares 3x Long AMD Daily ETP,PA,France,Equity
+496,CH0454664027,USD,FP,21Shares CC Ethereum,Capitalisation;;ETN,21Shares Ethereum ETP - AETH;;;21Shares Ethereum ETP - AETH,PA,France,Crypto
+497,XS2193973216,EUR,FP,Solactive Daily -3x NIO,Capitalisation,3SNI,ETN,GraniteShares 3x Short NIO Daily ETP;;;GraniteShares 3x Short NIO Daily ETP,PA,France,Equity
+498,DE000A3GMKD7,EUR,FP,XET CFIX Curncy,Capitalisation,ZETH,ETN,ETHetc - ETC Group Physical Ethereum EUR;;;ETHetc - ETC Group Physical Ethereum EUR,PA,France,Crypto
+499,GB00BLD4ZL17,EUR,FP,Bitcoin,Capitalisation;;ETN,CoinShares Physical Bitcoin;;;CoinShares Physical Bitcoin,PA,France,Crypto
+500,CH0514065058,EUR,FP,21Shares CC Short Bitcoin,Capitalisation,SBTC,ETN,21Shares Short Bitcoin ETP - SBTC;;;21Shares Short Bitcoin ETP - SBTC,PA,France,Crypto
+501,CH0514065058,USD,FP,21Shares CC Short Bitcoin,Capitalisation;;ETN,21Shares Short Bitcoin ETP - SBTC;;;21Shares Short Bitcoin ETP - SBTC,PA,France,Crypto
+502,CH0454664001,USD,FP,21Shares CC Bitcoin,Capitalisation;;ETN,21Shares Bitcoin ETP - ABTC;;;21Shares Bitcoin ETP - ABTC,PA,France,Crypto
+503,XS2376975020,EUR,FP,Solactive Daily +3x LVMH,Capitalisation,3LLV,ETN,GraniteShares 3x Long LVMH Daily ETP;;;GraniteShares 3x Long LVMH Daily ETP,PA,France,Equity
+504,XS2193973133,EUR,FP,Solactive Daily +3x NIO,Capitalisation,3LNI,ETN,GraniteShares 3x Long NIO Daily ETP;;;GraniteShares 3x Long NIO Daily ETP,PA,France,Equity
+505,CH0496454155,USD,FP,Binance Coin (BNB),Capitalisation;;ETN,21Shares Binance Coin ETP;;;21Shares Binance Coin ETP,PA,France,Crypto
+506,XS2377111906,EUR,FP,Solactive Daily +3x Palantir,Capitalisation,3LPA,ETN,GraniteShares 3x Long Palantir Daily ETP;;;GraniteShares 3x Long Palantir Daily ETP,PA,France,Equity
+507,XS2376974304,EUR,FP,Solactive Daily +3x Danone,Capitalisation,3LDA,ETN,GraniteShares 3x Long Danone Daily ETP;;;GraniteShares 3x Long Danone Daily ETP,PA,France,Equity
+508,XS2377112201,EUR,FP,Solactive Daily -3x AMD,Capitalisation,3SAM,ETN,GraniteShares 3x Short AMD Daily ETP;;;GraniteShares 3x Short AMD Daily ETP,PA,France,Equity
+509,XS2377112540,EUR,FP,Solactive Daily -3x Moderna,Capitalisation,3SMO,ETN,GraniteShares 3x Short Moderna Daily ETP;;;GraniteShares 3x Short Moderna Daily ETP,PA,France,Equity
+510,XS2376933375,EUR,FP,Solactive Daily +3x Airbus,Capitalisation,3LAR,ETN,GraniteShares 3x Long Airbus Daily ETP;;;GraniteShares 3x Long Airbus Daily ETP,PA,France,Equity
+511,XS2376976770,EUR,FP,Solactive Daily +3x Schneider,Capitalisation,3LSE,ETN,GraniteShares 3x Long Schneider Electric Daily ETP;;;GraniteShares 3x Long Schneider Electric Daily ETP,PA,France,Equity
+512,XS2376975533,EUR,FP,Solactive Daily +3x Safran,Capitalisation,3LSA,ETN,GraniteShares 3x Long Safran Daily ETP;;;GraniteShares 3x Long Safran Daily ETP,PA,France,Equity
+513,XS2376979790,EUR,FP,Solactive Daily +3x Total,Capitalisation,3LTO,ETN,GraniteShares 3x Long TotalEnergies Daily ETP;;;GraniteShares 3x Long TotalEnergies Daily ETP,PA,France,Equity
+514,CH0496454155,EUR,FP,Binance Coin (BNB),Capitalisation,BNBA,ETN,21Shares Binance Coin ETP;;;21Shares Binance Coin ETP,PA,France,Crypto
+515,XS2305050713,EUR,FP,Solactive FATANG Equal Weight,Capitalisation,FTNG,ETF,GraniteShares FATANG ETP;;;GraniteShares FATANG ETP,PA,France,Equity
+516,CH1109575535,EUR,FP,Stellar,Capitalisation,AXLM,ETN,21Shares Stellar ETP;;;21Shares Stellar ETP,PA,France,Crypto
+517,CH0454664043,EUR,FP,XRP,Capitalisation,AXRP,ETN,21Shares Ripple XRP;;;21Shares Ripple XRP,PA,France,Crypto
+518,XS2376978982,EUR,FP,Solactive Daily +3x ST Micro,Capitalisation,3LST,ETN,GraniteShares 3x Long STMicroelectronics Daily ETP;;;GraniteShares 3x Long STMicroelectronics Daily ETP,PA,France,Equity
+519,XS2376991142,EUR,FP,Solactive Daily -3x VW,Capitalisation,3SVW,ETN,GraniteShares 3x Short Volkswagen Daily ETP;;;GraniteShares 3x Short Volkswagen Daily ETP,PA,France,Equity
+520,XS2377112466,EUR,FP,Solactive Daily +3x Moderna,Capitalisation,3LMO,ETN,GraniteShares 3x Long Moderna Daily ETP;;;GraniteShares 3x Long Moderna Daily ETP,PA,France,Equity
+521,XS2193970030,EUR,FP,Solactive Daily -3x AAPL,Capitalisation,3SAP,ETN,GraniteShares 3x Short Apple Daily ETP;;;GraniteShares 3x Short Apple Daily ETP,PA,France,Equity
+522,DE000A3GMKD7,USD,FP,XET CFIX Curncy,Capitalisation;;ETN,ETHetc - ETC Group Physical Ethereum USD;;;ETHetc - ETC Group Physical Ethereum USD,PA,France,Crypto
+523,GB00BLD4ZL17,EUR,FP,Bitcoin,Capitalisation,BITC,ETN,CoinShares Physical Bitcoin;;;CoinShares Physical Bitcoin,PA,France,Crypto
+524,GB00BLD4ZM24,EUR,FP,Ethereum,Capitalisation,CETH,ETN,CoinShares Physical Ethereum;;;CoinShares Physical Ethereum,PA,France,Crypto
+525,GB00BLD4ZM24,EUR,FP,Ethereum,Capitalisation;;ETN,CoinShares Physical Ethereum;;;CoinShares Physical Ethereum,PA,France,Crypto
+526,XS2193971517,EUR,FP,Solactive Daily -3x FB,Capitalisation,3SFB,ETN,GraniteShares 3x Short Facebook Daily ETP;;;GraniteShares 3x Short Facebook Daily ETP,PA,France,Equity
+527,CH1114873776,USD,FP,Solana,Capitalisation;;ETN,21Shares Solana ETP;;;21Shares Solana ETP,PA,France,Crypto
+528,XS2376990417,EUR,FP,Solactive Daily +3x VW,Capitalisation,3LVW,ETN,GraniteShares 3x Long Volkswagen Daily ETP;;;GraniteShares 3x Long Volkswagen Daily ETP,PA,France,Equity
+529,XS2193970386,EUR,FP,Solactive Daily -3x MSFT,Capitalisation,3SMS,ETN,GraniteShares 3x Short Microsoft Daily ETP;;;GraniteShares 3x Short Microsoft Daily ETP,PA,France,Equity
+530,XS2305051877,EUR,FP,Solactive Daily +3x FATANG,Capitalisation,3FTG,ETF,GraniteShares 3x Long FATANG Daily ETP;;;GraniteShares 3x Long FATANG Daily ETP,PA,France,Equity
+531,XS2193969883,EUR,FP,Solactive Daily +3x AAPL,Capitalisation,3LAP,ETN,GraniteShares 3x Long Apple Daily ETP;;;GraniteShares 3x Long Apple Daily ETP,PA,France,Equity
+532,CH0491507486,EUR,FP,Tezos (XTZ),Capitalisation,AXTZ,ETN,21Shares Tezos ETP;;;21Shares Tezos ETP,PA,France,Crypto
+533,XS2377112037,EUR,FP,Solactive Daily -3x Palantir,Capitalisation,3SPA,ETN,GraniteShares 3x Short Palantir Daily ETP;;;GraniteShares 3x Short Palantir Daily ETP,PA,France,Equity
+534,CH0475552201,USD,FP,Bitcoin Cash,Capitalisation;;ETN,21Shares Bitcoin Cash ETP;;;21Shares Bitcoin Cash ETP,PA,France,Crypto
+535,CH0491507486,USD,FP,Tezos (XTZ),Capitalisation;;ETN,21Shares Tezos ETP;;;21Shares Tezos ETP,PA,France,Crypto
+536,CH0454664043,USD,FP,XRP,Capitalisation;;ETN,21Shares Ripple XRP;;;21Shares Ripple XRP,PA,France,Crypto
+537,XS2193969537,EUR,FP,Solactive Daily +3x AMZN,Capitalisation,3LZN,ETN,GraniteShares 3x Long Amazon Daily ETP;;;GraniteShares 3x Long Amazon Daily ETP,PA,France,Equity
+538,XS2193968307,EUR,FP,Solactive Daily +3x GOOGL,Capitalisation,3LAL,ETN,GraniteShares 3x Long Alphabet Daily ETP;;;GraniteShares 3x Long Alphabet Daily ETP,PA,France,Equity
+539,XS2193971947,EUR,FP,Solactive Daily +3x NVDIA,Capitalisation,3LNV,ETN,GraniteShares 3x Long NVIDIA Daily ETP;;;GraniteShares 3x Long NVIDIA Daily ETP,PA,France,Equity
+540,XS2193970204,EUR,FP,Solactive Daily +3x MSFT,Capitalisation,3LMS,ETN,GraniteShares 3x Long Microsoft Daily ETP;;;GraniteShares 3x Long Microsoft Daily ETP,PA,France,Equity
+541,XS2305051281,EUR,FP,Solactive Daily +3x GAFAM,Capitalisation,3GFM,ETF,GraniteShares 3x Long GAFAM Daily ETP;;;GraniteShares 3x Long GAFAM Daily ETP,PA,France,Equity
+542,XS2376974726,EUR,FP,Solactive Daily +3x L'Oreal,Capitalisation,3LOR,ETN,GraniteShares 3x Long L'Oreal Daily ETP;;;GraniteShares 3x Long L'Oreal Daily ETP,PA,France,Equity
+543,XS2376944224,EUR,FP,Solactive Daily +3x AXA,Capitalisation,3LAX,ETN,GraniteShares 3x Long AXA Daily ETP;;;GraniteShares 3x Long AXA Daily ETP,PA,France,Equity
+544,XS2376979873,EUR,FP,Solactive Daily -3x Total,Capitalisation,3STO,ETN,GraniteShares 3x Short TotalEnergies Daily ETP;;;GraniteShares 3x Short TotalEnergies Daily ETP,PA,France,Equity
+545,CH0475552201,EUR,FP,Bitcoin Cash,Capitalisation,ABCH,ETN,21Shares Bitcoin Cash ETP;;;21Shares Bitcoin Cash ETP,PA,France,Crypto
+546,XS2376979287,EUR,FP,Solactive Daily -3x ST Micro,Capitalisation,3SST,ETN,GraniteShares 3x Short STMicroelectronics Daily ETP;;;GraniteShares 3x Short STMicroelectronics Daily ETP,PA,France,Equity
+547,CH1109575535,USD;;Stellar,Capitalisation;;ETN,21Shares Stellar ETP;;;21Shares Stellar ETP,PA,France,Crypto
+548,XS2376975616,EUR;;Solactive Daily -3x Safran,Capitalisation,3SSA,ETN,GraniteShares 3x Short Safran Daily ETP;;;GraniteShares 3x Short Safran Daily ETP,PA,France,Equity
+549,XS2376975962,EUR;;Solactive Daily +3x Sanofi,Capitalisation,3LSN,ETN,GraniteShares 3x Long Sanofi Daily ETP;;;GraniteShares 3x Long Sanofi Daily ETP,PA,France,Equity
+550,XS2305050556,EUR;;Solactive FAANG Equal Weight,Capitalisation,FANG,ETN,GraniteShares FAANG ETP;;;GraniteShares FAANG ETP,PA,France,Equity
+551,XS2376952243,EUR;;Solactive Daily -3x BNP-P,Capitalisation,3SBN,ETN,GraniteShares 3x Short BNP Daily ETP;;;GraniteShares 3x Short BNP Daily ETP,PA,France,Equity
+552,XS2376951948,EUR;;Solactive Daily +3x BNP-P,Capitalisation,3LBN,ETN,GraniteShares 3x Long BNP Daily ETP;;;GraniteShares 3x Long BNP Daily ETP,PA,France,Equity
+553,XS2376975376,EUR;;Solactive Daily -3x LVMH,Capitalisation,3SLV,ETN,GraniteShares 3x Short LVMH Daily ETP;;;GraniteShares 3x Short LVMH Daily ETP,PA,France,Equity
+554,XS2376974999,EUR;;Solactive Daily -3x L'Oreal,Capitalisation,3SOR,ETN,GraniteShares 3x Short L'Oreal Daily ETP;;;GraniteShares 3x Short L'Oreal Daily ETP,PA,France,Equity
+555,XS2376937442,EUR;;Solactive Daily -3x Airbus,Capitalisation,3SAR,ETN,GraniteShares 3x Short Airbus Daily ETP;;;GraniteShares 3x Short Airbus Daily ETP,PA,France,Equity
+556,XS2376951781,EUR;;Solactive Daily -3x AXA,Capitalisation,3SAX,ETN,GraniteShares 3x Short AXA Daily ETP;;;GraniteShares 3x Short AXA Daily ETP,PA,France,Equity
+557,XS2376976853,EUR;;Solactive Daily -3x Schneider,Capitalisation,3SSE,ETN,GraniteShares 3x Short Schneider Electric Daily ETP;;;GraniteShares 3x Short Schneider Electric Daily ETP,PA,France,Equity
+558,XS2376974486,EUR;;Solactive Daily -3x Danone,Capitalisation,3SDA,ETN,GraniteShares 3x Short Danone Daily ETP;;;GraniteShares 3x Short Danone Daily ETP,PA,France,Equity
+559,XS2305051109,EUR;;Solactive Daily -1x FAANG,Capitalisation,SFNG,ETN,GraniteShares 1x Short FAANG Daily ETP;;;GraniteShares 1x Short FAANG Daily ETP,PA,France,Equity
+560,XS2305052172,EUR;;Solactive Daily -1x FATANG,Capitalisation,SFTG,ETF,GraniteShares 1x Short FATANG Daily ETP;;;GraniteShares 1x Short FATANG Daily ETP,PA,France,Equity
+561,XS2305051950,EUR;;Solactive Daily -3x FATANG,Capitalisation,3SFT,ETF,GraniteShares 3x Short FATANG Daily ETP;;;GraniteShares 3x Short FATANG Daily ETP,PA,France,Equity
+562,XS2305051521,EUR;;Solactive Daily -1x GAFAM,Capitalisation,SGFM,ETF,GraniteShares 1x Short GAFAM Daily ETP;;;GraniteShares 1x Short GAFAM Daily ETP,PA,France,Equity
+563,XS2305051448,EUR;;Solactive Daily -3x GAFAM,Capitalisation,3SGF,ETF,GraniteShares 3x Short GAFAM Daily ETP;;;GraniteShares 3x Short GAFAM Daily ETP,PA,France,Equity
+564,XS2305051018,EUR;;Solactive Daily -3x FAANG,Capitalisation,3SFG,ETF,GraniteShares 3x Short FAANG Daily ETP;;;GraniteShares 3x Short FAANG Daily ETP,PA,France,Equity
+565,XS2305050804,EUR;;Solactive Daily +3x FAANG,Capitalisation,3FNG,ETF,GraniteShares 3x Long FAANG Daily ETP;;;GraniteShares 3x Long FAANG Daily ETP,PA,France,Equity
+566,XS2305050630,EUR;;Solactive GAFAM Equal Weight,Capitalisation,GFAM,ETF,GraniteShares GAFAM ETP;;;GraniteShares GAFAM ETP,PA,France,Equity
+567,XS2193973059,EUR;;Solactive Daily -3x UBER,Capitalisation,3SUB,ETN,GraniteShares 3x Short UBER Daily ETP;;;GraniteShares 3x Short UBER Daily ETP,PA,France,Equity
+568,XS2193972838,EUR;;Solactive Daily +3x UBER,Capitalisation,3LUB,ETN,GraniteShares 3x Long UBER Daily ETP;;;GraniteShares 3x Long UBER Daily ETP,PA,France,Equity
+569,XS2193972598,EUR;;Solactive Daily +3x TSLA,Capitalisation,3LTS,ETN,GraniteShares 3x Long Tesla Daily ETP;;;GraniteShares 3x Long Tesla Daily ETP,PA,France,Equity
+570,XS2193970899,EUR;;Solactive Daily -3x NFLX,Capitalisation,3SNF,ETN,GraniteShares 3x Short Netflix Daily ETP;;;GraniteShares 3x Short Netflix Daily ETP,PA,France,Equity
+571,XS2193970543,EUR;;Solactive Daily +3x NFLX,Capitalisation,3LNF,ETN,GraniteShares 3x Long Netflix Daily ETP;;;GraniteShares 3x Long Netflix Daily ETP,PA,France,Equity
+572,XS2193969701,EUR;;Solactive Daily -3x AMZN,Capitalisation,3SZN,ETN,GraniteShares 3x Short Amazon Daily ETP;;;GraniteShares 3x Short Amazon Daily ETP,PA,France,Equity
+573,XS2193968729,EUR;;Solactive Daily -3x GOOGL,Capitalisation,3SAL,ETN,GraniteShares 3x Short Alphabet Daily ETP;;;GraniteShares 3x Short Alphabet Daily ETP,PA,France,Equity
+574,DE000A3GTBU5,USD;;XBN CFIX Curncy,Capitalisation;;ETN,BCHetc - ETC Group Physical Bitcoin Cash USD;;;BCHetc - ETC Group Physical Bitcoin Cash USD,PA,France,Crypto
+575,DE000A3GTBU5,EUR;;XBN CFIX Curncy,Capitalisation,BTCH,ETN,BCHetc - ETC Group Physical Bitcoin Cash EUR;;;BCHetc - ETC Group Physical Bitcoin Cash EUR,PA,France,Crypto
+576,DE000A3GN5J9,USD;;XLC CFIX Curncy,Capitalisation;;ETN,LTCetc - ETC Group Physical Litecoin USD;;;LTCetc - ETC Group Physical Litecoin USD,PA,France,Crypto
+577,DE000A3GN5J9,EUR;;XLC CFIX Curncy,Capitalisation,ELTC,ETN,LTCetc - ETC Group Physical Litecoin EUR;;;LTCetc - ETC Group Physical Litecoin EUR,PA,France,Crypto
+578,XS2376976341,EUR;;Solactive Daily -3x Sanofi,Capitalisation,3SSN,ETN,GraniteShares 3x Short Sanofi Daily ETP;;;GraniteShares 3x Short Sanofi Daily ETP,PA,France,Equity
+579,FR0010411884,EUR,FP,CAC 40;;BX4,ETF,Lyxor CAC 40 Daily Double Short UCITS ETF - Acc;;;LYXOR ETF BX4,PA,France,Equity
+580,IE00B3XXRP09,EUR,FP,S&P 500 Index;;VUSA,ETF,Vanguard S&P 500 UCITS ETF;;;VANGUARD S&P500,PA,France,Equity
+581,LU1437017350,EUR,FP,MSCI Emerging Markets;;AEME,ETF,AMUNDI INDEX MSCI EMERGING MARKETS UCITS ETF DR;;;AMUNDI MSCI EM DR,PA,France,Equity
+582,IE00B3RBWM25,EUR,FP,FTSE All-World Index;;VWRL,ETF,Vanguard FTSE All-World UCITS ETF;;;VANGUARD FTSE AW,PA,France,Equity
+583,FR0010592014,EUR,FP,CAC 40 Leverage;;LVC,ETF,Lyxor Daily Leverage CAC 40 UCITS ETF - Acc;;;LYXOR ETF LEV CAC,PA,France,Equity
+584,IE00B4L5Y983,EUR,FP,MSCI World;;IWDA,ETF,iShares Core MSCI World UCITS ETF USD (Acc);;;ISHARES MSCI WOR A,PA,France,Equity
+585,FR0010342592,EUR,FP,NASDAQ-100 Leveraged;;LQQ,ETF,Lyxor Nasdaq-100 Daily (2x) Leveraged UCITS ETF  Acc;;;Lyxor ETF NSDQ LEV,PA,France,Equity
+586,IE00B53SZB19,EUR,FP,NASDAQ-100;;CNDX,ETF,iShares NASDAQ 100 UCITS ETF USD (Acc);;;iSHR NASDAQ 100,PA,France,Equity
+587,IE00B945VV12,EUR,FP,FTSE Developed Europe Index;;VEUR,ETF,VANGUARD FTSE Developed Europe UCITS ETF;;;VANGUARD FTSE EUR,PA,France,Equity
+588,IE00B52VJ196,EUR,FP,MSCI Europe SRI Select Rdc FF;;IESE,ETF,iShares MSCI Europe SRI UCITS ETF EUR (Acc);;;IS MSCI EUR SRI,PA,France,Equity
+589,IE00B02KXL92,EUR,FP,EURO STOXX Mid;;DJMC,ETF,iShares EURO STOXX Mid UCITS ETF;;;ISHARES ESTOXX MID,PA,France,Equity
+590,IE00BZ173T46,USD,FP,M1USSI Index,Bi-Annually,SRIL,ETF,iShares MSCI USA SRI UCITS ETF USD (Dist);;;ISHARES USA SRI,PA,France,Equity
+591,FR0013412285,EUR,FP,S&P 500,Capitalisation,PE500,ETF,AMUNDI ETF PEA S&P 500 UCITS ETF - EUR;;;AMUNDI PEA SP500,PA,France,Equity
+592,FR0010755611,EUR,FP,MSCI USA Leveraged 2x Daily,Annually,CL2,ETF,AMUNDI ETF LEVERAGED MSCI USA DAILY UCITS ETF;;;AMUNDI ETF LEV USA,PA,France,Equity
+593,IE00B1YZSC51,EUR,FP,MSCI Europe;;IMEU,ETF,iShares Core MSCI Europe UCITS ETF;;;ISHARES EUROPE,PA,France,Equity
+594,IE00B14X4N27,EUR,FP,MSCI Europe Ex UK,Quarterly,IEUX,ETF,iShares MSCI Europe ex UK UCITS ETF;;;ISHARES EUROP EXUK,PA,France,Equity
+595,LU1681045370,EUR,FP,MSCI Emerging Markets;;AEEM,ETF,AMUNDI MSCI EMERGING MARKETS UCITS ETF - EUR;;;AMUNDI ETF MSCI EM,PA,France,Equity
+596,FR0007052782,EUR,FP,CAC 40;;CAC,ETF,Lyxor CAC 40 (DR) UCITS ETF - Dist;;;LYXOR ETF CAC 40,PA,France,Equity
+597,LU1291098314,USD,FP,MSCI Emerg SRI S-Series 5%Cap;;EMSR,ETF,BNP Paribas Easy MSCI Emerging SRI S-Series 5% Capped;;;BNP MSCI EM SRI UC,PA,France,Equity
+598,LU1829221024,EUR,FP,NASDAQ-100 Notional NetTR;;UST,ETF,LYXOR NASDAQ-100 UCITS ETF - ACC;;;LYXOR NASDAQ 100,PA,France,Equity
+599,JE00B1VS3770,EUR,FP,Physical Gold Price;;PHAU,ETC,Wisdom Tree Physical Gold;;;WT PHYSICAL GOLD,PA,France,Equity
+600,LU1681045453,USD,FP,MSCI Emerging Markets;;AUEM,ETF,AMUNDI MSCI EMERGING MARKETS UCITS ETF - USD;;;AMUNDI ETF MS EM B,PA,France,Equity
+601,IE00B5BMR087,EUR,FP,S&P 500;;CSPX,ETF,iShares Core S&P 500 UCITS ETF USD (Acc);;;iSHR S&P500 B A,PA,France,Equity
+602,IE00B0M62Y33,EUR,FP,AEX;;IAEX,ETF,iShares AEX;;;ISHARES AEX,PA,France,Equity
+603,LU1829219390,EUR,FP,EURO STOXX Banks Net Return EU;;BNKE,ETF,LYXOR EURO STOXX BANKS (DR) UCITS ETF - ACC;;;LYXOR EUR STXX BNK,PA,France,Equity
+604,FR0007054358,EUR,FP,EURO STOXX 50;;MSE,ETF,Lyxor EURO STOXX 50 (DR) UCITS ETF - Acc;;;LYXOR ETF ESTOXX50,PA,France,Equity
+605,IE00B0M63177,EUR,FP,MSCI Emerging Markets;;IEMM,ETF,iShares MSCI Emerging Markets UCITS ETF (Dist);;;ISHARES EM MARKETS,PA,France,Equity
+606,FR0013412269,EUR,FP,NASDAQ-100,Capitalisation,PANX,ETF,AMUNDI ETF PEA NASDAQ-100 UCITS ETF - EUR;;;AMUNDI PEA NASDAQ,PA,France,Equity
+607,LU0908500753,EUR,FP,STOXX EUROPE 600 Net Return EU;;MEUD,ETF,Lyxor Core STOXX Europe 600 (DR) - UCITS ETF Acc;;;LYXOR COR STOX600,PA,France,Equity
+608,LU1681043599,EUR,FP,MSCI World;;CW8,ETF,AMUNDI MSCI WORLD UCITS ETF - EUR;;;AMUNDI ETF MSCI WR,PA,France,Equity
+609,FR0010524777,EUR,FP,World Alternative Energy CW;;NRJ,ETF,Lyxor New Energy UCITS ETF - Dist;;;LYXOR ETF NEW ENER,PA,France,Equity
+610,FR0010591362,EUR,FP,CAC 40 Short;;SHC,ETF,Lyxor Daily Short CAC 40 UCITS ETF - Acc;;;LYXOR ETF SHT CAC,PA,France,Equity
+611,LU1377381717,EUR,FP,BNP Paribas Equity Low Vol Eur;;EVOE,ETF,BNP Paribas Easy Equity Low Vol Europe UCITS ETF Capitalisation;;;BNPP Low Vol EU,PA,France,Equity
+612,FR0010424143,EUR,FP,EURO STOXX 50;;BXX,ETF,Lyxor EURO STOXX 50 Daily (-2x) Inverse UCITS ETF - Acc;;;LYXOR ETF SX50 DDS,PA,France,Equity
+613,IE00BFY0GT14,EUR,FP,MSCI World Index,Capitalisation,SWRD,ETF,SPDR MSCI WORLD UCITS ETF;;;SPDR WORLD,PA,France,Equity
+614,IE0031442068,EUR,FP,S&P 500;;IUSA,ETF,iShares Core S&P 500 UCITS ETF USD (Dist);;;ISHARES S&P 500,PA,France,Equity
+615,IE0008471009,EUR,FP,EURO STOXX 50;;EUEA,ETF,iShares Core EURO STOXX 50 UCITS ETF EUR (Dist);;;ISHARES EURO STX50,PA,France,Equity
+616,IE00BKM4GZ66,EUR,FP,MSCI Emerging Markets IMI Idx;;EMIM,ETF,iShares Core MSCI Emerging Markets IMI UCITS ETF;;;ISHARES EMIM,PA,France,Equity
+617,FR0011871110,EUR,FP,NASDAQ-100 Net Total Return;;PUST,ETF,LYXOR UCITS ETF PEA NASDAQ-100 C-EUR;;;LYXOR NSDQ 100 PEA,PA,France,Equity
+618,LU0629460089,EUR,FP,MSCI USA SRI Low Carbon 5% IC.;;UIMP,ETF,UBS (Lux) Fund Solutions - MSCI USA Socially Respo;;;UBS ETF ASRUSA,PA,France,Equity
+619,IE00B0M62S72,EUR,FP,STOXX Europe Select Div 30,Quarterly,IDVY,ETF,iShares EURO Dividend UCITS ETF;;;ISHARES ESTOXX DIV,PA,France,Equity
+620,FR0010315770,EUR,FP,MSCI World;;WLD,ETF,Lyxor MSCI World UCITS ETF - Dist;;;LYXOR ETF MSCI WOR,PA,France,Equity
+621,IE00B8GKDB10,EUR,FP,FTSE All-World Hi Dv Yield Idx;;VHYL,ETF,VANGUARD FTSE All-World High Dividend Yield UCITS ETF;;;VANGUARD FTSE HDY,PA,France,Equity
+622,LU1681048804,EUR,FP,S&P 500;;500,ETF,AMUNDI S&P 500 UCITS ETF - EUR;;;AMUNDI ETF SP 500,PA,France,Equity
+623,IE00B1TXHL60,EUR,FP,S&P Listed Private Equity,Bi-Annually,IPRV,ETF,iShares Listed Private Equity UCITS ETF USD (Dist);;;ISHARES PRIVATE EQ,PA,France,Equity
+624,LU1681038243,EUR,FP,NASDAQ-100;;ANX,ETF,AMUNDI NASDAQ-100 UCITS ETF - EUR;;;AMUNDI ETF NDX 100,PA,France,Equity
+625,LU1834983477,EUR,FP,STOXX EU 600 Banks NetR EUR;;BNK,ETF,LYXOR STOXX EUROPE 600 BANKS UCITS ETF - ACC;;;LYXOR STX EU BANKS,PA,France,Equity
+626,LU1602144229,EUR,FP,MSCI World Climate Change CTB;;LWCR,ETF,AMUNDI MSCI WORLD CLIMATE TRANSITIONCTB UCITS ETF DR - EUR (C);;;AM WLD CLIM CTB EU,PA,France,Equity
+627,FR0011550185,EUR,FP,S&P 500 Net TR;;ESE,ETF,BNP Paribas Easy S&P 500 UCITS ETF EUR Capitalisation;;;BNPP SP500 EUR C,PA,France,Equity
+628,LU0496786574,EUR,FP,S&P 500;;SP5,ETF,Lyxor S&P 500 UCITS ETF - Dist;;;LYXOR ETF SP500,PA,France,Equity
+629,NL0010408704,EUR,FP,VanEck Sustainable World Index;;TSWE,ETF,VanEck Vectors Sustainable World Equal Weight UCITS ETF;;;VanEck ESG EW,PA,France,Equity
+630,FR0010429068,EUR,FP,MSCI Emerging Markets;;LEM,ETF,Lyxor MSCI Emerging Markets UCITS ETF - C-EUR;;;LYXOR ETF MSCI EM,PA,France,Equity
+631,LU1681048630,EUR,FP,S&P Global Luxury;;GLUX,ETF,AMUNDI S&P GLOBAL LUXURY UCITS ETF - EUR;;;AMUNDI GLOBAL LUX,PA,France,Equity
+632,IE00BYTRRD19,EUR,FP,MSCI World Info Tech 35/20;;WTCH,ETF,SPDR MSCI WORLD TECHNOLOGY UCITS ETF;;;SPDR MSCI W TECH,PA,France,Equity
+633,LU0252633754,EUR,FP,DAX;;DAX,ETF,Lyxor DAX (DR) UCITS ETF - Acc;;;LYXOR ETF DAX,PA,France,Equity
+634,LU0629460832,EUR,FP,MSCI Pacific SRI Low Carbon IC;;UIMT,ETF,UBS (Lux) Fund Solutions - MSCI Pacific Socially R;;;UBS ETF PSRUSA,PA,France,Equity
+635,LU1861138961,EUR,FP,MSCI EM SRI;;EMSRI,ETF,AMUNDI INDEX MSCI EMERGING MARKETS SRI UCITS ETF DR;;;AMUNDI MSCI EM SRI,PA,France,Equity
+636,IE00B14X4T88,EUR,FP,DJ Asia Pacific Select Div 50;;IAPD,ETF,iShares Asia Pacific Dividend UCITS ETF;;;ISHARES ASIA PACIF,PA,France,Equity
+637,LU1681040223,EUR,FP,STOXX Europe 600;;C6E,ETF,AMUNDI STOXX EUROPE 600 UCITS ETF - EUR;;;AMUNDI ETF STOX600,PA,France,Equity
+638,IE00BKWQ0M75,EUR,FP,MSCI Europe Small Cap;;SMC,ETF,SPDR MSCI Europe Small Cap UCITS ETF;;;SPDR EU SM.CAP,PA,France,Equity
+639,IE00B02KXK85,EUR,FP,FTSE China 50;;FXC,ETF,iShares China Large Cap UCITS ETF;;;ISHARES CHINA 50,PA,France,Equity
+640,LU1792117340,EUR,FP,EMU ESG and Trend Leaders;;EESG,ETF,Lyxor MSCI EMU ESG LeadersExtra (DR) UCITS ETF - Acc;;;Lyxor EMU ESG Lead,PA,France,Equity
+641,IE00B3YCGJ38,EUR,FP,S&P 500 Index;;SPXS,ETF,Invesco S&P 500 UCITS ETF;;;IVZ S&P 500,PA,France,Equity
+642,FR0010361683,EUR,FP,MSCI India;;INR,ETF,Lyxor MSCI India UCITS ETF - Acc;;;LYXOR ETF INDIA,PA,France,Equity
+643,FR0010468983,EUR,FP,EURO STOXX 50 Daily Leverage;;LVE,ETF,Lyxor EURO STOXX 50 Daily (2x) Leveraged UCITS ETF - Acc;;;LYXOR ETF SX50 DL,PA,France,Equity
+644,IE00B0M62Q58,EUR,FP,MSCI World;;IWRD,ETF,iShares MSCI World UCITS ETF (Dist);;;ISHARES WORLD,PA,France,Equity
+645,LU1834988278,EUR,FP,STX EU 600 Oil & Gas Net Re EU;;OIL,ETF,LYXOR STOXX EUROPE 600 OIL & GAS UCITS ETF - ACC;;;LYXOR ST EU OILGAS,PA,France,Equity
+646,LU2182388400,EUR,FP,MSCI WORLD Climate Change PAB,Capitalisation,PABW,ETF,AMUNDI MSCI WORLD CLIMATE PARIS ALIGNED PAB UCITS ETF DR - USD (C);;;AMUNDI WRD CLIMPAB,PA,France,Equity
+647,LU1646359452,EUR,FP,MSCI Jap ESG Rating Trend Lead;;JPX4,ETF,Lyxor MSCI Japan ESG Leaders Extra (DR) UCITS ETF;;;LYXOR JAPAN ESG,PA,France,Equity
+648,FR0013380607,EUR,FP,CAC 40 Total Return Index;;CACC,ETF,LYXOR CAC 40 (DR) UCITS ETF;;;LYXOR CAC40 ACC,PA,France,Equity
+649,LU1681043912,EUR,FP,MSCI China H;;CC1,ETF,AMUNDI MSCI CHINA UCITS ETF - EUR;;;AMUNDI ETF MS CHN,PA,France,Equity
+650,GB00B00FHZ82,EUR,FP,Physical Gold Price;;GBS,ETC,Gold Bullion Securities;;;GOLD BULLION SEC,PA,France,Equity
+651,IE00B02KXM00,EUR,FP,EURO STOXX Small;;DJSC,ETF,iShares EURO STOXX Small UCITS ETF;;;ISHARES ESTOXX SML,PA,France,Equity
+652,IE0032077012,EUR,FP,NASDAQ-100;;EQQQ,ETF,Invesco EQQQ Nasdaq-100 UCITS ETF;;;IVZ EQQQ,PA,France,Equity
+653,FR0013412020,EUR,FP,MSCI Emerging Markets,Capitalisation,PAEEM,ETF,AMUNDI ETF PEA MSCI EMERGING MARKETS UCITS ETF - EUR;;;AMUNDI PEA MSCI EM,PA,France,Equity
+654,IE00B441G979,EUR,FP,MSCI World Hedged EUR,Capitalisation,IWDE,ETF,iShares MSCI World EUR Hedged UCITS ETF (Acc);;;MSCI WRD EH,PA,France,Equity
+655,SE0009723000,NOK,FP,OBX Index;;OBXXD,ETF,XACT OBX Bear (UCITS ETF);;;XACT OBX Bear ETF,PA,France,Equity
+656,NL0009272749,EUR,FP,AEX;;TDT,ETF,VanEck Vectors AEX UCITS ETF;;;VanEck AEX,PA,France,Equity
+657,IE00B53L3W79,EUR,FP,EURO STOXX 50;;CSX5,ETF,iShares Core EURO STOXX 50 UCITS ETF EUR (Acc);;;iSHR ESTX50 B A,PA,France,Equity
+658,IE00BFD2H405,EUR,FP,ISE Cloud Computing Index;;SKYE,ETF,First Trust Cloud Computing UCITS ETF;;;FT CLOUD COM,PA,France,Equity
+659,LU1602144732,EUR,FP,MSCI Japan;;CJ1,ETF,AMUNDI INDEX MSCI JAPAN - UCITS ETF DR - EUR;;;AMUNDI MSCI JAP E,PA,France,Equity
+660,FR0010245514,EUR,FP,Topix;;JPN,ETF,Lyxor Japan (TOPIX) (DR) UCITS ETF - D-EUR;;;LYXOR ETF TOPIX,PA,France,Equity
+661,IE00B3VVMM84,EUR,FP,FTSE Emerging Markets Index;;VFEM,ETF,Vanguard FTSE Emerging Markets UCITS ETF;;;VANGUARD FTSE EM,PA,France,Equity
+662,IE00B4K48X80,EUR,FP,MSCI Europe,Capitalisation,IMAE,ETF,iShares Core MSCI Europe UCITS ETF EUR (Acc);;;ISHARES MSCI EUR A,PA,France,Equity
+663,LU0252634307,EUR,FP,LevDAX;;LVD,ETF,Lyxor Daily LevDAX UCITS ETF - Acc;;;LYXOR ETF LEVDAX,PA,France,Equity
+664,LU1861134382,EUR,FP,MSCI World SRI 5% Capped;;WSRI,ETF,AMUNDI INDEX MSCI WORLD SRI UCITS ETF DR;;;AMUNDI MSCI WD SRI,PA,France,Equity
+665,LU1291103338,USD,FP,MSCI USA SRI S-Series 5%Cap;;EKLD,ETF,BNP Paribas Easy MSCI USA SRI S-Series 5% Capped;;;BNP MSCI US SRI UC,PA,France,Equity
+666,IE00BMTX1Y45,USD,FP,S&P 500 Index,Capitalisation,I500,ETF,iShares S&P 500 Swap UCITS ETF USD (Acc);;;IS S&P500 SWAP $A,PA,France,Equity
+667,IE00B4L5YX21,EUR,FP,MSCI Japan IMI;;IJPA,ETF,iShares Core MSCI Japan IMI UCITS ETF USD (Acc);;;ISHARES MSCI JAP A,PA,France,Equity
+668,IE00BK5H8015,EUR,FP,SXXRESGX,Capitalisation,600X,ETF,SPDR STOXX EUROPE 600 ESG SCREENED UCITS ETF;;;SPDR STOXX ESG,PA,France,Equity
+669,FR0010261198,EUR,FP,MSCI Europe Net;;MEU,ETF,Lyxor MSCI Europe (DR) UCITS ETF - Acc;;;LYXOR ETF MSCI EUR,PA,France,Equity
+670,LU1681046931,EUR,FP,Cac 40;;C40,ETF,AMUNDI CAC 40 UCITS ETF DR - EUR (C);;;AMUNDI ETF CAC 40,PA,France,Equity
+671,IE00BH4GPZ28,EUR,FP,S&P 500 ESG Exclusions II,Capitalisation,500X,ETF,SPDR S&P 500 ESG Screened UCITS ETF (Acc);;;SPDR SP 500ESG Acc,PA,France,Equity
+672,GB00B15KY104,EUR,FP,Bloomberg Natural Gas Sub TR;;NGASP,ETC,WT Natural Gas;;;WT NATURAL GAS,PA,France,Equity
+673,LU1753045928,EUR,FP,MSCI Japan SRI S-Series 5%Cap;;SRIJ,ETF,BNP Paribas Easy MSCI Japan SRI S-Series 5% Capped;;;BNP MSCI JP SRI ED,PA,France,Equity
+674,IE00BJ5JNZ06,USD,FP,MSCI World Health Care Index,Bi-Annually,WHCS,ETF,iShares MSCI World Health Care Sector UCITS ETF USD (Dist);;;ISHARES WHCS,PA,France,Equity
+675,IE00BKTLJC87,USD,FP,STOXX Glob Smrt Cty Infr Index,Capitalisation,CITY,ETF,iShares Smart City Infra UCITS ETF USD (Acc);;;ISHARES SCYIF ACC,PA,France,Equity
+676,FR0013416716,USD,FP,LBMA Gold Price PM USD,Capitalisation;;ETC,AMUNDI PHYSICAL GOLD ETC;;;AMUNDI PHYS GOLD,PA,France,Equity
+677,LU1681042609,EUR,FP,MSCI Europe;;CEU,ETF,AMUNDI MSCI EUROPE UCITS ETF - EUR;;;AMUNDI MSCI EUROPE,PA,France,Equity
+678,IE00B44T3H88,EUR,FP,MSCI China;;CNY,ETF,HSBC MSCI CHINA ETF;;;HSBC MSCI CHINA,PA,France,Equity
+679,LU1681042864,EUR,FP,MSCI USA;;CU2,ETF,AMUNDI MSCI USA UCITS ETF - EUR;;;AMUNDI ETF MSCI US,PA,France,Equity
+680,LU1681044308,EUR,FP,MSCI Europe ex Switzerland;;CS9,ETF,AMUNDI MSCI EUROPE EX SWITZERLAND UCITS ETF - EUR;;;AMUNDI ETF EU X SW,PA,France,Equity
+681,FR0013416716,EUR,FP,LBMA Gold Price PM USD,Capitalisation,GOLD,ETC,AMUNDI PHYSICAL GOLD ETC;;;AMUNDI PHYS GOLD,PA,France,Equity
+682,IE00B5KQNG97,EUR,FP,S&P 500;;HHH,ETF,HSBC SP 500 ETF;;;HSBC SP 500 ETF,PA,France,Equity
+683,FR0011871128,EUR,FP,S&P 500 Net Total Return;;PSP5,ETF,UCITS ETF PEA S&P 500 C-EUR;;;LYXOR SP500 PEA,PA,France,Equity
+684,JE00B1VS2W53,EUR,FP,Physical Platinum Price;;PHPT,ETC,Wisdom Tree Physical Platinum;;;WT PHYSIPLATINUM,PA,France,Equity
+685,LU1681038672,EUR,FP,Russell 2000;;RS2K,ETF,AMUNDI RUSSELL 2000 UCITS ETF - EUR;;;AMUNDI RUSSEL 2K,PA,France,Equity
+686,IE00B0M63730,EUR,FP,MSCI AC Far East ex Japan;;IFFF,ETF,iShares MSCI AC Far East ex Japan UCITS ETF;;;ISHARES EAST EX-JP,PA,France,Equity
+687,IE00B57X3V84,EUR,FP,DJ Sustainability World;;IGSG,ETF,iShares Dow Jones Global Sustainability Screened UCITS ETF USD (Acc);;;ISHARES DJ GLO SUS,PA,France,Equity
+688,LU1834988518,EUR,FP,STOXX EU 600 Tech NR EUR;;TNO,ETF,LYXOR STOXX EUROPE 600 TECHNOLOGY UCITS ETF - ACC;;;LYXOR STX EU TECH,PA,France,Equity
+689,LU0629460675,EUR,FP,MSCI EMU SRI Low Carbon 5% IC;;UIMR,ETF,UBS (Lux) Fund Solutions - MSCI EMU Socially Respo;;;UBS ETF ESREUA,PA,France,Equity
+690,IE00B3ZW0K18,EUR,FP,S&P 500;;IUES,ETF,iShares S&P 500 EUR Hedged UCITS ETF (Acc);;;SP 500 EH,PA,France,Equity
+691,LU0629459743,EUR,FP,MSCI World Low Carbon 5% IC;;UIMM,ETF,UBS (Lux) Fund Solutions - MSCI World Socially Res;;;UBS ETF WSRUSA,PA,France,Equity
+692,LU1437018838,EUR,FP,FTSE EPRA/NAREIT Developed;;EPRA,ETF,AMUNDI INDEX FTSE EPRA NAREIT GLOBAL UCITS ETF DR;;;AMUNDI EPRA DR,PA,France,Equity
+693,FR0011869353,EUR,FP,MSCI World;;EWLD,ETF,LYXOR UCITS ETF PEA MSCI WORLD C-EUR;;;LYXOR MSCI WOR PEA,PA,France,Equity
+694,GB00B15KY765,EUR,FP,Bloomberg Wheat Subindex TR;;WEATP,ETC,WT Wheat;;;WT WHEAT,PA,France,Equity
+695,NL0009690239,EUR,FP,VanEck Global Real Estate;;TRET,ETF,VanEck Vectors Global Real Estate UCITS ETF;;;VanEck Real Estate,PA,France,Equity
+696,LU1861136247,EUR,FP,MSCI USA SRI;;USRI,ETF,AMUNDI INDEX MSCI USA SRI UCITS ETF DR;;;AMUNDI MSCI US SRI,PA,France,Equity
+697,IE00BKTLJB70,USD,FP,STOXX Glob Smrt Cty Infr Index,Bi-Annually,CT2B,ETF,iShares Smart City Infra UCITS ETF USD (Dist);;;ISHARES SCYIF DIST,PA,France,Equity
+698,FR0010756114,EUR,FP,MSCI World ex EMU,Annually,CM9,ETF,AMUNDI ETF MSCI WORLD EX EMU UCITS ETF;;;AMUNDI ETF W X EMU,PA,France,Equity
+699,IE00B95PGT31,EUR,FP,FTSE Japan Index;;VJPN,ETF,VANGUARD FTSE Japan UCITS ETF;;;VANGUARD FTSE JPN,PA,France,Equity
+700,LU1923627092,EUR,FP,MSCI Rus IMI Select GDR NTR US,Capitalisation,RUS,ETF,LYXOR MSCI RUSSIA UCITS ETF - ACC;;;LYXOR ETF RUSSIA,PA,France,Equity
+701,LU1861132840,EUR,FP,STOXX AI Global Artificial Int;;GOAI,ETF,AMUNDI STOXX GLOBAL ARTIFICIAL INTELLIGENCE UCITS ETF;;;AMUNDI STOXX GL AI,PA,France,Equity
+702,FR0010527275,EUR,FP,MSCI ACWI IMI Water ESG NTR;;WAT,ETF,Lyxor MSCI Water ESG Filtered (DR) UCITS ETF - Dist;;;LYXOR ETF W WATER,PA,France,Equity
+703,LU1135865084,EUR,FP,S&P 500 Total Return Index;;SP5C,ETF,Lyxor S&P 500 UCITS ETF - Acc;;;LYXOR SP500 C,PA,France,Equity
+704,LU0533033667,EUR,FP,MSCI World IT;;TNOW,ETF,Lyxor MSCI World Information Technology TR UCITS ETF - Acc;;;LYXOR ETF MSC WTEC,PA,France,Equity
+705,IE00BYTRRB94,EUR,FP,MSCI World Health Care 35/20;;WHEA,ETF,SPDR MSCI WORLD HEALTH CARE UCITS ETF;;;SPDR MSCI W HEALTH,PA,France,Equity
+706,LU1327051279,EUR,FP,S&P 500 2X Inverse Daily Index;;DSP5,ETF,Lyxor S&P 500 Daily (-2x) Inverse UCITS ETF;;;LYXOR 2XSHRT SP500,PA,France,Equity
+707,IE00BKX55R35,EUR,FP,FTSE North America Index;;VNRT,ETF,Vanguard FTSE North America UCITS ETF;;;VANGUARD FTSE NA,PA,France,Equity
+708,LU1681042518,EUR,FP,MSCI Europe Value;;CV9,ETF,AMUNDI MSCI Europe Value Factor UCITS ETF - EUR;;;AMUNDI ETF EU VALU,PA,France,Equity
+709,IE00BKWQ0C77,EUR,FP,MSCI Eur Consum Discry 35/20;;STR,ETF,SPDR MSCI Europe Consumer Discretionary UCITS ETF;;;SPDR MSCI CO.DI,PA,France,Equity
+710,LU1829218749,EUR,FP,T&Reuters/CoreCommo CRB TR;;CRB,ETF,Lyxor Commodities Refinitiv/CoreCommodity CRB TR UCITS ETF;;;LYXOR COMMO CRB,PA,France,Equity
+711,FR0011871136,EUR,FP,S&P 500 Daily Hedged Euro,Capitalisation,PSPH,ETF,LYXOR PEA S&P 500 UCITS ETF - COUVERTE EN EUR - CAPI.;;;LYXOR PEA SP5H EUR,PA,France,Equity
+712,IE00BYTRR970,EUR,FP,MSCI World Financials 35/20;;WFIN,ETF,SPDR MSCI WORLD FINANCIALS UCITS ETF;;;SPDR MSCI W FINCLS,PA,France,Equity
+713,SE0009723034,NOK,FP,OBX Index;;OBXXU,ETF,XACT OBX Bull (UCITS ETF);;;XACT OBX Bull ETF,PA,France,Equity
+714,LU1615092217,EUR,FP,MSCI World SRI S-Series 5%Cap;;EMWE,ETF,BNP Paribas Easy MSCI World SRI S-Series 5% Capped;;;BNP WORLD SRI EC,PA,France,Equity
+715,LU1834988195,EUR,FP,STOXX Eu 600 Media Net Ret EUR,Capitalisation,MDA,ETF,LYXOR STOXX EUROPE 600 MEDIA UCITS ETF - ACC;;;LYXOR STX600 MEDIA,PA,France,Equity
+716,IE00BKWQ0H23,EUR,FP,MSCI Europe Health Care 35/20;;STW,ETF,SPDR MSCI Europe Health Care UCITS ETF;;;SPDR MSCI HLT,PA,France,Equity
+717,FR0013041530,EUR,FP,S&P 500 Daily Euro Hedged;;ESEH,ETF,BNP Paribas Easy S&P 500 UCITS ETF EUR Hedged Capitalisation;;;BNPP SP500 EURH C,PA,France,Equity
+718,LU1681047236,EUR,FP,EURO STOXX 50;;C50,ETF,AMUNDI EURO STOXX 50 UCITS ETF DR - EUR (C);;;AMUNDI ETF ES50 C,PA,France,Equity
+719,IE00BFXR7892,USD,FP,CSI Overseas China Internet;;KWEB,ETF,KraneShares CSI China Internet UCITS ETF USD;;;KRANE CSI INTERNET,PA,France,Equity
+720,LU1437018838,USD,FP,FTSE EPRA/NAREIT Developed;;EPRU,ETF,AMUNDI INDEX FTSE EPRA NAREIT GLOBAL UCITS ETF DR;;;AMUNDI EPRA DR U,PA,France,Equity
+721,IE00BKWQ0G16,EUR,FP,MSCI Europe Financials 35/20;;STZ,ETF,SPDR MSCI Europe Financials UCITS ETF;;;SPDR MSCI FINANC,PA,France,Equity
+722,LU1291099718,EUR,FP,MSCI Europe ex Controversial W;;EEUE,ETF,BNP Paribas Easy MSCI Europe ex Controversial Weapons UCITS ETF Capitalisation;;;BNPP EU ETF,PA,France,Equity
+723,LU1681049018,USD,FP,S&P 500;;500U,ETF,AMUNDI S&P 500 UCITS ETF - USD;;;AMUNDI ETF SP500 B,PA,France,Equity
+724,FR0011869270,EUR,FP,Dow Jones Industrial Average;;PDJE,ETF,LYXOR UCITS ETF PEA DOW JONES INDUSTRIAL AVERAGE C-EUR;;;LYXOR DJIA PEA,PA,France,Equity
+725,FR0010150458,EUR,FP,Euronext CAC40 ESG GrossReturn;;E40,ETF,BNP Paribas EASY CAC 40(R) ESG UCITS ETF;;;BNPP CAC 40 ESG,PA,France,Equity
+726,LU1437016972,EUR,FP,MSCI World;;MWRD,ETF,AMUNDI INDEX MSCI WORLD UCITS ETF DR;;;AMUNDI MSCI WLD DR,PA,France,Equity
+727,LU1681042948,USD,FP,MSCI USA;;CU2U,ETF,AMUNDI MSCI USA UCITS ETF - USD;;;AMUNDI ETF USA-B,PA,France,Equity
+728,IE00BKBF6616,USD,FP,MSCI EMU NTR Local Index,Capitalisation,CEUU,ETF,iShares Core MSCI EMU UCITS ETF USD Hedged (Acc);;;ISHARES EMU USD H,PA,France,Equity
+729,LU1681048127,EUR,FP,S&P 500 Buyback;;BYBE,ETF,AMUNDI S&P 500 BUYBACK UCITS ETF - EUR;;;AMUNDI S&P BBck EU,PA,France,Equity
+730,FR0010010827,EUR,FP,FTSE MIB;;MIB,ETF,Lyxor FTSE MIB (DR) UCITS ETF - Dist;;;LYXOR ETF FTSE MIB,PA,France,Equity
+731,IE00B6YX5C33,EUR,FP,S&P 500 Index;;SPY5,ETF,SPDR S&P 500 UCITS ETF;;;SPDR S&P 500,PA,France,Equity
+732,LU1437017350,USD,FP,MSCI Emerging Markets;;;ETF,AMUNDI INDEX MSCI EMERGING MARKETS UCITS ETF DR;;;AMUNDI MSCI EM DR,PA,France,Equity
+733,IE00B3YLTY66,EUR,FP,MSCI ACWI IMI;;IMIE,ETF,SPDR MSCI ACWI UCITS ETF;;;SPDR ACWI IMI,PA,France,Equity
+734,LU2109787395,USD,FP,MSCI USA ESG LEADERS SELECT 5%,Capitalisation,SADU,ETF,AMUNDI MSCI USA ESG LEADERS SELECT UCITS ETF DR (C);;;AMUNDI US ESG LEAD,PA,France,Equity
+735,FR0014002IH8,EUR,FP,MELANION BITCOIN EXPOSURE IDX,Capitalisation,BTC,ETF,MELANION BTC EQUITIES UNIVERSE UCITS ETF;;;BITCOIN ETF EUR,PA,France,Equity
+736,IE00BJXRT813,EUR,FP,NU720342,Capitalisation,WVAL,ETF,SPDR MSCI World Value UCITS ETF (Acc);;;SPDR MSCI WLD VAL,PA,France,Equity
+737,LU1834983550,EUR,FP,STX EU 600 BAS RES NR EUR;;BRE,ETF,LYXOR STOXX EUROPE 600 BASIC RESOURCES UCITS ETF - ACC;;;LYXOR STX EU BA RE,PA,France,Equity
+738,JE00B1VS3333,EUR,FP,Physical Silver Price;;PHAG,ETC,Wisdom Tree Physical Silver;;;WT PHYSICAL SILVER,PA,France,Equity
+739,LU1681037864,EUR,FP,TOPIX Euro Daily Hedged;;TPXH,ETF,AMUNDI JAPAN TOPIX UCITS ETF - DAILY HEDGED EUR;;;AMUNDI TOPIX HDG,PA,France,Equity
+740,LU1681041460,EUR,FP,MSCI Europe Momentum;;MCEU,ETF,AMUNDI MSCI EUROPE MOMENTUM FACTOR UCITS ETF - EUR;;;AMUNDI MSCI EURMOM,PA,France,Equity
+741,FR0011363423,EUR,FP,MSCI USA ESG Broad Select NTR;;USAC,ETF,Lyxor MSCI USA ESG (DR) UCITS ETF - Acc;;;LYXOR ETF USAC,PA,France,Equity
+742,IE00BKX55S42,EUR,FP,FTSE Developed Europ ex UK Ind;;VERX,ETF,Vanguard FTSE Developed Europe ex UK UCITS ETF;;;VANGUARD FTSE DE,PA,France,Equity
+743,LU1377382368,EUR,FP,Low Carbon 100 Europe PAB NTR;;ECN,ETF,BNP Paribas Easy Low Carbon 100 Europe PAB;;;BNPP EASY LOWCARB,PA,France,Equity
+744,IE00BKT6FV49,EUR,FP,MSCI Japan IMI USD Net,Bi-Annually,SJPE,ETF,iShares Core MSCI Japan IMI UCITS ETF EUR Hedged (;;;ISHARES MSCI JAPEH,PA,France,Equity
+745,LU1646359452,JPY,FP,MSCI Jap ESG Rating Trend Lead;;JPXY,ETF,Lyxor MSCI Japan ESG Leaders Extra (DR) UCITS ETF;;;LYXOR JAPAN ESG,PA,France,Equity
+746,LU1753045415,EUR,FP,MSCI Europe SRI S-Series 5%Cap;;SRIE,ETF,BNP Paribas Easy MSCI Europe SRI S-Series 5% Capped;;;BNP MSCI EU SRI ED,PA,France,Equity
+747,FR0013412012,EUR,FP,MSCI Emerging Markets Asia,Capitalisation,PAASI,ETF,AMUNDI ETF PEA MSCI EMERGING ASIA UCITS ETF - EUR;;;AMUNDI PEA EM ASIA,PA,France,Equity
+748,LU1861136247,USD,FP,MSCI USA SRI;;;ETF,AMUNDI INDEX MSCI USA SRI UCITS ETF DR (C);;;AMUNDI MSCI USRI U,PA,France,Equity
+749,FR0011869387,EUR,FP,Dow Jones Russia GDR;;PRUS,ETF,LYXOR UCITS ETF PEA RUSSIA (Dow Jones Russia GDR) C-EUR;;;LYXOR RUSSIA PEA,PA,France,Equity
+750,FR0011882364,EUR,FP,MSCI ACWI IMI Water ESG NTR;;AWAT,ETF,Lyxor PEA Eau (MSCI Water) UCITS ETF - Capi.;;;LYXOR W WATER PEA,PA,France,Equity
+751,FR0011871078,EUR,FP,MSCI China NTR Index;;PASI,ETF,Lyxor PEA Chine (MSCI China) UCITS ETF - Capi;;;Lyxor Chine PEA,PA,France,Equity
+752,IE00B466KX20,EUR,FP,MSCI EM Asia;;EMAE,ETF,SPDR MSCI EM Asia UCITS ETF;;;SPDR EM Asia,PA,France,Equity
+753,LU1048313891,EUR,FP,MSCI EM SRI Low Carbon 5% IC;;UEF5,ETF,UBS (Lux) Fund Solutions - MSCI Emerging Markets S;;;UBS ETF MSRUSA,PA,France,Equity
+754,LU1291102447,EUR,FP,MSCI Japan ex Controversial We;;EJAP,ETF,BNP Paribas Easy MSCI Japan ex CW UCITS ETF Capitalisation;;;BNPP JP ETF,PA,France,Equity
+755,LU1291098827,EUR,FP,MSCI EMU ESG Filt Min TE NTR;;EEMU,ETF,BNP Paribas Easy MSCI EMU ESG Filtered Min TE;;;BNPP EMU ESG ETF,PA,France,Equity
+756,IE00B4X9L533,EUR,FP,MSCI World;;WRD,ETF,HSBC MSCI WORLD;;;HSBC MSCI WORLD,PA,France,Equity
+757,LU1681044563,USD,FP,MSCI Emerging Markets Asia;;AASU,ETF,AMUNDI MSCI EM ASIA UCITS ETF - USD;;;AMUNDI ETF EM AS U,PA,France,Equity
+758,IE00BJ5JPG56,USD,FP,MSCI China Index,Capitalisation,ICHN,ETF,iShares MSCI China UCITS ETF - USD (Acc);;;ISHARES CHINA U A,PA,France,Equity
+759,IE00BYPLS672,EUR,FP,ISE Cyber Sec UCITS Ind NTR;;ISPY,ETF,L&G Cyber Security UCITS ETF;;;L&G Cyber Security,PA,France,Equity
+760,IE00B02KXH56,EUR,FP,MSCI Japan;;IJPN,ETF,iShares MSCI Japan UCITS ETF (Dist);;;ISHARES JAPAN,PA,France,Equity
+761,LU1900066207,EUR,FP,MSCI Brazil NTR USD Index,Capitalisation,RIO,ETF,LYXOR MSCI BRAZIL UCITS ETF - ACC;;;LYXOR MSCI BRAZIL,PA,France,Equity
+762,FR0007056841,EUR,FP,Dow Jones Industrial Average;;DJE,ETF,Lyxor Dow Jones Industrial Average UCITS ETF - Dist;;;LYXOR ETF DJIA,PA,France,Equity
+763,LU1646360971,EUR,FP,MSCI EMU Net Return EUR Index;;MFE,ETF,Lyxor Core MSCI EMU (DR) UCITS ETF - Dist;;;Lyxor Core EMU,PA,France,Equity
+764,SE0009723026,NOK,FP,OBX Index;;OBXX,ETF,XACT OBX (UCITS ETF);;;XACT OBX ETF,PA,France,Equity
+765,LU1681044480,EUR,FP,MSCI Emerging Markets Asia;;AASI,ETF,AMUNDI MSCI EM ASIA UCITS ETF - EUR;;;AMUNDI ETF EM ASIA,PA,France,Equity
+766,IE00B4L5YC18,EUR,FP,MSCI Emerging Markets,Capitalisation,IEMA,ETF,iShares MSCI EM UCITS ETF USD (Acc);;;ISHARES MSCI EM A,PA,France,Equity
+767,LU1900068914,EUR,FP,MSCI Ch Sel ESG Rat Trend Lead;;ASI,ETF,Lyxor MSCI China ESG Leaders Extra(DR) UCITS ETF - Acc;;;LYXOR CHINA ENTP,PA,France,Equity
+768,IE00BKWQ0P07,EUR,FP,MSCI Europe Utilities 35/20;;STU,ETF,SPDR MSCI Europe Utilities UCITS ETF;;;SPDR MSCI UTIL,PA,France,Equity
+769,IE00B5V87390,EUR,FP,MSCI Russia ADR/GDR 20/35;;CSRU,ETF,iShares MSCI Russia ADR/GDR UCITS ETF USD (Acc);;;iSHR Russia ADR,PA,France,Equity
+770,GB00B15KXV33,EUR,FP,Bloomberg WTI Crude Oil Sub TR;;CRUDP,ETC,WT WTI Crude Oil;;;WT CRUDE OIL,PA,France,Equity
+771,LU1861137484,EUR,FP,MSCI Europe SRI;;EUSRI,ETF,AMUNDI INDEX MSCI EUROPE SRI UCITS ETF DR;;;AMUNDI MSCI EU SRI,PA,France,Equity
+772,IE00B0M63284,EUR,FP,FTSE EPRA/NAREIT Europe Div+;;IPRP,ETF,iShares European Property Yield UCITS ETF;;;ISHARES PROP EURO,PA,France,Equity
+773,IE00B42Z5J44,EUR,FP,MSCI Japan Hedged EUR;;IJPE,ETF,iShares MSCI Japan EUR Hedged UCITS ETF (Acc);;;MSCI JAP EH,PA,France,Equity
+774,IE00B1FZS350,EUR,FP,FTSE EPRA/NAREIT Global Div+;;IWDP,ETF,iShares Developed Markets Property Yield UCITS ETF USD (Dist);;;ISHARES PROP GLO,PA,France,Equity
+775,IE00BYYXBF44,EUR,FP,FTSE Emerging High Div Low Vol;;EMHD,ETF,Invesco FTSE Emerging Markets High Dividend Low Volatility UCITS ETF;;;IVZ FTSE EM HDLV,PA,France,Equity
+776,XS2297549128,EUR,FP,iSTOXX Leveraged 3x TSLA Index,Capitalisation,3TSL,ETF,Leverage Shares 3x Tesla ETP Securities;;;LS 3X TESLA,PA,France,Equity
+777,IE00BGDQ0T50,USD,FP,M1EMS Index,Bi-Annually,SEMD,ETF,iShares MSCI EM SRI UCITS ETF USD (Dist);;;ISHARES EM SRI USD,PA,France,Equity
+778,FR0011550177,USD,FP,S&P 500 Net TR;;ESD,ETF,BNP Paribas Easy S&P 500 UCITS ETF USD Capitalisation;;;BNPP SP500 USD C,PA,France,Equity
+779,LU1681037781,JPY,FP,TOPIX;;TPXY,ETF,AMUNDI JAPAN TOPIX UCITS ETF - JPY;;;AMUNDI TOPIX JPY,PA,France,Equity
+780,IE00B52MJY50,EUR,FP,MSCI Pacific Ex Japan;;CPXJ,ETF,iShares Core MSCI Pcfic ex-Jpn UCITS ETF USD (Acc);;;iSHR Pac xJpn A,PA,France,Equity
+781,FR0011660927,EUR,FP,MSCI World NTR;;WLDH,ETF,Lyxor MSCI World UCITS ETF - Monthly Hedged to EUR - Dist;;;LYXOR ETF MSCI WDH,PA,France,Equity
+782,LU1437017863,EUR,FP,S&P 500 ESG;;S500,ETF,AMUNDI S&P 500 ESG UCITS ETF DR - EUR (C);;;AM S&P500 ESG ETF,PA,France,Equity
+783,LU1598690169,EUR,FP,MSCI EMU Value NR;;VAL,ETF,Lyxor MSCI EMU Value (DR) UCITS ETF - Dist;;;LYXOR EMU VALUE,PA,France,Equity
+784,LU1291109616,EUR,FP,BNP Paribas Energy & Metals En;;GSCE,ETF,BNP Paribas Easy S&P GSCI Energy&Metals Capped Component 35/20 UCITS ETF EUR Capitalisation;;;BNPP GSCI ETF EUR,PA,France,Equity
+785,FR0010424135,EUR,FP,EURO STOXX 50;;BSX,ETF,Lyxor EURO STOXX50 Daily(-1x)Inverse UCITS ETF -Acc;;;LYXOR ETF SX50 DS,PA,France,Equity
+786,IE00BKWQ0J47,EUR,FP,MSCI Europe Industrials 35/20;;STQ,ETF,SPDR MSCI Europe Industrials UCITS ETF;;;SPDR MSCI INDUST,PA,France,Equity
+787,IE00B3CNHG25,EUR,FP,DAXglobal Gold Miners;;AUCO,ETF,L&G Gold Mining UCITS ETF;;;L&G Gold Mining,PA,France,Equity
+788,JE00B2NFTL95,EUR,FP;;;LBUL,ETC,WT 2x Daily Long Gold;;;WT DAILY LG2 GLD,PA,France,Equity
+789,GB00B15KXQ89,EUR,FP,Bloomberg Copper Subindex TR;;COPAP,ETC,WT Copper;;;WT COPPER,PA,France,Equity
+790,LU1291108642,USD,FP,MSCI World SRI S-Series 5%Cap;;EWRD,ETF,BNP Paribas Easy MSCI World SRI S-Series 5% Capped;;;BNP WORLD SRI UC,PA,France,Equity
+791,IE00BMX0DF60,USD,FP,DJ US Slct Med Eqpmt Cpd 3520,Capitalisation,UMDV,ETF,iShares US Medical Devices UCITS ETF USD (Acc);;;ISHARES UMDV USD A,PA,France,Equity
+792,FR0010717124,EUR,FP,CAC 40 Short,Annually,C4S,ETF,AMUNDI ETF SHORT CAC 40 DAILY UCITS ETF;;;AMUNDI ETF SH CAC,PA,France,Equity
+793,LU1650492173,EUR,FP,FTSE 100 Total Return Index GB;;L100,ETF,Lyxor FTSE 100 UCITS ETF - Acc;;;LYXOR FTSE 100,PA,France,Equity
+794,IE00BKVL7778,USD,FP,MSCI W MV ESG RdCrbnTrgt Indx,Capitalisation,MVEW,ETF,iShares Edge MSCI World Minimum Volatility ESG UCITS ETF USD (Acc);;;ISHARES WMVE ACC,PA,France,Equity
+795,LU1753045332,EUR,FP,MSCI Europe SRI S-Series 5%Cap,Capitalisation,SRIEC,ETF,BNP Paribas Easy MSCI Europe SRI S-Series 5% Capped;;;BNP MSCI EU SRI EC,PA,France,Equity
+796,LU1834986900,EUR,FP,STOXX EU 600 Healthcare NR EUR;;HLT,ETF,LYXOR STOXX EUROPE 600 HEALTHCARE UCITS ETF - ACC;;;LYXOR STX EU HLTHC,PA,France,Equity
+797,FR0010405431,EUR,FP,MSCI Greece IMI + Coca-Cola 20;;GRE,ETF,Lyxor MSCI Greece UCITS ETF;;;LYXOR MSCI GREECE,PA,France,Equity
+798,LU1681046006,EUR,FP,MSCI World Energy;;CWE,ETF,AMUNDI MSCI WORLD ENERGY UCITS ETF - EUR;;;AMUNDI ETF WLD NRJ,PA,France,Equity
+799,FR0011550193,EUR,FP,Stoxx Europe 600 TR;;ETZ,ETF,BNP Paribas Easy Stoxx Europe 600 UCITS ETF Capitalisation;;;BNPP Stoxx 600C,PA,France,Equity
+800,IE00BYTRR863,EUR,FP,MSCI World Energy 35/20;;WNRG,ETF,SPDR MSCI WORLD ENERGY UCITS ETF;;;SPDR MSCI W ENERGY,PA,France,Equity
+801,IE00B53QG562,EUR,FP,MSCI EMU;;CEMU,ETF,iShares Core MSCI EMU UCITS ETF;;;iSHR MSCI EMUSC,PA,France,Equity
+802,IE00BWBXM500,EUR,FP,IXMNTR;;SXLF,ETF,SPDR S&P U.S. FINANCIALS SELECT SECTOR UCITS ETF;;;SPDR US FINAN,PA,France,Equity
+803,LU1681044647,EUR,FP,MSCI Nordic Countries;;CN1,ETF,AMUNDI MSCI NORDIC UCITS ETF - EUR;;;AMUNDI ETF MS NOR,PA,France,Equity
+804,LU0533032420,EUR,FP,MSCI World Energy;;NRGW,ETF,Lyxor MSCI World Energy TR UCITS ETF - Acc;;;LYXOR ETF MSC WNRJ,PA,France,Equity
+805,IE00B14X4M10,EUR,FP,MSCI North America,Quarterly,INAA,ETF,iShares MSCI North America UCITS ETF;;;ISHARES N-AMERICA,PA,France,Equity
+806,LU1646359965,EUR,FP,MSCI Jp Sel ESG Rat Trend Lead;;JPXH,ETF,Lyxor MSCI Japan ESG LeadersExtra (DR) UCITS ETF - DailyHedged to EUR - Acc;;;LYXOR JAPAN ESG DH,PA,France,Equity
+807,FR0000021842,EUR,FP,BEL 20;;BEL,ETF,LYXOR UCITS ETF BEL 20 TR;;;LYXOR ETF BEL 20,PA,France,Equity
+808,FR0013411998,EUR,FP,TOPIX,Capitalisation,PTPXH,ETF,AMUNDI ETF PEA JAPAN TOPIX UCITS ETF - DAILY HEDGED EUR;;;AMUNDI PEA TOPIX H,PA,France,Equity
+809,IE00B0M63391,EUR,FP,MSCI Korea,Bi-Annually,IKRA,ETF,iShares MSCI Korea UCITS ETF (Dist);;;ISHARES KOREA,PA,France,Equity
+810,NL0011683594,EUR,FP,Morningstar Div Leaders Index;;TDIV,ETF,VanEck Vectors Morningstar Developed Markets Dividend Leaders UCITS ETF;;;VanEck High Div,PA,France,Equity
+811,LU1681041544,EUR,FP,MSCI Europe Mid Cap;;CEM,ETF,AMUNDI MSCI Europe Low Size Factor UCITS ETF - EUR;;;AMUNDI ETF EUR MID,PA,France,Equity
+812,FR0011871102,EUR,FP,Topix Gross Total Return;;PJPN,ETF,LYXOR UCITS ETF PEA JAPAN (TOPIX) C-EUR;;;LYXOR TOPIX PEA,PA,France,Equity
+813,FR0010655761,EUR,FP,MSCI UK,Annually,CU1,ETF,AMUNDI ETF MSCI UK UCITS ETF;;;AMUNDI ETF MSCI UK,PA,France,Equity
+814,LU1834983394,EUR,FP,STX EU 600 Auto&parts NR EUR,Capitalisation,AUT,ETF,LYXOR STOXX EUROPE 600 AUTOMOBILES & PARTS UCITS ETF;;;LYXOR STX 600 AUTO,PA,France,Equity
+815,LU2008763935,EUR,FP,FTSE EPRA Dev EU ex UK Green,Capitalisation,GREAL,ETF,BNP PARIBAS EASY FTSE EPRA NAREIT DEVELOPED EUROPE EX UK GREEN CTB;;;BNPP EU GREEN ETF,PA,France,Equity
+816,LU1659681586,EUR,FP,MSCI USA SRI S-Series 5%Cap,Capitalisation,EKLDC,ETF,BNP Paribas Easy MSCI USA SRI S-Series 5% Capped;;;BNP MSCI US SRI EC,PA,France,Equity
+817,LU1659681230,EUR,FP,MSCI Emerg SRI S-Series 5%Cap;;EMIS,ETF,BNP Paribas Easy MSCI Emerging SRI S-Series 5% Capped;;;BNP MSCI EM SRI EC,PA,France,Equity
+818,IE00BWBXM948,EUR,FP,IXTNTR;;SXLK,ETF,SPDR S&P U.S. TECHNOLOGY SELECT SECTOR UCITS ETF;;;SPDR US TECH,PA,France,Equity
+819,IE00BJXRZJ40,EUR,FP,Fox. Cybersecurity,Capitalisation,CYBR,ETF,Rize Cybersecurity and Data Privacy UCITS ETF;;;Rize Cybersec ETF,PA,France,Equity
+820,IE00BJ38QD84,EUR,FP,Russell 2000 Index;;R2US,ETF,SPDR Russell 2000 U.S. Small Cap UCITS ETF;;;SPDR RUSSELL 2K,PA,France,Equity
+821,LU2090063673,JPY,FP,MSCI Japan NTR Index,Bi-Annually,LJPN,ETF,Lyxor Core MSCI Japan (DR) UCITS ETF - Dist;;;Lyxor Core Japan,PA,France,Equity
+822,IE00B5M1WJ87,EUR,FP,S&P Euro HY Div Index;;EUDV,ETF,SPDR S&P Euro Dividend Aristocrtas UCITS ETF;;;SPDR EUR DIV ARIST,PA,France,Equity
+823,IE00BMDBMG37,USD,FP,MSCI EurSRI Sel Rd Fossil Fuel,Quarterly,IDSE,ETF,iShares MSCI Europe SRI UCITS ETF USD (Acc);;;ISHARES MES $ A,PA,France,Equity
+824,IE00BYTRRG40,EUR,FP,MSCI World Com Services 35/20;;WTEL,ETF,SPDR MSCI World Communication Services UCITS ETF;;;SPDR MSCI W COMM,PA,France,Equity
+825,FR0010869495,EUR,FP,ShortDAX;;DSD,ETF,Lyxor Daily ShortDAX x2  UCITS ETF - Acc;;;LYXOR ETF DAX DS2,PA,France,Equity
+826,LU0533033238,EUR,FP,MSCI World Health Care;;HLTW,ETF,Lyxor MSCI World Health Care TR UCITS ETF - Acc;;;LYXOR ETF MSC WHC,PA,France,Equity
+827,NL0009272780,EUR,FP,Multi-Asset Growth Allocation;;TOF,ETF,VanEck Vectors Multi-Asset Growth Allocation UCITS ETF;;;VanEck Growth,PA,France,Equity
+828,LU2023679090,EUR,FP,MSCI Future Mobility NTR;;ELCR,ETF,Lyxor MSCI Future Mobility ESG Filtered (DR) UCITS ETF- Acc;;;LYXOR FUTUR MOB,PA,France,Equity
+829,IE00BMWXKN31,EUR,FP,HANG SENG TECH INDEX,Capitalisation,HSTE,ETF,HSBC HANG SENG TECH UCITS ETF;;;HSBC HSENG TCH ETF,PA,France,Equity
+830,LU1900066462,EUR,FP,MSCI EM East Eur ex Ru NTR EUR,Capitalisation,CEC,ETF,LYXOR MSCI EASTERN EUROPE EX RUSSIA UCITS ETF - ACC;;;LYXOR ETF EASTERN,PA,France,Equity
+831,FR0011869205,EUR,FP,IBOVESPA;;PRIO,ETF,LYXOR UCITS ETF PEA Brazil (IBOVESPA) C-EUR;;;LYXOR BRAZIL PEA,PA,France,Equity
+832,FR0012739431,EUR,FP,EURO STOXX 50;;ETDD,ETF,BNP Paribas Easy EURO STOXX 50 UCITS ETF EUR Capitalisation;;;BNPP EUROSTOXX50 C,PA,France,Equity
+833,LU1437015735,EUR,FP,MSCI Europe;;CEU2,ETF,AMUNDI INDEX MSCI EUROPE UCITS ETF DR;;;AMUNDI MSCI EUR DR,PA,France,Equity
+834,LU1681038326,USD,FP,NASDAQ-100;;ANXU,ETF,AMUNDI NASDAQ-100 UCITS ETF - USD;;;AMUNDI ETF NDX-B,PA,France,Equity
+835,LU1437017863,USD,FP,S&P 500 ESG;;U500,ETF,AMUNDI S&P 500 ESG UCITS ETF DR - EUR (C);;;AM S&P500 ESGETFU,PA,France,Equity
+836,IE00B1FZS574,EUR,FP,MSCI Turkey;;ITKY,ETF,iShares MSCI Turkey UCITS ETF USD (Dist);;;ISHARES TURKEY,PA,France,Equity

@@ -52,6 +52,9 @@ stock_universe_request_parser.add_argument("order_type", type=str, required=Fals
 stock_universe_request_parser.add_argument("order_direction", type=str, required=False,
                                          help=" order_direction", default="")
 
+stock_universe_request_parser.add_argument("flat_list", type=int, required=False,
+                                         help=" flat_list", default=0)
+
 class HelloWord(Resource):
     # df['CustomRating'] = df.apply(lambda x: custom_rating(x['Genre'], x['Rating']), axis=1)
     def get(self):
@@ -265,6 +268,7 @@ class StockPrices(Resource):
         historical = args['historical']
         order_type = args['order_type']
         order_direction = args['order_direction']
+        flat_list = args['flat_list']
 
         tz = pytz.timezone('Europe/Paris')
 
@@ -273,7 +277,8 @@ class StockPrices(Resource):
                           codes=codes, order_type=order_type, order_direction=order_direction)
 
         if df is None or len(df) == 0:
-            return {}, 200
+            result = {} if flat_list == 0 else []
+            return result, 200
 
         df['full_code'] = df['Code'] + '.' + df['ExchangeCode']
         lstock = df['full_code'].tolist()
@@ -330,10 +335,12 @@ class StockPrices(Resource):
                     dict_prices[price['code']] = list()
                 dict_prices[price['code']].append(format_price_date(price, candle, data_type=data_type))
 
+        result = dict_prices if flat_list == 0 else list(dict_prices.values())
 
-        print('READ FROM THE DATABASE in {}!!'.format((s_now - datetime.now(tz)).total_seconds()))
 
-        return dict_prices, 200
+
+
+        return result, 200
 
 
 def format_price_date(price, candle, data_type='historical'):

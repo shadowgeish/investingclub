@@ -45,7 +45,7 @@ async def live_stock_prices():
     import json
 
     #server_run = '18.191.227.200' # localhost
-    server_run = 'http://localhost:5005' #'https://stocks.investingclub.io' # http://localhost:5001
+    server_run = 'https://stocks.investingclub.io' # http://localhost:5001
     #server_run = 'localhost'  # localhost
     collection_name = "real_time_prices"
     db_name = "asset_analytics"

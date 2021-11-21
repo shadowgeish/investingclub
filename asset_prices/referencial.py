@@ -181,7 +181,7 @@ def get_indx_cc_fx_universe(name="", type=""):
 
 
 def get_universe(name="", country="", type="", sector="",  skip=0, limit=5000,
-                 codes="", order_type ="last_price_volume", order_direction="desc"):
+                 codes="", order_type ="last_price_volume", asset_type ="", order_direction="desc"):
     import pandas as pd
     from pymongo import MongoClient, ASCENDING, DESCENDING
 
@@ -201,6 +201,8 @@ def get_universe(name="", country="", type="", sector="",  skip=0, limit=5000,
         query["General.Sector"] = {"$regex": '/*{}/*'.format(sector), "$options": 'i'}
     if len(type) > 0:
         query["General.Type"] = {"$regex": '/*{}/*'.format(type), "$options": 'i'}
+    if len(asset_type) > 0:
+        query["AssetType"] = {"$regex": '/*{}/*'.format(asset_type), "$options": 'i'}
 
     query["Active"] = 1
     if len(codes) > 0 and codes != 'All':
@@ -222,6 +224,7 @@ def get_universe(name="", country="", type="", sector="",  skip=0, limit=5000,
                 'General.CurrencyCode': 1,
                 'General.Type': 1,
                 'Exchange': 1,
+                'AssetType': 1,
                 'last_price_volume': 1,
                  order_type: 1,
                 'General.LogoURL': 1}
@@ -279,6 +282,7 @@ def get_universe(name="", country="", type="", sector="",  skip=0, limit=5000,
                               'Country':  itx['Country'],
                               'Currency': itx['General']['CurrencyCode'],
                               'Type': itx['General']['Type'],
+                              'AssetType': itx['AssetType'],
                               'ExchangeCode': itx['General']['Exchange'],
                               'Exchange': itx['General']['Exchange'],
                               'LastPriceVolume': itx['last_price_volume'] if 'last_price_volume' in itx.keys() else 0,
@@ -290,7 +294,7 @@ def get_universe(name="", country="", type="", sector="",  skip=0, limit=5000,
         # logger_get_ref.info(' result {}'.format(item_list))
         df = pd.DataFrame(item_list)
         # logger_get_ref.info(' df {}'.format(df))
-        df = df[['ISIN', 'Code', 'Name', 'Country', 'Exchange', 'Currency', 'Type', 'ExchangeCode', 'logo', 'LastPriceVolume']]
+        df = df[['ISIN', 'Code', 'Name', 'Country', 'Exchange', 'Currency', 'Type','AssetType', 'ExchangeCode', 'logo', 'LastPriceVolume']]
         #df['EsgScore'] = np.random.randint(150, 255, size=len(df))
         df['IndustryAverageEsgScore'] = np.random.randint(150, 800, size=len(df))
         df['Environmental'] = np.random.randint(150, 255, size=len(df))

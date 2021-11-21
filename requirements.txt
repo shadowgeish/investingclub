@@ -25,4 +25,5 @@ six==1.11.0
 statsmodels==0.11.1
 Sanic
 aiohttp
+scipy
 

@@ -5,7 +5,7 @@ from flask_socketio import SocketIO, emit
 from flask_cors import CORS, cross_origin
 from api.simulation import MonteCarloSimulation, AAbacktesting, MeanVarOptimization, MaxDiversification
 from api.stocks import StockUniverse, StockData, StockPricesOld, \
-    StockPrices, PushBulkIntradayStockPrices, StockDataAndPrices, HelloWord
+    StockPrices, PushBulkIntradayStockPrices, StockDataAndPrices, HelloWord, PortfolioAnalytics
 from flask_swagger_ui import get_swaggerui_blueprint
 
 application = app = Flask(__name__)
@@ -99,6 +99,7 @@ api.add_resource(StockDataAndPrices, '/stock_latest_prices/<string:codes>') # co
 api.add_resource(StockData, '/stock_data/<string:code>') #- Ok Add ESG data ok, Add mobile version (light)
 api.add_resource(StockPricesOld, '/stock_prices_old/<string:code>') # - to delete
 api.add_resource(PushBulkIntradayStockPrices, '/load_bulk_intraday_stock_prices')
+api.add_resource(PortfolioAnalytics, '/compute_portfolio_analytics')
 # name, exchange, description, asset class, esg ratings, financial data
 # ETF => composition, issuer logo, AUM,
 

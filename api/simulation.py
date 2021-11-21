@@ -156,8 +156,44 @@ class MaxDiversification(Resource):
 
     def get(self):
         import datetime
+        from flask import request
+        import datetime as dat
+        from api.utils import get_date_from_str_or_default
         args = aa_backtest_request_parser.parse_args()
-        return optimization(args), 200
+
+        start_date = dat.date.today() + dat.timedelta(-200)
+        end_date = dat.date.today() + dat.timedelta(1)
+        start_date = dat.datetime.combine(start_date, dat.time.min)
+        end_date = dat.datetime.combine(end_date, dat.time.min)
+        opto_settings = request.get_json()
+        print('opto_settings = {}'.format(opto_settings))
+        #start_date = get_date_from_str_or_default(None,
+        #                                          (dat.date.today() + dat.timedelta(-200)))
+        #end_date = get_date_from_str_or_default(None,
+        #                                        (dat.date.today() + dat.timedelta(1)))
+
+        jj = portfolio_optimization(
+            asset_codes=[ "OBLI.PA", "LQQ.PA", "STZ.PA", "CAC.PA", "SAN.PA", "AETH.PA", "ABTC.PA"],
+            optimisation_type='max_diversification',
+            optimisation_goal='max_diversification',
+            start_date=start_date,
+            end_date=end_date,
+            ret='dict')
+        #print('max_diversification = {}, type {}'.format(jj, type(jj)))
+        result = back_test_portfolio(
+            initial_asset_codes_weight=jj['weights'],
+            target_asset_codes_weight=jj['weights'],
+            rebalancing_frequency='weekly',
+            invested_amount=10000,
+            start_date=start_date,
+            end_date=end_date,
+            withdraw={'amount': 0, 'freq': 'yearly'},
+            contribution={'amount': 0, 'freq': 'monthly'},
+            ret='dict'
+        )
+        #print('result max_diversification backtest= {}'.format(result))
+        full_result = {'Opto':jj, 'Backtest': result}
+        return full_result, 200
 
 
 def optimization(args):
@@ -165,19 +201,16 @@ def optimization(args):
     # asset_codes, optimisation_goal, start_date = None, end_date = None,
     # rebalancing_frequency = 'monthly', target_return = 0.03, invested_amount = 10000,
     # nb_simul = 1000
-
+    import datetime
     start_date = (datetime.date.today() + datetime.timedelta(-3500))
     end_date = (datetime.date.today() + datetime.timedelta(1))
 
-    start_date =  (datetime.date.today() + datetime.timedelta(-3500)) if start_date is None else start_date
-    end_date = (datetime.date.today() + datetime.timedelta(1)) if start_date is None else start_date
-
     result = portfolio_optimization(
-        asset_codes=["BX4.PA", "CAC.PA", "500.PA", "AIR.PA"],
-        optimisation_goal='min_vol_for_return',
-        target_return=0.03,
+        asset_codes=["IWDA.LSE", "TDT.AS", "BX4.PA", "IAEX.AS", "VUSA.LSE", "STZ.PA", "LQQ.PA"],
+        optimisation_type='max_diversification',
+        optimisation_goal='max_diversification',
         start_date=start_date,
         end_date=end_date,
         ret='json')
 
-    return result
+    return result, 200

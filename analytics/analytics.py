@@ -6,7 +6,10 @@ Prices module
 """
 from datetime import date
 from asset_prices.prices import get_prices
+from api.utils import get_asset_type_grouping
 from tools.logger import logger_get_analytics
+from asset_prices.referencial import get_universe
+from api.utils import get_date_from_str_or_default
 from pypfopt import base_optimizer
 
 
@@ -365,12 +368,29 @@ def back_test_portfolio(
 
     df_full = df_full.apply(update_row, args=(dict_nb_share, contribution, withdraw, rebal, target_asset_codes_weight), axis=1)
 
-    logger_get_analytics.info("monte carlo from {} to {} done".format(start_date, end_date))
+    logger_get_analytics.info("back_test_portfolio from {} to {} done, columns {}".format(start_date, end_date, df_full.columns))
     logger_get_analytics.info(format(df_full))
     logger_get_analytics.info("--- %s seconds ---" % (time.time() - start_time))
+    df_full = df_full.loc[:, ~df_full.columns.duplicated()]
 
+    if 'date' in df_full.columns:
+        df_full['date'] = pd.to_numeric(df_full['date'].dt.strftime('%Y%m%d'))
+
+    if 'date_x' in df_full.columns:
+        if 'date' not in df_full.columns:
+            df_full['date'] = pd.to_numeric(df_full['date_x'].dt.strftime('%Y%m%d'))
+        del df_full['date_x']
+    if 'date_y' in df_full.columns:
+        if 'date' not in df_full.columns:
+            df_full['date'] = pd.to_numeric(df_full['date_y'].dt.strftime('%Y%m%d'))
+        del df_full['date_y']
+
+
+    df_full = df_full.replace(np.nan, 0)
     if ret == 'json':
         return df_full.to_json(orient='records')
+    if ret == 'dict':
+        return df_full.to_dict('records')
     else:
         return df_full
 
@@ -468,13 +488,22 @@ def portfolio_optimization(
         if end_date is None else end_date
 
     from dateutil import rrule
-    df_h_p = get_prices(asset_codes=asset_codes, ret='df',
-                                 start_date=datetime.datetime.combine(start_date, datetime.time.min),
-                                 end_date=datetime.datetime.combine(end_date, datetime.time.min),
-                                 )
+
+    df = get_universe(codes=",".join(asset_codes))
+
+    df['full_code'] = df['Code'] + '.' + df['ExchangeCode']
+    lstock = df['full_code'].tolist()
+
+    lstockAssetType = df.to_dict('records')
+
+    df_h_p = get_prices(asset_codes=lstock,start_date=start_date,end_date=end_date,
+                             type="historical", ret_code=1, ret='df')
+
 
     date_l = rrule.rrule(rrule.DAILY, dtstart=start_date, until=end_date)
     df_full = pd.DataFrame(index=date_l)
+
+    print('df_h_p={}'.format(df_h_p))
 
     for ac in asset_codes:
         data = df_h_p[df_h_p['code'] == ac].copy().sort_values(by=['converted_date'])
@@ -511,7 +540,7 @@ def portfolio_optimization(
         opt = EfficientFrontier(ret_bl, S_bl)
         opt.add_objective(objective_functions.L2_reg)
     if optimisation_type == 'max_diversification':
-        from non_convex_opto import MaxDiversification
+        from analytics.non_convex_opto import MaxDiversification
         logger_get_analytics.info(' max_diversification cov = {}'.format(cov_m))
         logger_get_analytics.info(' df_full  = {}'.format(df_full))
         cov_m = risk_models.risk_matrix(df_full)
@@ -547,6 +576,19 @@ def portfolio_optimization(
     weights = opt.clean_weights()
     output['weights'] = weights
     output['expected_return'], output['volatility'], output['sharpe_ratio'] = opt.portfolio_performance()
+    output['asset_type_weights'] = {}
+    print('lstockAssetType = {}'.format(lstockAssetType))
+
+    output['asset_type_weights'] = get_asset_type_grouping(lstockAssetType, output, group_by='weights')
+    ''' 
+    for stock_data in lstockAssetType:
+        if stock_data['AssetType'] not in output['asset_type_weights'].keys():
+            output['asset_type_weights'][stock_data['AssetType']] = output['weights'][
+                stock_data["Code"] + "." + stock_data["ExchangeCode"]]
+        else:
+            output['asset_type_weights'][stock_data['AssetType']] += output['weights'][
+                stock_data["Code"] + "." + stock_data["ExchangeCode"]]
+    '''
 
     #df_full = pd.DataFrame(weights.items(), columns=['Code', 'weights'])
 
@@ -557,6 +599,8 @@ def portfolio_optimization(
     if ret == 'json':
         import json
         return json.dumps(output)
+    elif ret == 'dict':
+        return output
     else:
         logger_get_analytics.info(format(df_full))
         df_full = pd.DataFrame(weights.items(), columns=['Code', 'weights'])
@@ -679,13 +723,32 @@ if __name__ == '__main__':
     )
 '''
     # , "LVC.PA"
+    import datetime as dat
+    start_date = dat.date.today() + dat.timedelta(-200)
+    end_date = dat.date.today() + dat.timedelta(1)
+    start_date = dat.datetime.combine(start_date, dat.time.min)
+    end_date = dat.datetime.combine(end_date, dat.time.min)
+
     jj = portfolio_optimization(
-        asset_codes=["IWDA.LSE", "TDT.AS", "BX4.PA", "IAEX.AS", "VUSA.LSE", "STZ.PA", "LQQ.PA"],
+        asset_codes=["BX4.PA","OBLI.PA", "LQQ.PA", "STZ.PA","CAC.PA","SAN.PA"],
         optimisation_type='max_diversification',
         optimisation_goal='max_diversification',
         start_date=start_date,
         end_date=end_date,
-        ret='json')
-    logger_get_analytics.info('max_diversification = {}'.format(jj))
+        ret='dict')
+
+    logger_get_analytics.info('max_diversification = {}, type {}'.format(jj,type(jj) ))
+    result = back_test_portfolio(
+        initial_asset_codes_weight=jj['weights'],
+        target_asset_codes_weight=jj['weights'],
+        rebalancing_frequency='monthly',
+        invested_amount=50,
+        start_date=start_date,
+        end_date=end_date,
+        withdraw={'amount': 0, 'freq': 'yearly'},
+        contribution={'amount': 50, 'freq': 'monthly'},
+        ret = 'json'
+    )
+    logger_get_analytics.info('result max_diversification backtest= {}'.format(result))
 
     #df.to_csv('/Users/sergengoube/PycharmProjects/investingclub/extract_{}.csv'.format(datetime.datetime.now()))

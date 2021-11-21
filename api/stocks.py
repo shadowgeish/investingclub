@@ -6,12 +6,15 @@ from flask_restful.reqparse import RequestParser
 from datetime import datetime
 from analytics.analytics import monte_carlo_portfolio_simul
 from asset_prices.referencial import get_universe
-
+from api.utils import get_date_from_str_or_default
 
 stock_universe_request_parser = RequestParser(bundle_errors=False)
 
 stock_universe_request_parser.add_argument("name", type=str, required=False,
                                         help="Stock name", default="")
+
+stock_universe_request_parser.add_argument("codes", type=str, required=False,
+                                        help="codes", default="")
 
 stock_universe_request_parser.add_argument("country", type=str, required=False,
                                         help="Country", default="")
@@ -49,6 +52,9 @@ stock_universe_request_parser.add_argument("historical", type=int, required=Fals
 stock_universe_request_parser.add_argument("order_type", type=str, required=False,
                                          help=" order_type", default="")
 
+stock_universe_request_parser.add_argument("asset_type", type=str, required=False,
+                                         help=" asset_type", default="")
+
 stock_universe_request_parser.add_argument("order_direction", type=str, required=False,
                                          help=" order_direction", default="")
 
@@ -80,9 +86,17 @@ class StockUniverse(Resource):
         limit = args['limit']
         order_type = args['order_type']
         order_direction = args['order_direction']
+        asset_type = args['asset_type']
+        codes = args['codes']
+        from flask import request
+        json_params = request.get_json()
+        print('json_params = {}'.format(json_params))
+        #codes = ""
+        #if json_params is not None:
+        #    codes = json_params['codes'] if 'codes' in json_params.keys() else ""
 
         df = get_universe(name=name, country=country, type=stock_type, sector=sector, skip=skip, limit=limit,
-                          order_type=order_type, order_direction=order_direction)
+                          order_type=order_type, asset_type=asset_type, order_direction=order_direction, codes=codes)
 
         # result = df.to_json(orient='records')
         result = df.to_dict(orient='records')
@@ -122,16 +136,6 @@ class StockUniverse(Resource):
 
         return result, 200
         '''
-
-def get_date_from_str_or_default(datestr, default_date_obj):
-    import datetime
-    try:
-        date_obj = datetime.datetime.strptime(datestr, '%Y%m%d')
-    except:
-        import sys
-        print("Oops!", sys.exc_info()[0], "occurred with string date =", datestr)
-        date_obj = default_date_obj
-    return date_obj
 
 
 class StockDataAndPrices(Resource):
@@ -282,7 +286,7 @@ class StockPrices(Resource):
 
         df['full_code'] = df['Code'] + '.' + df['ExchangeCode']
         lstock = df['full_code'].tolist()
-        universe = df.to_dict(orient='records')
+
         # else:
         #    lstock = codes.split(',')
         #    universe = lstock
@@ -601,6 +605,34 @@ class PushBulkIntradayStockPrices(Resource):
         update_bulk_prices(prices=prices, type='real_time')
 
         result = {'Load':'OK'}
+
+        print('json result {}'.format(result))
+
+        return result, 200
+
+
+class PortfolioAnalytics(Resource):
+    # df['CustomRating'] = df.apply(lambda x: custom_rating(x['Genre'], x['Rating']), axis=1)
+    def post(self):
+
+        from asset_prices.prices import get_prices, compute_portfolio_analytics
+        from datetime import datetime
+        import pytz
+        from flask import Flask, request, jsonify
+
+        tz = pytz.timezone('Europe/Paris')
+        paris_now = datetime.now(tz)
+        start_date = datetime.strptime(paris_now.strftime("%d%m%Y0700"), '%d%m%Y%H%M')
+        end_date = datetime.strptime(paris_now.strftime("%d%m%Y2300"), '%d%m%Y%H%M')
+
+        # Get POST data as json & read it as a DataFrame
+        params_list = request.get_json()
+
+        print('params_list {}'.format(params_list))
+        params = params_list[0]
+        result = compute_portfolio_analytics(params=params)
+
+        result = {'result':result}
 
         print('json result {}'.format(result))
 

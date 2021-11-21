@@ -34,7 +34,7 @@ import datetime
 import os
 import re
 from tools.logger import logger_get_price
-
+from api.utils import *
 
 def load_stock_historical_data_mp(args):
     (stock, start_date,end_date, eod_key, full_available_history) = args
@@ -161,60 +161,132 @@ def load_historical_data(asset_ticker=None, full_available_history=False,
         list_var_tuple = [(stock, start_date, end_date, eod_key, full_available_history) for stock in list_stocks]
         results = p.map(load_stock_historical_data_mp, list_var_tuple)
 
-    ''' 
-    for stock in list_stocks:
-
-        print('{}/{} - {} : from {} to {} '.format(i,len(list_stocks), stock, start_date, end_date))
-        #https://eodhistoricaldata.com/api/eod/{}?from={} & to = {} & api_token = {} & period = d & fmt = json
-        req = requests.get("https://eodhistoricaldata.com/api/eod/{}?from={}&to={}&api_token={}&period=d&fmt=json".format(
-            stock,
-            start_date,
-            end_date,
-            eod_key))
-
-        list_closing_prices = req.json()
-        if isinstance(list_closing_prices, dict):
-            list_closing_prices = [] if 'errors' in list_closing_prices else [list_closing_prices]
-
-        if len(list_closing_prices) == 0:
-            print('No data for stock {} - {}'.format(i, stock))
-            i = i + 1
-            continue
-
-        ddf = pd.DataFrame().from_records(list_closing_prices)
-        ddf['code'] = stock
-
-        ddf['converted_date'] = ddf['date'].apply(
-            lambda x: datetime.datetime.strptime(x, "%Y-%m-%d").timestamp())
-
-        # ddf['converted_date'] = pd.to_datetime(ddf['date'], format="%Y-%m-%d") # datetime.datetime.strptime("2017-10-13T00:00:00.000Z", "%Y-%m-%dT%H:%M:%S.000Z")
-
-        list_closing_prices = json.loads(ddf.to_json(orient='records'))
-
-        stock_data = {"code": stock,
-                      "prices": list_closing_prices
-                      }
-
-        if full_available_history is True:
-            server[db_name][collection_name].delete_one({"code": stock})
-            server[db_name][collection_name].insert_one(stock_data)
-            logger_get_price.info("full load for {} completed!".format(stock))
-        else:
-            # dd = server[db_name][collection_name].update_many({"code": stock}, {"$addToSet": {
-            #    "prices": {"volume": 10000000, "date": "2021-02-14", 'open': 1, 'close': 2, 'low': 5, 'high': 4,
-            #               'adjusted_close': 6}}})
-
-            # Add each item of the list if doesn't exist
-            server[db_name][collection_name].update_many({"code": stock}, {"$addToSet": {
-                "prices": {"$each": list_closing_prices}}})
-
-            logger_get_price.info("update load for {} completed!".format(stock))
-        i = i + 1
-    '''
-
     logger_get_price.info("Done!")
     server.close()
 
+
+def compute_portfolio_analytics(params={}):
+    from asset_prices.referencial import get_universe
+
+    logger_get_price.info("params ={}".format(params))
+    portfolio_id = params['portfolioId']
+    benchmark_stock_code = params['benchmarkStockCode']
+    portfolio_historical_holdings = params['portfolioHistoricalHoldings']
+    min_date, max_date = min_max_dates(portfolio_historical_holdings)
+    stock_code_list = stock_list(portfolio_historical_holdings)
+    stock_data_df = get_universe(codes=",".join(stock_code_list))
+    stock_data_df['code'] = stock_data_df['Code'] + '.' + stock_data_df['ExchangeCode']
+    logger_get_price.info("stock_data_df ={}".format(stock_data_df))
+    stock_data_list = stock_data_df.to_dict('records')
+
+    stock_code_list.append(benchmark_stock_code)
+    df_h_p = get_prices(asset_codes=stock_code_list, ret='df',
+                        start_date=datetime.datetime.combine(min_date, datetime.time.min),
+                        end_date=datetime.datetime.combine(max_date, datetime.time.min),
+                        )
+
+    logger_get_price.info("df_h_p ={}".format(df_h_p))
+
+    df_bhp = df_h_p[df_h_p['code'] == benchmark_stock_code].copy()
+
+    stock_prices_list = df_h_p[df_h_p['code'] != benchmark_stock_code].copy().to_dict('records')
+
+    logger_get_price.info("df_bhp ={}".format(df_bhp))
+
+    portfolio_historical_values, portfolio_stock_values, portfolio_stock_weights, last_portfolio_stock_values = stock_total_value(portfolio_historical_holdings, df_h_p, stock_data_df, max_date)
+
+    asset_type_values = get_asset_type_grouping(stock_data_list, {'values': last_portfolio_stock_values['holdings']}, group_by='values')
+
+    dfvals = pd.DataFrame(portfolio_historical_values)
+    dfvals.index = pd.to_datetime(dfvals['date'])
+    dfvals = dfvals.drop(columns=['date'])
+    print(" dfvals = {}".format(dfvals))
+    dfvals = dfvals.sort_index()
+    daily_returns, monthly_returns = get_returns(dfvals)
+
+    #  benchmark
+    df_bhp = df_bhp[['date', 'close']]
+    df_bhp.index = pd.to_datetime(df_bhp['date'])
+    df_bhp = df_bhp.drop(columns=['date'])
+    b_daily_returns, b_monthly_returns = get_returns(df_bhp)
+    logger_get_price.info("b_daily_returns ={}".format(b_daily_returns))
+
+    rt_daily_returns, rt_monthly_returns = daily_returns.copy(), monthly_returns.copy()
+    rt_daily_returns['date'] = rt_daily_returns.index
+    rt_daily_returns['date'] = rt_daily_returns['date'].dt.strftime('%Y-%m-%d')
+    rt_monthly_returns['date'] = rt_monthly_returns.index
+    rt_monthly_returns['date'] = rt_monthly_returns['date'].dt.strftime('%Y-%m-%d')
+
+    asset_type_weights = get_asset_type_grouping_weights(asset_type_values, last_portfolio_stock_values['portfolio_value'])
+
+    port_volatility = volatility(daily_returns).to_numpy()[-1]
+
+    g_daily_returns, g_b_daily_returns = daily_returns.dropna(), b_daily_returns.dropna()
+    logger_get_price.info("g_daily_returns ={}, g_b_daily_returns ={}".format(g_daily_returns, g_b_daily_returns))
+    beta, alpha = greeks(g_daily_returns, g_b_daily_returns)
+
+    logger_get_price.info("result beta {}, alpha {}".format(beta, alpha))
+
+    sharpe_ratio = sharpe(g_daily_returns).to_numpy()[-1]
+
+    drawdown = max_drawdown(dfvals).to_numpy()[-1]
+
+    best_perf = g_daily_returns.max().to_numpy()[-1]
+    worst_perf = g_daily_returns.min().to_numpy()[-1]
+    number_up = int(dfvals.pct_change().fillna(0).gt(0).sum().to_numpy()[-1])
+    number_down = int(dfvals.pct_change().fillna(0).lt(0).sum().to_numpy()[-1])
+
+    last_date = last_holding_date(portfolio_stock_values, max_date.strftime("%Y-%m-%d"),
+                                  min_date.strftime("%Y-%m-%d"))
+
+    winners, loosers = winners_loosers(stock_prices_list, max_date.strftime("%Y-%m-%d"), last_date)
+
+
+
+    analytics = { "portfolio_id":portfolio_id,
+                  "min_date": min_date.strftime("%Y-%m-%d"),
+                  "max_date": max_date.strftime("%Y-%m-%d"),
+                  "stocks": ",".join(stock_code_list),
+                  "portfolio_stock_values":portfolio_stock_values,
+                  "portfolio_historical_values" : portfolio_historical_values,
+                  "last_portfolio_stock_values" : last_portfolio_stock_values,
+                  "portfolio_stock_weights":portfolio_stock_weights,
+                  "asset_type_values":asset_type_values,
+                  "daily_returns":rt_daily_returns.to_dict('records'),
+                  "monthly_returns":rt_monthly_returns.to_dict('records')
+                  ,"asset_type_weights":asset_type_weights
+                  ,"port_volatility": port_volatility
+                  ,"beta":beta
+                  ,"alpha": alpha
+                  ,"sharpe_ratio":sharpe_ratio
+                  ,"drawdown": drawdown
+                  ,"best_perf": best_perf
+                  ,"worst_perf" : worst_perf
+                  ,"number_up":number_up
+                  ,"number_down": number_down
+                  ,"winners":winners
+                  ,"loosers":loosers
+                  }
+
+    return analytics
+'''
+{
+    "FullCode":"BTC-USD.CC",
+    "General":
+     {
+       "Name":"Bitcoin",
+       "Exchange":"CC",
+       "Code":"BTC-USD",
+       "Description":"Bitcoin value in Dollars"
+     },
+    "Code":"BTC-USD",
+    "Country":"US",
+    "Exchange":"CC",
+    "Type":"CryptoCurrency",
+    "Active":1,
+    "AssetType":"CryptoCurrency"
+}
+ '''
 
 def update_bulk_prices(prices=None, type='real_time'):
     import pandas as pd
@@ -298,7 +370,7 @@ def get_prices(asset_codes=[],
     logger_get_price.info("dates sent from {} to {}".format(start_date, end_date))
 
     eod_key = "60241295a5b4c3.00921778"
-    sd = datetime.datetime.strptime(paris_now.strftime("%d%m%Y2300"), '%d%m%Y%H%M') + datetime.timedelta(-7)
+    sd = datetime.datetime.strptime(paris_now.strftime("%d%m%Y2300"), '%d%m%Y%H%M') + datetime.timedelta(-200)
     ed = datetime.datetime.strptime(paris_now.strftime("%d%m%Y2300"), '%d%m%Y%H%M') + datetime.timedelta(+1)
     start_date = sd if start_date is None else start_date
     end_date = ed if end_date is None else end_date
@@ -368,6 +440,8 @@ def get_prices(asset_codes=[],
 
     logger_get_price.info("Done get_prices: {}, query : {}: dates from {} to {}".format(type, query, start_date,
                                                                                         end_date))
+
+    logger_get_price.info("Data returned {}".format(df))
     server.close()
 
     if ret == 'json':

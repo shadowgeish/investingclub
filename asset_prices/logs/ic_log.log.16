@@ -1,0 +1,56 @@
+stock = WCOD.AS, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/WCOD.AS?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 200 None
+Req = https://eodhistoricaldata.com/api/eod/WCOD.AS?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = WCOD.AS, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+stock = CB3.PA, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/CB3.PA?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 200 None
+Req = https://eodhistoricaldata.com/api/eod/CB3.PA?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = CB3.PA, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+stock = TEET.AS, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/TEET.AS?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 200 None
+Req = https://eodhistoricaldata.com/api/eod/TEET.AS?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = TEET.AS, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+stock = CD8.PA, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/CD8.PA?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 200 None
+Req = https://eodhistoricaldata.com/api/eod/CD8.PA?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = CD8.PA, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+stock = CU2.PA, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/CU2.PA?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 200 None
+Req = https://eodhistoricaldata.com/api/eod/CU2.PA?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = CU2.PA, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+stock = WIND.AS, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/WIND.AS?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 200 None
+Req = https://eodhistoricaldata.com/api/eod/WIND.AS?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = WIND.AS, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+stock = NTM.AS, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/NTM.AS?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 200 None
+Req = https://eodhistoricaldata.com/api/eod/NTM.AS?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = NTM.AS, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+stock = AM3A.PA, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/AM3A.PA?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 200 None
+Req = https://eodhistoricaldata.com/api/eod/AM3A.PA?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = AM3A.PA, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+stock = C3M.PA, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/C3M.PA?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 200 None
+Req = https://eodhistoricaldata.com/api/eod/C3M.PA?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = C3M.PA, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+stock = SNC.LS, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/SNC.LS?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 200 None
+Req = https://eodhistoricaldata.com/api/eod/SNC.LS?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = SNC.LS, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+stock = CL2.PA, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/CL2.PA?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 200 None
+Req = https://eodhistoricaldata.com/api/eod/CL2.PA?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = CL2.PA, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+stock = IFRB.LSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/IFRB.LSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 200 None
+Req = https://eodhistoricaldata.com/api/eod/IFRB.LSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = IFRB.LSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+stock = UBI.MI, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/UBI.MI?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 200 None
+Req = https://eodhistoricaldata.com/api/eod/UBI.MI?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = UBI.MI, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+stock = SONC.LS, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/SONC.LS?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 200 None
+Req = https://eodhistoricaldata.com/api/eod/SONC.LS?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = SONC.LS, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  

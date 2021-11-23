@@ -154,7 +154,7 @@ class MeanVarOptimization(Resource):
 
 class MaxDiversification(Resource):
 
-    def get(self):
+    def post(self):
         import datetime
         from flask import request
         import datetime as dat
@@ -165,17 +165,37 @@ class MaxDiversification(Resource):
         end_date = dat.date.today() + dat.timedelta(1)
         start_date = dat.datetime.combine(start_date, dat.time.min)
         end_date = dat.datetime.combine(end_date, dat.time.min)
+
         opto_settings = request.get_json()
         print('opto_settings = {}'.format(opto_settings))
+        asset_codes_initial_weight = opto_settings['assetCodesInitialWeight']
+        optimization_type = opto_settings['optomizationType']
+        optimisation_goal = opto_settings['optomisationGoal']
+        amount_invested = opto_settings['amountInvested']
+        asset_codes = list(asset_codes_initial_weight.keys())
+        print('asset_codes = {}'.format(asset_codes))
+
+        target_return = opto_settings['targetReturn']
+        target_volatility = opto_settings['targetVolatility']
+        optomization_contraints = opto_settings['contraintesOptomization']
+        opto_contraints = []
+        for contraints in optomization_contraints:
+            opto_contraints.append({"code": contraints['code'], "sign": contraints['sign'], "value": contraints['value']})
+        #[{"code": "BX4.PA", "sign": "egt", "value": 0.02},
+        # {"code":"CAC.PA", "sign":"elt","value": 0.06},
+        # {"code":"500.PA", "sign":"e","value": 0.10}]
+
         #start_date = get_date_from_str_or_default(None,
         #                                          (dat.date.today() + dat.timedelta(-200)))
         #end_date = get_date_from_str_or_default(None,
         #                                        (dat.date.today() + dat.timedelta(1)))
 
         jj = portfolio_optimization(
-            asset_codes=[ "OBLI.PA", "LQQ.PA", "STZ.PA", "CAC.PA", "SAN.PA", "AETH.PA", "ABTC.PA"],
-            optimisation_type='max_diversification',
-            optimisation_goal='max_diversification',
+            asset_codes=asset_codes, # ["OBLI.PA", "LQQ.PA", "STZ.PA", "CAC.PA", "SAN.PA", "AETH.PA", "ABTC.PA"],
+            optimisation_type= optimization_type,
+            optimisation_goal= optimisation_goal,
+            target_return=target_return,
+            target_volatility=target_volatility,
             start_date=start_date,
             end_date=end_date,
             ret='dict')
@@ -184,7 +204,7 @@ class MaxDiversification(Resource):
             initial_asset_codes_weight=jj['weights'],
             target_asset_codes_weight=jj['weights'],
             rebalancing_frequency='weekly',
-            invested_amount=10000,
+            invested_amount=amount_invested,
             start_date=start_date,
             end_date=end_date,
             withdraw={'amount': 0, 'freq': 'yearly'},
@@ -206,7 +226,7 @@ def optimization(args):
     end_date = (datetime.date.today() + datetime.timedelta(1))
 
     result = portfolio_optimization(
-        asset_codes=["IWDA.LSE", "TDT.AS", "BX4.PA", "IAEX.AS", "VUSA.LSE", "STZ.PA", "LQQ.PA"],
+        asset_codes = ["IWDA.LSE", "TDT.AS", "BX4.PA", "IAEX.AS", "VUSA.LSE", "STZ.PA", "LQQ.PA"],
         optimisation_type='max_diversification',
         optimisation_goal='max_diversification',
         start_date=start_date,

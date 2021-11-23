@@ -1,0 +1,1215 @@
+Data returned           date      open      high  ...     volume       code  converted_date
+0   2021-11-16    70.450    70.550  ...      27998     CAC.PA    1.637017e+09
+1   2021-11-17    70.480    70.600  ...      21757     CAC.PA    1.637104e+09
+2   2021-11-18    70.460    70.730  ...      24410     CAC.PA    1.637190e+09
+3   2021-11-19    70.660    70.710  ...      43776     CAC.PA    1.637276e+09
+4   2021-11-16  7146.370  7164.270  ...   69021696  FCHI.INDX    1.637017e+09
+5   2021-11-17  7149.300  7167.800  ...   68243504  FCHI.INDX    1.637104e+09
+6   2021-11-18  7155.050  7181.550  ...   75845600  FCHI.INDX    1.637190e+09
+7   2021-11-19  7172.720  7183.080  ...  117988000  FCHI.INDX    1.637276e+09
+8   2021-11-16   927.900   942.500  ...       3594     LQQ.PA    1.637017e+09
+9   2021-11-17   946.100   952.100  ...       3439     LQQ.PA    1.637104e+09
+10  2021-11-18   951.700   956.900  ...       2905     LQQ.PA    1.637190e+09
+11  2021-11-19   972.200   981.000  ...       5866     LQQ.PA    1.637276e+09
+12  2021-11-16    11.000    11.000  ...       1226    OBLI.PA    1.637017e+09
+13  2021-11-17    10.900    10.900  ...       3088    OBLI.PA    1.637104e+09
+14  2021-11-18    10.916    10.916  ...        733    OBLI.PA    1.637190e+09
+15  2021-11-19    10.910    10.964  ...       4281    OBLI.PA    1.637276e+09
+16  2021-11-16    63.400    63.400  ...       3694     STZ.PA    1.637017e+09
+17  2021-11-17    63.310    63.460  ...       5832     STZ.PA    1.637104e+09
+18  2021-11-18    63.100    63.330  ...       6674     STZ.PA    1.637190e+09
+19  2021-11-19    62.820    62.900  ...      18663     STZ.PA    1.637276e+09
+
+[20 rows x 9 columns]
+df_h_p =          date      open      high  ...     volume       code  converted_date
+0   2021-11-16    70.450    70.550  ...      27998     CAC.PA    1.637017e+09
+1   2021-11-17    70.480    70.600  ...      21757     CAC.PA    1.637104e+09
+2   2021-11-18    70.460    70.730  ...      24410     CAC.PA    1.637190e+09
+3   2021-11-19    70.660    70.710  ...      43776     CAC.PA    1.637276e+09
+4   2021-11-16  7146.370  7164.270  ...   69021696  FCHI.INDX    1.637017e+09
+5   2021-11-17  7149.300  7167.800  ...   68243504  FCHI.INDX    1.637104e+09
+6   2021-11-18  7155.050  7181.550  ...   75845600  FCHI.INDX    1.637190e+09
+7   2021-11-19  7172.720  7183.080  ...  117988000  FCHI.INDX    1.637276e+09
+8   2021-11-16   927.900   942.500  ...       3594     LQQ.PA    1.637017e+09
+9   2021-11-17   946.100   952.100  ...       3439     LQQ.PA    1.637104e+09
+10  2021-11-18   951.700   956.900  ...       2905     LQQ.PA    1.637190e+09
+11  2021-11-19   972.200   981.000  ...       5866     LQQ.PA    1.637276e+09
+12  2021-11-16    11.000    11.000  ...       1226    OBLI.PA    1.637017e+09
+13  2021-11-17    10.900    10.900  ...       3088    OBLI.PA    1.637104e+09
+14  2021-11-18    10.916    10.916  ...        733    OBLI.PA    1.637190e+09
+15  2021-11-19    10.910    10.964  ...       4281    OBLI.PA    1.637276e+09
+16  2021-11-16    63.400    63.400  ...       3694     STZ.PA    1.637017e+09
+17  2021-11-17    63.310    63.460  ...       5832     STZ.PA    1.637104e+09
+18  2021-11-18    63.100    63.330  ...       6674     STZ.PA    1.637190e+09
+19  2021-11-19    62.820    62.900  ...      18663     STZ.PA    1.637276e+09
+
+[20 rows x 9 columns]
+df_bhp =         date     open     high  ...     volume       code  converted_date
+4  2021-11-16  7146.37  7164.27  ...   69021696  FCHI.INDX    1.637017e+09
+5  2021-11-17  7149.30  7167.80  ...   68243504  FCHI.INDX    1.637104e+09
+6  2021-11-18  7155.05  7181.55  ...   75845600  FCHI.INDX    1.637190e+09
+7  2021-11-19  7172.72  7183.08  ...  117988000  FCHI.INDX    1.637276e+09
+
+[4 rows x 9 columns]
+b_daily_returns =               close
+date                
+2021-11-16       NaN
+2021-11-17  0.000594
+2021-11-18 -0.002078
+2021-11-19 -0.004157
+g_daily_returns =               value
+date                
+2021-11-17  0.491630
+2021-11-18  0.321120
+2021-11-19 -0.400094, g_b_daily_returns =               close
+date                
+2021-11-17  0.000594
+2021-11-18 -0.002078
+2021-11-19 -0.004157
+result beta 181.91867236181872, alpha close    85.721919
+dtype: float64
+127.0.0.1 - - [21/Nov/2021 17:43:23] "[37mPOST /api/v1/compute_portfolio_analytics HTTP/1.1[0m" 200 -
+ * Detected change in '/Users/sergengoube/PycharmProjects/investingclub/api/utils.py', reloading
+Unknown option passed to Flask-CORS: support_credentials
+Unknown option passed to Flask-CORS: support_credentials
+ * Debugger is active!
+ * Debugger PIN: 139-003-692
+ * Detected change in '/Users/sergengoube/PycharmProjects/investingclub/api/utils.py', reloading
+Unknown option passed to Flask-CORS: support_credentials
+Unknown option passed to Flask-CORS: support_credentials
+ * Debugger is active!
+ * Debugger PIN: 139-003-692
+ * Detected change in '/Users/sergengoube/PycharmProjects/investingclub/asset_prices/prices.py', reloading
+Unknown option passed to Flask-CORS: support_credentials
+Unknown option passed to Flask-CORS: support_credentials
+ * Debugger is active!
+ * Debugger PIN: 139-003-692
+params ={'portfolioId': 'max_diversification', 'portfolioHistoricalHoldings': [{'id': '121F4343564ACD', 'date': '2021-11-19T19:40:06+00:00', 'holdings': {'OBLI.PA': 20, 'LQQ.PA': 1, 'STZ.PA': 10, 'CAC.PA': 8}}, {'id': '121F4343564ACD', 'date': '2021-11-18T19:40:06+00:00', 'holdings': {'OBLI.PA': 1, 'LQQ.PA': 3, 'STZ.PA': 6, 'CAC.PA': 10}}, {'id': '121F4343564ACD', 'date': '2021-11-17T19:40:06+00:00', 'holdings': {'OBLI.PA': 1, 'LQQ.PA': 2, 'STZ.PA': 6, 'CAC.PA': 10}}, {'id': '121F4343564ACD', 'date': '2021-11-16T19:40:06+00:00', 'holdings': {'OBLI.PA': 5, 'LQQ.PA': 1, 'STZ.PA': 6, 'CAC.PA': 9}}], 'benchmarkStockCode': 'FCHI.INDX'}
+Query get_universe [{'$match': {'Active': 1, 'FullCode': {'$in': ['CAC.PA', 'STZ.PA', 'OBLI.PA', 'LQQ.PA']}}}, {'$sort': {'last_price_volume': -1}}, {'$facet': {'metadata': [{'$count': 'total'}], 'data': [{'$skip': 0}, {'$limit': 5000}, {'$project': {'ISIN': 1, 'Code': 1, 'General.Name': 1, 'Country': 1, 'Type': 1, 'General.Exchange': 1, 'General.CurrencyCode': 1, 'General.Type': 1, 'Exchange': 1, 'AssetType': 1, 'last_price_volume': 1, 'General.LogoURL': 1}}]}}] 
+Query get_universe [{'$match': {'Active': 1, 'FullCode': {'$in': ['CAC.PA', 'STZ.PA', 'OBLI.PA', 'LQQ.PA']}}}, {'$sort': {'last_price_volume': -1}}, {'$facet': {'metadata': [{'$count': 'total'}], 'data': [{'$skip': 0}, {'$limit': 5000}, {'$project': {'ISIN': 1, 'Code': 1, 'General.Name': 1, 'Country': 1, 'Type': 1, 'General.Exchange': 1, 'General.CurrencyCode': 1, 'General.Type': 1, 'Exchange': 1, 'AssetType': 1, 'last_price_volume': 1, 'General.LogoURL': 1}}]}}] 
+Query result {'metadata': [{'total': 4}], 'data': [{'_id': ObjectId('611424a7c889609c914222f7'), 'Code': 'CAC', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Lyxor CAC 40 (DR) UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0007052782', 'Type': 'ETF', 'last_price_volume': 43776, 'AssetType': 'Equity'}, {'_id': ObjectId('6114249fc889609c91421fff'), 'Code': 'STZ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'SSgA SPDR ETFs Europe II Public Limited Company - SPDR MSCI Europe Financials UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'IE00BKWQ0G16', 'Type': 'ETF', 'last_price_volume': 18663, 'AssetType': 'Equity'}, {'_id': ObjectId('6114249dc889609c91421f30'), 'Code': 'LQQ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Multi Units France - Lyxor PEA Nasdaq 100 Daily (2X) leveraged UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0010342592', 'Type': 'ETF', 'last_price_volume': 5866, 'AssetType': 'Equity'}, {'_id': ObjectId('60dead3b094f5da1d4664350'), 'Code': 'OBLI', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': "Lyxor Index Fund - Lyxor PEA Obligations d'Etat Euro UCITS ETF", 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0013346681', 'Type': 'ETF', 'last_price_volume': 4281, 'AssetType': 'Fixed Income'}]} 
+Query itx = {'_id': ObjectId('611424a7c889609c914222f7'), 'Code': 'CAC', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Lyxor CAC 40 (DR) UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0007052782', 'Type': 'ETF', 'last_price_volume': 43776, 'AssetType': 'Equity'}
+Query itx = {'_id': ObjectId('6114249fc889609c91421fff'), 'Code': 'STZ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'SSgA SPDR ETFs Europe II Public Limited Company - SPDR MSCI Europe Financials UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'IE00BKWQ0G16', 'Type': 'ETF', 'last_price_volume': 18663, 'AssetType': 'Equity'}
+Query itx = {'_id': ObjectId('6114249dc889609c91421f30'), 'Code': 'LQQ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Multi Units France - Lyxor PEA Nasdaq 100 Daily (2X) leveraged UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0010342592', 'Type': 'ETF', 'last_price_volume': 5866, 'AssetType': 'Equity'}
+Query itx = {'_id': ObjectId('60dead3b094f5da1d4664350'), 'Code': 'OBLI', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': "Lyxor Index Fund - Lyxor PEA Obligations d'Etat Euro UCITS ETF", 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0013346681', 'Type': 'ETF', 'last_price_volume': 4281, 'AssetType': 'Fixed Income'}
+NumExpr defaulting to 8 threads.
+df  result            ISIN  Code  ... EsgScoreNote total_stocks
+0  FR0007052782   CAC  ...          BBB            3
+1  IE00BKWQ0G16   STZ  ...          BBB            3
+2  FR0010342592   LQQ  ...          BBB            3
+3  FR0013346681  OBLI  ...          BBB            3
+
+[4 rows x 21 columns] 
+stock_data_df =           ISIN  Code  ... total_stocks     code
+0  FR0007052782   CAC  ...            3   CAC.PA
+1  IE00BKWQ0G16   STZ  ...            3   STZ.PA
+2  FR0010342592   LQQ  ...            3   LQQ.PA
+3  FR0013346681  OBLI  ...            3  OBLI.PA
+
+[4 rows x 22 columns]
+dates sent from 2021-11-16 00:00:00 to 2021-11-19 00:00:00
+dates Computed from 2021-11-16 00:00:00 to 2021-11-19 00:00:00
+Done get_prices: historical, query : [{'$match': {'FullCode': {'$in': ['CAC.PA', 'STZ.PA', 'OBLI.PA', 'LQQ.PA', 'FCHI.INDX']}}}, {'$project': {'prices': {'$filter': {'input': '$prices', 'as': 'price', 'cond': {'$and': [{'$gte': ['$$price.converted_date', 1637017200.0]}, {'$lte': ['$$price.converted_date', 1637276400.0]}]}}}}}]: dates from 2021-11-16 00:00:00 to 2021-11-19 00:00:00
+Data returned           date      open      high  ...     volume       code  converted_date
+0   2021-11-16    70.450    70.550  ...      27998     CAC.PA    1.637017e+09
+1   2021-11-17    70.480    70.600  ...      21757     CAC.PA    1.637104e+09
+2   2021-11-18    70.460    70.730  ...      24410     CAC.PA    1.637190e+09
+3   2021-11-19    70.660    70.710  ...      43776     CAC.PA    1.637276e+09
+4   2021-11-16  7146.370  7164.270  ...   69021696  FCHI.INDX    1.637017e+09
+5   2021-11-17  7149.300  7167.800  ...   68243504  FCHI.INDX    1.637104e+09
+6   2021-11-18  7155.050  7181.550  ...   75845600  FCHI.INDX    1.637190e+09
+7   2021-11-19  7172.720  7183.080  ...  117988000  FCHI.INDX    1.637276e+09
+8   2021-11-16   927.900   942.500  ...       3594     LQQ.PA    1.637017e+09
+9   2021-11-17   946.100   952.100  ...       3439     LQQ.PA    1.637104e+09
+10  2021-11-18   951.700   956.900  ...       2905     LQQ.PA    1.637190e+09
+11  2021-11-19   972.200   981.000  ...       5866     LQQ.PA    1.637276e+09
+12  2021-11-16    11.000    11.000  ...       1226    OBLI.PA    1.637017e+09
+13  2021-11-17    10.900    10.900  ...       3088    OBLI.PA    1.637104e+09
+14  2021-11-18    10.916    10.916  ...        733    OBLI.PA    1.637190e+09
+15  2021-11-19    10.910    10.964  ...       4281    OBLI.PA    1.637276e+09
+16  2021-11-16    63.400    63.400  ...       3694     STZ.PA    1.637017e+09
+17  2021-11-17    63.310    63.460  ...       5832     STZ.PA    1.637104e+09
+18  2021-11-18    63.100    63.330  ...       6674     STZ.PA    1.637190e+09
+19  2021-11-19    62.820    62.900  ...      18663     STZ.PA    1.637276e+09
+
+[20 rows x 9 columns]
+df_h_p =          date      open      high  ...     volume       code  converted_date
+0   2021-11-16    70.450    70.550  ...      27998     CAC.PA    1.637017e+09
+1   2021-11-17    70.480    70.600  ...      21757     CAC.PA    1.637104e+09
+2   2021-11-18    70.460    70.730  ...      24410     CAC.PA    1.637190e+09
+3   2021-11-19    70.660    70.710  ...      43776     CAC.PA    1.637276e+09
+4   2021-11-16  7146.370  7164.270  ...   69021696  FCHI.INDX    1.637017e+09
+5   2021-11-17  7149.300  7167.800  ...   68243504  FCHI.INDX    1.637104e+09
+6   2021-11-18  7155.050  7181.550  ...   75845600  FCHI.INDX    1.637190e+09
+7   2021-11-19  7172.720  7183.080  ...  117988000  FCHI.INDX    1.637276e+09
+8   2021-11-16   927.900   942.500  ...       3594     LQQ.PA    1.637017e+09
+9   2021-11-17   946.100   952.100  ...       3439     LQQ.PA    1.637104e+09
+10  2021-11-18   951.700   956.900  ...       2905     LQQ.PA    1.637190e+09
+11  2021-11-19   972.200   981.000  ...       5866     LQQ.PA    1.637276e+09
+12  2021-11-16    11.000    11.000  ...       1226    OBLI.PA    1.637017e+09
+13  2021-11-17    10.900    10.900  ...       3088    OBLI.PA    1.637104e+09
+14  2021-11-18    10.916    10.916  ...        733    OBLI.PA    1.637190e+09
+15  2021-11-19    10.910    10.964  ...       4281    OBLI.PA    1.637276e+09
+16  2021-11-16    63.400    63.400  ...       3694     STZ.PA    1.637017e+09
+17  2021-11-17    63.310    63.460  ...       5832     STZ.PA    1.637104e+09
+18  2021-11-18    63.100    63.330  ...       6674     STZ.PA    1.637190e+09
+19  2021-11-19    62.820    62.900  ...      18663     STZ.PA    1.637276e+09
+
+[20 rows x 9 columns]
+df_bhp =         date     open     high  ...     volume       code  converted_date
+4  2021-11-16  7146.37  7164.27  ...   69021696  FCHI.INDX    1.637017e+09
+5  2021-11-17  7149.30  7167.80  ...   68243504  FCHI.INDX    1.637104e+09
+6  2021-11-18  7155.05  7181.55  ...   75845600  FCHI.INDX    1.637190e+09
+7  2021-11-19  7172.72  7183.08  ...  117988000  FCHI.INDX    1.637276e+09
+
+[4 rows x 9 columns]
+b_daily_returns =               close
+date                
+2021-11-16       NaN
+2021-11-17  0.000594
+2021-11-18 -0.002078
+2021-11-19 -0.004157
+g_daily_returns =               value
+date                
+2021-11-17  0.491630
+2021-11-18  0.321120
+2021-11-19 -0.400094, g_b_daily_returns =               close
+date                
+2021-11-17  0.000594
+2021-11-18 -0.002078
+2021-11-19 -0.004157
+result beta 0.004605872897015799, alpha -0.0025137648720715295
+127.0.0.1 - - [21/Nov/2021 17:47:54] "[37mPOST /api/v1/compute_portfolio_analytics HTTP/1.1[0m" 200 -
+ * Detected change in '/Users/sergengoube/PycharmProjects/investingclub/api/utils.py', reloading
+Unknown option passed to Flask-CORS: support_credentials
+Unknown option passed to Flask-CORS: support_credentials
+ * Debugger is active!
+ * Debugger PIN: 139-003-692
+ * Detected change in '/Users/sergengoube/PycharmProjects/investingclub/asset_prices/prices.py', reloading
+ * Detected change in '/Users/sergengoube/PycharmProjects/investingclub/api/utils.py', reloading
+Unknown option passed to Flask-CORS: support_credentials
+Unknown option passed to Flask-CORS: support_credentials
+ * Debugger is active!
+ * Debugger PIN: 139-003-692
+params ={'portfolioId': 'max_diversification', 'portfolioHistoricalHoldings': [{'id': '121F4343564ACD', 'date': '2021-11-19T19:40:06+00:00', 'holdings': {'OBLI.PA': 20, 'LQQ.PA': 1, 'STZ.PA': 10, 'CAC.PA': 8}}, {'id': '121F4343564ACD', 'date': '2021-11-18T19:40:06+00:00', 'holdings': {'OBLI.PA': 1, 'LQQ.PA': 3, 'STZ.PA': 6, 'CAC.PA': 10}}, {'id': '121F4343564ACD', 'date': '2021-11-17T19:40:06+00:00', 'holdings': {'OBLI.PA': 1, 'LQQ.PA': 2, 'STZ.PA': 6, 'CAC.PA': 10}}, {'id': '121F4343564ACD', 'date': '2021-11-16T19:40:06+00:00', 'holdings': {'OBLI.PA': 5, 'LQQ.PA': 1, 'STZ.PA': 6, 'CAC.PA': 9}}], 'benchmarkStockCode': 'FCHI.INDX'}
+Query get_universe [{'$match': {'Active': 1, 'FullCode': {'$in': ['LQQ.PA', 'STZ.PA', 'OBLI.PA', 'CAC.PA']}}}, {'$sort': {'last_price_volume': -1}}, {'$facet': {'metadata': [{'$count': 'total'}], 'data': [{'$skip': 0}, {'$limit': 5000}, {'$project': {'ISIN': 1, 'Code': 1, 'General.Name': 1, 'Country': 1, 'Type': 1, 'General.Exchange': 1, 'General.CurrencyCode': 1, 'General.Type': 1, 'Exchange': 1, 'AssetType': 1, 'last_price_volume': 1, 'General.LogoURL': 1}}]}}] 
+Query get_universe [{'$match': {'Active': 1, 'FullCode': {'$in': ['LQQ.PA', 'STZ.PA', 'OBLI.PA', 'CAC.PA']}}}, {'$sort': {'last_price_volume': -1}}, {'$facet': {'metadata': [{'$count': 'total'}], 'data': [{'$skip': 0}, {'$limit': 5000}, {'$project': {'ISIN': 1, 'Code': 1, 'General.Name': 1, 'Country': 1, 'Type': 1, 'General.Exchange': 1, 'General.CurrencyCode': 1, 'General.Type': 1, 'Exchange': 1, 'AssetType': 1, 'last_price_volume': 1, 'General.LogoURL': 1}}]}}] 
+Query result {'metadata': [{'total': 4}], 'data': [{'_id': ObjectId('611424a7c889609c914222f7'), 'Code': 'CAC', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Lyxor CAC 40 (DR) UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0007052782', 'Type': 'ETF', 'last_price_volume': 43776, 'AssetType': 'Equity'}, {'_id': ObjectId('6114249fc889609c91421fff'), 'Code': 'STZ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'SSgA SPDR ETFs Europe II Public Limited Company - SPDR MSCI Europe Financials UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'IE00BKWQ0G16', 'Type': 'ETF', 'last_price_volume': 18663, 'AssetType': 'Equity'}, {'_id': ObjectId('6114249dc889609c91421f30'), 'Code': 'LQQ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Multi Units France - Lyxor PEA Nasdaq 100 Daily (2X) leveraged UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0010342592', 'Type': 'ETF', 'last_price_volume': 5866, 'AssetType': 'Equity'}, {'_id': ObjectId('60dead3b094f5da1d4664350'), 'Code': 'OBLI', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': "Lyxor Index Fund - Lyxor PEA Obligations d'Etat Euro UCITS ETF", 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0013346681', 'Type': 'ETF', 'last_price_volume': 4281, 'AssetType': 'Fixed Income'}]} 
+Query itx = {'_id': ObjectId('611424a7c889609c914222f7'), 'Code': 'CAC', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Lyxor CAC 40 (DR) UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0007052782', 'Type': 'ETF', 'last_price_volume': 43776, 'AssetType': 'Equity'}
+Query itx = {'_id': ObjectId('6114249fc889609c91421fff'), 'Code': 'STZ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'SSgA SPDR ETFs Europe II Public Limited Company - SPDR MSCI Europe Financials UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'IE00BKWQ0G16', 'Type': 'ETF', 'last_price_volume': 18663, 'AssetType': 'Equity'}
+Query itx = {'_id': ObjectId('6114249dc889609c91421f30'), 'Code': 'LQQ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Multi Units France - Lyxor PEA Nasdaq 100 Daily (2X) leveraged UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0010342592', 'Type': 'ETF', 'last_price_volume': 5866, 'AssetType': 'Equity'}
+Query itx = {'_id': ObjectId('60dead3b094f5da1d4664350'), 'Code': 'OBLI', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': "Lyxor Index Fund - Lyxor PEA Obligations d'Etat Euro UCITS ETF", 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0013346681', 'Type': 'ETF', 'last_price_volume': 4281, 'AssetType': 'Fixed Income'}
+NumExpr defaulting to 8 threads.
+df  result            ISIN  Code  ... EsgScoreNote total_stocks
+0  FR0007052782   CAC  ...          BBB            3
+1  IE00BKWQ0G16   STZ  ...          BBB            3
+2  FR0010342592   LQQ  ...          BBB            3
+3  FR0013346681  OBLI  ...          BBB            3
+
+[4 rows x 21 columns] 
+stock_data_df =           ISIN  Code  ... total_stocks     code
+0  FR0007052782   CAC  ...            3   CAC.PA
+1  IE00BKWQ0G16   STZ  ...            3   STZ.PA
+2  FR0010342592   LQQ  ...            3   LQQ.PA
+3  FR0013346681  OBLI  ...            3  OBLI.PA
+
+[4 rows x 22 columns]
+dates sent from 2021-11-16 00:00:00 to 2021-11-19 00:00:00
+dates Computed from 2021-11-16 00:00:00 to 2021-11-19 00:00:00
+Done get_prices: historical, query : [{'$match': {'FullCode': {'$in': ['LQQ.PA', 'STZ.PA', 'OBLI.PA', 'CAC.PA', 'FCHI.INDX']}}}, {'$project': {'prices': {'$filter': {'input': '$prices', 'as': 'price', 'cond': {'$and': [{'$gte': ['$$price.converted_date', 1637017200.0]}, {'$lte': ['$$price.converted_date', 1637276400.0]}]}}}}}]: dates from 2021-11-16 00:00:00 to 2021-11-19 00:00:00
+Data returned           date      open      high  ...     volume       code  converted_date
+0   2021-11-16    70.450    70.550  ...      27998     CAC.PA    1.637017e+09
+1   2021-11-17    70.480    70.600  ...      21757     CAC.PA    1.637104e+09
+2   2021-11-18    70.460    70.730  ...      24410     CAC.PA    1.637190e+09
+3   2021-11-19    70.660    70.710  ...      43776     CAC.PA    1.637276e+09
+4   2021-11-16  7146.370  7164.270  ...   69021696  FCHI.INDX    1.637017e+09
+5   2021-11-17  7149.300  7167.800  ...   68243504  FCHI.INDX    1.637104e+09
+6   2021-11-18  7155.050  7181.550  ...   75845600  FCHI.INDX    1.637190e+09
+7   2021-11-19  7172.720  7183.080  ...  117988000  FCHI.INDX    1.637276e+09
+8   2021-11-16   927.900   942.500  ...       3594     LQQ.PA    1.637017e+09
+9   2021-11-17   946.100   952.100  ...       3439     LQQ.PA    1.637104e+09
+10  2021-11-18   951.700   956.900  ...       2905     LQQ.PA    1.637190e+09
+11  2021-11-19   972.200   981.000  ...       5866     LQQ.PA    1.637276e+09
+12  2021-11-16    11.000    11.000  ...       1226    OBLI.PA    1.637017e+09
+13  2021-11-17    10.900    10.900  ...       3088    OBLI.PA    1.637104e+09
+14  2021-11-18    10.916    10.916  ...        733    OBLI.PA    1.637190e+09
+15  2021-11-19    10.910    10.964  ...       4281    OBLI.PA    1.637276e+09
+16  2021-11-16    63.400    63.400  ...       3694     STZ.PA    1.637017e+09
+17  2021-11-17    63.310    63.460  ...       5832     STZ.PA    1.637104e+09
+18  2021-11-18    63.100    63.330  ...       6674     STZ.PA    1.637190e+09
+19  2021-11-19    62.820    62.900  ...      18663     STZ.PA    1.637276e+09
+
+[20 rows x 9 columns]
+df_h_p =          date      open      high  ...     volume       code  converted_date
+0   2021-11-16    70.450    70.550  ...      27998     CAC.PA    1.637017e+09
+1   2021-11-17    70.480    70.600  ...      21757     CAC.PA    1.637104e+09
+2   2021-11-18    70.460    70.730  ...      24410     CAC.PA    1.637190e+09
+3   2021-11-19    70.660    70.710  ...      43776     CAC.PA    1.637276e+09
+4   2021-11-16  7146.370  7164.270  ...   69021696  FCHI.INDX    1.637017e+09
+5   2021-11-17  7149.300  7167.800  ...   68243504  FCHI.INDX    1.637104e+09
+6   2021-11-18  7155.050  7181.550  ...   75845600  FCHI.INDX    1.637190e+09
+7   2021-11-19  7172.720  7183.080  ...  117988000  FCHI.INDX    1.637276e+09
+8   2021-11-16   927.900   942.500  ...       3594     LQQ.PA    1.637017e+09
+9   2021-11-17   946.100   952.100  ...       3439     LQQ.PA    1.637104e+09
+10  2021-11-18   951.700   956.900  ...       2905     LQQ.PA    1.637190e+09
+11  2021-11-19   972.200   981.000  ...       5866     LQQ.PA    1.637276e+09
+12  2021-11-16    11.000    11.000  ...       1226    OBLI.PA    1.637017e+09
+13  2021-11-17    10.900    10.900  ...       3088    OBLI.PA    1.637104e+09
+14  2021-11-18    10.916    10.916  ...        733    OBLI.PA    1.637190e+09
+15  2021-11-19    10.910    10.964  ...       4281    OBLI.PA    1.637276e+09
+16  2021-11-16    63.400    63.400  ...       3694     STZ.PA    1.637017e+09
+17  2021-11-17    63.310    63.460  ...       5832     STZ.PA    1.637104e+09
+18  2021-11-18    63.100    63.330  ...       6674     STZ.PA    1.637190e+09
+19  2021-11-19    62.820    62.900  ...      18663     STZ.PA    1.637276e+09
+
+[20 rows x 9 columns]
+df_bhp =         date     open     high  ...     volume       code  converted_date
+4  2021-11-16  7146.37  7164.27  ...   69021696  FCHI.INDX    1.637017e+09
+5  2021-11-17  7149.30  7167.80  ...   68243504  FCHI.INDX    1.637104e+09
+6  2021-11-18  7155.05  7181.55  ...   75845600  FCHI.INDX    1.637190e+09
+7  2021-11-19  7172.72  7183.08  ...  117988000  FCHI.INDX    1.637276e+09
+
+[4 rows x 9 columns]
+b_daily_returns =               close
+date                
+2021-11-16       NaN
+2021-11-17  0.000594
+2021-11-18 -0.002078
+2021-11-19 -0.004157
+g_daily_returns =               value
+date                
+2021-11-17  0.491630
+2021-11-18  0.321120
+2021-11-19 -0.400094, g_b_daily_returns =               close
+date                
+2021-11-17  0.000594
+2021-11-18 -0.002078
+2021-11-19 -0.004157
+result beta 0.004605872897015799, alpha -0.0025137648720715295
+127.0.0.1 - - [21/Nov/2021 17:50:37] "[37mPOST /api/v1/compute_portfolio_analytics HTTP/1.1[0m" 200 -
+ * Detected change in '/Users/sergengoube/PycharmProjects/investingclub/asset_prices/prices.py', reloading
+Unknown option passed to Flask-CORS: support_credentials
+Unknown option passed to Flask-CORS: support_credentials
+ * Debugger is active!
+ * Debugger PIN: 139-003-692
+params ={'portfolioId': 'max_diversification', 'portfolioHistoricalHoldings': [{'id': '121F4343564ACD', 'date': '2021-11-19T19:40:06+00:00', 'holdings': {'OBLI.PA': 20, 'LQQ.PA': 1, 'STZ.PA': 10, 'CAC.PA': 8}}, {'id': '121F4343564ACD', 'date': '2021-11-18T19:40:06+00:00', 'holdings': {'OBLI.PA': 1, 'LQQ.PA': 3, 'STZ.PA': 6, 'CAC.PA': 10}}, {'id': '121F4343564ACD', 'date': '2021-11-17T19:40:06+00:00', 'holdings': {'OBLI.PA': 1, 'LQQ.PA': 2, 'STZ.PA': 6, 'CAC.PA': 10}}, {'id': '121F4343564ACD', 'date': '2021-11-16T19:40:06+00:00', 'holdings': {'OBLI.PA': 5, 'LQQ.PA': 1, 'STZ.PA': 6, 'CAC.PA': 9}}], 'benchmarkStockCode': 'FCHI.INDX'}
+Query get_universe [{'$match': {'Active': 1, 'FullCode': {'$in': ['LQQ.PA', 'STZ.PA', 'OBLI.PA', 'CAC.PA']}}}, {'$sort': {'last_price_volume': -1}}, {'$facet': {'metadata': [{'$count': 'total'}], 'data': [{'$skip': 0}, {'$limit': 5000}, {'$project': {'ISIN': 1, 'Code': 1, 'General.Name': 1, 'Country': 1, 'Type': 1, 'General.Exchange': 1, 'General.CurrencyCode': 1, 'General.Type': 1, 'Exchange': 1, 'AssetType': 1, 'last_price_volume': 1, 'General.LogoURL': 1}}]}}] 
+Query get_universe [{'$match': {'Active': 1, 'FullCode': {'$in': ['LQQ.PA', 'STZ.PA', 'OBLI.PA', 'CAC.PA']}}}, {'$sort': {'last_price_volume': -1}}, {'$facet': {'metadata': [{'$count': 'total'}], 'data': [{'$skip': 0}, {'$limit': 5000}, {'$project': {'ISIN': 1, 'Code': 1, 'General.Name': 1, 'Country': 1, 'Type': 1, 'General.Exchange': 1, 'General.CurrencyCode': 1, 'General.Type': 1, 'Exchange': 1, 'AssetType': 1, 'last_price_volume': 1, 'General.LogoURL': 1}}]}}] 
+Query result {'metadata': [{'total': 4}], 'data': [{'_id': ObjectId('611424a7c889609c914222f7'), 'Code': 'CAC', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Lyxor CAC 40 (DR) UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0007052782', 'Type': 'ETF', 'last_price_volume': 43776, 'AssetType': 'Equity'}, {'_id': ObjectId('6114249fc889609c91421fff'), 'Code': 'STZ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'SSgA SPDR ETFs Europe II Public Limited Company - SPDR MSCI Europe Financials UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'IE00BKWQ0G16', 'Type': 'ETF', 'last_price_volume': 18663, 'AssetType': 'Equity'}, {'_id': ObjectId('6114249dc889609c91421f30'), 'Code': 'LQQ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Multi Units France - Lyxor PEA Nasdaq 100 Daily (2X) leveraged UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0010342592', 'Type': 'ETF', 'last_price_volume': 5866, 'AssetType': 'Equity'}, {'_id': ObjectId('60dead3b094f5da1d4664350'), 'Code': 'OBLI', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': "Lyxor Index Fund - Lyxor PEA Obligations d'Etat Euro UCITS ETF", 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0013346681', 'Type': 'ETF', 'last_price_volume': 4281, 'AssetType': 'Fixed Income'}]} 
+Query itx = {'_id': ObjectId('611424a7c889609c914222f7'), 'Code': 'CAC', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Lyxor CAC 40 (DR) UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0007052782', 'Type': 'ETF', 'last_price_volume': 43776, 'AssetType': 'Equity'}
+Query itx = {'_id': ObjectId('6114249fc889609c91421fff'), 'Code': 'STZ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'SSgA SPDR ETFs Europe II Public Limited Company - SPDR MSCI Europe Financials UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'IE00BKWQ0G16', 'Type': 'ETF', 'last_price_volume': 18663, 'AssetType': 'Equity'}
+Query itx = {'_id': ObjectId('6114249dc889609c91421f30'), 'Code': 'LQQ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Multi Units France - Lyxor PEA Nasdaq 100 Daily (2X) leveraged UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0010342592', 'Type': 'ETF', 'last_price_volume': 5866, 'AssetType': 'Equity'}
+Query itx = {'_id': ObjectId('60dead3b094f5da1d4664350'), 'Code': 'OBLI', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': "Lyxor Index Fund - Lyxor PEA Obligations d'Etat Euro UCITS ETF", 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0013346681', 'Type': 'ETF', 'last_price_volume': 4281, 'AssetType': 'Fixed Income'}
+NumExpr defaulting to 8 threads.
+df  result            ISIN  Code  ... EsgScoreNote total_stocks
+0  FR0007052782   CAC  ...          BBB            3
+1  IE00BKWQ0G16   STZ  ...          BBB            3
+2  FR0010342592   LQQ  ...          BBB            3
+3  FR0013346681  OBLI  ...          BBB            3
+
+[4 rows x 21 columns] 
+stock_data_df =           ISIN  Code  ... total_stocks     code
+0  FR0007052782   CAC  ...            3   CAC.PA
+1  IE00BKWQ0G16   STZ  ...            3   STZ.PA
+2  FR0010342592   LQQ  ...            3   LQQ.PA
+3  FR0013346681  OBLI  ...            3  OBLI.PA
+
+[4 rows x 22 columns]
+dates sent from 2021-11-16 00:00:00 to 2021-11-19 00:00:00
+dates Computed from 2021-11-16 00:00:00 to 2021-11-19 00:00:00
+Done get_prices: historical, query : [{'$match': {'FullCode': {'$in': ['LQQ.PA', 'STZ.PA', 'OBLI.PA', 'CAC.PA', 'FCHI.INDX']}}}, {'$project': {'prices': {'$filter': {'input': '$prices', 'as': 'price', 'cond': {'$and': [{'$gte': ['$$price.converted_date', 1637017200.0]}, {'$lte': ['$$price.converted_date', 1637276400.0]}]}}}}}]: dates from 2021-11-16 00:00:00 to 2021-11-19 00:00:00
+Data returned           date      open      high  ...     volume       code  converted_date
+0   2021-11-16    70.450    70.550  ...      27998     CAC.PA    1.637017e+09
+1   2021-11-17    70.480    70.600  ...      21757     CAC.PA    1.637104e+09
+2   2021-11-18    70.460    70.730  ...      24410     CAC.PA    1.637190e+09
+3   2021-11-19    70.660    70.710  ...      43776     CAC.PA    1.637276e+09
+4   2021-11-16  7146.370  7164.270  ...   69021696  FCHI.INDX    1.637017e+09
+5   2021-11-17  7149.300  7167.800  ...   68243504  FCHI.INDX    1.637104e+09
+6   2021-11-18  7155.050  7181.550  ...   75845600  FCHI.INDX    1.637190e+09
+7   2021-11-19  7172.720  7183.080  ...  117988000  FCHI.INDX    1.637276e+09
+8   2021-11-16   927.900   942.500  ...       3594     LQQ.PA    1.637017e+09
+9   2021-11-17   946.100   952.100  ...       3439     LQQ.PA    1.637104e+09
+10  2021-11-18   951.700   956.900  ...       2905     LQQ.PA    1.637190e+09
+11  2021-11-19   972.200   981.000  ...       5866     LQQ.PA    1.637276e+09
+12  2021-11-16    11.000    11.000  ...       1226    OBLI.PA    1.637017e+09
+13  2021-11-17    10.900    10.900  ...       3088    OBLI.PA    1.637104e+09
+14  2021-11-18    10.916    10.916  ...        733    OBLI.PA    1.637190e+09
+15  2021-11-19    10.910    10.964  ...       4281    OBLI.PA    1.637276e+09
+16  2021-11-16    63.400    63.400  ...       3694     STZ.PA    1.637017e+09
+17  2021-11-17    63.310    63.460  ...       5832     STZ.PA    1.637104e+09
+18  2021-11-18    63.100    63.330  ...       6674     STZ.PA    1.637190e+09
+19  2021-11-19    62.820    62.900  ...      18663     STZ.PA    1.637276e+09
+
+[20 rows x 9 columns]
+df_h_p =          date      open      high  ...     volume       code  converted_date
+0   2021-11-16    70.450    70.550  ...      27998     CAC.PA    1.637017e+09
+1   2021-11-17    70.480    70.600  ...      21757     CAC.PA    1.637104e+09
+2   2021-11-18    70.460    70.730  ...      24410     CAC.PA    1.637190e+09
+3   2021-11-19    70.660    70.710  ...      43776     CAC.PA    1.637276e+09
+4   2021-11-16  7146.370  7164.270  ...   69021696  FCHI.INDX    1.637017e+09
+5   2021-11-17  7149.300  7167.800  ...   68243504  FCHI.INDX    1.637104e+09
+6   2021-11-18  7155.050  7181.550  ...   75845600  FCHI.INDX    1.637190e+09
+7   2021-11-19  7172.720  7183.080  ...  117988000  FCHI.INDX    1.637276e+09
+8   2021-11-16   927.900   942.500  ...       3594     LQQ.PA    1.637017e+09
+9   2021-11-17   946.100   952.100  ...       3439     LQQ.PA    1.637104e+09
+10  2021-11-18   951.700   956.900  ...       2905     LQQ.PA    1.637190e+09
+11  2021-11-19   972.200   981.000  ...       5866     LQQ.PA    1.637276e+09
+12  2021-11-16    11.000    11.000  ...       1226    OBLI.PA    1.637017e+09
+13  2021-11-17    10.900    10.900  ...       3088    OBLI.PA    1.637104e+09
+14  2021-11-18    10.916    10.916  ...        733    OBLI.PA    1.637190e+09
+15  2021-11-19    10.910    10.964  ...       4281    OBLI.PA    1.637276e+09
+16  2021-11-16    63.400    63.400  ...       3694     STZ.PA    1.637017e+09
+17  2021-11-17    63.310    63.460  ...       5832     STZ.PA    1.637104e+09
+18  2021-11-18    63.100    63.330  ...       6674     STZ.PA    1.637190e+09
+19  2021-11-19    62.820    62.900  ...      18663     STZ.PA    1.637276e+09
+
+[20 rows x 9 columns]
+df_bhp =         date     open     high  ...     volume       code  converted_date
+4  2021-11-16  7146.37  7164.27  ...   69021696  FCHI.INDX    1.637017e+09
+5  2021-11-17  7149.30  7167.80  ...   68243504  FCHI.INDX    1.637104e+09
+6  2021-11-18  7155.05  7181.55  ...   75845600  FCHI.INDX    1.637190e+09
+7  2021-11-19  7172.72  7183.08  ...  117988000  FCHI.INDX    1.637276e+09
+
+[4 rows x 9 columns]
+b_daily_returns =               close
+date                
+2021-11-16       NaN
+2021-11-17  0.000594
+2021-11-18 -0.002078
+2021-11-19 -0.004157
+g_daily_returns =               value
+date                
+2021-11-17  0.491630
+2021-11-18  0.321120
+2021-11-19 -0.400094, g_b_daily_returns =               close
+date                
+2021-11-17  0.000594
+2021-11-18 -0.002078
+2021-11-19 -0.004157
+result beta 0.004605872897015799, alpha -0.0025137648720715295
+127.0.0.1 - - [21/Nov/2021 17:51:01] "[35m[1mPOST /api/v1/compute_portfolio_analytics HTTP/1.1[0m" 500 -
+127.0.0.1 - - [21/Nov/2021 17:51:02] "[37mGET /api/v1/compute_portfolio_analytics?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Nov/2021 17:51:02] "[37mGET /api/v1/compute_portfolio_analytics?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Nov/2021 17:51:02] "[37mGET /api/v1/compute_portfolio_analytics?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Nov/2021 17:51:03] "[37mGET /api/v1/compute_portfolio_analytics?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Nov/2021 17:51:03] "[37mGET /api/v1/compute_portfolio_analytics?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+ * Detected change in '/Users/sergengoube/PycharmProjects/investingclub/asset_prices/prices.py', reloading
+Unknown option passed to Flask-CORS: support_credentials
+Unknown option passed to Flask-CORS: support_credentials
+ * Debugger is active!
+ * Debugger PIN: 139-003-692
+params ={'portfolioId': 'max_diversification', 'portfolioHistoricalHoldings': [{'id': '121F4343564ACD', 'date': '2021-11-19T19:40:06+00:00', 'holdings': {'OBLI.PA': 20, 'LQQ.PA': 1, 'STZ.PA': 10, 'CAC.PA': 8}}, {'id': '121F4343564ACD', 'date': '2021-11-18T19:40:06+00:00', 'holdings': {'OBLI.PA': 1, 'LQQ.PA': 3, 'STZ.PA': 6, 'CAC.PA': 10}}, {'id': '121F4343564ACD', 'date': '2021-11-17T19:40:06+00:00', 'holdings': {'OBLI.PA': 1, 'LQQ.PA': 2, 'STZ.PA': 6, 'CAC.PA': 10}}, {'id': '121F4343564ACD', 'date': '2021-11-16T19:40:06+00:00', 'holdings': {'OBLI.PA': 5, 'LQQ.PA': 1, 'STZ.PA': 6, 'CAC.PA': 9}}], 'benchmarkStockCode': 'FCHI.INDX'}
+Query get_universe [{'$match': {'Active': 1, 'FullCode': {'$in': ['STZ.PA', 'LQQ.PA', 'CAC.PA', 'OBLI.PA']}}}, {'$sort': {'last_price_volume': -1}}, {'$facet': {'metadata': [{'$count': 'total'}], 'data': [{'$skip': 0}, {'$limit': 5000}, {'$project': {'ISIN': 1, 'Code': 1, 'General.Name': 1, 'Country': 1, 'Type': 1, 'General.Exchange': 1, 'General.CurrencyCode': 1, 'General.Type': 1, 'Exchange': 1, 'AssetType': 1, 'last_price_volume': 1, 'General.LogoURL': 1}}]}}] 
+Query get_universe [{'$match': {'Active': 1, 'FullCode': {'$in': ['STZ.PA', 'LQQ.PA', 'CAC.PA', 'OBLI.PA']}}}, {'$sort': {'last_price_volume': -1}}, {'$facet': {'metadata': [{'$count': 'total'}], 'data': [{'$skip': 0}, {'$limit': 5000}, {'$project': {'ISIN': 1, 'Code': 1, 'General.Name': 1, 'Country': 1, 'Type': 1, 'General.Exchange': 1, 'General.CurrencyCode': 1, 'General.Type': 1, 'Exchange': 1, 'AssetType': 1, 'last_price_volume': 1, 'General.LogoURL': 1}}]}}] 
+Query result {'metadata': [{'total': 4}], 'data': [{'_id': ObjectId('611424a7c889609c914222f7'), 'Code': 'CAC', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Lyxor CAC 40 (DR) UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0007052782', 'Type': 'ETF', 'last_price_volume': 43776, 'AssetType': 'Equity'}, {'_id': ObjectId('6114249fc889609c91421fff'), 'Code': 'STZ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'SSgA SPDR ETFs Europe II Public Limited Company - SPDR MSCI Europe Financials UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'IE00BKWQ0G16', 'Type': 'ETF', 'last_price_volume': 18663, 'AssetType': 'Equity'}, {'_id': ObjectId('6114249dc889609c91421f30'), 'Code': 'LQQ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Multi Units France - Lyxor PEA Nasdaq 100 Daily (2X) leveraged UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0010342592', 'Type': 'ETF', 'last_price_volume': 5866, 'AssetType': 'Equity'}, {'_id': ObjectId('60dead3b094f5da1d4664350'), 'Code': 'OBLI', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': "Lyxor Index Fund - Lyxor PEA Obligations d'Etat Euro UCITS ETF", 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0013346681', 'Type': 'ETF', 'last_price_volume': 4281, 'AssetType': 'Fixed Income'}]} 
+Query itx = {'_id': ObjectId('611424a7c889609c914222f7'), 'Code': 'CAC', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Lyxor CAC 40 (DR) UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0007052782', 'Type': 'ETF', 'last_price_volume': 43776, 'AssetType': 'Equity'}
+Query itx = {'_id': ObjectId('6114249fc889609c91421fff'), 'Code': 'STZ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'SSgA SPDR ETFs Europe II Public Limited Company - SPDR MSCI Europe Financials UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'IE00BKWQ0G16', 'Type': 'ETF', 'last_price_volume': 18663, 'AssetType': 'Equity'}
+Query itx = {'_id': ObjectId('6114249dc889609c91421f30'), 'Code': 'LQQ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Multi Units France - Lyxor PEA Nasdaq 100 Daily (2X) leveraged UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0010342592', 'Type': 'ETF', 'last_price_volume': 5866, 'AssetType': 'Equity'}
+Query itx = {'_id': ObjectId('60dead3b094f5da1d4664350'), 'Code': 'OBLI', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': "Lyxor Index Fund - Lyxor PEA Obligations d'Etat Euro UCITS ETF", 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0013346681', 'Type': 'ETF', 'last_price_volume': 4281, 'AssetType': 'Fixed Income'}
+NumExpr defaulting to 8 threads.
+df  result            ISIN  Code  ... EsgScoreNote total_stocks
+0  FR0007052782   CAC  ...          BBB            3
+1  IE00BKWQ0G16   STZ  ...          BBB            3
+2  FR0010342592   LQQ  ...          BBB            3
+3  FR0013346681  OBLI  ...          BBB            3
+
+[4 rows x 21 columns] 
+stock_data_df =           ISIN  Code  ... total_stocks     code
+0  FR0007052782   CAC  ...            3   CAC.PA
+1  IE00BKWQ0G16   STZ  ...            3   STZ.PA
+2  FR0010342592   LQQ  ...            3   LQQ.PA
+3  FR0013346681  OBLI  ...            3  OBLI.PA
+
+[4 rows x 22 columns]
+dates sent from 2021-11-16 00:00:00 to 2021-11-19 00:00:00
+dates Computed from 2021-11-16 00:00:00 to 2021-11-19 00:00:00
+Done get_prices: historical, query : [{'$match': {'FullCode': {'$in': ['STZ.PA', 'LQQ.PA', 'CAC.PA', 'OBLI.PA', 'FCHI.INDX']}}}, {'$project': {'prices': {'$filter': {'input': '$prices', 'as': 'price', 'cond': {'$and': [{'$gte': ['$$price.converted_date', 1637017200.0]}, {'$lte': ['$$price.converted_date', 1637276400.0]}]}}}}}]: dates from 2021-11-16 00:00:00 to 2021-11-19 00:00:00
+Data returned           date      open      high  ...     volume       code  converted_date
+0   2021-11-16    70.450    70.550  ...      27998     CAC.PA    1.637017e+09
+1   2021-11-17    70.480    70.600  ...      21757     CAC.PA    1.637104e+09
+2   2021-11-18    70.460    70.730  ...      24410     CAC.PA    1.637190e+09
+3   2021-11-19    70.660    70.710  ...      43776     CAC.PA    1.637276e+09
+4   2021-11-16  7146.370  7164.270  ...   69021696  FCHI.INDX    1.637017e+09
+5   2021-11-17  7149.300  7167.800  ...   68243504  FCHI.INDX    1.637104e+09
+6   2021-11-18  7155.050  7181.550  ...   75845600  FCHI.INDX    1.637190e+09
+7   2021-11-19  7172.720  7183.080  ...  117988000  FCHI.INDX    1.637276e+09
+8   2021-11-16   927.900   942.500  ...       3594     LQQ.PA    1.637017e+09
+9   2021-11-17   946.100   952.100  ...       3439     LQQ.PA    1.637104e+09
+10  2021-11-18   951.700   956.900  ...       2905     LQQ.PA    1.637190e+09
+11  2021-11-19   972.200   981.000  ...       5866     LQQ.PA    1.637276e+09
+12  2021-11-16    11.000    11.000  ...       1226    OBLI.PA    1.637017e+09
+13  2021-11-17    10.900    10.900  ...       3088    OBLI.PA    1.637104e+09
+14  2021-11-18    10.916    10.916  ...        733    OBLI.PA    1.637190e+09
+15  2021-11-19    10.910    10.964  ...       4281    OBLI.PA    1.637276e+09
+16  2021-11-16    63.400    63.400  ...       3694     STZ.PA    1.637017e+09
+17  2021-11-17    63.310    63.460  ...       5832     STZ.PA    1.637104e+09
+18  2021-11-18    63.100    63.330  ...       6674     STZ.PA    1.637190e+09
+19  2021-11-19    62.820    62.900  ...      18663     STZ.PA    1.637276e+09
+
+[20 rows x 9 columns]
+df_h_p =          date      open      high  ...     volume       code  converted_date
+0   2021-11-16    70.450    70.550  ...      27998     CAC.PA    1.637017e+09
+1   2021-11-17    70.480    70.600  ...      21757     CAC.PA    1.637104e+09
+2   2021-11-18    70.460    70.730  ...      24410     CAC.PA    1.637190e+09
+3   2021-11-19    70.660    70.710  ...      43776     CAC.PA    1.637276e+09
+4   2021-11-16  7146.370  7164.270  ...   69021696  FCHI.INDX    1.637017e+09
+5   2021-11-17  7149.300  7167.800  ...   68243504  FCHI.INDX    1.637104e+09
+6   2021-11-18  7155.050  7181.550  ...   75845600  FCHI.INDX    1.637190e+09
+7   2021-11-19  7172.720  7183.080  ...  117988000  FCHI.INDX    1.637276e+09
+8   2021-11-16   927.900   942.500  ...       3594     LQQ.PA    1.637017e+09
+9   2021-11-17   946.100   952.100  ...       3439     LQQ.PA    1.637104e+09
+10  2021-11-18   951.700   956.900  ...       2905     LQQ.PA    1.637190e+09
+11  2021-11-19   972.200   981.000  ...       5866     LQQ.PA    1.637276e+09
+12  2021-11-16    11.000    11.000  ...       1226    OBLI.PA    1.637017e+09
+13  2021-11-17    10.900    10.900  ...       3088    OBLI.PA    1.637104e+09
+14  2021-11-18    10.916    10.916  ...        733    OBLI.PA    1.637190e+09
+15  2021-11-19    10.910    10.964  ...       4281    OBLI.PA    1.637276e+09
+16  2021-11-16    63.400    63.400  ...       3694     STZ.PA    1.637017e+09
+17  2021-11-17    63.310    63.460  ...       5832     STZ.PA    1.637104e+09
+18  2021-11-18    63.100    63.330  ...       6674     STZ.PA    1.637190e+09
+19  2021-11-19    62.820    62.900  ...      18663     STZ.PA    1.637276e+09
+
+[20 rows x 9 columns]
+df_bhp =         date     open     high  ...     volume       code  converted_date
+4  2021-11-16  7146.37  7164.27  ...   69021696  FCHI.INDX    1.637017e+09
+5  2021-11-17  7149.30  7167.80  ...   68243504  FCHI.INDX    1.637104e+09
+6  2021-11-18  7155.05  7181.55  ...   75845600  FCHI.INDX    1.637190e+09
+7  2021-11-19  7172.72  7183.08  ...  117988000  FCHI.INDX    1.637276e+09
+
+[4 rows x 9 columns]
+b_daily_returns =               close
+date                
+2021-11-16       NaN
+2021-11-17  0.000594
+2021-11-18 -0.002078
+2021-11-19 -0.004157
+g_daily_returns =               value
+date                
+2021-11-17  0.491630
+2021-11-18  0.321120
+2021-11-19 -0.400094, g_b_daily_returns =               close
+date                
+2021-11-17  0.000594
+2021-11-18 -0.002078
+2021-11-19 -0.004157
+result beta 0.004605872897015799, alpha -0.0025137648720715295
+127.0.0.1 - - [21/Nov/2021 17:51:54] "[37mPOST /api/v1/compute_portfolio_analytics HTTP/1.1[0m" 200 -
+ * Detected change in '/Users/sergengoube/PycharmProjects/investingclub/asset_prices/prices.py', reloading
+Unknown option passed to Flask-CORS: support_credentials
+Unknown option passed to Flask-CORS: support_credentials
+ * Debugger is active!
+ * Debugger PIN: 139-003-692
+ * Detected change in '/Users/sergengoube/PycharmProjects/investingclub/api/utils.py', reloading
+Unknown option passed to Flask-CORS: support_credentials
+Unknown option passed to Flask-CORS: support_credentials
+ * Debugger is active!
+ * Debugger PIN: 139-003-692
+ * Detected change in '/Users/sergengoube/PycharmProjects/investingclub/asset_prices/prices.py', reloading
+Unknown option passed to Flask-CORS: support_credentials
+Unknown option passed to Flask-CORS: support_credentials
+ * Debugger is active!
+ * Debugger PIN: 139-003-692
+params ={'portfolioId': 'max_diversification', 'portfolioHistoricalHoldings': [{'id': '121F4343564ACD', 'date': '2021-11-19T19:40:06+00:00', 'holdings': {'OBLI.PA': 20, 'LQQ.PA': 1, 'STZ.PA': 10, 'CAC.PA': 8}}, {'id': '121F4343564ACD', 'date': '2021-11-18T19:40:06+00:00', 'holdings': {'OBLI.PA': 1, 'LQQ.PA': 3, 'STZ.PA': 6, 'CAC.PA': 10}}, {'id': '121F4343564ACD', 'date': '2021-11-17T19:40:06+00:00', 'holdings': {'OBLI.PA': 1, 'LQQ.PA': 2, 'STZ.PA': 6, 'CAC.PA': 10}}, {'id': '121F4343564ACD', 'date': '2021-11-16T19:40:06+00:00', 'holdings': {'OBLI.PA': 5, 'LQQ.PA': 1, 'STZ.PA': 6, 'CAC.PA': 9}}], 'benchmarkStockCode': 'FCHI.INDX'}
+Query get_universe [{'$match': {'Active': 1, 'FullCode': {'$in': ['OBLI.PA', 'STZ.PA', 'LQQ.PA', 'CAC.PA']}}}, {'$sort': {'last_price_volume': -1}}, {'$facet': {'metadata': [{'$count': 'total'}], 'data': [{'$skip': 0}, {'$limit': 5000}, {'$project': {'ISIN': 1, 'Code': 1, 'General.Name': 1, 'Country': 1, 'Type': 1, 'General.Exchange': 1, 'General.CurrencyCode': 1, 'General.Type': 1, 'Exchange': 1, 'AssetType': 1, 'last_price_volume': 1, 'General.LogoURL': 1}}]}}] 
+Query get_universe [{'$match': {'Active': 1, 'FullCode': {'$in': ['OBLI.PA', 'STZ.PA', 'LQQ.PA', 'CAC.PA']}}}, {'$sort': {'last_price_volume': -1}}, {'$facet': {'metadata': [{'$count': 'total'}], 'data': [{'$skip': 0}, {'$limit': 5000}, {'$project': {'ISIN': 1, 'Code': 1, 'General.Name': 1, 'Country': 1, 'Type': 1, 'General.Exchange': 1, 'General.CurrencyCode': 1, 'General.Type': 1, 'Exchange': 1, 'AssetType': 1, 'last_price_volume': 1, 'General.LogoURL': 1}}]}}] 
+Query result {'metadata': [{'total': 4}], 'data': [{'_id': ObjectId('611424a7c889609c914222f7'), 'Code': 'CAC', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Lyxor CAC 40 (DR) UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0007052782', 'Type': 'ETF', 'last_price_volume': 43776, 'AssetType': 'Equity'}, {'_id': ObjectId('6114249fc889609c91421fff'), 'Code': 'STZ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'SSgA SPDR ETFs Europe II Public Limited Company - SPDR MSCI Europe Financials UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'IE00BKWQ0G16', 'Type': 'ETF', 'last_price_volume': 18663, 'AssetType': 'Equity'}, {'_id': ObjectId('6114249dc889609c91421f30'), 'Code': 'LQQ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Multi Units France - Lyxor PEA Nasdaq 100 Daily (2X) leveraged UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0010342592', 'Type': 'ETF', 'last_price_volume': 5866, 'AssetType': 'Equity'}, {'_id': ObjectId('60dead3b094f5da1d4664350'), 'Code': 'OBLI', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': "Lyxor Index Fund - Lyxor PEA Obligations d'Etat Euro UCITS ETF", 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0013346681', 'Type': 'ETF', 'last_price_volume': 4281, 'AssetType': 'Fixed Income'}]} 
+Query itx = {'_id': ObjectId('611424a7c889609c914222f7'), 'Code': 'CAC', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Lyxor CAC 40 (DR) UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0007052782', 'Type': 'ETF', 'last_price_volume': 43776, 'AssetType': 'Equity'}
+Query itx = {'_id': ObjectId('6114249fc889609c91421fff'), 'Code': 'STZ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'SSgA SPDR ETFs Europe II Public Limited Company - SPDR MSCI Europe Financials UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'IE00BKWQ0G16', 'Type': 'ETF', 'last_price_volume': 18663, 'AssetType': 'Equity'}
+Query itx = {'_id': ObjectId('6114249dc889609c91421f30'), 'Code': 'LQQ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Multi Units France - Lyxor PEA Nasdaq 100 Daily (2X) leveraged UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0010342592', 'Type': 'ETF', 'last_price_volume': 5866, 'AssetType': 'Equity'}
+Query itx = {'_id': ObjectId('60dead3b094f5da1d4664350'), 'Code': 'OBLI', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': "Lyxor Index Fund - Lyxor PEA Obligations d'Etat Euro UCITS ETF", 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0013346681', 'Type': 'ETF', 'last_price_volume': 4281, 'AssetType': 'Fixed Income'}
+NumExpr defaulting to 8 threads.
+df  result            ISIN  Code  ... EsgScoreNote total_stocks
+0  FR0007052782   CAC  ...          BBB            3
+1  IE00BKWQ0G16   STZ  ...          BBB            3
+2  FR0010342592   LQQ  ...          BBB            3
+3  FR0013346681  OBLI  ...          BBB            3
+
+[4 rows x 21 columns] 
+stock_data_df =           ISIN  Code  ... total_stocks     code
+0  FR0007052782   CAC  ...            3   CAC.PA
+1  IE00BKWQ0G16   STZ  ...            3   STZ.PA
+2  FR0010342592   LQQ  ...            3   LQQ.PA
+3  FR0013346681  OBLI  ...            3  OBLI.PA
+
+[4 rows x 22 columns]
+dates sent from 2021-11-16 00:00:00 to 2021-11-19 00:00:00
+dates Computed from 2021-11-16 00:00:00 to 2021-11-19 00:00:00
+Done get_prices: historical, query : [{'$match': {'FullCode': {'$in': ['OBLI.PA', 'STZ.PA', 'LQQ.PA', 'CAC.PA', 'FCHI.INDX']}}}, {'$project': {'prices': {'$filter': {'input': '$prices', 'as': 'price', 'cond': {'$and': [{'$gte': ['$$price.converted_date', 1637017200.0]}, {'$lte': ['$$price.converted_date', 1637276400.0]}]}}}}}]: dates from 2021-11-16 00:00:00 to 2021-11-19 00:00:00
+Data returned           date      open      high  ...     volume       code  converted_date
+0   2021-11-16    70.450    70.550  ...      27998     CAC.PA    1.637017e+09
+1   2021-11-17    70.480    70.600  ...      21757     CAC.PA    1.637104e+09
+2   2021-11-18    70.460    70.730  ...      24410     CAC.PA    1.637190e+09
+3   2021-11-19    70.660    70.710  ...      43776     CAC.PA    1.637276e+09
+4   2021-11-16  7146.370  7164.270  ...   69021696  FCHI.INDX    1.637017e+09
+5   2021-11-17  7149.300  7167.800  ...   68243504  FCHI.INDX    1.637104e+09
+6   2021-11-18  7155.050  7181.550  ...   75845600  FCHI.INDX    1.637190e+09
+7   2021-11-19  7172.720  7183.080  ...  117988000  FCHI.INDX    1.637276e+09
+8   2021-11-16   927.900   942.500  ...       3594     LQQ.PA    1.637017e+09
+9   2021-11-17   946.100   952.100  ...       3439     LQQ.PA    1.637104e+09
+10  2021-11-18   951.700   956.900  ...       2905     LQQ.PA    1.637190e+09
+11  2021-11-19   972.200   981.000  ...       5866     LQQ.PA    1.637276e+09
+12  2021-11-16    11.000    11.000  ...       1226    OBLI.PA    1.637017e+09
+13  2021-11-17    10.900    10.900  ...       3088    OBLI.PA    1.637104e+09
+14  2021-11-18    10.916    10.916  ...        733    OBLI.PA    1.637190e+09
+15  2021-11-19    10.910    10.964  ...       4281    OBLI.PA    1.637276e+09
+16  2021-11-16    63.400    63.400  ...       3694     STZ.PA    1.637017e+09
+17  2021-11-17    63.310    63.460  ...       5832     STZ.PA    1.637104e+09
+18  2021-11-18    63.100    63.330  ...       6674     STZ.PA    1.637190e+09
+19  2021-11-19    62.820    62.900  ...      18663     STZ.PA    1.637276e+09
+
+[20 rows x 9 columns]
+df_h_p =          date      open      high  ...     volume       code  converted_date
+0   2021-11-16    70.450    70.550  ...      27998     CAC.PA    1.637017e+09
+1   2021-11-17    70.480    70.600  ...      21757     CAC.PA    1.637104e+09
+2   2021-11-18    70.460    70.730  ...      24410     CAC.PA    1.637190e+09
+3   2021-11-19    70.660    70.710  ...      43776     CAC.PA    1.637276e+09
+4   2021-11-16  7146.370  7164.270  ...   69021696  FCHI.INDX    1.637017e+09
+5   2021-11-17  7149.300  7167.800  ...   68243504  FCHI.INDX    1.637104e+09
+6   2021-11-18  7155.050  7181.550  ...   75845600  FCHI.INDX    1.637190e+09
+7   2021-11-19  7172.720  7183.080  ...  117988000  FCHI.INDX    1.637276e+09
+8   2021-11-16   927.900   942.500  ...       3594     LQQ.PA    1.637017e+09
+9   2021-11-17   946.100   952.100  ...       3439     LQQ.PA    1.637104e+09
+10  2021-11-18   951.700   956.900  ...       2905     LQQ.PA    1.637190e+09
+11  2021-11-19   972.200   981.000  ...       5866     LQQ.PA    1.637276e+09
+12  2021-11-16    11.000    11.000  ...       1226    OBLI.PA    1.637017e+09
+13  2021-11-17    10.900    10.900  ...       3088    OBLI.PA    1.637104e+09
+14  2021-11-18    10.916    10.916  ...        733    OBLI.PA    1.637190e+09
+15  2021-11-19    10.910    10.964  ...       4281    OBLI.PA    1.637276e+09
+16  2021-11-16    63.400    63.400  ...       3694     STZ.PA    1.637017e+09
+17  2021-11-17    63.310    63.460  ...       5832     STZ.PA    1.637104e+09
+18  2021-11-18    63.100    63.330  ...       6674     STZ.PA    1.637190e+09
+19  2021-11-19    62.820    62.900  ...      18663     STZ.PA    1.637276e+09
+
+[20 rows x 9 columns]
+df_bhp =         date     open     high  ...     volume       code  converted_date
+4  2021-11-16  7146.37  7164.27  ...   69021696  FCHI.INDX    1.637017e+09
+5  2021-11-17  7149.30  7167.80  ...   68243504  FCHI.INDX    1.637104e+09
+6  2021-11-18  7155.05  7181.55  ...   75845600  FCHI.INDX    1.637190e+09
+7  2021-11-19  7172.72  7183.08  ...  117988000  FCHI.INDX    1.637276e+09
+
+[4 rows x 9 columns]
+b_daily_returns =               close
+date                
+2021-11-16       NaN
+2021-11-17  0.000594
+2021-11-18 -0.002078
+2021-11-19 -0.004157
+g_daily_returns =               value
+date                
+2021-11-17  0.491630
+2021-11-18  0.321120
+2021-11-19 -0.400094, g_b_daily_returns =               close
+date                
+2021-11-17  0.000594
+2021-11-18 -0.002078
+2021-11-19 -0.004157
+result beta 0.004605872897015799, alpha -0.0025137648720715295
+127.0.0.1 - - [21/Nov/2021 17:56:52] "[35m[1mPOST /api/v1/compute_portfolio_analytics HTTP/1.1[0m" 500 -
+127.0.0.1 - - [21/Nov/2021 17:56:53] "[37mGET /api/v1/compute_portfolio_analytics?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Nov/2021 17:56:53] "[37mGET /api/v1/compute_portfolio_analytics?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Nov/2021 17:56:53] "[37mGET /api/v1/compute_portfolio_analytics?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Nov/2021 17:56:54] "[37mGET /api/v1/compute_portfolio_analytics?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Nov/2021 17:56:54] "[37mGET /api/v1/compute_portfolio_analytics?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+ * Detected change in '/Users/sergengoube/PycharmProjects/investingclub/asset_prices/prices.py', reloading
+Unknown option passed to Flask-CORS: support_credentials
+Unknown option passed to Flask-CORS: support_credentials
+ * Debugger is active!
+ * Debugger PIN: 139-003-692
+ * Detected change in '/Users/sergengoube/PycharmProjects/investingclub/api/utils.py', reloading
+Unknown option passed to Flask-CORS: support_credentials
+Unknown option passed to Flask-CORS: support_credentials
+ * Debugger is active!
+ * Debugger PIN: 139-003-692
+ * Detected change in '/Users/sergengoube/PycharmProjects/investingclub/asset_prices/prices.py', reloading
+ * Detected change in '/Users/sergengoube/PycharmProjects/investingclub/api/utils.py', reloading
+Unknown option passed to Flask-CORS: support_credentials
+Unknown option passed to Flask-CORS: support_credentials
+ * Debugger is active!
+ * Debugger PIN: 139-003-692
+params ={'portfolioId': 'max_diversification', 'portfolioHistoricalHoldings': [{'id': '121F4343564ACD', 'date': '2021-11-19T19:40:06+00:00', 'holdings': {'OBLI.PA': 20, 'LQQ.PA': 1, 'STZ.PA': 10, 'CAC.PA': 8}}, {'id': '121F4343564ACD', 'date': '2021-11-18T19:40:06+00:00', 'holdings': {'OBLI.PA': 1, 'LQQ.PA': 3, 'STZ.PA': 6, 'CAC.PA': 10}}, {'id': '121F4343564ACD', 'date': '2021-11-17T19:40:06+00:00', 'holdings': {'OBLI.PA': 1, 'LQQ.PA': 2, 'STZ.PA': 6, 'CAC.PA': 10}}, {'id': '121F4343564ACD', 'date': '2021-11-16T19:40:06+00:00', 'holdings': {'OBLI.PA': 5, 'LQQ.PA': 1, 'STZ.PA': 6, 'CAC.PA': 9}}], 'benchmarkStockCode': 'FCHI.INDX'}
+Query get_universe [{'$match': {'Active': 1, 'FullCode': {'$in': ['OBLI.PA', 'STZ.PA', 'LQQ.PA', 'CAC.PA']}}}, {'$sort': {'last_price_volume': -1}}, {'$facet': {'metadata': [{'$count': 'total'}], 'data': [{'$skip': 0}, {'$limit': 5000}, {'$project': {'ISIN': 1, 'Code': 1, 'General.Name': 1, 'Country': 1, 'Type': 1, 'General.Exchange': 1, 'General.CurrencyCode': 1, 'General.Type': 1, 'Exchange': 1, 'AssetType': 1, 'last_price_volume': 1, 'General.LogoURL': 1}}]}}] 
+Query get_universe [{'$match': {'Active': 1, 'FullCode': {'$in': ['OBLI.PA', 'STZ.PA', 'LQQ.PA', 'CAC.PA']}}}, {'$sort': {'last_price_volume': -1}}, {'$facet': {'metadata': [{'$count': 'total'}], 'data': [{'$skip': 0}, {'$limit': 5000}, {'$project': {'ISIN': 1, 'Code': 1, 'General.Name': 1, 'Country': 1, 'Type': 1, 'General.Exchange': 1, 'General.CurrencyCode': 1, 'General.Type': 1, 'Exchange': 1, 'AssetType': 1, 'last_price_volume': 1, 'General.LogoURL': 1}}]}}] 
+Query result {'metadata': [{'total': 4}], 'data': [{'_id': ObjectId('611424a7c889609c914222f7'), 'Code': 'CAC', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Lyxor CAC 40 (DR) UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0007052782', 'Type': 'ETF', 'last_price_volume': 43776, 'AssetType': 'Equity'}, {'_id': ObjectId('6114249fc889609c91421fff'), 'Code': 'STZ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'SSgA SPDR ETFs Europe II Public Limited Company - SPDR MSCI Europe Financials UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'IE00BKWQ0G16', 'Type': 'ETF', 'last_price_volume': 18663, 'AssetType': 'Equity'}, {'_id': ObjectId('6114249dc889609c91421f30'), 'Code': 'LQQ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Multi Units France - Lyxor PEA Nasdaq 100 Daily (2X) leveraged UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0010342592', 'Type': 'ETF', 'last_price_volume': 5866, 'AssetType': 'Equity'}, {'_id': ObjectId('60dead3b094f5da1d4664350'), 'Code': 'OBLI', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': "Lyxor Index Fund - Lyxor PEA Obligations d'Etat Euro UCITS ETF", 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0013346681', 'Type': 'ETF', 'last_price_volume': 4281, 'AssetType': 'Fixed Income'}]} 
+Query itx = {'_id': ObjectId('611424a7c889609c914222f7'), 'Code': 'CAC', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Lyxor CAC 40 (DR) UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0007052782', 'Type': 'ETF', 'last_price_volume': 43776, 'AssetType': 'Equity'}
+Query itx = {'_id': ObjectId('6114249fc889609c91421fff'), 'Code': 'STZ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'SSgA SPDR ETFs Europe II Public Limited Company - SPDR MSCI Europe Financials UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'IE00BKWQ0G16', 'Type': 'ETF', 'last_price_volume': 18663, 'AssetType': 'Equity'}
+Query itx = {'_id': ObjectId('6114249dc889609c91421f30'), 'Code': 'LQQ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Multi Units France - Lyxor PEA Nasdaq 100 Daily (2X) leveraged UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0010342592', 'Type': 'ETF', 'last_price_volume': 5866, 'AssetType': 'Equity'}
+Query itx = {'_id': ObjectId('60dead3b094f5da1d4664350'), 'Code': 'OBLI', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': "Lyxor Index Fund - Lyxor PEA Obligations d'Etat Euro UCITS ETF", 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0013346681', 'Type': 'ETF', 'last_price_volume': 4281, 'AssetType': 'Fixed Income'}
+NumExpr defaulting to 8 threads.
+df  result            ISIN  Code  ... EsgScoreNote total_stocks
+0  FR0007052782   CAC  ...          BBB            3
+1  IE00BKWQ0G16   STZ  ...          BBB            3
+2  FR0010342592   LQQ  ...          BBB            3
+3  FR0013346681  OBLI  ...          BBB            3
+
+[4 rows x 21 columns] 
+stock_data_df =           ISIN  Code  ... total_stocks     code
+0  FR0007052782   CAC  ...            3   CAC.PA
+1  IE00BKWQ0G16   STZ  ...            3   STZ.PA
+2  FR0010342592   LQQ  ...            3   LQQ.PA
+3  FR0013346681  OBLI  ...            3  OBLI.PA
+
+[4 rows x 22 columns]
+dates sent from 2021-11-16 00:00:00 to 2021-11-19 00:00:00
+dates Computed from 2021-11-16 00:00:00 to 2021-11-19 00:00:00
+Done get_prices: historical, query : [{'$match': {'FullCode': {'$in': ['OBLI.PA', 'STZ.PA', 'LQQ.PA', 'CAC.PA', 'FCHI.INDX']}}}, {'$project': {'prices': {'$filter': {'input': '$prices', 'as': 'price', 'cond': {'$and': [{'$gte': ['$$price.converted_date', 1637017200.0]}, {'$lte': ['$$price.converted_date', 1637276400.0]}]}}}}}]: dates from 2021-11-16 00:00:00 to 2021-11-19 00:00:00
+Data returned           date      open      high  ...     volume       code  converted_date
+0   2021-11-16    70.450    70.550  ...      27998     CAC.PA    1.637017e+09
+1   2021-11-17    70.480    70.600  ...      21757     CAC.PA    1.637104e+09
+2   2021-11-18    70.460    70.730  ...      24410     CAC.PA    1.637190e+09
+3   2021-11-19    70.660    70.710  ...      43776     CAC.PA    1.637276e+09
+4   2021-11-16  7146.370  7164.270  ...   69021696  FCHI.INDX    1.637017e+09
+5   2021-11-17  7149.300  7167.800  ...   68243504  FCHI.INDX    1.637104e+09
+6   2021-11-18  7155.050  7181.550  ...   75845600  FCHI.INDX    1.637190e+09
+7   2021-11-19  7172.720  7183.080  ...  117988000  FCHI.INDX    1.637276e+09
+8   2021-11-16   927.900   942.500  ...       3594     LQQ.PA    1.637017e+09
+9   2021-11-17   946.100   952.100  ...       3439     LQQ.PA    1.637104e+09
+10  2021-11-18   951.700   956.900  ...       2905     LQQ.PA    1.637190e+09
+11  2021-11-19   972.200   981.000  ...       5866     LQQ.PA    1.637276e+09
+12  2021-11-16    11.000    11.000  ...       1226    OBLI.PA    1.637017e+09
+13  2021-11-17    10.900    10.900  ...       3088    OBLI.PA    1.637104e+09
+14  2021-11-18    10.916    10.916  ...        733    OBLI.PA    1.637190e+09
+15  2021-11-19    10.910    10.964  ...       4281    OBLI.PA    1.637276e+09
+16  2021-11-16    63.400    63.400  ...       3694     STZ.PA    1.637017e+09
+17  2021-11-17    63.310    63.460  ...       5832     STZ.PA    1.637104e+09
+18  2021-11-18    63.100    63.330  ...       6674     STZ.PA    1.637190e+09
+19  2021-11-19    62.820    62.900  ...      18663     STZ.PA    1.637276e+09
+
+[20 rows x 9 columns]
+df_h_p =          date      open      high  ...     volume       code  converted_date
+0   2021-11-16    70.450    70.550  ...      27998     CAC.PA    1.637017e+09
+1   2021-11-17    70.480    70.600  ...      21757     CAC.PA    1.637104e+09
+2   2021-11-18    70.460    70.730  ...      24410     CAC.PA    1.637190e+09
+3   2021-11-19    70.660    70.710  ...      43776     CAC.PA    1.637276e+09
+4   2021-11-16  7146.370  7164.270  ...   69021696  FCHI.INDX    1.637017e+09
+5   2021-11-17  7149.300  7167.800  ...   68243504  FCHI.INDX    1.637104e+09
+6   2021-11-18  7155.050  7181.550  ...   75845600  FCHI.INDX    1.637190e+09
+7   2021-11-19  7172.720  7183.080  ...  117988000  FCHI.INDX    1.637276e+09
+8   2021-11-16   927.900   942.500  ...       3594     LQQ.PA    1.637017e+09
+9   2021-11-17   946.100   952.100  ...       3439     LQQ.PA    1.637104e+09
+10  2021-11-18   951.700   956.900  ...       2905     LQQ.PA    1.637190e+09
+11  2021-11-19   972.200   981.000  ...       5866     LQQ.PA    1.637276e+09
+12  2021-11-16    11.000    11.000  ...       1226    OBLI.PA    1.637017e+09
+13  2021-11-17    10.900    10.900  ...       3088    OBLI.PA    1.637104e+09
+14  2021-11-18    10.916    10.916  ...        733    OBLI.PA    1.637190e+09
+15  2021-11-19    10.910    10.964  ...       4281    OBLI.PA    1.637276e+09
+16  2021-11-16    63.400    63.400  ...       3694     STZ.PA    1.637017e+09
+17  2021-11-17    63.310    63.460  ...       5832     STZ.PA    1.637104e+09
+18  2021-11-18    63.100    63.330  ...       6674     STZ.PA    1.637190e+09
+19  2021-11-19    62.820    62.900  ...      18663     STZ.PA    1.637276e+09
+
+[20 rows x 9 columns]
+df_bhp =         date     open     high  ...     volume       code  converted_date
+4  2021-11-16  7146.37  7164.27  ...   69021696  FCHI.INDX    1.637017e+09
+5  2021-11-17  7149.30  7167.80  ...   68243504  FCHI.INDX    1.637104e+09
+6  2021-11-18  7155.05  7181.55  ...   75845600  FCHI.INDX    1.637190e+09
+7  2021-11-19  7172.72  7183.08  ...  117988000  FCHI.INDX    1.637276e+09
+
+[4 rows x 9 columns]
+b_daily_returns =               close
+date                
+2021-11-16       NaN
+2021-11-17  0.000594
+2021-11-18 -0.002078
+2021-11-19 -0.004157
+g_daily_returns =               value
+date                
+2021-11-17  0.491630
+2021-11-18  0.321120
+2021-11-19 -0.400094, g_b_daily_returns =               close
+date                
+2021-11-17  0.000594
+2021-11-18 -0.002078
+2021-11-19 -0.004157
+result beta 0.004605872897015799, alpha -0.0025137648720715295
+127.0.0.1 - - [21/Nov/2021 17:59:22] "[35m[1mPOST /api/v1/compute_portfolio_analytics HTTP/1.1[0m" 500 -
+127.0.0.1 - - [21/Nov/2021 17:59:23] "[37mGET /api/v1/compute_portfolio_analytics?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Nov/2021 17:59:23] "[37mGET /api/v1/compute_portfolio_analytics?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Nov/2021 17:59:23] "[37mGET /api/v1/compute_portfolio_analytics?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Nov/2021 17:59:23] "[37mGET /api/v1/compute_portfolio_analytics?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Nov/2021 17:59:24] "[37mGET /api/v1/compute_portfolio_analytics?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+ * Detected change in '/Users/sergengoube/PycharmProjects/investingclub/asset_prices/prices.py', reloading
+Unknown option passed to Flask-CORS: support_credentials
+Unknown option passed to Flask-CORS: support_credentials
+ * Debugger is active!
+ * Debugger PIN: 139-003-692
+ * Detected change in '/Users/sergengoube/PycharmProjects/investingclub/asset_prices/prices.py', reloading
+Unknown option passed to Flask-CORS: support_credentials
+Unknown option passed to Flask-CORS: support_credentials
+ * Debugger is active!
+ * Debugger PIN: 139-003-692
+ * Detected change in '/Users/sergengoube/PycharmProjects/investingclub/asset_prices/prices.py', reloading
+Unknown option passed to Flask-CORS: support_credentials
+Unknown option passed to Flask-CORS: support_credentials
+ * Debugger is active!
+ * Debugger PIN: 139-003-692
+ * Detected change in '/Users/sergengoube/PycharmProjects/investingclub/asset_prices/prices.py', reloading
+Unknown option passed to Flask-CORS: support_credentials
+Unknown option passed to Flask-CORS: support_credentials
+ * Debugger is active!
+ * Debugger PIN: 139-003-692
+params ={'portfolioId': 'max_diversification', 'portfolioHistoricalHoldings': [{'id': '121F4343564ACD', 'date': '2021-11-19T19:40:06+00:00', 'holdings': {'OBLI.PA': 20, 'LQQ.PA': 1, 'STZ.PA': 10, 'CAC.PA': 8}}, {'id': '121F4343564ACD', 'date': '2021-11-18T19:40:06+00:00', 'holdings': {'OBLI.PA': 1, 'LQQ.PA': 3, 'STZ.PA': 6, 'CAC.PA': 10}}, {'id': '121F4343564ACD', 'date': '2021-11-17T19:40:06+00:00', 'holdings': {'OBLI.PA': 1, 'LQQ.PA': 2, 'STZ.PA': 6, 'CAC.PA': 10}}, {'id': '121F4343564ACD', 'date': '2021-11-16T19:40:06+00:00', 'holdings': {'OBLI.PA': 5, 'LQQ.PA': 1, 'STZ.PA': 6, 'CAC.PA': 9}}], 'benchmarkStockCode': 'FCHI.INDX'}
+Query get_universe [{'$match': {'Active': 1, 'FullCode': {'$in': ['OBLI.PA', 'CAC.PA', 'LQQ.PA', 'STZ.PA']}}}, {'$sort': {'last_price_volume': -1}}, {'$facet': {'metadata': [{'$count': 'total'}], 'data': [{'$skip': 0}, {'$limit': 5000}, {'$project': {'ISIN': 1, 'Code': 1, 'General.Name': 1, 'Country': 1, 'Type': 1, 'General.Exchange': 1, 'General.CurrencyCode': 1, 'General.Type': 1, 'Exchange': 1, 'AssetType': 1, 'last_price_volume': 1, 'General.LogoURL': 1}}]}}] 
+Query get_universe [{'$match': {'Active': 1, 'FullCode': {'$in': ['OBLI.PA', 'CAC.PA', 'LQQ.PA', 'STZ.PA']}}}, {'$sort': {'last_price_volume': -1}}, {'$facet': {'metadata': [{'$count': 'total'}], 'data': [{'$skip': 0}, {'$limit': 5000}, {'$project': {'ISIN': 1, 'Code': 1, 'General.Name': 1, 'Country': 1, 'Type': 1, 'General.Exchange': 1, 'General.CurrencyCode': 1, 'General.Type': 1, 'Exchange': 1, 'AssetType': 1, 'last_price_volume': 1, 'General.LogoURL': 1}}]}}] 
+Query result {'metadata': [{'total': 4}], 'data': [{'_id': ObjectId('611424a7c889609c914222f7'), 'Code': 'CAC', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Lyxor CAC 40 (DR) UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0007052782', 'Type': 'ETF', 'last_price_volume': 43776, 'AssetType': 'Equity'}, {'_id': ObjectId('6114249fc889609c91421fff'), 'Code': 'STZ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'SSgA SPDR ETFs Europe II Public Limited Company - SPDR MSCI Europe Financials UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'IE00BKWQ0G16', 'Type': 'ETF', 'last_price_volume': 18663, 'AssetType': 'Equity'}, {'_id': ObjectId('6114249dc889609c91421f30'), 'Code': 'LQQ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Multi Units France - Lyxor PEA Nasdaq 100 Daily (2X) leveraged UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0010342592', 'Type': 'ETF', 'last_price_volume': 5866, 'AssetType': 'Equity'}, {'_id': ObjectId('60dead3b094f5da1d4664350'), 'Code': 'OBLI', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': "Lyxor Index Fund - Lyxor PEA Obligations d'Etat Euro UCITS ETF", 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0013346681', 'Type': 'ETF', 'last_price_volume': 4281, 'AssetType': 'Fixed Income'}]} 
+Query itx = {'_id': ObjectId('611424a7c889609c914222f7'), 'Code': 'CAC', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Lyxor CAC 40 (DR) UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0007052782', 'Type': 'ETF', 'last_price_volume': 43776, 'AssetType': 'Equity'}
+Query itx = {'_id': ObjectId('6114249fc889609c91421fff'), 'Code': 'STZ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'SSgA SPDR ETFs Europe II Public Limited Company - SPDR MSCI Europe Financials UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'IE00BKWQ0G16', 'Type': 'ETF', 'last_price_volume': 18663, 'AssetType': 'Equity'}
+Query itx = {'_id': ObjectId('6114249dc889609c91421f30'), 'Code': 'LQQ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Multi Units France - Lyxor PEA Nasdaq 100 Daily (2X) leveraged UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0010342592', 'Type': 'ETF', 'last_price_volume': 5866, 'AssetType': 'Equity'}
+Query itx = {'_id': ObjectId('60dead3b094f5da1d4664350'), 'Code': 'OBLI', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': "Lyxor Index Fund - Lyxor PEA Obligations d'Etat Euro UCITS ETF", 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0013346681', 'Type': 'ETF', 'last_price_volume': 4281, 'AssetType': 'Fixed Income'}
+NumExpr defaulting to 8 threads.
+df  result            ISIN  Code  ... EsgScoreNote total_stocks
+0  FR0007052782   CAC  ...          BBB            3
+1  IE00BKWQ0G16   STZ  ...          BBB            3
+2  FR0010342592   LQQ  ...          BBB            3
+3  FR0013346681  OBLI  ...          BBB            3
+
+[4 rows x 21 columns] 
+stock_data_df =           ISIN  Code  ... total_stocks     code
+0  FR0007052782   CAC  ...            3   CAC.PA
+1  IE00BKWQ0G16   STZ  ...            3   STZ.PA
+2  FR0010342592   LQQ  ...            3   LQQ.PA
+3  FR0013346681  OBLI  ...            3  OBLI.PA
+
+[4 rows x 22 columns]
+dates sent from 2021-11-16 00:00:00 to 2021-11-19 00:00:00
+dates Computed from 2021-11-16 00:00:00 to 2021-11-19 00:00:00
+Done get_prices: historical, query : [{'$match': {'FullCode': {'$in': ['OBLI.PA', 'CAC.PA', 'LQQ.PA', 'STZ.PA', 'FCHI.INDX']}}}, {'$project': {'prices': {'$filter': {'input': '$prices', 'as': 'price', 'cond': {'$and': [{'$gte': ['$$price.converted_date', 1637017200.0]}, {'$lte': ['$$price.converted_date', 1637276400.0]}]}}}}}]: dates from 2021-11-16 00:00:00 to 2021-11-19 00:00:00
+Data returned           date      open      high  ...     volume       code  converted_date
+0   2021-11-16    70.450    70.550  ...      27998     CAC.PA    1.637017e+09
+1   2021-11-17    70.480    70.600  ...      21757     CAC.PA    1.637104e+09
+2   2021-11-18    70.460    70.730  ...      24410     CAC.PA    1.637190e+09
+3   2021-11-19    70.660    70.710  ...      43776     CAC.PA    1.637276e+09
+4   2021-11-16  7146.370  7164.270  ...   69021696  FCHI.INDX    1.637017e+09
+5   2021-11-17  7149.300  7167.800  ...   68243504  FCHI.INDX    1.637104e+09
+6   2021-11-18  7155.050  7181.550  ...   75845600  FCHI.INDX    1.637190e+09
+7   2021-11-19  7172.720  7183.080  ...  117988000  FCHI.INDX    1.637276e+09
+8   2021-11-16   927.900   942.500  ...       3594     LQQ.PA    1.637017e+09
+9   2021-11-17   946.100   952.100  ...       3439     LQQ.PA    1.637104e+09
+10  2021-11-18   951.700   956.900  ...       2905     LQQ.PA    1.637190e+09
+11  2021-11-19   972.200   981.000  ...       5866     LQQ.PA    1.637276e+09
+12  2021-11-16    11.000    11.000  ...       1226    OBLI.PA    1.637017e+09
+13  2021-11-17    10.900    10.900  ...       3088    OBLI.PA    1.637104e+09
+14  2021-11-18    10.916    10.916  ...        733    OBLI.PA    1.637190e+09
+15  2021-11-19    10.910    10.964  ...       4281    OBLI.PA    1.637276e+09
+16  2021-11-16    63.400    63.400  ...       3694     STZ.PA    1.637017e+09
+17  2021-11-17    63.310    63.460  ...       5832     STZ.PA    1.637104e+09
+18  2021-11-18    63.100    63.330  ...       6674     STZ.PA    1.637190e+09
+19  2021-11-19    62.820    62.900  ...      18663     STZ.PA    1.637276e+09
+
+[20 rows x 9 columns]
+df_h_p =          date      open      high  ...     volume       code  converted_date
+0   2021-11-16    70.450    70.550  ...      27998     CAC.PA    1.637017e+09
+1   2021-11-17    70.480    70.600  ...      21757     CAC.PA    1.637104e+09
+2   2021-11-18    70.460    70.730  ...      24410     CAC.PA    1.637190e+09
+3   2021-11-19    70.660    70.710  ...      43776     CAC.PA    1.637276e+09
+4   2021-11-16  7146.370  7164.270  ...   69021696  FCHI.INDX    1.637017e+09
+5   2021-11-17  7149.300  7167.800  ...   68243504  FCHI.INDX    1.637104e+09
+6   2021-11-18  7155.050  7181.550  ...   75845600  FCHI.INDX    1.637190e+09
+7   2021-11-19  7172.720  7183.080  ...  117988000  FCHI.INDX    1.637276e+09
+8   2021-11-16   927.900   942.500  ...       3594     LQQ.PA    1.637017e+09
+9   2021-11-17   946.100   952.100  ...       3439     LQQ.PA    1.637104e+09
+10  2021-11-18   951.700   956.900  ...       2905     LQQ.PA    1.637190e+09
+11  2021-11-19   972.200   981.000  ...       5866     LQQ.PA    1.637276e+09
+12  2021-11-16    11.000    11.000  ...       1226    OBLI.PA    1.637017e+09
+13  2021-11-17    10.900    10.900  ...       3088    OBLI.PA    1.637104e+09
+14  2021-11-18    10.916    10.916  ...        733    OBLI.PA    1.637190e+09
+15  2021-11-19    10.910    10.964  ...       4281    OBLI.PA    1.637276e+09
+16  2021-11-16    63.400    63.400  ...       3694     STZ.PA    1.637017e+09
+17  2021-11-17    63.310    63.460  ...       5832     STZ.PA    1.637104e+09
+18  2021-11-18    63.100    63.330  ...       6674     STZ.PA    1.637190e+09
+19  2021-11-19    62.820    62.900  ...      18663     STZ.PA    1.637276e+09
+
+[20 rows x 9 columns]
+df_bhp =         date     open     high  ...     volume       code  converted_date
+4  2021-11-16  7146.37  7164.27  ...   69021696  FCHI.INDX    1.637017e+09
+5  2021-11-17  7149.30  7167.80  ...   68243504  FCHI.INDX    1.637104e+09
+6  2021-11-18  7155.05  7181.55  ...   75845600  FCHI.INDX    1.637190e+09
+7  2021-11-19  7172.72  7183.08  ...  117988000  FCHI.INDX    1.637276e+09
+
+[4 rows x 9 columns]
+b_daily_returns =               close
+date                
+2021-11-16       NaN
+2021-11-17  0.000594
+2021-11-18 -0.002078
+2021-11-19 -0.004157
+g_daily_returns =               value
+date                
+2021-11-17  0.491630
+2021-11-18  0.321120
+2021-11-19 -0.400094, g_b_daily_returns =               close
+date                
+2021-11-17  0.000594
+2021-11-18 -0.002078
+2021-11-19 -0.004157
+result beta 0.004605872897015799, alpha -0.0025137648720715295
+127.0.0.1 - - [21/Nov/2021 18:03:47] "[35m[1mPOST /api/v1/compute_portfolio_analytics HTTP/1.1[0m" 500 -
+127.0.0.1 - - [21/Nov/2021 18:03:47] "[37mGET /api/v1/compute_portfolio_analytics?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Nov/2021 18:03:47] "[37mGET /api/v1/compute_portfolio_analytics?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Nov/2021 18:03:47] "[37mGET /api/v1/compute_portfolio_analytics?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Nov/2021 18:03:48] "[37mGET /api/v1/compute_portfolio_analytics?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Nov/2021 18:03:48] "[37mGET /api/v1/compute_portfolio_analytics?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+ * Detected change in '/Users/sergengoube/PycharmProjects/investingclub/asset_prices/prices.py', reloading
+Unknown option passed to Flask-CORS: support_credentials
+Unknown option passed to Flask-CORS: support_credentials
+ * Debugger is active!
+ * Debugger PIN: 139-003-692
+params ={'portfolioId': 'max_diversification', 'portfolioHistoricalHoldings': [{'id': '121F4343564ACD', 'date': '2021-11-19T19:40:06+00:00', 'holdings': {'OBLI.PA': 20, 'LQQ.PA': 1, 'STZ.PA': 10, 'CAC.PA': 8}}, {'id': '121F4343564ACD', 'date': '2021-11-18T19:40:06+00:00', 'holdings': {'OBLI.PA': 1, 'LQQ.PA': 3, 'STZ.PA': 6, 'CAC.PA': 10}}, {'id': '121F4343564ACD', 'date': '2021-11-17T19:40:06+00:00', 'holdings': {'OBLI.PA': 1, 'LQQ.PA': 2, 'STZ.PA': 6, 'CAC.PA': 10}}, {'id': '121F4343564ACD', 'date': '2021-11-16T19:40:06+00:00', 'holdings': {'OBLI.PA': 5, 'LQQ.PA': 1, 'STZ.PA': 6, 'CAC.PA': 9}}], 'benchmarkStockCode': 'FCHI.INDX'}
+Query get_universe [{'$match': {'Active': 1, 'FullCode': {'$in': ['LQQ.PA', 'OBLI.PA', 'CAC.PA', 'STZ.PA']}}}, {'$sort': {'last_price_volume': -1}}, {'$facet': {'metadata': [{'$count': 'total'}], 'data': [{'$skip': 0}, {'$limit': 5000}, {'$project': {'ISIN': 1, 'Code': 1, 'General.Name': 1, 'Country': 1, 'Type': 1, 'General.Exchange': 1, 'General.CurrencyCode': 1, 'General.Type': 1, 'Exchange': 1, 'AssetType': 1, 'last_price_volume': 1, 'General.LogoURL': 1}}]}}] 
+Query get_universe [{'$match': {'Active': 1, 'FullCode': {'$in': ['LQQ.PA', 'OBLI.PA', 'CAC.PA', 'STZ.PA']}}}, {'$sort': {'last_price_volume': -1}}, {'$facet': {'metadata': [{'$count': 'total'}], 'data': [{'$skip': 0}, {'$limit': 5000}, {'$project': {'ISIN': 1, 'Code': 1, 'General.Name': 1, 'Country': 1, 'Type': 1, 'General.Exchange': 1, 'General.CurrencyCode': 1, 'General.Type': 1, 'Exchange': 1, 'AssetType': 1, 'last_price_volume': 1, 'General.LogoURL': 1}}]}}] 
+Query result {'metadata': [{'total': 4}], 'data': [{'_id': ObjectId('611424a7c889609c914222f7'), 'Code': 'CAC', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Lyxor CAC 40 (DR) UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0007052782', 'Type': 'ETF', 'last_price_volume': 43776, 'AssetType': 'Equity'}, {'_id': ObjectId('6114249fc889609c91421fff'), 'Code': 'STZ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'SSgA SPDR ETFs Europe II Public Limited Company - SPDR MSCI Europe Financials UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'IE00BKWQ0G16', 'Type': 'ETF', 'last_price_volume': 18663, 'AssetType': 'Equity'}, {'_id': ObjectId('6114249dc889609c91421f30'), 'Code': 'LQQ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Multi Units France - Lyxor PEA Nasdaq 100 Daily (2X) leveraged UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0010342592', 'Type': 'ETF', 'last_price_volume': 5866, 'AssetType': 'Equity'}, {'_id': ObjectId('60dead3b094f5da1d4664350'), 'Code': 'OBLI', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': "Lyxor Index Fund - Lyxor PEA Obligations d'Etat Euro UCITS ETF", 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0013346681', 'Type': 'ETF', 'last_price_volume': 4281, 'AssetType': 'Fixed Income'}]} 
+Query itx = {'_id': ObjectId('611424a7c889609c914222f7'), 'Code': 'CAC', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Lyxor CAC 40 (DR) UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0007052782', 'Type': 'ETF', 'last_price_volume': 43776, 'AssetType': 'Equity'}
+Query itx = {'_id': ObjectId('6114249fc889609c91421fff'), 'Code': 'STZ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'SSgA SPDR ETFs Europe II Public Limited Company - SPDR MSCI Europe Financials UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'IE00BKWQ0G16', 'Type': 'ETF', 'last_price_volume': 18663, 'AssetType': 'Equity'}
+Query itx = {'_id': ObjectId('6114249dc889609c91421f30'), 'Code': 'LQQ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Multi Units France - Lyxor PEA Nasdaq 100 Daily (2X) leveraged UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0010342592', 'Type': 'ETF', 'last_price_volume': 5866, 'AssetType': 'Equity'}
+Query itx = {'_id': ObjectId('60dead3b094f5da1d4664350'), 'Code': 'OBLI', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': "Lyxor Index Fund - Lyxor PEA Obligations d'Etat Euro UCITS ETF", 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0013346681', 'Type': 'ETF', 'last_price_volume': 4281, 'AssetType': 'Fixed Income'}
+NumExpr defaulting to 8 threads.
+df  result            ISIN  Code  ... EsgScoreNote total_stocks
+0  FR0007052782   CAC  ...          BBB            3
+1  IE00BKWQ0G16   STZ  ...          BBB            3
+2  FR0010342592   LQQ  ...          BBB            3
+3  FR0013346681  OBLI  ...          BBB            3
+
+[4 rows x 21 columns] 
+stock_data_df =           ISIN  Code  ... total_stocks     code
+0  FR0007052782   CAC  ...            3   CAC.PA
+1  IE00BKWQ0G16   STZ  ...            3   STZ.PA
+2  FR0010342592   LQQ  ...            3   LQQ.PA
+3  FR0013346681  OBLI  ...            3  OBLI.PA
+
+[4 rows x 22 columns]
+dates sent from 2021-11-16 00:00:00 to 2021-11-19 00:00:00
+dates Computed from 2021-11-16 00:00:00 to 2021-11-19 00:00:00
+Done get_prices: historical, query : [{'$match': {'FullCode': {'$in': ['LQQ.PA', 'OBLI.PA', 'CAC.PA', 'STZ.PA', 'FCHI.INDX']}}}, {'$project': {'prices': {'$filter': {'input': '$prices', 'as': 'price', 'cond': {'$and': [{'$gte': ['$$price.converted_date', 1637017200.0]}, {'$lte': ['$$price.converted_date', 1637276400.0]}]}}}}}]: dates from 2021-11-16 00:00:00 to 2021-11-19 00:00:00
+Data returned           date      open      high  ...     volume       code  converted_date
+0   2021-11-16    70.450    70.550  ...      27998     CAC.PA    1.637017e+09
+1   2021-11-17    70.480    70.600  ...      21757     CAC.PA    1.637104e+09
+2   2021-11-18    70.460    70.730  ...      24410     CAC.PA    1.637190e+09
+3   2021-11-19    70.660    70.710  ...      43776     CAC.PA    1.637276e+09
+4   2021-11-16  7146.370  7164.270  ...   69021696  FCHI.INDX    1.637017e+09
+5   2021-11-17  7149.300  7167.800  ...   68243504  FCHI.INDX    1.637104e+09
+6   2021-11-18  7155.050  7181.550  ...   75845600  FCHI.INDX    1.637190e+09
+7   2021-11-19  7172.720  7183.080  ...  117988000  FCHI.INDX    1.637276e+09
+8   2021-11-16   927.900   942.500  ...       3594     LQQ.PA    1.637017e+09
+9   2021-11-17   946.100   952.100  ...       3439     LQQ.PA    1.637104e+09
+10  2021-11-18   951.700   956.900  ...       2905     LQQ.PA    1.637190e+09
+11  2021-11-19   972.200   981.000  ...       5866     LQQ.PA    1.637276e+09
+12  2021-11-16    11.000    11.000  ...       1226    OBLI.PA    1.637017e+09
+13  2021-11-17    10.900    10.900  ...       3088    OBLI.PA    1.637104e+09
+14  2021-11-18    10.916    10.916  ...        733    OBLI.PA    1.637190e+09
+15  2021-11-19    10.910    10.964  ...       4281    OBLI.PA    1.637276e+09
+16  2021-11-16    63.400    63.400  ...       3694     STZ.PA    1.637017e+09
+17  2021-11-17    63.310    63.460  ...       5832     STZ.PA    1.637104e+09
+18  2021-11-18    63.100    63.330  ...       6674     STZ.PA    1.637190e+09
+19  2021-11-19    62.820    62.900  ...      18663     STZ.PA    1.637276e+09
+
+[20 rows x 9 columns]
+df_h_p =          date      open      high  ...     volume       code  converted_date
+0   2021-11-16    70.450    70.550  ...      27998     CAC.PA    1.637017e+09
+1   2021-11-17    70.480    70.600  ...      21757     CAC.PA    1.637104e+09
+2   2021-11-18    70.460    70.730  ...      24410     CAC.PA    1.637190e+09
+3   2021-11-19    70.660    70.710  ...      43776     CAC.PA    1.637276e+09
+4   2021-11-16  7146.370  7164.270  ...   69021696  FCHI.INDX    1.637017e+09
+5   2021-11-17  7149.300  7167.800  ...   68243504  FCHI.INDX    1.637104e+09
+6   2021-11-18  7155.050  7181.550  ...   75845600  FCHI.INDX    1.637190e+09
+7   2021-11-19  7172.720  7183.080  ...  117988000  FCHI.INDX    1.637276e+09
+8   2021-11-16   927.900   942.500  ...       3594     LQQ.PA    1.637017e+09
+9   2021-11-17   946.100   952.100  ...       3439     LQQ.PA    1.637104e+09
+10  2021-11-18   951.700   956.900  ...       2905     LQQ.PA    1.637190e+09
+11  2021-11-19   972.200   981.000  ...       5866     LQQ.PA    1.637276e+09
+12  2021-11-16    11.000    11.000  ...       1226    OBLI.PA    1.637017e+09
+13  2021-11-17    10.900    10.900  ...       3088    OBLI.PA    1.637104e+09
+14  2021-11-18    10.916    10.916  ...        733    OBLI.PA    1.637190e+09
+15  2021-11-19    10.910    10.964  ...       4281    OBLI.PA    1.637276e+09
+16  2021-11-16    63.400    63.400  ...       3694     STZ.PA    1.637017e+09
+17  2021-11-17    63.310    63.460  ...       5832     STZ.PA    1.637104e+09
+18  2021-11-18    63.100    63.330  ...       6674     STZ.PA    1.637190e+09
+19  2021-11-19    62.820    62.900  ...      18663     STZ.PA    1.637276e+09
+
+[20 rows x 9 columns]
+df_bhp =         date     open     high  ...     volume       code  converted_date
+4  2021-11-16  7146.37  7164.27  ...   69021696  FCHI.INDX    1.637017e+09
+5  2021-11-17  7149.30  7167.80  ...   68243504  FCHI.INDX    1.637104e+09
+6  2021-11-18  7155.05  7181.55  ...   75845600  FCHI.INDX    1.637190e+09
+7  2021-11-19  7172.72  7183.08  ...  117988000  FCHI.INDX    1.637276e+09
+
+[4 rows x 9 columns]
+b_daily_returns =               close
+date                
+2021-11-16       NaN
+2021-11-17  0.000594
+2021-11-18 -0.002078
+2021-11-19 -0.004157
+g_daily_returns =               value
+date                
+2021-11-17  0.491630
+2021-11-18  0.321120
+2021-11-19 -0.400094, g_b_daily_returns =               close
+date                
+2021-11-17  0.000594
+2021-11-18 -0.002078
+2021-11-19 -0.004157
+result beta 0.004605872897015799, alpha -0.0025137648720715295
+127.0.0.1 - - [21/Nov/2021 18:05:51] "[35m[1mPOST /api/v1/compute_portfolio_analytics HTTP/1.1[0m" 500 -
+127.0.0.1 - - [21/Nov/2021 18:05:52] "[37mGET /api/v1/compute_portfolio_analytics?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Nov/2021 18:05:52] "[37mGET /api/v1/compute_portfolio_analytics?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Nov/2021 18:05:52] "[37mGET /api/v1/compute_portfolio_analytics?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Nov/2021 18:05:52] "[37mGET /api/v1/compute_portfolio_analytics?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Nov/2021 18:05:53] "[37mGET /api/v1/compute_portfolio_analytics?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+ * Detected change in '/Users/sergengoube/PycharmProjects/investingclub/asset_prices/prices.py', reloading
+Unknown option passed to Flask-CORS: support_credentials
+Unknown option passed to Flask-CORS: support_credentials
+ * Debugger is active!
+ * Debugger PIN: 139-003-692
+params ={'portfolioId': 'max_diversification', 'portfolioHistoricalHoldings': [{'id': '121F4343564ACD', 'date': '2021-11-19T19:40:06+00:00', 'holdings': {'OBLI.PA': 20, 'LQQ.PA': 1, 'STZ.PA': 10, 'CAC.PA': 8}}, {'id': '121F4343564ACD', 'date': '2021-11-18T19:40:06+00:00', 'holdings': {'OBLI.PA': 1, 'LQQ.PA': 3, 'STZ.PA': 6, 'CAC.PA': 10}}, {'id': '121F4343564ACD', 'date': '2021-11-17T19:40:06+00:00', 'holdings': {'OBLI.PA': 1, 'LQQ.PA': 2, 'STZ.PA': 6, 'CAC.PA': 10}}, {'id': '121F4343564ACD', 'date': '2021-11-16T19:40:06+00:00', 'holdings': {'OBLI.PA': 5, 'LQQ.PA': 1, 'STZ.PA': 6, 'CAC.PA': 9}}], 'benchmarkStockCode': 'FCHI.INDX'}
+Query get_universe [{'$match': {'Active': 1, 'FullCode': {'$in': ['STZ.PA', 'OBLI.PA', 'CAC.PA', 'LQQ.PA']}}}, {'$sort': {'last_price_volume': -1}}, {'$facet': {'metadata': [{'$count': 'total'}], 'data': [{'$skip': 0}, {'$limit': 5000}, {'$project': {'ISIN': 1, 'Code': 1, 'General.Name': 1, 'Country': 1, 'Type': 1, 'General.Exchange': 1, 'General.CurrencyCode': 1, 'General.Type': 1, 'Exchange': 1, 'AssetType': 1, 'last_price_volume': 1, 'General.LogoURL': 1}}]}}] 
+Query get_universe [{'$match': {'Active': 1, 'FullCode': {'$in': ['STZ.PA', 'OBLI.PA', 'CAC.PA', 'LQQ.PA']}}}, {'$sort': {'last_price_volume': -1}}, {'$facet': {'metadata': [{'$count': 'total'}], 'data': [{'$skip': 0}, {'$limit': 5000}, {'$project': {'ISIN': 1, 'Code': 1, 'General.Name': 1, 'Country': 1, 'Type': 1, 'General.Exchange': 1, 'General.CurrencyCode': 1, 'General.Type': 1, 'Exchange': 1, 'AssetType': 1, 'last_price_volume': 1, 'General.LogoURL': 1}}]}}] 
+Query result {'metadata': [{'total': 4}], 'data': [{'_id': ObjectId('611424a7c889609c914222f7'), 'Code': 'CAC', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Lyxor CAC 40 (DR) UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0007052782', 'Type': 'ETF', 'last_price_volume': 43776, 'AssetType': 'Equity'}, {'_id': ObjectId('6114249fc889609c91421fff'), 'Code': 'STZ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'SSgA SPDR ETFs Europe II Public Limited Company - SPDR MSCI Europe Financials UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'IE00BKWQ0G16', 'Type': 'ETF', 'last_price_volume': 18663, 'AssetType': 'Equity'}, {'_id': ObjectId('6114249dc889609c91421f30'), 'Code': 'LQQ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Multi Units France - Lyxor PEA Nasdaq 100 Daily (2X) leveraged UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0010342592', 'Type': 'ETF', 'last_price_volume': 5866, 'AssetType': 'Equity'}, {'_id': ObjectId('60dead3b094f5da1d4664350'), 'Code': 'OBLI', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': "Lyxor Index Fund - Lyxor PEA Obligations d'Etat Euro UCITS ETF", 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0013346681', 'Type': 'ETF', 'last_price_volume': 4281, 'AssetType': 'Fixed Income'}]} 
+Query itx = {'_id': ObjectId('611424a7c889609c914222f7'), 'Code': 'CAC', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Lyxor CAC 40 (DR) UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0007052782', 'Type': 'ETF', 'last_price_volume': 43776, 'AssetType': 'Equity'}
+Query itx = {'_id': ObjectId('6114249fc889609c91421fff'), 'Code': 'STZ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'SSgA SPDR ETFs Europe II Public Limited Company - SPDR MSCI Europe Financials UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'IE00BKWQ0G16', 'Type': 'ETF', 'last_price_volume': 18663, 'AssetType': 'Equity'}
+Query itx = {'_id': ObjectId('6114249dc889609c91421f30'), 'Code': 'LQQ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Multi Units France - Lyxor PEA Nasdaq 100 Daily (2X) leveraged UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0010342592', 'Type': 'ETF', 'last_price_volume': 5866, 'AssetType': 'Equity'}
+Query itx = {'_id': ObjectId('60dead3b094f5da1d4664350'), 'Code': 'OBLI', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': "Lyxor Index Fund - Lyxor PEA Obligations d'Etat Euro UCITS ETF", 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0013346681', 'Type': 'ETF', 'last_price_volume': 4281, 'AssetType': 'Fixed Income'}
+NumExpr defaulting to 8 threads.
+df  result            ISIN  Code  ... EsgScoreNote total_stocks
+0  FR0007052782   CAC  ...          BBB            3
+1  IE00BKWQ0G16   STZ  ...          BBB            3
+2  FR0010342592   LQQ  ...          BBB            3
+3  FR0013346681  OBLI  ...          BBB            3
+
+[4 rows x 21 columns] 
+stock_data_df =           ISIN  Code  ... total_stocks     code
+0  FR0007052782   CAC  ...            3   CAC.PA
+1  IE00BKWQ0G16   STZ  ...            3   STZ.PA
+2  FR0010342592   LQQ  ...            3   LQQ.PA
+3  FR0013346681  OBLI  ...            3  OBLI.PA
+
+[4 rows x 22 columns]
+dates sent from 2021-11-16 00:00:00 to 2021-11-19 00:00:00
+dates Computed from 2021-11-16 00:00:00 to 2021-11-19 00:00:00
+Done get_prices: historical, query : [{'$match': {'FullCode': {'$in': ['STZ.PA', 'OBLI.PA', 'CAC.PA', 'LQQ.PA', 'FCHI.INDX']}}}, {'$project': {'prices': {'$filter': {'input': '$prices', 'as': 'price', 'cond': {'$and': [{'$gte': ['$$price.converted_date', 1637017200.0]}, {'$lte': ['$$price.converted_date', 1637276400.0]}]}}}}}]: dates from 2021-11-16 00:00:00 to 2021-11-19 00:00:00
+Data returned           date      open      high  ...     volume       code  converted_date
+0   2021-11-16    70.450    70.550  ...      27998     CAC.PA    1.637017e+09
+1   2021-11-17    70.480    70.600  ...      21757     CAC.PA    1.637104e+09
+2   2021-11-18    70.460    70.730  ...      24410     CAC.PA    1.637190e+09
+3   2021-11-19    70.660    70.710  ...      43776     CAC.PA    1.637276e+09
+4   2021-11-16  7146.370  7164.270  ...   69021696  FCHI.INDX    1.637017e+09
+5   2021-11-17  7149.300  7167.800  ...   68243504  FCHI.INDX    1.637104e+09
+6   2021-11-18  7155.050  7181.550  ...   75845600  FCHI.INDX    1.637190e+09
+7   2021-11-19  7172.720  7183.080  ...  117988000  FCHI.INDX    1.637276e+09
+8   2021-11-16   927.900   942.500  ...       3594     LQQ.PA    1.637017e+09
+9   2021-11-17   946.100   952.100  ...       3439     LQQ.PA    1.637104e+09
+10  2021-11-18   951.700   956.900  ...       2905     LQQ.PA    1.637190e+09
+11  2021-11-19   972.200   981.000  ...       5866     LQQ.PA    1.637276e+09
+12  2021-11-16    11.000    11.000  ...       1226    OBLI.PA    1.637017e+09
+13  2021-11-17    10.900    10.900  ...       3088    OBLI.PA    1.637104e+09
+14  2021-11-18    10.916    10.916  ...        733    OBLI.PA    1.637190e+09
+15  2021-11-19    10.910    10.964  ...       4281    OBLI.PA    1.637276e+09
+16  2021-11-16    63.400    63.400  ...       3694     STZ.PA    1.637017e+09
+17  2021-11-17    63.310    63.460  ...       5832     STZ.PA    1.637104e+09
+18  2021-11-18    63.100    63.330  ...       6674     STZ.PA    1.637190e+09
+19  2021-11-19    62.820    62.900  ...      18663     STZ.PA    1.637276e+09
+
+[20 rows x 9 columns]
+df_h_p =          date      open      high  ...     volume       code  converted_date
+0   2021-11-16    70.450    70.550  ...      27998     CAC.PA    1.637017e+09
+1   2021-11-17    70.480    70.600  ...      21757     CAC.PA    1.637104e+09
+2   2021-11-18    70.460    70.730  ...      24410     CAC.PA    1.637190e+09
+3   2021-11-19    70.660    70.710  ...      43776     CAC.PA    1.637276e+09
+4   2021-11-16  7146.370  7164.270  ...   69021696  FCHI.INDX    1.637017e+09
+5   2021-11-17  7149.300  7167.800  ...   68243504  FCHI.INDX    1.637104e+09
+6   2021-11-18  7155.050  7181.550  ...   75845600  FCHI.INDX    1.637190e+09
+7   2021-11-19  7172.720  7183.080  ...  117988000  FCHI.INDX    1.637276e+09
+8   2021-11-16   927.900   942.500  ...       3594     LQQ.PA    1.637017e+09
+9   2021-11-17   946.100   952.100  ...       3439     LQQ.PA    1.637104e+09
+10  2021-11-18   951.700   956.900  ...       2905     LQQ.PA    1.637190e+09
+11  2021-11-19   972.200   981.000  ...       5866     LQQ.PA    1.637276e+09
+12  2021-11-16    11.000    11.000  ...       1226    OBLI.PA    1.637017e+09
+13  2021-11-17    10.900    10.900  ...       3088    OBLI.PA    1.637104e+09
+14  2021-11-18    10.916    10.916  ...        733    OBLI.PA    1.637190e+09
+15  2021-11-19    10.910    10.964  ...       4281    OBLI.PA    1.637276e+09
+16  2021-11-16    63.400    63.400  ...       3694     STZ.PA    1.637017e+09
+17  2021-11-17    63.310    63.460  ...       5832     STZ.PA    1.637104e+09
+18  2021-11-18    63.100    63.330  ...       6674     STZ.PA    1.637190e+09
+19  2021-11-19    62.820    62.900  ...      18663     STZ.PA    1.637276e+09
+
+[20 rows x 9 columns]
+df_bhp =         date     open     high  ...     volume       code  converted_date
+4  2021-11-16  7146.37  7164.27  ...   69021696  FCHI.INDX    1.637017e+09
+5  2021-11-17  7149.30  7167.80  ...   68243504  FCHI.INDX    1.637104e+09
+6  2021-11-18  7155.05  7181.55  ...   75845600  FCHI.INDX    1.637190e+09
+7  2021-11-19  7172.72  7183.08  ...  117988000  FCHI.INDX    1.637276e+09
+
+[4 rows x 9 columns]
+b_daily_returns =               close
+date                
+2021-11-16       NaN
+2021-11-17  0.000594
+2021-11-18 -0.002078
+2021-11-19 -0.004157
+g_daily_returns =               value
+date                
+2021-11-17  0.491630
+2021-11-18  0.321120
+2021-11-19 -0.400094, g_b_daily_returns =               close
+date                
+2021-11-17  0.000594
+2021-11-18 -0.002078
+2021-11-19 -0.004157
+result beta 0.004605872897015799, alpha -0.0025137648720715295
+127.0.0.1 - - [21/Nov/2021 18:06:29] "[35m[1mPOST /api/v1/compute_portfolio_analytics HTTP/1.1[0m" 500 -
+127.0.0.1 - - [21/Nov/2021 18:06:30] "[37mGET /api/v1/compute_portfolio_analytics?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Nov/2021 18:06:30] "[37mGET /api/v1/compute_portfolio_analytics?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Nov/2021 18:06:30] "[37mGET /api/v1/compute_portfolio_analytics?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Nov/2021 18:06:30] "[37mGET /api/v1/compute_portfolio_analytics?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Nov/2021 18:06:31] "[37mGET /api/v1/compute_portfolio_analytics?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+ * Detected change in '/Users/sergengoube/PycharmProjects/investingclub/asset_prices/prices.py', reloading
+Unknown option passed to Flask-CORS: support_credentials
+Unknown option passed to Flask-CORS: support_credentials
+ * Debugger is active!
+ * Debugger PIN: 139-003-692
+params ={'portfolioId': 'max_diversification', 'portfolioHistoricalHoldings': [{'id': '121F4343564ACD', 'date': '2021-11-19T19:40:06+00:00', 'holdings': {'OBLI.PA': 20, 'LQQ.PA': 1, 'STZ.PA': 10, 'CAC.PA': 8}}, {'id': '121F4343564ACD', 'date': '2021-11-18T19:40:06+00:00', 'holdings': {'OBLI.PA': 1, 'LQQ.PA': 3, 'STZ.PA': 6, 'CAC.PA': 10}}, {'id': '121F4343564ACD', 'date': '2021-11-17T19:40:06+00:00', 'holdings': {'OBLI.PA': 1, 'LQQ.PA': 2, 'STZ.PA': 6, 'CAC.PA': 10}}, {'id': '121F4343564ACD', 'date': '2021-11-16T19:40:06+00:00', 'holdings': {'OBLI.PA': 5, 'LQQ.PA': 1, 'STZ.PA': 6, 'CAC.PA': 9}}], 'benchmarkStockCode': 'FCHI.INDX'}
+Query get_universe [{'$match': {'Active': 1, 'FullCode': {'$in': ['OBLI.PA', 'STZ.PA', 'LQQ.PA', 'CAC.PA']}}}, {'$sort': {'last_price_volume': -1}}, {'$facet': {'metadata': [{'$count': 'total'}], 'data': [{'$skip': 0}, {'$limit': 5000}, {'$project': {'ISIN': 1, 'Code': 1, 'General.Name': 1, 'Country': 1, 'Type': 1, 'General.Exchange': 1, 'General.CurrencyCode': 1, 'General.Type': 1, 'Exchange': 1, 'AssetType': 1, 'last_price_volume': 1, 'General.LogoURL': 1}}]}}] 
+Query get_universe [{'$match': {'Active': 1, 'FullCode': {'$in': ['OBLI.PA', 'STZ.PA', 'LQQ.PA', 'CAC.PA']}}}, {'$sort': {'last_price_volume': -1}}, {'$facet': {'metadata': [{'$count': 'total'}], 'data': [{'$skip': 0}, {'$limit': 5000}, {'$project': {'ISIN': 1, 'Code': 1, 'General.Name': 1, 'Country': 1, 'Type': 1, 'General.Exchange': 1, 'General.CurrencyCode': 1, 'General.Type': 1, 'Exchange': 1, 'AssetType': 1, 'last_price_volume': 1, 'General.LogoURL': 1}}]}}] 
+Query result {'metadata': [{'total': 4}], 'data': [{'_id': ObjectId('611424a7c889609c914222f7'), 'Code': 'CAC', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Lyxor CAC 40 (DR) UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0007052782', 'Type': 'ETF', 'last_price_volume': 43776, 'AssetType': 'Equity'}, {'_id': ObjectId('6114249fc889609c91421fff'), 'Code': 'STZ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'SSgA SPDR ETFs Europe II Public Limited Company - SPDR MSCI Europe Financials UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'IE00BKWQ0G16', 'Type': 'ETF', 'last_price_volume': 18663, 'AssetType': 'Equity'}, {'_id': ObjectId('6114249dc889609c91421f30'), 'Code': 'LQQ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Multi Units France - Lyxor PEA Nasdaq 100 Daily (2X) leveraged UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0010342592', 'Type': 'ETF', 'last_price_volume': 5866, 'AssetType': 'Equity'}, {'_id': ObjectId('60dead3b094f5da1d4664350'), 'Code': 'OBLI', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': "Lyxor Index Fund - Lyxor PEA Obligations d'Etat Euro UCITS ETF", 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0013346681', 'Type': 'ETF', 'last_price_volume': 4281, 'AssetType': 'Fixed Income'}]} 
+Query itx = {'_id': ObjectId('611424a7c889609c914222f7'), 'Code': 'CAC', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Lyxor CAC 40 (DR) UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0007052782', 'Type': 'ETF', 'last_price_volume': 43776, 'AssetType': 'Equity'}
+Query itx = {'_id': ObjectId('6114249fc889609c91421fff'), 'Code': 'STZ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'SSgA SPDR ETFs Europe II Public Limited Company - SPDR MSCI Europe Financials UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'IE00BKWQ0G16', 'Type': 'ETF', 'last_price_volume': 18663, 'AssetType': 'Equity'}
+Query itx = {'_id': ObjectId('6114249dc889609c91421f30'), 'Code': 'LQQ', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': 'Multi Units France - Lyxor PEA Nasdaq 100 Daily (2X) leveraged UCITS ETF', 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0010342592', 'Type': 'ETF', 'last_price_volume': 5866, 'AssetType': 'Equity'}
+Query itx = {'_id': ObjectId('60dead3b094f5da1d4664350'), 'Code': 'OBLI', 'Country': 'France', 'Exchange': 'PA', 'General': {'Type': 'ETF', 'Name': "Lyxor Index Fund - Lyxor PEA Obligations d'Etat Euro UCITS ETF", 'Exchange': 'PA', 'CurrencyCode': 'EUR'}, 'ISIN': 'FR0013346681', 'Type': 'ETF', 'last_price_volume': 4281, 'AssetType': 'Fixed Income'}
+NumExpr defaulting to 8 threads.
+df  result            ISIN  Code  ... EsgScoreNote total_stocks
+0  FR0007052782   CAC  ...          BBB            3
+1  IE00BKWQ0G16   STZ  ...          BBB            3
+2  FR0010342592   LQQ  ...          BBB            3
+3  FR0013346681  OBLI  ...          BBB            3
+
+[4 rows x 21 columns] 
+stock_data_df =           ISIN  Code  ... total_stocks     code
+0  FR0007052782   CAC  ...            3   CAC.PA
+1  IE00BKWQ0G16   STZ  ...            3   STZ.PA
+2  FR0010342592   LQQ  ...            3   LQQ.PA
+3  FR0013346681  OBLI  ...            3  OBLI.PA
+
+[4 rows x 22 columns]
+dates sent from 2021-11-16 00:00:00 to 2021-11-19 00:00:00
+dates Computed from 2021-11-16 00:00:00 to 2021-11-19 00:00:00
+Done get_prices: historical, query : [{'$match': {'FullCode': {'$in': ['OBLI.PA', 'STZ.PA', 'LQQ.PA', 'CAC.PA', 'FCHI.INDX']}}}, {'$project': {'prices': {'$filter': {'input': '$prices', 'as': 'price', 'cond': {'$and': [{'$gte': ['$$price.converted_date', 1637017200.0]}, {'$lte': ['$$price.converted_date', 1637276400.0]}]}}}}}]: dates from 2021-11-16 00:00:00 to 2021-11-19 00:00:00
+Data returned           date      open      high  ...     volume       code  converted_date
+0   2021-11-16    70.450    70.550  ...      27998     CAC.PA    1.637017e+09
+1   2021-11-17    70.480    70.600  ...      21757     CAC.PA    1.637104e+09
+2   2021-11-18    70.460    70.730  ...      24410     CAC.PA    1.637190e+09
+3   2021-11-19    70.660    70.710  ...      43776     CAC.PA    1.637276e+09
+4   2021-11-16  7146.370  7164.270  ...   69021696  FCHI.INDX    1.637017e+09
+5   2021-11-17  7149.300  7167.800  ...   68243504  FCHI.INDX    1.637104e+09
+6   2021-11-18  7155.050  7181.550  ...   75845600  FCHI.INDX    1.637190e+09
+7   2021-11-19  7172.720  7183.080  ...  117988000  FCHI.INDX    1.637276e+09
+8   2021-11-16   927.900   942.500  ...       3594     LQQ.PA    1.637017e+09
+9   2021-11-17   946.100   952.100  ...       3439     LQQ.PA    1.637104e+09
+10  2021-11-18   951.700   956.900  ...       2905     LQQ.PA    1.637190e+09
+11  2021-11-19   972.200   981.000  ...       5866     LQQ.PA    1.637276e+09
+12  2021-11-16    11.000    11.000  ...       1226    OBLI.PA    1.637017e+09
+13  2021-11-17    10.900    10.900  ...       3088    OBLI.PA    1.637104e+09
+14  2021-11-18    10.916    10.916  ...        733    OBLI.PA    1.637190e+09
+15  2021-11-19    10.910    10.964  ...       4281    OBLI.PA    1.637276e+09
+16  2021-11-16    63.400    63.400  ...       3694     STZ.PA    1.637017e+09
+17  2021-11-17    63.310    63.460  ...       5832     STZ.PA    1.637104e+09
+18  2021-11-18    63.100    63.330  ...       6674     STZ.PA    1.637190e+09
+19  2021-11-19    62.820    62.900  ...      18663     STZ.PA    1.637276e+09
+
+[20 rows x 9 columns]
+df_h_p =          date      open      high  ...     volume       code  converted_date
+0   2021-11-16    70.450    70.550  ...      27998     CAC.PA    1.637017e+09
+1   2021-11-17    70.480    70.600  ...      21757     CAC.PA    1.637104e+09
+2   2021-11-18    70.460    70.730  ...      24410     CAC.PA    1.637190e+09
+3   2021-11-19    70.660    70.710  ...      43776     CAC.PA    1.637276e+09
+4   2021-11-16  7146.370  7164.270  ...   69021696  FCHI.INDX    1.637017e+09
+5   2021-11-17  7149.300  7167.800  ...   68243504  FCHI.INDX    1.637104e+09
+6   2021-11-18  7155.050  7181.550  ...   75845600  FCHI.INDX    1.637190e+09
+7   2021-11-19  7172.720  7183.080  ...  117988000  FCHI.INDX    1.637276e+09
+8   2021-11-16   927.900   942.500  ...       3594     LQQ.PA    1.637017e+09
+9   2021-11-17   946.100   952.100  ...       3439     LQQ.PA    1.637104e+09
+10  2021-11-18   951.700   956.900  ...       2905     LQQ.PA    1.637190e+09
+11  2021-11-19   972.200   981.000  ...       5866     LQQ.PA    1.637276e+09
+12  2021-11-16    11.000    11.000  ...       1226    OBLI.PA    1.637017e+09
+13  2021-11-17    10.900    10.900  ...       3088    OBLI.PA    1.637104e+09
+14  2021-11-18    10.916    10.916  ...        733    OBLI.PA    1.637190e+09
+15  2021-11-19    10.910    10.964  ...       4281    OBLI.PA    1.637276e+09
+16  2021-11-16    63.400    63.400  ...       3694     STZ.PA    1.637017e+09
+17  2021-11-17    63.310    63.460  ...       5832     STZ.PA    1.637104e+09
+18  2021-11-18    63.100    63.330  ...       6674     STZ.PA    1.637190e+09
+19  2021-11-19    62.820    62.900  ...      18663     STZ.PA    1.637276e+09
+
+[20 rows x 9 columns]
+df_bhp =         date     open     high  ...     volume       code  converted_date
+4  2021-11-16  7146.37  7164.27  ...   69021696  FCHI.INDX    1.637017e+09
+5  2021-11-17  7149.30  7167.80  ...   68243504  FCHI.INDX    1.637104e+09
+6  2021-11-18  7155.05  7181.55  ...   75845600  FCHI.INDX    1.637190e+09
+7  2021-11-19  7172.72  7183.08  ...  117988000  FCHI.INDX    1.637276e+09
+
+[4 rows x 9 columns]
+b_daily_returns =               close
+date                
+2021-11-16       NaN
+2021-11-17  0.000594
+2021-11-18 -0.002078
+2021-11-19 -0.004157
+g_daily_returns =               value
+date                
+2021-11-17  0.491630
+2021-11-18  0.321120
+2021-11-19 -0.400094, g_b_daily_returns =               close
+date                
+2021-11-17  0.000594
+2021-11-18 -0.002078
+2021-11-19 -0.004157
+result beta 0.004605872897015799, alpha -0.0025137648720715295
+127.0.0.1 - - [21/Nov/2021 18:07:57] "[37mPOST /api/v1/compute_portfolio_analytics HTTP/1.1[0m" 200 -
+ * Detected change in '/Users/sergengoube/PycharmProjects/investingclub/asset_prices/prices.py', reloading
+Unknown option passed to Flask-CORS: support_credentials
+Unknown option passed to Flask-CORS: support_credentials
+ * Debugger is active!
+ * Debugger PIN: 139-003-692
+ * Detected change in '/Users/sergengoube/PycharmProjects/investingclub/asset_prices/prices.py', reloading
+Unknown option passed to Flask-CORS: support_credentials
+Unknown option passed to Flask-CORS: support_credentials
+ * Debugger is active!
+ * Debugger PIN: 139-003-692
+ * Detected change in '/Users/sergengoube/PycharmProjects/investingclub/asset_prices/prices.py', reloading
+Unknown option passed to Flask-CORS: support_credentials
+Unknown option passed to Flask-CORS: support_credentials
+ * Debugger is active!
+ * Debugger PIN: 139-003-692
+ * Detected change in '/Users/sergengoube/PycharmProjects/investingclub/asset_prices/prices.py', reloading
+ * Detected change in '/Users/sergengoube/PycharmProjects/investingclub/api/utils.py', reloading
+Unknown option passed to Flask-CORS: support_credentials
+Unknown option passed to Flask-CORS: support_credentials
+ * Debugger is active!
+ * Debugger PIN: 139-003-692
+ * Detected change in '/Users/sergengoube/PycharmProjects/investingclub/asset_prices/prices.py', reloading
+Unknown option passed to Flask-CORS: support_credentials
+Unknown option passed to Flask-CORS: support_credentials
+ * Debugger is active!
+ * Debugger PIN: 139-003-692
+ * Detected change in '/Users/sergengoube/PycharmProjects/investingclub/api/utils.py', reloading
+Unknown option passed to Flask-CORS: support_credentials
+Unknown option passed to Flask-CORS: support_credentials
+ * Debugger is active!
+ * Debugger PIN: 139-003-692
+ * Detected change in '/Users/sergengoube/PycharmProjects/investingclub/api/utils.py', reloading
+Unknown option passed to Flask-CORS: support_credentials
+Unknown option passed to Flask-CORS: support_credentials
+ * Debugger is active!
+ * Debugger PIN: 139-003-692
+ * Detected change in '/Users/sergengoube/PycharmProjects/investingclub/asset_prices/prices.py', reloading
+Unknown option passed to Flask-CORS: support_credentials
+Unknown option passed to Flask-CORS: support_credentials
+ * Debugger is active!
+ * Debugger PIN: 139-003-692
+ * Detected change in '/Users/sergengoube/PycharmProjects/investingclub/asset_prices/prices.py', reloading
+Unknown option passed to Flask-CORS: support_credentials
+Unknown option passed to Flask-CORS: support_credentials
+ * Debugger is active!
+ * Debugger PIN: 139-003-692
+ * Detected change in '/Users/sergengoube/PycharmProjects/investingclub/asset_prices/prices.py', reloading
+Unknown option passed to Flask-CORS: support_credentials
+Unknown option passed to Flask-CORS: support_credentials
+ * Debugger is active!
+ * Debugger PIN: 139-003-692
+ * Detected change in '/Users/sergengoube/PycharmProjects/investingclub/api/utils.py', reloading

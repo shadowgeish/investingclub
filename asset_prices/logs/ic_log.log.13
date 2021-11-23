@@ -1,0 +1,178 @@
+https://eodhistoricaldata.com:443 "GET /api/eod/OXY.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/OXY.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = OXY.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = OXY.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = OMC.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/OMC.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/OMC.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = OMC.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = OMC.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = OKE.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/OKE.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/OKE.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = OKE.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = OKE.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = ORCL.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/ORCL.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/ORCL.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = ORCL.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = ORCL.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = ORLY.NASDAQ, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/ORLY.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/ORLY.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = ORLY.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = ORLY.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = PCAR.NASDAQ, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/PCAR.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/PCAR.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = PCAR.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = PCAR.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = PH.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/PH.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/PH.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = PH.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = PH.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = PAYX.NASDAQ, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/PAYX.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/PAYX.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = PAYX.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = PAYX.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = PBCT.NASDAQ, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/PBCT.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/PBCT.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = PBCT.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = PBCT.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = PEP.NASDAQ, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/PEP.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/PEP.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = PEP.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = PEP.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = PKI.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/PKI.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/PKI.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = PKI.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = PKI.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = PFE.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/PFE.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/PFE.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = PFE.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = PFE.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = PM.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/PM.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/PM.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = PM.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = PM.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = PSX.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/PSX.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/PSX.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = PSX.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = PSX.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = PNW.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/PNW.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/PNW.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = PNW.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = PNW.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = PXD.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/PXD.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/PXD.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = PXD.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = PXD.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = PINS.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/PINS.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/PINS.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = PINS.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = PINS.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = PNC.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/PNC.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/PNC.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = PNC.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = PNC.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = PPG.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/PPG.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/PPG.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = PPG.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = PPG.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = PG.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/PG.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/PG.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = PG.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = PG.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = PGR.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/PGR.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/PGR.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = PGR.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = PGR.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = PLD.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/PLD.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/PLD.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = PLD.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = PLD.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = PRU.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/PRU.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/PRU.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = PRU.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = PRU.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = PEG.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/PEG.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/PEG.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = PEG.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = PEG.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = PSA.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/PSA.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/PSA.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = PSA.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = PSA.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = PHM.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/PHM.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/PHM.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = PHM.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = PHM.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = PVH.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/PVH.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/PVH.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = PVH.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = PVH.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = QRVO.NASDAQ, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/QRVO.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/QRVO.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = QRVO.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = QRVO.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = QCOM.NASDAQ, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/QCOM.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/QCOM.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = QCOM.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = QCOM.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = PWR.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/PWR.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/PWR.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = PWR.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = PWR.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = DGX.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/DGX.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/DGX.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = DGX.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = DGX.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = RL.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/RL.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/RL.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = RL.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = RL.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = RRC.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/RRC.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/RRC.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = RRC.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = RRC.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = O.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/O.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/O.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = O.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = O.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = RF.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/RF.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/RF.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = RF.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = RF.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = RSG.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/RSG.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/RSG.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = RSG.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = RSG.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  

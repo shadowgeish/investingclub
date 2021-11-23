@@ -181,8 +181,8 @@ def compute_portfolio_analytics(params={}):
 
     stock_code_list.append(benchmark_stock_code)
     df_h_p = get_prices(asset_codes=stock_code_list, ret='df',
-                        start_date=datetime.datetime.combine(min_date, datetime.time.min),
-                        end_date=datetime.datetime.combine(max_date, datetime.time.min),
+                        start_date=datetime.datetime.combine(min_date, datetime.time.min) + datetime.timedelta(days=-1),
+                        end_date=datetime.datetime.combine(max_date, datetime.time.min)+ datetime.timedelta(days=1),
                         )
 
     logger_get_price.info("df_h_p ={}".format(df_h_p))

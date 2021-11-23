@@ -1,0 +1,60 @@
+stock = IBCI.XETRA, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/IBCI.XETRA?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 200 None
+Req = https://eodhistoricaldata.com/api/eod/IBCI.XETRA?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = IBCI.XETRA, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+stock = ALUVI.PA, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/ALUVI.PA?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 200 None
+Req = https://eodhistoricaldata.com/api/eod/ALUVI.PA?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = ALUVI.PA, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+stock = MTH.PA, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/MTH.PA?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 200 None
+Req = https://eodhistoricaldata.com/api/eod/MTH.PA?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = MTH.PA, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+stock = SEL.PA, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/SEL.PA?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 200 None
+Req = https://eodhistoricaldata.com/api/eod/SEL.PA?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = SEL.PA, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+stock = BLC.PA, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/BLC.PA?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 200 None
+Req = https://eodhistoricaldata.com/api/eod/BLC.PA?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = BLC.PA, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+stock = ETZD.PA, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/ETZD.PA?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 200 None
+Req = https://eodhistoricaldata.com/api/eod/ETZD.PA?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = ETZD.PA, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+stock = OBLI.PA, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/OBLI.PA?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 200 None
+Req = https://eodhistoricaldata.com/api/eod/OBLI.PA?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = OBLI.PA, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+stock = IBGM.MI, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/IBGM.MI?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 200 None
+Req = https://eodhistoricaldata.com/api/eod/IBGM.MI?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = IBGM.MI, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+stock = US1.PA, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/US1.PA?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 200 None
+Req = https://eodhistoricaldata.com/api/eod/US1.PA?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = US1.PA, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+stock = ALVAL.PA, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/ALVAL.PA?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 200 None
+Req = https://eodhistoricaldata.com/api/eod/ALVAL.PA?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = ALVAL.PA, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+stock = VEMT.LSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/VEMT.LSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 200 None
+Req = https://eodhistoricaldata.com/api/eod/VEMT.LSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = VEMT.LSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+stock = WLD.PA, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/WLD.PA?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 200 None
+Req = https://eodhistoricaldata.com/api/eod/WLD.PA?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = WLD.PA, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+stock = IGSU.LSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/IGSU.LSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 200 None
+Req = https://eodhistoricaldata.com/api/eod/IGSU.LSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = IGSU.LSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+stock = HLTW.MI, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/HLTW.MI?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 200 None
+Req = https://eodhistoricaldata.com/api/eod/HLTW.MI?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = HLTW.MI, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+stock = IEAG.AS, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/IEAG.AS?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 200 None
+Req = https://eodhistoricaldata.com/api/eod/IEAG.AS?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = IEAG.AS, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  

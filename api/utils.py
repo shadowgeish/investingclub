@@ -1,6 +1,7 @@
 
 import pandas as _pd
 import numpy as _np
+from tools.logger import logger_utils
 
 def get_date_from_str_or_default(datestr, default_date_obj):
     import datetime
@@ -72,14 +73,24 @@ def stock_total_value(list_of_date_dict_stock_weight, stock_code_prices, stock_d
     portfolio_stock_values = [] # [{date, dict stock value},{}]
     portfolio_stock_weights = [] # [{date, dict stock value},{}]
     last_portfolio_stock_values = {}
+    stock_code_prices['date'] = pd.to_datetime(stock_code_prices['date'])
+    stock_code_prices.index = stock_code_prices['date']
+    logger_utils.info(
+        'stock_code_prices = {},'.format(
+            stock_code_prices, ))
     for holding_data in list_of_date_dict_stock_weight:
         fdat = datetime.datetime.fromisoformat(holding_data['date']).date()
         dat = fdat.strftime("%Y%m%d")
-        stock_code_prices['date'] = pd.to_datetime(stock_code_prices['date'])
-        stock_code_prices.index = stock_code_prices['date']
+        logger_utils.info(
+            'date = {},'.format(
+                dat, ))
+
         #print('stock_code_prices === {}, df.dtypes = {}, max_date ={}'.format(stock_code_prices, stock_code_prices.dtypes, max_date))
 
         sub_date_df = stock_code_prices.loc[dat] #stock_code_prices[stock_code_prices['date']==dat].copy()
+        logger_utils.info(
+            'sub_date_df = {},'.format(
+                sub_date_df, ))
         #print('sub_date_df = {}, for dat {}'.format(sub_date_df, dat))
         full_stock_data = pd.merge(sub_date_df, stock_data_list, on="code")
         #print('full_stock_data = {}'.format(full_stock_data))
@@ -87,9 +98,14 @@ def stock_total_value(list_of_date_dict_stock_weight, stock_code_prices, stock_d
         dat_portfolio_stock_values = {'date': fdat.strftime("%Y-%m-%d")}
         dat_portfolio_values = {'date': fdat.strftime("%Y-%m-%d")}
         for stock_code in holdings.keys():
-            sub_holding_df = sub_date_df[sub_date_df['code'] == stock_code]
-            #print('sub_holding_df = {} for stock_code {}'.format(sub_holding_df, stock_code))
+
+            sub_holding_df = sub_date_df[sub_date_df['code'] == stock_code].copy()
             stock_data = sub_holding_df.to_dict('records')
+            logger_utils.info(
+                'stock_data = {}, stock_code = {}, holdings = {} sub_date_df= {} sub_date_df_code = {} sub_holding_df={}'.format(stock_data, stock_code,
+                        holdings, sub_date_df, sub_date_df['code'], sub_holding_df))
+            #print('sub_holding_df = {} for stock_code {}'.format(sub_holding_df, stock_code))
+
             #print('stock_data = {}'.format(stock_data))
             val = stock_data[0]['adjusted_close'] * holdings[stock_code]
             #print('val = {}'.format(val))
@@ -127,9 +143,16 @@ def volatility(returns, periods=252, annualize=True):
 
 def greeks(returns, benchmark_returns, periods=252.):
     """Calculates alpha and beta of the portfolio"""
+
     from scipy import stats
+    # result = _pd.concat([returns, benchmark_returns], axis=1, join_axes=[returns.index])
+    benchmark_returns = benchmark_returns.loc[returns.index]
+    #print('result concat= {}'.format(result))
     ret = [item for sublist in returns.values for item in sublist]
     b_ret = [item for sublist in benchmark_returns.values for item in sublist]
+
+    print('ret = {}'.format(ret))
+    print('b_ret = {}'.format(b_ret))
     slope, intercept, r_value, p_value, std_err = stats.linregress(ret, b_ret)
     return slope, intercept
 

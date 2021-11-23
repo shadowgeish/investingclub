@@ -1,0 +1,215 @@
+Req = https://eodhistoricaldata.com/api/eod/MAR.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = MAR.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = MAR.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = MLM.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/MLM.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/MLM.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = MLM.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = MLM.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = MAS.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/MAS.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/MAS.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = MAS.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = MAS.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = MA.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/MA.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/MA.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = MA.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = MA.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = MAT.NASDAQ, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/MAT.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/MAT.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = MAT.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = MAT.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = MCD.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/MCD.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/MCD.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = MCD.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = MCD.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = MCK.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/MCK.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/MCK.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = MCK.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = MCK.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = MRK.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/MRK.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/MRK.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = MRK.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = MRK.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = MCHP.NASDAQ, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/MCHP.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/MCHP.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = MCHP.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = MCHP.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = MET.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/MET.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/MET.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = MET.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = MET.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = MU.NASDAQ, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/MU.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/MU.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = MU.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = MU.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = MSFT.NASDAQ, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/MSFT.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/MSFT.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = MSFT.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = MSFT.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = MHK.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/MHK.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/MHK.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = MHK.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = MHK.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = MRNA.NASDAQ, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/MRNA.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/MRNA.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = MRNA.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = MRNA.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = TAP.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/TAP.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/TAP.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = TAP.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = TAP.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = MDLZ.NASDAQ, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/MDLZ.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/MDLZ.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = MDLZ.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = MDLZ.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = MNST.NASDAQ, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/MNST.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/MNST.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = MNST.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = MNST.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = MCO.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/MCO.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/MCO.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = MCO.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = MCO.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = MS.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/MS.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/MS.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = MS.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = MS.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = MOS.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/MOS.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/MOS.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = MOS.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = MOS.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = MSI.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/MSI.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/MSI.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = MSI.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = MSI.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = MUR.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/MUR.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/MUR.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = MUR.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = MUR.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = NDAQ.NASDAQ, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/NDAQ.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/NDAQ.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = NDAQ.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = NDAQ.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = NTAP.NASDAQ, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/NTAP.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/NTAP.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = NTAP.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = NTAP.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = NFLX.NASDAQ, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/NFLX.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/NFLX.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = NFLX.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = NFLX.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = NEM.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/NEM.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/NEM.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = NEM.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = NEM.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = NWSA.NASDAQ, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/NWSA.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/NWSA.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = NWSA.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = NWSA.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = NEE.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/NEE.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/NEE.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = NEE.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = NEE.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = NKE.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/NKE.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/NKE.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = NKE.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = NKE.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = NI.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/NI.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/NI.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = NI.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = NI.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = NBL.NASDAQ, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/NBL.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/NBL.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = NBL.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = NBL.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = NSC.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/NSC.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/NSC.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = NSC.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = NSC.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = SHIP.NASDAQ, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/SHIP.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/SHIP.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = SHIP.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = SHIP.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = VSLR.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/VSLR.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/VSLR.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = VSLR.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = VSLR.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = VKTX.NASDAQ, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/VKTX.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/VKTX.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = VKTX.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = VKTX.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = SNAP.NYSE, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/SNAP.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/SNAP.NYSE?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = SNAP.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = SNAP.NYSE, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = CRBP.NASDAQ, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/CRBP.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/CRBP.NASDAQ?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = CRBP.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = CRBP.NASDAQ, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  
+stock = FCHI.INDX, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/FCHI.INDX?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 200 None
+Req = https://eodhistoricaldata.com/api/eod/FCHI.INDX?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = FCHI.INDX, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+stock = GSPC.INDX, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/GSPC.INDX?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 200 None
+Req = https://eodhistoricaldata.com/api/eod/GSPC.INDX?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = GSPC.INDX, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+stock = BCOMGC.INDX, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/BCOMGC.INDX?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 200 None
+Req = https://eodhistoricaldata.com/api/eod/BCOMGC.INDX?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = BCOMGC.INDX, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+stock = STOXX50E.INDX, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/STOXX50E.INDX?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 200 None
+Req = https://eodhistoricaldata.com/api/eod/STOXX50E.INDX?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = STOXX50E.INDX, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+stock = VIX.INDX, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/VIX.INDX?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 200 None
+Req = https://eodhistoricaldata.com/api/eod/VIX.INDX?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = VIX.INDX, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+stock = BTC-USD.CC, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/BTC-USD.CC?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 200 None
+Req = https://eodhistoricaldata.com/api/eod/BTC-USD.CC?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = BTC-USD.CC, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+stock = EURUSD.FOREX, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/EURUSD.FOREX?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 200 None
+Req = https://eodhistoricaldata.com/api/eod/EURUSD.FOREX?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = EURUSD.FOREX, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+stock = EURBGP.FOREX, start_date2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 
+Starting new HTTPS connection (1): eodhistoricaldata.com:443
+https://eodhistoricaldata.com:443 "GET /api/eod/EURBGP.FOREX?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json HTTP/1.1" 404 None
+Req = https://eodhistoricaldata.com/api/eod/EURBGP.FOREX?from=2005-01-05&to=2021-09-19&api_token=60241295a5b4c3.00921778&period=d&fmt=json , stock = EURBGP.FOREX, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778  
+Error: stock = EURBGP.FOREX, start_date = 2005-01-05 end_date= 2021-09-19 eod_key = 60241295a5b4c3.00921778 , req = <Response [404]>  

@@ -508,14 +508,18 @@ def portfolio_optimization(
     for ac in asset_codes:
         data = df_h_p[df_h_p['code'] == ac].copy().sort_values(by=['converted_date'])
         temp_df = pd.DataFrame(data=data['adjusted_close'].tolist(),
-                               index=data['date'],
+                               index=pd.to_datetime(data['date']),
                                columns=['{}_adjusted_close'.format(ac)]
                                )
         # temp_df['{}_return'.format(ac)] = temp_df['{}_adjusted_close'.format(ac)].pct_change()
         # df_full = df_full.join(temp_df['{}_return'.format(ac)], how="outer")
         # df_full = df_full[df_full['{}_return'.format(ac)].notna()]
+        print('temp_df={}, index = {}'.format(temp_df['{}_adjusted_close'.format(ac)], temp_df['{}_adjusted_close'.format(ac)].index.dtype))
+        print('df_full={}, index = {}'.format(df_full, df_full.index.dtype))
+
         df_full = df_full.join(temp_df['{}_adjusted_close'.format(ac)], how="outer")
         df_full = df_full[df_full['{}_adjusted_close'.format(ac)].notna()]
+
     df_full.columns = [c.replace('_adjusted_close', '') for c in df_full.columns]
     from pypfopt import risk_models
     from pypfopt import expected_returns

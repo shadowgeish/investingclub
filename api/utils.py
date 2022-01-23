@@ -65,7 +65,16 @@ def stock_list(list_of_date_dict_stock_weight):
     return list(set(stocks))
 
 
-def stock_total_value(list_of_date_dict_stock_weight, stock_code_prices, stock_data_list, max_date):
+def cpt_max_date(stock_code_prices, stock_code_list):
+    max_date = stock_code_prices.index.max()
+    for stock_code in stock_code_list:
+        sub_stock_price = stock_code_prices[stock_code_prices['code'] == stock_code].copy()
+        tmax = sub_stock_price.index.max()
+        max_date = tmax if tmax < max_date else max_date
+
+    return max_date
+
+def stock_total_value(list_of_date_dict_stock_weight, stock_code_prices, stock_data_list, stock_code_list):
     import datetime
     import pandas as pd
     # portfolio_historical_values, portfolio_stock_values, portfolio_stock_weights, total_value
@@ -75,22 +84,36 @@ def stock_total_value(list_of_date_dict_stock_weight, stock_code_prices, stock_d
     last_portfolio_stock_values = {}
     stock_code_prices['date'] = pd.to_datetime(stock_code_prices['date'])
     stock_code_prices.index = stock_code_prices['date']
+    max_date = cpt_max_date(stock_code_prices, stock_code_list)
+    min_date = stock_code_prices.index.min()
     logger_utils.info(
-        'stock_code_prices = {},'.format(
-            stock_code_prices, ))
+        'stock_code_prices = {}, max_date = {}'.format(
+            stock_code_prices, max_date))
     for holding_data in list_of_date_dict_stock_weight:
         fdat = datetime.datetime.fromisoformat(holding_data['date']).date()
+        #if fdat >
         dat = fdat.strftime("%Y%m%d")
+        print(' max_date = {}, fdat ={}'.format(max_date, fdat))
+
         logger_utils.info(
-            'date = {},'.format(
-                dat, ))
+            'max_date = {}, fdat = {}'.format(
+                max_date, fdat))
+
+
+        if max_date < fdat:
+            continue
 
         #print('stock_code_prices === {}, df.dtypes = {}, max_date ={}'.format(stock_code_prices, stock_code_prices.dtypes, max_date))
 
         sub_date_df = stock_code_prices.loc[dat] #stock_code_prices[stock_code_prices['date']==dat].copy()
+        if sub_date_df.empty:
+            logger_utils.warning(
+                'No price data for date {}'.format(
+                    dat ))
+
         logger_utils.info(
-            'sub_date_df = {},'.format(
-                sub_date_df, ))
+            'sub_date_df = {},sub_date_df empty= {}'.format(
+                sub_date_df, sub_date_df.empty))
         #print('sub_date_df = {}, for dat {}'.format(sub_date_df, dat))
         full_stock_data = pd.merge(sub_date_df, stock_data_list, on="code")
         #print('full_stock_data = {}'.format(full_stock_data))
@@ -98,15 +121,12 @@ def stock_total_value(list_of_date_dict_stock_weight, stock_code_prices, stock_d
         dat_portfolio_stock_values = {'date': fdat.strftime("%Y-%m-%d")}
         dat_portfolio_values = {'date': fdat.strftime("%Y-%m-%d")}
         for stock_code in holdings.keys():
-
             sub_holding_df = sub_date_df[sub_date_df['code'] == stock_code].copy()
             stock_data = sub_holding_df.to_dict('records')
             logger_utils.info(
                 'stock_data = {}, stock_code = {}, holdings = {} sub_date_df= {} sub_date_df_code = {} sub_holding_df={}'.format(stock_data, stock_code,
                         holdings, sub_date_df, sub_date_df['code'], sub_holding_df))
-            #print('sub_holding_df = {} for stock_code {}'.format(sub_holding_df, stock_code))
 
-            #print('stock_data = {}'.format(stock_data))
             val = stock_data[0]['adjusted_close'] * holdings[stock_code]
             #print('val = {}'.format(val))
             if 'holdings' not in dat_portfolio_stock_values.keys():
@@ -118,7 +138,12 @@ def stock_total_value(list_of_date_dict_stock_weight, stock_code_prices, stock_d
         dat_portfolio_stock_values['portfolio_value'] = dat_portfolio_values['value']
         portfolio_stock_values.append(dat_portfolio_stock_values)
         portfolio_historical_values.append(dat_portfolio_values)
-        if max_date == fdat:
+
+        logger_utils.warning(
+            'max_date {} = fdat {} '.format(
+                max_date, fdat))
+
+        if min_date <= fdat:
             last_portfolio_stock_values = dat_portfolio_stock_values
 
     for holdings_data in portfolio_stock_values:
@@ -128,6 +153,9 @@ def stock_total_value(list_of_date_dict_stock_weight, stock_code_prices, stock_d
                 dat_portfolio_stock_weights['weights'] = {}
             dat_portfolio_stock_weights['weights'][stock_code] = holdings_data['holdings'][stock_code]/holdings_data['portfolio_value']
         portfolio_stock_weights.append(dat_portfolio_stock_weights)
+
+    print("portfolio_historical_values = {}, portfolio_stock_values = {}, portfolio_stock_weights = {}, last_portfolio_stock_values = {}".format(
+        portfolio_historical_values, portfolio_stock_weights, portfolio_stock_weights, last_portfolio_stock_values))
 
     return portfolio_historical_values, portfolio_stock_values, portfolio_stock_weights, last_portfolio_stock_values
 

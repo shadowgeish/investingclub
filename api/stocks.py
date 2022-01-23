@@ -298,11 +298,21 @@ class StockPrices(Resource):
 
         dtt = datetime.now(tz)
         import datetime as dat
-        if dtt.weekday() > 4:
+
+        paris_now = datetime.now(tz)
+        start_date = datetime.strptime(paris_now.strftime("%d%m%Y0700%z"), '%d%m%Y%H%M%z')
+        end_date = datetime.strptime(paris_now.strftime("%d%m%Y2300%z"), '%d%m%Y%H%M%z')
+
+        if dtt.weekday() > 4 or dtt < datetime.strptime(paris_now.strftime("%d%m%Y0855%z"), '%d%m%Y%H%M%z'):
             historical = 1
             args['start_date'] = get_date_from_str_or_default(dat.date.today() + dat.timedelta(-(6-dtt.weekday())),
                                                       (dat.date.today() + dat.timedelta(-200)))
             args['end_date'] = args['start_date']
+            if dtt.weekday() <= 4:
+                args['start_date'] = get_date_from_str_or_default(dat.date.today(),
+                                                      dat.date.today())
+                args['end_date'] = dat.date.today()
+                historical = -1
 
         if historical == 1:
             start_date = get_date_from_str_or_default(args['start_date'],
@@ -312,10 +322,20 @@ class StockPrices(Resource):
             start_date = dat.datetime.combine(start_date, dat.time.min)
             end_date = dat.datetime.combine(end_date, dat.time.min)
             data_type = 'historical'
-        else:
+
+        if historical == -1:
+            start_date = get_date_from_str_or_default(args['start_date'],
+                                                      (dat.date.today() + dat.timedelta(-1)))
+            end_date = get_date_from_str_or_default(args['end_date'],
+                                                      (dat.date.today() + dat.timedelta(1)))
+            start_date = dat.datetime.combine(start_date, dat.time.min)
+            end_date = dat.datetime.combine(end_date, dat.time.min)
+            data_type = 'historical'
+
+        if data_type == 'real_time':
             paris_now = datetime.now(tz)
-            start_date = datetime.strptime(paris_now.strftime("%d%m%Y0700"), '%d%m%Y%H%M')
-            end_date = datetime.strptime(paris_now.strftime("%d%m%Y2300"), '%d%m%Y%H%M')
+            start_date = datetime.strptime(paris_now.strftime("%d%m%Y0700%z"), '%d%m%Y%H%M%z')
+            end_date = datetime.strptime(paris_now.strftime("%d%m%Y2300%z"), '%d%m%Y%H%M%z')
 
         rt_price_df = get_prices(asset_codes=lstock, start_date=start_date, end_date=end_date,
                                  type=data_type, ret_code=1, ret='df')
@@ -340,9 +360,6 @@ class StockPrices(Resource):
                 dict_prices[price['code']].append(format_price_date(price, candle, data_type=data_type))
 
         result = dict_prices if flat_list == 0 else list(dict_prices.values())
-
-
-
 
         return result, 200
 
@@ -632,7 +649,7 @@ class PortfolioAnalytics(Resource):
         params = params_list[0]
         result = compute_portfolio_analytics(params=params)
 
-        result = {'result':result}
+        #result = {'result':result}
 
         print('json result {}'.format(result))
 

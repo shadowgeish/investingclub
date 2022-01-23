@@ -178,9 +178,10 @@ def compute_portfolio_analytics(params={}):
     stock_data_df['code'] = stock_data_df['Code'] + '.' + stock_data_df['ExchangeCode']
     logger_get_price.info("stock_data_df ={}".format(stock_data_df))
     stock_data_list = stock_data_df.to_dict('records')
+    full_stock_code_list = stock_code_list
+    full_stock_code_list.append(benchmark_stock_code)
 
-    stock_code_list.append(benchmark_stock_code)
-    df_h_p = get_prices(asset_codes=stock_code_list, ret='df',
+    df_h_p = get_prices(asset_codes=full_stock_code_list, ret='df',
                         start_date=datetime.datetime.combine(min_date, datetime.time.min) + datetime.timedelta(days=-1),
                         end_date=datetime.datetime.combine(max_date, datetime.time.min)+ datetime.timedelta(days=1),
                         )
@@ -191,17 +192,23 @@ def compute_portfolio_analytics(params={}):
 
     stock_prices_list = df_h_p[df_h_p['code'] != benchmark_stock_code].copy().to_dict('records')
 
-    logger_get_price.info("df_bhp ={}".format(df_bhp))
+    #logger_get_price.info("df_bhp ={}".format(df_bhp))
 
-    portfolio_historical_values, portfolio_stock_values, portfolio_stock_weights, last_portfolio_stock_values = stock_total_value(portfolio_historical_holdings, df_h_p, stock_data_df, max_date)
+    df_h_sp = df_h_p[df_h_p['code'] != benchmark_stock_code].copy()
 
+    portfolio_historical_values, portfolio_stock_values, portfolio_stock_weights, last_portfolio_stock_values = stock_total_value(portfolio_historical_holdings, df_h_sp, stock_data_df, stock_code_list)
+
+
+    #asset_type_values = {}
+    #if 'holdings' in last_portfolio_stock_values.keys():
     asset_type_values = get_asset_type_grouping(stock_data_list, {'values': last_portfolio_stock_values['holdings']}, group_by='values')
 
     dfvals = pd.DataFrame(portfolio_historical_values)
     dfvals.index = pd.to_datetime(dfvals['date'])
     dfvals = dfvals.drop(columns=['date'])
-    print(" dfvals = {}".format(dfvals))
+
     dfvals = dfvals.sort_index()
+    print(" dfvals = {}".format(dfvals))
     daily_returns, monthly_returns = get_returns(dfvals)
 
     #  benchmark

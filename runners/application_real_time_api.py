@@ -74,17 +74,17 @@ async def live_stock_prices():
     while True:
         paris_now = datetime.now(tz)
         dtt = paris_now
-        start_date = datetime.strptime(paris_now.strftime("%d%m%Y0855%z"), '%d%m%Y%H%M%z')
-        end_date = datetime.strptime(paris_now.strftime("%d%m%Y1930%z"), '%d%m%Y%H%M%z')
+        start_date = datetime.strptime(paris_now.strftime("%d%m%Y0830%z"), '%d%m%Y%H%M%z')
+        end_date = datetime.strptime(paris_now.strftime("%d%m%Y1830%z"), '%d%m%Y%H%M%z')
         dtt_s = start_date # datetime(year=dtt.year, month=dtt.month, day=dtt.day, hour=8, minute=30, tzinfo=tz)
         dtt_e = end_date #datetime(year=dtt.year, month=dtt.month, day=dtt.day, hour=18, minute=30, tzinfo=tz)
 
-        logger_rtapi.info('Date check {} < {} < {} '.format(dtt_s, dtt, dtt_e))
+        #logger_rtapi.info('Date check {} < {} < {} '.format(dtt_s, dtt, dtt_e))
         list_to_order = []
 
         sec = (last_check_now - datetime.now(tz)).seconds
-        logger_rtapi.info(
-            'Date check {} < {} < {} and {} sec, weekday = {} '.format(dtt_s, dtt, dtt_e, sec, dtt.weekday()))
+        #logger_rtapi.info(
+        #    'Date check {} < {} < {} and {} sec, weekday = {} '.format(dtt_s, dtt, dtt_e, sec, dtt.weekday()))
 
         if (dtt_s < dtt < dtt_e) and dtt.weekday() <= 4 and (first_run is True or sec >= 1000):
             first_run = False

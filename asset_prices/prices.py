@@ -295,6 +295,7 @@ def compute_portfolio_analytics(params={}):
 }
  '''
 
+
 def update_bulk_prices(prices=None, type='real_time'):
     import pandas as pd
     import requests
@@ -310,13 +311,37 @@ def update_bulk_prices(prices=None, type='real_time'):
     access_db = "mongodb+srv://sngoube:Yqy8kMYRWX76oiiP@cluster0.jaxrk.mongodb.net/asset_analytics?retryWrites=true&w=majority"
     server = MongoClient(access_db)
     tz = pytz.timezone('Europe/Paris')
+
+    if len(prices) == 0:
+        return
+
+    paris_now = datetime.now(tz)
+    start_date = datetime.strptime(paris_now.strftime("%d%m%Y0700%z"), '%d%m%Y%H%M%z')
+    end_date = datetime.strptime(paris_now.strftime("%d%m%Y2300%z"), '%d%m%Y%H%M%z')
+    list_codes = [ price['code'] for price in prices ]
+    rt_price_df = get_prices(asset_codes=list_codes, start_date=start_date, end_date=end_date,
+                             type='real_time', ret_code=1, ret='df')
+
     for price in prices:
         if price['timestamp'] != 'NA':
             asset_code = price['code']
+            #rt_price_df = get_prices(asset_codes=[asset_code], start_date=start_date, end_date=end_date,
+            #                         type='real_time', ret_code=0, ret='df')
+            #current_prices = rt_price_df.to_dict(orient='records')
+            current_price_df = rt_price_df[ rt_price_df['code']==asset_code]
+            current_prices = current_price_df.to_dict(orient='records')
+            print('!!!!!!current_prices = {}'.format(current_prices))
+
+            server[db_name][collection_name].update_one({"code": asset_code}, {"$set": {
+                "prices": current_prices}})
+
             price['converted_date'] = price['timestamp']
             price['date'] = datetime.fromtimestamp(price['timestamp'], tz = tz).strftime("%d-%m-%Y %H:%M")
             server[db_name][collection_name].update_one({"code": asset_code}, {"$addToSet": {
                 "prices": price}}, upsert=True)
+
+            #server[db_name][collection_name].update_one({"code": asset_code}, {"$set": {
+            #    "prices": price}}, upsert=True)
 
             server[db_name][stock_data].update({"FullCode": price['code']}, {"$set": {
                 "last_price_rt": price['close']}})
@@ -331,6 +356,7 @@ def update_bulk_prices(prices=None, type='real_time'):
                 "last_price_volume_rt": price['volume']}})
 
     logger_get_price.info("prices loaded {}".format(prices))
+
     server.close()
 
 def update_prices(asset_code=None, price=None, type='real_time'):

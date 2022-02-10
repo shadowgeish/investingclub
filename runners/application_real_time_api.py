@@ -64,7 +64,9 @@ async def live_stock_prices():
 
 
     global real_time_price
-
+    interval = 1000
+    max_run_cpt = 80000
+    run_cpt = 0
     # sio.emit('login', {'userKey': 'streaming_api_key'})
     from aiohttp import ClientSession
     session = ClientSession()
@@ -74,19 +76,19 @@ async def live_stock_prices():
     while True:
         paris_now = datetime.now(tz)
         dtt = paris_now
-        start_date = datetime.strptime(paris_now.strftime("%d%m%Y0830%z"), '%d%m%Y%H%M%z')
-        end_date = datetime.strptime(paris_now.strftime("%d%m%Y1830%z"), '%d%m%Y%H%M%z')
+        start_date = datetime.strptime(paris_now.strftime("%d%m%Y0855%z"), '%d%m%Y%H%M%z')
+        end_date = datetime.strptime(paris_now.strftime("%d%m%Y1930%z"), '%d%m%Y%H%M%z')
         dtt_s = start_date # datetime(year=dtt.year, month=dtt.month, day=dtt.day, hour=8, minute=30, tzinfo=tz)
         dtt_e = end_date #datetime(year=dtt.year, month=dtt.month, day=dtt.day, hour=18, minute=30, tzinfo=tz)
 
-        #logger_rtapi.info('Date check {} < {} < {} '.format(dtt_s, dtt, dtt_e))
+        logger_rtapi.info('Date check {} < {} < {} '.format(dtt_s, dtt, dtt_e))
         list_to_order = []
 
         sec = (last_check_now - datetime.now(tz)).seconds
-        #logger_rtapi.info(
-        #    'Date check {} < {} < {} and {} sec, weekday = {} '.format(dtt_s, dtt, dtt_e, sec, dtt.weekday()))
+        logger_rtapi.info(
+            'Date check {} < {} < {} and {} sec, weekday = {} '.format(dtt_s, dtt, dtt_e, sec, dtt.weekday()))
 
-        if (dtt_s < dtt < dtt_e) and dtt.weekday() <= 4 and (first_run is True or sec >= 1000):
+        if (dtt_s < dtt < dtt_e) and dtt.weekday() <= 4 and (first_run is True or sec >= interval) and run_cpt <= max_run_cpt:
             first_run = False
             ddf = get_universe()
             ddf2 = get_indx_cc_fx_universe()
@@ -104,7 +106,8 @@ async def live_stock_prices():
 
                 logger_rtapi.info('Getting data for sub string {}'.format(sublist))
                 sreq = "https://eodhistoricaldata.com/api/real-time/CAC.PA?api_token=60241295a5b4c3.00921778&fmt=json&s={}"
-
+                # run count for api call
+                run_cpt = run_cpt + 20
                 async with session.get(sreq.format(sublist)) as response:
                     data = await response.read()
                     #list_closing_prices = await response.json(content_type=None)
@@ -123,6 +126,7 @@ async def live_stock_prices():
                     str_req = sreq.format(server_run)
 
                     logger_rtapi.info('Loading {}'.format(str_req))
+                    #logger_rtapi.info('list_closing_prices {}'.format(list_closing_prices))
                     async with session.post(str_req, json=list_closing_prices) as response:
                         data = await response.read()
                     try:
@@ -135,7 +139,9 @@ async def live_stock_prices():
                         if price['timestamp'] != 'NA':
                             await sio.emit('last_traded_price', price)
                             list_to_order.append(price)
-
+            # reset the count of run for api call
+            if dtt_s > dtt > dtt_e:
+                run_cpt = 0
 
 sio.event
 async def my_event(sid, message):
@@ -196,4 +202,5 @@ def disconnect(sid):
 
 
 if __name__ == '__main__':
-    real_time_app.run(port=5006 , host='0.0.0.0')
+    #sio.start_background_task(live_stock_prices)
+    real_time_app.run(port=5006, host='0.0.0.0')

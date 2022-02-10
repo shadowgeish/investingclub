@@ -514,7 +514,7 @@ def portfolio_optimization(
         # temp_df['{}_return'.format(ac)] = temp_df['{}_adjusted_close'.format(ac)].pct_change()
         # df_full = df_full.join(temp_df['{}_return'.format(ac)], how="outer")
         # df_full = df_full[df_full['{}_return'.format(ac)].notna()]
-        # print('temp_df={}, index = {}'.format(temp_df['{}_adjusted_close'.format(ac)], temp_df['{}_adjusted_close'.format(ac)].index.dtype))
+        #  print('temp_df={}, index = {}'.format(temp_df['{}_adjusted_close'.format(ac)], temp_df['{}_adjusted_close'.format(ac)].index.dtype))
         # print('df_full={}, index = {}'.format(df_full, df_full.index.dtype))
 
         df_full = df_full.join(temp_df['{}_adjusted_close'.format(ac)], how="outer")

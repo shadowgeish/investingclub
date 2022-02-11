@@ -32,7 +32,7 @@ stock_universe_request_parser.add_argument("skip", type=int, required=False,
                                         help="skip", default=0)
 
 stock_universe_request_parser.add_argument("limit", type=int, required=False,
-                                        help="limit", default=10)
+                                        help="limit", default=250)
 
 stock_universe_request_parser.add_argument("candle", type=int, required=False,
                                         help="candle", default=1)

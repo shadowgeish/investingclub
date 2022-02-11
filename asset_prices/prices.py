@@ -328,9 +328,11 @@ def update_bulk_prices(prices=None, type='real_time'):
             #rt_price_df = get_prices(asset_codes=[asset_code], start_date=start_date, end_date=end_date,
             #                         type='real_time', ret_code=0, ret='df')
             #current_prices = rt_price_df.to_dict(orient='records')
-            current_price_df = rt_price_df[ rt_price_df['code']==asset_code]
-            current_prices = current_price_df.to_dict(orient='records')
-            print('!!!!!!current_prices = {}'.format(current_prices))
+            current_prices = []
+            if 'code' in rt_price_df.columns:
+                current_price_df = rt_price_df[ rt_price_df['code']==asset_code]
+                current_prices = current_price_df.to_dict(orient='records')
+                print('!!!!!!current_prices = {}'.format(current_prices))
 
             server[db_name][collection_name].update_one({"code": asset_code}, {"$set": {
                 "prices": current_prices}})

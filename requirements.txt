@@ -25,4 +25,6 @@ statsmodels==0.11.1
 Sanic
 aiohttp
 scipy
+docopt
+tabulate
 

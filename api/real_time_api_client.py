@@ -15,12 +15,16 @@ async def disconnect():
 
 
 @sio.event
-def last_traded_price(data):
-    logger_rtapic.info('last_traded_price {} '.format(data))
+def new_orders(data):
+    logger_rtapic.info('new_orders {}'.format(data))
 
 @sio.event
-def intraday_prices(data):
-    logger_rtapic.info('intraday_prices {} '.format(data))
+def new_trades(data):
+    logger_rtapic.info('new_trades {}'.format(data))
+
+@sio.event
+def best_bid_ask(data):
+    logger_rtapic.info('best_bid_ask {}'.format(data))
 
 @sio.event
 def intraday_trending_stocks(data):
@@ -28,8 +32,8 @@ def intraday_trending_stocks(data):
 
 
 async def start_server():
-    #await sio.connect('http://localhost:5000')
-    await sio.connect('http://18.191.227.200:5000')
+    await sio.connect('http://localhost:5005')
+    #await sio.connect('http://18.191.227.200:5000')
 
     await sio.wait()
 

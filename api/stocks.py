@@ -8,6 +8,10 @@ from analytics.analytics import monte_carlo_portfolio_simul
 from asset_prices.referencial import get_universe
 from api.utils import get_date_from_str_or_default
 
+
+
+
+
 stock_universe_request_parser = RequestParser(bundle_errors=False)
 
 stock_universe_request_parser.add_argument("name", type=str, required=False,
@@ -60,6 +64,7 @@ stock_universe_request_parser.add_argument("order_direction", type=str, required
 
 stock_universe_request_parser.add_argument("flat_list", type=int, required=False,
                                          help=" flat_list", default=0)
+
 
 class HelloWord(Resource):
     # df['CustomRating'] = df.apply(lambda x: custom_rating(x['Genre'], x['Rating']), axis=1)

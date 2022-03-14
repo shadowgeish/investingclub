@@ -305,7 +305,7 @@ class Orderbook:
                         raise ValueError(f'Price {price} not found')
 
     def send(self, is_buy, qty, price, uid,
-             is_mine=False, timestamp=datetime.now()):
+             is_mine=False, timestamp=datetime.now(), client_order_uid = ""):
         """ Send new order to orderbook
             Passive orders can't be matched and will be added to the book
             Aggressive orders are matched against opp. side's resting order
@@ -330,7 +330,7 @@ class Orderbook:
             self.n_my_orders += 1
             self.my_cumvol_sent += qty
 
-        neword = Order(uid, is_buy, qty, price, timestamp)
+        neword = Order(uid, is_buy, qty, price, timestamp, client_order_uid)
         self._orders.update({uid: neword})
         trade_list = []
         while (neword.leavesqty > 0):

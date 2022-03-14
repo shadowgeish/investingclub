@@ -103,6 +103,8 @@ order_book_request_parser.add_argument("is_buy", type=int, required=False,
                                          help="order side, 1 = buy, 0 = sell", default=-1)
 order_book_request_parser.add_argument("order_id", type=int, required=False,
                                          help="order id", default=-1)
+order_book_request_parser.add_argument("client_order_uid", type=str, required=False,
+                                         help="client order uid", default="")
 
 
 class AddOrder(Resource):
@@ -114,6 +116,8 @@ class AddOrder(Resource):
         qty = args['quantity']
         price = args['price']
         side = args['is_buy']
+        client_order_uid = args['client_order_uid']
+
         ob = OrderBookList[code] if code in OrderBookList.keys() else Orderbook(ticker=code)
         OrderBookList[code] = ob
 
@@ -125,7 +129,8 @@ class AddOrder(Resource):
 
         OrderUI[code] = OrderUI[code] + 1 if code in OrderUI.keys() else 1
         is_buy = True if side == 1 else False
-        neword, trade_list = ob.send(uid=OrderUI[code], is_buy=is_buy, qty=qty, price=price, timestamp=paris_now)
+        neword, trade_list = ob.send(uid=OrderUI[code], is_buy=is_buy, qty=qty, price=price, timestamp=paris_now,
+                                     client_order_uid=client_order_uid)
         print(neword)
         print(ob)
         socket_.emit('new_orders', neword.order_data())

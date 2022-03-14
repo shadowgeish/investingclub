@@ -8,6 +8,7 @@ from api.stocks import StockUniverse, StockData, StockPricesOld, \
     StockPrices, PushBulkIntradayStockPrices, StockDataAndPrices, HelloWord, PortfolioAnalytics
 from flask_swagger_ui import get_swaggerui_blueprint
 
+
 application = app = Flask(__name__)
 CORS(app, support_credentials=True)
 ### swagger specific ###
@@ -31,6 +32,8 @@ api = Api(app, prefix="/api/v1")
 #async_mode = None
 # socket_io = SocketIO(app, async_mode=async_mode)
 #socket_io = SocketIO(app, async_mode=async_mode)
+from flask_socketio import SocketIO, emit, disconnect
+socket_ = SocketIO(app, async_mode=None)
 
 users = [
     {"email": "masnun@gmail.com", "name": "Masnun", "id": 1}
@@ -84,6 +87,92 @@ class Subscriber(Resource):
         return {"message": "Deleted"}
 
 
+import pytz
+from marketsimulator.orderbook import Orderbook
+from datetime import datetime
+OrderBookList = dict()
+OrderUI = dict()
+tz = pytz.timezone('Europe/Paris')
+
+order_book_request_parser = RequestParser(bundle_errors=False)
+order_book_request_parser.add_argument("quantity", type=float, required=False,
+                                         help=" order code", default=0)
+order_book_request_parser.add_argument("price", type=float, required=False,
+                                         help="order price", default=0)
+order_book_request_parser.add_argument("is_buy", type=int, required=False,
+                                         help="order side, 1 = buy, 0 = sell", default=-1)
+order_book_request_parser.add_argument("order_id", type=int, required=False,
+                                         help="order id", default=-1)
+
+
+class AddOrder(Resource):
+    # df['CustomRating'] = df.apply(lambda x: custom_rating(x['Genre'], x['Rating']), axis=1)
+
+    def post(self, code):
+        # initialize an empty orderbook book for Santander shares (san)
+        args = order_book_request_parser.parse_args()
+        qty = args['quantity']
+        price = args['price']
+        side = args['is_buy']
+        ob = OrderBookList[code] if code in OrderBookList.keys() else Orderbook(ticker=code)
+        OrderBookList[code] = ob
+
+        if side not in [0, 1] or price <= 0 or qty <= 0:
+            return {"result": "wrong parameters", "order" : {}}, 200
+
+        paris_now = datetime.now(tz)
+        paris_now_date = datetime.strptime(paris_now.strftime("%d%m%Y0855%z"), '%d%m%Y%H%M%z')
+
+        OrderUI[code] = OrderUI[code] + 1 if code in OrderUI.keys() else 1
+        is_buy = True if side == 1 else False
+        neword, trade_list = ob.send(uid=OrderUI[code], is_buy=is_buy, qty=qty, price=price, timestamp=paris_now)
+        print(neword)
+        print(ob)
+        socket_.emit('new_orders', neword.order_data())
+        socket_.emit('new_trades', trade_list)
+        socket_.emit('best_bid_ask', ob.best_bid_ask)
+
+        return {"result": "Order inserted", "order": neword.order_data(),
+                "trade_list": trade_list}, 200
+
+
+class GetOrder(Resource):
+    # df['CustomRating'] = df.apply(lambda x: custom_rating(x['Genre'], x['Rating']), axis=1)
+
+    def get(self, code):
+        # initialize an empty orderbook book for Santander shares (san)
+        args = order_book_request_parser.parse_args()
+        order_id = args['order_id']
+        ob = OrderBookList[code] if code in OrderBookList.keys() else Orderbook(ticker=code)
+        OrderBookList[code] = ob
+
+        order = ob.get_order(order_id)
+        order_data = {} if order is None else order.order_data()
+        return {"result": "Order inserted", "order": order_data}, 200
+
+
+class GetBBO(Resource):
+
+    def get(self, code):
+        # initialize an empty orderbook book for Santander shares (san)
+        full_code_list = code.split(',')
+        bbos = []
+        for cod in full_code_list:
+            ob = OrderBookList[code] if cod in OrderBookList.keys() else Orderbook(ticker=code)
+            bbos.append({"code": ob.best_bid_ask})
+
+        return {"best_bid_ask": bbos}, 200
+
+
+class GetOrderBook(Resource):
+
+    def get(self, code):
+        # initialize an empty orderbook book for Santander shares (san)
+        ob = OrderBookList[code] if code in OrderBookList.keys() else Orderbook(ticker=code)
+        ob_df = ob.top_bis_asks(10)
+        return {"order_book": ob_df.to_dict(orient='records')}, 200
+
+
 api.add_resource(SubscriberCollection, '/subscribers')
 api.add_resource(Subscriber, '/subscribers/<int:id>')
 api.add_resource(MonteCarloSimulation, '/montecarlo')
@@ -93,6 +182,10 @@ api.add_resource(MeanVarOptimization, '/mean_var_opt')
 #api.add_resource(MaxDiversification, '/realestate') # real estate prices
 #api.add_resource(MonteCarloSimulation, '/lifeinsurance') # life insurance
 api.add_resource(StockUniverse, '/stock_universe') # country, type, name - OK
+api.add_resource(AddOrder, '/add_order/<string:code>') # country, type, name - OK
+api.add_resource(GetOrder, '/get_order/<string:code>') # country, type, name - OK
+api.add_resource(GetBBO, '/get_bbo/<string:code>') # country, type, name - OK
+api.add_resource(GetOrderBook, '/get_order_book/<string:code>') # country, type, name - OK
 api.add_resource(HelloWord, '/') # country, type, name - OK
 api.add_resource(StockPrices, '/stock_prices/<string:codes>') # country, type, name - OK
 api.add_resource(StockDataAndPrices, '/stock_latest_prices/<string:codes>') # country, type, name - OK Add filtering and sorting
@@ -103,6 +196,6 @@ api.add_resource(PortfolioAnalytics, '/compute_portfolio_analytics')
 # name, exchange, description, asset class, esg ratings, financial data
 # ETF => composition, issuer logo, AUM,
 
-
 if __name__ == '__main__':
-    application.run(debug=True, host='0.0.0.0', port=5005)
+    socket_.run(app, debug=True, host='0.0.0.0', port=5005)
+    #application.run(debug=True, host='0.0.0.0', port=5005)

@@ -309,5 +309,5 @@ def get_stock_prices():
 
 
 if __name__ == '__main__':
-    rt = RepeatedTimer(9, get_stock_prices)
+    rt = RepeatedTimer(1200, get_stock_prices)
     socket_.run(app, debug=True, host='0.0.0.0', port=5005)

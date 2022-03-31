@@ -66,16 +66,15 @@ class Orderbook:
             be between 0 and 1. 
         """
 
-
         if ticker not in TICKER_BANDS:
             band = DEFAULT_BAND
             warnings.warn(f'Ticker {ticker} not found in liquidity bands'
-                           ' configuration file. \n Band6 (highest liquidity'
-                           ' stock) will be set as default for tick size calc.\n'
+                          ' configuration file. \n Band6 (highest liquidity'
+                          ' stock) will be set as default for tick size calc.\n'
                           f' Check {TICK_SIZE_REGIME_URL} for more info')
         else:
             band = TICKER_BANDS[ticker]
-            
+
         #        self.band_ticks = self.__class__.band_ticks[band]
         self.band_idxs = PX_IDXS[band]
         self.band_prices = PRICES[band]
@@ -89,10 +88,19 @@ class Orderbook:
         self.resilience = resilience
         self._bids = Bids()
         self._asks = Asks()
+
+        # Fractional virtual order book (rlp)
+        self._frlp_factional_bids = Bids()
+        self._frlp_factional_asks = Asks()
+
+        # Fractional virtual order book (retail)
+        self._fr_factional_bids = Bids()
+        self._fr_factional_asks = Asks()
+
         self.create_stats_dict()
         # keeps track of all orders sent to the orderbook
         # allows fast access of orders status by uid
-        self._orders = dict()
+        self._ordersd = dict()
         self.n_my_orders = 0
         self.ntrds = 0
         self.my_ntrds = 0
@@ -149,7 +157,7 @@ class Orderbook:
                                                        self.def_day)
 
     def inc_dict_size(self, stat_dict, inc):
-        def_arr = np.zeros(inc)        
+        def_arr = np.zeros(inc)
         def_day = np.full(inc, self.def_day)
 
         new_dict = {(key): (np.hstack([stat_dict[key], def_arr])
@@ -167,6 +175,17 @@ class Orderbook:
             bbo["best_bid"] = self._bids.best_price
         if self._asks.best_pricelevel is not None:
             bbo["best_ask"] = self._asks.best_price
+
+        return bbo
+
+    # Fractional Best Bid
+    @property
+    def best_fractional_bid_ask(self):
+        bbo = {}
+        if self._frlp_factional_bids.best_pricelevel is not None:
+            bbo["best_bid"] = self._frlp_factional_bids.best_price
+        if self._frlp_factional_asks.best_pricelevel is not None:
+            bbo["best_ask"] = self._frlp_factional_asks.best_price
 
         return bbo
 
@@ -304,8 +323,8 @@ class Orderbook:
                     else:
                         raise ValueError(f'Price {price} not found')
 
-    def send(self, is_buy, qty, price, uid,
-             is_mine=False, timestamp=datetime.now(), client_order_uid = ""):
+    def send(self, is_buy, qty, price, uid, is_mine=False, timestamp=datetime.now(), client_order_uid="", account_type="R"):
+
         """ Send new order to orderbook
             Passive orders can't be matched and will be added to the book
             Aggressive orders are matched against opp. side's resting order
@@ -318,8 +337,9 @@ class Orderbook:
                 is_mine (bool): False if the order corresponds to a
                 historical order instead of you own orders
                 uid (int)
-                timestamp (float): time of processing 
-                
+                client_order_uid (str): client order uid
+                account_type (str): account type FR, FRLP, RLP, R
+
         """
         if np.isnan(price):
             raise Exception("Price cannot be nan. Use np.Inf in needed")
@@ -330,20 +350,69 @@ class Orderbook:
             self.n_my_orders += 1
             self.my_cumvol_sent += qty
 
-        neword = Order(uid, is_buy, qty, price, timestamp, client_order_uid)
+        neword = Order(uid, is_buy, qty, price, timestamp, client_order_uid, account_type)
         self._orders.update({uid: neword})
         trade_list = []
+
         while (neword.leavesqty > 0):
-            if self._is_aggressive(neword):
-                trd = self._sweep_best_price(neword)
+
+            if self._is_aggressive(neword):  # Check agressive agaisnt regular and fractional virtual orders
+                trd = self._sweep_best_price(neword)  # sweep regular or fractional virtual orders
                 trade_list = trade_list + trd
             else:
+                # add to regular and fractional virtual orders if type order = [FRLP, FR]
+                # add to regular virtual orders if type order = [FRLP,LP, R, PT, CT ]
+                # PT = prod trading, CT = client trading, FRLP = fractional LP, FR = fractional Retail, R=Retail
+                # LP = Liquidity provider
+
+                # Add FRLP order to both places regular bids asks and
+                asks, bids = self._get_bids_asks(neword)
+
                 if is_buy:
-                    self._bids.add(neword)
+                    bids.add(neword)
                 else:
-                    self._asks.add(neword)
+                    asks.add(neword)
+
+                if neword.account_type == 'FRLP':
+                    if is_buy:
+                        self._bids.add(neword)
+                    else:
+                        self._asks.add(neword)
+
                 return neword, trade_list
         return neword, trade_list
+
+    def _get_bids_asks(self, order):
+        asks = self._asks
+        bids = self._bids
+
+        if order.account_type in ['FR']:
+            asks = self._fr_factional_asks
+            bids = self._fr_factional_bids
+
+        if order.account_type in ['FRLP']:
+            asks = self._frlp_factional_asks
+            bids = self._frlp_factional_bids
+
+        return asks, bids
+
+    def _get_matching_bids_asks(self, order):
+        asks = self._asks
+        bids = self._bids
+
+        # FR, FRLP, RLP, R
+
+        if order.account_type in ['FR']:
+            asks = self._frlp_factional_asks
+            bids = self._frlp_factional_bids
+
+        if order.account_type in ['RLP']:
+            asks = self._fr_factional_asks
+            bids = self._fr_factional_bids
+
+        return asks, bids
+
+
 
     def _affect_price_with_market_impact(self, price):
         """ Modifies historical prices to be sent to the Orderbook by
@@ -356,13 +425,13 @@ class Orderbook:
 
         """
         if self.market_impact >= 1:
-            nticks = min(int(self.resilience*self.market_impact),
+            nticks = min(int(self.resilience * self.market_impact),
                          self.max_impact)
             price = self.get_new_price(price=price, n_moves=nticks)
         elif self.market_impact <= -1:
-            nticks = max(int(self.resilience*self.market_impact),
+            nticks = max(int(self.resilience * self.market_impact),
                          -1 * self.max_impact)
-            price = self.get_new_price(price=price, n_moves=nticks)        
+            price = self.get_new_price(price=price, n_moves=nticks)
         return price
 
     def cancel(self, uid):
@@ -383,13 +452,12 @@ class Orderbook:
             pricelevel.remove(order)
             if pricelevel.is_empty():
                 self._asks.remove_pricelevel(order.price)
-    
-        if uid <  0:
+
+        if uid < 0:
             self.my_cumvol_sent -= order.leavesqty
         order._cumqty = order.qty - order.leavesqty
         order.leavesqty = 0
         order.active = False
-        
 
     def modif(self, uid, qty_down):
         """ Modify an order identified by its uid. 
@@ -408,14 +476,14 @@ class Orderbook:
         """
 
         if uid in self._orders:
-            prev_ord = self._orders[uid]            
+            prev_ord = self._orders[uid]
             if prev_ord.leavesqty <= qty_down:
                 self.cancel(uid)
             else:
                 if prev_ord.uid < 0:
                     self.my_cumvol_sent -= qty_down
                 prev_ord.leavesqty -= qty_down
-                prev_ord.qty -= qty_down      
+                prev_ord.qty -= qty_down
 
     def _is_aggressive(self, order):
         """ Aggressive orders are those that would be matched against
@@ -432,14 +500,18 @@ class Orderbook:
         """
 
         is_agg = True
+
+        asks, bids = self._get_matching_bids_asks(order)
+
         if order.is_buy:
-            if self._asks.best_pricelevel is None or \
-                self._asks.best_price > order.price:
+            if asks.best_pricelevel is None or \
+                    asks.best_price > order.price:
                 is_agg = False
         else:
-            if self._bids.best_pricelevel is None or \
-                self._bids.best_price < order.price:
+            if bids.best_pricelevel is None or \
+                    bids.best_price < order.price:
                 is_agg = False
+
         return is_agg
 
     #    def update_metrics(self, trdpx, trdqty):
@@ -513,6 +585,11 @@ class Orderbook:
         """
 
         # TODO: Think of a different aggression effect
+        # TODO: RMO + Fractional order can only match with RLP + Fractional => fractional different spread.
+        # TODO: RMO + Full share order can match with RLP + Fractional, RLP + Full share
+        # TODO: RMO + Full share order can match with RMO + Full share
+        # TODO: Need RLP + Fractional level price
+        # TODO: Need RLP (Frac or Not) + RMO level price
 
         my_agg_vol = 0
         ob_agg_vol = 0
@@ -523,12 +600,12 @@ class Orderbook:
         my_trade = False
         breaking = False
         newtrds = []
-
+        asks, bids = self._get_matching_bids_asks(order)
         if order.is_buy:
-            best = self._asks.best_pricelevel
+            best = asks.best_pricelevel
             agg_effect_side = 1
         else:
-            best = self._bids.best_pricelevel
+            best = bids.best_pricelevel
             agg_effect_side = -1
 
         init_best_vol = best.vol
@@ -556,6 +633,7 @@ class Orderbook:
                 order.leavesqty -= trdqty
                 if best.head_order is None:
                     # remove PriceLevel from the order's opposite side
+                    # if FRLP remove fron regular and fractional order book.
                     self._remove_price(not order.is_buy, best.price)
                     breaking = True
             else:
@@ -584,7 +662,8 @@ class Orderbook:
             stats = [price, trdqty, order.uid, best_uid,
                      order.is_buy, order.timestamp]
             new_trd = {"price": price, "trdqty": trdqty, "aggressive_order_id": order.uid, "resting_order_id": best_uid,
-                         "aggressive_order_is_buy": order.is_buy, "aggressive_order_timestamp": order.timestamp.strftime("%d%m%Y%H%M%z") }
+                       "aggressive_order_is_buy": order.is_buy,
+                       "aggressive_order_timestamp": order.timestamp.strftime("%d%m%Y%H%M%z")}
             newtrds.append(new_trd)
             self.update_last_trades(stats=stats, pos=n_newtrd)
             n_newtrd += 1
@@ -647,9 +726,8 @@ class Orderbook:
         """
 
         best_bid_prices = self._bids.best_n_prices(nlevels)
-        return [price if price is not None else np.nan 
+        return [price if price is not None else np.nan
                 for price in best_bid_prices]
-
 
     def top_askpx(self, nlevels):
         """ Returns the first nlevels of the Ask ordered by price asc
@@ -662,10 +740,9 @@ class Orderbook:
         """
 
         best_ask_prices = self._asks.best_n_prices(nlevels)
-        return [price if price is not None else np.nan 
+        return [price if price is not None else np.nan
                 for price in best_ask_prices]
 
-    
     def top_n_pricelevel_vol(self, nlevels, side):
         """
             nlevels(int): number of pricelevels to consider when
@@ -689,10 +766,10 @@ class Orderbook:
             current_pricelevel = current_pricelevel.next
             level += 1
         return vol, n_level_price
-    
+
     def top_bids_cumvol(self, nlevels):
         return self.top_n_pricelevel_vol(nlevels, "bids")
-        
+
     def top_asks_cumvol(self, nlevels):
         return self.top_n_pricelevel_vol(nlevels, "asks")
 
@@ -709,18 +786,18 @@ class Orderbook:
         """
         pbids = nlevels * [np.nan]
         vbids = nlevels * [np.nan]
-        
+
         current_pricelevel = self._bids.best_pricelevel
         if current_pricelevel is None:
             return [pbids, vbids]
-        
+
         level = 0
         while current_pricelevel and (level < nlevels):
             pbids[level] = current_pricelevel.price
             vbids[level] = current_pricelevel.vol
             current_pricelevel = current_pricelevel.next
             level += 1
-        
+
         return [pbids, vbids]
 
     def top_asks(self, nlevels):
@@ -737,18 +814,18 @@ class Orderbook:
 
         pasks = nlevels * [np.nan]
         vasks = nlevels * [np.nan]
-        
+
         current_pricelevel = self._asks.best_pricelevel
         if current_pricelevel is None:
             return [pasks, vasks]
-        
+
         level = 0
         while current_pricelevel and (level < nlevels):
             pasks[level] = current_pricelevel.price
             vasks[level] = current_pricelevel.vol
             current_pricelevel = current_pricelevel.next
             level += 1
-        
+
         return [pasks, vasks]
 
     def get_orders_ladder(self, nlevels):
@@ -763,7 +840,7 @@ class Orderbook:
                 volbids.append(current_order.leavesqty)
                 current_order = current_order.next
             current_pricelevel = current_pricelevel.next
-        
+
         level = 0
         pxasks = []
         volasks = []
@@ -775,19 +852,19 @@ class Orderbook:
                 volasks.append(current_order.leavesqty)
                 current_order = current_order.next
             current_pricelevel = current_pricelevel.next
-    
+
         len_diff = len(pxasks) - len(pxbids)
         if len_diff > 0:
-            pxbids += len_diff*[np.nan]
+            pxbids += len_diff * [np.nan]
         elif len_diff < 0:
-            pxasks += len_diff*[np.nan]
-        
+            pxasks += len_diff * [np.nan]
+
         return pd.DataFrame({'vbid': volbids, 'pbid': pxbids, 'pask': pxasks, 'vask': volasks})
 
     def __str__(self):
-        #pbid, vbid = self.top_bids(10)
-        #pask, vask = self.top_asks(10)
-        #df = pd.DataFrame({'vbid': vbid, 'pbid': pbid, 'pask': pask, 'vask': vask})
+        # pbid, vbid = self.top_bids(10)
+        # pask, vask = self.top_asks(10)
+        # df = pd.DataFrame({'vbid': vbid, 'pbid': pbid, 'pask': pask, 'vask': vask})
         return str(self.top_bis_asks(10))
 
     def top_bis_asks(self, top=10):
@@ -795,5 +872,3 @@ class Orderbook:
         pask, vask = self.top_asks(top)
         df = pd.DataFrame({'vbid': vbid, 'pbid': pbid, 'pask': pask, 'vask': vask})
         return df
-
-

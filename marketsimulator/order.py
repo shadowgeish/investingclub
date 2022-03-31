@@ -9,7 +9,7 @@ class Order:
     # __slots__ = ["uid", "is_buy", "qty", "price", "timestamp", "status"]
 
     def __init__(self, uid, is_buy, qty, price, timestamp=datetime.now(),
-                 client_order_uid="", order_type=2):
+                 client_order_uid="", order_type=2, account_type="R"):
         self.uid = uid
         self.is_buy = is_buy
         self.qty = qty
@@ -26,7 +26,8 @@ class Order:
         # is the order active and resting in the orderbook?
         self.active = False
         self.client_order_uid = client_order_uid
-        self.order_type = order_type # 1 = Market, 2 = Limit, 3 = Stop loss, 4 = Stop limit
+        self.order_type = order_type  # 1 = Market, 2 = Limit, 3 = Stop loss, 4 = Stop limit
+        self.account_type = account_type
         # DDL attributes import unittest
         self.prev = None
         self.next = None

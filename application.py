@@ -7,7 +7,7 @@ from api.simulation import MonteCarloSimulation, AAbacktesting, MeanVarOptimizat
 from api.stocks import StockUniverse, StockData, StockPricesOld, \
     StockPrices, PushBulkIntradayStockPrices, StockDataAndPrices, HelloWord, PortfolioAnalytics
 from flask_swagger_ui import get_swaggerui_blueprint
-
+from threading import Timer
 
 application = app = Flask(__name__)
 CORS(app, support_credentials=True)
@@ -105,7 +105,8 @@ order_book_request_parser.add_argument("order_id", type=int, required=False,
                                          help="order id", default=-1)
 order_book_request_parser.add_argument("client_order_uid", type=str, required=False,
                                          help="client order uid", default="")
-
+order_book_request_parser.add_argument("account_type", type=str, required=False,
+                                         help="account type: FR, FRLP, RLP, R ", default="")
 
 class AddOrder(Resource):
     # df['CustomRating'] = df.apply(lambda x: custom_rating(x['Genre'], x['Rating']), axis=1)
@@ -117,6 +118,7 @@ class AddOrder(Resource):
         price = args['price']
         side = args['is_buy']
         client_order_uid = args['client_order_uid']
+        account_type = args['account_type']
 
         ob = OrderBookList[code] if code in OrderBookList.keys() else Orderbook(ticker=code)
         OrderBookList[code] = ob
@@ -201,6 +203,111 @@ api.add_resource(PortfolioAnalytics, '/compute_portfolio_analytics')
 # name, exchange, description, asset class, esg ratings, financial data
 # ETF => composition, issuer logo, AUM,
 
+
+class RepeatedTimer(object):
+    def __init__(self, interval, function):#, *args, **kwargs):
+        self._timer     = None
+        self.interval   = interval
+        self.function   = function
+        #self.args       = args
+        #self.kwargs     = kwargs
+        self.is_running = False
+        self.start()
+
+    def run(self):
+        self.is_running = False
+        self.start()
+        self.function()#*self.args, **self.kwargs)
+
+    def start(self):
+        if not self.is_running:
+            self._timer = Timer(self.interval, self.run)
+            self._timer.start()
+            self.is_running = True
+
+    def stop(self):
+        self._timer.cancel()
+        self.is_running = False
+
+
+def get_stock_prices():
+    from datetime import datetime
+    from asset_prices.referencial import get_universe, get_indx_cc_fx_universe
+    import json
+    import pytz
+    tz = pytz.timezone('Europe/Paris')
+    from pymongo import MongoClient
+    print('Getting price data')
+    server_run = 'https://stocks.investingclub.io' #'https://stocks.investingclub.io'  # http://localhost:5005
+    # server_run = 'localhost'  # localhost
+    collection_name = "real_time_prices"
+    db_name = "asset_analytics"
+    access_db = "mongodb+srv://sngoube:Yqy8kMYRWX76oiiP@cluster0.jaxrk.mongodb.net/asset_analytics?retryWrites=true&w=majority"
+    server = MongoClient(access_db)
+    from aiohttp import ClientSession
+    # session = ClientSession()
+    import requests
+    session = requests.Session()
+
+    paris_now = datetime.now(tz)
+    dtt = paris_now
+    dtt_s = datetime.strptime(paris_now.strftime("%d%m%Y0855%z"), '%d%m%Y%H%M%z')
+    dtt_e = datetime.strptime(paris_now.strftime("%d%m%Y2130%z"), '%d%m%Y%H%M%z')
+    ''' 
+    if dtt_s >= dtt or dtt >= dtt_e or dtt.weekday() > 4:
+        print('No need to run {}, {}, {}'.format(dtt_s, dtt, dtt_e))
+        return
+    '''
+    ddf = get_universe()
+    ddf2 = get_indx_cc_fx_universe()
+    ddf = ddf.append(ddf2)
+    ddf['full_code'] = ddf['Code'] + '.' + ddf['ExchangeCode']
+    lstock = ddf['full_code'].tolist()  # ddf.to_dict(orient='records')
+
+    sublists = [lstock[x:x + 20] for x in range(0, len(lstock), 20)]
+    stringlist = []
+
+    for subset in sublists:
+        stringlist.append(','.join(subset))
+
+    for sublist in stringlist:
+        list_closing_prices = []
+
+        print('Getting data for sub string {}'.format(sublist))
+        sreq = "https://eodhistoricaldata.com/api/real-time/CAC.PA?api_token=60241295a5b4c3.00921778&fmt=json&s={}"
+
+        with session.get(sreq.format(sublist)) as response:
+            #data = response.read()
+            data = response.text
+            # list_closing_prices = await response.json(content_type=None)
+        try:
+            #print('Loading {}'.format(data))
+            list_closing_prices = json.loads(data)
+
+        except ValueError as e:
+            list_closing_prices = []
+            print('Error loading data {} '.format(data))
+
+        if len(list_closing_prices) > 0:
+            from asset_prices.prices import update_bulk_prices
+            update_bulk_prices(prices=list_closing_prices, type='real_time')
+
+            # Loading data
+            #sreq = "{}/api/v1/load_bulk_intraday_stock_prices"
+            #str_req = sreq.format(server_run)
+
+            #print('Loading {}'.format(str_req))
+            # logger_rtapi.info('list_closing_prices {}'.format(list_closing_prices))
+            #with session.post(str_req, json=list_closing_prices) as response:
+                #data = response.read()
+            #    data = response.text
+            #try:
+            #    stock_prices = json.loads(data)
+            #    print('Seding intraday_prices {}'.format(stock_prices))
+            #except ValueError as e:
+            #    print('Error loading data {} '.format(data))
+
+
 if __name__ == '__main__':
+    rt = RepeatedTimer(9, get_stock_prices)
     socket_.run(app, debug=True, host='0.0.0.0', port=5005)
-    #application.run(debug=True, host='0.0.0.0', port=5005)

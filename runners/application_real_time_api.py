@@ -31,6 +31,73 @@ def is_serializable(obj):
 
     return True
 
+def get_stock_prices():
+    from datetime import datetime
+    from asset_prices.referencial import get_universe, get_indx_cc_fx_universe
+    import json
+    import pytz
+    from pymongo import MongoClient
+
+    server_run = 'https://stocks.investingclub.io'  # http://localhost:5001
+    # server_run = 'localhost'  # localhost
+    collection_name = "real_time_prices"
+    db_name = "asset_analytics"
+    access_db = "mongodb+srv://sngoube:Yqy8kMYRWX76oiiP@cluster0.jaxrk.mongodb.net/asset_analytics?retryWrites=true&w=majority"
+    server = MongoClient(access_db)
+    from aiohttp import ClientSession
+    session = ClientSession()
+
+    tz = pytz.timezone('Europe/Paris')
+    ddf = get_universe()
+    ddf2 = get_indx_cc_fx_universe()
+    ddf = ddf.append(ddf2)
+    ddf['full_code'] = ddf['Code'] + '.' + ddf['ExchangeCode']
+    lstock = ddf['full_code'].tolist()  # ddf.to_dict(orient='records')
+    last_check_now = datetime.now(tz)
+    sublists = [lstock[x:x + 20] for x in range(0, len(lstock), 20)]
+    stringlist = []
+
+    for subset in sublists:
+        stringlist.append(','.join(subset))
+
+    for sublist in stringlist:
+        list_closing_prices = []
+
+        logger_rtapi.info('Getting data for sub string {}'.format(sublist))
+        sreq = "https://eodhistoricaldata.com/api/real-time/CAC.PA?api_token=60241295a5b4c3.00921778&fmt=json&s={}"
+        # run count for api call
+        run_cpt = run_cpt + 20
+        async with session.get(sreq.format(sublist)) as response:
+            data = await response.read()
+            # list_closing_prices = await response.json(content_type=None)
+        try:
+            list_closing_prices = json.loads(data)
+        except ValueError as e:
+            list_closing_prices = []
+            logger_rtapi.warning('Error loading data {} '.format(data))
+
+        if real_time_price is None:
+            real_time_price = dict()
+
+        if len(list_closing_prices) > 0:
+            # Loading data
+            sreq = "{}/api/v1/load_bulk_intraday_stock_prices"
+            str_req = sreq.format(server_run)
+
+            logger_rtapi.info('Loading {}'.format(str_req))
+            # logger_rtapi.info('list_closing_prices {}'.format(list_closing_prices))
+            async with session.post(str_req, json=list_closing_prices) as response:
+                data = await response.read()
+            try:
+                stock_prices = json.loads(data)
+                logger_rtapi.info('Seding intraday_prices {}'.format(stock_prices))
+            except ValueError as e:
+                logger_rtapi.warning('Error loading data {} '.format(data))
+
+            for price in list_closing_prices:
+                if price['timestamp'] != 'NA':
+                    await sio.emit('last_traded_price', price)
+                    #list_to_order.append(price)
 
 async def live_stock_prices():
     from datetime import datetime
@@ -45,7 +112,7 @@ async def live_stock_prices():
     import json
 
     #server_run = '18.191.227.200' # localhost
-    server_run = 'https://stocks.investingclub.io' # http://localhost:5001
+    server_run = 'http://localhost:5005' #  'https://stocks.investingclub.io' #
     #server_run = 'localhost'  # localhost
     collection_name = "real_time_prices"
     db_name = "asset_analytics"

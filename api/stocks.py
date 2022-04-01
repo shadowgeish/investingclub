@@ -65,11 +65,15 @@ stock_universe_request_parser.add_argument("order_direction", type=str, required
 stock_universe_request_parser.add_argument("flat_list", type=int, required=False,
                                          help=" flat_list", default=0)
 
+stock_universe_request_parser.add_argument("bbo", type=int, required=False,
+                                         help="return stock bbo ", default=0)
+
 
 class HelloWord(Resource):
     # df['CustomRating'] = df.apply(lambda x: custom_rating(x['Genre'], x['Rating']), axis=1)
     def get(self):
         return {"about": "Hello world"}, 200
+
 
 class StockUniverse(Resource):
     # df['CustomRating'] = df.apply(lambda x: custom_rating(x['Genre'], x['Rating']), axis=1)
@@ -353,11 +357,15 @@ class StockPrices(Resource):
         dict_prices = OrderedDict()
 
         if lastpriceonly == 1:
+            import random
             for price in result:
                 if price['code'] not in dict_prices.keys():
                     dict_prices[price['code']] = format_price_date(price, candle,data_type=data_type)
                 if price['converted_date'] > dict_prices[price['code']]['converted_date']:
                     dict_prices[price['code']] = format_price_date(price, candle,data_type=data_type)
+            dict_prices[price['code']]['best_bid'] = dict_prices[price['code']]['close'] * ( random.uniform(0.92,
+                                                                                                               0.982))
+            dict_prices[price['code']]['best_ask'] = dict_prices[price['code']]['close'] * (random.uniform(1.002, 1.111))
         else:
             for price in result:
                 if price['code'] not in dict_prices.keys():

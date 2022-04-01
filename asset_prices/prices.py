@@ -117,7 +117,7 @@ def load_stock_historical_data(stock=None, start_date =None, end_date = None, eo
     #    logger_get_price.info("update load for {} completed!".format(stock))
 
 
-def load_historical_data(asset_ticker=None, full_available_history=False,
+def load_historical_data(asset_ticker=None, full_available_history=True,
                         ret='json', # json, df
                          enrich_stock_data = 0
                          ):

@@ -7,6 +7,7 @@ from api.simulation import MonteCarloSimulation, AAbacktesting, MeanVarOptimizat
 from api.stocks import StockUniverse, StockData, StockPricesOld, \
     StockPrices, PushBulkIntradayStockPrices, StockDataAndPrices, HelloWord, PortfolioAnalytics
 from flask_swagger_ui import get_swaggerui_blueprint
+from asset_prices.prices import load_historical_data
 from threading import Timer
 
 application = app = Flask(__name__)
@@ -197,7 +198,6 @@ api.add_resource(HelloWord, '/') # country, type, name - OK
 api.add_resource(StockPrices, '/stock_prices/<string:codes>') # country, type, name - OK
 api.add_resource(StockDataAndPrices, '/stock_latest_prices/<string:codes>') # country, type, name - OK Add filtering and sorting
 api.add_resource(StockData, '/stock_data/<string:code>') #- Ok Add ESG data ok, Add mobile version (light)
-api.add_resource(StockPricesOld, '/stock_prices_old/<string:code>') # - to delete
 api.add_resource(PushBulkIntradayStockPrices, '/load_bulk_intraday_stock_prices')
 api.add_resource(PortfolioAnalytics, '/compute_portfolio_analytics')
 # name, exchange, description, asset class, esg ratings, financial data
@@ -312,7 +312,8 @@ if __name__ == '__main__':
     #/etc/letsencrypt/live/stocks.investingclub.io/
     # /etc/letsencrypt/live/stocks.investingclub.io/privkey.pem
     from os import path
-    rt = RepeatedTimer(1200, get_stock_prices)
+    rt = RepeatedTimer(1200, get_stock_prices) # Run live data every 20 min
+    rt2 = RepeatedTimer(86400, load_historical_data) # Run historical data every 24 hours
     if path.exists('/etc/letsencrypt/live/stocks.investingclub.io/'):
         socket_.run(app, debug=True, host='0.0.0.0', port=443,
                     ssl_context=('/etc/letsencrypt/live/stocks.investingclub.io/fullchain.pem',

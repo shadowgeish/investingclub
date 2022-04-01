@@ -311,7 +311,11 @@ def get_stock_prices():
 if __name__ == '__main__':
     #/etc/letsencrypt/live/stocks.investingclub.io/
     # /etc/letsencrypt/live/stocks.investingclub.io/privkey.pem
+    from os import path
     rt = RepeatedTimer(1200, get_stock_prices)
-    socket_.run(app, debug=True, host='0.0.0.0', port=5005,
-                keyfile='/etc/letsencrypt/live/stocks.investingclub.io/',
-                certfile='/etc/letsencrypt/live/stocks.investingclub.io/privkey.pem')
+    if path.exists('/etc/letsencrypt/live/stocks.investingclub.io/'):
+        socket_.run(app, debug=True, host='0.0.0.0', port=5005,
+                    keyfile='/etc/letsencrypt/live/stocks.investingclub.io/',
+                    certfile='/etc/letsencrypt/live/stocks.investingclub.io/privkey.pem')
+    else:
+        socket_.run(app, debug=True, host='0.0.0.0', port=5005)

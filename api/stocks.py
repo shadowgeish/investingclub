@@ -333,8 +333,12 @@ class StockPrices(Resource):
             data_type = 'historical'
 
         if historical == -1:
-            start_date = get_date_from_str_or_default(args['start_date'],
-                                                      (dat.date.today() + dat.timedelta(-1)))
+            #start_date = get_date_from_str_or_default(args['start_date'],
+            #                                          (dat.date.today() + dat.timedelta(-1)))
+            #
+            start_date = get_date_from_str_or_default(dat.date.today() + dat.timedelta(-(6 - dtt.weekday())),
+                                                              (dat.date.today() + dat.timedelta(-200)))
+
             end_date = get_date_from_str_or_default(args['end_date'],
                                                       (dat.date.today() + dat.timedelta(1)))
             start_date = dat.datetime.combine(start_date, dat.time.min)
@@ -357,15 +361,15 @@ class StockPrices(Resource):
         dict_prices = OrderedDict()
 
         if lastpriceonly == 1:
-            import random
-            for price in result:
-                if price['code'] not in dict_prices.keys():
-                    dict_prices[price['code']] = format_price_date(price, candle,data_type=data_type)
-                if price['converted_date'] > dict_prices[price['code']]['converted_date']:
-                    dict_prices[price['code']] = format_price_date(price, candle,data_type=data_type)
-            dict_prices[price['code']]['best_bid'] = dict_prices[price['code']]['close'] * ( random.uniform(0.92,
-                                                                                                               0.982))
-            dict_prices[price['code']]['best_ask'] = dict_prices[price['code']]['close'] * (random.uniform(1.002, 1.111))
+            if(len(result) > 0):
+                import random
+                for price in result:
+                    if price['code'] not in dict_prices.keys():
+                        dict_prices[price['code']] = format_price_date(price, candle,data_type=data_type)
+                    if price['converted_date'] > dict_prices[price['code']]['converted_date']:
+                            dict_prices[price['code']] = format_price_date(price, candle,data_type=data_type)
+                dict_prices[price['code']]['best_bid'] = dict_prices[price['code']]['close'] * ( random.uniform(0.92,                                                                                                0.982))
+                dict_prices[price['code']]['best_ask'] = dict_prices[price['code']]['close'] * (random.uniform(1.002, 1.111))
         else:
             for price in result:
                 if price['code'] not in dict_prices.keys():

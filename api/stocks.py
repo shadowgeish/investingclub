@@ -360,18 +360,23 @@ class StockPrices(Resource):
 
         dict_prices = OrderedDict()
 
+        import random
         if lastpriceonly == 1:
             if(len(result) > 0):
-                import random
-                for price in result:
+
+                for temp_price in result:
+                    price = temp_price
+                    price['best_bid'] = price['close'] * ( random.uniform(0.92, 0.982))
+                    price['best_ask'] = price['close'] * (random.uniform(1.002, 1.111))
                     if price['code'] not in dict_prices.keys():
                         dict_prices[price['code']] = format_price_date(price, candle,data_type=data_type)
                     if price['converted_date'] > dict_prices[price['code']]['converted_date']:
                             dict_prices[price['code']] = format_price_date(price, candle,data_type=data_type)
-                dict_prices[price['code']]['best_bid'] = dict_prices[price['code']]['close'] * ( random.uniform(0.92,                                                                                                0.982))
-                dict_prices[price['code']]['best_ask'] = dict_prices[price['code']]['close'] * (random.uniform(1.002, 1.111))
         else:
-            for price in result:
+            for temp_price in result:
+                price = temp_price
+                price['best_bid'] = price['close'] * (random.uniform(0.92, 0.982))
+                price['best_ask'] = price['close'] * (random.uniform(1.002, 1.111))
                 if price['code'] not in dict_prices.keys():
                     dict_prices[price['code']] = list()
                 dict_prices[price['code']].append(format_price_date(price, candle, data_type=data_type))
@@ -391,7 +396,9 @@ def format_price_date(price, candle, data_type='historical'):
                     'converted_date': price['converted_date'],
                     'date': price['date'],
                     'volume': price['volume'],
-                    'close': price['adjusted_close']
+                    'close': price['adjusted_close'],
+                    'best_bid': price['best_bid'],
+                    'best_ask': price['best_ask']
                     }
         else:
             return {'code': price['code'],
@@ -399,7 +406,9 @@ def format_price_date(price, candle, data_type='historical'):
                     'date': price['date'],
                     'volume': price['volume'],
                     'change_p': price['change_p'],
-                    'close': price['close']
+                    'close': price['close'],
+                    'best_bid': price['best_bid'],
+                    'best_ask': price['best_ask']
                     }
 
 stock_data_request_parser = RequestParser(bundle_errors=False)

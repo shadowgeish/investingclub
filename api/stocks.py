@@ -68,6 +68,8 @@ stock_universe_request_parser.add_argument("flat_list", type=int, required=False
 stock_universe_request_parser.add_argument("bbo", type=int, required=False,
                                          help="return stock bbo ", default=0)
 
+stock_universe_request_parser.add_argument("search_any", type=str, required=False,
+                                         help="search text ", default="")
 
 class HelloWord(Resource):
     # df['CustomRating'] = df.apply(lambda x: custom_rating(x['Genre'], x['Rating']), axis=1)
@@ -97,6 +99,7 @@ class StockUniverse(Resource):
         order_direction = args['order_direction']
         asset_type = args['asset_type']
         codes = args['codes']
+        search_any = args['search_any']
         from flask import request
         json_params = request.get_json()
         print('json_params = {}'.format(json_params))
@@ -105,7 +108,8 @@ class StockUniverse(Resource):
         #    codes = json_params['codes'] if 'codes' in json_params.keys() else ""
 
         df = get_universe(name=name, country=country, type=stock_type, sector=sector, skip=skip, limit=limit,
-                          order_type=order_type, asset_type=asset_type, order_direction=order_direction, codes=codes)
+                          order_type=order_type, asset_type=asset_type, order_direction=order_direction,
+                          codes=codes, search_any = search_any)
 
         # result = df.to_json(orient='records')
         result = df.to_dict(orient='records')

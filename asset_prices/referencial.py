@@ -181,7 +181,8 @@ def get_indx_cc_fx_universe(name="", type=""):
 
 
 def get_universe(name="", country="", type="", sector="",  skip=0, limit=5000,
-                 codes="", order_type ="last_price_volume", asset_type ="", order_direction="desc"):
+                 codes="", order_type ="last_price_volume", asset_type ="", search_any="",
+                 order_direction="desc"):
     import pandas as pd
     from pymongo import MongoClient, ASCENDING, DESCENDING
 
@@ -233,6 +234,14 @@ def get_universe(name="", country="", type="", sector="",  skip=0, limit=5000,
     #    {"$set":{"last_price_rt": 0, "last_price_volume_rt": 0, "last_price_change_p_rt": 0 }}
     #);
 
+    logger_get_ref.info("search_any {} len ={} ".format(search_any, len(search_any)))
+    if len(search_any) > 0:
+        # { $or: [{ author: 'dave' }, { author: 'john' }] }
+        full_code_list = search_any.split(',')
+        query = {"$or": [{"General.Name": {"$regex": '/*{}/*'.format(search_any), "$options": 'i'}},
+                           {"FullCode": {"$in": full_code_list}}]
+                  }
+
     query = [
         {"$match": query},
         {"$sort": {order_type: order_dir}},
@@ -244,6 +253,9 @@ def get_universe(name="", country="", type="", sector="",  skip=0, limit=5000,
             }
         }
     ]
+
+
+
 
     logger_get_ref.info("Query get_universe {} ".format(query))
 
@@ -276,13 +288,14 @@ def get_universe(name="", country="", type="", sector="",  skip=0, limit=5000,
     if len(lres) > 0:
         for itx in lres:
             logger_get_ref.info("Query itx = {}".format(itx))
+            at  = None if 'AssetType' not in itx.keys() else itx['AssetType']
             item_list.append({'ISIN': itx['ISIN'],
                               'Code': itx['Code'],
                               'Name': itx['General']['Name'],
                               'Country':  itx['Country'],
                               'Currency': itx['General']['CurrencyCode'],
                               'Type': itx['General']['Type'],
-                              'AssetType': itx['AssetType'],
+                              'AssetType': at,
                               'ExchangeCode': itx['General']['Exchange'],
                               'Exchange': itx['General']['Exchange'],
                               'LastPriceVolume': itx['last_price_volume'] if 'last_price_volume' in itx.keys() else 0,

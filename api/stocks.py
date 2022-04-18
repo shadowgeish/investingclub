@@ -327,6 +327,10 @@ class StockPrices(Resource):
                 args['end_date'] = dat.date.today()
                 historical = -1
 
+        if paris_now.strftime("%d%m") in ["1804", "2612"]:
+            data_type = 'historical'
+            historical = 1
+
         if historical == 1:
             start_date = get_date_from_str_or_default(args['start_date'],
                                                       (dat.date.today() + dat.timedelta(-200)))

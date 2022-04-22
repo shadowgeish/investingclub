@@ -405,7 +405,6 @@ def format_price_date(price, candle, data_type='historical'):
                     'date': price['date'],
                     'volume': price['volume'],
                     'close': price['adjusted_close'],
-                    'change_p': price['change_p'],
                     'best_bid': price['best_bid'],
                     'best_ask': price['best_ask']
                     }

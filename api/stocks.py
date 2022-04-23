@@ -271,6 +271,7 @@ class StockPrices(Resource):
     def get(self, codes):
         import pandas as pd
         from datetime import datetime
+        import time
         import pytz
         args = stock_universe_request_parser.parse_args()
         name = args['name']
@@ -290,6 +291,7 @@ class StockPrices(Resource):
         tz = pytz.timezone('Europe/Paris')
 
         # if codes == 'All':
+
         df = get_universe(name=name, country=country, type=stock_type, sector=sector, skip=skip, limit=limit,
                           codes=codes, order_type=order_type, order_direction=order_direction)
 
@@ -319,7 +321,7 @@ class StockPrices(Resource):
         if dtt.weekday() > 4 or dtt < datetime.strptime(paris_now.strftime("%d%m%Y0855%z"), '%d%m%Y%H%M%z'):
             historical = 1
             args['start_date'] = get_date_from_str_or_default(dat.date.today() + dat.timedelta(-(6-dtt.weekday())),
-                                                      (dat.date.today() + dat.timedelta(-200)))
+                                                      (dat.date.today() + dat.timedelta(-30)))
             args['end_date'] = args['start_date']
             if dtt.weekday() <= 4:
                 args['start_date'] = get_date_from_str_or_default(dat.date.today(),
@@ -345,7 +347,7 @@ class StockPrices(Resource):
             #                                          (dat.date.today() + dat.timedelta(-1)))
             #
             start_date = get_date_from_str_or_default(dat.date.today() + dat.timedelta(-(6 - dtt.weekday())),
-                                                              (dat.date.today() + dat.timedelta(-200)))
+                                                              (dat.date.today() + dat.timedelta(-30)))
 
             end_date = get_date_from_str_or_default(args['end_date'],
                                                       (dat.date.today() + dat.timedelta(1)))
@@ -388,6 +390,7 @@ class StockPrices(Resource):
                 if price['code'] not in dict_prices.keys():
                     dict_prices[price['code']] = list()
                 dict_prices[price['code']].append(format_price_date(price, candle, data_type=data_type))
+
 
         result = dict_prices if flat_list == 0 else list(dict_prices.values())
 

@@ -216,6 +216,7 @@ def get_universe(name="", country="", type="", sector="",  skip=0, limit=5000,
              "Type.Type": {"$regex": '/*{}/*'.format(type), "$options": 'i'}
              }
     '''
+
     display = {'ISIN': 1,
                 'Code': 1,
                 'General.Name': 1,
@@ -226,9 +227,19 @@ def get_universe(name="", country="", type="", sector="",  skip=0, limit=5000,
                 'General.Type': 1,
                 'Exchange': 1,
                 'AssetType': 1,
+                'Leverage': 1,
+                'Short_Name': 1,
+                'Short_Name_FR': 1,
+                'Description': 1,
+                'Description_FR': 1,
+                'Index_Ticker': 1,
+                'Issuer': 1,
+                'Acc': 1,
                 'last_price_volume': 1,
                  order_type: 1,
                 'General.LogoURL': 1}
+
+    displayt = {}
 
     #server[db_name][collection_name].update_many({"last_price_rt": "0"},
     #    {"$set":{"last_price_rt": 0, "last_price_volume_rt": 0, "last_price_change_p_rt": 0 }}
@@ -238,8 +249,16 @@ def get_universe(name="", country="", type="", sector="",  skip=0, limit=5000,
     if len(search_any) > 0:
         # { $or: [{ author: 'dave' }, { author: 'john' }] }
         full_code_list = search_any.split(',')
-        query = {"$or": [{"General.Name": {"$regex": '/*{}/*'.format(search_any), "$options": 'i'}},
-                           {"FullCode": {"$in": full_code_list}}]
+
+        query = {"$or": [{"Active": 1, "General.Name": {"$regex": '/*{}/*'.format(search_any), "$options": 'i'}},
+                         {"Active": 1, "ShortName": {"$regex": '/*{}/*'.format(search_any), "$options": 'i'}},
+                         {"Active": 1, "ShortNameFR": {"$regex": '/*{}/*'.format(search_any), "$options": 'i'}},
+                         {"Active": 1, "Description": {"$regex": '/*{}/*'.format(search_any), "$options": 'i'}},
+                         {"Active": 1, "DescriptionFR": {"$regex": '/*{}/*'.format(search_any), "$options": 'i'}},
+                         {"Active": 1, "Issuer": {"$regex": '/*{}/*'.format(search_any), "$options": 'i'}},
+                         {"Active": 1, "Code": {"$regex": '/*{}/*'.format(search_any), "$options": 'i'}},
+                         {"Active": 1, "ISIN": {"$regex": '/*{}/*'.format(search_any), "$options": 'i'}},
+                           {"Active": 1, "FullCode": {"$in": full_code_list}}]
                   }
 
     query = [
@@ -295,6 +314,17 @@ def get_universe(name="", country="", type="", sector="",  skip=0, limit=5000,
                               'Country':  itx['Country'],
                               'Currency': itx['General']['CurrencyCode'],
                               'Type': itx['General']['Type'],
+
+                              'Leverage': itx['Leverage'],
+                              'ShortName': itx['Short_Name'],
+                              'ShortNameFR': itx['Short_Name_FR'],
+                              'Description': itx['Description'],
+                              'DescriptionFR': itx['Description_FR'],
+                              'Issuer': itx['Issuer'],
+                              'Acc': itx['Acc'],
+                              'IndexTicker': itx['Index_Ticker'],
+
+
                               'AssetType': at,
                               'ExchangeCode': itx['General']['Exchange'],
                               'Exchange': itx['General']['Exchange'],
@@ -307,7 +337,9 @@ def get_universe(name="", country="", type="", sector="",  skip=0, limit=5000,
         # logger_get_ref.info(' result {}'.format(item_list))
         df = pd.DataFrame(item_list)
         # logger_get_ref.info(' df {}'.format(df))
-        df = df[['ISIN', 'Code', 'Name', 'Country', 'Exchange', 'Currency', 'Type','AssetType', 'ExchangeCode', 'logo', 'LastPriceVolume']]
+        df = df[['ISIN', 'Acc', 'Issuer', 'Leverage', 'ShortName', 'ShortNameFR', 'Description', 'DescriptionFR',
+                 'Code', 'Name', 'Country', 'Exchange', 'Currency', 'Type','AssetType', 'ExchangeCode', 'logo',
+                 'IndexTicker', 'LastPriceVolume']]
         #df['EsgScore'] = np.random.randint(150, 255, size=len(df))
         df['IndustryAverageEsgScore'] = np.random.randint(150, 800, size=len(df))
         df['Environmental'] = np.random.randint(150, 255, size=len(df))
@@ -342,9 +374,10 @@ def load_equity_etf_list():
     #jCJpZ8tG7Ms3iF0le
     eod_key = "60241295a5b4c3.00921778"
     # https://eodhistoricaldata.com/api/exchanges-list/?api_token=60241295a5b4c3.00921778&fmt=json
-    ddf = pd.read_csv("../asset_prices/stock_universe.csv", sep=',', keep_default_na=False)
-    ddf = ddf[['ISIN','Code','Name','Country','Exchange','Currency','Type','ExchangeCode',
-               'ETF Underlying Index Ticker', 'Dvd Freq', 'AssetType']]
+    ddf = pd.read_csv("../asset_prices/stock_universe_etf.csv", sep=',', keep_default_na=False)
+    ddf = ddf[['ISIN', 'Code', 'Name','Country','Exchange','Currency','Type','ExchangeCode',
+               'ETF Underlying Index Ticker', 'Dvd Freq', 'AssetType', 'Leverage', 'Short Name'
+        ,'Short Name FR', 'Description', 'Description FR', 'Issuer', 'Acc']]
 
     list_stock = json.loads(ddf.to_json(orient='records'))
     collection_name = "stock_data"
@@ -403,6 +436,16 @@ def load_equity_etf_list():
             stock['Market_Open'] = '9am -5pm CET'
             stock['Asset_class'] = 'Equity, France Equity, Eu Equity'
 
+            stock_data['Index_Ticker'] = stock['ETF Underlying Index Ticker']
+            stock_data['Leverage'] = stock['Leverage']
+            stock_data['Short_Name'] = stock['Short Name']
+            stock_data['Short_Name_FR'] = stock['Short Name FR']
+            stock_data['Description'] = stock['Description']
+            stock_data['Description_FR'] = stock['Description FR']
+            stock_data['Issuer'] = stock['Issuer']
+            stock_data['Acc'] = stock['Acc']
+            stock_data['Active'] = 1
+
             if 'LogoURL' in stock_data['General'].keys():
                 stock['logo'] = '{}{}'.format('https://eodhistoricaldata.com',stock_data['General']['LogoURL'])
                 stock['logo'] = stock['logo'] if stock['Type'] not in ['ETP', 'ETF', 'ETC','ETN']\
@@ -421,6 +464,8 @@ def load_equity_etf_list():
         else:
             failedlstock.append(stock)
         ct = ct + 1
+
+    logger_get_ref.info("nlstock to load = {}".format(nlstock))
 
     collection_name = "stock_universe"
     if collection_name in server[db_name].list_collection_names():

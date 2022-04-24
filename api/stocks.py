@@ -335,7 +335,7 @@ class StockPrices(Resource):
 
         if historical == 1:
             start_date = get_date_from_str_or_default(args['start_date'],
-                                                      (dat.date.today() + dat.timedelta(-200)))
+                                                      (dat.date.today() + dat.timedelta(-30)))
             end_date = get_date_from_str_or_default(args['end_date'],
                                                       (dat.date.today() + dat.timedelta(1)))
             start_date = dat.datetime.combine(start_date, dat.time.min)

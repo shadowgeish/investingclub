@@ -328,7 +328,7 @@ if __name__ == '__main__':
     # /etc/letsencrypt/live/stocks.investingclub.io/privkey.pem
     from os import path
     rt = RepeatedTimer(1200, get_stock_prices) # Run live data every 20 min
-    rt2 = RepeatedTimer(86400, load_historical_data) # Run historical data every 24 hours
+    rt2 = RepeatedTimer(97200, load_historical_data) # Run historical data every 24 hours
     if path.exists('/etc/letsencrypt/live/stocks.investingclub.io/'):
         socket_.run(app, debug=True, host='0.0.0.0', port=443,
                     ssl_context=('/etc/letsencrypt/live/stocks.investingclub.io/fullchain.pem',

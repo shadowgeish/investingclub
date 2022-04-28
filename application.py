@@ -187,8 +187,23 @@ api.add_resource(MonteCarloSimulation, '/montecarlo')
 api.add_resource(AAbacktesting, '/aabacktesting')
 api.add_resource(MaxDiversification, '/maximum_diversificaton')
 api.add_resource(MeanVarOptimization, '/mean_var_opt')
+
+
+#api.add_resource(MaxDiversificationPortfolio, '/maximum_diversification_portfolio')
+
+#Mean-Variance Optimization
+#Minimum Variance Portfolio
+#Market Cap Portfolio
+#Maximum Diversification Portfolio
+#Equal Risk Contribution Portfolio
+#Equal Sharpe Ratio Portfolio (that I understood as Equal Sharpe Ratio Contribution Portfolio)
+#Inverse Volatility Weighted Portfolio
+#Equal Weight Portfolio
+#Max Decorrelation Portfolio
+#Inverse Variance Weighted Portfolio
 #api.add_resource(MaxDiversification, '/realestate') # real estate prices
 #api.add_resource(MonteCarloSimulation, '/lifeinsurance') # life insurance
+
 api.add_resource(StockUniverse, '/stock_universe') # country, type, name - OK
 api.add_resource(AddOrder, '/add_order/<string:code>') # country, type, name - OK
 api.add_resource(GetOrder, '/get_order/<string:code>') # country, type, name - OK

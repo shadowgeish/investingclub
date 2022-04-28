@@ -468,7 +468,8 @@ def get_prices(asset_codes=[],
     lres = list(res)
     item_list = []
     for doc in lres:# loop through the documents
-        item_list = item_list + doc['prices']
+        if doc['prices'] is not None:
+            item_list = item_list + doc['prices']
     df = pd.DataFrame(item_list)
 
     #   logger_get_price.info(format(df.to_json(orient='records')))

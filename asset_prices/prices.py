@@ -41,8 +41,8 @@ def load_stock_historical_data_mp(args):
     load_stock_historical_data(stock, start_date,end_date, eod_key, full_available_history)
 
 
-def load_stock_historical_data(stock=None, start_date =None, end_date = None, eod_key = None,
-                               full_available_history=False):
+def load_stock_historical_data(stock=None, start_date = None, end_date = None, eod_key = None,
+                               full_available_history=True):
     logger_get_price.info('stock = {}, start_date{} end_date= {} eod_key = {} '.format(stock, start_date, end_date,
                                                                                        eod_key))
     # https://eodhistoricaldata.com/api/eod/{}?from={} & to = {} & api_token = {} & period = d & fmt = json
@@ -90,12 +90,14 @@ def load_stock_historical_data(stock=None, start_date =None, end_date = None, eo
 
     list_closing_prices = json.loads(ddf.to_json(orient='records'))
 
-    stock_data = {"FullCode": stock,
-                  "prices": list_closing_prices
-                  }
+    stock_data = {"FullCode": stock, "prices": list_closing_prices}
 
-    collection_handler.update_many({"FullCode": stock}, {"$addToSet": {
-            "prices": {"$each": list_closing_prices}}})
+    if full_available_history is False:
+        collection_handler.update_many({"FullCode": stock}, {"$addToSet": {
+                "prices": {"$each": list_closing_prices}}})
+    else:
+        collection_handler.update({"FullCode": stock}, {"$set": {
+            "prices":  list_closing_prices}})
 
     collection_handler.update({"FullCode": stock}, {"$set": {
         "last_price": list_closing_prices[-1]['adjusted_close']} })
@@ -118,14 +120,20 @@ def load_stock_historical_data(stock=None, start_date =None, end_date = None, eo
 
 
 def load_historical_data(asset_ticker=None, full_available_history=True,
-                        ret='json', # json, df
+                         ret='json', # json, df
                          enrich_stock_data = 0
                          ):
     #  db mp jCJpZ8tG7Ms3iF0l
     eod_key = "60241295a5b4c3.00921778"
     # https://eodhistoricaldata.com/api/exchanges-list/?api_token=60241295a5b4c3.00921778&fmt=json
-    start_date = "2000-01-05"
-    e_date = datetime.datetime.today() + datetime.timedelta(1)
+    from datetime import datetime as dt
+    import pytz
+    tz = pytz.timezone('Europe/Paris')
+    paris_now = dt.now(tz)
+
+    #dtt_e = datetime.strptime(paris_now.strftime("%d%m%Y2130%z"), '%d%m%Y%H%M%z')
+
+    e_date = paris_now #datetime.datetime.today() + datetime.timedelta(1)
     end_date = e_date.strftime("%Y-%m-%d")
     if full_available_history is True: # Load 20 years history
         start_date = "2005-01-05"
